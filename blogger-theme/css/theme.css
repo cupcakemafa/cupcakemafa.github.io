@@ -3791,3 +3791,62 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
 a#mycontent {
     color: #646464;
 }
+
+/**
+ * Theme color
+ */
+a.read-more {
+    color: #fdd835;
+}
+.pagenavi .current, 
+.pagenavi .pages, 
+.pagenavi a:hover {
+    background:#fdd835;
+}
+.pagenavi span,
+.pagenavi a {
+    color: #fdd835;
+}
+.social span a:hover {
+    color: #fdd835;
+}
+ul.slimmenu li a:hover {
+    text-decoration: none;
+    color: #fdd835;
+}
+.date-outer:first-child .post-outer:first-child h2.entry-title:before {
+    color: #fdd835;
+}
+.Label .label-size:before {
+    border-bottom: 1px solid #fdd835;
+    border-left: 1px solid #fdd835;
+}
+.Label .label-size:after {
+    border: 1px solid #fdd835;
+}
+span.label-size:hover {
+    background: #fdd835;
+}
+span.label-size:hover:before {
+    background: #fdd835;
+}
+.Label .label-size {
+    border-bottom: 1px solid #fdd835;
+    border-right: 1px solid #fdd835;
+    border-top: 1px solid #fdd835;
+    color: #fdd835;
+}
+input[type="search"].sb-search-input {
+    border-bottom: 1px solid #fdd835;
+}
+input[type="search"].sb-search-input:focus {
+    border-bottom: 1px solid #fdd835;
+}
+a.read-more {
+    color: #fdd835;
+}
+.sidebar h2:after, .panel h2:after, 
+#footer h2:after, .author-wrapper h2:after, 
+#related-posts h2:after {
+    border-bottom: 2px solid #fdd835;
+}
