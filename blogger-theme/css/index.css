@@ -216,3 +216,8 @@ h4#comment-post-message {
     #mywrapper{margin-top:0px;}
     nav{top:1px;}
 }
+
+.post {
+    background:#ffffff;
+    padding:0px 0px;
+}
