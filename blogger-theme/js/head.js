@@ -1709,18 +1709,6 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend( jQuery.easing, { def:
         return e / 2 > b ? .5 * jQuery.easing.easeInBounce( a, 2 * b, 0, d, e ) + c : .5 * jQuery.easing.easeOutBounce( a, 2 * b - e, 0, d, e ) + .5 * d + c;
     } } );
 
-var ww = document.body.clientWidth;
-
-$( window ).bind( "resize orientationchange", function ( ) {
-    ww = document.body.clientWidth;
-    adjustMenu( );
-} );
-
-$( '#back-top' ).on( 'click', function ( ) {
-    $( '.st-content' ).animate( { scrollTop: 0 }, 'slow' );
-    $( 'html, body' ).animate( { scrollTop: 0 }, 'slow' );
-    return false;
-} );
 
 $( function ( ) {
     $( "html" ).niceScroll( );
@@ -1739,6 +1727,20 @@ $( function ( ) {
     if ( head ) {
         head.appendChild( script );
     }
+
+    var ww = document.body.clientWidth;
+
+    $( window ).bind( "resize orientationchange", function ( ) {
+        ww = document.body.clientWidth;
+        adjustMenu( );
+    } );
+
+    $( '#back-top' ).on( 'click', function ( ) {
+        $( '.st-content' ).animate( { scrollTop: 0 }, 'slow' );
+        $( 'html, body' ).animate( { scrollTop: 0 }, 'slow' );
+        return false;
+    } );
+
 
     $( ".nav li a" ).each( function ( ) {
         if ( $( this ).next( ).length > 0 ) {
