@@ -1591,6 +1591,7 @@ $( document ).ready( function ( ) {
     };
 }( jQuery, document, window ) );
 
+var ww = document.body.clientWidth || 0;
 var adjustMenu = function ( ) {
     if ( ww < 768 ) {
         $( ".toggleMenu" ).css( "display", "inline-block" );
@@ -1709,7 +1710,6 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend( jQuery.easing, { def:
         return e / 2 > b ? .5 * jQuery.easing.easeInBounce( a, 2 * b, 0, d, e ) + c : .5 * jQuery.easing.easeOutBounce( a, 2 * b - e, 0, d, e ) + .5 * d + c;
     } } );
 
-
 $( function ( ) {
     $( "html" ).niceScroll( );
     $( ".set-1" ).mtabs( );
@@ -1727,8 +1727,6 @@ $( function ( ) {
     if ( head ) {
         head.appendChild( script );
     }
-
-    var ww = document.body.clientWidth;
 
     $( window ).bind( "resize orientationchange", function ( ) {
         ww = document.body.clientWidth;
