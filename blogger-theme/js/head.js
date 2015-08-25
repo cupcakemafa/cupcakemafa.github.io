@@ -1814,7 +1814,7 @@ $( function ( ) {
     
     // lightbox2 用処理
     // ページ内のすべてのaタグに繰り返し処理
-    $("a").each(function() {
+    $('.post-entry').find('a').each(function() {
         //aタグ内にimgタグがあるか？
         var $this = $(this);
         if( $this.find('img').length ) {
