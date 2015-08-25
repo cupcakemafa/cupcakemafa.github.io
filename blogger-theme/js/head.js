@@ -47,10 +47,10 @@ window.selectnav = function ( ) {
             };
         if ( ( a === document.getElementById( p ) ) && k( a ) ) {
             document.documentElement.className += " js";
-            var d = q || { }, j = d.activeclass || "active1", 
-                s = "boolean" === typeof d.autoselect ? d.autoselect : ! 0, 
-                t = "boolean" === typeof d.nested ? d.nested : ! 0, 
-                r = d.indent || "\u2192", 
+            var d = q || { }, j = d.activeclass || "active1",
+                s = "boolean" === typeof d.autoselect ? d.autoselect : ! 0,
+                t = "boolean" === typeof d.nested ? d.nested : ! 0,
+                r = d.indent || "\u2192",
                 o = d.label || "- Navigation -", g = 0, m = " selected ";
             a.insertAdjacentHTML( "afterend", n( a ) );
             a = document.getElementById( l( ) );
