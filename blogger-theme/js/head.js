@@ -186,16 +186,45 @@ function authorshow( data ) {
     }
 }
 
-$( document ).ready(
-    function ( ) {
-        $( "html" ).niceScroll( );
-        $( ".set-1" ).mtabs( );
-        //Menu To Drop Down Started
-        selectnav( 'navigation', {
-            label: 'Select Here ',
-            nested: true,
-            autoselect: false,
-            indent: '-'
+function setAttributeOnload( object, attribute, val ) {
+    if ( window.addEventListener ) {
+        window.addEventListener( 'load',
+            function () {
+                object[attribute] = val;
+            }, false );
+    } else {
+        window.attachEvent( 'onload', function () {
+            object[attribute] = val;
         } );
     }
-);
+}
+
+gapi.load( 'gapi.iframes:gapi.iframes.style.bubble', function () {
+    if ( gapi.iframes && gapi.iframes.getContext ) {
+        gapi.iframes.getContext().openChild( {
+            url: 'https://www.blogger.com/navbar.g?targetBlogID\0753433832823245712384\46blogName\75Cupcakemafa\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://www.cupcakemafa.com/search\46blogLocale\75ja\46v\0752\46homepageUrl\75http://www.cupcakemafa.com/\46vt\0752779607091542423318',
+            where: document.getElementById( 'navbar-iframe-container' ),
+            id: 'navbar-iframe'
+        } );
+    }
+} );
+
+( function () {
+    $( "html" ).niceScroll( );
+    $( ".set-1" ).mtabs( );
+    //Menu To Drop Down Started
+    selectnav( 'navigation', {
+        label: 'Select Here ',
+        nested: true,
+        autoselect: false,
+        indent: '-'
+    } );
+
+    var script = document.createElement( 'script' );
+    script.type = 'text/javascript';
+    script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+    var head = document.getElementsByTagName( 'head' )[0];
+    if ( head ) {
+        head.appendChild( script );
+    }
+} )();
