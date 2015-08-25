@@ -1816,8 +1816,9 @@ $( function ( ) {
     // ページ内のすべてのaタグに繰り返し処理
     $("a").each(function() {
         //aタグ内にimgタグがあるか？
-        if( $(this).find('img').length ) {
-            $(this).attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
+        var $this = $(this);
+        if( $this.find('img').length ) {
+            $this.attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
         }
     });
 
