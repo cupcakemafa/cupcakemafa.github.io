@@ -1591,8 +1591,9 @@ $( document ).ready( function ( ) {
     };
 }( jQuery, document, window ) );
 
-var ww = document.body.clientWidth || 0;
+var ww;
 var adjustMenu = function ( ) {
+    ww = document.body.clientWidth || 0;
     if ( ww < 768 ) {
         $( ".toggleMenu" ).css( "display", "inline-block" );
         if ( ! $( ".toggleMenu" ).hasClass( "active" ) ) {
