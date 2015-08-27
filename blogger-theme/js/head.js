@@ -1798,7 +1798,11 @@ $( function ( ) {
     //外部リンクに_blank, class, 属性付与
     //2015/8/25追加
     //http://datsugoku.hatenablog.jp/entry/2014/05/11/205638
-    $( "a[href^=http]" ).not( '[href*="' + location.hostname + '"]' ).not( ":has(img)" ).attr( { target: "_blank", rel: "nofollow" } ).addClass( "exLink" );
+    $( "a[href^=http]" )
+            .not( '[href*="' + location.hostname + '"]' )
+            //.not( ":has(img)" )
+            .attr( { target: "_blank", rel: "nofollow" } )
+            .addClass( "exLink" );
 
     // ページトップへ戻るボタンの表示ロジック
     //2015/8/25追加
