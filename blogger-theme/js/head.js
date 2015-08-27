@@ -1814,10 +1814,12 @@ $( function ( ) {
     
     // lightbox2 用処理
     // ページ内のすべてのaタグに繰り返し処理
-    $('.post-entry').find('a').each(function() {
+    $('.post-entry').find("a[href$='.jpg']").each(function() {
         //aタグ内にimgタグがあるか？
         var $this = $(this);
-        if( $this.find('img').length ) {
+        var href = $this.attr("href");
+        
+        if( $this.find('img').length && href.match(/(\.)(gif|jpg|jpeg|png)/g)) {
             $this.attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
         }
     });
