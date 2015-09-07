@@ -66,11 +66,33 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
             var thum = '';
             for ( var i = 0; i < img.length; i ++ ) {
 
-                thum = thum + '<a class="colorboxEx" href="' + img[i].src + '"><img src="' + img[i].src + '"></a>';
+                thum = thum + '<a class="colorboxEx" href="' + posturl + '"><img src="' + img[i].src + '"></a>';
             }
 
             var thumb = '<div class="colorboxEx">' + thum + '</div>';
-            var summary1 = '<header class="post-header"><div class="labelhome">' + tag + '</div><h2 class="entry-title"><a href=' + posturl + '>' + title + '</a></h2></header><div class="cen"><div class="post-details"><!--<span class="auth"> <i class="fa fa-user"></i> &nbsp;&nbsp;<a href=' + authorurl + '>' + author + '</a></span> --><span class="post-da"> <i class="fa fa-clock-o"></i> &nbsp;&nbsp;' + date + '</span><span class="post-com"> <i class="fa fa-comments-o"></i> &nbsp;&nbsp; ' + comment + ' Comments</span></div></div>' + thumb + '<div class="entry-content clear"><div class="intro-text">' + stripHtmlTags( content, 35 ) + ' </div><div class="post-footer"><div class="pull-left"><a class="read-more" href="' + posturl + '">つづきを読む</a></div><div class="pull-right"></div></div></div>';
+            var summary1 = '<header class="post-header">' 
+                + '<div class="labelhome">' + tag + '</div>' 
+                + '<h2 class="entry-title">' 
+                + '<a href=' + posturl + '>' + title + '</a>' 
+                + '</h2>' 
+                + '</header>' 
+                + '<div class="cen">' 
+                + '<div class="post-details">' 
+                + '<span class="post-da"> <i class="fa fa-clock-o"></i> ' + date + '</span>' 
+                //+ '<span class="post-com"> <i class="fa fa-comments-o"></i> ' + comment + ' Comments</span>' 
+                + '</div>'
+                + '</div>' 
+                + thumb 
+                + '<div class="entry-content clear">' 
+                //+ '<div class="intro-text">' + stripHtmlTags( content, 35 ) + ' </div>' 
+                + '<div class="intro-text"></div>' 
+                + '<div class="post-footer">' 
+                + '<div class="pull-left">' 
+                + '<a class="read-more" href="' + posturl + '">つづきを読む</a>' 
+                + '</div>' 
+                + '<div class="pull-right"></div>' 
+                + '</div>' 
+                + '</div>';
         }
         else {
             var frame = div.getElementsByTagName( "iframe" );
