@@ -1769,15 +1769,16 @@ $( function ( ) {
     new UISearch( document.getElementById( 'sb-search' ) );
     
     // @todo delete
-//    $( ".colorboxEx" ).justifiedGallery( { rowHeight: 165,
-//        maxRowHeight: 0,
-//        margins: 5,
-//        rel: 'colorboxEx',
-//        lastRow: 'nojustify',
-//        fixedHeight: false,
-//        captions: true,
-//        randomize: false
-//    } ).magnificPopup( {
+    $( ".colorboxEx" ).justifiedGallery( { rowHeight: 165,
+        maxRowHeight: 0,
+        margins: 5,
+        rel: 'colorboxEx',
+        lastRow: 'nojustify',
+        fixedHeight: false,
+        captions: true,
+        randomize: false
+    } )
+//    .magnificPopup( {
 //        delegate: 'a',
 //        type: 'image',
 //        closeOnContentClick: false,
@@ -1793,7 +1794,8 @@ $( function ( ) {
 //                return element.find( 'img' );
 //            }
 //        }
-//    } );
+//    } )
+    ;
     // #delete
 
     // メニューナビゲーション
