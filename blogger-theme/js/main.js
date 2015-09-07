@@ -1768,9 +1768,9 @@ $( function ( ) {
 
     // 検索用UI
     new UISearch( document.getElementById( 'sb-search' ) );
-    
+
     // @todo delete
-    $( ".colorboxEx" ).justifiedGallery( { 
+    $( ".colorboxEx" ).justifiedGallery( {
         rowHeight: 165,
         maxRowHeight: 0,
         margins: 5,
@@ -1797,7 +1797,7 @@ $( function ( ) {
 //            }
 //        }
 //    } )
-    ;
+        ;
     // #delete
 
     // メニューナビゲーション
@@ -1809,10 +1809,10 @@ $( function ( ) {
     //2015/8/25追加
     //http://datsugoku.hatenablog.jp/entry/2014/05/11/205638
     $( "a[href^=http]" )
-            .not( '[href*="' + location.hostname + '"]' )
-            //.not( ":has(img)" )
-            .attr( { target: "_blank", rel: "nofollow" } )
-            .addClass( "exLink" );
+        .not( '[href*="' + location.hostname + '"]' )
+        //.not( ":has(img)" )
+        .attr( { target: "_blank", rel: "nofollow" } )
+        .addClass( "exLink" );
 
     // ページトップへ戻るボタンの表示ロジック
     //2015/8/25追加
@@ -1825,7 +1825,7 @@ $( function ( ) {
             $( "#scroll-top" ).fadeOut( 'slow' );
         }
     } );
-    
+
     // @todo delete
     // lightbox2 用処理
     // ページ内のすべてのaタグに繰り返し処理
@@ -1839,5 +1839,9 @@ $( function ( ) {
 //        }
 //    });
     // #delete
+
+
+    removeRelatedDuplicates( );
+    printRelatedLabels( );
 
 } );
