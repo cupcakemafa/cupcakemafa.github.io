@@ -1839,9 +1839,4 @@ $( function ( ) {
 //        }
 //    });
     // #delete
-
-
-    removeRelatedDuplicates( );
-    printRelatedLabels( );
-
 } );
