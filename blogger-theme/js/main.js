@@ -1765,32 +1765,38 @@ $( function ( ) {
         image.attr( 'height', dimension );
     } );
 
+    // 検索用UI
     new UISearch( document.getElementById( 'sb-search' ) );
-    $( ".colorboxEx" ).justifiedGallery( { rowHeight: 165,
-        maxRowHeight: 0,
-        margins: 5,
-        rel: 'colorboxEx',
-        lastRow: 'nojustify',
-        fixedHeight: false,
-        captions: true,
-        randomize: false
-    } ).magnificPopup( {
-        delegate: 'a',
-        type: 'image',
-        closeOnContentClick: false,
-        closeBtnInside: false,
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        gallery: {
-            enabled: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300, // don't forget to change the duration also in CSS
-            opener: function ( element ) {
-                return element.find( 'img' );
-            }
-        }
-    } );
+    
+    // @todo delete
+//    $( ".colorboxEx" ).justifiedGallery( { rowHeight: 165,
+//        maxRowHeight: 0,
+//        margins: 5,
+//        rel: 'colorboxEx',
+//        lastRow: 'nojustify',
+//        fixedHeight: false,
+//        captions: true,
+//        randomize: false
+//    } ).magnificPopup( {
+//        delegate: 'a',
+//        type: 'image',
+//        closeOnContentClick: false,
+//        closeBtnInside: false,
+//        mainClass: 'mfp-with-zoom mfp-img-mobile',
+//        gallery: {
+//            enabled: true
+//        },
+//        zoom: {
+//            enabled: true,
+//            duration: 300, // don't forget to change the duration also in CSS
+//            opener: function ( element ) {
+//                return element.find( 'img' );
+//            }
+//        }
+//    } );
+    // #delete
+
+    // メニューナビゲーション
     $( '#navigation' ).slicknav( {
         prependTo: '.main-content-wrapper'
     } );
@@ -1816,6 +1822,7 @@ $( function ( ) {
         }
     } );
     
+    // @todo delete
     // lightbox2 用処理
     // ページ内のすべてのaタグに繰り返し処理
 //    $('.post-entry').find("a[href$='.jpg']").each(function() {
@@ -1827,5 +1834,6 @@ $( function ( ) {
 //            $this.attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
 //        }
 //    });
+    // #delete
 
 } );
