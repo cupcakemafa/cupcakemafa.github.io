@@ -1923,6 +1923,9 @@ ul.slimmenu li a:hover {
     text-decoration: none;
 }
 
+ul.slimmenu li .fa {
+    font-size: auto;
+}
 
 ul.slimmenu li .sub-collapser {
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.075);
