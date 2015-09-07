@@ -1889,12 +1889,12 @@ p.white {
 ul.slimmenu {
     list-style-type: none;
     float: left;
-    padding: 0;
+    padding: 0px;
     width: 550px;
     z-index: 1000;
     position: relative;
-    padding-top: 6px;
-    margin-left: 0;
+    padding-top: 0px;
+    margin-left: 0px;
     line-height: 0px;
 }
 ul.slimmenu li {
