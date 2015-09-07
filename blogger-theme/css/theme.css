@@ -3748,7 +3748,10 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     div#main {width: 100%;}
     .intro-text{padding:10px 20px;}
     #menu-main{display:none;}
-    .entry-title{font-size:28px;}
+    .entry-title{font-size:18px;}
+    .post-entry h2 {font-size:18px;}
+    .post-entry p {font-size:16px;}
+    .post-entry ol {margin-left:18px;}
     .sb-search.sb-search-open, .no-js .sb-search {
         width: 90%;
     }
