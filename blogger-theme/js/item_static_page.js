@@ -62,6 +62,7 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
             +'</a>'
             +'</div>';
         var summary1 = '<header class="post-header">'
+            //+'<div class="labelhome">' + tag + '</div>'
             +'<h2 class="entry-title"><a href=' + posturl + '>' + title + '</a></h2>'
             +'</header>'
             +'<div class="cen">'
@@ -69,7 +70,6 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
             +'<span class="post-da"> <i class="fa fa-clock-o"></i> ' + date + '</span>'
             //+'<span class="post-com"> <i class="fa fa-comments-o"></i> ' + comment + ' Comments</span>'
             +'</div>'
-            +'<div class="labelhome">' + tag + '</div>'
             +'</div>'
             +thumb
             +'<div class="entry-content clear">'
@@ -91,6 +91,7 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
 
             var thumb = '<div class="colorboxEx">' + thum + '</div>';
             var summary1 = '<header class="post-header">' 
+                //+ '<div class="labelhome">' + tag + '</div>' 
                 + '<h2 class="entry-title">' 
                 + '<a href=' + posturl + '>' + title + '</a>' 
                 + '</h2>' 
@@ -100,7 +101,6 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
                 + '<span class="post-da"> <i class="fa fa-clock-o"></i> ' + date + '</span>' 
                 //+ '<span class="post-com"> <i class="fa fa-comments-o"></i> ' + comment + ' Comments</span>' 
                 + '</div>'
-                + '<div class="labelhome">' + tag + '</div>' 
                 + '</div>' 
                 + thumb 
                 + '<div class="entry-content clear">' 
@@ -121,6 +121,7 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
                     +'<iframe width="100%" height="450" frameborder="no" src="' + iframe1 + '" scrolling="no"></iframe>'
                     +'</div>';
                 var summary1 = '<header class="post-header">'
+                    //+'<div class="labelhome">' + tag + '</div>'
                     +'<h2 class="entry-title"><a href=' + posturl + '>' + title + '</a></h2>'
                     +'</header>'
                     +'<div class="cen">'
@@ -128,7 +129,6 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
                     +'<span class="post-da"> <i class="fa fa-clock-o"></i> ' + date + '</span>'
                     //+'<span class="post-com"> <i class="fa fa-comments-o"></i> ' + comment + ' Comments</span>'
                     +'</div>'
-                    +'<div class="labelhome">' + tag + '</div>'
                     +'</div>'
                     +thumb
                     +'<div class="entry-content clear">'

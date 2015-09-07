@@ -3775,10 +3775,8 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
         font-size: 9px;
     }
     .selectnav{width:95%;}
-
     .intro-text{
-
-        font-size:20px;
+        font-size:12px;
     }
     .mbt-pager li.next{
         float:none;
