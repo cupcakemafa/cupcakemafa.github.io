@@ -131,21 +131,13 @@
 
         <script src='//cupcakemafa.github.io/blogger-theme/js/main.js' type='text/javascript'/>
         
-        <b:if cond='data:blog.pageType != &quot;item&quot;'>
+        <b:if cond='data:blog.pageType != "item"'>
             <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
                 <script src='//cupcakemafa.github.io/blogger-theme/js/item_static_page.js' type='text/javascript'/>
             </b:if>
         </b:if>
     </head>
     <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
-        <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
-            <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
-                <b:includable id='main'>
-                    <div id="navbar-iframe-container"></div>
-                </b:includable>
-            </b:widget>
-        </b:section>
-
         <!-- outer-wrapper start -->
         <div id='outer-wrapper'>
             <!-- Navigation Bar here  -->
@@ -175,19 +167,18 @@
 
                 <div class='clear'/>
 
-
                 <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
                     <b:widget id='Header1' locked='true' title='Cupcakemafa (Header)' type='Header'>
                         <b:includable id='main'>
                             <b:if cond='data:useImage'>
-                                <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
+                                <b:if cond='data:imagePlacement == "BEHIND"'>
                                     <!--
-                    Show image as background to text. You can't really calculate the width
-                    reliably in JS because margins are not taken into account by any of
-                    clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-                    width if the user is using shrink to fit.
-                    This results in a margin-width's worth of pixels being cropped. If the
-                    user is not using shrink to fit then we expand the header.
+                                    Show image as background to text. You can't really calculate the width
+                                    reliably in JS because margins are not taken into account by any of
+                                    clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+                                    width if the user is using shrink to fit.
+                                    This results in a margin-width's worth of pixels being cropped. If the
+                                    user is not using shrink to fit then we expand the header.
                                     -->
                                     <b:if cond='data:mobile'>
                                         <div id='head-inner'>
@@ -198,7 +189,7 @@
                                             </div>
                                             <b:include name='description'/>
                                         </div>
-                                        <b:else/>
+                                    <b:else/>
                                         <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot; + &quot;background-position: &quot; + data:backgroundPositionStyleStr + &quot;; &quot; + data:widthStyleStr + &quot;min-height: &quot; + data:height + &quot;_height: &quot; + data:height + &quot;background-repeat: no-repeat; &quot;' id='head-inner'>
                                             <div class='titlewrapper' style='background: transparent'>
                                                 <h1 class='title' style='background: transparent; border-width: 0px'>
@@ -208,7 +199,7 @@
                                             <b:include name='description'/>
                                         </div>
                                     </b:if>
-                                    <b:else/>
+                                <b:else/>
                                     <!--Show the image only-->
                                     <div id='head-inner'>
                                         <a expr:href='data:blog.homepageUrl' style='display: block'>
@@ -220,7 +211,7 @@
                                         </b:if>
                                     </div>
                                 </b:if>
-                                <b:else/>
+                            <b:else/>
                                 <!--No header image -->
                                 <div id='head-inner'>
                                     <div class='titlewrapper'>
@@ -254,7 +245,6 @@
                         </b:includable>
                     </b:widget>
                 </b:section>
-
 
                 <div class='wrappu'>
                     <ul class='slimmenu' id='navigation'>
@@ -295,7 +285,7 @@
 
                 </div>
             </nav>
-            <div class='clear'/>
+            <div class="clear" />
             <!-- header wrapper start -->
 
             <!-- secondary navigation menu end -->
@@ -584,238 +574,13 @@
                                                 <data:post.friendConnectJs/>
                                                 <data:post.cmtfpIframe/>
                                                 <script type='text/javascript'>
+                                                    <!--引数にテンプレート変数を与えているので外部化できません-->
                                                   BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
                                                 </script>
                                             </div>
                                         </b:includable>
-                                        <b:includable id='commentDeleteIcon' var='comment'>
-                                            <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
-                                                <b:if cond='data:showCmtPopup'>
-                                                    <div class='goog-toggle-button'>
-                                                        <div class='goog-inline-block comment-action-icon'/>
-                                                    </div>
-                                                    <b:else/>
-                                                    <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-                                                        <img src='//www.blogger.com/img/icon_delete13.gif'/>
-                                                    </a>
-                                                </b:if>
-                                            </span>
-                                        </b:includable>
-                                        <b:includable id='comment_count_picker' var='post'>
-                                            <b:if cond='data:post.commentSource == 1'>
-                                                <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
-                                                </span>
-                                                <b:else/>
-                                                <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-                                                    <data:post.commentLabelFull/>
-                                                    :
-                                                </a>
-                                            </b:if>
-                                        </b:includable>
-                                        <b:includable id='comment_picker' var='post'>
-                                            <b:if cond='data:post.commentSource == 1'>
-                                                <b:include data='post' name='iframe_comments'/>
-                                                <b:else/>
-                                                <b:if cond='data:post.showThreadedComments'>
-                                                    <b:include data='post' name='threaded_comments'/>
-                                                    <b:else/>
-                                                    <b:include data='post' name='comments'/>
-                                                </b:if>
-                                            </b:if>
-                                        </b:includable>
-                                        <b:includable id='comments' var='post'>
+                                        
 
-                                            <div id='top-comment'>
-                                                <div class='widget2' id='top-comment1'> 
-
-                                                    <div class='centerare1'>
-
-                                                        <div class='comments' id='comments'>
-
-                                                            <a name='comments'/>
-                                                            <b:if cond='data:post.allowComments'>
-                                                                <div class='komhead'>
-                                                                    <h4>
-                                                                        <b:if cond='data:post.numComments == 1'>
-                                                                            1 <data:commentLabel/>:
-                                                                            <b:else/>
-                                                                            <data:post.numComments/> <data:commentLabelPlural/>:
-                                                                        </b:if>
-                                                                    </h4>
-                                                                    <div class='stripe-line'/>
-                                                                </div>
-                                                                <b:if cond='data:post.commentPagingRequired'>
-                                                                    <span class='paging-control-container'>
-                                                                        <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
-                                                                        &#160;
-                                                                        <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
-                                                                        &#160;
-                                                                        <data:post.commentRangeText/>
-                                                                        &#160;
-                                                                        <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
-                                                                        &#160;
-                                                                        <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
-                                                                    </span>
-                                                                </b:if>
-
-                                                                <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
-                                                                    <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
-                                                                        <b:loop values='data:post.comments' var='comment'>
-                                                                            <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
-                                                                                <b:if cond='data:comment.favicon'>
-                                                                                    <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
-                                                                                </b:if>
-                                                                                <a expr:name='data:comment.anchorName'/>
-                                                                                <b:if cond='data:blog.enabledCommentProfileImages'>
-                                                                                    <data:comment.authorAvatarImage/>
-                                                                                </b:if>
-                                                                                <b:if cond='data:comment.authorUrl'>
-                                                                                    <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
-                                                                                    <b:else/>
-                                                                                    <data:comment.author/>
-                                                                                </b:if>
-                                                                                <data:commentPostedByMsg/>
-                                                                            </dt>
-                                                                            <dd class='comment-body' expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
-                                                                                <b:if cond='data:comment.isDeleted'>
-                                                                                    <span class='deleted-comment'><data:comment.body/></span>
-                                                                                    <b:else/>
-                                                                                    <p>
-                                                                                        <data:comment.body/>
-                                                                                    </p>
-                                                                                </b:if>
-                                                                            </dd>
-                                                                            <dd class='comment-footer'>
-                                                                                <span class='comment-timestamp'>
-                                                                                    <a expr:href='data:comment.url' title='comment permalink'>
-                                                                                        <data:comment.timestamp/>
-                                                                                    </a>
-                                                                                    <b:include data='comment' name='commentDeleteIcon'/>
-                                                                                </span>
-                                                                            </dd>
-                                                                        </b:loop>
-                                                                    </dl>
-                                                                </div>
-
-                                                                <b:if cond='data:post.commentPagingRequired'>
-                                                                    <span class='paging-control-container'>
-                                                                        <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
-                                                                            <data:post.oldestLinkText/>
-                                                                        </a>
-                                                                        <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-                                                                            <data:post.olderLinkText/>
-                                                                        </a>
-                                                                        &#160;
-                                                                        <data:post.commentRangeText/>
-                                                                        &#160;
-                                                                        <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
-                                                                            <data:post.newerLinkText/>
-                                                                        </a>
-                                                                        <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
-                                                                            <data:post.newestLinkText/>
-                                                                        </a>
-                                                                    </span>
-                                                                </b:if>
-
-                                                                <p class='comment-footer'>
-                                                                    <b:if cond='data:post.embedCommentForm'>
-                                                                        <b:if cond='data:post.allowNewComments'>
-                                                                            <b:include data='post' name='comment-form'/>
-                                                                            <b:else/>
-                                                                            <data:post.noNewCommentsText/>
-                                                                        </b:if>
-                                                                        <b:else/>
-                                                                        <b:if cond='data:post.allowComments'>
-                                                                            <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
-                                                                        </b:if>
-                                                                    </b:if>
-
-                                                                </p>
-                                                            </b:if>
-                                                            <b:if cond='data:showCmtPopup'>
-                                                                <div id='comment-popup'>
-                                                                    <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-                                                                    </iframe>
-                                                                </div>
-                                                            </b:if>
-
-                                                            <div id='backlinks-container'>
-                                                                <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-                                                                    <b:if cond='data:post.showBacklinks'>
-                                                                        <b:include data='post' name='backlinks'/>
-                                                                    </b:if>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                                <script type='text/javascript'>
-                                                //<![CDATA[
-                                                                $( document ).ready( function( ){
-                                                            $( '#top-comment .widget2' ).hide( );
-                                                                $( '#top-comment .widget2:first' ).show( );
-                                                                $( '.top-comment-widget-menu ul dl:first' ).addClass( 'selected' );
-                                                                $( '.top-comment-widget-menu ul dl' ).click( function( ){
-                                                            $( '.top-comment-widget-menu ul dl' ).removeClass( 'selected' );
-                                                                $( this ).addClass( 'selected' );
-                                                                $( '#top-comment .widget2' ).hide( );
-                                                                $( '#top-comment .widget2' ).eq( $( '.top-comment-widget-menu ul dl' ).index( this ) ).slideDown( )( 300 );
-                                                                } );
-                                                                } );
-                                                //]]>
-                                                </script>
-
-                                            </div>
-                                        </b:includable>
-                                        <b:includable id='feedLinks'>
-                                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                                                <!-- Blog feed links -->
-                                                <b:if cond='data:feedLinks'>
-                                                    <div class='blog-feeds'>
-                                                        <b:include data='feedLinks' name='feedLinksBody'/>
-                                                    </div>
-                                                </b:if>
-                                                <b:else/>
-                                                <!--Post feed links -->
-                                                <div class='post-feeds'>
-                                                    <b:loop values='data:posts' var='post'>
-                                                        <b:if cond='data:post.allowComments'>
-                                                            <b:if cond='data:post.feedLinks'>
-                                                                <b:include data='post.feedLinks' name='feedLinksBody'/>
-                                                            </b:if>
-                                                        </b:if>
-                                                    </b:loop>
-                                                </div>
-                                            </b:if>
-                                        </b:includable>
-                                        <b:includable id='feedLinksBody' var='links'>
-                                            <div class='feed-links'>
-                                                <data:feedLinksMsg/>
-                                                <b:loop values='data:links' var='f'>
-                                                    <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>
-                                                        <data:f.name/>
-                                                        (
-                                                        <data:f.feedType/>
-                                                        )
-                                                    </a>
-                                                </b:loop>
-                                            </div>
-                                        </b:includable>
-                                        <b:includable id='iframe_comments' var='post'>
-                                            <b:if cond='data:post.allowIframeComments'>
-                                                <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
-                                                <div class='cmt_iframe_holder' expr:data-href='data:post.canonicalUrl' expr:data-viewtype='data:post.viewType'/>
-                                                <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
-                                                    <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-                                                        <data:postCommentMsg/>
-                                                    </a>
-                                                </b:if>
-                                            </b:if>
-                                        </b:includable>
                                         <b:includable id='mobile-index-post' var='post'>
                                             <!-- MOBILE INDEX POST HERE -->
                                             <div class='mobile-date-outer date-outer'>
@@ -827,7 +592,7 @@
                                                                     <img expr:src='data:post.thumbnailUrl'/>
                                                                 </div>
                                                             </div>
-                                                            <b:else/>
+                                                        <b:else/>
                                                             <div class='mobile-index-thumbnail'>
                                                                 <div class='Image'>
                                                                     <img expr:alt='data:post.title' expr:title='data:post.title' src='http://3.bp.blogspot.com/-ltyYh4ysBHI/U04MKlHc6pI/AAAAAAAADQo/PFxXaGZu9PQ/s66-c/no-image.png'/>
@@ -870,7 +635,7 @@
                                                                             <l/>
                                                                             <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
                                                                                 <abbr class='published updated' expr:title='data:post.timestampISO8601' itemprop='datePublished'>
-                                                                                    <data:post.timestamp/>
+                                                                                    <data:post.dateHeader/>
                                                                                 </abbr>
                                                                             </a>
                                                                         </span>
@@ -986,30 +751,7 @@
                                                             <div class='post-header'>
                                                                 <div class='post-header-line-1'/>
                                                             </div>
-                                                            <div class='post-info' style='margin-bottom:15px;'>
-                                                                <b:if cond='data:top.showAuthor'>
-                                                                    <b:if cond='data:post.authorProfileUrl'>
-                                                                        <span class='author-info'>
-
-                                                                            <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                                                                                <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
-                                                                                <a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
-                                                                                    <span itemprop='name'>
-                                                                                        <data:post.author/>
-                                                                                    </span>
-                                                                                </a>
-                                                                            </span>
-                                                                        </span>
-                                                                        <b:else/>
-                                                                        <span class='author-info'>
-                                                                            <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                                                                                <span itemprop='name'>
-                                                                                    <data:post.author/>
-                                                                                </span>
-                                                                            </span>
-                                                                        </span>
-                                                                    </b:if>
-                                                                </b:if>
+                                                            <div class='post-info aaa' style='margin-bottom:15px;'>
                                                                 <b:if cond='data:top.showTimestamp'>
                                                                     <b:if cond='data:post.url'>
                                                                         <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
@@ -1046,9 +788,8 @@
                                                                 </b:if>
                                                             </div>
                                                             <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-                                                                <!-- IKLAN BAWAH JUDUL VERSI MOBILE -->
                                                                 <data:post.body/>
-                                                                <div style='clear: both;'/>
+                                                                <div class="clear" />
                                                                 <div id='share-buttons-mobile'>
                                                                     <p>
                                                                         Share : 
@@ -1075,7 +816,9 @@
                                                                         </b:if>
                                                                     </b:loop>
                                                                     <script type='text/javascript'>
-                                                  removeRelatedDuplicates( ); printRelatedLabels( );</script>
+                                                                        removeRelatedDuplicates( );
+                                                                        printRelatedLabels( );
+                                                                    </script>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1203,9 +946,10 @@
                                                                     <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
                                                                     <span class='time-info'>
                                                                         <l/>
-                                                                        <i class='fa fa-clock-o'/>  <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+                                                                        <i class='fa fa-clock-o'/> 
+                                                                        <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
                                                                             <abbr class='published updated' expr:title='data:post.timestampISO8601' itemprop='datePublished'>
-                                                                                <data:post.timestamp/>
+                                                                                <data:post.dateHeader/>
                                                                             </abbr>
                                                                         </a>
                                                                     </span>
@@ -1302,7 +1046,7 @@
                                                                 <li class='previous'> 
                                                                     <b:if cond='data:olderPageUrl'> 
                                                                         <i class='fa fa-chevron-left'/><a class='older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' rel='previous'/> 
-                                                                        <b:else/> 
+                                                                    <b:else/> 
                                                                         <i class='fa fa-chevron-left'/><a rel='previous'><strong>Previous</strong> <span>You are viewing Last Post</span></a> 
                                                                     </b:if> 
                                                                 </li>
@@ -1310,16 +1054,16 @@
 
                                                             <script type='text/javascript'>
                                                             //<![CDATA[ 
-                                                                                ( function( $ ){
-                                                                                var newerLink = $( 'a.newer-link' );
-                                                                                    var olderLink = $( 'a.older-link' );
-                                                                                    $.get( newerLink.attr( 'href' ), function ( data ) {
-                                                                                    newerLink.html( '<strong>Next</strong> <span>' + $( data ).find( '.post h1.post-title' ).text( ) + '</span>' );
-                                                                                    }, "html" );
-                                                                                    $.get( olderLink.attr( 'href' ), function ( data2 ) {
-                                                                                    olderLink.html( '<strong>Previous</strong> <span>' + $( data2 ).find( '.post h1.post-title' ).text( ) + '</span>' );
-                                                                                    }, "html" );
-                                                                                    } )( jQuery );
+                                                            ( function( $ ){
+                                                                var newerLink = $( 'a.newer-link' );
+                                                                var olderLink = $( 'a.older-link' );
+                                                                $.get( newerLink.attr( 'href' ), function ( data ) {
+                                                                    newerLink.html( '<strong>Next</strong> <span>' + $( data ).find( '.post h1.post-title' ).text( ) + '</span>' );
+                                                                }, "html" );
+                                                                $.get( olderLink.attr( 'href' ), function ( data2 ) {
+                                                                olderLink.html( '<strong>Previous</strong> <span>' + $( data2 ).find( '.post h1.post-title' ).text( ) + '</span>' );
+                                                                }, "html" );
+                                                            } )( jQuery );
                                                             //]]> 
                                                             </script>
                                                         </b:if></b:if>
@@ -1327,8 +1071,6 @@
 
                                                     <b:include name='authorblog'/>
                                                     <!-- Related Post Widget Start -->
-
-
 
                                                     <div id='related-posts'>
                                                         <div class='large-12 column'>
@@ -1343,22 +1085,22 @@
                                                             </b:if>
                                                         </b:loop>
                                                         <script type='text/javascript'>
-                                                          var currentposturl=&quot;<data:post.url/>&quot;;
-                                                                            var maxresults = 3;
-                                                                            var relatedpoststitle = &quot; <b /> &quot; ;
-                                                                            removeRelatedDuplicates_thumbs( );
-                                                                            printRelatedLabels_thumbs( );                        </script>
+                                                            var currentposturl="<data:post.url/>";
+                                                            var maxresults = 3;
+                                                            var relatedpoststitle = "<b />";
+                                                            removeRelatedDuplicates_thumbs( );
+                                                            printRelatedLabels_thumbs( );
+                                                        </script>
                                                     </div>
 
                                                     <div class='clear'/>
-
-
                                                 </article>
 
-                                                <b:else/>
-                                                <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                                          <b:else/>
+
+                                                <b:if cond='data:blog.pageType == "static_page"'>
                                                     <article class='post'>
-                                                        <div class='post-header'>		
+                                                        <div class='post-header'>
                                                             <h2 class='entry-title'>
                                                                 <data:post.title/>
                                                             </h2>
@@ -1366,12 +1108,9 @@
                                                         <div class='post-entry'>
                                                             <p><data:post.body/></p>
                                                         </div>
-
                                                     </article>
-
-                                                    <b:else/>
-                                                    <article class='post wow fadeIn' data-wow-duration='1s'>		
-
+                                                <b:else/>
+                                                    <article class='post wow fadeIn' data-wow-duration='1s'>
                                                         <div expr:id='&quot;summary&quot; + data:post.id' style='display:none;'>
                                                             <data:post.body/>
                                                         </div>
@@ -1385,358 +1124,14 @@
                                                                     <span> <a class='hs-icon ' href='javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());'><i class='fa fa-pinterest'/></a></span>
                                                                     <span> <a class='hs-icon ' expr:href='"http://www.stumbleupon.com/submit?url="+ data:post.url' target='_blank'><i class='fa fa-stumbleupon fa-2x'/></a></span>
                                                             -->
-                                                            <span> <a class='hs-icon ' expr:href='&quot;http://www.tumblr.com/share/link?url=&quot;+ data:post.url' target='_blank'><i class='fa fa-tumblr fa-2x'/></a></span>
+                                                            <span><a class='hs-icon ' expr:href='&quot;http://www.tumblr.com/share/link?url=&quot;+ data:post.url' target='_blank'><i class='fa fa-tumblr fa-2x'/></a></span>
                                                         </div>
                                                     </article>
                                                 </b:if>
+
                                             </b:if>
                                         </b:includable>
-                                        <b:includable id='postQuickEdit' var='post'>
-                                            <b:if cond='data:post.editUrl'>
-                                                <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
-                                                    <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-                                                        <b style='color:#EE3322;'>
-                                                            <i class='fa fa-pencil'/>
-                                                            Edit
-                                                        </b>
-                                                    </a>
-                                                </span>
-                                            </b:if>
-                                        </b:includable>
-                                        <b:includable id='shareButtons' var='post'>
-                                            <b:if cond='data:top.showEmailButton'>
-                                                <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
-                                                    <span class='share-button-link-text'>
-                                                        <data:top.emailThisMsg/>
-                                                    </span>
-                                                </a>
-                                            </b:if>
-                                            <b:if cond='data:top.showBlogThisButton'>
-                                                <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
-                                                    <span class='share-button-link-text'>
-                                                        <data:top.blogThisMsg/>
-                                                    </span>
-                                                </a>
-                                            </b:if>
-                                            <b:if cond='data:top.showTwitterButton'>
-                                                <a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
-                                                    <span class='share-button-link-text'>
-                                                        <data:top.shareToTwitterMsg/>
-                                                    </span>
-                                                </a>
-                                            </b:if>
-                                            <b:if cond='data:top.showFacebookButton'>
-                                                <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
-                                                    <span class='share-button-link-text'>
-                                                        <data:top.shareToFacebookMsg/>
-                                                    </span>
-                                                </a>
-                                            </b:if>
-                                            <b:if cond='data:top.showOrkutButton'>
-                                                <a class='goog-inline-block share-button sb-orkut' expr:href='data:post.sharePostUrl + &quot;&amp;target=orkut&quot;' expr:title='data:top.shareToOrkutMsg' target='_blank'>
-                                                    <span class='share-button-link-text'>
-                                                        <data:top.shareToOrkutMsg/>
-                                                    </span>
-                                                </a>
-                                            </b:if>
-                                            <b:if cond='data:top.showDummy'>
-                                                <div class='goog-inline-block dummy-container'>
-                                                    <data:post.dummyTag/>
-                                                </div>
-                                            </b:if>
-                                        </b:includable>
-                                        <b:includable id='status-message'>
-                                            <b:if cond='data:navMessage'>
-                                                <div class='status-msg-wrap'>
-                                                    <div class='status-msg-body'>
-                                                        <data:navMessage/>
-                                                    </div>
-                                                    <div class='status-msg-border'>
-                                                        <div class='status-msg-bg'>
-                                                            <div class='status-msg-hidden'>
-                                                                <data:navMessage/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div style='clear: both;'/>
-                                            </b:if>
-                                        </b:includable>
-                                        <b:includable id='threaded-comment-form' var='post'>
-                                            <div class='comment-form'>
-                                                <a name='comment-form'/>
-                                                <b:if cond='data:mobile'>
-                                                    <div class='pesan-komentar'>
-                                                        <p>
-                                                            <data:blogCommentMessage/>
-                                                        </p>
-                                                    </div>
-                                                    <data:blogTeamBlogMessage/>
-                                                    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-                                                    <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
-                                                    <b:else/>
-                                                    <div class='pesan-komentar'>
-                                                        <p>
-                                                            <data:blogCommentMessage/>
-                                                        </p>
-                                                    </div>
-                                                    <data:blogTeamBlogMessage/>
-                                                    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-                                                    <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
-                                                </b:if>
-                                                <data:post.friendConnectJs/>
-                                                <data:post.cmtfpIframe/>
-                                                <script type='text/javascript'>
-                          BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
-                                                </script>
-                                            </div>
-                                        </b:includable>
-                                        <b:includable id='threaded_comment_js' var='post'>
-                                            <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
-                                            <script type='text/javascript'>
-                                                                ( function( ) {
-                          var items = <data:post.commentJso/>;
-                          var msgs = <data:post.commentMsgs/>;
-                          var config = <data:post.commentConfig/>;
-                                                                    // <![CDATA[
-                                                                    var cursor = null;
-                                                                    if ( items && items.length > 0 ) {
-                                                                cursor = parseInt( items[items.length - 1].timestamp ) + 1;
-                                                                }
-                                                                var bodyFromEntry = function( entry ) {
-                                                                if ( entry.gd$extendedProperty ) {
-                                                                for ( var k in entry.gd$extendedProperty ) {
-                                                                if ( entry.gd$extendedProperty[k].name == 'blogger.contentRemoved' ) {
-                                                                return '<span class="deleted-comment">' + entry.content.$t + '</span>';
-                                                                }
-                                                                }
-                                                                }
-                                                                return entry.content.$t;
-                                                                }
-                                                                var parse = function( data ) {
-                                                                cursor = null;
-                                                                    var comments = [];
-                                                                    if ( data && data.feed && data.feed.entry ) {
-                                                                for ( var i = 0, entry; entry = data.feed.entry[i]; i++ ) {
-                                                                var comment = {};
-                                                                    // comment ID, parsed out of the original id format
-                                                                    var id = /blog-(\d+).post-(\d+)/.exec( entry.id.$t );
-                                                                    comment.id = id ? id[2] : null;
-                                                                    comment.body = bodyFromEntry( entry );
-                                                                    comment.timestamp = Date.parse( entry.published.$t ) + '';
-                                                                    if ( entry.author && entry.author.constructor === Array ) {
-                                                                var auth = entry.author[0];
-                                                                    if ( auth ) {
-                                                                comment.author = {
-                                                                name: ( auth.name ? auth.name.$t : undefined ),
-                                                                    profileUrl: ( auth.uri ? auth.uri.$t : undefined ),
-                                                                    avatarUrl: ( auth.gd$image ? auth.gd$image.src : undefined )
-                                                                };
-                                                                }
-                                                                }
-                                                                if ( entry.link ) {
-                                                                if ( entry.link[2] ) {
-                                                                comment.link = comment.permalink = entry.link[2].href;
-                                                                }
-                                                                if ( entry.link[3] ) {
-                                                                var pid = /.*comments\/default\/(\d+)\?.*/.exec( entry.link[3].href );
-                                                                    if ( pid && pid[1] ) {
-                                                                comment.parentId = pid[1];
-                                                                }
-                                                                }
-                                                                }
-                                                                comment.deleteclass = 'item-control blog-admin';
-                                                                    if ( entry.gd$extendedProperty ) {
-                                                                for ( var k in entry.gd$extendedProperty ) {
-                                                                if ( entry.gd$extendedProperty[k].name == 'blogger.itemClass' ) {
-                                                                comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
-                                                                } else if ( entry.gd$extendedProperty[k].name == 'blogger.displayTime' ) {
-                                                                comment.displayTime = entry.gd$extendedProperty[k].value;
-                                                                }
-                                                                }
-                                                                }
-                                                                comments.push( comment );
-                                                                }
-                                                                }
-                                                                return comments;
-                                                                };
-                                                                    var paginator = function( callback ) {
-                                                                    if ( hasMore( ) ) {
-                                                                    var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
-                                                                        if ( cursor ) {
-                                                                    url += '&published-min=' + new Date( cursor ).toISOString( );
-                                                                    }
-                                                                    window.bloggercomments = function( data ) {
-                                                                    var parsed = parse( data );
-                                                                        cursor = parsed.length < 50 ? null
-                                                                        : parseInt( parsed[parsed.length - 1].timestamp ) + 1
-                                                                        callback( parsed );
-                                                                        window.bloggercomments = null;
-                                                                    }
-                                                                    url += '&callback=bloggercomments';
-                                                                        var script = document.createElement( 'script' );
-                                                                        script.type = 'text/javascript';
-                                                                        script.src = url;
-                                                                        document.getElementsByTagName( 'head' )[0].appendChild( script );
-                                                                    }
-                                                                    };
-                                                                    var hasMore = function( ) {
-                                                                    return !!cursor;
-                                                                    };
-                                                                    var getMeta = function( key, comment ) {
-                                                                    if ( 'iswriter' == key ) {
-                                                                    var matches = !!comment.author
-                                                                        && comment.author.name == config.authorName
-                                                                        && comment.author.profileUrl == config.authorUrl;
-                                                                        return matches ? 'true' : '';
-                                                                    } else if ( 'deletelink' == key ) {
-                                                                    return config.baseUri + '/delete-comment.g?blogID='
-                                                                        + config.blogId + '&postID=' + comment.id;
-                                                                    } else if ( 'deleteclass' == key ) {
-                                                                    return comment.deleteclass;
-                                                                    }
-                                                                    return '';
-                                                                    };
-                                                                    var replybox = null;
-                                                                    var replyUrlParts = null;
-                                                                    var replyParent = undefined;
-                                                                    var onReply = function( commentId, domId ) {
-                                                                    if ( replybox == null ) {
-                                                                    // lazily cache replybox, and adjust to suit this style:
-                                                                    replybox = document.getElementById( 'comment-editor' );
-                                                                        if ( replybox != null ) {
-                                                                    replybox.height = '250px';
-                                                                        replybox.style.display = 'block';
-                                                                        replyUrlParts = replybox.src.split( '#' );
-                                                                    }
-                                                                    }
-                                                                    if ( replybox && ( commentId !== replyParent ) ) {
-                                                                    document.getElementById( domId ).insertBefore( replybox.parentNode, null );
-                                                                        replybox.src = replyUrlParts[0]
-                                                                        + ( commentId ? '&parentID=' + commentId : '' )
-                                                                        + '#' + replyUrlParts[1];
-                                                                        replyParent = commentId;
-                                                                    }
-                                                                    };
-                                                                    var hash = ( window.location.hash || '#' ).substring( 1 );
-                                                                    var startThread, targetComment;
-                                                                    if ( /^comment-form_/.test( hash ) ) {
-                                                                startThread = hash.substring( 'comment-form_'.length );
-                                                                } else if ( /^c[0-9]+$/.test( hash ) ) {
-                                                                targetComment = hash.substring( 1 );
-                                                                }
-                                                                // Configure commenting API:
-                                                                var configJso = {
-                                                                'maxDepth': config.maxThreadDepth
-                                                                };
-                                                                    var provider = {
-                                                                    'id': config.postId,
-                                                                        'data': items,
-                                                                        'loadNext': paginator,
-                                                                        'hasMore': hasMore,
-                                                                        'getMeta': getMeta,
-                                                                        'onReply': onReply,
-                                                                        'rendered': true,
-                                                                        'initComment': targetComment,
-                                                                        'initReplyThread': startThread,
-                                                                        'config': configJso,
-                                                                        'messages': msgs
-                                                                    };
-                                                                    var render = function( ) {
-                                                                    if ( window.goog && window.goog.comments ) {
-                                                                    var holder = document.getElementById( 'comment-holder' );
-                                                                        window.goog.comments.render( holder, provider );
-                                                                    }
-                                                                    };
-                                                                    // render now, or queue to render when library loads:
-                                                                    if ( window.goog && window.goog.comments ) {
-                                                                render( );
-                                                                } else {
-                                                                window.goog = window.goog || {};
-                                                                    window.goog.comments = window.goog.comments || {};
-                                                                    window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
-                                                                    window.goog.comments.loadQueue.push( render );
-                                                                }
-                                                                } )( );
-                                                                // ]]>
-                                            </script>
-                                        </b:includable>
-                                        <b:includable id='threaded_comments' var='post'>
-                                            <div id='top-comment'>
-                                                <div class='widget2' id='top-comment1'> 
 
-                                                    <div class='centerare1'>
-
-                                                        <div class='comments' id='comments'>
-                                                            <a name='comments'/>
-                                                            <div class='komhead'>
-                                                                <h4>
-                                                                    <b:if cond='data:post.numComments == 1'>
-                                                                        1 <data:commentLabel/>:
-                                                                        <b:else/>
-                                                                        <data:post.numComments/> <data:commentLabelPlural/>:
-                                                                    </b:if>
-                                                                </h4>
-                                                                <div class='stripe-line'/>
-                                                            </div>
-                                                            <div class='comments-content'>
-                                                                <b:if cond='data:post.embedCommentForm'>
-                                                                    <b:include data='post' name='threaded_comment_js'/>
-                                                                </b:if>
-                                                                <div id='comment-holder'>
-                                                                    <data:post.commentHtml/>
-                                                                </div>
-                                                            </div>
-
-                                                            <p class='comment-footer'>
-                                                                <b:if cond='data:post.allowNewComments'>
-                                                                    <b:include data='post' name='threaded-comment-form'/>
-                                                                    <b:else/>
-                                                                    <data:post.noNewCommentsText/>
-                                                                </b:if>
-                                                            </p>
-
-                                                            <b:if cond='data:showCmtPopup'>
-                                                                <div id='comment-popup'>
-                                                                    <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-                                                                    </iframe>
-                                                                </div>
-                                                            </b:if>
-
-                                                            <div id='backlinks-container'>
-                                                                <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-                                                                    <b:if cond='data:post.showBacklinks'>
-                                                                        <b:include data='post' name='backlinks'/>
-                                                                    </b:if>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                                <script type='text/javascript'>
-                                                //<![CDATA[
-                                                                    $( document ).ready( function( ){
-                                                                $( '#top-comment .widget2' ).hide( );
-                                                                    $( '#top-comment .widget2:first' ).show( );
-                                                                    $( '.top-comment-widget-menu ul dl:first' ).addClass( 'selected' );
-                                                                    $( '.top-comment-widget-menu ul dl' ).click( function( ){
-                                                                $( '.top-comment-widget-menu ul dl' ).removeClass( 'selected' );
-                                                                    $( this ).addClass( 'selected' );
-                                                                    $( '#top-comment .widget2' ).hide( );
-                                                                    $( '#top-comment .widget2' ).eq( $( '.top-comment-widget-menu ul dl' ).index( this ) ).slideDown( )( 300 );
-                                                                    } );
-                                                                    } );
-                                                //]]>
-                                                </script>
-
-                                            </div>
-
-                                            <div style='clear: both;'/>
-                                        </b:includable>
                                     </b:widget>
                                 </b:section>
 
@@ -1803,23 +1198,6 @@
                                             </b:if>
                                             <b:include name='quickedit'/>
                                         </div>
-                                    </b:includable>
-                                </b:widget>
-                                <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
-                                    <b:includable id='main'>
-                                        <b:if cond='data:feedbackSurveyLink'>
-                                            <div class='mobile-survey-link' style='text-align: center;'>
-                                                <data:feedbackSurveyLink/>
-                                            </div>
-                                        </b:if>
-
-                                        <div class='widget-content' style='text-align: center;'>
-                                            <b:if cond='data:attribution != &quot;&quot;'>
-                                                <data:attribution/>
-                                            </b:if>
-                                        </div>
-
-                                        <b:include name='quickedit'/>
                                     </b:includable>
                                 </b:widget>
                                 <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
@@ -1950,7 +1328,7 @@
                     <!-- sidebar wrapper end -->
                 </div>
                 <!-- content wrapper end -->
-                <div class='clear'/> 
+                <div class='clear'/>
 
             </div>
 
