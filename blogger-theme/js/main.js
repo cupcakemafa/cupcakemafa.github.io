@@ -1769,13 +1769,14 @@ $( function ( ) {
     new UISearch( document.getElementById( 'sb-search' ) );
     
     // @todo delete
-    $( ".colorboxEx" ).justifiedGallery( { rowHeight: 165,
+    $( ".colorboxEx" ).justifiedGallery( { 
+        rowHeight: 165,
         maxRowHeight: 0,
         margins: 5,
-        rel: 'colorboxEx',
+        //rel: 'colorboxEx',
         lastRow: 'nojustify',
         fixedHeight: false,
-        captions: true,
+        captions: false,
         randomize: false
     } )
 //    .magnificPopup( {
