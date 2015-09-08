@@ -3621,7 +3621,6 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     .section{padding:0;}
 
     #searchformfix,.soc-icon{display:none}
-    .sb-icon-search, .sb-search-submit {line-height:48px;}
     .header-right {width: 100%;max-width: 432px;float:none}
     #container {width: 430px;}
     #content-wrapper{width:100%;}
@@ -3683,7 +3682,7 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     .main-content-wrapper{width: 100%;}
     .wrappu {
         width: 100%;}
-
+    .sb-icon-search, .sb-search-submit {line-height:48px;}
     .search-bar:hover .nav-search input {
         width: 60px!important;
         font-size: 9px;
