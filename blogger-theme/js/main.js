@@ -269,6 +269,7 @@ function setAttributeOnload( object, attribute, val ) {
     }, a.fn.mtabs.defaults = { container_class: "tabs", tabs_container_class: "tabs-content", active_tab_class: "active-tab", tab_text_el: "h1, h2, h3, h4, h5, h6", tabsmenu_class: "tabs-menu", tabsmenu_el: "ul", tmpl: { tabsmenu_tab: '<li class="tab-{0}"><span>{1}</span></li>' }, onTabSelect: null }
 }( window.jQuery, window, document );
 
+//@todo delete
 //gapi.load( 'gapi.iframes:gapi.iframes.style.bubble', function () {
 //    if ( gapi.iframes && gapi.iframes.getContext ) {
 //        gapi.iframes.getContext().openChild( {
@@ -278,11 +279,13 @@ function setAttributeOnload( object, attribute, val ) {
 //        } );
 //    }
 //} );
+//#delete
 
 /*! Magnific Popup - v0.9.9 - 2014-09-06
  * http://dimsemenov.com/plugins/magnific-popup/
  * Copyright (c) 2014 Dmitry Semenov; 
  */
+ /*
 ( function ( e ) {
     var t, n, i, o, r, a, s, l = "Close", c = "BeforeClose", d = "AfterClose", u = "BeforeAppend", p = "MarkupParse", f = "Open", m = "Change", g = "mfp", h = "." + g, v = "mfp-ready", C = "mfp-removing", y = "mfp-prevent-close", w = function ( ) {
     }, b = ! ! window.jQuery, I = e( window ), x = function ( e, n ) {
@@ -739,7 +742,9 @@ function setAttributeOnload( object, attribute, val ) {
         }
     }( ), _( )
 } )( window.jQuery || window.Zepto );
-/*!
+*/
+
+/*
  * Justified Gallery - v3.5.1
  * http://miromannino.github.io/Justified-Gallery/
  * Copyright (c) 2015 Miro Mannino
@@ -826,7 +831,7 @@ function setAttributeOnload( object, attribute, val ) {
             return i.fixedHeight && k > i.rowHeight && ( k = i.rowHeight ), { minHeight: k, justify: j }
         }
         function o( a ) {
-            a.lastAnalyzedIndex = - 1, a.buildingRow.entriesBuff = [ ], a.buildingRow.aspectRatio = 0, a.buildingRow.width = 0, a.offY = a.settings.margins
+            a.lastAnalyzedIndex = - 1, a.buildingRow.entriesBuff = [ ], a.buildingRow.aspectRatio = 0, a.buildingRow.width = 0, a.offY = a.settings.margins;
         }
         function p( a, b ) {
             var c, d, e, f, g = a.settings, h = g.margins;
@@ -835,29 +840,29 @@ function setAttributeOnload( object, attribute, val ) {
             g.maxRowHeight > 0 && g.maxRowHeight < e ? e = g.maxRowHeight : 0 === g.maxRowHeight && 1.5 * g.rowHeight < e && ( e = 1.5 * g.rowHeight );
             for ( var i = 0; i < a.buildingRow.entriesBuff.length; i++ )
                 c = a.buildingRow.entriesBuff[i], d = l( c ), m( c, h, a.offY, d.data( "jg.jimgw" ), d.data( "jg.jimgh" ), e, a ), h += d.data( "jg.jimgw" ) + g.margins;
-            a.$gallery.height( a.offY + e + g.margins + ( a.spinner.active ? a.spinner.$el.innerHeight( ) : 0 ) ), ( ! b || e <= a.settings.rowHeight && f.justify ) && ( a.offY += e + a.settings.margins, a.buildingRow.entriesBuff = [ ], a.buildingRow.aspectRatio = 0, a.buildingRow.width = 0, a.$gallery.trigger( "jg.rowflush" ) )
+            a.$gallery.height( a.offY + e + g.margins + ( a.spinner.active ? a.spinner.$el.innerHeight( ) : 0 ) ), ( ! b || e <= a.settings.rowHeight && f.justify ) && ( a.offY += e + a.settings.margins, a.buildingRow.entriesBuff = [ ], a.buildingRow.aspectRatio = 0, a.buildingRow.width = 0, a.$gallery.trigger( "jg.rowflush" ) );
         }
         function q( a ) {
             a.checkWidthIntervalId = setInterval( function ( ) {
                 var b = parseInt( a.$gallery.width( ), 10 );
-                a.galleryWidth !== b && ( a.galleryWidth = b, o( a ), u( a, ! 0 ) )
-            }, a.settings.refreshTime )
+                a.galleryWidth !== b && ( a.galleryWidth = b, o( a ), u( a, ! 0 ) );
+            }, a.settings.refreshTime );
         }
         function r( a ) {
             clearInterval( a.intervalId ), a.intervalId = setInterval( function ( ) {
-                a.phase < a.$points.length ? a.$points.eq( a.phase ).fadeTo( a.timeslot, 1 ) : a.$points.eq( a.phase - a.$points.length ).fadeTo( a.timeslot, 0 ), a.phase = ( a.phase + 1 ) % ( 2 * a.$points.length )
-            }, a.timeslot )
+                a.phase < a.$points.length ? a.$points.eq( a.phase ).fadeTo( a.timeslot, 1 ) : a.$points.eq( a.phase - a.$points.length ).fadeTo( a.timeslot, 0 ), a.phase = ( a.phase + 1 ) % ( 2 * a.$points.length );
+            }, a.timeslot );
         }
         function s( a ) {
-            clearInterval( a.intervalId ), a.intervalId = null
+            clearInterval( a.intervalId ), a.intervalId = null;
         }
         function t( a ) {
-            a.yield.flushed = 0, null !== a.imgAnalyzerTimeout && clearTimeout( a.imgAnalyzerTimeout )
+            a.yield.flushed = 0, null !== a.imgAnalyzerTimeout && clearTimeout( a.imgAnalyzerTimeout );
         }
         function u( a, b ) {
             t( a ), a.imgAnalyzerTimeout = setTimeout( function ( ) {
-                v( a, b )
-            }, .001 ), v( a, b )
+                v( a, b );
+            }, .001 ), v( a, b );
         }
         function v( b, c ) {
             for ( var d, e = b.settings, f = b.lastAnalyzedIndex + 1; f < b.entries.length; f ++ ) {
@@ -867,26 +872,26 @@ function setAttributeOnload( object, attribute, val ) {
                     var i = b.galleryWidth - ( b.buildingRow.entriesBuff.length - 1 ) * e.margins, j = h.data( "jg.imgw" ) / h.data( "jg.imgh" );
                     if ( i / ( b.buildingRow.aspectRatio + j ) < e.rowHeight && ( p( b, d ), ++ b.yield.flushed >= b.yield.every ) )
                         return void u( b, c );
-                    b.buildingRow.entriesBuff.push( g ), b.buildingRow.aspectRatio += j, b.buildingRow.width += j * e.rowHeight, b.lastAnalyzedIndex = f
+                    b.buildingRow.entriesBuff.push( g ), b.buildingRow.aspectRatio += j, b.buildingRow.width += j * e.rowHeight, b.lastAnalyzedIndex = f;
                 } else if ( "error" !== h.data( "jg.loaded" ) )
-                    return
+                    return;
             }
-            b.buildingRow.entriesBuff.length > 0 && p( b, ! 0 ), b.spinner.active && ( b.spinner.active = ! 1, b.$gallery.height( b.$gallery.height( ) - b.spinner.$el.innerHeight( ) ), b.spinner.$el.detach( ), s( b.spinner ) ), t( b ), b.$gallery.trigger( c ? "jg.resize" : "jg.complete" )
+            b.buildingRow.entriesBuff.length > 0 && p( b, ! 0 ), b.spinner.active && ( b.spinner.active = ! 1, b.$gallery.height( b.$gallery.height( ) - b.spinner.$el.innerHeight( ) ), b.spinner.$el.detach( ), s( b.spinner ) ), t( b ), b.$gallery.trigger( c ? "jg.resize" : "jg.complete" );
         }
         function w( a ) {
             function b( a ) {
                 if ( "string" != typeof d.sizeRangeSuffixes[a] )
-                    throw"sizeRangeSuffixes." + a + " must be a string"
+                    throw"sizeRangeSuffixes." + a + " must be a string";
             }
             function c( a, b ) {
                 if ( "string" == typeof a[b] ) {
                     if ( a[b] = parseFloat( a[b], 10 ), isNaN( a[b] ) )
-                        throw"invalid number for " + b
+                        throw"invalid number for " + b;
                 } else {
                     if ( "number" != typeof a[b] )
                         throw b + " must be a number";
                     if ( isNaN( a[b] ) )
-                        throw"invalid number for " + b
+                        throw"invalid number for " + b;
                 }
             }
             var d = a.settings;
@@ -907,7 +912,7 @@ function setAttributeOnload( object, attribute, val ) {
             if ( "boolean" != typeof d.captions )
                 throw"captions must be a boolean";
             if ( c( d, "refreshTime" ), "boolean" != typeof d.randomize )
-                throw"randomize must be a boolean"
+                throw"randomize must be a boolean";
         }
         var x = { sizeRangeSuffixes: { lt100: "", lt240: "", lt320: "", lt500: "", lt640: "", lt1024: "" }, rowHeight: 120, maxRowHeight: 0, margins: 1, lastRow: "nojustify", justifyThreshold: .75, fixedHeight: ! 1, waitThumbnailsLoad: ! 0, captions: ! 0, cssAnimation: ! 1, imagesAnimationDuration: 500, captionSettings: { animationDuration: 500, visibleOpacity: .7, nonVisibleOpacity: 0 }, rel: null, target: null, extension: /\.[^.\\/]+$/, refreshTime: 100, randomize: ! 1 };
         return this.each( function ( c, d ) {
@@ -918,7 +923,7 @@ function setAttributeOnload( object, attribute, val ) {
                 if ( "undefined" != typeof b && null !== b && "object" != typeof b )
                     throw"The argument must be an object";
                 var g = a( '<div class="spinner"><span></span><span></span><span></span></div>' ), h = a.extend( { }, x, b );
-                f = { settings: h, imgAnalyzerTimeout: null, entries: null, buildingRow: { entriesBuff: [ ], width: 0, aspectRatio: 0 }, lastAnalyzedIndex: - 1, "yield": { every: 2, flushed: 0 }, offY: h.margins, spinner: { active: ! 1, phase: 0, timeslot: 150, $el: g, $points: g.find( "span" ), intervalId: null }, checkWidthIntervalId: null, galleryWidth: e.width( ), $gallery: e }, e.data( "jg.context", f )
+                f = { settings: h, imgAnalyzerTimeout: null, entries: null, buildingRow: { entriesBuff: [ ], width: 0, aspectRatio: 0 }, lastAnalyzedIndex: - 1, "yield": { every: 2, flushed: 0 }, offY: h.margins, spinner: { active: ! 1, phase: 0, timeslot: 150, $el: g, $points: g.find( "span" ), intervalId: null }, checkWidthIntervalId: null, galleryWidth: e.width( ), $gallery: e }, e.data( "jg.context", f );
             } else if ( "norewind" === b )
                 for ( var i = 0; i < f.buildingRow.entriesBuff.length; i++ )
                     k( f.buildingRow.entriesBuff[i], f );
@@ -1100,7 +1105,7 @@ function setAttributeOnload( object, attribute, val ) {
         var check = false;
         ( function ( a ) {
             if ( /(android|ipad|playbook|silk|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test( a ) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test( a.substr( 0, 4 ) ) )
-                check = true
+                check = true;
         } )( navigator.userAgent || navigator.vendor || window.opera );
         return check;
     }
@@ -1161,7 +1166,7 @@ function setAttributeOnload( object, attribute, val ) {
             this.inputEl.blur( );
             classie.remove( this.el, 'sb-search-open' );
         }
-    }
+    };
 
     // add to global namespace
     window.UISearch = UISearch;
@@ -1222,6 +1227,7 @@ function setAttributeOnload( object, attribute, val ) {
         $( window ).scroll( );
     } );
 } )( jQuery );
+
 $( document ).ready( function ( ) {
     function e( ) {
         var b = a.height( ), c = $( "#nav" ).height( ) / 2, d = b / 2, e = d - c;
