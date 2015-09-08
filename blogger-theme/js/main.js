@@ -1807,11 +1807,11 @@ $( function ( ) {
         maxRowHeight: 0,
         margins: 5,
         rel: 'colorboxEx',
-        lastRow: 'nojustify',
+        //lastRow: 'nojustify',
         fixedHeight: true,
         captions: true,
         randomize: false
-    } );
+    } ).show();
 
     // メニューナビゲーション
     $( '#navigation' ).slicknav( {
@@ -1822,6 +1822,7 @@ $( function ( ) {
     //2015/8/25追加
     //http://datsugoku.hatenablog.jp/entry/2014/05/11/205638
     $( "a[href^=http]" )
+        .not('.external')
         .not( '[href*="' + location.hostname + '"]' )
         //.not( ":has(img)" )
         .attr( { target: "_blank", rel: "nofollow" } )

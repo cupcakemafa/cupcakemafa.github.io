@@ -3859,5 +3859,5 @@ a.read-more {
 
 /* top の記事サムネイル画像表示用()Justified Gallery) */
 .colorboxEx {
-    /*display:none;*/
+    display:none;
 }
