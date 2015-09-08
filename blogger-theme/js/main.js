@@ -1808,7 +1808,7 @@ $( function ( ) {
             margins: 5,
             //rel: 'colorboxEx',
             lastRow: 'justify',
-            fixedHeight: true,
+            fixedHeight: false,
             captions: false
             //randomize: false
         } ).on( 'jg.complete', function ( e ) {
