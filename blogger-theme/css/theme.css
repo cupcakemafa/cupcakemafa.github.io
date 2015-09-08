@@ -3680,7 +3680,10 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     .main-content-wrapper{width: 100%;}
     .wrappu {
         width: 100%;}
-    .sb-icon-search, .sb-search-submit {line-height:48px;}
+    .sb-icon-search, .sb-search-submit {
+        height: 40px;
+        line-height:40px;
+    }
     .search-bar:hover .nav-search input {
         width: 60px!important;
         font-size: 9px;
