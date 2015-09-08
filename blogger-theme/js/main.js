@@ -1800,36 +1800,17 @@ $( function ( ) {
     // 検索用UI
     new UISearch( document.getElementById( 'sb-search' ) );
 
-    $( ".colorboxEx" ).justifiedGallery( {
-        rowHeight: 165,
-        maxRowHeight: 0,
-        margins: 5,
-        rel: 'colorboxEx',
-        lastRow: 'nojustify',
-        fixedHeight: false,
-        captions: true,
-        randomize: false
-    } );
-    // @todo delete
-//    .magnificPopup( {
-//        delegate: 'a',
-//        type: 'image',
-//        closeOnContentClick: false,
-//        closeBtnInside: false,
-//        mainClass: 'mfp-with-zoom mfp-img-mobile',
-//        gallery: {
-//            enabled: true
-//        },
-//        zoom: {
-//            enabled: true,
-//            duration: 300, // don't forget to change the duration also in CSS
-//            opener: function ( element ) {
-//                return element.find( 'img' );
-//            }
-//        }
-//    } )
-        ;
-    // #delete
+    $( ".colorboxEx" ).justifiedGallery();
+//        .justifiedGallery( {
+//        rowHeight: 165,
+//        maxRowHeight: 0,
+//        margins: 5,
+//        rel: 'colorboxEx',
+//        lastRow: 'nojustify',
+//        fixedHeight: false,
+//        captions: true,
+//        randomize: false
+//    } );
 
     // メニューナビゲーション
     $( '#navigation' ).slicknav( {
