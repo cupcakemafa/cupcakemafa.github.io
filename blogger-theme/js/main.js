@@ -1800,17 +1800,18 @@ $( function ( ) {
     // 検索用UI
     new UISearch( document.getElementById( 'sb-search' ) );
 
-    $( ".colorboxEx" ).justifiedGallery();
-//        .justifiedGallery( {
-//        rowHeight: 165,
-//        maxRowHeight: 0,
-//        margins: 5,
-//        rel: 'colorboxEx',
-//        lastRow: 'nojustify',
-//        fixedHeight: false,
-//        captions: true,
-//        randomize: false
-//    } );
+    // top の投稿サムネイル画像を整列
+    $( ".colorboxEx" )
+        .justifiedGallery( {
+        rowHeight: 165,
+        maxRowHeight: 0,
+        margins: 5,
+        rel: 'colorboxEx',
+        lastRow: 'nojustify',
+        fixedHeight: true,
+        captions: true,
+        randomize: false
+    } );
 
     // メニューナビゲーション
     $( '#navigation' ).slicknav( {
