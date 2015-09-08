@@ -1101,18 +1101,18 @@ $( function ( ) {
 
     // 投稿シングルページの前次ページナビ
     // 2015/9/8 テンプレートから抜粋
-    var newerLink = $( 'a.newer-link' );
-    var olderLink = $( 'a.older-link' );
-    if ( newerLink.length ) {
-        $.get( newerLink.attr( 'href' ), function ( data ) {
-            newerLink.html( '<strong>Next</strong> <span>' + $( data ).find( '.post h1.post-title' ).text( ) + '</span>' );
-        }, "html" );
-    }
-    if ( olderLink.length ) {
-        $.get( olderLink.attr( 'href' ), function ( data2 ) {
-            olderLink.html( '<strong>Previous</strong> <span>' + $( data2 ).find( '.post h1.post-title' ).text( ) + '</span>' );
-        }, "html" );
-    }
+//    var newerLink = $( 'a.newer-link' );
+//    if ( newerLink.length ) {
+//        $.get( newerLink.eq(0).attr( 'href' ), function ( newer_data ) {
+//            newerLink.html( '<strong>Next</strong> <span>' + $( newer_data ).find( '.post h1.post-title' ).text( ) + '</span>' );
+//        }, "html" );
+//    }
+//    var olderLink = $( 'a.older-link' );
+//    if ( olderLink.length ) {
+//        $.get( olderLink.eq(0).attr( 'href' ), function ( older_data ) {
+//            olderLink.html( '<strong>Previous</strong> <span>' + $( older_data ).find( '.post h1.post-title' ).text( ) + '</span>' );
+//        }, "html" );
+//    }
 
 
 } );
