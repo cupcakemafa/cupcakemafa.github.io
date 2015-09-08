@@ -596,7 +596,7 @@ span.rollover:hover {
     margin: 15px 3px 50px 0;
 }
 .pagenavi .current, .pagenavi .pages, .pagenavi a:hover {
-    color: #fff;
+    color: #333;
 }
 .pagenavi .pages {
     display:none;
@@ -3814,7 +3814,7 @@ a.read-more {
 }
 .pagenavi span,
 .pagenavi a {
-    color: #fdd835;
+    color: #333;
 }
 .social span a:hover {
     color: #fdd835;
