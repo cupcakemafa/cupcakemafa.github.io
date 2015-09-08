@@ -1822,7 +1822,7 @@ $( function ( ) {
         //aタグ内にimgタグがあるか？
         var $this = $(this);
         var href = $this.attr("href");
-        
+
         if( $this.find('img').length && href.match(/(\.)(gif|jpg|jpeg|png)/g)) {
             $this.attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
         }
