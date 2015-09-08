@@ -1,4 +1,4 @@
-selectnav = function ( ) {
+var selectnav = function ( ) {
     return function ( p, q ) {
         var a, h = function ( b ) {
             var c;
@@ -1099,17 +1099,20 @@ $( function ( ) {
         }
     } );
 
-    // @todo delete
-    // lightbox2 用処理
-    // ページ内のすべてのaタグに繰り返し処理
-//    $('.post-entry').find("a[href$='.jpg']").each(function() {
-//        //aタグ内にimgタグがあるか？
-//        var $this = $(this);
-//        var href = $this.attr("href");
-//        
-//        if( $this.find('img').length && href.match(/(\.)(gif|jpg|jpeg|png)/g)) {
-//            $this.attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
-//        }
-//    });
-    // #delete
+    // 投稿シングルページの前次ページナビ
+    // 2015/9/8 テンプレートから抜粋
+    var newerLink = $( 'a.newer-link' );
+    var olderLink = $( 'a.older-link' );
+    if ( newerLink.length ) {
+        $.get( newerLink.attr( 'href' ), function ( data ) {
+            newerLink.html( '<strong>Next</strong> <span>' + $( data ).find( '.post h1.post-title' ).text( ) + '</span>' );
+        }, "html" );
+    }
+    if ( olderLink.length ) {
+        $.get( olderLink.attr( 'href' ), function ( data2 ) {
+            olderLink.html( '<strong>Previous</strong> <span>' + $( data2 ).find( '.post h1.post-title' ).text( ) + '</span>' );
+        }, "html" );
+    }
+
+
 } );
