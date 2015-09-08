@@ -3666,12 +3666,10 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     .intro-text{padding:10px 20px;}
     #menu-main{display:none;}
     .entry-title{font-size:18px;}
+    .post {padding:1em;}
     .post-entry h2 {font-size:18px;}
     .post-entry p {font-size:16px;}
     .post-entry ol {margin-left:18px;}
-    .sb-search.sb-search-open, .no-js .sb-search {
-        width: 90%;
-    }
     .header {width: 100%;}
     nav { padding: 0;}
     .img-thumbnail img {width: 280px;height: 180px;}
@@ -3686,6 +3684,9 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     .search-bar:hover .nav-search input {
         width: 60px!important;
         font-size: 9px;
+    }
+    .sb-search.sb-search-open, .no-js .sb-search {
+        width: 90%;
     }
     .selectnav{width:95%;}
     .intro-text{
