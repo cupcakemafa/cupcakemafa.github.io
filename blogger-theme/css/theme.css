@@ -3944,6 +3944,6 @@ a.read-more {
 }
 
 /* top の記事サムネイル画像表示用()Justified Gallery) */
-.colorboxEx a img {
+.colorboxEx {
     display:none;
 }
