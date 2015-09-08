@@ -285,7 +285,6 @@ function setAttributeOnload( object, attribute, val ) {
  * http://dimsemenov.com/plugins/magnific-popup/
  * Copyright (c) 2014 Dmitry Semenov; 
  */
- /*
 ( function ( e ) {
     var t, n, i, o, r, a, s, l = "Close", c = "BeforeClose", d = "AfterClose", u = "BeforeAppend", p = "MarkupParse", f = "Open", m = "Change", g = "mfp", h = "." + g, v = "mfp-ready", C = "mfp-removing", y = "mfp-prevent-close", w = function ( ) {
     }, b = ! ! window.jQuery, I = e( window ), x = function ( e, n ) {
@@ -742,7 +741,6 @@ function setAttributeOnload( object, attribute, val ) {
         }
     }( ), _( )
 } )( window.jQuery || window.Zepto );
-*/
 
 /*
  * Justified Gallery - v3.5.1
