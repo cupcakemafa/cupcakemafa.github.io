@@ -3621,6 +3621,7 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
     .section{padding:0;}
 
     #searchformfix,.soc-icon{display:none}
+    .sb-icon-search, .sb-search-submit {line-height:48px;}
     .header-right {width: 100%;max-width: 432px;float:none}
     #container {width: 430px;}
     #content-wrapper{width:100%;}
@@ -3644,7 +3645,6 @@ nav{padding: 40px 0 70px;background:#fff;width:100%;position:relative;z-index:99
         padding-right:0px;
 
     }
-
     .mbt-pager li a{
 
         padding:0px;
