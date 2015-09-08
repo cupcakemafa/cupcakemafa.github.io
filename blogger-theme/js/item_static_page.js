@@ -35,7 +35,6 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
     var arr = content1.split( /<br\s*\/?>/ );
     var content = arr[0] + arr.slice( 1, - 1 ).join( '<br>' ) + arr.slice( - 1 );
 
-
     var month = new Array();
     month[0] = "Jan";
     month[1] = "Feb";
@@ -86,7 +85,8 @@ function createSummaryAndThumb( pID, title, url, date, comment, author, tag, aut
         if ( img.length > 1 ) {
             var thum = '';
             for ( var i = 0; i < img.length; i ++ ) {
-                thum = thum + '<a class="colorboxEx" href="' + posturl + '"><img src="' + img[i].src + '"></a>';
+                //thum = thum + '<a class="colorboxEx" href="' + posturl + '"><img src="' + img[i].src + '"></a>';
+                thum = thum + '<a class="" href="' + posturl + '"><img src="' + img[i].src + '"></a>';
             }
 
             var thumb = '<div class="colorboxEx">' + thum + '</div>';
