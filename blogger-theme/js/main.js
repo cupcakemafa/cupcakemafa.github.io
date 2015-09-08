@@ -1808,7 +1808,7 @@ $( function ( ) {
         margins: 5,
         rel: 'colorboxEx',
         //lastRow: 'nojustify',
-        fixedHeight: true,
+        fixedHeight: false,
         captions: true,
         randomize: false
     } ).show();
