@@ -1804,13 +1804,13 @@ $( function ( ) {
     $( ".colorboxEx" )
         .justifiedGallery( {
             rowHeight: 165,
-            maxRowHeight: 0,
+            //maxRowHeight: 0,
             margins: 5,
             //rel: 'colorboxEx',
-            lastRow: 'nojustify',
-            fixedHeight: false,
-            captions: true,
-            randomize: false
+            //lastRow: 'nojustify',
+            //fixedHeight: false,
+            captions: false
+            //randomize: false
         } ).on( 'jg.complete', function ( e ) {
         $( this ).show();
     } );
