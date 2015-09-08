@@ -1793,8 +1793,7 @@ $( function ( ) {
     // 検索用UI
     new UISearch( document.getElementById( 'sb-search' ) );
 
-    // @todo delete
-    $( ".colorboxEx" ).justifiedGallery( {
+    $( ".justified-gallery" ).justifiedGallery( {
         rowHeight: 165,
         maxRowHeight: 0,
         margins: 5,
@@ -1804,6 +1803,7 @@ $( function ( ) {
         captions: true,
         randomize: false
     } )
+    // @todo delete
 //    .magnificPopup( {
 //        delegate: 'a',
 //        type: 'image',
