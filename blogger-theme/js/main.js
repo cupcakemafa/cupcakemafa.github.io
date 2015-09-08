@@ -1802,7 +1802,7 @@ $( function ( ) {
         fixedHeight: false,
         captions: true,
         randomize: false
-    } ).fadeIn();
+    } );
     // @todo delete
 //    .magnificPopup( {
 //        delegate: 'a',
