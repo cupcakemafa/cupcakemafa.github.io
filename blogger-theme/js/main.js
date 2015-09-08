@@ -1793,7 +1793,7 @@ $( function ( ) {
     // 検索用UI
     new UISearch( document.getElementById( 'sb-search' ) );
 
-    $( ".colorboxEx" ).hide().justifiedGallery( {
+    $( ".colorboxEx" ).justifiedGallery( {
         rowHeight: 165,
         maxRowHeight: 0,
         margins: 5,

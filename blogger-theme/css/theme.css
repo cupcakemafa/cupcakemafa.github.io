@@ -3942,3 +3942,8 @@ a.read-more {
 #related-posts h2:after {
     border-bottom: 2px solid #fdd835;
 }
+
+/* top の記事サムネイル画像表示用()Justified Gallery) */
+.colorboxEx {
+    display:none;
+}
