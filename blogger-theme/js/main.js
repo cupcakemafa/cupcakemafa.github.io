@@ -998,7 +998,37 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend( jQuery.easing, { def:
         return(b /= e) < 1 / 2.75 ? d * 7.5625 * b * b + c : 2 / 2.75 > b ? d * (7.5625 * (b -= 1.5 / 2.75) * b + .75) + c : 2.5 / 2.75 > b ? d * (7.5625 * (b -= 2.25 / 2.75) * b + .9375) + c : d * (7.5625 * (b -= 2.625 / 2.75) * b + .984375) + c;
     }, easeInOutBounce: function ( a, b, c, d, e ) {
         return e / 2 > b ? .5 * jQuery.easing.easeInBounce( a, 2 * b, 0, d, e ) + c : .5 * jQuery.easing.easeOutBounce( a, 2 * b - e, 0, d, e ) + .5 * d + c;
-    } } );
+    }
+} );
+
+// Blogger Recent Posts Gallery by Bloggersentral.com
+// Tutorial at http://www.bloggersentral.com/2013/05/recent-posts-image-gallery-for-blogger.html 
+// Free to use or share, but please keep this notice intact.
+var bsrpGallery = function ( root ) {
+    var bsrpg_thumbSize = bsrpg_thumbSize || 150;
+    var bsrpg_showTitle = bsrpg_showTitle || true;
+    var entries = root.feed.entry || [ ];
+    var html = [ '<div class="bsrp-gallery nopin" title="Get this from BloggerSentral.com">' ];
+    for ( var i = 0; i < entries.length; ++ i ) {
+        var post = entries[i];
+        var postTitle = post.title.$t;
+        var orgImgUrl = post.media$thumbnail ? post.media$thumbnail.url : 'http://3.bp.blogspot.com/-sWtp_qRPNT8/UZYmQq5sAdI/AAAAAAAAEec/7YDbpK4Q6g8/s72-c/default+image.png';
+        var newImgUrl = orgImgUrl.replace( 's72-c', 's' + bsrpg_thumbSize + '-c' );
+        var links = post.link || [ ];
+        for ( var j = 0; j < links.length; ++ j ) {
+            if (links[j].rel === 'alternate')
+                break;
+        }
+        var postUrl = links[j].href;
+        var imgTag = '<img src="' + newImgUrl + '" width="' + bsrpg_thumbSize + '" height="' + bsrpg_thumbSize + '"/>';
+        var pTitle = bsrpg_showTitle ? '<span class="ptitle">' + postTitle + '</span>' : '';
+        var item = '<a href="' + postUrl + '" target="_blank" title="' + postTitle + '">' + imgTag + pTitle + '</a>';
+        html.push( '<div class="bs-item">', item, '</div>' );
+    }
+    html.push( '</div>' );
+    document.write( html.join( "" ) );
+};
+
 
 $( function ( ) {
     $( "html" ).niceScroll( );
@@ -1118,32 +1148,5 @@ $( function ( ) {
 //            olderLink.html( '<strong>Previous</strong> <span>' + $( older_data ).find( '.post h1.post-title' ).text( ) + '</span>' );
 //        }, "html" );
 //    }
-
-
-    // Blogger Recent Posts Gallery by Bloggersentral.com
-    // Tutorial at http://www.bloggersentral.com/2013/05/recent-posts-image-gallery-for-blogger.html 
-    // Free to use or share, but please keep this notice intact.
-    function bsrpGallery( root ) {
-        var entries = root.feed.entry || [ ];
-        var html = [ '<div class="bsrp-gallery nopin" title="Get this from BloggerSentral.com">' ];
-        for ( var i = 0; i < entries.length; ++ i ) {
-            var post = entries[i];
-            var postTitle = post.title.$t;
-            var orgImgUrl = post.media$thumbnail ? post.media$thumbnail.url : 'http://3.bp.blogspot.com/-sWtp_qRPNT8/UZYmQq5sAdI/AAAAAAAAEec/7YDbpK4Q6g8/s72-c/default+image.png';
-            var newImgUrl = orgImgUrl.replace( 's72-c', 's' + bsrpg_thumbSize + '-c' );
-            var links = post.link || [ ];
-            for ( var j = 0; j < links.length; ++ j ) {
-                if (links[j].rel == 'alternate')
-                    break;
-            }
-            var postUrl = links[j].href;
-            var imgTag = '<img src="' + newImgUrl + '" width="' + bsrpg_thumbSize + '" height="' + bsrpg_thumbSize + '"/>';
-            var pTitle = bsrpg_showTitle ? '<span class="ptitle">' + postTitle + '</span>' : '';
-            var item = '<a href="' + postUrl + '" target="_blank" title="' + postTitle + '">' + imgTag + pTitle + '</a>';
-            html.push( '<div class="bs-item">', item, '</div>' );
-        }
-        html.push( '</div>' );
-        document.write( html.join( "" ) );
-    }
 
 } );
