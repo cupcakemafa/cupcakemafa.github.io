@@ -3864,3 +3864,12 @@ a.read-more {
 .colorboxEx {
     display:none;
 }
+
+/* BloggerSentral Recent Posts Image Gallery CSS Start */
+.bsrp-gallery {padding:10px; clear:both;}
+.bsrp-gallery:after {content: "";display: table;clear: both;}
+.bsrp-gallery .bs-item a {position: relative;float:left;margin: 0 15px 15px 0 !important;text-decoration:none;}
+.bsrp-gallery .bs-item .ptitle {background: rgba(0, 0, 0, 0.5); background: #7f7f7f\9; display: block; clear: left; font-size: 11px; line-height:1.3em; height: 2.6em; position: absolute; text-align: left; bottom: 10%; color:#fff; padding:2px 5px; word-wrap: break-word; overflow:hidden;}
+.bsrp-gallery a img {background: #eee; float: left; padding: 5px; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); transition: background-color 0.4s; -webkit-transition: background-color 0.4s; -moz-transition: background-color 0.4s;}
+.bsrp-gallery a:hover img {background: #ee7e22;}
+/* BloggerSentral Recent Posts Image Gallery CSS End */
