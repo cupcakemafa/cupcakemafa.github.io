@@ -179,42 +179,65 @@ function setAttributeOnload( object, attribute, val ) {
     "use strict";
     var b = function ( b, c ) {
         var d = this;
-        d.element = b, d.$element = a( b ), d.tabs = d.$element.children( ), d.options = a.extend( { }, a.fn.mtabs.defaults, c ), d.current_tab = 0, d.init( )
+        d.element = b;
+        d.$element = a( b );
+        d.tabs = d.$element.children( );
+        d.options = a.extend( { }, a.fn.mtabs.defaults, c );
+        d.current_tab = 0;
+        d.init( );
     };
     b.prototype = { init: function ( ) {
             var a = this;
-            a.tabs.length && (a.build( ), a.buildTabMenu( ))
+            a.tabs.length && (a.build( ), a.buildTabMenu( ));
         }, build: function ( ) {
             var b = this, c = b.options, d = c.tab_text_el, e = c.container_class;
             b.tab_names = [ ], b.$wrapper = b.$element.wrapInner( '<div class="' + e + '" />' ).find( "." + e ), b.tabs.wrapAll( '<div class="' + c.tabs_container_class + '" />' ), b.tabs.each( function ( c, e ) {
                 var f, g = a( e ), h = d;
-                f = g.find( h ).filter( ":first" ).hide( ).text( ), b.tab_names.push( f )
-            } ), a.isFunction( c.onReady ) && c.onReady.call( b.element )
+                f = g.find( h ).filter( ":first" ).hide( ).text( ), b.tab_names.push( f );
+            } ), a.isFunction( c.onReady ) && c.onReady.call( b.element );
         }, buildTabMenu: function ( ) {
             for ( var b, c = this, d = c.options, e = d.tabsmenu_el, f = c.tab_names, g = "<" + e + ' class="' + d.tabsmenu_class + '">', h = 0, i = f.length, j = function ( ) {
                 var a = arguments;
                 return d.tmpl.tabsmenu_tab.replace( /\{[0-9]\}/g, function ( b ) {
                     var c = Number( b.replace( /\D/g, "" ) );
-                    return a[c] || ""
-                } )
+                    return a[c] || "";
+                } );
             }; i > h; h++ )
                 g += j( h + 1, f[h] );
             g += "</" + e + ">", c.$tabs_menu = a( g ).prependTo( c.$wrapper ), b = c.$tabs_menu.find( ":first" )[0].nodeName.toLowerCase( ), c.$tabs_menu.on( "click", b, function ( b ) {
                 var d = a( this ), e = d.index( );
-                c.show( e ), b.preventDefault( )
-            } ).find( ":first" ).trigger( "click" )
+                c.show( e ), b.preventDefault( );
+            } ).find( ":first" ).trigger( "click" );
         }, show: function ( b ) {
             var c = this, d = c.options, e = d.active_tab_class;
-            c.tabs.hide( ).filter( ":eq(" + b + ")" ).show( ), c.$tabs_menu.children( ).removeClass( e ).filter( ":eq(" + b + ")" ).addClass( e ), a.isFunction( d.onTabSelect ) && b !== c.current_tab && d.onTabSelect.call( c.element, b ), c.current_tab = b
+            c.tabs.hide( ).filter( ":eq(" + b + ")" ).show( ),
+                    c.$tabs_menu.children( ).removeClass( e ).filter( ":eq(" + b + ")" ).addClass( e ),
+                    a.isFunction( d.onTabSelect ) && b !== c.current_tab && d.onTabSelect.call( c.element, b ),
+                    c.current_tab = b;
         }, destroy: function ( ) {
             var a = this, b = a.options.tab_text_el;
-            a.$tabs_menu.remove( ), a.tabs.unwrap( ).unwrap( ), a.tabs.removeAttr( "style" ), a.tabs.children( b + ":first" ).removeAttr( "style" ), a.$element.removeData( "mtabs" )
+            a.$tabs_menu.remove( ),
+                    a.tabs.unwrap( ).unwrap( ),
+                    a.tabs.removeAttr( "style" ),
+                    a.tabs.children( b + ":first" ).removeAttr( "style" ),
+                    a.$element.removeData( "mtabs" );
         } }, a.fn.mtabs = function ( c, d ) {
         return this.each( function ( ) {
             var e, f = a( this ), g = f.data( "mtabs" );
-            e = "object" == typeof c && c, g || f.data( "mtabs", g = new b( this, e ) ), "string" == typeof c && g[c]( d )
+            e = "object" === typeof c && c,
+                    g || f.data( "mtabs", g = new b( this, e ) ),
+                    "string" === typeof c && g[c]( d );
         } );
-    }, a.fn.mtabs.defaults = { container_class: "tabs", tabs_container_class: "tabs-content", active_tab_class: "active-tab", tab_text_el: "h1, h2, h3, h4, h5, h6", tabsmenu_class: "tabs-menu", tabsmenu_el: "ul", tmpl: { tabsmenu_tab: '<li class="tab-{0}"><span>{1}</span></li>' }, onTabSelect: null }
+    }, a.fn.mtabs.defaults = {
+        container_class: "tabs",
+        tabs_container_class: "tabs-content",
+        active_tab_class: "active-tab",
+        tab_text_el: "h1, h2, h3, h4, h5, h6",
+        tabsmenu_class: "tabs-menu",
+        tabsmenu_el: "ul",
+        tmpl: { tabsmenu_tab: '<li class="tab-{0}"><span>{1}</span></li>' },
+        onTabSelect: null
+    };
 }( window.jQuery, window, document );
 
 /*!
@@ -297,6 +320,8 @@ function setAttributeOnload( object, attribute, val ) {
 /**
  * uisearch.js v1.0.0
  * http://www.codrops.com
+ * 
+ * @param window
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
@@ -322,11 +347,11 @@ function setAttributeOnload( object, attribute, val ) {
                     event.pageX = event.clientX + document.documentElement.scrollLeft;
                     event.pageY = event.clientY + document.documentElement.scrollTop;
                     event.preventDefault = function ( ) {
-                        event.returnValue = false
+                        event.returnValue = false;
                     };
                     event.relatedTarget = event.fromElement || null;
                     event.stopPropagation = function ( ) {
-                        event.cancelBubble = true
+                        event.cancelBubble = true;
                     };
                     event.relatedTarget = event.fromElement || null;
                     event.target = event.srcElement || target;
@@ -341,7 +366,9 @@ function setAttributeOnload( object, attribute, val ) {
         } );
         addToPrototype( "removeEventListener", function ( type, listener ) {
             for ( var index = 0, length = registry.length; index < length; ++ index ) {
-                if (registry[index].target == this && registry[index].type == type && registry[index].listener == listener) {
+                if (registry[index].target === this
+                        && registry[index].type === type
+                        && registry[index].listener === listener) {
                     return this.detachEvent( "on" + type, registry.splice( index, 1 )[0].__listener );
                 }
             }
@@ -351,7 +378,7 @@ function setAttributeOnload( object, attribute, val ) {
                 return this.fireEvent( "on" + eventObject.type, eventObject );
             } catch ( error ) {
                 for ( var index = 0, length = registry.length; index < length; ++ index ) {
-                    if (registry[index].target == this && registry[index].type == eventObject.type) {
+                    if (registry[index].target === this && registry[index].type == eventObject.type) {
                         registry[index].call( this, eventObject );
                     }
                 }
@@ -432,6 +459,7 @@ function setAttributeOnload( object, attribute, val ) {
 
 /**
  * author Remy Sharp
+ * @param $
  * url http://remysharp.com/2009/01/26/element-in-view-event-plugin/
  */
 (function ( $ ) {
@@ -439,7 +467,7 @@ function setAttributeOnload( object, attribute, val ) {
         var height = window.innerHeight; // Safari, Opera
         var mode = document.compatMode;
         if ((mode || ! $.support.boxModel)) { // IE, Gecko
-            height = (mode == 'CSS1Compat') ?
+            height = (mode === 'CSS1Compat') ?
                     document.documentElement.clientHeight : // Standards
                     document.body.clientHeight; // Quirks
         }
@@ -496,11 +524,14 @@ $( document ).ready( function ( ) {
     }
     function g( ) {
         var e = a.scrollTop( );
-        b.hasClass( "inview" ) && (b.css( { backgroundPosition: f( 0, d, e, 500, 0 ) } ), c.css( { backgroundPosition: f( 50, d, e, 400, .2 ) } )), $( "#pixels" ).html( e )
+        b.hasClass( "inview" ) && (
+                b.css( { backgroundPosition: f( 0, d, e, 500, 0 ) } ),
+                c.css( { backgroundPosition: f( 50, d, e, 400, .2 ) } )),
+                $( "#pixels" ).html( e );
     }
     var a = $( window ), b = $( "#intro" ), c = $( "#intro .bg1" ), d = a.height( );
     $( "#intro" ).bind( "inview", function ( a, b ) {
-        1 == b ? $( this ).addClass( "inview" ) : $( this ).removeClass( "inview" )
+        1 === b ? $( this ).addClass( "inview" ) : $( this ).removeClass( "inview" );
     } ), e( ), a.resize( function ( ) {
         g( ), e( );
     } ), a.bind( "scroll", function ( ) {
@@ -516,31 +547,32 @@ $( document ).ready( function ( ) {
  *  licensed under MIT
  */
 (function ( $, document, window ) {
-    var
-            // default settings object.
-            defaults = {
-                label: 'MENU',
-                duplicate: true,
-                duration: 200,
-                easingOpen: 'swing',
-                easingClose: 'swing',
-                closedSymbol: '&#9658;',
-                openedSymbol: '&#9660;',
-                prependTo: 'body',
-                parentTag: 'a',
-                closeOnClick: false,
-                allowParentLinks: false,
-                nestedParentLinks: true,
-                showChildren: false,
-                init: function ( ) {
-                },
-                open: function ( ) {
-                },
-                close: function ( ) {
-                }
-            },
+    // default settings object.
+    var defaults = {
+        label: 'MENU',
+        duplicate: true,
+        duration: 200,
+        easingOpen: 'swing',
+        easingClose: 'swing',
+        closedSymbol: '&#9658;',
+        openedSymbol: '&#9660;',
+        prependTo: 'body',
+        parentTag: 'a',
+        closeOnClick: false,
+        allowParentLinks: false,
+        nestedParentLinks: true,
+        showChildren: false,
+        init: function ( ) {
+        },
+        open: function ( ) {
+        },
+        close: function ( ) {
+        }
+    },
     mobileMenu = 'slicknav',
-            prefix = 'slicknav';
+            prefix = 'slicknav'
+            ;
+
     function Plugin( element, options ) {
         this.element = element;
         // jQuery has an extend method which merges the contents of two or
@@ -574,7 +606,7 @@ $( document ).ready( function ( ) {
             iconClass += ' ' + prefix + '_no-text';
         }
 
-        if (settings.parentTag == 'a') {
+        if (settings.parentTag === 'a') {
             settings.parentTag = 'a href="#"';
         }
 
@@ -682,14 +714,14 @@ $( document ).ready( function ( ) {
         // check for enter key on menu button and menu parents
         $( $this.btn ).keydown( function ( e ) {
             var ev = e || event;
-            if (ev.keyCode == 13) {
+            if (ev.keyCode === 13) {
                 e.preventDefault( );
                 $this._menuToggle( );
             }
         } );
         $this.mobileNav.on( 'keydown', '.' + prefix + '_item', function ( e ) {
             var ev = e || event;
-            if (ev.keyCode == 13) {
+            if (ev.keyCode === 13) {
                 e.preventDefault( );
                 $this._itemClick( $( e.target ) );
             }
@@ -782,7 +814,7 @@ $( document ).ready( function ( ) {
                 //Fire init or close callback
                 if (! init)
                     settings.close( trigger );
-                else if (trigger == 'init')
+                else if (trigger === 'init')
                     settings.init( );
             } );
         }
@@ -939,11 +971,11 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend( jQuery.easing, { def:
     }, easeInOutSine: function ( a, b, c, d, e ) {
         return - d / 2 * (Math.cos( Math.PI * b / e ) - 1) + c;
     }, easeInExpo: function ( a, b, c, d, e ) {
-        return 0 == b ? c : d * Math.pow( 2, 10 * (b / e - 1) ) + c;
+        return 0 === b ? c : d * Math.pow( 2, 10 * (b / e - 1) ) + c;
     }, easeOutExpo: function ( a, b, c, d, e ) {
-        return b == e ? c + d : d * (- Math.pow( 2, - 10 * b / e ) + 1) + c;
+        return b === e ? c + d : d * (- Math.pow( 2, - 10 * b / e ) + 1) + c;
     }, easeInOutExpo: function ( a, b, c, d, e ) {
-        return 0 == b ? c : b == e ? c + d : (b /= e / 2) < 1 ? d / 2 * Math.pow( 2, 10 * (b - 1) ) + c : d / 2 * (- Math.pow( 2, - 10 * -- b ) + 2) + c;
+        return 0 === b ? c : b === e ? c + d : (b /= e / 2) < 1 ? d / 2 * Math.pow( 2, 10 * (b - 1) ) + c : d / 2 * (- Math.pow( 2, - 10 * -- b ) + 2) + c;
     }, easeInCirc: function ( a, b, c, d, e ) {
         return - d * (Math.sqrt( 1 - (b /= e) * b ) - 1) + c;
     }, easeOutCirc: function ( a, b, c, d, e ) {
@@ -952,46 +984,46 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend( jQuery.easing, { def:
         return(b /= e / 2) < 1 ? - d / 2 * (Math.sqrt( 1 - b * b ) - 1) + c : d / 2 * (Math.sqrt( 1 - (b -= 2) * b ) + 1) + c;
     }, easeInElastic: function ( a, b, c, d, e ) {
         var f = 1.70158, g = 0, h = d;
-        if (0 == b)
+        if (0 === b)
             return c;
-        if (1 == (b /= e))
+        if (1 === (b /= e))
             return c + d;
         if (g || (g = .3 * e), h < Math.abs( d )) {
             h = d;
-            var f = g / 4
+            var f = g / 4;
         } else
             var f = g / (2 * Math.PI) * Math.asin( d / h );
-        return - (h * Math.pow( 2, 10 * (b -= 1) ) * Math.sin( (b * e - f) * 2 * Math.PI / g )) + c
+        return - (h * Math.pow( 2, 10 * (b -= 1) ) * Math.sin( (b * e - f) * 2 * Math.PI / g )) + c;
     }, easeOutElastic: function ( a, b, c, d, e ) {
         var f = 1.70158, g = 0, h = d;
-        if (0 == b)
+        if (0 === b)
             return c;
-        if (1 == (b /= e))
+        if (1 === (b /= e))
             return c + d;
         if (g || (g = .3 * e), h < Math.abs( d )) {
             h = d;
-            var f = g / 4
+            var f = g / 4;
         } else
             var f = g / (2 * Math.PI) * Math.asin( d / h );
-        return h * Math.pow( 2, - 10 * b ) * Math.sin( (b * e - f) * 2 * Math.PI / g ) + d + c
+        return h * Math.pow( 2, - 10 * b ) * Math.sin( (b * e - f) * 2 * Math.PI / g ) + d + c;
     }, easeInOutElastic: function ( a, b, c, d, e ) {
         var f = 1.70158, g = 0, h = d;
-        if (0 == b)
+        if (0 === b)
             return c;
-        if (2 == (b /= e / 2))
+        if (2 === (b /= e / 2))
             return c + d;
         if (g || (g = e * .3 * 1.5), h < Math.abs( d )) {
             h = d;
-            var f = g / 4
+            var f = g / 4;
         } else
             var f = g / (2 * Math.PI) * Math.asin( d / h );
         return 1 > b ? - .5 * h * Math.pow( 2, 10 * (b -= 1) ) * Math.sin( (b * e - f) * 2 * Math.PI / g ) + c : .5 * h * Math.pow( 2, - 10 * (b -= 1) ) * Math.sin( (b * e - f) * 2 * Math.PI / g ) + d + c;
     }, easeInBack: function ( a, b, c, d, e, f ) {
-        return void 0 == f && (f = 1.70158), d * (b /= e) * b * ((f + 1) * b - f) + c;
+        return void 0 === f && (f = 1.70158), d * (b /= e) * b * ((f + 1) * b - f) + c;
     }, easeOutBack: function ( a, b, c, d, e, f ) {
-        return void 0 == f && (f = 1.70158), d * ((b = b / e - 1) * b * ((f + 1) * b + f) + 1) + c;
+        return void 0 === f && (f = 1.70158), d * ((b = b / e - 1) * b * ((f + 1) * b + f) + 1) + c;
     }, easeInOutBack: function ( a, b, c, d, e, f ) {
-        return void 0 == f && (f = 1.70158), (b /= e / 2) < 1 ? d / 2 * b * b * (((f *= 1.525) + 1) * b - f) + c : d / 2 * ((b -= 2) * b * (((f *= 1.525) + 1) * b + f) + 2) + c;
+        return void 0 === f && (f = 1.70158), (b /= e / 2) < 1 ? d / 2 * b * b * (((f *= 1.525) + 1) * b - f) + c : d / 2 * ((b -= 2) * b * (((f *= 1.525) + 1) * b + f) + 2) + c;
     }, easeInBounce: function ( a, b, c, d, e ) {
         return d - jQuery.easing.easeOutBounce( a, e - b, 0, d, e ) + c;
     }, easeOutBounce: function ( a, b, c, d, e ) {
@@ -1000,35 +1032,6 @@ jQuery.easing.jswing = jQuery.easing.swing, jQuery.extend( jQuery.easing, { def:
         return e / 2 > b ? .5 * jQuery.easing.easeInBounce( a, 2 * b, 0, d, e ) + c : .5 * jQuery.easing.easeOutBounce( a, 2 * b - e, 0, d, e ) + .5 * d + c;
     }
 } );
-
-// Blogger Recent Posts Gallery by Bloggersentral.com
-// Tutorial at http://www.bloggersentral.com/2013/05/recent-posts-image-gallery-for-blogger.html 
-// Free to use or share, but please keep this notice intact.
-var bsrpGallery = function ( root ) {
-    var bsrpg_thumbSize = bsrpg_thumbSize || 150;
-    var bsrpg_showTitle = bsrpg_showTitle || true;
-    var entries = root.feed.entry || [ ];
-    var html = [ '<div class="bsrp-gallery nopin" title="Get this from BloggerSentral.com">' ];
-    for ( var i = 0; i < entries.length; ++ i ) {
-        var post = entries[i];
-        var postTitle = post.title.$t;
-        var orgImgUrl = post.media$thumbnail ? post.media$thumbnail.url : 'http://3.bp.blogspot.com/-sWtp_qRPNT8/UZYmQq5sAdI/AAAAAAAAEec/7YDbpK4Q6g8/s72-c/default+image.png';
-        var newImgUrl = orgImgUrl.replace( 's72-c', 's' + bsrpg_thumbSize + '-c' );
-        var links = post.link || [ ];
-        for ( var j = 0; j < links.length; ++ j ) {
-            if (links[j].rel === 'alternate')
-                break;
-        }
-        var postUrl = links[j].href;
-        var imgTag = '<img src="' + newImgUrl + '" width="' + bsrpg_thumbSize + '" height="' + bsrpg_thumbSize + '"/>';
-        var pTitle = bsrpg_showTitle ? '<span class="ptitle">' + postTitle + '</span>' : '';
-        var item = '<a href="' + postUrl + '" target="_blank" title="' + postTitle + '">' + imgTag + pTitle + '</a>';
-        html.push( '<div class="bs-item">', item, '</div>' );
-    }
-    html.push( '</div>' );
-    document.write( html.join( "" ) );
-};
-
 
 $( function ( ) {
     $( "html" ).niceScroll( );
@@ -1058,7 +1061,6 @@ $( function ( ) {
         $( 'html, body' ).animate( { scrollTop: 0 }, 'slow' );
         return false;
     } );
-
 
     $( ".nav li a" ).each( function ( ) {
         if ($( this ).next( ).length > 0) {
