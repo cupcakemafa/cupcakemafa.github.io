@@ -3803,7 +3803,7 @@ a#mycontent {
 .manga .frame {
     width: 320px;
     height: auto;
-    border: 8px solid #000;
+    border: 16px solid #000;
     margin: 0px;
 }
 .manga .caption {
