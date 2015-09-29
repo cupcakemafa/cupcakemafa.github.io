@@ -3800,20 +3800,6 @@ a#mycontent {
     position: relative;
 }
 
-.manga .frame {
-    width: 320px;
-    height: auto;
-    border: 16px solid #000;
-    margin: 0px;
-}
-.manga .caption {
-    width: 350px;
-    height: auto;
-    border: 1px solid #000;
-    margin: 0px;
-    margin-bottom: 8px;
-}
-
 /**
  * Theme color
  */
