@@ -171,9 +171,10 @@ div.post-location {
 }
 
 .manga .caption {
-    width: 350px;
+    width: 342px;
     height: auto;
     border: 1px solid #000;
+    padding: 4px;
     margin-bottom: 8px;
     text-align:left;
 }
