@@ -78,6 +78,7 @@
         </b:if>
 
         <link href='//plus.google.com/+oddthemes' rel='publisher'/>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
         <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'/>
         <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css'/>
         <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css'/>
