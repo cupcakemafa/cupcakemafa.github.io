@@ -3879,15 +3879,21 @@ a.read-more {
 .bsrp-gallery a:hover img {background: #ee7e22;}
 /* BloggerSentral Recent Posts Image Gallery CSS End */
 
-/* KEN ZUKAN on the Web 用コンテナ */
+/* KEN ZUKAN on the Web 用CSS */
 .kenzukan-container {
     width:320px;
 }
+/* End KEN ZUKAN on the Web 用CSS */
 
-/* KENの小話リストタイトル */
+/* KENの小話ページCSS */
 .season-list .row .title {
     font-size: 14px;
     font-weight: bold;
     margin:0px;
     padding:0px;
 }
+.season-list .row .btn {
+    margin-right: 8px;
+    margin-bottom:4px;
+}
+/* End KENの小話ページCSS */
