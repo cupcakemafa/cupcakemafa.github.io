@@ -3910,3 +3910,7 @@ a.read-more {
 .top-dashed-light {
     border-top: 1px dashed #eee;
 }
+
+.full-width {
+    width: 100%;
+}
