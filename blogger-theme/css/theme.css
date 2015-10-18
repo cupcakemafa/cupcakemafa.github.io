@@ -3887,9 +3887,10 @@ a.read-more {
 
 /* KENの小話ページCSS */
 .season-list .row .title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     margin:0px;
+    margin-bottom: 4px;
     padding:0px;
 }
 .season-list .row .btn {
