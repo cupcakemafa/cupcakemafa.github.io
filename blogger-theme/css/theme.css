@@ -3886,6 +3886,9 @@ a.read-more {
 /* End KEN ZUKAN on the Web 用CSS */
 
 /* KENの小話ページCSS */
+.season-list .row {
+    padding: 4px 0px;
+}
 .season-list .row .title {
     font-size: 12px;
     font-weight: bold;
