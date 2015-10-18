@@ -3071,8 +3071,14 @@ div.post-header {
 }.align-center {
     text-align:center;
 }
+.float-left {
+    float:left;
+}
 .float-center {
     margin:0px auto;
+}
+.float-right {
+    float:right;
 }
 
 body {
