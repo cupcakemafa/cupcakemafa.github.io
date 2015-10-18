@@ -3883,3 +3883,11 @@ a.read-more {
 .kenzukan-container {
     width:320px;
 }
+
+/* KENの小話リストタイトル */
+.season-list .row .title {
+    font-size: 14px;
+    font-weight: bold;
+    margin:0px;
+    padding:0px;
+}
