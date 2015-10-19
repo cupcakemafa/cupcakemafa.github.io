@@ -162,9 +162,12 @@ div.post-location {
     bottom:10px;
     right:5px;
 }
+.manga {
+    max-width: 320px;
+}
 
 .manga .frame {
-    max-width: 320px;
+    width: 100%;
     height: auto;
     border: 16px solid #eee;
     margin: 0px;
@@ -190,7 +193,7 @@ div.post-location {
 
 /* KEN ZUKAN on the Web 用CSS */
 .kenzukan-container {
-    max-width:320px;
+    width:320px;
 }
 /* End KEN ZUKAN on the Web 用CSS */
 
