@@ -164,7 +164,7 @@ div.post-location {
 }
 
 .manga .frame {
-    width: 320px;
+    max-width: 320px;
     height: auto;
     border: 16px solid #eee;
     margin: 0px;
@@ -185,5 +185,41 @@ div.post-location {
     border: none;
 */
     padding: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+/* KEN ZUKAN on the Web 用CSS */
+.kenzukan-container {
+    max-width:320px;
+}
+/* End KEN ZUKAN on the Web 用CSS */
+
+/* KENの小話ページCSS */
+.season-list .row {
+    padding: 4px 0px;
+}
+.season-list .row .title {
+    font-size: 12px;
+    font-weight: bold;
+    margin:0px;
+    margin-bottom: 4px;
+    padding:0px;
+}
+.season-list .row .btn {
+    margin-right: 4px;
+    margin-bottom:4px;
+}
+/* End KENの小話ページCSS */
+
+/* ユーティリティ */
+.top-dashed-dark {
+    border-top: 1px dashed #333;
+}
+
+.top-dashed-light {
+    border-top: 1px dashed #eee;
+}
+
+.full-width {
+    width: 100%;
 }
