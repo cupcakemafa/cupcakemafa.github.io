@@ -170,12 +170,20 @@ div.post-location {
     margin: 0px;
 }
 
+.manga .frame.season1 {
+    border-color: #f3ff50;
+}
+.manga .frame.season1 {
+    border-color: #fea445;
+}
+
 .manga .caption {
-    width: 342px;
+    width: 100%;
     height: auto;
+/*  
     border: 1px solid #000;
     border: none;
+*/
     padding: 4px;
     margin-bottom: 8px;
-    text-align:left;
 }
