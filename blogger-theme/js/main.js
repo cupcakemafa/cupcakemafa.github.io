@@ -1108,6 +1108,9 @@ $( function ( ) {
     $( '#navigation' ).slicknav( {
         prependTo: '.main-content-wrapper'
     } );
+    // 画面サイズがタブレットより大きい場合は slicknav を非表示にします。
+    // bootstrap.css を使用
+    $('.slicknav_menu').eq(0).addClass('hidden-sm hidden-md hidden-lg');
 
     // 外部リンクに_blank, class, 属性付与
     // 2015/8/25追加
