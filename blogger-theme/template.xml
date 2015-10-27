@@ -78,6 +78,7 @@
         </b:if>
 
         <link href='//plus.google.com/+oddthemes' rel='publisher'/>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
         <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'/>
         <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css'/>
         <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css'/>
@@ -106,10 +107,10 @@
         <b:if cond='data:blog.pageType == "static_page"'>
             <link href='//cupcakemafa.github.io/blogger-theme/css/static_page.css' rel='stylesheet' type='text/css'/>
         </b:if>
-        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <b:if cond='data:blog.pageType == "index"'>
             <link href='//cupcakemafa.github.io/blogger-theme/css/index.css' rel='stylesheet' type='text/css'/>
         </b:if>
-        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <b:if cond='data:blog.pageType == "item"'>
             <link href='//cupcakemafa.github.io/blogger-theme/css/item.css' rel='stylesheet' type='text/css'/>
         </b:if>
         <b:if cond='data:blog.pageType != "index"'>
@@ -123,7 +124,6 @@
         </b:if>
         <link href='//cupcakemafa.github.io/blogger-theme/css/custom.css' rel='stylesheet' type='text/css'/>
         <link href='//cupcakemafa.github.io/blogger-theme/css/slicknav.min.css' rel='stylesheet' type='text/css'/>
-        <link href='//cupcakemafa.github.io/blogger-theme/css/slicknav.min.css' rel='stylesheet' type='text/css'/>
         <link href='//cupcakemafa.github.io/blogger-theme/lib/justified-gallery/css/justifiedGallery.min.css' rel='stylesheet' type='text/css'/>
 
         <script src='//apis.google.com/js/plusone.js' type='text/javascript'/>
@@ -134,12 +134,16 @@
         <script src='//cupcakemafa.github.io/blogger-theme/js/main.js' type='text/javascript'/>
         
         <b:if cond='data:blog.pageType != "item"'>
-            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+            <b:if cond='data:blog.pageType != "static_page"'>
                 <script src='//cupcakemafa.github.io/blogger-theme/js/item_static_page.js' type='text/javascript'/>
             </b:if>
         </b:if>
+        <script type="text/javascript">
+            var nend_params = {"media":30943,"site":160521,"spot":434944,"type":2,"oriented":1};
+        </script>
+        <script type="text/javascript" src="https://js1.nend.net/js/nendAdLoader.js"></script>
     </head>
-    <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
+    <body expr:class='"loading" + data:blog.mobileClass'>
         <!-- outer-wrapper start -->
         <div id='outer-wrapper'>
             <!-- Navigation Bar here  -->
@@ -396,9 +400,9 @@
                                         
                                         <b:includable id='post' var='post'>
                                             <meta content='summary_large_image' name='twitter:card'/>
-                                            <meta content='@oddthemes' name='twitter:site'/>
-                                            <meta content='@oddthemes' name='twitter:creator'/>
-                                            <meta content='www.oddthemes.com' name='twitter:domain'/>
+                                            <!--<meta content='@oddthemes' name='twitter:site'/>-->
+                                            <!--<meta content='@oddthemes' name='twitter:creator'/>-->
+                                            <!--<meta content='www.oddthemes.com' name='twitter:domain'/>-->
                                             <meta expr:content='data:post.firstImageUrl' name='twitter:image:src'/>
                                             <meta expr:content='data:post.title' name='twitter:title'/>
                                             <b:if cond='data:blog.metaDescription'>
@@ -593,6 +597,21 @@
                                                         <div class='post-entry'>
                                                             <p><data:post.body/></p>
                                                         </div>
+                                                        
+                                                        <div class='post_social_share'>
+                                                            <h3><i class='fa fa-share-square-o'/> Share this</h3>
+                                                            <div class='share_this_content'>
+                                                                <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><i class='fa fa-twitter fa-2x'/></a>
+                                                                <a class='social_share' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' onclick='javascript:window.open( this.href, &quot; &quot; , &quot; menubar = no, toolbar = no, resizable = yes, scrollbars = yes, height = 600, width = 600 &quot; ); return false;' rel='nofollow' title='Share this on Google+'><i class='fa fa-google-plus fa-2x'/></a>
+                                                                <!--
+                                                                      <a class='social_share' expr:href='"http://pinterest.com/pin/create/button/?url=" + data:post.url + "&amp;media=" + data:post.thumbnailUrl + "&amp;description=" + data:post.snippet' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=600, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' title='Share this on Pintarest'><i class='fa fa-pinterest fa-2x'/></a>
+                                                                -->
+                                                                <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><i class='fa fa-facebook fa-2x'/></a>     
+                                                                <a class='hs-icon ' expr:href='&quot;http://www.tumblr.com/share/link?url=&quot;+ data:post.url' target='_blank'><i class='fa fa-tumblr fa-2x'/></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style='clear: both;'/>
                                                     </article>
                                                     
                                                 <b:else/>
