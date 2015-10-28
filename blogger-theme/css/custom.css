@@ -165,19 +165,22 @@ div.post-location {
 
 /* Google Play Link button */
 .app-link.google {
-  width:auto;
-  height: 40px;
+    width:auto;
+    height: 40px;
 }
 
 .artwork {
-  width: 80px;
-  height: 80px;
-  border: 1px solid #fff;
-  border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #fff;
+    border-radius: 8px;
 }
 
-.item h3,
-.item h4 {
+.item h3 {
     margin:0px;
+    line-height: 100%;
+}
+
+.item h4 {
     line-height: 100%;
 }
