@@ -184,3 +184,11 @@ div.post-location {
 .item h4 {
     line-height: 100%;
 }
+
+.kenzukan-container {
+    width: 320px;
+}
+
+.top-dashed-dark {
+    border-top: 1px dashed #333;
+}
