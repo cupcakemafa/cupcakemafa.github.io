@@ -192,3 +192,8 @@ div.post-location {
 .top-dashed-dark {
     border-top: 1px dashed #333;
 }
+
+.item-title {
+    font-weight: bold;
+    font-size: 18px;
+}
