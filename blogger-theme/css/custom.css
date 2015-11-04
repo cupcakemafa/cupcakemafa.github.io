@@ -197,3 +197,11 @@ div.post-location {
     font-weight: bold;
     font-size: 18px;
 }
+
+.color-black {
+    color: #434343;
+}
+
+.color-white {
+    color: white;
+}
