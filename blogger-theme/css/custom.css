@@ -188,6 +188,9 @@ div.post-location {
 .kenzukan-container {
     width: 320px;
 }
+.kenzukan-container .title {
+    padding-top: 10px;
+}
 
 .top-dashed-dark {
     border-top: 1px dashed #333;
