@@ -139,9 +139,11 @@
             </b:if>
         </b:if>
         <script type="text/javascript">
-            var nend_params = {"media":30943,"site":160521,"spot":434944,"type":2,"oriented":1};
+            //var nend_params = {"media":30943,"site":160521,"spot":434944,"type":2,"oriented":1};
         </script>
+        <!--
         <script type="text/javascript" src="https://js1.nend.net/js/nendAdLoader.js"></script>
+        -->
     </head>
     <body expr:class='"loading" + data:blog.mobileClass'>
         <!-- outer-wrapper start -->

@@ -208,3 +208,12 @@ div.post-location {
 .color-white {
     color: white;
 }
+
+row.manga {
+    width: 320px;
+    margin-bottom: 8px;
+}
+
+.manga .frame {
+    border: 8px solid #f3ff50;
+}
