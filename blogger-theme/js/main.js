@@ -1157,7 +1157,7 @@ $( function ( ) {
     // トップページ以外はヘッダーメニューを隠します。
     var path = $( '<a>', { href: location.href } )[0].pathname,
         $nav = $( 'nav' );
-    if ( path !== '/' ) {
+    if ( path === '/' ) {
         if ( $nav.hasClass( 'hide' ) ) {
             $nav.removeClass( 'hide' );
         }

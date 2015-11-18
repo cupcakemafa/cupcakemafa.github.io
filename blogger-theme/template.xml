@@ -149,7 +149,7 @@
         <!-- outer-wrapper start -->
         <div id='outer-wrapper'>
             <!-- Navigation Bar here  -->
-            <nav id='menunav'>
+            <nav id='menunav' class="hide">
                 <header id='header-wrapper'>
                     <div id='container'>
                         <b:section class='header-right section' id='header-right' maxwidgets='1' showaddelement='yes'>
