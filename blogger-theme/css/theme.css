@@ -467,7 +467,7 @@ i.fa.fa-home {
 /* POST WRAPPER */
 .main-content-wrapper {
     width: 1190px;
-    margin: 5px auto;
+    margin: 0px auto;
 }
 #post-wrapper {
     float:left;
