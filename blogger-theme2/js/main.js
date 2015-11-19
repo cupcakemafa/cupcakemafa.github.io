@@ -1177,8 +1177,79 @@ $( function ( ) {
         $header.hide();
         $search.hide();
     }
-    
-    if($('#hide-title').length) {
-        $('.post-header').hide();
+
+    if ( $( '#hide-title' ).length ) {
+        $( '.post-header' ).hide();
     }
+
+    $share_box = $( '.share-box' );
+    if ( $share_box.length ) {
+        var share_url = $share_box.data( 'url' ),
+            tag = '',
+            target = [
+                {
+                    'href': 'http://www.facebook.com/sharer.php?u=' + share_url,
+                    'icon': 'fa-facebook'
+                },
+                {
+                    'href': 'http://twitter.com/share?url=' + share_url,
+                    'icon': 'fa-twitter'
+                },
+                {
+                    'href': 'https://plus.google.com/share?url=' + share_url,
+                    'icon': 'fa-google-plus'
+                },
+                {
+                    'href': 'http://www.linkedin.com/shareArticle?mini=true&url=' + share_url,
+                    'icon': 'fa-linkedin'
+                },
+                {
+                    'href': 'http://www.stumbleupon.com/submit?url=' + share_url,
+                    'icon': 'fa-stumbleupon'
+                },
+                {
+                    'href': 'http://www.tumblr.com/share/link?url=' + share_url,
+                    'icon': 'fa-tumblr'
+                },
+                {
+                    'href': 'http://www.stumbleupon.com/submit?url=' + share_url,
+                    'icon': 'fa-stumbleupon'
+                },
+                {
+                    'href': 'https://www.pinterest.com/pin/create/button/',
+                    'icon': 'fa-pinterest',
+                    'data': {
+                        'pin-do': 'buttonBookmark'
+                    }
+                }
+            ];
+        for ( var i = 0, l = $share_box.length; i < l; i ++ ) {
+            for ( var j = 0, m = target.length; j < m; j ++ ) {
+                var data_attr = '';
+                Object.keys(target[i].data).forEach(function(key){
+                    data_attr += ' data-' + key + '="' + target[i].data[key] + '"';
+                });
+                
+                tag += '<span>';
+                if(data_attr) {
+                    tag += '<a class="hs-icon" href="' + target[i].href + '" target="_blank"' + data_attr + '>';
+                }
+                else {
+                    tag += '<a class="hs-icon" href="' + target[i].href + '" target="_blank">';
+                }
+            
+                if ( hasClass( 'small' ) ) {
+                    tag += '<i class="fa ' + target[i].href + '" />';
+                }
+                else {
+                    tag += '<i class="fa ' + target[i].href + '" fa-2x />';
+                }
+                tag += '<i class="fa ' + target[i].href + ' fa-2x" />';
+                tag += '</a>';
+                tag += '</span>';
+            }
+        }
+        $share_box.html(tag);
+    }
+
 } );
