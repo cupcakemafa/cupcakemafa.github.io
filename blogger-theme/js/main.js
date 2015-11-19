@@ -1160,18 +1160,21 @@ $( function ( ) {
         $header = $nav.find('#header'),
         $search = $('#sb-search');
         
+        console.log('$header', $header);
+        console.log('$search', $search);
+        
     if ( path === '/' ) {
         if ( $nav.hasClass( 'no-padding' ) ) {
             $nav.removeClass( 'no-padding' );
-            $header.removeClass('hide');
-            $search.removeClass('hide');
+            $header.show();
+            $search.show();
         }
     }
     else {
         if ( !$nav.hasClass( 'no-padding' ) ) {
             $nav.addClass( 'no-padding' );
-            $header.addClass('hide');
-            $search.addClass('hide');
+            $header.hide();
+            $search.hide();
         }
     }
 } );
