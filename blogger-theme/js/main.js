@@ -1157,8 +1157,8 @@ $( function ( ) {
     // トップページ以外はヘッダーメニューを隠します。
     var path = $( '<a>', { href: location.href } )[0].pathname,
         $nav = $( 'nav' ),
-        $header = $nav.find('#header'),
-        $search = $('#sb-search');
+        $header = $nav.find('#header').eq(0),
+        $search = $('#sb-search').eq(0);
         
         console.log('$header', $header);
         console.log('$search', $search);
