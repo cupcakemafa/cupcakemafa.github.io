@@ -893,6 +893,6 @@
         </a>
        
         <!-- Please call pinit.js only once per page -->
-        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        <script async="async" defer="defer" src="//assets.pinterest.com/js/pinit.js"></script>
     </body>
 </html>

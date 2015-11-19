@@ -1226,25 +1226,25 @@ $( function ( ) {
         for ( var i = 0, l = $share_box.length; i < l; i ++ ) {
             for ( var j = 0, m = target.length; j < m; j ++ ) {
                 var data_attr = '';
-                Object.keys(target[i].data).forEach(function(key){
-                    data_attr += ' data-' + key + '="' + target[i].data[key] + '"';
+                Object.keys(target[j].data).forEach(function(key){
+                    data_attr += ' data-' + key + '="' + target[j].data[key] + '"';
                 });
                 
                 tag += '<span>';
                 if(data_attr) {
-                    tag += '<a class="hs-icon" href="' + target[i].href + '" target="_blank"' + data_attr + '>';
+                    tag += '<a class="hs-icon" href="' + target[j].href + '" target="_blank"' + data_attr + '>';
                 }
                 else {
-                    tag += '<a class="hs-icon" href="' + target[i].href + '" target="_blank">';
+                    tag += '<a class="hs-icon" href="' + target[j].href + '" target="_blank">';
                 }
             
                 if ( hasClass( 'small' ) ) {
-                    tag += '<i class="fa ' + target[i].href + '" />';
+                    tag += '<i class="fa ' + target[j].href + '" />';
                 }
                 else {
-                    tag += '<i class="fa ' + target[i].href + '" fa-2x />';
+                    tag += '<i class="fa ' + target[j].href + '" fa-2x />';
                 }
-                tag += '<i class="fa ' + target[i].href + ' fa-2x" />';
+                tag += '<i class="fa ' + target[j].href + ' fa-2x" />';
                 tag += '</a>';
                 tag += '</span>';
             }
