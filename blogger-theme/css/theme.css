@@ -479,6 +479,7 @@ i.fa.fa-home {
 }
 .post-container {
     padding:15px 0px 0 0;
+    padding: 0px;
 }
 .breadcrumbs {border-bottom: 1px solid #DDDDDD;border-radius: 2px 2px 2px 2px;border-top: 1px solid #DDDDDD;font-size: 90%;height: 16px;margin-bottom: 10px;margin-top: 1px;overflow: hidden;padding: 5px;display: none;}
 .breadcrumbs > span {background: url("http://1.bp.blogspot.com/-VaJX0ShxH6c/TeUGQ0IGOWI/AAAAAAAAJGo/Qw7sIjc5MrQ/s200/bc_separator.png") no-repeat scroll right center transparent;padding: 10px 25px 10px 10px;}
