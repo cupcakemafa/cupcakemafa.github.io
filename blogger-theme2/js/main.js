@@ -1189,31 +1189,38 @@ $( function ( ) {
             target = [
                 {
                     'href': 'http://www.facebook.com/sharer.php?u=' + share_url,
-                    'icon': 'fa-facebook'
+                    'icon': 'fa-facebook',
+                    'data': {}
                 },
                 {
                     'href': 'http://twitter.com/share?url=' + share_url,
-                    'icon': 'fa-twitter'
+                    'icon': 'fa-twitter',
+                    'data': {}
                 },
                 {
                     'href': 'https://plus.google.com/share?url=' + share_url,
-                    'icon': 'fa-google-plus'
+                    'icon': 'fa-google-plus',
+                    'data': {}
                 },
                 {
                     'href': 'http://www.linkedin.com/shareArticle?mini=true&url=' + share_url,
-                    'icon': 'fa-linkedin'
+                    'icon': 'fa-linkedin',
+                    'data': {}
                 },
                 {
                     'href': 'http://www.stumbleupon.com/submit?url=' + share_url,
-                    'icon': 'fa-stumbleupon'
+                    'icon': 'fa-stumbleupon',
+                    'data': {}
                 },
                 {
                     'href': 'http://www.tumblr.com/share/link?url=' + share_url,
-                    'icon': 'fa-tumblr'
+                    'icon': 'fa-tumblr',
+                    'data': {}
                 },
                 {
                     'href': 'http://www.stumbleupon.com/submit?url=' + share_url,
-                    'icon': 'fa-stumbleupon'
+                    'icon': 'fa-stumbleupon',
+                    'data': {}
                 },
                 {
                     'href': 'https://www.pinterest.com/pin/create/button/',
