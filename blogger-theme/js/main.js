@@ -1167,5 +1167,4 @@ $( function ( ) {
             $nav.addClass( 'hide' );
         }
     }
-
 } );
