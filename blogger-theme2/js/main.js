@@ -1156,15 +1156,29 @@ $( function ( ) {
 
     // トップページ以外はヘッダーメニューを隠します。
     var path = $( '<a>', { href: location.href } )[0].pathname,
-        $nav = $( 'nav' );
+        $nav = $( 'nav' ),
+        $header = $nav.find( '#header' ).eq( 0 ),
+        $search = $( '#sb-search' ).eq( 0 );
+
+//    console.log( '$header', $header );
+//    console.log( '$search', $search );
+
     if ( path === '/' ) {
-        if ( $nav.hasClass( 'hide' ) ) {
-            $nav.removeClass( 'hide' );
+        if ( $nav.hasClass( 'no-padding' ) ) {
+            $nav.removeClass( 'no-padding' );
         }
+        $header.show();
+        $search.show();
     }
     else {
-        if ( !$nav.hasClass( 'hide' ) ) {
-            $nav.addClass( 'hide' );
+        if ( ! $nav.hasClass( 'no-padding' ) ) {
+            $nav.addClass( 'no-padding' );
         }
+        $header.hide();
+        $search.hide();
+    }
+    
+    if($('#hide-title').length) {
+        $('.post-header').hide();
     }
 } );

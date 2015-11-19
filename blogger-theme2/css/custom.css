@@ -217,3 +217,7 @@ div.post-location {
 .manga .frame {
     border: 8px solid #f3ff50;
 }
+
+.no-padding {
+    padding:0px;
+}
