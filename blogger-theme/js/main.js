@@ -1177,4 +1177,8 @@ $( function ( ) {
         $header.hide();
         $search.hide();
     }
+    
+    if($('#hide-title').length) {
+        $('.post-header').hide();
+    }
 } );
