@@ -1246,7 +1246,7 @@ $( function ( ) {
                     tag += '<a class="hs-icon" href="' + target[j].href + '" target="_blank">';
                 }
 
-                if ( hasClass( 'small' ) ) {
+                if ( $share_box.hasClass( 'small' ) ) {
                     tag += '<i class="fa ' + target[j].href + '" />';
                 }
                 else {
