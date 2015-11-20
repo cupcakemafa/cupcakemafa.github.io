@@ -517,7 +517,7 @@
 
                                                     <div class='post_social_share'>
                                                         <h3><i class='fa fa-share-square-o'/> Share this</h3>
-                                                        <div class="share-box" data-href="data:post.sharePostUrl"></div>
+                                                        <div class="share-box" expr:data-url="data:post.url"></div>
                                                         <div class='share_this_content'>
                                                             <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><i class='fa fa-twitter fa-2x'/></a>
                                                             <a class='social_share' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' onclick='javascript:window.open( this.href, &quot; &quot; , &quot; menubar = no, toolbar = no, resizable = yes, scrollbars = yes, height = 600, width = 600 &quot; ); return false;' rel='nofollow' title='Share this on Google+'><i class='fa fa-google-plus fa-2x'/></a>
@@ -601,7 +601,7 @@
                                                         
                                                         <div class='post_social_share'>
                                                             <h3><i class='fa fa-share-square-o'/> Share this</h3>
-                                                            <div class="share-box" data-href="data:post.sharePostUrl"></div>
+                                                            <div class="share-box" expr:data-url="data:post.url"></div>
                                                             <div class='share_this_content'>
                                                                 <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><i class='fa fa-twitter fa-2x'/></a>
                                                                 <a class='social_share' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' onclick='javascript:window.open( this.href, &quot; &quot; , &quot; menubar = no, toolbar = no, resizable = yes, scrollbars = yes, height = 600, width = 600 &quot; ); return false;' rel='nofollow' title='Share this on Google+'><i class='fa fa-google-plus fa-2x'/></a>
@@ -639,8 +639,8 @@
                                                                 ""//<data:post.authorProfileUrl/>
                                                             );
                                                         </script>
-                                                        <div class="share-box small" data-href="data:post.sharePostUrl"></div>
-                                                        <div class='st-post-share social share-box'>
+                                                        <div class="share-box small" expr:data-url="data:post.url"></div>
+                                                        <div class='st-post-share social'>
                                                             <span><a class='hs-icon' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank'><i class='fa fa-facebook fa-2x'/></a></span>
                                                             <span><a class='hs-icon' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url' target='_blank'><i class='fa fa-twitter fa-2x'/></a></span>
                                                             <span><a class='hs-icon ' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' target='_blank'><i class='fa fa-google-plus fa-2x'/></a></span>

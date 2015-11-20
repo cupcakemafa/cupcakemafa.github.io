@@ -1190,37 +1190,37 @@ $( function ( ) {
                 {
                     'href': 'http://www.facebook.com/sharer.php?u=' + share_url,
                     'icon': 'fa-facebook',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'http://twitter.com/share?url=' + share_url,
                     'icon': 'fa-twitter',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'https://plus.google.com/share?url=' + share_url,
                     'icon': 'fa-google-plus',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'http://www.linkedin.com/shareArticle?mini=true&url=' + share_url,
                     'icon': 'fa-linkedin',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'http://www.stumbleupon.com/submit?url=' + share_url,
                     'icon': 'fa-stumbleupon',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'http://www.tumblr.com/share/link?url=' + share_url,
                     'icon': 'fa-tumblr',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'http://www.stumbleupon.com/submit?url=' + share_url,
                     'icon': 'fa-stumbleupon',
-                    'data': {}
+                    'data': { }
                 },
                 {
                     'href': 'https://www.pinterest.com/pin/create/button/',
@@ -1230,21 +1230,22 @@ $( function ( ) {
                     }
                 }
             ];
+        console.log( 'share_url', share_url );
         for ( var i = 0, l = $share_box.length; i < l; i ++ ) {
             for ( var j = 0, m = target.length; j < m; j ++ ) {
                 var data_attr = '';
-                Object.keys(target[j].data).forEach(function(key){
+                Object.keys( target[j].data ).forEach( function ( key ) {
                     data_attr += ' data-' + key + '="' + target[j].data[key] + '"';
-                });
-                
+                } );
+
                 tag += '<span>';
-                if(data_attr) {
+                if ( data_attr ) {
                     tag += '<a class="hs-icon" href="' + target[j].href + '" target="_blank"' + data_attr + '>';
                 }
                 else {
                     tag += '<a class="hs-icon" href="' + target[j].href + '" target="_blank">';
                 }
-            
+
                 if ( hasClass( 'small' ) ) {
                     tag += '<i class="fa ' + target[j].href + '" />';
                 }
@@ -1256,7 +1257,7 @@ $( function ( ) {
                 tag += '</span>';
             }
         }
-        $share_box.html(tag);
+        $share_box.html( tag );
     }
 
 } );
