@@ -81,7 +81,7 @@
         <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
-        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
         <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/css/justifiedGallery.min.css' rel='stylesheet' type='text/css' />
 
@@ -131,7 +131,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="/">
-                                <img alt="Brand" src="http://3.bp.blogspot.com/-JnO3aHlPgTA/VlKftI8B9lI/AAAAAAAAICI/YRm-VTzPtXc/s1600/cupcakemafa-favicon40x40.png" />
+                                <img alt="Brand" src="http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png" />
                             </a>
                         </div>
 
@@ -163,16 +163,17 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='http://wptest20140302.blogspot.jp/p/blog-page_21.html?zx=b552ec1fb58b375f'>
-                                    スタティックページ
+                                    <a href='/2015/11/nao-and-ken-line-stamp.html'>
+                                        <i class="fa fa-star"></i>
+                                        LINEスタンプ発売中
                                     </a>
                                 </li>
                                 <li>
-                            <form action='/search' method='get' class="navbar-form form-inline navbar-right" role="search">
-                                <div class="form-group">
-                                    <input class='form-control' id='search' name='q' placeholder='Search' type='search' value='' />
-                                </div>
-                            </form>
+                                    <form action='/search' method='get' class="navbar-form form-inline navbar-right" role="search">
+                                        <div class="form-group">
+                                            <input class='form-control' id='search' name='q' placeholder='Search' type='search' value='' />
+                                        </div>
+                                    </form>
                                 </li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
@@ -374,25 +375,25 @@
                                                                     <b:if cond='data:newerPageUrl'>
                                                                         <a class='newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle' rel='next'>
                                                                             <strong>Next <i class='fa fa-chevron-right'></i></strong>
-                                                                            <span><data:newerPageTitle/></span>
+                                                                            <!--<span><data:newerPageTitle/></span>-->
                                                                         </a>
                                                                         <b:else/>
                                                                         <a href='/' rel='top'>
                                                                             <strong><i class='fa fa-home'></i> Top</strong>
-                                                                            <span>サイトトップへ</span>
+                                                                            <!--<span>サイトトップへ</span>-->
                                                                         </a>
                                                                     </b:if>
                                                                 </li>
                                                                 <li class='previous'>
                                                                     <b:if cond='data:olderPageUrl'>
                                                                         <a class='older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle' rel='previous'>
-                                                                            <strong><i class='fa fa-chevron-left'></i> Previous</strong>
-                                                                            <span><data:olderPageTitle/></span>
+                                                                            <strong><i class='fa fa-chevron-left'></i> Prev</strong>
+                                                                            <!--<span><data:olderPageTitle/></span>-->
                                                                         </a>
                                                                         <b:else/>
                                                                         <a hrf='/' rel='TOP'>
                                                                             <strong><i class='fa fa-home'></i> Top</strong>
-                                                                            <span>サイトトップへ</span>
+                                                                            <!--<span>サイトトップへ</span>-->
                                                                         </a>
                                                                     </b:if>
                                                                 </li>

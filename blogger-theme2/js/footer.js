@@ -35,7 +35,7 @@ function related_results_labels_thumbs(json) {
             if ((a !== -1) && (b !== -1) && (c !== -1) && (d !== "")) {
                 thumburl[relatedTitlesNum] = d;
             } else
-                thumburl[relatedTitlesNum] = 'http://3.bp.blogspot.com/-zP87C2q9yog/UVopoHY30SI/AAAAAAAAE5k/AIyPvrpGLn8/s1600/picture_not_available.png';
+                thumburl[relatedTitlesNum] = 'http://4.bp.blogspot.com/-fjds8kVeOqE/VlMP_JXdObI/AAAAAAAABQw/L4Q4imeQu0M/s1600/picture_not_available.png';
         }
         if (relatedTitles[relatedTitlesNum].length > 35)
             relatedTitles[relatedTitlesNum] = relatedTitles[relatedTitlesNum].substring(0, 35) + "...";

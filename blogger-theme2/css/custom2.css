@@ -160,7 +160,7 @@ article.post {
 
 .post-label {
     width: 384px;
-    width: 360px;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -298,4 +298,13 @@ h1.entry-title {
 
 #related-posts ul li:last-child {
     margin-right: 0px;
+}
+
+.kenzukan-container,
+.row.manga {
+    width: auto;
+}
+
+.manga .frame {
+    background-color: white;
 }
