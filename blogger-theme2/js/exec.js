@@ -85,8 +85,10 @@ $(function () {
         var s = $(this).scrollTop();
         var m = 300;
         if (s > m) {
+            console.log('scroll in');
             $("#scroll-top").fadeIn('slow');
         } else if (s < m) {
+            console.log('scroll out');
             $("#scroll-top").fadeOut('slow');
         }
     });

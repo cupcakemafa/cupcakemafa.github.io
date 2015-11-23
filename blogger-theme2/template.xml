@@ -732,12 +732,12 @@
 
         <!-- スクロールトップボタン表示 2015/8/24 追加 -->
         <a class='scroll-top' href='#' id='scroll-top' rel='nofollow' title='ページトップへ'>
+            Top<br />
             <img src='http://2.bp.blogspot.com/-Hc2Qip-ciow/Vdo6dWcbLAI/AAAAAAAAAPo/3Ag8gFOBse4/s1600/scrollup_blue.png' />
         </a>
 
-
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type='text/javascript'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme2/js/jquery.nicescroll.js' type='text/javascript'></script>
+<!--        <script src='//cupcakemafa.github.io/blogger-theme2/js/jquery.nicescroll.js' type='text/javascript'></script>-->
         <script src='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/js/jquery.justifiedGallery.min.js' type='text/javascript'></script>
         <script src='//cupcakemafa.github.io/blogger-theme2/js/footer.js' type='text/javascript'></script>
         <script src='//cupcakemafa.github.io/blogger-theme2/js/exec.js' type='text/javascript'></script>
