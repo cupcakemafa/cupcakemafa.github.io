@@ -240,7 +240,7 @@ pageNavi.show = function (f, e, a) {
     if (e > 1) {
         b += '<a href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
     }
-    for (i = c; i <= endPage; ++i) {
+    for (var i = c; i <= endPage; ++i) {
         if (i === e) {
             b += '<span class="current">' + i + "</span>";
         } else {
