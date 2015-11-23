@@ -190,7 +190,7 @@
                             <div class='post-container clearfix'>
 
                                 <!-- header image -->
-                                <b:section class='header' id='header' maxwidgets='10' showaddelement='yes'>
+                                <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
                                     <b:widget id='Header1' locked='true' title='Cupcakemafa (Header)' type='Header'>
                                         <b:includable id='main'>
                                             <b:if cond='data:blog.url == data:blog.homepageUrl'>
@@ -510,23 +510,78 @@
                     <!-- sidebar wrapper start -->
                     <aside id='sidebar-wrapper'>
                         <div class='sidebar-container'>
-
                             <div class='clear' />
-                            <b:section class='sidebar section' id='sidebar' preferred='yes'>
 
-                                <b:widget id='HTML10' locked='false' title='About Me' type='HTML'>
-                                    <b:includable id='main'>
-                                        <!-- only display title if it's non-empty -->
-                                        <b:if cond='data:title != ""'>
-                                            <h2 class='title'><data:title/></h2>
-                                        </b:if>
-                                        <div class='widget-content'>
-                                            <data:content/>
+                            <div class='sidebar section'>
+
+                                <div class="widget HTML clearfix" id="HTML4">
+                                    <h2 class="title">LINEスタンプ発売中!!</h2>
+                                    <div class="widget-content">
+                                        <a href="http://line.me/S/sticker/1201752" target="sub" rel="external"><img class="img-responsive" src="http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s670/line-stamp-pr-2-1024x392.png" /></a>
+                                        NaoとKenの日常から飛び出した<br/>
+                                        おもしろLINEスタンプ発売中でーす!!<br/>
+                                        ぜひみてみてね!!
+                                    </div>
+                                </div>
+
+                                <div class="widget HTML clearfix" id="HTML10">
+                                    <h2 class="title">About Me</h2>
+                                    <div class="widget-content">
+                                        <div class="authorbox">
+                                            <img border="0" src="http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png" />
                                         </div>
+                                        ちょっとしたことで日常に笑いを; ) そんな思いを持ちながらゆるく活動している夫婦です。読み物アプリを作ったり、旅の情報を発信したり、試行錯誤中。ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています。どうぞ、よろしく。
+                                        <div class="socialicons">
+                                            <a href="https://www.facebook.com/cupcakemafa"><i class="fa fa-facebook"></i></a>
+                                            <a href="https://twitter.com/cupcakemafa"><i class="fa fa-twitter"></i></a>
+                                            <a href="https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts"><i class="fa fa-google-plus"></i></a>
+                                            <!--
+                                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                                            -->
+                                            <a href="https://www.youtube.com/c/Cupcakemafa2015/"><i class="fa fa-youtube"></i></a>
+                                            <a href="https://instagram.com/cupcakemafaofficial/"><i class="fa fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                        <b:include name='quickedit' />
-                                    </b:includable>
-                                </b:widget>
+                                <div class="widget HTML clearfix" id="HTML2">
+                                    <h2 class="title">KEN図鑑</h2>
+                                    <div class="widget-content">
+                                        <div class="float-center align-center">
+                                            <a href="/p/kenzukan.html">
+                                                <img border="0" src="http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png" style="margin-bottom:0px;" />
+                                            </a>
+                                        </div>
+                                        <table class="float-center align-center" align="center" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8">
+                                                            <img border="0" src="http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png" alt="iOS用KEN図鑑のダウンロードはこちらです" width="135" height="40" />
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan">
+                                                            <img src="https://developer.android.com/images/brand/ja_generic_rgb_wo_45.png" alt="Get it on Google Play" width="115" height="40" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="widget HTML clearfix" id="HTML1">
+                                    <h2 class="title">Cupcakemafaとは</h2>
+                                    <div class="widget-content">
+                                        <img border="0" src="http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg" />
+                                        カップケーキとマーファをくっつけた造語、それが『カップケーキマーファ （Cupcakemafa）』です。カップケーキは、Naoの好物。マーファとは、Kenがその昔に映画でイタリア男性が「マフィア」の事を「マーファ」と言っていたのを聞きかじったのがきっかけで、できた言葉なのです。<br/>
+Kenに言わせれば、Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう。時にカップケーキのように甘く、時にマフィアのように厳しい。まるで、人生のようですね。なんてね。そんなわけで、カップケーキマーファの誕生ですっ!!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <b:section class='sidebar section' id='sidebar' preferred='yes'>
 
                                 <b:widget id='Label1' locked='false' title='Categories' type='Label'>
                                     <b:includable id='main'>
