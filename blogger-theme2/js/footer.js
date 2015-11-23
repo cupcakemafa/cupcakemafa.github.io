@@ -1,5 +1,18 @@
 "use strict";
 
+function set_debug_mode(debugMode) {
+    if (debugMode) {
+        console.log('setDebugMode()');
+    } else {
+        console.log = function () {};
+        console.info = function () {};
+        console.warn = function () {};
+        console.error = function () {};
+        console.time = function () {};
+        console.timeEnd = function () {};
+    }
+};
+
 /////////////////////////////////////////////////////////////
 // Start Related Post List
 var relatedTitles = new Array();
@@ -111,6 +124,7 @@ function printRelatedLabels_thumbs() {
 }
 // 関連ポスト取得完了カウント
 var relation_count = 0;
+
 function getRelatedPosts(labels) {
     console.log('labels', labels);
     var url;

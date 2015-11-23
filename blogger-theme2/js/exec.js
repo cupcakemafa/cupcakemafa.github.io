@@ -1,6 +1,9 @@
 $(function () {
     "use strict";
 
+    var is_debug = false;
+    set_debug_mode(is_debug);
+
     // 必要に応じてシェアボタン表示
     var $sharer = $('.post-social-share'),
         base_tag = '',
