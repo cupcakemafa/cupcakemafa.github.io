@@ -59,7 +59,7 @@ var selectnav = function ( ) {
         }
     };
 }( );
-
+/*
 var relatedTitles = new Array( );
 var relatedTitlesNum = 0;
 var relatedUrls = new Array( );
@@ -143,14 +143,14 @@ function printRelatedLabels_thumbs( ) {
         } else {
             r = 0;
         }
-        i ++;
+        i++;
     }
     document.write( '</div>' );
     relatedUrls.splice( 0, relatedUrls.length );
     thumburl.splice( 0, thumburl.length );
     relatedTitles.splice( 0, relatedTitles.length );
 }
-
+*/
 function authorshow( data ) {
     for ( var i = 0; i < 1; i ++ ) {
         var entry = data.feed.entry[i];
@@ -1090,8 +1090,9 @@ $( function ( ) {
     new UISearch( document.getElementById( 'sb-search' ) );
 
     // top の投稿サムネイル画像を整列
-    $( ".colorboxEx" )
-        .justifiedGallery( {
+    var $color_box = $( ".colorboxEx" );
+    if($color_box.length) {
+        $color_box.justifiedGallery( {
             rowHeight: 165,
             //maxRowHeight: 0,
             margins: 5,
@@ -1100,9 +1101,10 @@ $( function ( ) {
             fixedHeight: false,
             captions: false
                 //randomize: false
-        } ).on( 'jg.complete', function ( e ) {
-        $( this ).show();
-    } );
+            } ).on( 'jg.complete', function ( e ) {
+            $( this ).show();
+        } );
+    }
 
     // メニューナビゲーション
     $( '#navigation' ).slicknav( {
@@ -1111,7 +1113,7 @@ $( function ( ) {
     // 画面サイズがタブレットより大きい場合は slicknav を非表示にします。
     // bootstrap.css を使用
     $( '.slicknav_menu' ).eq( 0 ).addClass( 'hidden-sm hidden-md hidden-lg' );
-
+/*
     // 外部リンクに_blank, class, 属性付与
     // 2015/8/25追加
     // http://datsugoku.hatenablog.jp/entry/2014/05/11/205638
@@ -1133,6 +1135,7 @@ $( function ( ) {
             $( "#scroll-top" ).fadeOut( 'slow' );
         }
     } );
+*/
 
     // オーバーレイ広告がある場合のページトップボタンの位置制御
     if ( $( '#nend_adspace_160521_434944' ).length ) {

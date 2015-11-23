@@ -74,7 +74,8 @@ pageNavi.show = function ( f, e, a ) {
     if ( endPage < a ) {
         b += '<a href="' + f[a] + '">' + pageNaviConf.lastText + "</a>";
     }
-    document.write( b );
+//    document.write( b );
+    $('.pagenavi').html(b);
 };
 ( function ( ) {
     var b = location.href;

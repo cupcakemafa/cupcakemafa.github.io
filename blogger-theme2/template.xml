@@ -1,434 +1,315 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html>
-<html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
-    <head>
-        <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>
-        <![endif]-->
-        <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
-        <meta content='text/html;charset=UTF-8' http-equiv='Content-Type'/>
-        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
+    <!DOCTYPE html>
+    <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#' lang='ja'>
 
-        <b:include data='blog' name='all-head-content'/>
-        
+    <head>
+        <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport' />
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+
+        <!-- all-head-content -->
+        <b:include data='blog' name='all-head-content' />
+        <!-- // all-head-content -->
+
         <!-- SEO Meta Tag -->
         <b:if cond='data:blog.homepageUrl == data:blog.url'>
-            <meta expr:content='data:blog.title' name='keywords'/>
+            <meta expr:content='data:blog.title' name='keywords' />
         </b:if>
         <b:if cond='data:blog.pageType == &quot;item&quot;'>
-            <meta expr:content='data:blog.pageName' name='keywords'/>
+            <meta expr:content='data:blog.pageName' name='keywords' />
         </b:if>
         <b:if cond='data:blog.pageType == &quot;index&quot;'>
             <b:if cond='data:blog.searchLabel'>
-                <meta content='noindex,nofollow' name='robots'/>
+                <meta content='noindex,nofollow' name='robots' />
             </b:if>
         </b:if>
         <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-            <meta content='noindex,nofollow' name='robots'/>
+            <meta content='noindex,nofollow' name='robots' />
         </b:if>
         <b:if cond='data:blog.isMobile'>
-            <meta content='noindex,nofollow' name='robots'/>
-        </b:if>
-        
-        <!-- SEO Title Tag -->
-        <b:if cond='data:blog.url == data:blog.homepageUrl'>
-            <title>
-                <data:blog.title/>
-            </title>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;item&quot;'>
-            <title>
-                <data:blog.pageName/>
-                |
-                <data:blog.title/>
-            </title>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-            <title>
-                Archive for 
-                <data:blog.pageName/>
-            </title>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-            <title>
-                <data:blog.pageName/>
-            </title>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            <b:if cond='data:blog.searchLabel'>
-                <title>
-                    <data:blog.title/>
-                    - 
-                    <data:blog.pageName/>
-                </title>
-            </b:if>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
-            <title>
-                Page Not Found
-            </title>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            <b:if cond='data:blog.url != data:blog.homepageUrl'>
-                <title>
-                    <data:blog.pageTitle/>
-                    - All Post
-                </title>
-            </b:if>
+            <meta content='noindex,nofollow' name='robots' />
         </b:if>
 
-        <link href='//plus.google.com/+oddthemes' rel='publisher'/>
+        <!-- SEO Title Tag -->
+        <title>
+            <b:if cond='data:blog.url == data:blog.homepageUrl'>
+                <data:blog.title/>
+            </b:if>
+            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                <data:blog.pageName/> |
+                <data:blog.title/>
+            </b:if>
+            <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+                Archive for
+                <data:blog.pageName/>
+            </b:if>
+            <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                <data:blog.pageName/>
+            </b:if>
+            <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                <b:if cond='data:blog.searchLabel'>
+                    <data:blog.title/> -
+                    <data:blog.pageName/>
+                </b:if>
+            </b:if>
+            <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+                Page Not Found
+            </b:if>
+            <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                <b:if cond='data:blog.url != data:blog.homepageUrl'>
+                    <data:blog.pageTitle/> - All Post
+                </b:if>
+            </b:if>
+        </title>
+
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'/>
-        <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css'/>
-        <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css'/>
-        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-        <link href='//fonts.googleapis.com/css?family=Playfair+Display&amp;ver=4.0' id='shortcodes_font-css' media='all' rel='stylesheet' type='text/css'/>
-        <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'/>
-        <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'/>
-        <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' />
+        <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Playfair+Display&amp;ver=4.0' id='shortcodes_font-css' media='all' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
 
         <b:skin>
-        <![CDATA[
+            <![CDATA[
             /*
             -----------------------------------------------
             Blogger Template Style
-            Name:     Charm Responsive Blogger Template
-            Designer: Ceyron Louis
-            URL:      http://www.oddthemes.com
+            Name:     Cupcakemafa Blogger Template
+            Designer: Cupcakemafa
+            URL:      http://www.cupcakemafa.com
             Version:  1.0
             ----------------------------------------------- */
             <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
         ]]>
         </b:skin>
-        
-        <link href='//cupcakemafa.github.io/blogger-theme2/css/theme.css' rel='stylesheet' type='text/css'/>
+
+        <link href='//cupcakemafa.github.io/blogger-theme2/css/theme.css' rel='stylesheet' type='text/css' />
 
         <b:if cond='data:blog.pageType == "static_page"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/static_page.css' rel='stylesheet' type='text/css'/>
+            <link href='//cupcakemafa.github.io/blogger-theme2/css/static_page.css' rel='stylesheet' type='text/css' />
         </b:if>
         <b:if cond='data:blog.pageType == "index"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/index.css' rel='stylesheet' type='text/css'/>
+            <link href='//cupcakemafa.github.io/blogger-theme2/css/index.css' rel='stylesheet' type='text/css' />
         </b:if>
         <b:if cond='data:blog.pageType == "item"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/item.css' rel='stylesheet' type='text/css'/>
+            <link href='//cupcakemafa.github.io/blogger-theme2/css/item.css' rel='stylesheet' type='text/css' />
         </b:if>
         <b:if cond='data:blog.pageType != "index"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/not-index.css' rel='stylesheet' type='text/css'/>
+            <link href='//cupcakemafa.github.io/blogger-theme2/css/not-index.css' rel='stylesheet' type='text/css' />
         </b:if>
         <b:if cond='data:blog.url == data:blog.homepageUrl'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/blog.homepageUrl.css' rel='stylesheet' type='text/css'/>
+            <link href='//cupcakemafa.github.io/blogger-theme2/css/blog.homepageUrl.css' rel='stylesheet' type='text/css' />
         </b:if>
         <b:if cond='data:blog.searchLabel'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/blog.searchLabel.css' rel='stylesheet' type='text/css'/>
+            <link href='//cupcakemafa.github.io/blogger-theme2/css/blog.searchLabel.css' rel='stylesheet' type='text/css' />
         </b:if>
-        <link href='//cupcakemafa.github.io/blogger-theme2/css/custom.css' rel='stylesheet' type='text/css'/>
-        <link href='//cupcakemafa.github.io/blogger-theme2/css/slicknav.min.css' rel='stylesheet' type='text/css'/>
-        <link href='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/css/justifiedGallery.min.css' rel='stylesheet' type='text/css'/>
+        <link href='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/css/justifiedGallery.min.css' rel='stylesheet' type='text/css' />
+        <link href='//cupcakemafa.github.io/blogger-theme2/css/custom.css' rel='stylesheet' type='text/css' />
+        <link href='//cupcakemafa.github.io/blogger-theme2/css/custom2.css' rel='stylesheet' type='text/css' />
+<!--        <link href='//cupcakemafa.github.io/blogger-theme2/css/slicknav.min.css' rel='stylesheet' type='text/css' />-->
 
-        <script src='//apis.google.com/js/plusone.js' type='text/javascript'/>
-        <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.min.js' />
-        <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme2/js/jquery.nicescroll.js'/>
-        <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/js/jquery.justifiedGallery.min.js' />
 
-        <script src='//cupcakemafa.github.io/blogger-theme2/js/main.js' type='text/javascript'/>
+        <script src='//apis.google.com/js/plusone.js' type='text/javascript'></script>
+        <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'></script>
+
         
-        <b:if cond='data:blog.pageType != "item"'>
-            <b:if cond='data:blog.pageType != "static_page"'>
-                <script src='//cupcakemafa.github.io/blogger-theme2/js/item_static_page.js' type='text/javascript'/>
-            </b:if>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>
+        <![endif]-->
+
+        <script type='text/javascript'>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            var pageType = 'post';
+        <b:elseif cond='data:blog.pageType == &quot;static_page&quot;' />
+            var pageType = 'page';
+        <b:elseif cond='data:blog.pageType == &quot;error_page&quot;' />
+            var pageType = '404';
+        <b:elseif cond='data:blog.pageType == &quot;archive&quot;' />
+            var pageType = 'archive';
+        <b:elseif cond='data:blog.pageType == &quot;index&quot; &amp;&amp; data:blog.searchLabel' />
+            var pageType = 'label-archive';
+        <b:elseif cond='data:blog.pageType == &quot;index&quot; &amp;&amp; data:blog.url == data:blog.homepageUrl' />
+            var pageType = 'top';
+        <b:else/>
+            var pageType = 'others';
         </b:if>
-        <script type="text/javascript">
-            //var nend_params = {"media":30943,"site":160521,"spot":434944,"type":2,"oriented":1};
         </script>
-        <!--
-        <script type="text/javascript" src="https://js1.nend.net/js/nendAdLoader.js"></script>
-        -->
     </head>
+
     <body expr:class='"loading" + data:blog.mobileClass'>
         <!-- outer-wrapper start -->
         <div id='outer-wrapper'>
-            <!-- Navigation Bar here  -->
-            <nav id='menunav' class="hide">
-                <header id='header-wrapper'>
-                    <div id='container'>
-                        <b:section class='header-right section' id='header-right' maxwidgets='1' showaddelement='yes'>
-                            <b:widget id='HTML7' locked='false' title='' type='HTML'>
-                                <b:includable id='main'>
-                                    <!-- only display title if it's non-empty -->
-                                    <b:if cond='data:title != &quot;&quot;'>
-                                        <h2 class='title'>
-                                            <data:title/>
-                                        </h2>
-                                    </b:if>
-                                    <div class='widget-content'>
-                                        <data:content/>
-                                    </div>
-                                    <b:include name='quickedit'/>
-                                </b:includable>
-                            </b:widget>
-                        </b:section>
-                    </div>
-                </header>
-                <!-- header wrapper end -->
 
-                <div class='clear'/>
+            <div class="clearfix">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/">
+                                <img alt="Brand" src="http://3.bp.blogspot.com/-JnO3aHlPgTA/VlKftI8B9lI/AAAAAAAAICI/YRm-VTzPtXc/s1600/cupcakemafa-favicon40x40.png" />
+                            </a>
+                        </div>
 
-                <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-                    <b:widget id='Header1' locked='true' title='Cupcakemafa (Header)' type='Header'>
-                        <b:includable id='main'>
-                            <b:if cond='data:useImage'>
-                                <b:if cond='data:imagePlacement == "BEHIND"'>
-                                    <!--
-                                    Show image as background to text. You can't really calculate the width
-                                    reliably in JS because margins are not taken into account by any of
-                                    clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-                                    width if the user is using shrink to fit.
-                                    This results in a margin-width's worth of pixels being cropped. If the
-                                    user is not using shrink to fit then we expand the header.
-                                    -->
-                                    <b:if cond='data:mobile'>
-                                        <div id='head-inner'>
-                                            <div class='titlewrapper' style='background: transparent'>
-                                                <h1 class='title' style='background: transparent; border-width: 0px'>
-                                                    <b:include name='title'/>
-                                                </h1>
-                                            </div>
-                                            <b:include name='description'/>
-                                        </div>
-                                    <b:else/>
-                                        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot; + &quot;background-position: &quot; + data:backgroundPositionStyleStr + &quot;; &quot; + data:widthStyleStr + &quot;min-height: &quot; + data:height + &quot;_height: &quot; + data:height + &quot;background-repeat: no-repeat; &quot;' id='head-inner'>
-                                            <div class='titlewrapper' style='background: transparent'>
-                                                <h1 class='title' style='background: transparent; border-width: 0px'>
-                                                    <b:include name='title'/>
-                                                </h1>
-                                            </div>
-                                            <b:include name='description'/>
-                                        </div>
-                                    </b:if>
-                                <b:else/>
-                                    <!--Show the image only-->
-                                    <div id='head-inner'>
-                                        <a expr:href='data:blog.homepageUrl' style='display: block'>
-                                            <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-                                        </a>
-                                        <!--Show the description-->
-                                        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
-                                            <b:include name='description'/>
-                                        </b:if>
-                                    </div>
-                                </b:if>
-                            <b:else/>
-                                <!--No header image -->
-                                <div id='head-inner'>
-                                    <div class='titlewrapper'>
-                                        <a expr:href='data:blog.homepageUrl' style='display: block'>
-                                            <h1 class='title'>
-                                                <b:include name='title'/>
-                                            </h1>
-                                        </a>
-                                    </div>
-                                    <b:include name='description'/>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href='/search/label/NEWS'>
+                                        <i class="fa fa-newspaper-o"></i>
+                                        News
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/search/label/KEN%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%90%E3%83%AA%E3%83%83%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9'>
+                                        <i class="fa fa-globe"></i>
+                                        KENのFavorite Place
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/p/kenzukan.html'>
+                                        <i class="fa fa-book"></i>
+                                        KEN図鑑
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/p/kenzukan-ep-s1.html'>
+                                        <i class="fa fa-bookmark"></i>
+                                        KENの小話
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='http://wptest20140302.blogspot.jp/p/blog-page_21.html?zx=b552ec1fb58b375f'>
+                                    スタティックページ
+                                    </a>
+                                </li>
+                                <li>
+                            <form action='/search' method='get' class="navbar-form form-inline navbar-right" role="search">
+                                <div class="form-group">
+                                    <input class='form-control' id='search' name='q' placeholder='Search' type='search' value='' />
                                 </div>
-                            </b:if>
-                        </b:includable>
-                        <b:includable id='description'>
-                            <div class='descriptionwrapper'>
-                                <p class='description'>
-                                    <span>
-                                        <data:description/>
-                                    </span>
-                                </p>
-                            </div>
-                        </b:includable>
-                        <b:includable id='title'>
-                            <b:if cond='data:blog.url == data:blog.homepageUrl'>
-                                <data:title/>
-                                <b:else/>
-                                <a expr:href='data:blog.homepageUrl'>
-                                    <data:title/>
-                                </a>
-                            </b:if>
-                        </b:includable>
-                    </b:widget>
-                </b:section>
-
-                <div class='wrappu'>
-                    <ul class='slimmenu' id='navigation'>
-                        <li>
-                            <a href='/'>
-                                <i class="fa fa-home"></i> Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href='/search/label/NEWS'>
-                                <i class="fa fa-newspaper-o"></i> News
-                            </a>
-                        </li>
-                        <li>
-                            <a href='/search/label/KEN%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%90%E3%83%AA%E3%83%83%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9'>
-                                <i class="fa fa-globe"></i> KENのFavorite Place
-                            </a>
-                        </li>
-                        <li>
-                            <a href='/p/kenzukan.html'>
-                                <i class="fa fa-book"></i> KEN図鑑
-                            </a>
-                        </li>
-                        <li>
-                            <a href='/p/kenzukan-ep-s1.html'>
-                                <i class="fa fa-bookmark"></i> KENの小話
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class='sb-search' id='sb-search'>
-                        <form action='/search' method='get' role='search'>
-                            <input class='sb-search-input' id='search' name='q' placeholder='Search Here...' type='search' value=''/>
-                            <input class='sb-search-submit' type='submit' value=''/>
-                            <span class='sb-icon-search'/>
-                        </form>
-                    </div>
-
-                </div>
-            </nav>
-            <div class="clear" />
-            <!-- header wrapper start -->
-
-            <!-- secondary navigation menu end -->
+                            </form>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
             
             <!-- content wrapper start -->
             <div class='main-content-wrapper'>
                 <div id='content-wrapper'>
+
                     <div id='mywrapper'>
 
                         <!-- post wrapper start -->
                         <div id='post-wrapper'>
-                            <div class='post-container'>
+                            <div class='post-container clearfix'>
 
-                                <div class='clear'/>
+                                <!-- header image -->
+                                <b:section class='header' id='header' maxwidgets='10' showaddelement='yes'>
+                                    <b:widget id='Header1' locked='true' title='Cupcakemafa (Header)' type='Header'>
+                                        <b:includable id='main'>
+                                            <b:if cond='data:blog.url == data:blog.homepageUrl'>
+                                                <div id='head-inner'>
+                                                    <b:if cond='data:useImage'>
+                                                        <!--Show the image only-->
+                                                        <a expr:href='data:blog.homepageUrl'>
+                                                            <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
+                                                        </a>
+                                                    </b:if>
+                                                    <!--Show the description-->
+                                                    <b:if cond='data:description'>
+                                                        <div class='descriptionwrapper'>
+                                                            <p class='description'>
+                                                                <span>
+                                                                    <data:description/>
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </b:if>
+                                                </div>
+                                            </b:if>
+                                        </b:includable>
+                                    </b:widget>
+                                </b:section>
+
 
                                 <b:section class='main' id='main' showaddelement='no'>
-                                    
+
                                     <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
-                                        
+
                                         <b:includable id='main' var='top'>
                                             <!-- posts -->
                                             <div class='blog-posts hfeed'>
-                                                <b:include data='top' name='status-message'/>
-                                                <data:defaultAdStart/>
+                                                <b:include data='top' name='status-message' />
+
                                                 <b:loop values='data:posts' var='post'>
-                                                    
+
                                                     <b:if cond='data:post.isDateStart'>
                                                         <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
                                                             &lt;/div&gt;&lt;/div&gt;
                                                         </b:if>
                                                     </b:if>
-                                                    
+
                                                     <b:if cond='data:post.isDateStart'>
                                                         &lt;div class=&quot;date-outer&quot;&gt;
                                                     </b:if>
-                                                    
+
                                                     <b:if cond='data:post.isDateStart'>
                                                         &lt;div class=&quot;date-posts&quot;&gt;
                                                     </b:if>
-                                                    
+
                                                     <div class='post-outer'>
-                                                        <b:include data='post' name='post'/>
+                                                        <b:include data='post' name='post' />
                                                     </div>
-                                                    
-                                                    <b:if cond='data:post.includeAd'>
-                                                        <b:if cond='data:post.isFirstPost'>
-                                                            <data:defaultAdEnd/>
-                                                            <b:else/>
-                                                            <data:adEnd/>
-                                                        </b:if>
-                                                        <div class='inline-ad'>
-                                                            <data:adCode/>
-                                                        </div>
-                                                        <data:adStart/>
-                                                    </b:if>
-                                                    
+
                                                 </b:loop>
-                                                
+
                                                 <b:if cond='data:numPosts != 0'>
                                                     &lt;/div&gt;&lt;/div&gt;
                                                 </b:if>
-                                                
-                                                <data:adEnd/>
+
                                             </div>
                                             
                                             <!-- navigation -->
-                                            <b:include name='page-navi'/>
-                                            
-                                        </b:includable>
-                                        
-                                        <b:includable id='next-prev'>
-                                            <div class='blog-pager' id='blog-pager'>
-                                                <b:if cond='data:newerPageUrl'>
-                                                    <span id='blog-pager-newer-link'>
-                                                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
-                                                            <data:newerPageTitle/>
-                                                        </a>
-                                                    </span>
-                                                </b:if>
-                                                <b:if cond='data:olderPageUrl'>
-                                                    <span id='blog-pager-older-link'>
-                                                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
-                                                            <data:olderPageTitle/>
-                                                        </a>
-                                                    </span>
-                                                </b:if>
-                                                <a class='home-link' expr:href='data:blog.homepageUrl'>
-                                                    <data:homeMsg/>
-                                                </a>
-                                                <b:if cond='data:mobileLinkUrl'>
-                                                    <div class='blog-mobile-link'>
-                                                        <a expr:href='data:mobileLinkUrl'>
-                                                            <data:mobileLinkMsg/>
-                                                        </a>
-                                                    </div>
-                                                </b:if>
-                                            </div>
-                                            <div class='clear'/>
-                                        </b:includable>
-                                        
-                                        <b:includable id='page-navi'>
-                                            <div class='pagenavi'>
-                                                <script src='//cupcakemafa.github.io/blogger-theme2/js/page-navi.js' type='text/javascript'/>
-                                                <div class='clear'/>
-                                            </div>
-                                        </b:includable>
-                                        
-                                        <b:includable id='post' var='post'>
-                                            <meta content='summary_large_image' name='twitter:card'/>
-                                            <!--<meta content='@oddthemes' name='twitter:site'/>-->
-                                            <!--<meta content='@oddthemes' name='twitter:creator'/>-->
-                                            <!--<meta content='www.oddthemes.com' name='twitter:domain'/>-->
-                                            <meta expr:content='data:post.firstImageUrl' name='twitter:image:src'/>
-                                            <meta expr:content='data:post.title' name='twitter:title'/>
-                                            <b:if cond='data:blog.metaDescription'>
-                                                <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
-                                            <b:else/>
-                                                <meta expr:content='data:post.snippet' name='twitter:description'/>
-                                            </b:if>
-                                            <meta expr:content='data:post.sharePostUrl' name='twitter:url'/>
+                                            <div class='pagenavi clearfix'></div>
 
-                                            <meta expr:content='data:blog.pageName' property='og:title'/>
-                                            <b:if cond='data:post.firstImageUrl'>
-                                                <meta expr:content='data:post.firstImageUrl' property='og:image'/>
-                                            </b:if>
-                                            <meta expr:content='data:post.title' property='og:title'/>
-                                            <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+                                        </b:includable>
+
+                                        <b:includable id='post' var='post'>
+                                            <meta content='summary_large_image' name='twitter:card' />
+                                            <meta expr:content='data:post.firstImageUrl' name='twitter:image:src' />
+                                            <meta expr:content='data:post.title' name='twitter:title' />
                                             <b:if cond='data:blog.metaDescription'>
-                                                <meta expr:content='data:blog.metaDescription' property='og:description'/>
+                                                <meta expr:content='data:blog.metaDescription' name='twitter:description' />
                                                 <b:else/>
-                                                <meta expr:content='data:post.snippet' property='og:description'/>
+                                                <meta expr:content='data:post.snippet' name='twitter:description' />
                                             </b:if>
-                                            <meta expr:content='data:post.timestampISO8601' property='article:published_time'/>
-                                            <meta content='Technology' property='article:section'/>
+                                            <meta expr:content='data:post.sharePostUrl' name='twitter:url' />
+
+                                            <meta expr:content='data:blog.pageName' property='og:title' />
+                                            <b:if cond='data:post.firstImageUrl'>
+                                                <meta expr:content='data:post.firstImageUrl' property='og:image' />
+                                            </b:if>
+                                            <meta expr:content='data:post.title' property='og:title' />
+                                            <meta expr:content='data:blog.canonicalUrl' property='og:url' />
+                                            <b:if cond='data:blog.metaDescription'>
+                                                <meta expr:content='data:blog.metaDescription' property='og:description' />
+                                                <b:else/>
+                                                <meta expr:content='data:post.snippet' property='og:description' />
+                                            </b:if>
+                                            <meta expr:content='data:post.timestampISO8601' property='article:published_time' />
+                                            <meta content='Technology' property='article:section' />
                                             <b:loop values='data:post.labels' var='label'>
-                                                <meta expr:content='data:label.name' property='article:tag'/>
+                                                <meta expr:content='data:label.name' property='article:tag' />
                                             </b:loop>
 
                                             <b:if cond='data:blog.pageType == "item"'>
@@ -436,245 +317,252 @@
                                                     <div class='post-header'>
 
                                                         <b:if cond='data:post.firstImageUrl'>
-                                                            <meta expr:content='data:post.firstImageUrl' itemprop='image'/>
-                                                        </b:if>	
-                                                        <h1 class='entry-title' itemprop='name'>
-                                                            <b:if cond='data:post.link'>
-                                                                <a expr:href='data:post.link'>
-                                                                    <data:post.title/>
-                                                                </a>
-                                                                <b:else/>
-                                                                <b:if cond='data:post.url'>
-                                                                    <b:if cond='data:blog.url != data:post.url'>
-                                                                        <a expr:href='data:post.url'>
-                                                                            <data:post.title/>
-                                                                        </a>
-                                                                    <b:else/>
-                                                                        <data:post.title/>
-                                                                    </b:if>
-                                                                <b:else/>
-                                                                    <data:post.title/>
-                                                                </b:if>
-                                                            </b:if>
-                                                        </h1>
+                                                            <meta expr:content='data:post.firstImageUrl' itemprop='image' />
+                                                        </b:if>
 
                                                         <div class='post-info'>
                                                             <b:if cond='data:top.showTimestamp'>
                                                                 <b:if cond='data:post.url'>
-                                                                    <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
-                                                                    <span class='time-info'>
+                                                                    <meta expr:content='data:post.canonicalUrl' itemprop='url' />
+                                                                    <span class='post-date'>
                                                                         <i class='fa fa-clock-o'/> 
                                                                         <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
-                                                                            <abbr class='published updated' expr:title='data:post.timestampISO8601' itemprop='datePublished'>
-                                                                                <data:post.dateHeader/>
-                                                                            </abbr>
+                                                                            <data:post.dateHeader/>
                                                                         </a>
+                                                                        <b:include name='quickedit' />
                                                                     </span>
                                                                 </b:if>
                                                             </b:if>
 
-                                                            <b:include data='post' name='postQuickEdit'/>
-                                                        </div>
+                                                            <hr class="embed quater-width" />
+
+                                                            <b:if cond='data:post.labels'>
+                                                                <div class='post-label clearfix'>
+                                                                    <ul class='labelhome list-inline'>
+                                                                    <b:loop values='data:post.labels' var='label'>
+                                                                        <li>
+                                                                            <a expr:href='data:label.url' rel='tag'>
+                                                                                <data:label.name/>
+                                                                            </a>
+                                                                        </li>
+                                                                    </b:loop>
+                                                                    </ul>
+                                                                </div>
+                                                            </b:if>
+                                                            <h1 class='entry-title' itemprop='name'>
+                                                                <strong>
+                                                                    <data:post.title/>
+                                                                </strong>
+                                                            </h1>
+                                                            <div class='post-social-share small'>
+                                                                <script type='text/javascript'>
+                                                                    var sharePostUrl = '<data:post.url/>';
+                                                                </script>
+                                                            </div>
+                                                        </div><!-- // .post-info -->
                                                     </div>
+
+                                                    <hr class="embed" />
+
                                                     <div class='post-entry' itemprop='articleBody'>
-                                                        <p><data:post.body/></p>
+                                                        <p>
+                                                            <data:post.body/>
+                                                        </p>
                                                     </div>
 
                                                     <b:if cond='data:top.showLocation'>
                                                         <b:if cond='data:post.location'>
                                                             <div class='post-location'>
                                                                 <p>
-                                                                    <!--
-                                                                    <data:postLocationLabel/>
-                                                                    -->
                                                                     <h3>
                                                                         <i class='fa fa-map-marker'/> 地図リンク<br/>
                                                                     </h3>
+                                                                    <big>
+                                                                        <strong>
+                                                                            ADDRESS
+                                                                        </strong>
+                                                                    </big>
+                                                                    <hr class="embed quater-width" />
                                                                     <h4>
-                                                                        <a class='map-link' expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a><br/>
-                                                                        <big><a class='map-link button' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                        <data:post.location.name/><br />
+                                                                        <big>
+                                                                            <a class='map-link button' expr:href='data:post.location.mapsUrl' target='_blank'>
                                                                                 <i class='fa fa-location-arrow'/> Google Map でみる
-                                                                            </a></big>
+                                                                            </a>
+                                                                        </big>
                                                                     </h4>
-                                                                    <small>住所をタップするとGoogle Mapが別窓で開きます&#12290;</small><br/>
                                                                 </p>
                                                             </div>
                                                         </b:if>
                                                     </b:if>
 
-                                                    <b:if cond='data:blog.pageType == "item"'>
-                                                        <b:if cond='data:post.labels'>
-                                                            <div class='labelhome'>
-                                                                <h3><i class='fa fa-tags'/> Tags</h3> 
-                                                                <b:loop values='data:post.labels' var='label'>
+                                                    <b:if cond='data:post.labels'>
+                                                        <div class='post-label text-center clearfix'>
+                                                            <h3><i class='fa fa-tags'/> Tags</h3>
+                                                            <ul class='labelhome list-inline'>
+                                                            <b:loop values='data:post.labels' var='label'>
+                                                                <li>
                                                                     <a expr:href='data:label.url' rel='tag'>
                                                                         <data:label.name/>
                                                                     </a>
-                                                                </b:loop>
+                                                                </li>
+                                                            </b:loop>
+                                                            </ul>
+                                                        </div>
+                                                    </b:if>
+
+                                                    <div class='post-social-share post_social_share'>
+                                                    </div>
+
+                                                    <div style='clear: both;' />
+                                                    <b:if cond='data:blog.pageType == "item"'>
+                                                        <b:if cond='data:blog.pageType != "static_page"'>
+                                                            <div class="clearfix">
+                                                            <ul class='mbt-pager'>
+                                                                <li class='next'>
+                                                                    <b:if cond='data:newerPageUrl'>
+                                                                        <a class='newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle' rel='next'>
+                                                                            <strong>Next <i class='fa fa-chevron-right'></i></strong>
+                                                                            <span><data:newerPageTitle/></span>
+                                                                        </a>
+                                                                        <b:else/>
+                                                                        <a href='/' rel='top'>
+                                                                            <strong><i class='fa fa-home'></i> Top</strong>
+                                                                            <span>サイトトップへ</span>
+                                                                        </a>
+                                                                    </b:if>
+                                                                </li>
+                                                                <li class='previous'>
+                                                                    <b:if cond='data:olderPageUrl'>
+                                                                        <a class='older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle' rel='previous'>
+                                                                            <strong><i class='fa fa-chevron-left'></i> Previous</strong>
+                                                                            <span><data:olderPageTitle/></span>
+                                                                        </a>
+                                                                        <b:else/>
+                                                                        <a hrf='/' rel='TOP'>
+                                                                            <strong><i class='fa fa-home'></i> Top</strong>
+                                                                            <span>サイトトップへ</span>
+                                                                        </a>
+                                                                    </b:if>
+                                                                </li>
+                                                            </ul>
                                                             </div>
                                                         </b:if>
                                                     </b:if>
 
-                                                    <div class='post_social_share'>
-                                                        <h3><i class='fa fa-share-square-o'/> Share this</h3>
-                                                        <div class="share-box" expr:data-url="data:post.url"></div>
-                                                        <div class='share_this_content'>
-                                                            <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><i class='fa fa-twitter fa-2x'/></a>
-                                                            <a class='social_share' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' onclick='javascript:window.open( this.href, &quot; &quot; , &quot; menubar = no, toolbar = no, resizable = yes, scrollbars = yes, height = 600, width = 600 &quot; ); return false;' rel='nofollow' title='Share this on Google+'><i class='fa fa-google-plus fa-2x'/></a>
-                                                            <a class='social_share' expr:href='"http://pinterest.com/pin/create/button/?url=" + data:post.url + "&amp;media=" + data:post.thumbnailUrl + "&amp;description=" + data:post.snippet' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=600, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' title='Share this on Pintarest'><i class='fa fa-pinterest fa-2x'/></a>
-                                                            <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><i class='fa fa-facebook fa-2x'/></a>     
-                                                            <a class='hs-icon ' expr:href='&quot;http://www.tumblr.com/share/link?url=&quot;+ data:post.url' target='_blank'><i class='fa fa-tumblr fa-2x'/></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style='clear: both;'/>
-                                                    <b:if cond='data:blog.pageType == "item"'>
-                                                        <b:if cond='data:blog.pageType != "static_page"'>
-                                                            <ul class='mbt-pager'>
-                                                                <li class='next'> 
-                                                                    <b:if cond='data:newerPageUrl'> 
-                                                                        <i class='fa fa-chevron-right'/>
-                                                                        <a class='newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle' rel='next'>
-                                                                            <strong>Next</strong> <span></span>
-                                                                        </a>
-                                                                    <b:else/> 
-                                                                        <i class='fa fa-chevron-right'/>
-                                                                        <a rel='next'>
-                                                                            <strong>Next</strong> <span>You are viewing Most Recent Post</span>
-                                                                        </a> 
-                                                                    </b:if> 
-                                                                </li>
-                                                                <li class='previous'> 
-                                                                    <b:if cond='data:olderPageUrl'> 
-                                                                        <i class='fa fa-chevron-left'/>
-                                                                        <a class='older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle' rel='previous'>
-                                                                            <strong>Previous</strong> <span></span>
-                                                                        </a>
-                                                                    <b:else/> 
-                                                                        <i class='fa fa-chevron-left'/>
-                                                                        <a rel='previous'>
-                                                                            <strong>Previous</strong> <span>You are viewing Last Post</span>
-                                                                        </a> 
-                                                                    </b:if> 
-                                                                </li>
-                                                            </ul>
-                                                        </b:if>
-                                                    </b:if>
-                                                    <div style='clear: both;'/>
-
                                                     <!-- Related Post Widget Start -->
-                                                    <div id='related-posts'>
+                                                    <div id='related-posts' class="clearfix">
                                                         <div class='large-12 column'>
                                                             <h2 class='title'>Related Articles</h2>
                                                         </div>
-                                                        <b:loop values='data:post.labels' var='label'>
-                                                            <b:if cond='data:label.isLast != &quot;true&quot;'>
-                                                            </b:if>
-                                                            <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                                                                <script expr:src='"/feeds/posts/default/-/" + data:label.name + "?alt=json-in-script&amp;callback=related_results_labels_thumbs&amp;max-results=8"' type='text/javascript'/>
-                                                            </b:if>
-                                                        </b:loop>
                                                         <script type='text/javascript'>
-                                                            var currentposturl="<data:post.url/>";
-                                                            var maxresults = 3;
-                                                            var relatedpoststitle = "<b />";
-                                                            removeRelatedDuplicates_thumbs( );
-                                                            printRelatedLabels_thumbs( );
+                                                            $(function () {
+                                                                var labels = [
+                                                                    <b:loop index = 'i' values = 'data:post.labels' var = 'label' >
+                                                                        {
+                                                                            'name': '<data:label.name/>',
+                                                                            'url': '<data:label.url/>'
+                                                                        <b:if cond = 'data:label.isLast == "True"'>
+                                                                        }
+                                                                        <b:else/>
+                                                                        },
+                                                                        </b:if>
+                                                                    </b:loop>
+                                                                ];
+                                                                getRelatedPosts(labels);
+                                                            });
                                                         </script>
                                                     </div>
-                                                    <div class='clear'/>
                                                 </article>
 
-                                          <b:else/>
+                                            <b:else/>
 
                                                 <b:if cond='data:blog.pageType == "static_page"'>
-                                                    
-                                                    <article class='post'>
+
+                                                    <article class='post clearfix'>
                                                         <div class='post-header'>
-                                                            <h2 class='entry-title'>
-                                                                <data:post.title/>
+                                                            <h2 class='entry-title' itemprop='name'>
+                                                                <strong>
+                                                                    <data:post.title/>
+                                                                </strong>
                                                             </h2>
-                                                        </div>
+                                                        </div><br />
+
+                                                        <div class='post-social-share small text-center'>
+                                                            <script type='text/javascript'>
+                                                                var sharePostUrl = '<data:post.url/>';
+                                                            </script>
+                                                        </div><br />
+
+                                                        <hr class="embed" />
+
                                                         <div class='post-entry'>
-                                                            <p><data:post.body/></p>
+                                                            <p>
+                                                                <data:post.body/>
+                                                            </p>
                                                         </div>
                                                         
-                                                        <div class='post_social_share'>
-                                                            <h3><i class='fa fa-share-square-o'/> Share this</h3>
-                                                            <div class="share-box" expr:data-url="data:post.url"></div>
-                                                            <div class='share_this_content'>
-                                                                <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><i class='fa fa-twitter fa-2x'/></a>
-                                                                <a class='social_share' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' onclick='javascript:window.open( this.href, &quot; &quot; , &quot; menubar = no, toolbar = no, resizable = yes, scrollbars = yes, height = 600, width = 600 &quot; ); return false;' rel='nofollow' title='Share this on Google+'><i class='fa fa-google-plus fa-2x'/></a>
-                                                                <a class='social_share' expr:href='"http://pinterest.com/pin/create/button/?url=" + data:post.url + "&amp;media=" + data:post.thumbnailUrl + "&amp;description=" + data:post.snippet' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=550, height=600, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' title='Share this on Pintarest'><i class='fa fa-pinterest fa-2x'/></a>
-                                                                <a class='social_share' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><i class='fa fa-facebook fa-2x'/></a>     
-                                                                <a class='hs-icon ' expr:href='&quot;http://www.tumblr.com/share/link?url=&quot;+ data:post.url' target='_blank'><i class='fa fa-tumblr fa-2x'/></a>
-                                                            </div>
+                                                        <div class='post-social-share text-center'>
                                                         </div>
 
-                                                        <div style='clear: both;'/>
                                                     </article>
-                                                    
+
                                                 <b:else/>
-                                                
+
                                                     <!-- for top -->
                                                     <article class='post wow fadeIn' data-wow-duration='1s'>
+
                                                         <div expr:id='"summary" + data:post.id' style='display:none;'>
                                                             <data:post.body/>
                                                         </div>
-                                                	<script type='text/javascript'>
-                                                            createSummaryAndThumb(
-                                                                "summary<data:post.id/>",
-                                                                "<data:post.title/>",
-                                                                "<data:post.url/>",
-                                                                "<data:post.dateHeader/>",
-                                                                "<data:post.numComments/>",
-                                                                "",//<data:post.author/>
-                                                                "<b:loop index='i' values='data:post.labels' var='label'>"
-                                                                    + "<b:if cond='data:i &lt;=2'>" 
-                                                                    + "<a expr:href='data:label.url + &quot;?max-results=6&quot;' rel='tag'>" 
-                                                                    + "<data:label.name/>" 
-                                                                    + "</a>" 
-                                                                    + "</b:if>" 
-                                                                    + "</b:loop>",
-                                                                ""//<data:post.authorProfileUrl/>
-                                                            );
+                                                        <script type='text/javascript'>
+                                                            $(function () {
+                                                                var postId = 'summary<data:post.id/>',
+                                                                    postTitle = '<data:post.title/>',
+                                                                    postUrl = '<data:post.url/>',
+                                                                    postDate = '<data:post.dateHeader/>',
+                                                                    postCommentCount = '<data:post.numComments/>',
+                                                                    postLabels = [
+                                                                    <b:loop index = 'i' values = 'data:post.labels' var = 'label' >
+                                                                        {
+                                                                            'name': '<data:label.name/>',
+                                                                            'url': '<data:label.url/>'
+                                                                        <b:if cond = 'data:label.isLast == "True"'>
+                                                                        }
+                                                                        <b:else/>
+                                                                        },
+                                                                        </b:if>
+                                                                    </b:loop>
+                                                                    ];
+
+                                                                createSummaryAndThumb(postId,postTitle,postUrl,
+                                                                    postDate,postLabels,postCommentCount);
+                                                            });
                                                         </script>
-                                                        <div class="share-box small" expr:data-url="data:post.url"></div>
-                                                        <div class='st-post-share social'>
-                                                            <span><a class='hs-icon' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank'><i class='fa fa-facebook fa-2x'/></a></span>
-                                                            <span><a class='hs-icon' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url' target='_blank'><i class='fa fa-twitter fa-2x'/></a></span>
-                                                            <span><a class='hs-icon ' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url' target='_blank'><i class='fa fa-google-plus fa-2x'/></a></span>
-                                                            <span> <a class='hs-icon ' href='javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());'><i class='fa fa-pinterest'/></a></span>
-                                                            <!--
-                                                                    <span><a class='hs-icon ' expr:href='"http://www.linkedin.com/shareArticle?mini=true&amp;url="+ data:post.url' target='_blank'><i class='fa fa-linkedin fa-2x'/></a></span>
-                                                                    <span> <a class='hs-icon ' expr:href='"http://www.stumbleupon.com/submit?url="+ data:post.url' target='_blank'><i class='fa fa-stumbleupon fa-2x'/></a></span>
-                                                            -->
-                                                            <span><a class='hs-icon ' expr:href='&quot;http://www.tumblr.com/share/link?url=&quot;+ data:post.url' target='_blank'><i class='fa fa-tumblr fa-2x'/></a></span>
-                                                        </div>
                                                     </article>
-                                                    
+
                                                 </b:if>
 
                                             </b:if>
-                                            
+
                                         </b:includable>
-                                        
+
                                     </b:widget>
-                                    
+
                                 </b:section>
                             </div>
                         </div>
                         <!-- post wrapper end -->
                     </div>
                     <!--my wrapper end -->
-                    
+
                     <!-- sidebar wrapper start -->
                     <aside id='sidebar-wrapper'>
                         <div class='sidebar-container'>
 
-                            <div class='clear'/>
+                            <div class='clear' />
                             <b:section class='sidebar section' id='sidebar' preferred='yes'>
-                                
+
                                 <b:widget id='HTML10' locked='false' title='About Me' type='HTML'>
                                     <b:includable id='main'>
                                         <!-- only display title if it's non-empty -->
@@ -685,10 +573,10 @@
                                             <data:content/>
                                         </div>
 
-                                        <b:include name='quickedit'/>
+                                        <b:include name='quickedit' />
                                     </b:includable>
                                 </b:widget>
-                                
+
                                 <b:widget id='Label1' locked='false' title='Categories' type='Label'>
                                     <b:includable id='main'>
                                         <b:if cond='data:title'>
@@ -702,7 +590,9 @@
                                                             <b:if cond='data:blog.url == data:label.url'>
                                                                 <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
                                                                 <b:else/>
-                                                                <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+                                                                <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'>
+                                                                    <data:label.name/>
+                                                                </a>
                                                             </b:if>
                                                             <b:if cond='data:showFreqNumbers'>
                                                                 <span dir='ltr'>(<data:label.count/>)</span>
@@ -715,20 +605,22 @@
                                                     <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
                                                         <b:if cond='data:blog.url == data:label.url'>
                                                             <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-                                                            <b:else/>
-                                                            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-                                                        </b:if>
-                                                        <b:if cond='data:showFreqNumbers'>
-                                                            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-                                                        </b:if>
-                                                    </span>
-                                                </b:loop>
+                                                    <b:else/>
+                                                    <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'>
+                                                        <data:label.name/>
+                                                    </a>
                                             </b:if>
-                                            <b:include name='quickedit'/>
+                                            <b:if cond='data:showFreqNumbers'>
+                                                <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+                                            </b:if>
+                                            </span>
+                                            </b:loop>
+                                            </b:if>
+                                            <b:include name='quickedit' />
                                         </div>
                                     </b:includable>
                                 </b:widget>
-                                
+
                                 <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
                                     <b:includable id='main'>
                                         <b:if cond='data:title != &quot;&quot;'>
@@ -737,19 +629,22 @@
                                         <div class='widget-content'>
                                             <div id='ArchiveList'>
                                                 <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-                                                    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
-                                                    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-                                                    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+                                                    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval' />
+                                                    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat' />
+                                                    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu' />
                                                 </div>
                                             </div>
-                                            <b:include name='quickedit'/>
+                                            <b:include name='quickedit' />
                                         </div>
                                     </b:includable>
                                     <b:includable id='flat' var='data'>
                                         <ul class='flat'>
                                             <b:loop values='data:data' var='i'>
                                                 <li class='archivedate'>
-                                                    <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+                                                    <a expr:href='data:i.url'>
+                                                        <data:i.name/>
+                                                    </a> (
+                                                    <data:i.post-count/>)
                                                 </li>
                                             </b:loop>
                                         </ul>
@@ -758,29 +653,37 @@
                                         <b:loop values='data:intervalData' var='interval'>
                                             <ul class='hierarchy'>
                                                 <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-                                                    <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+                                                    <b:include cond='data:interval.toggleId' data='interval' name='toggle' />
                                                     <a class='post-count-link' expr:href='data:interval.url'>
                                                         <data:interval.name/>
                                                     </a>
                                                     <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
-                                                    <b:include cond='data:interval.data' data='interval.data' name='interval'/>
-                                                    <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+                                                    <b:include cond='data:interval.data' data='interval.data' name='interval' />
+                                                    <b:include cond='data:interval.posts' data='interval.posts' name='posts' />
                                                 </li>
                                             </ul>
                                         </b:loop>
                                     </b:includable>
                                     <b:includable id='menu' var='data'>
                                         <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
-                                            <option value=''><data:title/></option>
+                                            <option value=''>
+                                                <data:title/>
+                                            </option>
                                             <b:loop values='data:data' var='i'>
-                                                <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+                                                <option expr:value='data:i.url'>
+                                                    <data:i.name/> (
+                                                    <data:i.post-count/>)</option>
                                             </b:loop>
                                         </select>
                                     </b:includable>
                                     <b:includable id='posts' var='posts'>
                                         <ul class='posts'>
                                             <b:loop values='data:posts' var='post'>
-                                                <li><a expr:href='data:post.url'><data:post.title/></a></li>
+                                                <li>
+                                                    <a expr:href='data:post.url'>
+                                                        <data:post.title/>
+                                                    </a>
+                                                </li>
                                             </b:loop>
                                         </ul>
                                     </b:includable>
@@ -798,10 +701,11 @@
                                         </a>
                                     </b:includable>
                                 </b:widget>
-                                
+
                                 <b:widget id='PopularPosts2' locked='false' title='Popular Posts' type='PopularPosts'>
                                     <b:includable id='main'>
-                                        <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+                                        <b:if cond='data:title != &quot;&quot;'>
+                                            <h2><data:title/></h2></b:if>
                                         <div class='widget-content popular-posts'>
                                             <ul>
                                                 <b:loop values='data:posts' var='post'>
@@ -809,11 +713,19 @@
                                                         <b:if cond='!data:showThumbnails'>
                                                             <b:if cond='!data:showSnippets'>
                                                                 <!-- (1) No snippet/thumbnail -->
-                                                                <a expr:href='data:post.href'><data:post.title/></a>
+                                                                <a expr:href='data:post.href'>
+                                                                    <data:post.title/>
+                                                                </a>
                                                                 <b:else/>
                                                                 <!-- (2) Show only snippets -->
-                                                                <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-                                                                <div class='item-snippet'><data:post.snippet/></div>
+                                                                <div class='item-title'>
+                                                                    <a expr:href='data:post.href'>
+                                                                        <data:post.title/>
+                                                                    </a>
+                                                                </div>
+                                                                <div class='item-snippet'>
+                                                                    <data:post.snippet/>
+                                                                </div>
                                                             </b:if>
                                                             <b:else/>
                                                             <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
@@ -821,78 +733,64 @@
                                                                 <b:if cond='data:post.thumbnail'>
                                                                     <div class='item-thumbnail'>
                                                                         <a expr:href='data:post.href' target='_blank'>
-                                                                            <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
+                                                                            <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize' />
                                                                         </a>
                                                                     </div>
                                                                 </b:if>
-                                                                <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+                                                                <div class='item-title'>
+                                                                    <a expr:href='data:post.href'>
+                                                                        <data:post.title/>
+                                                                    </a>
+                                                                </div>
                                                                 <b:if cond='data:showSnippets'>
-                                                                    <div class='item-snippet'><data:post.snippet/></div>
+                                                                    <div class='item-snippet'>
+                                                                        <data:post.snippet/>
+                                                                    </div>
                                                                 </b:if>
                                                             </div>
-                                                            <div style='clear: both;'/>
+                                                            <div style='clear: both;' />
                                                         </b:if>
                                                     </li>
                                                 </b:loop>
                                             </ul>
-                                            <b:include name='quickedit'/>
+                                            <b:include name='quickedit' />
                                         </div>
                                     </b:includable>
                                 </b:widget>
-                                
-                                <b:widget id='Text1' locked='false' title='Twitter' type='Text'>
-                                    <b:includable id='main'>
-                                        <!-- only display title if it's non-empty -->
-                                        <b:if cond='data:title != &quot;&quot;'>
-                                            <h2 class='title'><data:title/></h2>
-                                        </b:if>
-                                        <div class='widget-content'>
-                                            <data:content/>
-                                        </div>
 
-                                        <b:include name='quickedit'/>
-                                    </b:includable>
-                                </b:widget>
-                                
                             </b:section>
                         </div>
                     </aside>
                     <!-- sidebar wrapper end -->
                 </div>
                 <!-- content wrapper end -->
-                <div class='clear'/>
+                <div class='clear' />
 
             </div>
-            <div class='clear'/>
-            
+            <div class='clear' />
+
             <!-- footer wrapper start -->
-            <div class='footer' id='footer1'>
-                <div class='container'>
-                    <div id='footer'>
-                        <div class='widget-area'>
-                            <b:section class='column' id='footer5' showaddelement='yes'/>
-                            <b:section class='column last' id='footer3' showaddelement='yes'/>
-                            <b:section class='column last' id='footer4' showaddelement='yes'/>
-                        </div>
-                        <!-- /.widget-area-->
-                    </div>
-                    <div class='clear'/>
-                    <div class='footerbottom'>
-                        <div class='fleft'>Copyright 2014 <a href='/'><data:blog.title/></a>.</div>
-                    </div>
+            <div class='footer' id='footer'>
+                <div class='container text-left'>
+                    Copyright <a href='/'><data:blog.title/></a>
                 </div>
             </div>
             <!-- footer wrapper end -->
-            
+
             <!-- wrapper end -->
         </div>
 
         <!-- スクロールトップボタン表示 2015/8/24 追加 -->
         <a class='scroll-top' href='#' id='scroll-top' rel='nofollow' title='ページトップへ'>
-            <img src='http://2.bp.blogspot.com/-Hc2Qip-ciow/Vdo6dWcbLAI/AAAAAAAAAPo/3Ag8gFOBse4/s1600/scrollup_blue.png'/>
+            <img src='http://2.bp.blogspot.com/-Hc2Qip-ciow/Vdo6dWcbLAI/AAAAAAAAAPo/3Ag8gFOBse4/s1600/scrollup_blue.png' />
         </a>
-       
-        <!-- Please call pinit.js only once per page -->
-        <script async="async" defer="defer" src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type='text/javascript'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme2/js/jquery.nicescroll.js' type='text/javascript'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/js/jquery.justifiedGallery.min.js' type='text/javascript'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme2/js/footer.js' type='text/javascript'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme2/js/exec.js' type='text/javascript'></script>
     </body>
-</html>
+
+    </html>
