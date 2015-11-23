@@ -82,7 +82,7 @@ function printRelatedLabels_thumbs() {
     tag += '<div class="clearfix">';
     tag += '<ul class="list-inline">'
     while (i < relatedTitles.length && i < 20 && i < maxresults) {
-        tag += '<li class="pull-left" style="width:30%; margin-right:4px;">';
+        tag += '<li class="pull-left">';
         tag += '<a href="' + relatedUrls[r] + '">';
         tag += '<img class="related_img" src="' + thumburl[r] + '"/>';
         tag += '</a>';

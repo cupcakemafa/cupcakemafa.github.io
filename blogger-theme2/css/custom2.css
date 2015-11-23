@@ -202,8 +202,7 @@ body {
     background-color: #101010;
 }
 
-nav.navbar div.collapse.navbar-collapse {
-}
+nav.navbar div.collapse.navbar-collapse {}
 
 .navbar-brand {
     padding: 2px;
@@ -281,4 +280,22 @@ div#head-inner {
 
 #footer {
     background-color: #efefef;
+}
+
+h1.entry-title {
+    padding-top: 8px;
+}
+
+.post-social-share {
+    padding-bottom: 0px;
+    margin-bottom: 16px;
+}
+
+#related-posts ul li {
+    width: 30%;
+    margin-right: 8px;
+}
+
+#related-posts ul li:last-child {
+    margin-right: 0px;
 }

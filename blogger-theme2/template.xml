@@ -60,17 +60,6 @@
                 </b:if>
             </b:if>
         </title>
-
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' />
-        <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Playfair+Display&amp;ver=4.0' id='shortcodes_font-css' media='all' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
-
         <b:skin>
             <![CDATA[
             /*
@@ -85,38 +74,26 @@
         ]]>
         </b:skin>
 
-        <link href='//cupcakemafa.github.io/blogger-theme2/css/theme.css' rel='stylesheet' type='text/css' />
-
-        <b:if cond='data:blog.pageType == "static_page"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/static_page.css' rel='stylesheet' type='text/css' />
-        </b:if>
-        <b:if cond='data:blog.pageType == "index"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/index.css' rel='stylesheet' type='text/css' />
-        </b:if>
-        <b:if cond='data:blog.pageType == "item"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/item.css' rel='stylesheet' type='text/css' />
-        </b:if>
-        <b:if cond='data:blog.pageType != "index"'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/not-index.css' rel='stylesheet' type='text/css' />
-        </b:if>
-        <b:if cond='data:blog.url == data:blog.homepageUrl'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/blog.homepageUrl.css' rel='stylesheet' type='text/css' />
-        </b:if>
-        <b:if cond='data:blog.searchLabel'>
-            <link href='//cupcakemafa.github.io/blogger-theme2/css/blog.searchLabel.css' rel='stylesheet' type='text/css' />
-        </b:if>
+        <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
+        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+        <link href='//www.blogger.com/static/v1/widgets/1535467126-widget_css_2_bundle.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/css/justifiedGallery.min.css' rel='stylesheet' type='text/css' />
+
+        <link href='//cupcakemafa.github.io/blogger-theme2/css/theme.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme2/css/custom.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme2/css/custom2.css' rel='stylesheet' type='text/css' />
-<!--        <link href='//cupcakemafa.github.io/blogger-theme2/css/slicknav.min.css' rel='stylesheet' type='text/css' />-->
-
 
         <script src='//apis.google.com/js/plusone.js' type='text/javascript'></script>
         <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'></script>
-
-        
         <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
         <script type='text/javascript'>
@@ -206,9 +183,7 @@
             <!-- content wrapper start -->
             <div class='main-content-wrapper'>
                 <div id='content-wrapper'>
-
                     <div id='mywrapper'>
-
                         <!-- post wrapper start -->
                         <div id='post-wrapper'>
                             <div class='post-container clearfix'>
@@ -240,77 +215,53 @@
                                         </b:includable>
                                     </b:widget>
                                 </b:section>
-
-
                                 <b:section class='main' id='main' showaddelement='no'>
-
                                     <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
-
                                         <b:includable id='main' var='top'>
                                             <!-- posts -->
                                             <div class='blog-posts hfeed'>
+                                                <!-- 検索結果などのメッセージエリア -->
                                                 <b:include data='top' name='status-message' />
-
                                                 <b:loop values='data:posts' var='post'>
-
-                                                    <b:if cond='data:post.isDateStart'>
-                                                        <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
-                                                            &lt;/div&gt;&lt;/div&gt;
-                                                        </b:if>
-                                                    </b:if>
-
-                                                    <b:if cond='data:post.isDateStart'>
-                                                        &lt;div class=&quot;date-outer&quot;&gt;
-                                                    </b:if>
-
-                                                    <b:if cond='data:post.isDateStart'>
-                                                        &lt;div class=&quot;date-posts&quot;&gt;
-                                                    </b:if>
-
+                                                    <!-- post のブロックを開始 -->
                                                     <div class='post-outer'>
                                                         <b:include data='post' name='post' />
                                                     </div>
-
                                                 </b:loop>
-
-                                                <b:if cond='data:numPosts != 0'>
-                                                    &lt;/div&gt;&lt;/div&gt;
-                                                </b:if>
-
                                             </div>
-                                            
                                             <!-- navigation -->
                                             <div class='pagenavi clearfix'></div>
-
                                         </b:includable>
 
                                         <b:includable id='post' var='post'>
-                                            <meta content='summary_large_image' name='twitter:card' />
-                                            <meta expr:content='data:post.firstImageUrl' name='twitter:image:src' />
-                                            <meta expr:content='data:post.title' name='twitter:title' />
-                                            <b:if cond='data:blog.metaDescription'>
-                                                <meta expr:content='data:blog.metaDescription' name='twitter:description' />
-                                                <b:else/>
-                                                <meta expr:content='data:post.snippet' name='twitter:description' />
-                                            </b:if>
-                                            <meta expr:content='data:post.sharePostUrl' name='twitter:url' />
 
-                                            <meta expr:content='data:blog.pageName' property='og:title' />
-                                            <b:if cond='data:post.firstImageUrl'>
-                                                <meta expr:content='data:post.firstImageUrl' property='og:image' />
-                                            </b:if>
-                                            <meta expr:content='data:post.title' property='og:title' />
-                                            <meta expr:content='data:blog.canonicalUrl' property='og:url' />
-                                            <b:if cond='data:blog.metaDescription'>
-                                                <meta expr:content='data:blog.metaDescription' property='og:description' />
+                                            <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                                <meta name='twitter:card' content='summary_large_image' />
+                                                <meta name='twitter:image:src' expr:content='data:post.firstImageUrl' />
+                                                <meta name='twitter:title' expr:content='data:post.title' />
+                                                <b:if cond='data:blog.metaDescription'>
+                                                    <meta name='twitter:description' expr:content='data:blog.metaDescription' />
                                                 <b:else/>
-                                                <meta expr:content='data:post.snippet' property='og:description' />
+                                                    <meta name='twitter:description' expr:content='data:post.snippet' />
+                                                </b:if>
+                                                <meta name='twitter:url' expr:content='data:post.sharePostUrl' />
+                                                <meta property='og:title' expr:content='data:blog.pageName' />
+                                                <b:if cond='data:post.firstImageUrl'>
+                                                    <meta property='og:image' expr:content='data:post.firstImageUrl' />
+                                                </b:if>
+                                                <meta property='og:title' expr:content='data:post.title' />
+                                                <meta property='og:url' expr:content='data:blog.canonicalUrl' />
+                                                <b:if cond='data:blog.metaDescription'>
+                                                    <meta property='og:description' expr:content='data:blog.metaDescription' />
+                                                <b:else/>
+                                                    <meta property='og:description' expr:content='data:post.snippet' />
+                                                </b:if>
+                                                <meta property='article:published_time' expr:content='data:post.timestampISO8601' />
+                                                <meta property='article:section' content='Art, Culture, Life' />
+                                                <b:loop values='data:post.labels' var='label'>
+                                                    <meta property='article:tag' expr:content='data:label.name' />
+                                                </b:loop>
                                             </b:if>
-                                            <meta expr:content='data:post.timestampISO8601' property='article:published_time' />
-                                            <meta content='Technology' property='article:section' />
-                                            <b:loop values='data:post.labels' var='label'>
-                                                <meta expr:content='data:label.name' property='article:tag' />
-                                            </b:loop>
 
                                             <b:if cond='data:blog.pageType == "item"'>
                                                 <article class='post' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
@@ -320,7 +271,7 @@
                                                             <meta expr:content='data:post.firstImageUrl' itemprop='image' />
                                                         </b:if>
 
-                                                        <div class='post-info'>
+                                                        <div class='post-info text-center'>
                                                             <b:if cond='data:top.showTimestamp'>
                                                                 <b:if cond='data:post.url'>
                                                                     <meta expr:content='data:post.canonicalUrl' itemprop='url' />
@@ -356,7 +307,7 @@
                                                             </h1>
                                                             <div class='post-social-share small'>
                                                                 <script type='text/javascript'>
-                                                                    var sharePostUrl = '<data:post.url/>';
+                                                                    var sharePostUrl = '<data:post.sharePostUrl/>';
                                                                 </script>
                                                             </div>
                                                         </div><!-- // .post-info -->
@@ -411,7 +362,7 @@
                                                         </div>
                                                     </b:if>
 
-                                                    <div class='post-social-share post_social_share'>
+                                                    <div class='post-social-share post_social_share text-center clearfix'>
                                                     </div>
 
                                                     <div style='clear: both;' />
@@ -476,23 +427,22 @@
                                                 </article>
 
                                             <b:else/>
-
+                                                <!-- for page -->
                                                 <b:if cond='data:blog.pageType == "static_page"'>
 
                                                     <article class='post clearfix'>
-                                                        <div class='post-header'>
+                                                        <div class='post-header text-center'>
                                                             <h2 class='entry-title' itemprop='name'>
                                                                 <strong>
                                                                     <data:post.title/>
                                                                 </strong>
                                                             </h2>
-                                                        </div><br />
-
-                                                        <div class='post-social-share small text-center'>
-                                                            <script type='text/javascript'>
-                                                                var sharePostUrl = '<data:post.url/>';
-                                                            </script>
-                                                        </div><br />
+                                                            <div class='post-social-share small'>
+                                                                <script type='text/javascript'>
+                                                                    var sharePostUrl = '<data:post.url/>';
+                                                                </script>
+                                                            </div>
+                                                        </div>
 
                                                         <hr class="embed" />
 
