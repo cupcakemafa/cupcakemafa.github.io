@@ -37,7 +37,7 @@ function removeRelatedDuplicates_thumbs() {
     var tmp = new Array(0);
     var tmp2 = new Array(0);
     var tmp3 = new Array(0);
-    for (var i = 0; i < relatedUrls.length; i++) {
+    for (var i = 0, l = relatedUrls.length; i < l; i++) {
         if (!contains_thumbs(tmp, relatedUrls[i])) {
             tmp.length += 1;
             tmp[tmp.length - 1] = relatedUrls[i];
@@ -53,7 +53,7 @@ function removeRelatedDuplicates_thumbs() {
 }
 
 function contains_thumbs(a, e) {
-    for (var j = 0; j < a.length; j++)
+    for (var j = 0, m = a.length; j < m; j++)
         if (a[j] === e)
             return true;
     return false;
@@ -65,7 +65,7 @@ function printRelatedLabels_thumbs() {
         maxresults = 3;
 
     console.log('currentposturl', currentposturl);
-    for (var i = 0; i < relatedUrls.length; i++) {
+    for (var i = 0, l = relatedUrls.length; i < l; i++) {
         if ((relatedUrls[i] === currentposturl) || (!(relatedTitles[i]))) {
             relatedUrls.splice(i, 1);
             relatedTitles.splice(i, 1);
@@ -107,9 +107,8 @@ function printRelatedLabels_thumbs() {
     console.log('tag', tag);
     $('#related-posts').append(tag);
 }
-
-var count = 0;
-
+// 関連ポスト取得完了カウント
+var relation_count = 0;
 function getRelatedPosts(labels) {
     console.log('labels', labels);
     var url;
@@ -158,10 +157,10 @@ function getRelatedPosts(labels) {
 
             removeRelatedDuplicates_thumbs();
 
-            count++;
-            console.log('count', count);
+            relation_count++;
+            console.log('relation_count', relation_count);
             console.log('labels.length', labels.length);
-            if (count == labels.length) {
+            if (relation_count == labels.length) {
                 printRelatedLabels_thumbs();
             }
 
@@ -176,7 +175,7 @@ function getRelatedPosts(labels) {
 
 
 /////////////////////////////////////////////////////////////
-// Pager code
+// Pager for index, archive page
 var pageNaviConf = {
     "perPage": 5,
     "numPages": 9,
@@ -254,7 +253,7 @@ pageNavi.show = function (f, e, a) {
     //    document.write( b );
     $('.pagenavi').html(b);
 };
-// End Pager code
+// End Pager for index, archive page
 /////////////////////////////////////////////////////////////
 
 
