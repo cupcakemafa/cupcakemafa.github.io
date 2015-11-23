@@ -217,7 +217,8 @@ function pageNavi(o) {
 pageNavi.show = function (f, e, a) {
     var d = Math.floor((pageNaviConf.numPages - 1) / 2),
         g = pageNaviConf.numPages - 1 - d,
-        c = e - d;
+        c = e - d,
+        endPage;
     if (c <= 0) {
         c = 1;
     }
