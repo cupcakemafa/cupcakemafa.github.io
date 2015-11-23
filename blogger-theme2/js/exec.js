@@ -1,4 +1,6 @@
 $(function () {
+    "use strict";
+
     // 必要に応じてシェアボタン表示
     var $sharer = $('.post-social-share'),
         base_tag = '',

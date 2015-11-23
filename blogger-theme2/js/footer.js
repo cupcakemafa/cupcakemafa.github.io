@@ -1,3 +1,5 @@
+"use strict";
+
 /////////////////////////////////////////////////////////////
 // Start Related Post List
 var relatedTitles = new Array();
