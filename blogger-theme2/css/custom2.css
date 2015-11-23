@@ -306,7 +306,10 @@ h1.entry-title {
 }
 
 .kenzukan-list-container {
-    width: 100%;
+    width: 320px;
+}
+.kenzukan-list-container .title {
+    padding-top: 10px;
 }
 
 .manga .frame {
