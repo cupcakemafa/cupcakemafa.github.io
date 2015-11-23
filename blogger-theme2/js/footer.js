@@ -127,9 +127,11 @@ var relation_count = 0;
 
 function getRelatedPosts(labels) {
     console.log('labels', labels);
-    var url;
+    var url,
+        host,
+        parser = $('<a>', { href:location.href } )[0];
     for (var i = 0, l = labels.length; i < l; i++) {
-        url = 'http://wptest20140302.blogspot.jp/feeds/posts/default/-/' + labels[i].name + '?alt=json-in-script&max-results=8';
+        url = 'http://' + parser.hostname + '/feeds/posts/default/-/' + labels[i].name + '?alt=json-in-script&max-results=8';
         console.log('url', url);
 
         //blogger API を実行する

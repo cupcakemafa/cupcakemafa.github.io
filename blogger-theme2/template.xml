@@ -308,7 +308,7 @@
                                                             </h1>
                                                             <div class='post-social-share small'>
                                                                 <script type='text/javascript'>
-                                                                    var sharePostUrl = '<data:post.sharePostUrl/>';
+                                                                    var sharePostUrl = '<data:post.url/>';
                                                                 </script>
                                                             </div>
                                                         </div><!-- // .post-info -->
