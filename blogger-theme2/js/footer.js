@@ -153,11 +153,11 @@ function getRelatedPosts(labels) {
                 try {
                     thumburl[relatedTitlesNum] = entry.gform_foot.url;
                 } catch (error) {
-                    s = entry.content.$t;
-                    a = s.indexOf("<img");
-                    b = s.indexOf("src=\"", a);
-                    c = s.indexOf("\"", b + 5);
-                    d = s.substr(b + 5, c - b - 5);
+                    var s = entry.content.$t;
+                    var a = s.indexOf("<img");
+                    var b = s.indexOf("src=\"", a);
+                    var c = s.indexOf("\"", b + 5);
+                    var d = s.substr(b + 5, c - b - 5);
                     if ((a !== -1) && (b !== -1) && (c !== -1) && (d !== "")) {
                         thumburl[relatedTitlesNum] = d;
                     } else
