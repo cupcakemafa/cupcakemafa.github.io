@@ -85,7 +85,6 @@ function printRelatedLabels_thumbs() {
             relatedUrls.splice(i, 1);
             relatedTitles.splice(i, 1);
             thumburl.splice(i, 1);
-            i--;
         }
     }
     var r = Math.floor((relatedTitles.length - 1) * Math.random());
