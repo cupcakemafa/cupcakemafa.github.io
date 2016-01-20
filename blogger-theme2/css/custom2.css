@@ -113,8 +113,10 @@ hr.quater-width {
     max-height: 280px;
 }
 
-@media only screen and (max-width: 479px) .intro-text {
-    margin-bottom: 16px;
+@media only screen and (max-width: 479px) {
+    .intro-text {
+        margin-bottom: 16px;
+    }
 }
 
 .post-header,
@@ -136,7 +138,7 @@ article.post {
 }
 
 .post-entry {
-/*    padding: 0px 40px 20px 40px;*/
+    /*    padding: 0px 40px 20px 40px;*/
     font-size: 12px;
     line-height: 180%;
 }
@@ -316,3 +318,7 @@ h1.entry-title {
     background-color: white;
 }
 
+.sidebar p {
+    margin-top:1em;
+    margin-bottom: 1em;
+}

@@ -98,8 +98,12 @@ $(function () {
         }
     });
 
-    //test
-    //postGet('掃除');
+    // copyright表示に現在の年をセット
+    var $nowYear = $('#now-year');
+    if($nowYear.length) {
+        var dateObj = new Date();
+        $nowYear.text('-'+dateObj.getFullYear().toString());
+    }
 
 });
 
