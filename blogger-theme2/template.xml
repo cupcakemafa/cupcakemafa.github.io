@@ -857,18 +857,20 @@
         <!-- Start of Amazon Publisher Studio Loader -->
         <script>
         //<![CDATA[
-            window.amznpubstudioTag = "cupcakemafa-22";
+            window.amznpubstudioTag = "sakurado-22";
         //]]>
         </script>
         <!-- Do not modify the following code ! -->
-        <script async="true" type="text/javascript" src="http://ps-jp.amazon-adsystem.com/domains/cupcakemafa-22_e4e2fe6a-6e33-418e-a6a3-183521eea437.js" charset="UTF-8"></script>
+        <script async="true" type="text/javascript" src="http://ps-jp.amazon-adsystem.com/domains/sakurado-22_a4caaa88-d16a-49c1-ae63-261097f143e7.js" charset="UTF-8"></script>
         <!-- End of Amazon Publisher Studio Loader -->
         
+        <!-- Start of Google AdSense -->
         <script>
         //<![CDATA[
         (adsbygoogle = window.adsbygoogle || []).push({});
         //]]>
         </script>
+        <!-- End of Google AdSense -->
         
     </body>
 
