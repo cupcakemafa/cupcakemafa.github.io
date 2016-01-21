@@ -337,7 +337,7 @@ h1.entry-title {
     text-transform: uppercase;
 }
 .site-title::first-letter {
-    font-size: 18px;
+    font-size: 28px;
 }
 @media (max-width: 480px) {
     .site-title {
