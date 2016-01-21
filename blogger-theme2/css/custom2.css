@@ -330,13 +330,14 @@ h1.entry-title {
 .site-title {
     display:none;
     color: white;
-    font-size: 24px;
-    padding-top: 12px;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 6px;
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
 }
 .site-title::first-letter {
-    font-size: 32px;
+    font-size: 18px;
 }
 @media (max-width: 480px) {
     .site-title {
