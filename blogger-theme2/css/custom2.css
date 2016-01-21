@@ -58,6 +58,10 @@ hr.embed {
     padding: 0px;
 }
 
+hr.dashed {
+    border-bottom: 1px dashed #eee;
+}
+
 hr.quater-width {
     width: 25%;
 }
@@ -321,4 +325,13 @@ h1.entry-title {
 .sidebar p {
     margin-top:1em;
     margin-bottom: 1em;
+}
+
+.site-title {
+    display:none;
+}
+@media (max-width: 480px) {
+    .site-title {
+        display:block;
+    }
 }
