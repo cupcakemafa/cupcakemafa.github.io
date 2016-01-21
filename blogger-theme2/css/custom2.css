@@ -332,12 +332,11 @@ h1.entry-title {
     color: white;
     font-size: 18px;
     padding-top: 10px;
-    padding-left: 6px;
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
 }
 .site-title::first-letter {
-    font-size: 28px;
+    /*font-size: 28px;*/
 }
 @media (max-width: 480px) {
     .site-title {
