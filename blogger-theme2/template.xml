@@ -836,8 +836,8 @@
 
             <!-- footer wrapper start -->
             <div class='footer' id='footer'>
-                <div class='container text-left'>
-                    Copyright 2014<span id="now-year"></span><a href='/'><data:blog.title/></a>
+                <div class='container text-center'>
+                    Copyright 2014-2016 <a href='/'><data:blog.title/></a>
                 </div>
             </div>
             <!-- footer wrapper end -->
@@ -854,6 +854,7 @@
         <script src='//cupcakemafa.github.io/blogger-theme2/lib/justified-gallery/js/jquery.justifiedGallery.min.js' type='text/javascript'></script>
         <script src='//cupcakemafa.github.io/blogger-theme2/js/footer.js' type='text/javascript'></script>
         <script src='//cupcakemafa.github.io/blogger-theme2/js/exec.js' type='text/javascript'></script>
+        
         <!-- Start of Amazon Publisher Studio Loader -->
         <script>
         //<![CDATA[
@@ -864,6 +865,17 @@
         <script async="true" type="text/javascript" src="http://ps-jp.amazon-adsystem.com/domains/sakurado-22_a4caaa88-d16a-49c1-ae63-261097f143e7.js" charset="UTF-8"></script>
         <!-- End of Amazon Publisher Studio Loader -->
         
+        <script type="text/javascript">
+        //<![CDATA[
+            amzn_assoc_ad_type = "link_enhancement_widget";
+            amzn_assoc_tracking_id = "sakurado-22";
+            amzn_assoc_placement = "";
+            amzn_assoc_marketplace = "amazon";
+            amzn_assoc_region = "JP";
+        //]]>
+        </script>
+        <script src="//z-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;Operation=GetScript&amp;ID=OneJS&amp;WS=1&amp;MarketPlace=JP" charset="UTF-8"></script>
+
         <!-- Start of Google AdSense -->
         <script>
         //<![CDATA[
