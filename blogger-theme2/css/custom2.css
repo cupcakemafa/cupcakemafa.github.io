@@ -330,8 +330,8 @@ h1.entry-title {
 .site-title {
     display:none;
     color: white;
-    font-size: 18px;
-    padding-top: 10px;
+    font-size: 12px;
+    padding-top: 16px;
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
 }
