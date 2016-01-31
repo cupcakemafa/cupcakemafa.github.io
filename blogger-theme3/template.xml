@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html b:version='2' 
+          expr:dir='data:blog.languageDirection' 
+          xmlns='http://www.w3.org/1999/xhtml' 
+          xmlns:b='http://www.google.com/2005/gml/b' 
+          xmlns:data='http://www.google.com/2005/gml/data' 
+          xmlns:expr='http://www.google.com/2005/gml/expr' 
+          xmlns:og='http://ogp.me/ns#' lang='ja'>
+    <head>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' />
+    
+        <title></title>
+        <b:skin>
+            <![CDATA[
+            /*
+            -----------------------------------------------
+            Blogger Template Style
+            Name:     Cupcakemafa Blogger Template
+            Designer: Cupcakemafa
+            URL:      http://www.cupcakemafa.com
+            Version:  3.0
+            ----------------------------------------------- */
+            <Variable name='maincolor' description='Main Color' type='color' default='#FDD835' value='#fdd835'/>
+        ]]>
+        </b:skin>
+
+        <link href='//cupcakemafa.github.io/blogger-theme3/lib/ionic/css/ionic.css' rel='stylesheet' />
+        <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet' />
+
+        <!-- ionic/angularjs js -->
+        <script src='//cupcakemafa.github.io/blogger-theme3/lib/ionic/js/ionic.bundle.js'></script>
+
+        <!-- cordova script (this will be a 404 during development) -->
+        <!--<script src='cordova.js'></script>-->
+
+        <!-- your app's js -->
+        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme3/js/controllers.js'></script>
+    </head>
+
+    <body ng-app='starter'>
+        <ion-nav-view></ion-nav-view>
+    </body>
+</html>
