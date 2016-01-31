@@ -8,17 +8,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
-
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
   });
 })
 
@@ -28,7 +17,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: '/templates/menu.html',
     controller: 'AppCtrl'
   })
 
@@ -36,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/search',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: '/templates/search.html'
       }
     }
   })
@@ -45,7 +34,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: '/templates/browse.html'
         }
       }
     })
@@ -53,7 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/playlists',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: '/templates/playlists.html',
           controller: 'PlaylistsCtrl'
         }
       }
@@ -63,7 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/playlists/:playlistId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
+        templateUrl: '/templates/playlist.html',
         controller: 'PlaylistCtrl'
       }
     }
