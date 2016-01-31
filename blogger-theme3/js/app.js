@@ -17,14 +17,14 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers' ] )
     .config( function ( $stateProvider, $urlRouterProvider, Const ) {
 
         //var resourceServerUrl = location.protocol + '//cupcakemafa.github.io/blogger-theme3/';
-        var resourceServerUrl = location.protocol + Const.RESOURCE_SERVER_URL;
+        var tplBaseUrl = location.protocol + Const.RESOURCE_SERVER_URL + 'templates/';
 
         $stateProvider
 
             .state( 'app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: resourceServerUrl + 'templates/menu.html',
+                templateUrl: tplBaseUrl + 'menu.html',
                 controller: 'AppCtrl'
             } )
 
@@ -32,7 +32,7 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers' ] )
                 url: '/search',
                 views: {
                     'menuContent': {
-                        templateUrl: '/templates/search.html'
+                        templateUrl: tplBaseUrl + 'search.html'
                     }
                 }
             } )
@@ -41,7 +41,7 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers' ] )
                 url: '/browse',
                 views: {
                     'menuContent': {
-                        templateUrl: '/templates/browse.html'
+                        templateUrl: tplBaseUrl + 'browse.html'
                     }
                 }
             } )
@@ -49,7 +49,7 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers' ] )
                 url: '/playlists',
                 views: {
                     'menuContent': {
-                        templateUrl: '/templates/playlists.html',
+                        templateUrl: tplBaseUrl + 'playlists.html',
                         controller: 'PlaylistsCtrl'
                     }
                 }
@@ -59,7 +59,7 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers' ] )
                 url: '/playlists/:playlistId',
                 views: {
                     'menuContent': {
-                        templateUrl: '/templates/playlist.html',
+                        templateUrl: tplBaseUrl + 'playlist.html',
                         controller: 'PlaylistCtrl'
                     }
                 }
