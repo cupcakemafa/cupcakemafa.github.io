@@ -1,1 +1,52 @@
-/* Empty. Add your own CSS if you like */
+.no-padding {
+    padding:0px;
+}
+.no-margin {
+    margin:0px;
+}
+.margin-bottom {
+    margin:0.5em;
+}
+
+.meta-tag {
+    display:none;
+}
+
+hr.embed {
+    border: 0;
+    height: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    margin: 6px auto 2px;
+    padding: 0px;
+}
+
+.full-width {
+    width:100%;
+    height:auto;
+}
+
+#sidebar {
+}
+#sidebar .card {
+    margin: 0px;
+    margin-bottom: 36px;
+}
+
+#sidebar .card .item {
+    line-height: 160%;
+    font-size: 12px;
+}
+#sidebar .title {
+    font-weight:600;
+}
+
+#sidebar .social-icons {
+    margin:8px;
+    margin-top: 30px;
+}
+#sidebar .social-icons .icon {
+    color: #c9c9c9;
+    font-size: 20px;
+    margin: 12px;
+}
