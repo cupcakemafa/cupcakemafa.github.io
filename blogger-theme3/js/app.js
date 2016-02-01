@@ -84,8 +84,8 @@ angular.module( 'starter', [ 'ionic', 'starter.services', 'starter.controllers' 
 
     .config( function ( $stateProvider, $urlRouterProvider, $locationProvider, Const ) {
 
-        //var tplBaseUrl = location.protocol + Const.RESOURCE_SERVER_URL + 'templates/';
-        var tplBaseUrl = 'templates/';
+        var tplBaseUrl = location.protocol + Const.RESOURCE_SERVER_URL + 'templates/';
+        //var tplBaseUrl = 'templates/';
 
         $stateProvider
             .state( 'app', {
