@@ -101,9 +101,189 @@
             a:hover, a:active, .box-link:hover a {
                 text-decoration: none;
             }
+            .padding {
+                padding:8px;
+            }
+            .padding-2x {
+                padding:16px;
+            }
             .param {
                 display:none;
             }
+            .span1 {
+                width: 8.33333333%;
+            }
+            .span2 {
+                width: 16.6666667%;
+            }
+            .span3 {
+                width: 40%;
+            }
+            .span4 {
+                width: 30%;
+            }
+            .span6 {
+                width: 50%;
+            }
+            .span12 {
+                width: 100%;
+            }
+            hr.embed {
+                border: 0;
+                height: 0;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #fff;
+                margin: 6px auto 2px;
+                padding: 0px;
+            }
+            hr.dashed {
+                border-bottom: 1px dashed #eee;
+            }
+            /* Start iframe content aspect */
+            .aspect {
+                position: relative;
+                width: 100%;
+            }
+            .aspect:before {
+                content:"";
+                display: block;
+                padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
+            }
+            .aspect .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            /* End iframe content aspect */
+            
+            /* Start social button */
+            .btn-circle { /* global button class */
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+                box-shadow: 0 5px 5px #999;
+                padding: 0px;
+                text-decoration: none;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 2em;
+                border-radius: 25px;
+                -moz-border-radius: 25px;
+                -webkit-border-radius: 25px;
+                padding-top: 11px;
+            }
+            .btn-circle.facebook {
+                /*color: #3b5998;*/
+                background-color: #3b5998;
+            }
+            .btn-circle.facebook:hover {
+                color: #4060A5;
+                background: #fff;
+            }            
+            .btn-circle.twitter {
+                /*color: #4099FF;*/
+                background-color: #4099FF;
+            }
+            .btn-circle.twitter:hover {
+                color: #00ABE3;
+                background: #fff;
+            }
+            .btn-circle.google-plus {
+                /*color: #dd4b39;*/
+                background-color: #dd4b39;
+            }
+            .btn-circle.google-plus:hover {
+                color: #e64522;
+                background: #fff;
+            }
+            .btn-circle.pinterest {
+                /*color: #cb2027;*/
+                background-color: #cb2027;
+            }
+            .btn-circle.pinterest:hover {
+                color: #cb2027;
+                background: #fff;
+            }
+            .btn-circle.linkedin {
+                /*color: #007bb6;*/
+                background-color: #007bb6;
+            }
+            .btn-circle.linkedin:hover {
+                color: #0094BC;
+                background: #fff;
+            }
+            .btn-circle.stumbleupon {
+                /*color: #EB4823;*/
+                background-color: #EB4823;
+            }
+            .btn-circle.stumbleupon:hover {
+                color: #EB4823;
+                background: #fff;
+            }
+            .btn-circle.tumblr {
+                /*color: #32506d;*/
+                background-color: #32506d;
+            }
+            .btn-circle.tumblr:hover {
+                color: #3a5876;
+                background: #fff;
+            }
+            .btn-circle.instagram {
+                /*color: #517fa4;*/
+                background-color: #517fa4;
+            }
+            .btn-circle.instagram:hover {
+                color: #517fa4;
+                background: #fff;
+            }
+            .btn-circle.rss {
+                /*color: #517fa4;*/
+                background-color: #e88845;
+            }
+            .btn-circle.rss:hover {
+                color: #e88845;
+                background: #fff;
+            }
+            .share-this-content span {
+                margin-right: 12px;
+            }
+            .share-this-content span:last-child {
+                margin-right: 0px;
+            }
+            
+            .social-icon .fa-facebook {
+                color: #3b5998;
+            }
+            .social-icon .fa-twitter {
+                color: #4099FF;
+            }
+            .social-icon .fa-google-plus {
+                color: #dd4b39;
+            }
+            .social-icon .fa-pinterest {
+                color: #cb2027;
+            }
+            .social-icon .fa-linkedin {
+                color: #007bb6;
+            }
+            .social-icon .fa-stumbleupon {
+                color: #EB4823;
+            }
+            .social-icon .fa-tumblr {
+                color: #32506d;
+            }
+            .social-icon .fa-instagram {
+                color: #517fa4;
+            }
+            /* End social button */
+            
+            /* Start layout */
             .navbar-brand {
                 padding:5px;
             }
@@ -134,25 +314,26 @@
                 font-family: 'Roboto Slab', serif;
                 text-transform: uppercase;
             }
+            .nav.navbar-nav .close-navi {
+                display:none;
+            }
             @media (max-width: 480px) {
-                .site-title {
+                .nav.navbar-nav .close-navi {
                     display:block;
                 }
-                
-                #body {
-                    margin-top: 62px;
+                .site-title {
+                    display:block;
                 }
                 .col {
                     padding-left:0px;
                     padding-right:0px;
                 }
-                .post .panel-body img {
-                    max-width: 100%;
-                    height: auto;
-                }
                 #map-canvas {
                     display: none;
                 }
+            }
+            #body {
+                margin-top: 62px;
             }
             .pager li {
                 font-size: 12px;
@@ -168,6 +349,11 @@
             .post-title {
                 font-size: 180%;
                 font-weight:400;
+            }
+            .post .panel-body img {
+                max-width: 100%;
+                height: auto;
+                margin: 8px auto;
             }
             .post .thumb {
                 width: 160px;
@@ -205,6 +391,7 @@
             #footer #second {
                 background-color: #96d88d;
             }
+            /* End layout */
         </style>
         
         <!--<script async='async' src='//apis.google.com/js/plusone.js' type='text/javascript'></script>-->
@@ -325,7 +512,7 @@
                                         </div>
                                     </form>
                                 </li>
-                                <li>
+                                <li class='close-navi'>
                                     <a class='text-center close-menu navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' data-aria-expanded='false'>
                                         <i class='fa fa-close'></i> Close Menu
                                     </a>
@@ -428,7 +615,7 @@
                                         </b:if>
                                         <b:if cond='data:post.labels'>
                                             <b:loop values='data:post.labels' var='label'>
-                                                <div class='param meta-tag'>
+                                                <div class='param meta-tag label'>
                                                     <div class='attr' data-key='name'>article:tag</div>
                                                     <div class='attr' data-key='content'><data:label.name/></div>
                                                 </div>
@@ -446,7 +633,9 @@
                                     <div class='panel-heading text-center'>
                                         <b:if cond='data:post.firstImageUrl'>
                                             <div class='text-center'>
-                                                <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-circle'/>
+                                                <a expr:href='data:post.url' expr:title='data:post.title'>
+                                                    <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-circle'/>
+                                                </a>
                                             </div>
                                         </b:if>
                                         <b:if cond='data:post.dateHeader'>
@@ -475,6 +664,7 @@
                                                 <data:post.title/>
                                             </a>
                                         </h2>
+                                        <div class='post-social-share text-center padding-2x hidden'></div>
                                     </div>
                                     <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
                                         <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
@@ -489,33 +679,27 @@
                                                 </div>
                                             </div>
                                         </b:if>
-                                            
                                         <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-
-                                            <b:if cond='data:post.showLocation'>
-                                                <b:if cond='data:post.location'>
-                                                    <div class='item post-location'>
-                                                        <p>
-                                                            <h3>
-                                                                <i class='fa fa-map-marker'/> 地図リンク<br/>
-                                                            </h3>
-                                                            <big>
-                                                                <strong>
-                                                                    ADDRESS
-                                                                </strong>
-                                                            </big>
-                                                            <hr class="embed quater-width" />
-                                                            <h4>
-                                                                <data:post.location.name/><br />
-                                                                <big>
-                                                                    <a class='map-link button' expr:href='data:post.location.mapsUrl' target='_blank'>
-                                                                        <i class='fa fa-location-arrow'/> Google Map でみる
-                                                                    </a>
-                                                                </big>
-                                                            </h4>
-                                                        </p>
-                                                    </div>
-                                                </b:if>
+                                            <b:if cond='data:post.location'>
+                                                <div class='post-location text-center'>
+                                                    <h3>
+                                                        <i class='fa fa-map-marker'/> Map<br/>
+                                                    </h3>
+                                                    ADDRESS
+                                                    <hr class="embed span6" />
+                                                    <h5>
+                                                        <data:post.location.name/>
+                                                    </h5>
+                                                    <big>
+                                                        <ul class='pager'>
+                                                            <li>
+                                                                <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                    <i class='fa fa-location-arrow'/> Google Map でみる
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </big>
+                                                </div>
                                             </b:if>
 
                                             <b:if cond='data:post.labels'>
@@ -525,7 +709,7 @@
                                                         <ul class='pager'>
                                                         <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
                                                             <li>
-                                                                <a class='button button-small button-stable activated' expr:href='data:label.url'>
+                                                                <a class='' expr:href='data:label.url'>
                                                                     <data:label.name/>
                                                                 </a>
                                                             </li>
@@ -535,46 +719,25 @@
                                                 </nav>
                                             </b:if>
 
-                                            <div class='post-social-share post_social_share text-center'></div>
+                                            <div class='post-social-share text-center hidden'>
+                                                <h3><i class="fa fa-share-square-o"></i> Share</h3>
+                                            </div>
 
-                                            <b:if cond='data:blog.olderPageUrl or data:blog.newerPageUrl'>
-                                                <table class='page-navi table-bordered table-hover'>
-                                                    <tr>
-                                                        <b:if cond='data:blog.olderPageUrl'>
-                                                            <td>
-                                                                <a class='older-link' expr:href='data:blog.olderPageUrl' rel='previous'>
-                                                                    <span class='title'>
-                                                                        <i class='fa fa-chevron-left'></i> Prev
-                                                                    </span>
-                                                                    <span class='subtitle'>
-                                                                        <data:blog.olderPageTitle/>
-                                                                    </span>
-                                                                </a>
-                                                            </td>
-                                                        </b:if>
-                                                        <b:if cond='data:blog.newerPageUrl'>
-                                                            <td>
-                                                                <a class='newer-link' expr:href='data:blog.newerPageUrl' rel='next'>
-                                                                    <span class='title'>
-                                                                        Next <i class='fa fa-chevron-right'></i>
-                                                                    </span>
-                                                                    <span class='subtitle'>
-                                                                        <data:blog.newerPageTitle/>
-                                                                    </span>
-                                                                </a>
-                                                            </td>
-                                                        </b:if>
-                                                    </tr>
-                                                </table>
-                                            </b:if>
+                                            <div id='page-navi hidden-'>
+                                                <h3>Page navi</h3>
+                                            </div>
 
                                             <!-- Related Post Widget Start -->
-                                            <div id='related-posts' class='hidden-'>
-                                                <h2 class='title'>Related Articles</h2>
+                                            <div id='related-posts' class='-hidden text-center'>
+                                                <h3 class='title'>
+                                                    <i class='fa fa-newspaper-o'></i>
+                                                    Related Articles
+                                                </h3>
                                                 <div class='content'></div>
                                             </div>
                                         </b:if>
                                     </div>
+                                    
                                     <div expr:id='&quot;footer-&quot; + data:post.id' class='panel-footer text-center'>
                                     </div>
                                     <!-- End post data -->
@@ -650,7 +813,7 @@
         //<![CDATA[
         $( function ( ) {
             var pageType = $('#page-type').text(),
-            pageUrl = $('#page-url').text(),
+            pageUrl = $('#post-url').text(),
             sharePostUrl,
             setMetaTag = function() {
                 var $metaTag = $( '.meta-tag' ),
@@ -733,30 +896,336 @@
                         $('#footer-'+id).html(imgTag);
                     }
                 });
+            },
+            // maintain iframe aspect for fluid width
+            // @link http://qiita.com/ryounagaoka/items/a98f59347ed758743b8d
+            // CSS style is needed.
+            // .aspect {
+            //     position: relative;
+            //     width: 100%;
+            // }
+            // .aspect:before {
+            //     content:"";
+            //     display: block;
+            //     padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
+            // }
+            // .aspect .content {
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            // }
+            setAspect = function() {
+                $('.post iframe').each(function(index, elm) {
+                    //console.log('elm', elm);
+                    var 
+                        $elm = $(elm),
+                        tag = '';
+
+                    elm.classList.add('content');
+                    tag += '<div class="aspect">';
+                    tag += '<div class="content">';
+                    tag += elm.outerHTML;
+                    tag += '</div>';
+                    tag += '</div>';
+                    console.log('tag', tag);
+                    $elm.replaceWith(tag);
+                });
+            },
+            // Pinterest シェア実行処理
+            setPinterestShare = function() {
+                var e = document.createElement('script');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('charset', 'UTF-8');
+                e.setAttribute('src', 'http://assets.pinterest.com/js/pinmarklet.js?r=' + Math.random() * 99999999);
+                document.body.appendChild(e);
+            },
+            // set share button tags
+            setSocialShareTag = function(shareUrl) {
+                var 
+                    tag = '',
+                    $share = $('.post-social-share');
+            
+                if($share.length) {
+                    tag += '<div class="share-this-content">';
+                    tag += '<span>';
+                    tag += '<a class="btn-circle facebook" href="http://www.facebook.com/sharer.php?u=' + shareUrl + '" target="_blank">';
+                    tag += '<i class="fa fa-facebook fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '<span>';
+                    tag += '<a class="btn-circle twitter" href="http://twitter.com/share?url=' + shareUrl + '" target="_blank">';
+                    tag += '<i class="fa fa-twitter fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '<span>';
+                    tag += '<a class="btn-circle google-plus" href="https://plus.google.com/share?url=' + shareUrl + '" target="_blank">';
+                    tag += '<i class="fa fa-google-plus fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '<span>';
+                    tag += '<a class="btn-circle pinterest" href="#" onclick="setPinterestShare()">';
+                    tag += '<i class="fa fa-pinterest fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '<span>';
+                    tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
+                    tag += '<i class="fa fa-linkedin fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '<span>';
+                    tag += '<a class="btn-circle stumbleupon" href="http://www.stumbleupon.com/submit?url=' + shareUrl + '" target="_blank">';
+                    tag += '<i class="fa fa-stumbleupon fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '<span>';
+                    tag += '<a class="btn-circle tumblr" href="http://www.tumblr.com/share/link?url=' + shareUrl + '" target="_blank">';
+                    tag += '<i class="fa fa-tumblr fa-2x"/></i>';
+                    tag += '</a>';
+                    tag += '</span>';
+
+                    tag += '</div>';
+                    
+                    $share.each(function(index, elm){
+                        elm.innerHTML += tag;
+                        elm.classList.remove('hidden');
+                    });
+                }
+            },
+            setPageNavi = function(labels) {
+                var 
+                    tag = '',
+                    $pageNavi = $('.page-navi');
+                if(labels && $pageNavi.length) {
+                    
+                }
+            },
+            setRelatedPostNavi = function(labels) {
+                console.log('labels', labels);
+                var 
+                    tag = '',
+                    url, host, parser,
+                    relation_count = 0,
+                    relatedTitles = [],
+                    relatedTitlesNum = 0,
+                    relatedUrls = [],
+                    thumburl,
+                    $relatedPosts = $('#related-posts'),
+                    removeRelatedDuplicatesThumbs = function() {
+                        var 
+                            tmp = new Array(0),
+                            tmp2 = new Array(0),
+                            tmp3 = new Array(0);
+                        for (var i = 0, l = relatedUrls.length; i < l; i++) {
+                            if (!contains_thumbs(tmp, relatedUrls[i])) {
+                                tmp.length += 1;
+                                tmp[tmp.length - 1] = relatedUrls[i];
+                                tmp2.length += 1;
+                                tmp3.length += 1;
+                                tmp2[tmp2.length - 1] = relatedTitles[i];
+                                tmp3[tmp3.length - 1] = thumburl[i];
+                            }
+                        }
+                        relatedTitles = tmp2;
+                        relatedUrls = tmp;
+                        thumburl = tmp3;
+                    },
+                    printRelatedLabelsThumbs = function() {
+                        var currentposturl = location.href,
+                            maxresults = 3;
+
+                        console.log('currentposturl', currentposturl);
+                        for (var i = 0, l = relatedUrls.length; i < l; i++) {
+                            if ((relatedUrls[i] === currentposturl) || (!(relatedTitles[i]))) {
+                                relatedUrls.splice(i, 1);
+                                relatedTitles.splice(i, 1);
+                                thumburl.splice(i, 1);
+                            }
+                        }
+                        var r = Math.floor((relatedTitles.length - 1) * Math.random());
+                        var i = 0;
+                        var tag = '';
+                        if (relatedTitles.length > 0) {
+                            //tag += '<h1>' + relatedpoststitle + '</h1>';
+                        }
+                        tag += '<div class="clearfix">';
+                        tag += '<ul class="list-inline">';
+                        while (i < relatedTitles.length && i < 20 && i < maxresults) {
+                            tag += '<li class="pull-left">';
+                            tag += '<a href="' + relatedUrls[r] + '">';
+                            tag += '<img class="related_img" src="' + thumburl[r] + '"/>';
+                            tag += '</a>';
+                            tag += '<div>';
+                            tag += '<a href="' + relatedUrls[r] + '">';
+                            tag += relatedTitles[r];
+                            tag += '</a>';
+                            tag += '</div>';
+                            tag += '</li>';
+                            if (r < relatedTitles.length - 1) {
+                                r++;
+                            } else {
+                                r = 0;
+                            }
+                            i++;
+                        }
+                        tag += '</ul>';
+                        tag += '</div>';
+                        relatedUrls.splice(0, relatedUrls.length);
+                        thumburl.splice(0, thumburl.length);
+                        relatedTitles.splice(0, relatedTitles.length);
+                        console.log('tag', tag);
+                        $relatedPosts.find('.content').eq(0).append(tag);
+                    };
+
+                if(labels && labels.length && $relatedPosts.length) {
+                    parser = $('<a>', { href:location.href } )[0];
+                    for (var i = 0, l = labels.length; i < l; i++) {
+                        //url = location.protocol + '//' + parser.hostname + '/feeds/posts/default/-/' + labels[i].name + '?alt=json-in-script&max-results=8';
+                        url = location.protocol + '//cupcakemafa.com/feeds/posts/default/-/' + labels[i].name + '?alt=json-in-script&max-results=8';
+                        console.log('url', url);
+                        //blogger API を実行する
+                        $.ajax({
+                            type: 'GET',
+                            url: url,
+                            cache: false,
+                            data: {},
+                            dataType: 'jsonp'
+                        }).done(function (json) {
+                            console.log('json', json);
+                            var 
+                                no_img_url = 'http://3.bp.blogspot.com/-zP87C2q9yog/UVopoHY30SI/AAAAAAAAE5k/AIyPvrpGLn8/s300/picture_not_available.png',
+                                entry, s,a,b,c,d;
+                                
+                            if(json && json.feed && json.feed.entry && json.feed.entry.length) {
+                                for (var i = 0; i < json.feed.entry.length; i++) {
+                                    entry = json.feed.entry[i];
+
+                                    relatedTitles[relatedTitlesNum] = entry.title.$t;
+
+                                    try {
+                                        thumburl[relatedTitlesNum] = entry.gform_foot.url;
+                                    } catch (error) {
+                                        s = entry.content.$t;
+                                        a = s.indexOf("<img");
+                                        b = s.indexOf("src=\"", a);
+                                        c = s.indexOf("\"", b + 5);
+                                        d = s.substr(b + 5, c - b - 5);
+                                        if ((a !== -1) && (b !== -1) && (c !== -1) && (d !== "")) {
+                                            thumburl[relatedTitlesNum] = d;
+                                        } else
+                                            thumburl[relatedTitlesNum] = no_img_url;
+                                    }
+                                    if (relatedTitles[relatedTitlesNum].length > 35)
+                                        relatedTitles[relatedTitlesNum] = relatedTitles[relatedTitlesNum].substring(0, 35) + "...";
+                                    for (var k = 0; k < entry.link.length; k++) {
+                                        if (entry.link[k].rel === 'alternate') {
+                                            relatedUrls[relatedTitlesNum] = entry.link[k].href;
+                                            relatedTitlesNum++;
+                                        }
+                                    }
+                                }
+                            }
+
+                            removeRelatedDuplicatesThumbs();
+
+                            relation_count++;
+                            console.log('relation_count', relation_count);
+                            console.log('labels.length', labels.length);
+                            if (relation_count === labels.length) {
+                                printRelatedLabelsThumbs();
+                            }
+
+                        }).fail(function (error) {
+                            console.error('error', error);
+                        });
+                    }
+    
+                    
+                    
+                    
+                    
+                    
+                    /*
+                    tag += '<table class="page-navi table-bordered table-hover">';
+                    tag += '<tr>';
+        //                                                    <b:if cond='data:blog.olderPageUrl'>
+                    tag += '<td>';
+                    tag += '<a class="older-link" href="data:blog.olderPageUrl" rel="previous">';
+                    tag += '<span class="title">';
+                    tag += '<i class="fa fa-chevron-left"></i> Prev';
+                    tag += '</span>';
+                    tag += '<span class="subtitle">';
+                    tag += '<data:blog.olderPageTitle/>';
+                    tag += '</span>';
+                    tag += '</a>';
+                    tag += '</td>';
+        //                                                    </b:if>
+        //                                                    <b:if cond='data:blog.newerPageUrl'>
+                    tag += '<td>';
+                    tag += '<a class="newer-link" href="data:blog.newerPageUrl" rel="next">';
+                    tag += '<span class="title">';
+                    tag += 'Next <i class="fa fa-chevron-right"></i>';
+                    tag += '</span>';
+                    tag += '<span class="subtitle">';
+        //                                        <data:blog.newerPageTitle/>
+                    tag += '</span>';
+                    tag += '</a>';
+                    tag += '</td>';
+        //                                                    </b:if>
+                    tag += '</tr>';
+                    tag += '</table>';
+                    */
+                }
+                
             };
+            
             
             //
             // Main
             //
-            
-            
-            var sharePostUrl;
-            
+            var sharePostUrl,
+            $labels, $attrs, labels = [];
             console.log('pageType', pageType);
             console.log('pageUrl', pageUrl);
             
             setMetaTag();
+            setAspect();
             
             if(pageType === 'index') {
                 setPostSummary();
-                // @todo pager set
+                // @todo set pager
             }
             else if(pageType === 'item') {
-                sharePostUrl = pageUrl;
-                // @todo share button set
-                // @todo related-posts getRelatedPosts( labels )
+                // set share buttons
+                setSocialShareTag(pageUrl);
+                // @todo set related-posts
+                $labels = $('.param.label');
+                //console.log($labels);
+                $labels.each(function(labelIdx, labelElm){
+                    $attrs = $(labelElm).find('.attr');
+                    $attrs.each(function(attrIdx, attrElm) {
+                        if($(attrElm).attr('data-key') === 'content') {
+                            if(attrElm.innerText) {
+                                labels.push(attrElm.innerText);
+                            }
+                        }
+                        //console.log('attrIdx', attrIdx);
+                        //console.log('labelIdx', labelIdx);
+                        if(labelIdx === ($labels.length-1)) {
+                            if(attrIdx === ($attrs.length-1)) {
+                                setRelatedPostNavi(labels);
+                            }
+                        }
+                    });
+                });
             }
-            console.log('sharePostUrl',sharePostUrl);
         } );
         //]]>
     </script>
