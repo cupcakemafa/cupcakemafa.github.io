@@ -1,3 +1,6 @@
+* {
+    pointer-events: auto;
+}
 .no-padding {
     padding:0px;
 }

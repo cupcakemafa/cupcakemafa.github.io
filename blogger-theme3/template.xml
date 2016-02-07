@@ -10,9 +10,55 @@
     <head>
         <meta charset='utf-8' />
         <meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' />
-        <meta name='fragment' content='!' />
-    
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+        <!-- Start of all-head-content -->
+        <b:include data='blog' name='all-head-content' />
+        <!-- End of all-head-content -->
+        <!-- SEO Meta Tag -->
+        <b:if cond='data:blog.homepageUrl == data:blog.url'>
+            <meta expr:content='data:blog.title' name='keywords' />
+        </b:if>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <meta expr:content='data:blog.pageName' name='keywords' />
+        </b:if>
+        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <b:if cond='data:blog.searchLabel'>
+                <meta content='noindex,nofollow' name='robots' />
+            </b:if>
+        </b:if>
+        <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+            <meta content='noindex,nofollow' name='robots' />
+        </b:if>
+        <b:if cond='data:blog.isMobile'>
+            <meta content='noindex,nofollow' name='robots' />
+        </b:if>
+        
         <title>
+            <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
+                <data:blog.pageName/>
+                 |
+            <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+                Archive for
+                <data:blog.pageName/>
+                 |
+            <b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+                <data:blog.pageName/>
+                |
+            <b:elseif cond='data:blog.pageType == &quot;index&quot;'/>
+                <b:if cond='data:blog.searchLabel'>
+                    <data:blog.title/> -
+                    <data:blog.pageName/>
+                    |
+                <b:else/>
+                    <b:if cond='data:blog.url != data:blog.homepageUrl'>
+                        <data:blog.pageTitle/> - All Post | 
+                    </b:if>
+                </b:if>
+            <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+                Page Not Found | 
+            </b:if>
+            <data:blog.title/>
         </title>
         <b:skin>
             <![CDATA[
@@ -25,44 +71,694 @@
             Version:  3.0
             -----------------------------------------------
             */
-        ]]>
+            <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
+            ]]>
         </b:skin>
-
-        <title>Cupcakemafa</title>
-        
+        <!--
         <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
+        -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
         <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
-
-        <link href='//cupcakemafa.github.io/blogger-theme3/lib/ionic/css/ionic.css' rel='stylesheet' />
-        <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet' />
-
+        <!--<link href='//cupcakemafa.github.io/blogger-theme3/lib/ionic/css/ionic.css' rel='stylesheet' />-->
+        <!--<link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet' />-->
+        <style>
+            body {
+                font-family: "Helvetica Neue",Helvetica,Arial,"游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+                color: #13191B;
+                line-height: 1.7;
+                font-size: 13px;
+                font-weight:200;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+            }
+            h1, h2, h3, h4, h5 {
+            }
+            a:hover, a:active, .box-link:hover a {
+                text-decoration: none;
+            }
+            .param {
+                display:none;
+            }
+            .navbar-brand {
+                padding:5px;
+            }
+            .navbar-collapse {
+                background-color:#000;
+            }
+            .nav.navbar-nav .close-menu {
+                float: none;
+                margin: 0px;
+            }
+            .nav.navbar-nav .menu-search {
+                padding:0px 8px;
+            }
+            .navbar-collapse .nav.navbar-nav li {
+                text-align: left;
+            }
+            .navbar-collapse .nav.navbar-nav li:hover {
+                background-color: lightgray;
+            }
+            .navbar-collapse .nav.navbar-nav li:hover a {
+                color: #333;
+            }
+            .site-title {
+                display:none;
+                color: white;
+                font-size: 18px;
+                padding-top: 10px;
+                font-family: 'Roboto Slab', serif;
+                text-transform: uppercase;
+            }
+            @media (max-width: 480px) {
+                .site-title {
+                    display:block;
+                }
+                
+                #body {
+                    margin-top: 62px;
+                }
+                .col {
+                    padding-left:0px;
+                    padding-right:0px;
+                }
+                .post .panel-body img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                #map-canvas {
+                    display: none;
+                }
+            }
+            .pager li {
+                font-size: 12px;
+            }
+            .pager li a {
+                margin-bottom: 4px;
+            }
+            .post {
+            }
+            .post-outer {
+                margin-bottom:16px;
+            }
+            .post-title {
+                font-size: 180%;
+                font-weight:400;
+            }
+            .post .thumb {
+                width: 160px;
+                height : 160px;
+            }
+            .post .panel-footer .img-circle,
+            .post .panel-footer .img-rounded {
+                width: 48px;
+                height : 48px;
+                margin: 0px 4px;
+            }
+            .page-navi {
+                width:100%;
+            }
+            .page-navi td {
+                text-align: center;
+                padding: 4px;
+            }
+            .page-navi td .title {
+                font-weight: 400;
+                font-size: 21px;
+            }
+            .page-navi td .subtitle {
+                font-size: 12px;
+            }
+            #sidebar .panel-heading .title {
+                margin:0px;
+            }
+            #footer .col {
+                padding:8px;
+            }
+            #footer #first {
+                background-color: #b9e6b2;
+            }
+            #footer #second {
+                background-color: #96d88d;
+            }
+        </style>
+        
+        <!--<script async='async' src='//apis.google.com/js/plusone.js' type='text/javascript'></script>-->
+        <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'></script>
+        
         <!-- ionic/angularjs js -->
-        <script src='//cupcakemafa.github.io/blogger-theme3/lib/ionic/js/ionic.bundle.js'></script>
+        <!--<script src='//cupcakemafa.github.io/blogger-theme3/lib/ionic/js/ionic.bundle.js'></script>-->
+        <!-- your app's js -->
+        <!--        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
+                <script src='//cupcakemafa.github.io/blogger-theme3/js/services.js'></script>
+                <script src='//cupcakemafa.github.io/blogger-theme3/js/controllers.js'></script>-->
 
-        <!-- your app's js -->
-        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme3/js/controllers.js'></script>
-        
-        <!-- your app's js -->
-        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme3/js/services.js'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme3/js/controllers.js'></script>
-        
         <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+    <body expr:class='data:blog.mobileClass'>
+        
+        <div id='page-type' class='param'><data:blog.pageType/></div>
+        
+        <!-- Start of SEO Meta Tag -->
+        <b:if cond='data:blog.homepageUrl == data:blog.url'>
+            <div class='meta-tag param'>
+                <div class='attr' data-key='name'>keywords</div>
+                <div class='attr' data-key='content'><data:blog.title/></div>
+            </div>
+        </b:if>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <div class='meta-tag param'>
+                <div class='attr' data-key='name'>keywords</div>
+                <div class='attr' data-key='content'><data:blog.pageName/></div>
+            </div>
+       </b:if>
+       <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <div class='meta-tag param'>
+                <div class='attr' data-key='name'>robots</div>
+                <div class='attr' data-key='content'>noindex,nofollow</div>
+            </div>
+       </b:if>
+       <b:if cond='data:blog.searchLabel'>
+            <div class='meta-tag param'>
+                <div class='attr' data-key='name'>robots</div>
+                <div class='attr' data-key='content'>noindex,nofollow</div>
+            </div>
+        </b:if>
+        <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+            <div class='meta-tag param'>
+                <div class='attr' data-key='name'>robots</div>
+                <div class='attr' data-key='content'>noindex,nofollow</div>
+            </div>
+        </b:if>
+        <b:if cond='data:blog.isMobile'>
+            <div class='meta-tag param'>
+                <div class='attr' data-key='name'>robots</div>
+                <div class='attr' data-key='content'>noindex,nofollow</div>
+            </div>
+        </b:if>
+        <!-- End of SEO Meta Tag -->
+        
+    <!-- Start of container -->
+    <div class='container'>
+        <div id='header' class='row'>
+            <div class='col col-xs-12 text-center'>
+                <nav class='navbar navbar-inverse navbar-fixed-top'>
+                    <div class='container-fluid'>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class='navbar-header'>
+                            <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' data-aria-expanded='false'>
+                                <span class='sr-only'>Toggle navigation</span>
+                                <span class='icon-bar'></span>
+                                <span class='icon-bar'></span>
+                                <span class='icon-bar'></span>
+                            </button>
+                            <a class='navbar-brand' href='/'>
+                                <img alt='Brand' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png' />
+                            </a>
+                            <div class='site-title'>Cupcakemafa</div>
+                        </div>
 
-    <body ng-app='starter'>
-        <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        </b:section>
-        <ion-nav-view></ion-nav-view>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                            <ul class='nav navbar-nav'>
+                                <li>
+                                    <a href='/search/label/NEWS'>
+                                        <i class='fa fa-newspaper-o'></i>
+                                        News
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/search/label/KEN%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%90%E3%83%AA%E3%83%83%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9'>
+                                        <i class='fa fa-globe'></i>
+                                        KENのFavorite Place
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/p/kenzukan.html'>
+                                        <i class='fa fa-book'></i>
+                                        KEN図鑑
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/p/kenzukan-ep-s1.html'>
+                                        <i class='fa fa-bookmark'></i>
+                                        KENの小話
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='/2015/11/nao-and-ken-line-stamp.html'>
+                                        <i class='fa fa-star'></i>
+                                        LINEスタンプ発売中
+                                    </a>
+                                </li>
+                                <li class='menu-search'>
+                                    <form action='/search' method='get' class='navbar-form form-inline navbar-right' role='search'>
+                                        <div class='form-group'>
+                                            <input class='form-control' id='search' name='q' placeholder='Search' type='search' value='' />
+                                        </div>
+                                    </form>
+                                </li>
+                                <li>
+                                    <a class='text-center close-menu navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' data-aria-expanded='false'>
+                                        <i class='fa fa-close'></i> Close Menu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div id='body' class='row'>
+            <!-- Start of Main -->
+            <div id='main-area' class='col col-xs-12 col-sm-8'>
+                <b:section class='main' id='main' showaddelement='no'>
+                    <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
+                        <b:includable id='main'>
+                            <b:loop values='data:posts' var='post'>
+                                <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+                                    <div id='post-url' class='param'><data:post.url/></div>
+
+                                    <!-- Start meta data -->
+                                    <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                        <b:if cond='data:post.canonicalUrl'>
+                                            <div class='meta-tag param'>
+                                                <div class='attr' data-key='itemprop'>url</div>
+                                                <div class='attr' data-key='content'><data:post.canonicalUrl/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:url</div>
+                                                <div class='attr' data-key='content'><data:blog.canonicalUrl/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.firstImageUrl'>
+                                            <div class='meta-tag param'>
+                                                <div class='attr' data-key='itemprop'>image</div>
+                                                <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:card</div>
+                                                <div class='attr' data-key='content'>summary_large_image</div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:image:src</div>
+                                                <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:image</div>
+                                                <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.title'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:title</div>
+                                                <div class='attr' data-key='content'><data:post.title/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:title</div>
+                                                <div class='attr' data-key='content'><data:post.title/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.metaDescription'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:description</div>
+                                                <div class='attr' data-key='content'><data:blog.metaDescription/></div>
+                                            </div>
+                                        <b:else/>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:description</div>
+                                                <div class='attr' data-key='content'><data:post.snippet/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.sharePostUrl'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:url</div>
+                                                <div class='attr' data-key='content'><data:post.sharePostUrl/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.pageName'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:title</div>
+                                                <div class='attr' data-key='content'><data:blog.pageName/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.metaDescription'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:description</div>
+                                                <div class='attr' data-key='content'><data:blog.metaDescription/></div>
+                                            </div>
+                                        <b:elseif cond='data:blog.snippet'/>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:description</div>
+                                                <div class='attr' data-key='content'><data:post.snippet/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.timestampISO8601'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>article:published_time</div>
+                                                <div class='attr' data-key='content'><data:post.timestampISO8601/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.labels'>
+                                            <b:loop values='data:post.labels' var='label'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>article:tag</div>
+                                                    <div class='attr' data-key='content'><data:label.name/></div>
+                                                </div>
+                                            </b:loop>
+                                        </b:if>
+                                        <div class='param meta-tag'>
+                                            <div class='attr' data-key='name'>article:section</div>
+                                            <div class='attr' data-key='content'>Art, Culture, Lifestyle</div>
+                                        </div>
+                                    </b:if>
+                                    <!-- End meta data -->
+
+                                    <!-- Start post data -->
+                                    <!-- for top -->
+                                    <div class='panel-heading text-center'>
+                                        <b:if cond='data:post.firstImageUrl'>
+                                            <div class='text-center'>
+                                                <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-circle'/>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.dateHeader'>
+                                            <h5>
+                                                <i class='fa fa-clock-o'/> 
+                                                <data:post.dateHeader/>
+                                            </h5>
+                                        </b:if>
+                                        <b:if cond='data:post.labels'>
+                                            <nav>
+                                                <h5>
+                                                    <ul class='pager'>
+                                                    <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
+                                                        <li>
+                                                            <a class='button button-small button-stable activated' expr:href='data:label.url'>
+                                                                <data:label.name/>
+                                                            </a>
+                                                        </li>
+                                                    </b:loop>
+                                                    </ul>
+                                                </h5>
+                                            </nav>
+                                        </b:if>
+                                        <h2 class='post-title panel-title'>
+                                            <a expr:href='data:post.url' expr:title='data:post.title'>
+                                                <data:post.title/>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
+                                        <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                            <data:post.body/>
+                                        <b:else/>
+                                            <div class='post-summary hidden'>
+                                                <div id='id'><data:post.id/></div>
+                                                <div id='title'><data:post.title/></div>
+                                                <div id='url'><data:post.url/></div>
+                                                <div id='content'>
+                                                    <data:post.body/>
+                                                </div>
+                                            </div>
+                                        </b:if>
+                                            
+                                        <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+
+                                            <b:if cond='data:post.showLocation'>
+                                                <b:if cond='data:post.location'>
+                                                    <div class='item post-location'>
+                                                        <p>
+                                                            <h3>
+                                                                <i class='fa fa-map-marker'/> 地図リンク<br/>
+                                                            </h3>
+                                                            <big>
+                                                                <strong>
+                                                                    ADDRESS
+                                                                </strong>
+                                                            </big>
+                                                            <hr class="embed quater-width" />
+                                                            <h4>
+                                                                <data:post.location.name/><br />
+                                                                <big>
+                                                                    <a class='map-link button' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                        <i class='fa fa-location-arrow'/> Google Map でみる
+                                                                    </a>
+                                                                </big>
+                                                            </h4>
+                                                        </p>
+                                                    </div>
+                                                </b:if>
+                                            </b:if>
+
+                                            <b:if cond='data:post.labels'>
+                                                <nav>
+                                                    <h3 class='text-center'><i class='fa fa-tags'/> Tags</h3>
+                                                    <h5>
+                                                        <ul class='pager'>
+                                                        <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
+                                                            <li>
+                                                                <a class='button button-small button-stable activated' expr:href='data:label.url'>
+                                                                    <data:label.name/>
+                                                                </a>
+                                                            </li>
+                                                        </b:loop>
+                                                        </ul>
+                                                    </h5>
+                                                </nav>
+                                            </b:if>
+
+                                            <div class='post-social-share post_social_share text-center'></div>
+
+                                            <b:if cond='data:blog.olderPageUrl or data:blog.newerPageUrl'>
+                                                <table class='page-navi table-bordered table-hover'>
+                                                    <tr>
+                                                        <b:if cond='data:blog.olderPageUrl'>
+                                                            <td>
+                                                                <a class='older-link' expr:href='data:blog.olderPageUrl' rel='previous'>
+                                                                    <span class='title'>
+                                                                        <i class='fa fa-chevron-left'></i> Prev
+                                                                    </span>
+                                                                    <span class='subtitle'>
+                                                                        <data:blog.olderPageTitle/>
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                        </b:if>
+                                                        <b:if cond='data:blog.newerPageUrl'>
+                                                            <td>
+                                                                <a class='newer-link' expr:href='data:blog.newerPageUrl' rel='next'>
+                                                                    <span class='title'>
+                                                                        Next <i class='fa fa-chevron-right'></i>
+                                                                    </span>
+                                                                    <span class='subtitle'>
+                                                                        <data:blog.newerPageTitle/>
+                                                                    </span>
+                                                                </a>
+                                                            </td>
+                                                        </b:if>
+                                                    </tr>
+                                                </table>
+                                            </b:if>
+
+                                            <!-- Related Post Widget Start -->
+                                            <div id='related-posts' class='hidden-'>
+                                                <h2 class='title'>Related Articles</h2>
+                                                <div class='content'></div>
+                                            </div>
+                                        </b:if>
+                                    </div>
+                                    <div expr:id='&quot;footer-&quot; + data:post.id' class='panel-footer text-center'>
+                                    </div>
+                                    <!-- End post data -->
+                                </article>
+                            </b:loop>
+                        </b:includable>
+                    </b:widget>
+                </b:section>
+            </div>
+            <!-- End of Main -->
+            <!-- Start of Sidebar -->
+            <div id='sidebar' class='col col-xs-12 col-sm-4'>
+                <div class='post panel panel-default'>
+                    <div class='panel-heading'>
+                        <h3 class='title'>Search</h3>
+                    </div>
+                    <div class='panel-body'>
+                        <form action="/search" method="get" role="search">
+                            <label class="item item-input">
+                                <i class="icon ion-search placeholder-icon"></i>
+                                <input class="form-control" id="search" name="q" placeholder="Search" type="search" />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- sidebar.txt -->
+                <b:section class='sidebar section' id='sidebar' preferred='yes'>
+                    <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+                        <b:includable id='main'>
+                        </b:includable>
+                    </b:widget>
+                </b:section>
+            </div>
+            <!-- End of Sidebar -->
+        </div>
+        <!-- End of container -->
+        
+        <div id='footer' class='row'>
+            <div id='first' class='col col-xs-12 text-center'>
+                <h5>
+                    &#169;2014<span id='now-year'>-2016</span> <a href='/' title='Cupcakemafa Web Site'>Cupcakemafa</a>
+                </h5>
+            </div>
+            <div id='second' class='col col-xs-12 text-center'>
+                <div id='sponser-link-3'>
+                    <h5 class='title'>スポンサーリンク</h5>
+                    <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- レスポンシブ -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3036276233777511"
+                         data-ad-slot="8614156582"
+                         data-ad-format="auto"></ins>
+                    <script>
+                    //<![CDATA[
+                    (adsbygoogle=window.adsbygoogle||[]).push({});
+                    //]]>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'></script>
+    <script src='//cupcakemafa.github.io/blogger-theme3/js/util.js' type='text/javascript'></script>
+    
+<!--    <script src='//cupcakemafa.github.io/blogger-theme2/js/footer.js' type='text/javascript'></script>
+    <script src='//cupcakemafa.github.io/blogger-theme2/js/exec.js' type='text/javascript'></script>-->
+
+
+    <script type='text/javascript'>
+        //<![CDATA[
+        $( function ( ) {
+            var pageType = $('#page-type').text(),
+            pageUrl = $('#page-url').text(),
+            sharePostUrl,
+            setMetaTag = function() {
+                var $metaTag = $( '.meta-tag' ),
+                    $elm, $attrs, $attr, key, value,
+                    metaTag = '',
+                    i, l,
+                    metaAttr;
+                //console.log('$metaTag', $metaTag);
+                $metaTag.each( function ( index, elm ) {
+                    $elm = $(elm);
+                    //console.log('$elm', $elm);
+                    metaAttr = '';
+                    $attrs = $elm.find('.attr');
+                    for(i=0,l=$attrs.length;i<l;i++) {
+                        $attr = $attrs.eq(i);
+                        key = $attr.data('key');
+                        value = $attr.text();
+                        //console.log('key', key);
+                        //console.log('value', value);
+                        if(key && value) {
+                            if(i>0) {
+                                metaAttr += ' ';
+                            }
+                            metaAttr += key + '="' + value + '"';
+                        }
+                        if(i===(l-1)) {
+                            metaTag += '<meta ' + metaAttr + '/>';
+                        }
+                    }
+                    
+                    if(metaTag && index === ($metaTag.length-1)) {
+                        console.log('metaTag', metaTag);
+                        $( 'head' ).find( 'meta' ).last().after( metaTag );
+                    }
+                } );
+            },
+            setPostSummary = function() {
+                // set post summary text
+                $('.post-summary').each(function(index, elm, arr) {
+                    var summaryLength = 80,
+                        $elm = $(elm),
+                        id = $elm.find('#id').text(),
+                        url = $elm.find('#url').text(),
+                        title = $elm.find('#title').text(),
+                        $content = $elm.find('#content'),
+                        $imgs = $content.find('img'),
+                        content = $content.text(),
+                        summary = content.substring(0, summaryLength),
+                        summaryTag = '',
+                        imgTag = '', attr='', clas='';
+
+                    if(content.length > summary.length ) {
+                        summary += '...';
+                    }
+
+                    //summaryTag = '<div class="alert alert-warning">';
+                    summaryTag += '<a href="' + url + '" title="' + title + '">';
+                    summaryTag += summary;
+                    summaryTag += '</a>';
+                    //summaryTag += '</div>';
+                    $elm.html(summaryTag).removeClass('hidden');
+
+                    //console.log('-------------------');
+                    //console.log('id', id);
+                    //console.log('$content', $content);
+                    //console.log('$imgs', $imgs);
+                    //console.log($('#footer-'+id));
+                    $imgs.each(function(index, img, arr){
+                        if(index > 0 && 5 > index) {
+                            //console.log('img', img);
+                            attr=$(img).attr('src');
+                            clas='img-circle';
+                            clas='img-rounded';
+                            //console.log('attr', attr);
+                            imgTag += '<img src="' + attr + '" class="' + clas + '" />';
+                        }
+                    });
+                    if(imgTag.length) {
+                        imgTag = '<a href="' + url + '" title="' + title + '">' + imgTag + '</a>';
+                        $('#footer-'+id).html(imgTag);
+                    }
+                });
+            };
+            
+            //
+            // Main
+            //
+            
+            
+            var sharePostUrl;
+            
+            console.log('pageType', pageType);
+            console.log('pageUrl', pageUrl);
+            
+            setMetaTag();
+            
+            if(pageType === 'index') {
+                setPostSummary();
+                // @todo pager set
+            }
+            else if(pageType === 'item') {
+                sharePostUrl = pageUrl;
+                // @todo share button set
+                // @todo related-posts getRelatedPosts( labels )
+            }
+            console.log('sharePostUrl',sharePostUrl);
+        } );
+        //]]>
+    </script>
     </body>
 </html>

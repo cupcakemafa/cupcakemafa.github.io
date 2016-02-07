@@ -120,9 +120,9 @@ angular.module( 'starter', [ 'ionic', 'starter.services', 'starter.controllers' 
          }
          } );
          */
-        $locationProvider.html5Mode( false ).hashPrefix( '!' );
+//        $locationProvider.html5Mode( false ).hashPrefix( '!' );
 
         // if none of the above states are matched, use this as the fallback
         //$urlRouterProvider.otherwise( '/app/playlists' );
-//        $urlRouterProvider.otherwise( '/app/single' );
+        $urlRouterProvider.otherwise( '/app/single' );
     } );

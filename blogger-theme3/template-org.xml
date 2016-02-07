@@ -99,21 +99,21 @@
         <![endif]-->
 
         <script type='text/javascript'>
-                < b:if cond = 'data:blog.pageType == &quot;item&quot;' >
+                <b:if cond = 'data:blog.pageType == &quot;item&quot;'>
                 var pageType = 'post';
-                < b:elseif cond = 'data:blog.pageType == &quot;static_page&quot;' / >
+                <b:elseif cond = 'data:blog.pageType == &quot;static_page&quot;' />
                 var pageType = 'page';
-                < b:elseif cond = 'data:blog.pageType == &quot;error_page&quot;' / >
+                <b:elseif cond = 'data:blog.pageType == &quot;error_page&quot;' />
                 var pageType = '404';
-                < b:elseif cond = 'data:blog.pageType == &quot;archive&quot;' / >
+                <b:elseif cond = 'data:blog.pageType == &quot;archive&quot;' />
                 var pageType = 'archive';
-                < b:elseif cond = 'data:blog.pageType == &quot;index&quot; &amp;&amp; data:blog.searchLabel' / >
+                <b:elseif cond = 'data:blog.pageType == &quot;index&quot; &amp;&amp; data:blog.searchLabel' />
                 var pageType = 'label-archive';
-                < b:elseif cond = 'data:blog.pageType == &quot;index&quot; &amp;&amp; data:blog.url == data:blog.homepageUrl' / >
+                <b:elseif cond = 'data:blog.pageType == &quot;index&quot; &amp;&amp; data:blog.url == data:blog.homepageUrl' />
                 var pageType = 'top';
-                < b: else / >
+                <b:else/>
                 var pageType = 'others';
-                < /b:if>
+                </b:if>
         </script>
     </head>
 
@@ -219,6 +219,7 @@
                                         </b:includable>
                                     </b:widget>
                                 </b:section>
+                                
                                 <b:section class='main' id='main' showaddelement='no'>
                                     <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
                                         <b:includable id='main' var='top'>
@@ -412,16 +413,16 @@
                                                         <script type='text/javascript'>
                                                                 $( function ( ) {
                                                                 var labels = [
-                                                                    < b:loop index = 'i' values = 'data:post.labels' var = 'label' >
+                                                                    <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
                                                                 {
                                                                 'name': '<data:label.name/>',
                                                                     'url': '<data:label.url/>'
-                                                                    < b:if cond = 'data:label.isLast == "True"' >
+                                                                    <b:if cond='data:label.isLast=="True"'>
                                                                 }
-                                                                < b: else / >
+                                                                <b:else/>
                                                                 },
-                                                                    < /b:if>
-                                                                    < /b:loop>
+                                                                    </b:if>
+                                                                    </b:loop>
                                                                 ];
                                                                     getRelatedPosts( labels );
                                                                 } );</script>
@@ -495,16 +496,16 @@
                                                                         postDate = '<data:post.dateHeader/>',
                                                                         postCommentCount = '<data:post.numComments/>',
                                                                         postLabels = [
-                                                                            < b:loop index = 'i' values = 'data:post.labels' var = 'label' >
+                                                                            <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
                                                                         {
                                                                         'name': '<data:label.name/>',
                                                                             'url': '<data:label.url/>'
-                                                                            < b:if cond = 'data:label.isLast == "True"' >
+                                                                            <b:if cond = 'data:label.isLast == "True"'>
                                                                         }
-                                                                        < b: else / >
+                                                                        <b:else/>
                                                                         },
-                                                                            < /b:if>
-                                                                            < /b:loop>
+                                                                            </b:if>
+                                                                            </b:loop>
                                                                         ];
                                                                         createSummaryAndThumb( postId, postTitle, postUrl,
                                                                             postDate, postLabels, postCommentCount );
@@ -870,6 +871,7 @@
                                     </b:widget>
                                 </b:section>
                             </div>
+                      </div>
                     </aside>
 
                     <!-- sidebar wrapper end -->
