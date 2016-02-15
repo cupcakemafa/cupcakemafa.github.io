@@ -16,7 +16,9 @@ h1,
 h2,
 h3,
 h4,
-h5 {}
+h5 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;    
+}
 
 td,
 th {

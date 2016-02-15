@@ -74,14 +74,12 @@
             <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
             ]]>
         </b:skin>
-        <!--
         <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
-        -->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
         <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet' />

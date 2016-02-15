@@ -1,6 +1,5 @@
 $(function () {
-    var
-        pageType = $('#page-type').text(),
+    var pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
         setMetaTag = function () {
             var $metaTag = $('.meta-tag'),
@@ -74,8 +73,8 @@ $(function () {
                     if (index > 0 && 5 > index) {
                         //console.log('img', img);
                         attr = $(img).attr('src');
+                        //clas='img-rounded';
                         clas = 'img-circle';
-                        clas = 'img-rounded';
                         //console.log('attr', attr);
                         imgTag += '<img src="' + attr + '" class="' + clas + '" />';
                     }
@@ -288,7 +287,7 @@ $(function () {
                         $title, $imgs, $date,
                         postTitle, postThumb, postDate,
                         tag = '';
-                    console.log('pageContentTag', pageContentTag);
+                    //console.log('pageContentTag', pageContentTag);
                     if (pageContentTag && $data.length) {
                         $title = $data.find('.post #post-title');
                         if ($title.length) {
@@ -376,7 +375,7 @@ $(function () {
             }
         },
         setRelatedPostNavi = function (labels) {
-            console.log('labels', labels);
+            //console.log('labels', labels);
             var
             //url = location.protocol + '//' + parser.hostname, //// @todo
                 url = location.protocol + '//cupcakemafa.com', //// @debug
@@ -527,6 +526,22 @@ $(function () {
                     });
                 }
             }
+        },
+        setFooterNavi = function () {
+            var $menuItem = $('#header nav ul.nav li.menu-item'),
+                i, l;
+            if ($menuItem.length) {
+                for (i = 0, l = $menuItem.length; i < l; i++) {
+                    $('#footer .footer-navi').append($menuItem[i]);
+                }
+            }
+        },
+        disableImageLink = function () {
+            $('a').filter(function () {
+                return /\.(jpe?g|png|gif)$/i.test(this.href);
+            }).on('click', function (e) {
+                e.preventDefault();
+            });
         };
 
     //
@@ -573,5 +588,9 @@ $(function () {
     } else {
         setSinglePageNavi();
     }
+
+    setFooterNavi();
+
+    disableImageLink();
 
 });
