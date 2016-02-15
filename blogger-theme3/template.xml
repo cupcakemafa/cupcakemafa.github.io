@@ -84,388 +84,9 @@
         -->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
         <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
-        <!--<link href='//cupcakemafa.github.io/blogger-theme3/lib/ionic/css/ionic.css' rel='stylesheet' />-->
-        <!--<link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet' />-->
-        <style>
-            body {
-                font-family: "Helvetica Neue",Helvetica,Arial,"游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
-                color: #13191B;
-                line-height: 1.7;
-                font-size: 13px;
-                font-weight:200;
-                letter-spacing: 1px;
-                word-spacing: 1px;
-            }
-            h1, h2, h3, h4, h5 {
-            }
-            td, th {
-                vertical-align: top;
-            }
-            a:hover, a:active, .box-link:hover a {
-                text-decoration: none;
-            }
-            .no-margin {
-                margin: 0px;
-            }
-            .margin {
-                margin: 8px;
-            }
-            .margin-top {
-                margin-top: 8px;
-            }
-            .margin-bottom {
-                margin-bottom: 8px;
-            }
-            .no-padding {
-                padding:0px;
-            }
-            .padding {
-                padding:8px;
-            }
-            .padding-2x {
-                padding:16px;
-            }
-            .param {
-                display:none;
-            }
-            .span1 {
-                width: 8.33333333%;
-            }
-            .span2 {
-                width: 16.6666667%;
-            }
-            .span3 {
-                width: 40%;
-            }
-            .span4 {
-                width: 30%;
-            }
-            .span6 {
-                width: 50%;
-            }
-            .span12 {
-                width: 100%;
-            }
-            hr.embed {
-                border: 0;
-                height: 0;
-                border-top: 1px solid #ccc;
-                border-bottom: 1px solid #fff;
-                margin: 6px auto 2px;
-                padding: 0px;
-            }
-            hr.dashed {
-                border-bottom: 1px dashed #eee;
-            }
-            /* Start iframe content aspect */
-            .aspect {
-                position: relative;
-                width: 100%;
-            }
-            .aspect:before {
-                content:"";
-                display: block;
-                padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
-            }
-            .aspect .content {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-            /* End iframe content aspect */
-            
-            /* Start social button */
-            .btn-circle { /* global button class */
-                display: inline-block;
-                position: relative;
-                cursor: pointer;
-                width: 50px;
-                height: 50px;
-                box-shadow: 0 5px 5px #999;
-                padding: 0px;
-                text-decoration: none;
-                text-align: center;
-                color: #fff;
-                font-size: 14px;
-                font-weight: normal;
-                line-height: 2em;
-                border-radius: 25px;
-                -moz-border-radius: 25px;
-                -webkit-border-radius: 25px;
-                padding-top: 11px;
-            }
-            .btn-circle.facebook {
-                /*color: #3b5998;*/
-                background-color: #3b5998;
-            }
-            .btn-circle.facebook:hover {
-                color: #4060A5;
-                background: #fff;
-            }            
-            .btn-circle.twitter {
-                /*color: #4099FF;*/
-                background-color: #4099FF;
-            }
-            .btn-circle.twitter:hover {
-                color: #00ABE3;
-                background: #fff;
-            }
-            .btn-circle.google-plus {
-                /*color: #dd4b39;*/
-                background-color: #dd4b39;
-            }
-            .btn-circle.google-plus:hover {
-                color: #e64522;
-                background: #fff;
-            }
-            .btn-circle.pinterest {
-                /*color: #cb2027;*/
-                background-color: #cb2027;
-            }
-            .btn-circle.pinterest:hover {
-                color: #cb2027;
-                background: #fff;
-            }
-            .btn-circle.linkedin {
-                /*color: #007bb6;*/
-                background-color: #007bb6;
-            }
-            .btn-circle.linkedin:hover {
-                color: #0094BC;
-                background: #fff;
-            }
-            .btn-circle.stumbleupon {
-                /*color: #EB4823;*/
-                background-color: #EB4823;
-            }
-            .btn-circle.stumbleupon:hover {
-                color: #EB4823;
-                background: #fff;
-            }
-            .btn-circle.tumblr {
-                /*color: #32506d;*/
-                background-color: #32506d;
-            }
-            .btn-circle.tumblr:hover {
-                color: #3a5876;
-                background: #fff;
-            }
-            .btn-circle.instagram {
-                /*color: #517fa4;*/
-                background-color: #517fa4;
-            }
-            .btn-circle.instagram:hover {
-                color: #517fa4;
-                background: #fff;
-            }
-            .btn-circle.rss {
-                /*color: #517fa4;*/
-                background-color: #e88845;
-            }
-            .btn-circle.rss:hover {
-                color: #e88845;
-                background: #fff;
-            }
-            .share-this-content span {
-                margin-right: 12px;
-            }
-            .share-this-content span:last-child {
-                margin-right: 0px;
-            }
-            
-            .social-icon .fa-facebook {
-                color: #3b5998;
-            }
-            .social-icon .fa-twitter {
-                color: #4099FF;
-            }
-            .social-icon .fa-google-plus {
-                color: #dd4b39;
-            }
-            .social-icon .fa-pinterest {
-                color: #cb2027;
-            }
-            .social-icon .fa-linkedin {
-                color: #007bb6;
-            }
-            .social-icon .fa-stumbleupon {
-                color: #EB4823;
-            }
-            .social-icon .fa-tumblr {
-                color: #32506d;
-            }
-            .social-icon .fa-instagram {
-                color: #517fa4;
-            }
-            /* End social button */
-            
-            /* Start layout */
-            .navbar-brand {
-                padding:5px;
-            }
-            .navbar-fixed-top .navbar-collapse {
-                background-color:#000;
-                max-height:480px;
-            /*
-                max-height: 95%;
-                height: 100%;
-                overflow-x: auto;
-                overflow-y: scroll;
-                z-index: 20;
-            */
-            }
-            .nav.navbar-nav,
-            .nav.navbar-nav a {
-                color: #9d9d9d;
-            }
-            .nav.navbar-nav .close-menu {
-                float: none;
-                margin: 0px;
-            }
-            .nav.navbar-nav .menu-search {
-                padding:0px 8px;
-            }
-            .navbar-collapse .nav.navbar-nav li {
-                text-align: left;
-            }
-            .navbar-collapse .nav.navbar-nav li:hover {
-                background-color: lightgray;
-            }
-            .navbar-collapse .nav.navbar-nav li:hover a {
-                color: #333;
-            }
-            .navbar-collapse .nav.navbar-nav li.no-hover:hover {
-                color: #fff;
-                background-color: transparent;
-            }
-            .site-title {
-                display:none;
-                color: white;
-                font-size: 18px;
-                padding-top: 10px;
-                font-family: 'Roboto Slab', serif;
-                text-transform: uppercase;
-            }
-            .nav.navbar-nav .sp-only {
-                display:none;
-            }
-            @media (max-width: 480px) {
-                .nav.navbar-nav .sp-only {
-                    display:block;
-                }
-                .site-title {
-                    display:block;
-                }
-                .col {
-                    padding-left:0px;
-                    padding-right:0px;
-                }
-                #map-canvas {
-                    display: none;
-                }
-            }
-            #body {
-                margin-top: 62px;
-            }
-            .pager li {
-                font-size: 12px;
-            }
-            .pager li a {
-                margin-bottom: 4px;
-            }
-            .post {
-            }
-            .post-outer {
-                margin-bottom:16px;
-            }
-            .post-title {
-                font-size: 180%;
-                font-weight:400;
-            }
-            .post .panel-body img {
-                max-width: 100%;
-                height: auto;
-                margin: 8px auto;
-            }
-            .post .thumb {
-                width: 160px;
-                height : 160px;
-            }
-            .post .panel-footer .img-circle,
-            .post .panel-footer .img-rounded {
-                width: 48px;
-                height : 48px;
-                margin: 0px 4px;
-            }
-            .page-navi {
-                width:100%;
-            }
-            .page-navi p {
-                margin: 0px;
-            }
-            .page-navi td {
-                text-align: center;
-                padding: 4px;
-            }
-            .page-navi td .panel-heading {
-                font-size: 24px;
-                font-weight: 600;
-            }
-            .page-navi td .title {
-                font-weight: 400;
-                font-size: 16px;
-            }
-            .page-navi td img {
-                width:100%;
-                max-width: 240px;
-                height:auto;
-            }
-            #related-posts td {
-                max-width:33%;
-            }
-            #related-posts td img {
-                background-color: #eee;
-                border:1px solid gray;
-            }
-            #sidebar .panel-heading .title {
-                margin:0px;
-            }
-            #footer {
-                color: #fff;
-                border-top: 1px solid #cccccc;
-            }
-            #footer .col {
-                padding:8px;
-            }
+        <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet' />
 
-            #footer #first {
-                background-color: #e5e5e5;
-            }
-            #footer #second {
-                background-color: #232323;
-            }
-            #footer #third {
-                color: black;
-                background-color: #101010;
-                background-color: white;
-                max-height: 160px;
-                overflow: hidden;
-            }
-            /* End layout */
-        </style>
-        
-        <!--<script async='async' src='//apis.google.com/js/plusone.js' type='text/javascript'></script>-->
         <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'></script>
-        
-        <!-- ionic/angularjs js -->
-        <!--<script src='//cupcakemafa.github.io/blogger-theme3/lib/ionic/js/ionic.bundle.js'></script>-->
-        <!-- your app's js -->
-        <!--        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
-                <script src='//cupcakemafa.github.io/blogger-theme3/js/services.js'></script>
-                <script src='//cupcakemafa.github.io/blogger-theme3/js/controllers.js'></script>-->
-
         <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -475,7 +96,7 @@
         
         <div id='page-type' class='param'><data:blog.pageType/></div>
         
-        <!-- Start of SEO Meta Tag -->
+        <span class='comment hidden'>Start of SEO Meta Tag</span>
         <b:if cond='data:blog.homepageUrl == data:blog.url'>
             <div class='meta-tag param'>
                 <div class='attr' data-key='name'>keywords</div>
@@ -512,15 +133,14 @@
                 <div class='attr' data-key='content'>noindex,nofollow</div>
             </div>
         </b:if>
-        <!-- End of SEO Meta Tag -->
-        
-    <!-- Start of container -->
+        <span class='comment hidden'>End of SEO Meta Tag</span>
+    <span class='comment hidden'>Start of container</span>
     <div class='container'>
         <div id='header' class='row'>
             <div class='col col-xs-12 text-center'>
                 <nav class='navbar navbar-inverse navbar-fixed-top'>
                     <div class='container-fluid'>
-                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <span class='comment hidden'>Brand and toggle get grouped for better mobile display</span>
                         <div class='navbar-header'>
                             <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' data-aria-expanded='false'>
                                 <span class='sr-only'>Toggle navigation</span>
@@ -531,37 +151,39 @@
                             <a class='navbar-brand' href='/'>
                                 <img alt='Brand' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png' />
                             </a>
-                            <div class='site-title'>Cupcakemafa</div>
+                            <div class='site-title'>
+                                <a href='/'>Cupcakemafa</a>
+                            </div>
                         </div>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <span class='comment hidden'>Collect the nav links, forms, and other content for toggling</span>
                         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
                             <ul class='nav navbar-nav'>
-                                <li>
+                                <li class='menu-item'>
                                     <a href='/search/label/NEWS'>
                                         <i class='fa fa-newspaper-o'></i>
                                         News
                                     </a>
                                 </li>
-                                <li>
+                                <li class='menu-item'>
                                     <a href='/search/label/KEN%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%90%E3%83%AA%E3%83%83%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9'>
                                         <i class='fa fa-globe'></i>
                                         KENのFavorite Place
                                     </a>
                                 </li>
-                                <li>
+                                <li class='menu-item'>
                                     <a href='/p/kenzukan.html'>
                                         <i class='fa fa-book'></i>
                                         KEN図鑑
                                     </a>
                                 </li>
-                                <li>
+                                <li class='menu-item'>
                                     <a href='/p/kenzukan-ep-s1.html'>
                                         <i class='fa fa-bookmark'></i>
                                         KENの小話
                                     </a>
                                 </li>
-                                <li>
+                                <li class='menu-item'>
                                     <a href='/2015/11/nao-and-ken-line-stamp.html'>
                                         <i class='fa fa-star'></i>
                                         LINEスタンプ発売中
@@ -569,12 +191,17 @@
                                 </li>
                                 <li class='menu-search no-hover'>
                                     <form action='/search' method='get' class='navbar-form form-inline navbar-right' role='search'>
-                                        <div class='form-group'>
-                                            <input class='form-control' id='search' name='q' placeholder='Search' type='search' value='' />
+                                        <div class='input-group padding-left padding-right'>
+                                            <input class='form-control' name='q' placeholder='Search' type='search' />
+                                            <span class='input-group-btn'>
+                                                <button class='btn btn-default' type='button'>
+                                                    <i class='fa fa-search'></i>
+                                                </button>
+                                            </span>
                                         </div>
                                     </form>
                                 </li>
-                                <li class='sp-only'>
+                                <li class='sp-only no-hover'>
                                     <div class='padding'>
                                         <div class='text-center'>
                                             <h4 class='no-margin margin-bottom'>
@@ -592,7 +219,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class='sp-only'>
+                                <li class='sp-only no-hover'>
                                     <div class='padding'>
                                         <div class='text-center'>
                                             <h4 class='no-margin margin-bottom'>
@@ -612,19 +239,19 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class='sp-only'>
+                                <li class='sp-only hidden'>
                                     <a class='text-center close-menu navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' data-aria-expanded='false'>
                                         <i class='fa fa-close'></i> Close Menu
                                     </a>
                                 </li>
                             </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
+                        </div><span class='comment hidden'>End of .navbar-collapse</span>
+                    </div><span class='comment hidden'>End of .container-fluid</span>
                 </nav>
             </div>
         </div>
         <div id='body' class='row'>
-            <!-- Start of Main -->
+            <span class='comment hidden'>Start of Main</span>
             <div id='main-area' class='col col-xs-12 col-sm-8'>
                 <b:section class='main' id='main' showaddelement='no'>
                     <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
@@ -654,14 +281,16 @@
                                             </p>
                                             もしくは
                                             <div class='padding text-center'>
-                                                <div class='input-group input-group-lg margin padding'>
-                                                    <input class='form-control' id='search' name='q' placeholder='サイト検索' type='search' />
-                                                    <span class='input-group-btn'>
-                                                        <button class='btn btn-default' type='button'>
-                                                            <i class='fa fa-search'></i>
-                                                        </button>
-                                                    </span>
-                                                </div>
+                                                <form action='/search' method='get' role='search'>
+                                                    <div class='input-group input-group-lg margin padding'>
+                                                        <input class='form-control' name='q' placeholder='サイト検索' type='search' />
+                                                        <span class='input-group-btn'>
+                                                            <button class='btn btn-default' type='button'>
+                                                                <i class='fa fa-search'></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -672,7 +301,7 @@
                                 <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
                                     <div id='post-url' class='param'><data:post.url/></div>
 
-                                    <!-- Start meta data -->
+                                    <span class='comment hidden'>Start meta data</span>
                                     <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
                                         <b:if cond='data:post.canonicalUrl'>
                                             <div class='meta-tag param'>
@@ -765,16 +394,16 @@
                                             <div class='attr' data-key='content'>Art, Culture, Lifestyle</div>
                                         </div>
                                     </b:if>
-                                    <!-- End meta data -->
+                                    <span class='comment hidden'>End meta data</span>
 
-                                    <!-- Start post data -->
-                                    <!-- for top -->
+                                    <span class='comment hidden'>Start post data</span>
+                                    <span class='comment hidden'>for top</span>
                                     <div class='panel-heading text-center'>
-                                        <b:if cond='data:blog.pageType == &quot;index&quot;/'>
+                                        <b:if cond='data:blog.pageType == &quot;index&quot;'>
                                             <b:if cond='data:post.firstImageUrl'>
                                                 <div class='text-center'>
                                                     <a expr:href='data:post.url' expr:title='data:post.title'>
-                                                        <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-circle'/>
+                                                        <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-rounded'/>
                                                     </a>
                                                 </div>
                                             </b:if>
@@ -805,7 +434,6 @@
                                                 <data:post.title/>
                                             </a>
                                         </h2>
-                                        <div class='post-social-share text-center padding-2x hidden'></div>
                                     </div>
                                     <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
                                         <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
@@ -860,13 +488,13 @@
                                                 </nav>
                                             </b:if>
 
-                                            <div class='post-social-share text-center hidden'>
+                                            <div class='post-social-share text-center padding hidden'>
                                                 <h3><i class="fa fa-share-square-o"></i> Share</h3>
                                             </div>
                                         </b:if>
 
                                         <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-                                            <!-- Related Post Widget Start -->
+                                            <span class='comment hidden'>Related post widget start</span>
                                             <div id='related-posts' class='text-center hidden'>
                                                 <h3 class='title'>
                                                     <i class='fa fa-newspaper-o'></i>
@@ -879,7 +507,7 @@
                                     
                                     <div expr:id='&quot;footer-&quot; + data:post.id' class='panel-footer text-center'>
                                     </div>
-                                    <!-- End post data -->
+                                    <span class='comment hidden'>End post data</span>
                                 </article>
                             </b:loop>
 
@@ -930,13 +558,34 @@
                                     </b:if>
                                 </b:if>
                             </b:if>
+
                         </b:includable>
                     </b:widget>
                 </b:section>
             </div>
-            <!-- End of Main -->
-            <!-- Start of Sidebar -->
+            <span class='comment hidden'>End of main</span>
+
+            <span class='comment hidden'>Start of sidebar</span>
             <div id='sidebar' class='col col-xs-12 col-sm-4'>
+
+                <div class='post panel panel-default search-widget tablet-only'>
+                    <div class='panel-heading'>
+                        <h4 class='title'>Search</h4>
+                    </div>
+                    <div class='panel-body'>
+                        <form action='/search' method='get' role='search'>
+                            <div class='input-group input-group-lg margin padding'>
+                                <input class='form-control' name='q' placeholder='Search' type='search' />
+                                <span class='input-group-btn'>
+                                    <button class='btn btn-default' type='button'>
+                                        <i class='fa fa-search'></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div class='post panel panel-default'>
                     <div class='panel-heading'>
                         <h4 class='title'>LINEスタンプPart2も発売中!!</h4>
@@ -1155,8 +804,7 @@
                                     <li class='archivedate'>
                                         <a expr:href='data:i.url'>
                                             <data:i.name/>
-                                        </a> (
-                                        <data:i.post-count/>)
+                                        </a> (<data:i.post-count/>)
                                     </li>
                                 </b:loop>
                             </ul>
@@ -1225,12 +873,12 @@
                                             <div class='panel-body'>
                                                 <b:if cond='!data:showThumbnails'>
                                                     <b:if cond='!data:showSnippets'>
-                                                        <!-- (1) No snippet/thumbnail -->
+                                                        <span class='comment hidden'>(1) No snippet/thumbnail</span>
                                                         <a expr:href='data:post.href'>
                                                             <data:post.title/>
                                                         </a>
                                                         <b:else/>
-                                                        <!-- (2) Show only snippets -->
+                                                        <span class='comment hidden'>(2) Show only snippets</span>
                                                         <div class='item-title'>
                                                             <a expr:href='data:post.href'>
                                                                 <data:post.title/>
@@ -1241,7 +889,7 @@
                                                         </div>
                                                     </b:if>
                                                     <b:else/>
-                                                    <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+                                                    <span class='comment hidden'>(3) Show only thumbnails or (4) Snippets and thumbnails.</span>
                                                     <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
                                                         <b:if cond='data:post.thumbnail'>
                                                             <div class='item-thumbnail'>
@@ -1261,7 +909,6 @@
                                                             </div>
                                                         </b:if>
                                                     </div>
-                                                    <div style='clear: both;' />
                                                 </b:if>
                                             </div>
                                         </div>
@@ -1273,22 +920,25 @@
 
                 </b:section>
             </div>
-            <!-- End of Sidebar -->
+            <span class='comment hidden'>End of Sidebar</span>
         </div>
-        <!-- End of container -->
+        <span class='comment hidden'>End of container</span>
     </div>
-
     <div class='container-fluid'>
         <div id='footer' class='row'>
             <div id='first' class='col-xs-12 text-center'>
-                <div class='input-group input-group-lg margin padding'>
-                    <input class='form-control' id='search' name='q' placeholder='Search' type='search' />
-                    <span class='input-group-btn'>
-                        <button class='btn btn-default' type='button'>
-                            <i class='fa fa-search'></i>
-                        </button>
-                    </span>
-                </div>
+                <form action='/search' method='get' role='search'>
+                    <div class='input-group input-group-lg margin padding'>
+                        <input class='form-control' name='q' placeholder='Search' type='search' />
+                        <span class='input-group-btn'>
+                            <button class='btn btn-default' type='button'>
+                                <i class='fa fa-search'></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <ul class='footer-navi'>
+                </ul>
             </div>
             <div id='second' class='col-xs-12 text-center'>
                 <div class='margin-top padding'>
@@ -1304,7 +954,7 @@
                 <div id='sponser-link-3'>
                     <h5 class='title'>スポンサーリンク</h5>
                     <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- レスポンシブ -->
+                    <span class='comment hidden'>レスポンシブ</span>
                     <ins class="adsbygoogle"
                          style="display:block"
                          data-ad-client="ca-pub-3036276233777511"
@@ -1319,590 +969,7 @@
             </div>
         </div>
     </div>
-        
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'></script>
-    <script src='//cupcakemafa.github.io/blogger-theme3/js/util.js' type='text/javascript'></script>
-    
-<!--    <script src='//cupcakemafa.github.io/blogger-theme2/js/footer.js' type='text/javascript'></script>
-    <script src='//cupcakemafa.github.io/blogger-theme2/js/exec.js' type='text/javascript'></script>-->
-
-    <script type='text/javascript'>
-        //<![CDATA[
-        $( function ( ) {
-            var pageType = $('#page-type').text(),
-            pageUrl = $('#post-url').text(),
-            setMetaTag = function() {
-                var $metaTag = $( '.meta-tag' ),
-                    $elm, $attrs, $attr, key, value,
-                    metaTag = '',
-                    i, l,
-                    metaAttr;
-                //console.log('$metaTag', $metaTag);
-                $metaTag.each( function ( index, elm ) {
-                    $elm = $(elm);
-                    //console.log('$elm', $elm);
-                    metaAttr = '';
-                    $attrs = $elm.find('.attr');
-                    for(i=0,l=$attrs.length;i<l;i++) {
-                        $attr = $attrs.eq(i);
-                        key = $attr.data('key');
-                        value = $attr.text();
-                        //console.log('key', key);
-                        //console.log('value', value);
-                        if(key && value) {
-                            if(i>0) {
-                                metaAttr += ' ';
-                            }
-                            metaAttr += key + '="' + value + '"';
-                        }
-                        if(i===(l-1)) {
-                            metaTag += '<meta ' + metaAttr + '/>';
-                        }
-                    }
-                    
-                    if(metaTag && index === ($metaTag.length-1)) {
-                        //console.log('metaTag', metaTag);
-                        $( 'head' ).find( 'meta' ).last().after( metaTag );
-                    }
-                } );
-            },
-            setPostSummary = function() {
-                // set post summary text
-                $('.post-summary').each(function(index, elm, arr) {
-                    var summaryLength = 80,
-                        $elm = $(elm),
-                        id = $elm.find('#id').text(),
-                        url = $elm.find('#url').text(),
-                        title = $elm.find('#title').text(),
-                        $content = $elm.find('#content'),
-                        $imgs = $content.find('img'),
-                        content = $content.text(),
-                        summary = content.substring(0, summaryLength),
-                        summaryTag = '',
-                        imgTag = '', attr='', clas='';
-
-                    if(content.length > summary.length ) {
-                        summary += '...';
-                    }
-
-                    //summaryTag = '<div class="alert alert-warning">';
-                    summaryTag += '<a href="' + url + '" title="' + title + '">';
-                    summaryTag += summary;
-                    summaryTag += '</a>';
-                    //summaryTag += '</div>';
-                    $elm.html(summaryTag).removeClass('hidden');
-
-                    //console.log('-------------------');
-                    //console.log('id', id);
-                    //console.log('$content', $content);
-                    //console.log('$imgs', $imgs);
-                    //console.log($('#footer-'+id));
-                    $imgs.each(function(index, img, arr){
-                        if(index > 0 && 5 > index) {
-                            //console.log('img', img);
-                            attr=$(img).attr('src');
-                            clas='img-circle';
-                            clas='img-rounded';
-                            //console.log('attr', attr);
-                            imgTag += '<img src="' + attr + '" class="' + clas + '" />';
-                        }
-                    });
-                    if(imgTag.length) {
-                        imgTag = '<a href="' + url + '" title="' + title + '">' + imgTag + '</a>';
-                        $('#footer-'+id).html(imgTag);
-                    }
-                });
-            },
-            // maintain iframe aspect for fluid width
-            // @link http://qiita.com/ryounagaoka/items/a98f59347ed758743b8d
-            // CSS style is needed.
-            // .aspect {
-            //     position: relative;
-            //     width: 100%;
-            // }
-            // .aspect:before {
-            //     content:"";
-            //     display: block;
-            //     padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
-            // }
-            // .aspect .content {
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     width: 100%;
-            //     height: 100%;
-            // }
-            setAspect = function() {
-                //$('.post iframe').each(function(index, elm) {
-                $('div iframe').each(function(index, elm) {
-                    //console.log('elm', elm);
-                    var 
-                        $elm = $(elm),
-                        tag = '';
-
-                    elm.classList.add('content');
-                    tag += '<div class="aspect">';
-                    tag += '<div class="content">';
-                    tag += elm.outerHTML;
-                    tag += '</div>';
-                    tag += '</div>';
-                    console.log('tag', tag);
-                    $elm.replaceWith(tag);
-                });
-            },
-            // Pinterest シェア実行処理
-            setPinterestShare = function() {
-                var e = document.createElement('script');
-                e.setAttribute('type', 'text/javascript');
-                e.setAttribute('charset', 'UTF-8');
-                e.setAttribute('src', 'http://assets.pinterest.com/js/pinmarklet.js?r=' + Math.random() * 99999999);
-                document.body.appendChild(e);
-            },
-            // set share button tags
-            setSocialShareTag = function(shareUrl) {
-                var 
-                    tag = '',
-                    $share = $('.post-social-share');
-            
-                if($share.length) {
-                    tag += '<div class="share-this-content">';
-                    tag += '<span>';
-                    tag += '<a class="btn-circle facebook" href="http://www.facebook.com/sharer.php?u=' + shareUrl + '" target="_blank">';
-                    tag += '<i class="fa fa-facebook fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '<span>';
-                    tag += '<a class="btn-circle twitter" href="http://twitter.com/share?url=' + shareUrl + '" target="_blank">';
-                    tag += '<i class="fa fa-twitter fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '<span>';
-                    tag += '<a class="btn-circle google-plus" href="https://plus.google.com/share?url=' + shareUrl + '" target="_blank">';
-                    tag += '<i class="fa fa-google-plus fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '<span>';
-                    tag += '<a class="btn-circle pinterest" href="#" onclick="setPinterestShare()">';
-                    tag += '<i class="fa fa-pinterest fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '<span>';
-                    tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
-                    tag += '<i class="fa fa-linkedin fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '<span>';
-                    tag += '<a class="btn-circle stumbleupon" href="http://www.stumbleupon.com/submit?url=' + shareUrl + '" target="_blank">';
-                    tag += '<i class="fa fa-stumbleupon fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '<span>';
-                    tag += '<a class="btn-circle tumblr" href="http://www.tumblr.com/share/link?url=' + shareUrl + '" target="_blank">';
-                    tag += '<i class="fa fa-tumblr fa-2x"/></i>';
-                    tag += '</a>';
-                    tag += '</span>';
-
-                    tag += '</div>';
-                    
-                    $share.each(function(index, elm){
-                        elm.innerHTML += tag;
-                        elm.classList.remove('hidden');
-                    });
-                }
-            },
-            // Pager for index, archive page
-            pageListNavi = function(o) {
-                var pageNaviConf = {
-                    "perPage": 10,
-                    "numPages": 5,
-                    "firstText": " First ",
-                    "lastText": " Last ",
-                    "nextText": " Next ",
-                    "prevText": " Prev "
-                },
-                m = location.href,
-                l = m.indexOf("/search/label/") !== -1,
-                a = l ? m.substr(m.indexOf("/search/label/") + 14,
-                m.length) : '',
-                g,k,e,n,h,
-                d,c,b,f,
-                show = function (f, e, a) {
-                    var d = Math.floor((pageNaviConf.numPages - 1) / 2),
-                        g = pageNaviConf.numPages - 1 - d,
-                        c = e - d,
-                        endPage;
-                    if (c <= 0) {
-                        c = 1;
-                    }
-                    endPage = e + g;
-                    if ((endPage - c) < pageNaviConf.numPages) {
-                        endPage = c + pageNaviConf.numPages - 1;
-                    }
-                    if (endPage > a) {
-                        endPage = a;
-                        c = a - pageNaviConf.numPages + 1;
-                    }
-                    if (c <= 0) {
-                        c = 1;
-                    }
-                    var b = '<p class="pages padding">Pages ' + e + ' of ' + a + "</p> ";
-                    b+= '<div class="btn-group">';
-                    if (c > 1) {
-                        b += '<a class="btn btn-default" href="' + f[1] + '">' + pageNaviConf.firstText + "</a>";
-                    }
-                    if (e > 1) {
-                        b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
-                    }
-                    for (var i = c; i <= endPage; ++i) {
-                        if (i === e) {
-                            b += '<a class="btn btn-info current">' + i + "</a>";
-                        } else {
-                            b += '<a class="btn btn-default" href="' + f[i] + '">' + i + "</a>";
-                        }
-                    }
-                    b+='</div>';
-
-                    b += '<div class="margin">';
-                    if (e < a) {
-                        b += '<a class="btn btn-default" href="' + f[e + 1] + '">' + pageNaviConf.nextText + "</a>";
-                    }
-                    if (endPage < a) {
-                        b += ' <a class="btn btn-default" href="' + f[a] + '">' + pageNaviConf.lastText + "</a>";
-                    }
-                    b+='</div>';
-
-                    $('.page-navi').html(b).removeClass('hidden');
-                };
-
-                if(o && o.feed && o.feed.entry && o.feed.entry.length) {
-                    a = a.indexOf("?") !== -1 ? a.substr(0, a.indexOf("?")) : a;
-                    g = l ? "/search/label/" + a + "?updated-max=" : "/search?updated-max=";
-                    k = o.feed.entry.length;
-                    e = Math.ceil(k / pageNaviConf.perPage);
-                    if (e <= 1) {
-                        return;
-                    }
-                    n = 1;
-                    h = [''];
-                    l ? h.push("/search/label/" + a + "?max-results=" + pageNaviConf.perPage) : h.push("/?max-results=" + pageNaviConf.perPage);
-                    for (d = 2; d <= e; d++) {
-                        c = (d - 1) * pageNaviConf.perPage - 1;
-                        b = o.feed.entry[c].published.$t;
-                        f = b.substring(0, 19) + b.substring(23, 29);
-                        f = encodeURIComponent(f);
-                        if (m.indexOf(f) !== -1) {
-                            n = d;
-                        }
-                        h.push(g + f + "&max-results=" + pageNaviConf.perPage);
-                    }
-                    show(h, n, e);
-                }
-            },
-            setSinglePageNavi = function() {
-                var 
-                    newerLink = $('a.newer-link'),
-                    olderLink = $('a.older-link'),
-                    postTitle, postThumb,
-                    getSinglePageNaviTag = function(pageContentTag) {
-                        var
-                            $data = $(pageContentTag),
-                            $title, $imgs, $date,
-                            postTitle, postThumb, postDate,
-                            tag='';
-                        console.log('pageContentTag', pageContentTag);
-                        if(pageContentTag && $data.length) {
-                            $title = $data.find('.post #post-title');
-                            if($title.length) {
-                                postTitle = $title.text();
-                                if(postTitle) {
-
-                                    // publish date
-                                    $date = $('.post #post-date');
-                                    if($date.length) {
-                                        postDate = $date.html();
-                                        if(postDate) {
-                                            tag += '<p class="date">' + postDate + '</p>';
-                                        }
-                                    }
-
-                                    // post title
-                                    tag += '<p class="title">'+ postTitle +'</p>';
-
-                                    // post thumb
-                                    $imgs = $data.find('.post img');
-                                    if($imgs.length) {
-                                        postThumb = $imgs.eq(0).attr('src');
-                                        if(postThumb) {
-                                            tag += '<img class="img-rounded" src="' + postThumb + '" />';
-                                        }
-                                    }
-
-                                    return tag;
-                                }
-                            }
-                        }
-                    };
-                if(newerLink.length) {
-                    $.get(newerLink.attr('href'), function (data) {
-                        var tag = getSinglePageNaviTag(data);
-                        newerLink.html(tag);
-                        $('table.page-navi').removeClass('hidden');
-                    },"html");
-                }
-                if(olderLink.length) {
-                    $.get(olderLink.attr('href'), function (data) {
-                        var tag = getSinglePageNaviTag(data);
-                        olderLink.html(tag);
-                        $('table.page-navi').removeClass('hidden');
-                    },"html");
-                }
-            },
-            // End Pager for index, archive page
-            setPageListNavi = function() {
-                var
-                    $pageNavi = $('.page-navi'),
-                    a,b,c,d,
-                    //url = location.protocol + '//' + parser.hostname; //// @todo
-                    url = location.protocol + '//cupcakemafa.com'; //// @debug
-                    //console.log('$pageNavi', $pageNavi);
-                if($pageNavi.length) {
-                    b = location.href;
-                    console.log('b', b);
-                    if (b.indexOf('?q=') !== -1 || b.indexOf('.html') !== -1) {
-                        //console.log('return');
-                        return;
-                    }
-                    d = b.indexOf('/search/label/') + 14;
-                    if (d !== 13) {
-                        c = b.indexOf("?"),
-                        a = (c === -1) ? b.substring(d) : b.substring(d, c);
-                        url += '/feeds/posts/summary/-/' + a + '?alt=json-in-script&max-results=99999';
-                    } else {
-                        url += '/feeds/posts/summary?alt=json-in-script&max-results=99999';
-                    }
-                    console.log('url', url);
-                        //blogger API を実行する
-                        $.ajax({
-                            type: 'GET',
-                            url: url,
-                            cache: false,
-                            data: {},
-                            dataType: 'jsonp'
-                        }).done(function (json) {
-                            //console.log('json', json);
-                            pageListNavi(json);
-                        }).fail(function (error) {
-                            console.error('error', error);
-                        });
-                }
-            },
-            setRelatedPostNavi = function(labels) {
-                console.log('labels', labels);
-                var 
-                    //url = location.protocol + '//' + parser.hostname, //// @todo
-                    url = location.protocol + '//cupcakemafa.com', //// @debug
-                    parser,
-                    relation_count = 0,
-                    relatedTitles = [],
-                    relatedTitlesNum = 0,
-                    relatedUrls = [],
-                    thumburl = [],
-                    $relatedPosts = $('#related-posts'),
-                    contains_thumbs = function(a, e) {
-                        for (var j = 0, m = a.length; j < m; j++)
-                            if (a[j] === e)
-                                return true;
-                        return false;
-                    },
-                    removeRelatedDuplicatesThumbs = function() {
-                        var 
-                            tmp = new Array(0),
-                            tmp2 = new Array(0),
-                            tmp3 = new Array(0);
-                        for (var i = 0, l = relatedUrls.length; i < l; i++) {
-                            if (!contains_thumbs(tmp, relatedUrls[i])) {
-                                tmp.length += 1;
-                                tmp[tmp.length - 1] = relatedUrls[i];
-                                tmp2.length += 1;
-                                tmp3.length += 1;
-                                tmp2[tmp2.length - 1] = relatedTitles[i];
-                                tmp3[tmp3.length - 1] = thumburl[i];
-                            }
-                        }
-                        relatedTitles = tmp2;
-                        relatedUrls = tmp;
-                        thumburl = tmp3;
-                    },
-                    printRelatedLabelsThumbs = function() {
-                        var currentposturl = location.href,
-                            maxresults = 3,
-                            i,r,tag = '';
-
-                        //console.log('currentposturl', currentposturl);
-                        for (i = 0, l = relatedUrls.length; i < l; i++) {
-                            if ((relatedUrls[i] === currentposturl) || (!(relatedTitles[i]))) {
-                                relatedUrls.splice(i, 1);
-                                relatedTitles.splice(i, 1);
-                                thumburl.splice(i, 1);
-                            }
-                        }
-                        r = Math.floor((relatedTitles.length - 1) * Math.random());
-                        i = 0;
-
-                        if (relatedTitles.length > 0) {
-                            tag += '<table>';
-                            tag += '<tr>';
-                            while (i < relatedTitles.length && i < 20 && i < maxresults) {
-                                tag += '<td>';
-                                tag += '<div>';
-                                tag += '<a href="' + relatedUrls[r] + '">';
-                                tag += '<img class="related_img" src="' + thumburl[r] + '"/>';
-                                tag += '</a>';
-                                tag += '</div>';
-
-                                tag += '<div>';
-                                tag += '<a href="' + relatedUrls[r] + '">';
-                                tag += relatedTitles[r];
-                                tag += '</a>';
-                                tag += '</div>';
-                                tag += '</td>';
-                                if (r < relatedTitles.length - 1) {
-                                    r++;
-                                } else {
-                                    r = 0;
-                                }
-                                i++;
-                            }
-                        }
-                        tag += '</tr>';
-                        tag += '</table>';
-                        relatedUrls.splice(0, relatedUrls.length);
-                        thumburl.splice(0, thumburl.length);
-                        relatedTitles.splice(0, relatedTitles.length);
-                        //console.log('tag', tag);
-                        $relatedPosts.find('.content').eq(0).append(tag);
-                    };
-
-                if(labels && labels.length && $relatedPosts.length) {
-                    parser = $('<a>', { href:location.href } )[0];
-                    for (var i = 0, l = labels.length; i < l; i++) {
-                        url += '/feeds/posts/default/-/' + labels[i] + '?alt=json-in-script&max-results=8';
-                        //console.log('url', url);
-                        //blogger API を実行する
-                        $.ajax({
-                            type: 'GET',
-                            url: url,
-                            cache: false,
-                            data: {},
-                            dataType: 'jsonp'
-                        }).done(function (json) {
-                            //console.log('json', json);
-                            var 
-                                no_img_url = 'http://3.bp.blogspot.com/-zP87C2q9yog/UVopoHY30SI/AAAAAAAAE5k/AIyPvrpGLn8/s300/picture_not_available.png',
-                                entry, s,a,b,c,d;
-                                
-                            if(json && json.feed && json.feed.entry && json.feed.entry.length) {
-                                for (var i = 0; i < json.feed.entry.length; i++) {
-                                    entry = json.feed.entry[i];
-
-                                    relatedTitles[relatedTitlesNum] = entry.title.$t;
-
-                                    try {
-                                        thumburl[relatedTitlesNum] = entry.gform_foot.url;
-                                    } catch (error) {
-                                        s = entry.content.$t;
-                                        a = s.indexOf("<img");
-                                        b = s.indexOf("src=\"", a);
-                                        c = s.indexOf("\"", b + 5);
-                                        d = s.substr(b + 5, c - b - 5);
-                                        if ((a !== -1) && (b !== -1) && (c !== -1) && (d !== "")) {
-                                            thumburl[relatedTitlesNum] = d;
-                                        } else {
-                                            thumburl[relatedTitlesNum] = no_img_url;
-                                        }
-                                    }
-                                    if (relatedTitles[relatedTitlesNum].length > 35)
-                                        relatedTitles[relatedTitlesNum] = relatedTitles[relatedTitlesNum].substring(0, 35) + "...";
-                                    for (var k = 0; k < entry.link.length; k++) {
-                                        if (entry.link[k].rel === 'alternate') {
-                                            relatedUrls[relatedTitlesNum] = entry.link[k].href;
-                                            relatedTitlesNum++;
-                                        }
-                                    }
-                                }
-                            }
-
-                            removeRelatedDuplicatesThumbs();
-
-                            relation_count++;
-                            //console.log('relation_count', relation_count);
-                            //console.log('labels.length', labels.length);
-                            if (relation_count === labels.length) {
-                                printRelatedLabelsThumbs();
-                            }
-
-                        }).fail(function (error) {
-                            console.error('error', error);
-                        });
-                    }
-                }
-            };
-
-            //
-            // Main
-            //
-            var
-            $labels, $attrs, labels = [];
-            console.log('pageType', pageType);
-            console.log('pageUrl', pageUrl);
-            
-            setMetaTag();
-            setAspect();
-            
-            if(pageType === 'index') {
-                setPostSummary();
-                // @todo set pager
-            }
-            else if(pageType === 'item') {
-                // set share buttons
-                setSocialShareTag(pageUrl);
-                // @todo set related-posts
-                $labels = $('.param.label');
-                //console.log($labels);
-                $labels.each(function(labelIdx, labelElm){
-                    $attrs = $(labelElm).find('.attr');
-                    $attrs.each(function(attrIdx, attrElm) {
-                        if($(attrElm).attr('data-key') === 'content') {
-                            if(attrElm.innerText) {
-                                labels.push(attrElm.innerText);
-                            }
-                        }
-                        //console.log('attrIdx', attrIdx);
-                        //console.log('labelIdx', labelIdx);
-                        if(labelIdx === ($labels.length-1)) {
-                            if(attrIdx === ($attrs.length-1)) {
-                                setRelatedPostNavi(labels);
-                            }
-                        }
-                    });
-                });
-            }
-
-            if(pageType === 'index') {
-                setPageListNavi();
-            }
-            else {
-                setSinglePageNavi();
-            }
-
-        } );
-        //]]>
-    </script>
+    <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'></script>
     </body>
 </html>
