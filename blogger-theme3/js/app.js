@@ -1,4 +1,6 @@
 $(function () {
+    console.log = function() {};
+    
     var pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
         setMetaTag = function () {
@@ -592,5 +594,4 @@ $(function () {
     setFooterNavi();
 
     disableImageLink();
-
 });
