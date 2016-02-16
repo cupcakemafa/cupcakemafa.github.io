@@ -528,11 +528,11 @@ $(function () {
             }
         },
         setFooterNavi = function () {
-            var $menuItem = $('#header nav ul.nav li.menu-item'),
+            var $menuItem = $('#header nav ul.nav li.menu-item').clone(),
                 i, l;
             if ($menuItem.length) {
                 for (i = 0, l = $menuItem.length; i < l; i++) {
-                    $('#footer .footer-navi').append($menuItem[i].clone());
+                    $('#footer .footer-navi').append($menuItem[i]);
                 }
             }
         },
