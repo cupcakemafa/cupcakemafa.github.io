@@ -532,7 +532,7 @@ $(function () {
                 i, l;
             if ($menuItem.length) {
                 for (i = 0, l = $menuItem.length; i < l; i++) {
-                    $('#footer .footer-navi').append($menuItem[i]);
+                    $('#footer .footer-navi').append($menuItem[i].clone());
                 }
             }
         },
