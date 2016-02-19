@@ -388,6 +388,11 @@ hr.dashed {
     display: none;
 }
 
+.title {
+    font-size: 360%;
+    font-family: 'Chewy', cursive;
+}
+
 @media screen and (min-width: 0px) and (max-device-width: 480px) {
     .nav.navbar-nav .sp-only {
         display: block;
