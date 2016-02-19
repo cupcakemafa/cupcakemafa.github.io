@@ -391,6 +391,11 @@ hr.dashed {
 .content-title {
     font-size: 360%;
     font-family: 'Chewy', cursive;
+    vertical-align: middle;
+}
+
+.chewy {
+    font-family: 'Chewy', cursive;
 }
 
 @media screen and (min-width: 0px) and (max-device-width: 480px) {
