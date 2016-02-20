@@ -10,6 +10,8 @@ body {
     font-weight: 200;
     letter-spacing: 1px;
     word-spacing: 1px;
+    /* story-title のカウンタを 0 にセット */
+    counter-reset: story-title;
 }
 
 h1,
@@ -17,7 +19,12 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;    
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+h4,
+h5 {
+    margin: 8px;
 }
 
 td,
@@ -121,6 +128,7 @@ hr.embed {
 
 hr.dashed {
     border-bottom: 1px dashed #eee;
+    margin: 6px auto 2px;
 }
 
 
@@ -307,6 +315,54 @@ hr.dashed {
 /* End social button */
 
 
+/* Start content decolation */
+
+.content-title-box {
+    padding: 1em;
+    border: 7px solid #333;
+    border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+    margin: 1em;
+    width: 90%;
+}
+
+.content-title {
+    font-size: 360%;
+    font-family: 'Chewy', cursive;
+    vertical-align: middle;
+    line-height: 100%;
+    margin-top: 8px;
+}
+
+h4.story-title:before {
+    font-family: 'Chewy', cursive;
+    counter-increment: story-title;
+    content: counter(story-title) ". ";
+}
+
+
+/* 02.テープ */
+
+h4.story-title {
+    position: relative;
+    margin-bottom: 16px;
+    font: bold 18px/1.8 Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #333;
+    background: #F5F356;
+    -webkit-transform: rotate(-3deg) skew(-3deg);
+    -moz-transform: rotate(-3deg) skew(-3deg);
+    -o-transform: rotate(-3deg) skew(-3deg);
+    -ms-transform: rotate(-3deg) skew(-3deg);
+    transform: rotate(-3deg) skew(-3deg);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 12px 0 0 0 #f0e800, -12px 0 0 0 #f0e800;
+    letter-spacing: -1px;
+}
+
+
+/* End content decolation */
+
+
 /* Start layout */
 
 .navbar-brand {
@@ -392,10 +448,6 @@ hr.dashed {
     font-size: 360%;
     font-family: 'Chewy', cursive;
     vertical-align: middle;
-}
-
-.chewy {
-    font-family: 'Chewy', cursive;
 }
 
 @media screen and (min-width: 0px) and (max-device-width: 480px) {
