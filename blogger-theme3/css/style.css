@@ -451,6 +451,9 @@ h4.story-title {
 }
 
 @media screen and (min-width: 0px) and (max-device-width: 480px) {
+    .navbar-form.form-inline.navbar-right {
+        margin: 0;
+    }
     .nav.navbar-nav .sp-only {
         display: block;
     }
