@@ -554,12 +554,11 @@ $(function () {
                 $elm,
                 more,
                 season,
-                backUrl,
+                backUrl = '/p/kenzukan-ep-s1.html',
                 imgMain,
                 caption;
             if ($storyBox.length) {
                 season = $storyBox.data('season');
-                backUrl = $storyBox.data('back');
                 console.log('season', season);
                 console.log('backUrl', backUrl);
                 $frame = $storyBox.find('.frame');
