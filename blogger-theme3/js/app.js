@@ -211,7 +211,7 @@ $(function () {
         pageListNavi = function (o) {
             var pageNaviConf = {
                     "perPage": 10,
-                    "numPages": 6,
+                    "numPages": 5,
                     "firstText": " First ",
                     "lastText": " Last ",
                     "nextText": " &gt; ",
@@ -244,9 +244,6 @@ $(function () {
                     }
                     b = '<p class="pages padding">Pages ' + e + ' of ' + a + "</p> ";
                     b += '<div class="btn-group">';
-                    if (c > 1) {
-                        b += '<a class="btn btn-default" href="' + f[1] + '">' + pageNaviConf.firstText + "</a>";
-                    }
                     if (e > 1) {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
@@ -258,11 +255,14 @@ $(function () {
                             b += '<a class="btn btn-default" href="' + f[i] + '">' + i + "</a>";
                         }
                     }
+                    if (e < a) {
+                        b += '<a class="btn btn-default" href="' + f[e + 1] + '">' + pageNaviConf.nextText + "</a>";
+                    }
                     b += '</div>';
 
                     b += '<div class="margin">';
-                    if (e < a) {
-                        b += '<a class="btn btn-default" href="' + f[e + 1] + '">' + pageNaviConf.nextText + "</a>";
+                    if (c > 1) {
+                        b += '<a class="btn btn-default" href="' + f[1] + '">' + pageNaviConf.firstText + "</a>";
                     }
                     if (endPage < a) {
                         b += ' <a class="btn btn-default" href="' + f[a] + '">' + pageNaviConf.lastText + "</a>";
