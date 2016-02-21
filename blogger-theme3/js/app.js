@@ -639,6 +639,13 @@ $(function () {
                 $elm.height($elm.width());
             });
         },
+        setTitleCR = function() {
+            var title, $elm;
+            $('.post-title a').each(function(idx, elm){
+                $elm = $(elm);
+                title = $elm.text().replace( /　/g , '<br />' );
+            });
+        }
         /////////////////////////////////////////////////////////////
         // ページトップへ戻るボタンの表示ロジック
         // 2015/8/25追加
@@ -670,6 +677,7 @@ $(function () {
 
     setMetaTag();
     setAspect();
+    setTitleCR();
 
     if (pageType === 'index') {
         setPostSummary();
