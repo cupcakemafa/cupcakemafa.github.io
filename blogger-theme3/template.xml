@@ -150,7 +150,7 @@
                                 <span class='icon-bar'></span>
                             </button>
                             <a class='navbar-brand' href='/'>
-                                <img alt='Brand' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png' />
+                                <img class="img-rounded" alt='Brand' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png' />
                             </a>
                             <div class='site-title'>
                                 <a href='/'>Cupcakemafa</a>
