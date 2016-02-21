@@ -37,6 +37,24 @@ $(function () {
                 }
             });
         },
+        // this method is called in ajax CB (setSinglePageNavi())
+        trimThumb = function () {
+            var $elm;
+            $('img.thumb').each(function (idx, elm) {
+                console.log('$elm', $elm);
+                $elm = $(elm);
+                $elm.height($elm.width());
+            });
+        },
+        // this method is called in ajax CB (setSinglePageNavi())
+        setTitleCR = function () {
+            var title, $elm;
+            $('.post-title a').each(function (idx, elm) {
+                $elm = $(elm);
+                title = $elm.text().replace(/　/g, '<br />');
+                $elm.html(title);
+            });
+        },
         setPostSummary = function () {
             // set post summary text
             $('.post-summary').each(function (index, elm, arr) {
@@ -327,6 +345,8 @@ $(function () {
                     var tag = getSinglePageNaviTag(data);
                     newerLink.html(tag);
                     $('table.page-navi').removeClass('hidden');
+                    trimThumb();
+                    setTitleCR();
                 }, "html");
             }
             if (olderLink.length) {
@@ -334,6 +354,8 @@ $(function () {
                     var tag = getSinglePageNaviTag(data);
                     olderLink.html(tag);
                     $('table.page-navi').removeClass('hidden');
+                    trimThumb();
+                    setTitleCR();
                 }, "html");
             }
         },
@@ -631,22 +653,6 @@ $(function () {
                     rel: "nofollow"
                 })
                 .addClass("exLink");
-        },
-        trimThumb = function () {
-            var $elm;
-            $('img.thumb').each(function (idx, elm) {
-                console.log('$elm', $elm);
-                $elm = $(elm);
-                $elm.height($elm.width());
-            });
-        },
-        setTitleCR = function () {
-            var title, $elm;
-            $('.post-title a').each(function (idx, elm) {
-                $elm = $(elm);
-                title = $elm.text().replace(/　/g, '<br />');
-                $elm.html(title);
-            });
         },
         /////////////////////////////////////////////////////////////
         // ページトップへ戻るボタンの表示ロジック
