@@ -432,11 +432,15 @@
                                                         </h5>
                                                     </nav>
                                                 </b:if>
-                                                <h2 class='post-title panel-title'>
-                                                    <a id='post-title' expr:href='data:post.url' expr:title='data:post.title'>
-                                                        <data:post.title/>
-                                                    </a>
-                                                </h2>
+                                                <div class='panel-title'>
+                                                    <h2 class='post-title taped'>
+                                                        <a id='post-title'
+                                                           expr:href='data:post.url'
+                                                           expr:title='data:post.title'>
+                                                            <data:post.title/>
+                                                        </a>
+                                                    </h2>
+                                                </div>
                                             </div>
                                             <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
                                                 <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>

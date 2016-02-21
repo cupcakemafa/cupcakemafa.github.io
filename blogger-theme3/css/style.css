@@ -502,6 +502,11 @@ h4.story-title {
     margin-bottom: 16px;
 }
 
+.panel-title {
+    height: 92px;
+    overflow: hidden;
+}
+
 .post-title {
     font-size: 146%;
     font-weight: 800;
@@ -510,15 +515,13 @@ h4.story-title {
     margin-top: 8px;
 }
 
-.post.item .post-title {
-    height: auto;
-}
-
 .post .panel-heading nav {
     height: 38px;
     overflow: hidden;
 }
 
+.post.item .panel-title,
+.post.item .post-title,
 .post.item .panel-heading nav {
     height: auto;
 }
