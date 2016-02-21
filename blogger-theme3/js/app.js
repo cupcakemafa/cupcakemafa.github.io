@@ -668,7 +668,7 @@ $(function () {
         setPostSummary();
         // @todo set pager
     } else if (pageType === 'item') {
-        $('.post-col').addClass('col col-md-6 col-xs-12');
+        $('.post').addClass('item');
         // set share buttons
         setSocialShareTag(pageUrl);
         // @todo set related-posts

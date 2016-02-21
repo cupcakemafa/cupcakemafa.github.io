@@ -507,6 +507,15 @@ h4.story-title {
     font-weight: 400;
 }
 
+.post .panel-heading navi {
+    height: 38px;
+    overflow: hidden;
+}
+
+.post.item .panel-heading navi {
+    height: auto;
+}
+
 .post .panel-body img {
     max-width: 100%;
     height: auto;
