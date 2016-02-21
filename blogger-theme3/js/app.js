@@ -289,6 +289,8 @@ $(function () {
                     b = o.feed.entry[c].published.$t;
                     f = b.substring(0, 19) + b.substring(23, 29);
                     //f = encodeURIComponent(f);
+                    //f = encodeURI(f);
+                    m = decodeURIComponent(m);
                     console.log(m + '/' + f);
                     if (m.indexOf(f) != -1) {
                         console.log('d', d);
