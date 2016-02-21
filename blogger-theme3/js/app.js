@@ -700,9 +700,7 @@ $(function () {
     }
 
     if(pageType !== 'item') {
-        if(pageType==='item') {
-            $('.post-col').addClass('col col-md-6 col-xs-12');
-        }
+        $('.post-col').addClass('col col-md-6 col-xs-12');
     }
 
     setFooterNavi();
