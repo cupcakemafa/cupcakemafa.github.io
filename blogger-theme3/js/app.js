@@ -251,7 +251,7 @@ $(function () {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
-                        //console.log(i + '/' + e + '/' + a + '/' + );
+                        console.log(i + '/' + e + '/' + a );
                         if (i == e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {
@@ -288,7 +288,7 @@ $(function () {
                     b = o.feed.entry[c].published.$t;
                     f = b.substring(0, 19) + b.substring(23, 29);
                     f = encodeURIComponent(f);
-                    if (m.indexOf(f) !== -1) {
+                    if (m.indexOf(f) != -1) {
                         n = d;
                     }
                     h.push(g + f + "&max-results=" + pageNaviConf.perPage);
