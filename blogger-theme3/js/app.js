@@ -296,6 +296,7 @@ $(function () {
                         console.log('d', d);
                         n = d;
                     }
+                    f = encodeURIComponent(f);
                     h.push(g + f + "&max-results=" + pageNaviConf.perPage);
                 }
                 show(h, n, e);
