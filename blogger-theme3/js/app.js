@@ -251,8 +251,8 @@ $(function () {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
-                        console.log(i + '/' + e + '/' + a + '/' + f);
-                        if (i === e) {
+                        //console.log(i + '/' + e + '/' + a + '/' + );
+                        if (i == e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {
                             b += '<a class="btn btn-default" href="' + f[i] + '">' + i + "</a>";
