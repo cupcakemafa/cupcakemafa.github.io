@@ -1,6 +1,6 @@
 $(function () {
-    console.log = function() {};
-    
+    console.log = function () {};
+
     var pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
         setMetaTag = function () {
@@ -544,6 +544,114 @@ $(function () {
             }).on('click', function (e) {
                 e.preventDefault();
             });
+        },
+        // set ken zukan story view template
+        setStory = function () {
+            var
+                $storyBox = $('#story-box'),
+                tag = '',
+                $frame,
+                $elm,
+                more,
+                season,
+                backUrl,
+                imgMain,
+                caption;
+            if ($storyBox.length) {
+                season = $storyBox.data('season');
+                backUrl = $storyBox.data('back');
+                console.log('season', season);
+                console.log('backUrl', backUrl);
+                $frame = $storyBox.find('.frame');
+                if ($frame.length) {
+                    tag += '<div class="text-center row" style="margin-top:-15px;">';
+                    console.log($frame);
+                    $frame.each(function (idx, elm) {
+                        if (idx === 0) {
+                            tag += '<p>';
+                            tag += '<img src="http://4.bp.blogspot.com/-vwQJvGoXZtg/ViTvzIau-pI/AAAAAAAAA-Q/6THLDuzPpOA/s640/ken-kobanashi-banner-1024px.png" />';
+                            tag += '</p>';
+                        }
+                        $elm = $(elm);
+                        more = $elm.data('more');
+                        imgMain = $elm.find('img.main').eq(0).attr('src');
+                        caption = $elm.find('.caption').eq(0).html();
+                        console.log('more', more);
+                        console.log('imgMain', imgMain);
+                        console.log('caption', caption);
+                        tag += '<div class="col col-md-6 col-md-offset-3 col-xs-12">';
+                        if (imgMain) {
+                            if (season) {
+                                if (season === 'about' || season === 'favorite') {
+                                    seasonClass = ' ' + season;
+                                } else if (parseInt(season, 10) > 0) {
+                                    seasonClass = ' season' + season;
+                                }
+                            }
+                            tag += '<div class="frame' + seasonClass + '">';
+                            tag += '<img class="main" src="';
+                            tag += imgMain;
+                            tag += '" />';
+                            tag += '</div>';
+                        }
+                        if (caption) {
+                            tag += '<p class="text-left padding">';
+                            tag += caption;
+                            tag += '</p>';
+                        }
+                        if (more) {
+                            tag += '<a name="more"></a>';
+                        }
+
+                        if (backUrl && idx === ($frame.length - 1)) {
+                            tag += '<p>';
+                            tag += '<a href="' + backUrl + '" class="btn btn-success">';
+                            tag += '小話リストへ戻る';
+                            tag += '</a>';
+                            tag += '<p>';
+                        }
+                        tag += '</div>';
+
+                    });
+                    tag += '</div>';
+                }
+                $storyBox.html(tag).fadeIn().removeClass('hidden');
+            }
+        },
+        /////////////////////////////////////////////////////////////
+        // 外部リンクに_blank, class, 属性付与
+        // 2015/8/25追加
+        // http://datsugoku.hatenablog.jp/entry/2014/05/11/205638
+        setExternalLink = function () {
+            $("a[href^=http]")
+                .not('.external')
+                .not('[href*="' + location.hostname + '"]')
+                //.not( ":has(img)" )
+                .attr({
+                    target: "_blank",
+                    rel: "nofollow"
+                })
+                .addClass("exLink");
+        },
+        /////////////////////////////////////////////////////////////
+        // ページトップへ戻るボタンの表示ロジック
+        // 2015/8/25追加
+        setToTop = function () {
+            var
+                s = $(this).scrollTop(),
+                m = 300,
+                $scrollTop = $("#scroll-top");
+            if ($scrollTop.length) {
+                $(window).scroll(function () {
+                    if (s > m) {
+                        //console.log('scroll in');
+                        $scrollTop.fadeIn('slow');
+                    } else if (s < m) {
+                        //console.log('scroll out');
+                        $scrollTop.fadeOut('slow');
+                    }
+                });
+            }
         };
 
     //
@@ -551,8 +659,8 @@ $(function () {
     //
     var
         $labels, $attrs, labels = [];
-    console.log('pageType', pageType);
-    console.log('pageUrl', pageUrl);
+    //console.log('pageType', pageType);
+    //console.log('pageUrl', pageUrl);
 
     setMetaTag();
     setAspect();
@@ -594,4 +702,8 @@ $(function () {
     setFooterNavi();
 
     disableImageLink();
+
+    setExternalLink();
+
+    setStory();
 });
