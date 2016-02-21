@@ -214,8 +214,8 @@ $(function () {
                     "numPages": 8,
                     "firstText": " First ",
                     "lastText": " Last ",
-                    "nextText": " Next ",
-                    "prevText": " Prev "
+                    "nextText": " &lt; ",
+                    "prevText": " &gt; "
                 },
                 m = location.href,
                 l = m.indexOf("/search/label/") !== -1,
@@ -683,7 +683,7 @@ $(function () {
         // Main
         //
         main = function () {
-            //console.log = function () {};
+            console.log = function () {};
 
             var
                 $labels, $attrs, labels = [];
