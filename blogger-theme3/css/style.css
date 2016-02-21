@@ -507,12 +507,12 @@ h4.story-title {
     font-weight: 400;
 }
 
-.post .panel-heading navi {
+.post .panel-heading nav {
     height: 38px;
     overflow: hidden;
 }
 
-.post.item .panel-heading navi {
+.post.item .panel-heading nav {
     height: auto;
 }
 
