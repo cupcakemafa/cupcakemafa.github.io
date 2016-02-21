@@ -277,6 +277,7 @@ $(function () {
                 g = l ? "/search/label/" + a + "?updated-max=" : "/search?updated-max=";
                 k = o.feed.entry.length;
                 e = Math.ceil(k / pageNaviConf.perPage);
+                console.log('e', e);
                 if (e <= 1) {
                     return;
                 }
@@ -288,6 +289,7 @@ $(function () {
                     b = o.feed.entry[c].published.$t;
                     f = b.substring(0, 19) + b.substring(23, 29);
                     f = encodeURIComponent(f);
+                    console.log(m + '/' + f);
                     if (m.indexOf(f) != -1) {
                         n = d;
                     }
@@ -369,7 +371,7 @@ $(function () {
             //console.log('$pageNavi', $pageNavi);
             if ($pageNavi.length) {
                 b = location.href;
-                console.log('b', b);
+                //console.log('b', b);
                 if (b.indexOf('?q=') !== -1 || b.indexOf('.html') !== -1) {
                     //console.log('return');
                     return;
@@ -382,7 +384,7 @@ $(function () {
                 } else {
                     url += '/feeds/posts/summary?alt=json-in-script&max-results=99999';
                 }
-                console.log('url', url);
+                //console.log('url', url);
                 //blogger API を実行する
                 $.ajax({
                     type: 'GET',
