@@ -695,6 +695,9 @@ $(function () {
     if (pageType === 'index') {
         setPageListNavi();
     } else {
+        if(pageType==='item') {
+            $('.post-col').addClass('col col-md-6 col-xs-12');
+        }
         setSinglePageNavi();
     }
 

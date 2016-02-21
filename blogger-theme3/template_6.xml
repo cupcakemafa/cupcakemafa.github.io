@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
-<html b:version='2' 
-      expr:dir='data:blog.languageDirection' 
-      xmlns='http://www.w3.org/1999/xhtml' 
-      xmlns:b='http://www.google.com/2005/gml/b' 
-      xmlns:data='http://www.google.com/2005/gml/data' 
-      xmlns:expr='http://www.google.com/2005/gml/expr' 
+<html b:version='2'
+      expr:dir='data:blog.languageDirection'
+      xmlns='http://www.w3.org/1999/xhtml'
+      xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data'
+      xmlns:expr='http://www.google.com/2005/gml/expr'
       xmlns:og='http://ogp.me/ns#' lang='ja'>
     <head>
         <meta charset='utf-8' />
@@ -32,7 +32,7 @@
         <b:if cond='data:blog.isMobile'>
             <meta content='noindex,nofollow' name='robots' />
         </b:if>
-        
+
         <title>
             <b:if cond='data:blog.url == data:blog.homepageUrl'>
             <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
@@ -52,11 +52,11 @@
                     |
                 <b:else/>
                     <b:if cond='data:blog.url != data:blog.homepageUrl'>
-                        <data:blog.pageTitle/> - All Post | 
+                        <data:blog.pageTitle/> - All Post |
                     </b:if>
                 </b:if>
             <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
-                Page Not Found | 
+                Page Not Found |
             </b:if>
             <data:blog.title/>
         </title>
@@ -92,11 +92,68 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <style>
+            body {
+              counter-reset: story-title;           /* section のカウンタを 0 にセット */
+            }
+
+            h4, h5 {
+                margin: 8px;
+            }
+
+            hr.dashed {
+                border-bottom: 1px dashed #eee;
+                margin: 6px auto 2px;
+            }
+
+            .content-title-box {
+                padding: 1em;
+                border: 7px solid #333;
+                border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+                margin: 1em;
+                width: 90%;
+            }
+
+            .content-title {
+                font-size: 360%;
+                font-family: 'Chewy', cursive;
+                vertical-align: middle;
+                line-height: 100%;
+                margin-top : 8px;
+            }
+
+            h4.story-title:before {
+                font-family: 'Chewy', cursive;
+                counter-increment:story-title;
+                content:counter(story-title) ". ";
+            }
+
+            /* 02.テープ */
+            h4.story-title {
+                position:relative;
+                margin-bottom:16px;
+                font:bold 18px/1.8 Arial, Helvetica, sans-serif;
+                text-align:center;
+                color:#333;
+                background:#F5F356;
+                -webkit-transform: rotate(-3deg) skew(-3deg);
+                -moz-transform: rotate(-3deg) skew(-3deg);
+                -o-transform: rotate(-3deg) skew(-3deg);
+                -ms-transform: rotate(-3deg) skew(-3deg);
+                transform: rotate(-3deg) skew(-3deg);
+                text-shadow:1px 1px 0 rgba(255,255,255,1);
+                box-shadow:	0 1px 2px 0 rgba(0,0,0,0.2),
+                            12px 0 0 0 #f0e800,
+                            -12px 0 0 0 #f0e800;
+                letter-spacing: -1px;
+            }
+        </style>
     </head>
     <body expr:class='data:blog.mobileClass'>
-        
+
         <div id='page-type' class='param'><data:blog.pageType/></div>
-        
+
         <span class='comment hidden'>Start of SEO Meta Tag</span>
         <b:if cond='data:blog.homepageUrl == data:blog.url'>
             <div class='meta-tag param'>
@@ -298,223 +355,219 @@
                                 </article>
                             </b:if>
 
-                            <div class="row">
-                                <b:loop values='data:posts' var='post'>
-                                    <div class="post-col">
-                                        <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-                                            <div id='post-url' class='param'><data:post.url/></div>
+                            <b:loop values='data:posts' var='post'>
+                                <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+                                    <div id='post-url' class='param'><data:post.url/></div>
 
-                                            <span class='comment hidden'>Start meta data</span>
-                                            <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-                                                <b:if cond='data:post.canonicalUrl'>
-                                                    <div class='meta-tag param'>
-                                                        <div class='attr' data-key='itemprop'>url</div>
-                                                        <div class='attr' data-key='content'><data:post.canonicalUrl/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:url</div>
-                                                        <div class='attr' data-key='content'><data:blog.canonicalUrl/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.firstImageUrl'>
-                                                    <div class='meta-tag param'>
-                                                        <div class='attr' data-key='itemprop'>image</div>
-                                                        <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:card</div>
-                                                        <div class='attr' data-key='content'>summary_large_image</div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:image:src</div>
-                                                        <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:image</div>
-                                                        <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.title'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:title</div>
-                                                        <div class='attr' data-key='content'><data:post.title/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:title</div>
-                                                        <div class='attr' data-key='content'><data:post.title/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.metaDescription'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:description</div>
-                                                        <div class='attr' data-key='content'><data:blog.metaDescription/></div>
-                                                    </div>
-                                                <b:else/>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:description</div>
-                                                        <div class='attr' data-key='content'><data:post.snippet/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.sharePostUrl'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:url</div>
-                                                        <div class='attr' data-key='content'><data:post.sharePostUrl/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.pageName'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:title</div>
-                                                        <div class='attr' data-key='content'><data:blog.pageName/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.metaDescription'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:description</div>
-                                                        <div class='attr' data-key='content'><data:blog.metaDescription/></div>
-                                                    </div>
-                                                <b:elseif cond='data:blog.snippet'/>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:description</div>
-                                                        <div class='attr' data-key='content'><data:post.snippet/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.timestampISO8601'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>article:published_time</div>
-                                                        <div class='attr' data-key='content'><data:post.timestampISO8601/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.labels'>
-                                                    <b:loop values='data:post.labels' var='label'>
-                                                        <div class='param meta-tag label'>
-                                                            <div class='attr' data-key='name'>article:tag</div>
-                                                            <div class='attr' data-key='content'><data:label.name/></div>
-                                                        </div>
-                                                    </b:loop>
-                                                </b:if>
-                                                <div class='param meta-tag'>
-                                                    <div class='attr' data-key='name'>article:section</div>
-                                                    <div class='attr' data-key='content'>Art, Culture, Lifestyle</div>
+                                    <span class='comment hidden'>Start meta data</span>
+                                    <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                        <b:if cond='data:post.canonicalUrl'>
+                                            <div class='meta-tag param'>
+                                                <div class='attr' data-key='itemprop'>url</div>
+                                                <div class='attr' data-key='content'><data:post.canonicalUrl/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:url</div>
+                                                <div class='attr' data-key='content'><data:blog.canonicalUrl/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.firstImageUrl'>
+                                            <div class='meta-tag param'>
+                                                <div class='attr' data-key='itemprop'>image</div>
+                                                <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:card</div>
+                                                <div class='attr' data-key='content'>summary_large_image</div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:image:src</div>
+                                                <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:image</div>
+                                                <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.title'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:title</div>
+                                                <div class='attr' data-key='content'><data:post.title/></div>
+                                            </div>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:title</div>
+                                                <div class='attr' data-key='content'><data:post.title/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.metaDescription'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:description</div>
+                                                <div class='attr' data-key='content'><data:blog.metaDescription/></div>
+                                            </div>
+                                        <b:else/>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:description</div>
+                                                <div class='attr' data-key='content'><data:post.snippet/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.sharePostUrl'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>twitter:url</div>
+                                                <div class='attr' data-key='content'><data:post.sharePostUrl/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.pageName'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:title</div>
+                                                <div class='attr' data-key='content'><data:blog.pageName/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.metaDescription'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:description</div>
+                                                <div class='attr' data-key='content'><data:blog.metaDescription/></div>
+                                            </div>
+                                        <b:elseif cond='data:blog.snippet'/>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>og:description</div>
+                                                <div class='attr' data-key='content'><data:post.snippet/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.timestampISO8601'>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>article:published_time</div>
+                                                <div class='attr' data-key='content'><data:post.timestampISO8601/></div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:post.labels'>
+                                            <b:loop values='data:post.labels' var='label'>
+                                                <div class='param meta-tag label'>
+                                                    <div class='attr' data-key='name'>article:tag</div>
+                                                    <div class='attr' data-key='content'><data:label.name/></div>
+                                                </div>
+                                            </b:loop>
+                                        </b:if>
+                                        <div class='param meta-tag'>
+                                            <div class='attr' data-key='name'>article:section</div>
+                                            <div class='attr' data-key='content'>Art, Culture, Lifestyle</div>
+                                        </div>
+                                    </b:if>
+                                    <span class='comment hidden'>End meta data</span>
+
+                                    <span class='comment hidden'>Start post data</span>
+                                    <span class='comment hidden'>for top</span>
+                                    <div class='panel-heading text-center'>
+                                        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                                            <b:if cond='data:post.firstImageUrl'>
+                                                <div class='text-center'>
+                                                    <a expr:href='data:post.url' expr:title='data:post.title'>
+                                                        <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-rounded'/>
+                                                    </a>
                                                 </div>
                                             </b:if>
-                                            <span class='comment hidden'>End meta data</span>
-
-                                            <span class='comment hidden'>Start post data</span>
-                                            <span class='comment hidden'>for top</span>
-                                            <div class='panel-heading text-center'>
-                                                <b:if cond='data:blog.pageType == &quot;index&quot;'>
-                                                    <b:if cond='data:post.firstImageUrl'>
-                                                        <div class='text-center'>
-                                                            <a expr:href='data:post.url' expr:title='data:post.title'>
-                                                                <img expr:src='data:post.firstImageUrl' expr:alt='data:post.title' class='thumb img-rounded'/>
+                                        </b:if>
+                                        <b:if cond='data:post.dateHeader'>
+                                            <h5 id='post-date'>
+                                                <i class='fa fa-clock-o'/>
+                                                <data:post.dateHeader/>
+                                            </h5>
+                                        </b:if>
+                                        <b:if cond='data:post.labels'>
+                                            <nav>
+                                                <h5>
+                                                    <ul class='pager'>
+                                                    <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
+                                                        <li>
+                                                            <a class='button button-small button-stable activated' expr:href='data:label.url'>
+                                                                <data:label.name/>
                                                             </a>
-                                                        </div>
-                                                    </b:if>
-                                                </b:if>
-                                                <b:if cond='data:post.dateHeader'>
-                                                    <h5 id='post-date'>
-                                                        <i class='fa fa-clock-o'/>
-                                                        <data:post.dateHeader/>
-                                                    </h5>
-                                                </b:if>
-                                                <b:if cond='data:post.labels'>
-                                                    <nav>
-                                                        <h5>
-                                                            <ul class='pager'>
-                                                            <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
-                                                                <li>
-                                                                    <a class='button button-small button-stable activated' expr:href='data:label.url'>
-                                                                        <data:label.name/>
-                                                                    </a>
-                                                                </li>
-                                                            </b:loop>
-                                                            </ul>
-                                                        </h5>
-                                                    </nav>
-                                                </b:if>
-                                                <h2 class='post-title panel-title'>
-                                                    <a id='post-title' expr:href='data:post.url' expr:title='data:post.title'>
-                                                        <data:post.title/>
-                                                    </a>
-                                                </h2>
-                                            </div>
-                                            <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
-                                                <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-                                                    <data:post.body/>
-                                                <b:else/>
-                                                    <div class='post-summary hidden'>
-                                                        <div id='id'><data:post.id/></div>
-                                                        <div id='title'><data:post.title/></div>
-                                                        <div id='url'><data:post.url/></div>
-                                                        <div id='content'>
-                                                            <data:post.body/>
-                                                        </div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-                                                    <b:if cond='data:post.location'>
-                                                        <div class='post-location text-center'>
-                                                            <h3>
-                                                                <i class='fa fa-map-marker'/> Map<br/>
-                                                            </h3>
-                                                            ADDRESS
-                                                            <hr class="embed span6" />
-                                                            <h5>
-                                                                <data:post.location.name/>
-                                                            </h5>
-                                                            <big>
-                                                                <ul class='pager'>
-                                                                    <li>
-                                                                        <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
-                                                                            <i class='fa fa-location-arrow'/> Google Map でみる
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </big>
-                                                        </div>
-                                                    </b:if>
-
-                                                    <b:if cond='data:post.labels'>
-                                                        <nav>
-                                                            <h3 class='text-center'><i class='fa fa-tags'/> Tags</h3>
-                                                            <h5>
-                                                                <ul class='pager'>
-                                                                <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
-                                                                    <li>
-                                                                        <a class='' expr:href='data:label.url'>
-                                                                            <data:label.name/>
-                                                                        </a>
-                                                                    </li>
-                                                                </b:loop>
-                                                                </ul>
-                                                            </h5>
-                                                        </nav>
-                                                    </b:if>
-
-                                                    <div class='post-social-share text-center padding hidden'>
-                                                        <h3><i class="fa fa-share-square-o"></i> Share</h3>
-                                                    </div>
-                                                </b:if>
-
-                                                <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-                                                    <span class='comment hidden'>Related post widget start</span>
-                                                    <div id='related-posts' class='text-center hidden'>
-                                                        <h3 class='title'>
-                                                            <i class='fa fa-newspaper-o'></i>
-                                                            Related Articles
-                                                        </h3>
-                                                        <div class='content'></div>
-                                                    </div>
-                                                </b:if>
-                                            </div>
-
-                                            <div expr:id='&quot;footer-&quot; + data:post.id' class='panel-footer text-center'>
-                                            </div>
-                                            <span class='comment hidden'>End post data</span>
-                                        </article>
+                                                        </li>
+                                                    </b:loop>
+                                                    </ul>
+                                                </h5>
+                                            </nav>
+                                        </b:if>
+                                        <h2 class='post-title panel-title'>
+                                            <a id='post-title' expr:href='data:post.url' expr:title='data:post.title'>
+                                                <data:post.title/>
+                                            </a>
+                                        </h2>
                                     </div>
-                                </b:loop>
-                            </div>
+                                    <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
+                                        <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                            <data:post.body/>
+                                        <b:else/>
+                                            <div class='post-summary hidden'>
+                                                <div id='id'><data:post.id/></div>
+                                                <div id='title'><data:post.title/></div>
+                                                <div id='url'><data:post.url/></div>
+                                                <div id='content'>
+                                                    <data:post.body/>
+                                                </div>
+                                            </div>
+                                        </b:if>
+                                        <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                            <b:if cond='data:post.location'>
+                                                <div class='post-location text-center'>
+                                                    <h3>
+                                                        <i class='fa fa-map-marker'/> Map<br/>
+                                                    </h3>
+                                                    ADDRESS
+                                                    <hr class="embed span6" />
+                                                    <h5>
+                                                        <data:post.location.name/>
+                                                    </h5>
+                                                    <big>
+                                                        <ul class='pager'>
+                                                            <li>
+                                                                <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                    <i class='fa fa-location-arrow'/> Google Map でみる
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </big>
+                                                </div>
+                                            </b:if>
+
+                                            <b:if cond='data:post.labels'>
+                                                <nav>
+                                                    <h3 class='text-center'><i class='fa fa-tags'/> Tags</h3>
+                                                    <h5>
+                                                        <ul class='pager'>
+                                                        <b:loop index = 'i' values = 'data:post.labels' var = 'label'>
+                                                            <li>
+                                                                <a class='' expr:href='data:label.url'>
+                                                                    <data:label.name/>
+                                                                </a>
+                                                            </li>
+                                                        </b:loop>
+                                                        </ul>
+                                                    </h5>
+                                                </nav>
+                                            </b:if>
+
+                                            <div class='post-social-share text-center padding hidden'>
+                                                <h3><i class="fa fa-share-square-o"></i> Share</h3>
+                                            </div>
+                                        </b:if>
+
+                                        <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+                                            <span class='comment hidden'>Related post widget start</span>
+                                            <div id='related-posts' class='text-center hidden'>
+                                                <h3 class='title'>
+                                                    <i class='fa fa-newspaper-o'></i>
+                                                    Related Articles
+                                                </h3>
+                                                <div class='content'></div>
+                                            </div>
+                                        </b:if>
+                                    </div>
+
+                                    <div expr:id='&quot;footer-&quot; + data:post.id' class='panel-footer text-center'>
+                                    </div>
+                                    <span class='comment hidden'>End post data</span>
+                                </article>
+                            </b:loop>
 
                             <b:if cond='data:blog.pageType == &quot;index&quot;'>
                                 <div class='page-navi text-center padding margin-bottom hidden'>
