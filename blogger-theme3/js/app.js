@@ -644,6 +644,7 @@ $(function () {
             $('.post-title a').each(function(idx, elm){
                 $elm = $(elm);
                 title = $elm.text().replace( /　/g , '<br />' );
+                $elm.html(title);
             });
         }
         /////////////////////////////////////////////////////////////
