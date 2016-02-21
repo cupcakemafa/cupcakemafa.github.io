@@ -632,6 +632,13 @@ $(function () {
                 })
                 .addClass("exLink");
         },
+        trimThumb = function() {
+            var $elm;
+            $('img.thumb').each(function(idx, elm) {
+                $elm = $(elm);
+                $elm.height($elm.width());
+            });
+        },
         /////////////////////////////////////////////////////////////
         // ページトップへ戻るボタンの表示ロジック
         // 2015/8/25追加
@@ -701,6 +708,8 @@ $(function () {
 
     if(pageType !== 'item') {
         $('.post-col').addClass('col col-md-6 col-xs-12');
+
+        trimThumb();
     }
 
     setFooterNavi();
