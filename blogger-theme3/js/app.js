@@ -636,6 +636,7 @@ $(function () {
         trimThumb = function() {
             var $elm;
             $('img.thumb').each(function(idx, elm) {
+                console.log('$elm', $elm);
                 $elm = $(elm);
                 $elm.height($elm.width());
             });
