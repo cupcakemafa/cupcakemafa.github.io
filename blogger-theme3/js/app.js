@@ -211,7 +211,7 @@ $(function () {
         pageListNavi = function (o) {
             var pageNaviConf = {
                     "perPage": 10,
-                    "numPages": 5,
+                    "numPages": 8,
                     "firstText": " First ",
                     "lastText": " Last ",
                     "nextText": " Next ",
@@ -251,7 +251,7 @@ $(function () {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
-                        console.log(i + '/' + e + '/' + a);
+                        console.log(i + '/' + e + '/' + a + '/' + f);
                         if (i === e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {
