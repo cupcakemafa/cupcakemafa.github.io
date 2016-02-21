@@ -211,11 +211,11 @@ $(function () {
         pageListNavi = function (o) {
             var pageNaviConf = {
                     "perPage": 10,
-                    "numPages": 8,
+                    "numPages": 6,
                     "firstText": " First ",
                     "lastText": " Last ",
-                    "nextText": " &lt; ",
-                    "prevText": " &gt; "
+                    "nextText": " &gt; ",
+                    "prevText": " &lt; "
                 },
                 m = location.href,
                 l = m.indexOf("/search/label/") !== -1,
