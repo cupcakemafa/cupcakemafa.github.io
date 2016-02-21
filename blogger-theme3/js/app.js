@@ -41,7 +41,7 @@ $(function () {
         trimThumb = function () {
             var $elm;
             $('img.thumb').each(function (idx, elm) {
-                console.log('$elm', $elm);
+                //console.log('$elm', $elm);
                 $elm = $(elm);
                 $elm.height($elm.width());
             });
@@ -181,17 +181,17 @@ $(function () {
                 tag += '</a>';
                 tag += '</span>';
 
-                tag += '<span>';
-                tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
-                tag += '<i class="fa fa-linkedin fa-2x"/></i>';
-                tag += '</a>';
-                tag += '</span>';
+//                tag += '<span>';
+//                tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
+//                tag += '<i class="fa fa-linkedin fa-2x"/></i>';
+//                tag += '</a>';
+//                tag += '</span>';
 
-                tag += '<span>';
-                tag += '<a class="btn-circle stumbleupon" href="http://www.stumbleupon.com/submit?url=' + shareUrl + '" target="_blank">';
-                tag += '<i class="fa fa-stumbleupon fa-2x"/></i>';
-                tag += '</a>';
-                tag += '</span>';
+//                tag += '<span>';
+//                tag += '<a class="btn-circle stumbleupon" href="http://www.stumbleupon.com/submit?url=' + shareUrl + '" target="_blank">';
+//                tag += '<i class="fa fa-stumbleupon fa-2x"/></i>';
+//                tag += '</a>';
+//                tag += '</span>';
 
                 tag += '<span>';
                 tag += '<a class="btn-circle tumblr" href="http://www.tumblr.com/share/link?url=' + shareUrl + '" target="_blank">';
@@ -251,7 +251,7 @@ $(function () {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
-                        console.log(i + '/' + e);
+                        console.log(i + '/' + e + '/' + a);
                         if (i === e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {

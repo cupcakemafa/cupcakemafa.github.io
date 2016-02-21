@@ -165,20 +165,19 @@ hr.dashed {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     box-shadow: 0 4px 4px #999;
     padding: 0px;
     text-decoration: none;
     text-align: center;
     color: #fff;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: normal;
-    line-height: 2em;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    padding-top: 9px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding-top: 8px;
 }
 
 .btn-circle.facebook {
