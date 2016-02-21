@@ -534,6 +534,11 @@ h4.story-title {
     height: auto;
 }
 
+.post .post-summary {
+    height: 64px;
+    overflow: hidden;
+}
+
 .post .panel-footer .img-circle,
 .post .panel-footer .img-rounded {
     width: 48px;

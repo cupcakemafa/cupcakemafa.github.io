@@ -41,7 +41,7 @@ $(function () {
         setPostSummary = function () {
             // set post summary text
             $('.post-summary').each(function (index, elm, arr) {
-                var summaryLength = 80,
+                var SUMMARY_LENGTH = 64,
                     $elm = $(elm),
                     id = $elm.find('#id').text(),
                     url = $elm.find('#url').text(),
@@ -49,7 +49,7 @@ $(function () {
                     $content = $elm.find('#content'),
                     $imgs = $content.find('img'),
                     content = $content.text(),
-                    summary = content.substring(0, summaryLength),
+                    summary = content.substring(0, SUMMARY_LENGTH),
                     summaryTag = '',
                     imgTag = '',
                     attr = '',
