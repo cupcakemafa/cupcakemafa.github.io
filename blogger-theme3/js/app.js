@@ -291,6 +291,7 @@ $(function () {
                     f = encodeURIComponent(f);
                     console.log(m + '/' + f);
                     if (m.indexOf(f) != -1) {
+                        console.log('d', d);
                         n = d;
                     }
                     h.push(g + f + "&max-results=" + pageNaviConf.perPage);
