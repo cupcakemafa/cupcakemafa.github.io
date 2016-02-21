@@ -165,20 +165,20 @@ hr.dashed {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 5px 5px #999;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 4px #999;
     padding: 0px;
     text-decoration: none;
     text-align: center;
     color: #fff;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: normal;
     line-height: 2em;
     border-radius: 25px;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
-    padding-top: 11px;
+    padding-top: 9px;
 }
 
 .btn-circle.facebook {
@@ -341,6 +341,7 @@ h4.story-title:before {
 
 
 /* 02.テープ */
+
 .taped,
 h4.story-title {
     position: relative;
@@ -364,6 +365,10 @@ h4.story-title {
 
 
 /* Start layout */
+
+nav.navbar .container-fluid {
+    max-width: 980px;
+}
 
 .navbar-brand {
     padding: 5px;
@@ -485,7 +490,8 @@ h4.story-title {
 }
 
 #body {
-    margin-top: 62px;
+    max-width: 980px;
+    margin: 62px auto;
 }
 
 .pager li {
