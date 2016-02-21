@@ -442,7 +442,7 @@
                                                     </h2>
                                                 </div>
                                             </div>
-                                            <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body'>
+                                            <div expr:id='&quot;post-&quot; + data:post.id' class='panel-body post-body'>
                                                 <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
                                                     <data:post.body/>
                                                 <b:else/>
