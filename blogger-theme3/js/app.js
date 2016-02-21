@@ -647,11 +647,11 @@ $(function () {
                 title = $elm.text().replace(/　/g, '<br />');
                 $elm.html(title);
             });
-        }
+        },
         /////////////////////////////////////////////////////////////
         // ページトップへ戻るボタンの表示ロジック
         // 2015/8/25追加
-    setToTop = function () {
+        setToTop = function () {
             var
                 s = $(this).scrollTop(),
                 m = 300,
