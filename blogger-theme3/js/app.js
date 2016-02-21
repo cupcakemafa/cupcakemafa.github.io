@@ -1,5 +1,5 @@
 $(function () {
-    console.log = function () {};
+    //console.log = function () {};
 
     var pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
@@ -202,8 +202,8 @@ $(function () {
                 },
                 m = location.href,
                 l = m.indexOf("/search/label/") !== -1,
-                a = l ? m.substr(m.indexOf("/search/label/") + 14,
-                    m.length) : '',
+                a = l ? m.substr(m.indexOf("/search/label/") + 14, m.length) : '',
+                b = '',
                 g, k, e, n, h,
                 d, c, b, f,
                 show = function (f, e, a) {
@@ -225,7 +225,7 @@ $(function () {
                     if (c <= 0) {
                         c = 1;
                     }
-                    var b = '<p class="pages padding">Pages ' + e + ' of ' + a + "</p> ";
+                    b = '<p class="pages padding">Pages ' + e + ' of ' + a + "</p> ";
                     b += '<div class="btn-group">';
                     if (c > 1) {
                         b += '<a class="btn btn-default" href="' + f[1] + '">' + pageNaviConf.firstText + "</a>";
@@ -234,6 +234,7 @@ $(function () {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
+                        console.log(i + '/' + e);
                         if (i === e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {
@@ -313,7 +314,7 @@ $(function () {
                                 if ($imgs.length) {
                                     postThumb = $imgs.eq(0).attr('src');
                                     if (postThumb) {
-                                        tag += '<img class="img-rounded" src="' + postThumb + '" />';
+                                        tag += '<img class="thumb img-rounded" src="' + postThumb + '" />';
                                     }
                                 }
 
