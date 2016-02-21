@@ -341,7 +341,7 @@ h4.story-title:before {
 
 
 /* 02.テープ */
-
+.taped,
 h4.story-title {
     position: relative;
     margin-bottom: 16px;
@@ -504,9 +504,10 @@ h4.story-title {
 
 .post-title {
     font-size: 146%;
-    font-weight: 400;
+    font-weight: 800;
     overflow: hidden;
     height: 50px;
+    margin-top: 8px;
 }
 
 .post.item .post-title {
