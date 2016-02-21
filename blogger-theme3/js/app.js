@@ -1,5 +1,4 @@
 $(function () {
-    console.log = function () {};
 
     var pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
@@ -633,26 +632,26 @@ $(function () {
                 })
                 .addClass("exLink");
         },
-        trimThumb = function() {
+        trimThumb = function () {
             var $elm;
-            $('img.thumb').each(function(idx, elm) {
+            $('img.thumb').each(function (idx, elm) {
                 console.log('$elm', $elm);
                 $elm = $(elm);
                 $elm.height($elm.width());
             });
         },
-        setTitleCR = function() {
+        setTitleCR = function () {
             var title, $elm;
-            $('.post-title a').each(function(idx, elm){
+            $('.post-title a').each(function (idx, elm) {
                 $elm = $(elm);
-                title = $elm.text().replace( /　/g , '<br />' );
+                title = $elm.text().replace(/　/g, '<br />');
                 $elm.html(title);
             });
         }
         /////////////////////////////////////////////////////////////
         // ページトップへ戻るボタンの表示ロジック
         // 2015/8/25追加
-        setToTop = function () {
+    setToTop = function () {
             var
                 s = $(this).scrollTop(),
                 m = 300,
@@ -668,66 +667,72 @@ $(function () {
                     }
                 });
             }
+        },
+        //
+        // Main
+        //
+        main = function () {
+            //console.log = function () {};
+
+            var
+                $labels, $attrs, labels = [];
+            //console.log('pageType', pageType);
+            //console.log('pageUrl', pageUrl);
+
+            setMetaTag();
+            setAspect();
+            setTitleCR();
+
+            if (pageType === 'index') {
+                setPostSummary();
+                // @todo set pager
+            } else if (pageType === 'item') {
+                $('.post').addClass('item');
+                // set share buttons
+                setSocialShareTag(pageUrl);
+                // @todo set related-posts
+                $labels = $('.param.label');
+                //console.log($labels);
+                $labels.each(function (labelIdx, labelElm) {
+                    $attrs = $(labelElm).find('.attr');
+                    $attrs.each(function (attrIdx, attrElm) {
+                        if ($(attrElm).attr('data-key') === 'content') {
+                            if (attrElm.innerText) {
+                                labels.push(attrElm.innerText);
+                            }
+                        }
+                        //console.log('attrIdx', attrIdx);
+                        //console.log('labelIdx', labelIdx);
+                        if (labelIdx === ($labels.length - 1)) {
+                            if (attrIdx === ($attrs.length - 1)) {
+                                setRelatedPostNavi(labels);
+                            }
+                        }
+                    });
+                });
+            }
+
+            if (pageType === 'index') {
+                setPageListNavi();
+            } else {
+                setSinglePageNavi();
+            }
+
+            if (pageType !== 'item') {
+                $('.post-col').addClass('col col-md-6 col-xs-12');
+            }
+
+            trimThumb();
+
+            setFooterNavi();
+
+            disableImageLink();
+
+            setExternalLink();
+
+            setStory();
+
         };
 
-    //
-    // Main
-    //
-    var
-        $labels, $attrs, labels = [];
-    //console.log('pageType', pageType);
-    //console.log('pageUrl', pageUrl);
-
-    setMetaTag();
-    setAspect();
-    setTitleCR();
-
-    if (pageType === 'index') {
-        setPostSummary();
-        // @todo set pager
-    } else if (pageType === 'item') {
-        $('.post').addClass('item');
-        // set share buttons
-        setSocialShareTag(pageUrl);
-        // @todo set related-posts
-        $labels = $('.param.label');
-        //console.log($labels);
-        $labels.each(function (labelIdx, labelElm) {
-            $attrs = $(labelElm).find('.attr');
-            $attrs.each(function (attrIdx, attrElm) {
-                if ($(attrElm).attr('data-key') === 'content') {
-                    if (attrElm.innerText) {
-                        labels.push(attrElm.innerText);
-                    }
-                }
-                //console.log('attrIdx', attrIdx);
-                //console.log('labelIdx', labelIdx);
-                if (labelIdx === ($labels.length - 1)) {
-                    if (attrIdx === ($attrs.length - 1)) {
-                        setRelatedPostNavi(labels);
-                    }
-                }
-            });
-        });
-    }
-
-    if (pageType === 'index') {
-        setPageListNavi();
-    } else {
-        setSinglePageNavi();
-    }
-
-    if(pageType !== 'item') {
-        $('.post-col').addClass('col col-md-6 col-xs-12');
-    }
-
-    trimThumb();
-
-    setFooterNavi();
-
-    disableImageLink();
-
-    setExternalLink();
-
-    setStory();
+    main();
 });
