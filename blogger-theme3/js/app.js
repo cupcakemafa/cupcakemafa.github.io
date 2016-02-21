@@ -288,7 +288,7 @@ $(function () {
                     c = (d - 1) * pageNaviConf.perPage - 1;
                     b = o.feed.entry[c].published.$t;
                     f = b.substring(0, 19) + b.substring(23, 29);
-                    f = encodeURIComponent(f);
+                    //f = encodeURIComponent(f);
                     console.log(m + '/' + f);
                     if (m.indexOf(f) != -1) {
                         console.log('d', d);
