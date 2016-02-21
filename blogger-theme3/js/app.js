@@ -1,5 +1,5 @@
 $(function () {
-    //console.log = function () {};
+    console.log = function () {};
 
     var pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
