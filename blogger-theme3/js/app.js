@@ -88,20 +88,20 @@ $(function () {
                 //console.log('$content', $content);
                 //console.log('$imgs', $imgs);
                 //console.log($('#footer-'+id));
-                $imgs.each(function (index, img, arr) {
-                    if (index > 0 && 5 > index) {
-                        //console.log('img', img);
-                        attr = $(img).attr('src');
-                        //clas='img-rounded';
-                        clas = 'img-circle';
-                        //console.log('attr', attr);
-                        imgTag += '<img src="' + attr + '" class="' + clas + '" />';
-                    }
-                });
-                if (imgTag.length) {
-                    imgTag = '<a href="' + url + '" title="' + title + '">' + imgTag + '</a>';
-                    $('#footer-' + id).html(imgTag);
-                }
+//                $imgs.each(function (index, img, arr) {
+//                    if (index > 0 && 5 > index) {
+//                        //console.log('img', img);
+//                        attr = $(img).attr('src');
+//                        //clas='img-rounded';
+//                        clas = 'img-circle';
+//                        //console.log('attr', attr);
+//                        imgTag += '<img src="' + attr + '" class="' + clas + '" />';
+//                    }
+//                });
+//                if (imgTag.length) {
+//                    imgTag = '<a href="' + url + '" title="' + title + '">' + imgTag + '</a>';
+//                    $('#footer-' + id).html(imgTag);
+//                }
             });
         },
         // maintain iframe aspect for fluid width
