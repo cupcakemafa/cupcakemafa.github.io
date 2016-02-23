@@ -730,7 +730,7 @@ $(function () {
                 setSinglePageNavi();
             }
 
-            if (pageType !== 'item') {
+            if (pageType !== 'item' && pageType !== 'static_page') {
                 $('.post-col').addClass('col col-md-6 col-xs-12');
             }
 
