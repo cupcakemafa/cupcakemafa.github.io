@@ -511,7 +511,16 @@ nav.navbar .container-fluid {
     margin-bottom: 4px;
 }
 
-.post {}
+.post {
+}
+
+.post.item {
+    line-height: 170%;
+}
+
+.post.item p {
+    margin-bottom:16px;
+}
 
 .post-outer {
     margin-bottom: 16px;
