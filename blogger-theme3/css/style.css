@@ -690,7 +690,7 @@ nav.navbar .container-fluid {
 }
 
 .babylink-box .babylink-image img {
-    width: 75px;
+    width: auto;
     height: 75px;
     border-top: medium none;
     border-right: medium none;
