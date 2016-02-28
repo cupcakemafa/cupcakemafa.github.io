@@ -17,6 +17,7 @@
         <!-- SEO Meta Tag -->
         <b:if cond='data:blog.homepageUrl == data:blog.url'>
             <meta expr:content='data:blog.title' name='keywords' />
+            <meta content='日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです' name='description'/>
         </b:if>
         <b:if cond='data:blog.pageType == &quot;item&quot;'>
             <meta expr:content='data:blog.pageName' name='keywords' />
@@ -639,12 +640,24 @@
                         ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています。
                         どうぞ、よろしく。
                         <div class='social-icons text-center'>
-                            <a class='icon' href='https://www.facebook.com/cupcakemafa'><i class='ion-social-facebook'></i></a>
-                            <a class='icon' href='https://twitter.com/cupcakemafa'><i class='ion-social-twitter'></i></a>
-                            <a class='icon' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts'><i class='ion-social-googleplus'></i></a>
-                            <a class='icon hidden' href='#'><i class='ion-social-pinterest'></i></a>
-                            <a class='icon' href='https://www.youtube.com/c/Cupcakemafa2015/'><i class='ion-social-youtube'></i></a>
-                            <a class='icon' href='https://instagram.com/cupcakemafaofficial/'><i class='ion-social-instagram'></i></a>
+                            <a class='btn-circle facebook' href='https://www.facebook.com/cupcakemafa'>
+                                <i class='fa fa-facebook fa-2x'></i>
+                            </a>
+                            <a class='btn-circle twitter' href='https://twitter.com/cupcakemafa'>
+                                <i class='fa fa-twitter fa-2x'></i>
+                            </a>
+                            <a class='btn-circle google-plus' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts'>
+                                <i class='fa fa-google-plus fa-2x'></i>
+                            </a>
+                            <a class='btn-circle pinterest hidden' href='#'>
+                                <i class='fa fa-pinterest fa-2x'></i>
+                            </a>
+                            <a class='btn-circle youtube' href='https://www.youtube.com/c/Cupcakemafa2015/'>
+                                <i class='fa fa-youtube fa-2x'></i>
+                            </a>
+                            <a class='btn-circle instagram' href='https://instagram.com/cupcakemafaofficial/'>
+                                <i class='fa fa-instagram fa-2x'></i>
+                            </a>
                         </div>
                     </div>
                 </div>

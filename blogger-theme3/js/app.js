@@ -88,20 +88,20 @@ $(function () {
                 //console.log('$content', $content);
                 //console.log('$imgs', $imgs);
                 //console.log($('#footer-'+id));
-//                $imgs.each(function (index, img, arr) {
-//                    if (index > 0 && 5 > index) {
-//                        //console.log('img', img);
-//                        attr = $(img).attr('src');
-//                        //clas='img-rounded';
-//                        clas = 'img-circle';
-//                        //console.log('attr', attr);
-//                        imgTag += '<img src="' + attr + '" class="' + clas + '" />';
-//                    }
-//                });
-//                if (imgTag.length) {
-//                    imgTag = '<a href="' + url + '" title="' + title + '">' + imgTag + '</a>';
-//                    $('#footer-' + id).html(imgTag);
-//                }
+                //                $imgs.each(function (index, img, arr) {
+                //                    if (index > 0 && 5 > index) {
+                //                        //console.log('img', img);
+                //                        attr = $(img).attr('src');
+                //                        //clas='img-rounded';
+                //                        clas = 'img-circle';
+                //                        //console.log('attr', attr);
+                //                        imgTag += '<img src="' + attr + '" class="' + clas + '" />';
+                //                    }
+                //                });
+                //                if (imgTag.length) {
+                //                    imgTag = '<a href="' + url + '" title="' + title + '">' + imgTag + '</a>';
+                //                    $('#footer-' + id).html(imgTag);
+                //                }
             });
         },
         // maintain iframe aspect for fluid width
@@ -181,17 +181,17 @@ $(function () {
                 tag += '</a>';
                 tag += '</span>';
 
-//                tag += '<span>';
-//                tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
-//                tag += '<i class="fa fa-linkedin fa-2x"/></i>';
-//                tag += '</a>';
-//                tag += '</span>';
+                //                tag += '<span>';
+                //                tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
+                //                tag += '<i class="fa fa-linkedin fa-2x"/></i>';
+                //                tag += '</a>';
+                //                tag += '</span>';
 
-//                tag += '<span>';
-//                tag += '<a class="btn-circle stumbleupon" href="http://www.stumbleupon.com/submit?url=' + shareUrl + '" target="_blank">';
-//                tag += '<i class="fa fa-stumbleupon fa-2x"/></i>';
-//                tag += '</a>';
-//                tag += '</span>';
+                //                tag += '<span>';
+                //                tag += '<a class="btn-circle stumbleupon" href="http://www.stumbleupon.com/submit?url=' + shareUrl + '" target="_blank">';
+                //                tag += '<i class="fa fa-stumbleupon fa-2x"/></i>';
+                //                tag += '</a>';
+                //                tag += '</span>';
 
                 tag += '<span>';
                 tag += '<a class="btn-circle tumblr" href="http://www.tumblr.com/share/link?url=' + shareUrl + '" target="_blank">';
@@ -248,7 +248,7 @@ $(function () {
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
-                        console.log(i + '/' + e + '/' + a );
+                        console.log(i + '/' + e + '/' + a);
                         if (i == e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {
@@ -680,6 +680,28 @@ $(function () {
                 });
             }
         },
+        setAffiliateButton = function () {
+            var btnUrl = 'https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png',
+                btnHoverUrl = 'https://1.bp.blogspot.com/-3eSE1IpN454/VtJ3T3yn-mI/AAAAAAAAB0Q/c9WY6yvgvMU/s1600/assocbutt_gr_detail._V371070194_.png',
+                $babylink = $('.babylink-box'),
+                babylinkNum = $babylink.length,
+                $elm, title, manufacture, url,
+                linkTitle,
+                $a, $img;
+
+            if (babylinkNum) {
+                $babylink.each(function (idx, elm) {
+                    $elm = $(elm);
+                    title = $elm.find('.babylink-info .babylink-title a').eq(0).text();
+                    manufacture = $elm.find('.babylink-info .babylink-manufacturer').text();
+                    linkTitle = title + ': ' + manufacture;
+                    url = $elm.find('a').eq(0).prop('href')
+                    $img = $('<img/>').prop('src', btnUrl).prop('alt', linkTitle);
+                    $a = $('<a/>').prop('href', url).prop('title', linkTitle).append($img);
+                    $elm.find('.babylink-description').eq(0).append($a);
+                });
+            }
+        },
         //
         // Main
         //
@@ -733,6 +755,8 @@ $(function () {
             if (pageType !== 'item' && pageType !== 'static_page') {
                 $('.post-col').addClass('col col-md-6 col-xs-12');
             }
+
+            setAffiliateButton();
 
             trimThumb();
 

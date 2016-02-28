@@ -260,6 +260,16 @@ hr.dashed {
     background: #fff;
 }
 
+.btn-circle.youtube {
+    /*color: #e52d27;*/
+    background-color: #e52d27;
+}
+
+.btn-circle.youtube:hover {
+    color: #e52d27;
+    background: #fff;
+}
+
 .btn-circle.rss {
     /*color: #517fa4;*/
     background-color: #e88845;
@@ -650,6 +660,60 @@ nav.navbar .container-fluid {
     max-height: 160px;
     overflow: hidden;
 }
+
+
+/* Start babylink */
+
+.babylink-box {
+    overflow: hidden;
+    font-size: small;
+    zoom: 1;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.babylink-box .babylink-image {
+    float: left;
+    margin: 0px 15px 10px 0px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+.babylink-box .babylink-image img {
+    width: 75px;
+    height: 75px;
+    border-top: medium none;
+    border-right: medium none;
+    border-bottom: medium none;
+    border-left: medium none;
+}
+
+.babylink-box .babylink-info {
+    overflow: hidden;
+    zoom: 1;
+    line-height: 120%;
+}
+
+.babylink-box .babylink-info .babylink-title {
+    margin-bottom: 2px;
+    line-height: 120%;
+}
+
+.babylink-box .babylink-info .babylink-manufacturer {
+    margin-bottom: 5px;
+}
+
+.babylink-box .babylink-info .babylink-description {
+    margin-top: 7px;
+}
+
+.babylink-box .babylink-info .booklink-footer {
+    clear: left;
+}
+
+
+/* End babylink */
 
 
 /* Start Theme */
