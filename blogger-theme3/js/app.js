@@ -153,7 +153,9 @@ $(function () {
             setSocialShareTag = function (shareUrl) {
                 var
                         tag = '',
-                        $share = $('.post-social-share');
+                        $share = $('.post-social-share'),
+                        via = $('meta[name=twitter:site]').attr('content').replace(/@/g, ''),
+                        postTitle = $('title').text();
 
                 if ($share.length) {
                     tag += '<div class="share-this-content">';
@@ -164,7 +166,7 @@ $(function () {
                     tag += '</span>';
 
                     tag += '<span>';
-                    tag += '<a class="btn-circle twitter" href="http://twitter.com/share?url=' + shareUrl + '" target="_blank">';
+                    tag += '<a class="btn-circle twitter" href="http://twitter.com/share?url=' + shareUrl + '&via=' + via + '" target="_blank">';
                     tag += '<i class="fa fa-twitter fa-2x"/></i>';
                     tag += '</a>';
                     tag += '</span>';
@@ -680,28 +682,6 @@ $(function () {
                     });
                 }
             },
-//        setAffiliateButton = function () {
-//            var btnUrl = 'https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png',
-//                btnHoverUrl = 'https://1.bp.blogspot.com/-3eSE1IpN454/VtJ3T3yn-mI/AAAAAAAAB0Q/c9WY6yvgvMU/s1600/assocbutt_gr_detail._V371070194_.png',
-//                $babylink = $('.babylink-box'),
-//                babylinkNum = $babylink.length,
-//                $elm, title, manufacture, url,
-//                linkTitle,
-//                $a, $img;
-//
-//            if (babylinkNum) {
-//                $babylink.each(function (idx, elm) {
-//                    $elm = $(elm);
-//                    title = $elm.find('.babylink-info .babylink-title a').eq(0).text();
-//                    manufacture = $elm.find('.babylink-info .babylink-manufacturer').text();
-//                    linkTitle = title + ': ' + manufacture;
-//                    url = $elm.find('a').eq(0).prop('href')
-//                    $img = $('<img/>').prop('src', btnUrl).prop('alt', linkTitle);
-//                    $a = $('<a/>').prop('href', url).prop('title', linkTitle).append($img);
-//                    $elm.find('.babylink-description').eq(0).append($a);
-//                });
-//            }
-//        },
             setAffiliateItemTag = function (itemData) {
                 console.log('itemData', itemData);
                 var
@@ -726,17 +706,7 @@ $(function () {
                         param = {
                             "title": "",
                             "items": []
-                        },
-//                tmpBase={
-//                    "thumb":"",
-//                    "name":"",
-//                    "url": {
-//                        "amazon":"",
-//                        "rakuten":""
-//                    }
-//                },
-//                tmp = {}, 
-                i, l;
+                        }, i, l;
 
                 // transform items data to template param.
                 if ($items.length) {
