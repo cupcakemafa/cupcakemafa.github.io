@@ -154,7 +154,8 @@ $(function () {
                 var
                         tag = '',
                         $share = $('.post-social-share'),
-                        via = $('meta[name=twitter:site]').attr('content').replace(/@/g, ''),
+                        via = $("meta[name='twitter:site']").attr('content').replace(/@/g, ''),
+                        //via = 'cupcakemafa',
                         postTitle = $('title').text();
 
                 if ($share.length) {
