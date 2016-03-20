@@ -808,7 +808,7 @@ $(function () {
                 if(items.length) {
                     try {
                         data = JSON.parse(items);
-                        //console.log('data', data);
+                        console.log('data', data);
                         param.title = data.title;
                         for(i=0,l=data.items.length; i < l ; i++) {
                             tmp = tmpBase;
@@ -818,6 +818,7 @@ $(function () {
                             tmp.url.rakuten = data.items[i].platform.rakuten.url;
                             param.items.push(tmp);
                         }
+                        console.log('param', param);
                         setAffiliateItems(param);
                     }
                     catch(err) {
