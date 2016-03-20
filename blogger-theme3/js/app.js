@@ -792,15 +792,16 @@ $(function () {
                     "title":"",
                     "items":[]
                 },
-                tmpBase={
-                    "thumb":"",
-                    "name":"",
-                    "url": {
-                        "amazon":"",
-                        "rakuten":""
-                    }
-                },
-                tmp = {}, i,l;
+//                tmpBase={
+//                    "thumb":"",
+//                    "name":"",
+//                    "url": {
+//                        "amazon":"",
+//                        "rakuten":""
+//                    }
+//                },
+//                tmp = {}, 
+                i,l;
             
             // transform items data to template param.
             if($items.length) {
@@ -811,12 +812,14 @@ $(function () {
                         console.info('data', data);
                         param.title = data.title;
                         for(i=0,l=data.items.length; i < l ; i++) {
-                            tmp = tmpBase;
-                            tmp.thumb = data.items[i].platform[MAIN_PLATFORM].thumb;
-                            tmp.name = data.items[i].platform[MAIN_PLATFORM].name;
-                            tmp.url.amazon = data.items[i].platform.amazon.url;
-                            tmp.url.rakuten = data.items[i].platform.rakuten.url;
-                            param.items.push(tmp);
+                            param.items.push({
+                                "thumb": data.items[i].platform[MAIN_PLATFORM].thumb,
+                                "name" : data.items[i].platform[MAIN_PLATFORM].name,
+                                "url" : {
+                                    "amazon" : data.items[i].platform.amazon.url,
+                                    "rakuten" : data.items[i].platform.rakuten.url
+                                }
+                            });
                         }
                         console.info('param', param);
                         setAffiliateItems(param);
