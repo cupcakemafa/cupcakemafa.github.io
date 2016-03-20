@@ -680,26 +680,42 @@ $(function () {
                 });
             }
         },
-        setAffiliateButton = function () {
-            var btnUrl = 'https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png',
-                btnHoverUrl = 'https://1.bp.blogspot.com/-3eSE1IpN454/VtJ3T3yn-mI/AAAAAAAAB0Q/c9WY6yvgvMU/s1600/assocbutt_gr_detail._V371070194_.png',
-                $babylink = $('.babylink-box'),
-                babylinkNum = $babylink.length,
-                $elm, title, manufacture, url,
-                linkTitle,
-                $a, $img;
-
-            if (babylinkNum) {
-                $babylink.each(function (idx, elm) {
-                    $elm = $(elm);
-                    title = $elm.find('.babylink-info .babylink-title a').eq(0).text();
-                    manufacture = $elm.find('.babylink-info .babylink-manufacturer').text();
-                    linkTitle = title + ': ' + manufacture;
-                    url = $elm.find('a').eq(0).prop('href')
-                    $img = $('<img/>').prop('src', btnUrl).prop('alt', linkTitle);
-                    $a = $('<a/>').prop('href', url).prop('title', linkTitle).append($img);
-                    $elm.find('.babylink-description').eq(0).append($a);
-                });
+//        setAffiliateButton = function () {
+//            var btnUrl = 'https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png',
+//                btnHoverUrl = 'https://1.bp.blogspot.com/-3eSE1IpN454/VtJ3T3yn-mI/AAAAAAAAB0Q/c9WY6yvgvMU/s1600/assocbutt_gr_detail._V371070194_.png',
+//                $babylink = $('.babylink-box'),
+//                babylinkNum = $babylink.length,
+//                $elm, title, manufacture, url,
+//                linkTitle,
+//                $a, $img;
+//
+//            if (babylinkNum) {
+//                $babylink.each(function (idx, elm) {
+//                    $elm = $(elm);
+//                    title = $elm.find('.babylink-info .babylink-title a').eq(0).text();
+//                    manufacture = $elm.find('.babylink-info .babylink-manufacturer').text();
+//                    linkTitle = title + ': ' + manufacture;
+//                    url = $elm.find('a').eq(0).prop('href')
+//                    $img = $('<img/>').prop('src', btnUrl).prop('alt', linkTitle);
+//                    $a = $('<a/>').prop('href', url).prop('title', linkTitle).append($img);
+//                    $elm.find('.babylink-description').eq(0).append($a);
+//                });
+//            }
+//        },
+        setAffiliateItems = function(itemData) {
+            console.log('itemData', itemData);
+            var 
+                $affiliateBoxTpl = $('#affiliate-box-tpl'),
+                $affiliateBox = $('#affiliate-box'),
+                source,template,values,html;
+            if($affiliateBoxTpl.length) {
+                source = $affiliateBoxTpl.html(),
+                template = Handlebars.compile(source),
+                html = template(itemData),
+                console.log('html', html);
+                if($affiliateBox.length) {
+                    $affiliateBox.html(html);
+                }
             }
         },
         //
@@ -756,7 +772,7 @@ $(function () {
                 $('.post-col').addClass('col col-md-6 col-xs-12');
             }
 
-            setAffiliateButton();
+            //setAffiliateButton();
 
             trimThumb();
 
@@ -767,6 +783,49 @@ $(function () {
             setExternalLink();
 
             setStory();
+            
+            // Start of Set affiliate item list
+            var 
+                MAIN_PLATFORM = 'amazon',
+                $items = $('#item-data'),items,data,
+                param={
+                    "title":"",
+                    "items":[]
+                },
+                tmpBase={
+                    "thumb":"",
+                    "name":"",
+                    "url": {
+                        "amazon":"",
+                        "rakuten":""
+                    }
+                },
+                tmp = {}, i,l;
+            
+            // transform items data to template param.
+            if($items.length) {
+                items = $items.html();
+                if(items.length) {
+                    try {
+                        data = JSON.parse(items);
+                        //console.log('data', data);
+                        param.title = data.title;
+                        for(i=0,l=data.items.length; i < l ; i++) {
+                            tmp = tmpBase;
+                            tmp.thumb = data.items[i].platform[MAIN_PLATFORM].thumb;
+                            tmp.name = data.items[i].platform[MAIN_PLATFORM].name;
+                            tmp.url.amazon = data.items[i].platform.amazon.url;
+                            tmp.url.rakuten = data.items[i].platform.rakuten.url;
+                            param.items.push(tmp);
+                        }
+                        setAffiliateItems(param);
+                    }
+                    catch(err) {
+                        console.warn(err);
+                    }
+                }
+            }
+            // End of Set affiliate item list
 
         };
 
