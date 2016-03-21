@@ -154,9 +154,12 @@ $(function () {
                 var
                         tag = '',
                         $share = $('.post-social-share'),
-                        via = $("meta[name='twitter:site']").attr('content').replace(/@/g, ''),
-                        //via = 'cupcakemafa',
+                        via = $("meta[name='twitter:site']").attr('content'),
                         postTitle = $('title').text();
+                
+                if(via.length) {
+                    via = via.replace(/@/g, '');
+                }
 
                 if ($share.length) {
                     tag += '<div class="share-this-content">';

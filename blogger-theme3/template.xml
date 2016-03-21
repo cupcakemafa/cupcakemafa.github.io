@@ -9,6 +9,10 @@
         <b:include data='blog' name='all-head-content'/>
         <!-- End of all-head-content -->
         <!-- SEO Meta Tag -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@cupcakemafa" />
+        <meta name="twitter:creator" content="@cupcakemafa" />
+        <meta name="twitter:domain" content="cupcakemafa.com" />
         <b:if cond='data:blog.homepageUrl == data:blog.url'>
             <meta expr:content='data:blog.title' name='keywords'/>
             <meta content='日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです' name='description'/>
@@ -81,7 +85,7 @@
         <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
         <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
         <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
-
+        
         <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
         <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
