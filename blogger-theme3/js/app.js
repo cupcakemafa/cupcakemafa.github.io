@@ -298,7 +298,7 @@ $(function () {
                         //f = encodeURI(f);
                         m = decodeURIComponent(m);
                         console.log(m + '/' + f);
-                        if (m.indexOf(f) != -1) {
+                        if (m.indexOf(f) !== -1) {
                             console.log('d', d);
                             n = d;
                         }
@@ -310,62 +310,72 @@ $(function () {
             },
             setSinglePageNavi = function () {
                 var
-                        newerLink = $('a.newer-link'),
-                        olderLink = $('a.older-link'),
+                        $newerLink = $('a.next-link'),
+                        $olderLink = $('a.prev-link'),
                         postTitle, postThumb,
-                        getSinglePageNaviTag = function (pageContentTag) {
+                        setSinglePageNaviData = function (pageContentTag, $link) {
                             var
                                     $data = $(pageContentTag),
-                                    $title, $imgs, $date,
-                                    postTitle, postThumb, postDate,
-                                    tag = '';
+                                    $title, $imgs, $date, $linkElm,$linkTitle,$linkThumb,
+                                    linkContent='', postTitle, postThumb, postDate;
                             //console.log('pageContentTag', pageContentTag);
-                            if (pageContentTag && $data.length) {
+                            if (pageContentTag && $data.length && $link.length) {
                                 $title = $data.find('.post #post-title');
                                 if ($title.length) {
                                     postTitle = $title.text();
                                     if (postTitle) {
-
                                         // publish date
                                         $date = $('.post #post-date');
                                         if ($date.length) {
                                             postDate = $date.html();
                                             if (postDate) {
-                                                tag += '<p class="date">' + postDate + '</p>';
+                                                linkContent += '<p class="date">' + postDate + '</p>';
                                             }
                                         }
-
-                                        // post title
-                                        tag += '<p class="title">' + postTitle + '</p>';
+                                        linkContent += '<p class="title">' + postTitle + '</p>';
 
                                         // post thumb
                                         $imgs = $data.find('.post img');
                                         if ($imgs.length) {
                                             postThumb = $imgs.eq(0).attr('src');
-                                            if (postThumb) {
-                                                tag += '<img class="thumb img-rounded" src="' + postThumb + '" />';
+                                        }
+
+                                        for(var i=0,l=$link.length;i<l;i++) {
+                                            $linkElm = $($link[i]);
+                                            if($linkElm.hasClass('title')) {
+                                                $linkTitle = $linkElm.find('.link-title');
+                                                if($linkTitle.length) {
+                                                    $linkTitle.eq(0).html(linkContent);
+                                                }
+
+                                            }
+                                            else if($linkElm.hasClass('thumb')) {
+                                                $linkThumb = $linkElm.find('.link-thumb');
+                                                if($linkThumb.length) {
+                                                    $linkThumb = $linkThumb.eq(0);
+                                                    $linkThumb.attr('alt', postTitle);
+                                                    $linkThumb.attr('src', postThumb);
+                                                    $linkThumb.attr('data-src', postThumb);
+                                                }
                                             }
                                         }
 
-                                        return tag;
+                                        $('.page-navi.single').removeClass('hidden');
                                     }
                                 }
                             }
                         };
-                if (newerLink.length) {
-                    $.get(newerLink.attr('href'), function (data) {
-                        var tag = getSinglePageNaviTag(data);
-                        newerLink.html(tag);
-                        $('table.page-navi').removeClass('hidden');
+
+                if ($newerLink.length) {
+                    $.get($newerLink.attr('href'), function (data) {
+                        setSinglePageNaviData(data, $newerLink);
                         trimThumb();
                         setTitleCR();
                     }, "html");
                 }
-                if (olderLink.length) {
-                    $.get(olderLink.attr('href'), function (data) {
-                        var tag = getSinglePageNaviTag(data);
-                        olderLink.html(tag);
-                        $('table.page-navi').removeClass('hidden');
+                if ($olderLink.length) {
+                    $.get($olderLink.attr('href'), function (data) {
+                        setSinglePageNaviData(data, $olderLink);
                         trimThumb();
                         setTitleCR();
                     }, "html");

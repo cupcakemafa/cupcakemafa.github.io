@@ -523,44 +523,56 @@
                             <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
                                 <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
                                     <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                                        <table class='page-navi hidden'>
-                                            <tr>
-                                                <b:if cond='data:olderPageUrl'>
-                                                    <td class='previous'>
-                                                        <div class='panel panel-default'>
-                                                            <div class='panel-heading'>
-                                                                <p>
-                                                                    <i class='fa fa-chevron-left'/>
-                                                                    <strong>Prev</strong>
-                                                                </p>
-                                                            </div>
-                                                            <div class='panel-body'>
-                                                                <a class='older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;'/>
-                                                            </div>
-                                                            <div class='panel-footer'>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </b:if>
-                                                <b:if cond='data:newerPageUrl'>
-                                                    <td class='newer'>
-                                                        <div class='panel panel-default'>
-                                                            <div class='panel-heading'>
-                                                                <p>
+                                        <div class='page-navi single hidden'>
+                                            <b:if cond='data:newerPageUrl'>
+                                                <div class='panel panel-default next'>
+                                                    <div class='panel-body media'>
+                                                        <div class='media-body text-right'>
+                                                            <h4 class='media-heading'>
+                                                                <a class='prev-link' expr:href='data:olderPageUrl'>
                                                                     <strong>Next</strong>
                                                                     <i class='fa fa-chevron-right'/>
-                                                                </p>
-                                                            </div>
-                                                            <div class='panel-body'>
-                                                                <a class='newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;'/>
-                                                            </div>
-                                                            <div class='panel-footer'>
-                                                            </div>
+                                                                </a>
+                                                            </h4>
+                                                            <p>
+                                                                <a class='next-link title' expr:href='data:newerPageUrl'>
+                                                                    <span class="link-title"></span>
+                                                                </a>
+                                                            </p>
                                                         </div>
-                                                    </td>
-                                                </b:if>
-                                            </tr>
-                                        </table>
+                                                        <div class='media-right '>
+                                                            <a class='next-link thumb' expr:href='data:newerPageUrl'>
+                                                                <img class='link-thumb media-object img-rounded' data-src='' alt='' />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:olderPageUrl'>
+                                                <div class='panel panel-default previous'>
+                                                    <div class='panel-body media'>
+                                                        <div class='media-left'>
+                                                            <a class='prev-link thumb' expr:href='data:olderPageUrl'>
+                                                                <img class='link-thumb media-object img-rounded' data-src='' alt='' />
+                                                            </a>
+                                                        </div>
+                                                        <div class='media-body text-left'>
+                                                            <h4 class='media-heading'>
+                                                                <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                    <i class='fa fa-chevron-left'/>
+                                                                    <strong>Prev</strong>
+                                                                </a>
+                                                            </h4>
+                                                            <p>
+                                                                <a class='prev-link title' expr:href='data:olderPageUrl'>
+                                                                    <span class="link-title"></span>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </b:if>
+                                        </div>
                                     </b:if>
                                 </b:if>
                             </b:if>
@@ -1816,7 +1828,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js' type='text/javascript'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
-
     <script id="affiliate-box-tpl" type="text/x-handlebars-template">
         <h2 class="post-title taped">「{{title}}」なアイテムたち</h2>
         <div class="container">

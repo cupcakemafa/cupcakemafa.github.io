@@ -326,6 +326,11 @@ hr.dashed {
 
 /* Start content decolation */
 
+article.post:hover,
+.page-navi.single .panel:hover {
+    border-color: #aaa;
+}
+
 .content-title-box {
     padding: 1em;
     border: 7px solid #333;
@@ -637,6 +642,7 @@ nav.navbar .container-fluid {
     margin: 0px;
 }
 
+/* start of deprecated */
 .page-navi td {
     text-align: center;
     padding: 4px;
@@ -657,6 +663,18 @@ nav.navbar .container-fluid {
     max-width: 240px;
     height: auto;
     object-fit: contain;
+}
+/* end of deprecated */
+
+.page-navi.single .link-thumb {
+    display: inline-block;
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    background-size: contain;
+    width:80px;
+    height: 80px;
 }
 
 #related-posts td {
