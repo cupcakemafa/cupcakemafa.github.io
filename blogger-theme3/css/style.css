@@ -642,29 +642,9 @@ nav.navbar .container-fluid {
     margin: 0px;
 }
 
-/* start of deprecated */
-.page-navi td {
-    text-align: center;
-    padding: 4px;
+.page-navi.single .link-title .title {
+    font-size: 1.4em;
 }
-
-.page-navi td .panel-heading {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.page-navi td .title {
-    font-weight: 400;
-    font-size: 16px;
-}
-
-.page-navi td img.thumb {
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    object-fit: contain;
-}
-/* end of deprecated */
 
 .page-navi.single .link-thumb {
     display: inline-block;
