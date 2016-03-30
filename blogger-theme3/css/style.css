@@ -39,58 +39,58 @@ a:active,
 }
 
 .no-margin {
-    margin: 0px;
+    margin: 0px !important;
 }
 
 .margin {
-    margin: 8px;
+    margin: 8px !important;
 }
 
 .margin-top {
-    margin-top: 8px;
+    margin-top: 8px !important;
 }
 
 .margin-bottom {
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
 }
 
 .no-padding {
-    padding: 0px;
+    padding: 0px !important;
 }
 
 .padding {
-    padding: 8px;
+    padding: 8px !important;
 }
 
 .padding-2x {
-    padding: 16px;
+    padding: 16px !important;
 }
 
 .padding-left {
-    padding-left: 8px;
+    padding-left: 8px !important;
 }
 
 .padding-right {
-    padding-right: 8px;
+    padding-right: 8px !important;
 }
 
 .padding-bottom {
-    padding-bottom: 8px;
+    padding-bottom: 8px !important;
 }
 
 .padding-top {
-    padding-top: 8px;
+    padding-top: 8px !important;
 }
 
 .param,
 .meta-tag,
 .comment {
-    display: none;
+    display: none !important;
 }
 
 .full-width {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
 }
 
 .span1 {
