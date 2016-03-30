@@ -691,7 +691,7 @@ nav.navbar .container-fluid {
 }
 
 #footer ul .menu-item a {
-    color: #334;
+    color: #fff;
 }
 
 #footer ul .menu-item:hover,
@@ -705,7 +705,7 @@ nav.navbar .container-fluid {
 }
 
 #footer #first {
-    background-color: #e5e5e5;
+    background-color: #232323;
 }
 
 #footer #second {
