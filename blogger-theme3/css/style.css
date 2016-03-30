@@ -743,6 +743,7 @@ nav.navbar .container-fluid {
     zoom: 1;
     margin: 15px 0;
     text-align: left;
+    max-width: 320px;
 }
 
 .babylink-box .babylink-image {
