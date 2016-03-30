@@ -647,7 +647,7 @@ nav.navbar .container-fluid {
 .page-navi.single .next {
     background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #f3ff50 2px, #f3ff50 4px);
 }
-.page-navi.single .prev {
+.page-navi.single .previous {
     background: repeating-linear-gradient( -45deg, #fff, #fff 2px, lightgreen 2px, lightgreen 4px);
 }
 
