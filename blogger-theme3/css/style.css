@@ -12,6 +12,7 @@ body {
     word-spacing: 1px;
     /* story-title のカウンタを 0 にセット */
     counter-reset: story-title;
+    padding-bottom: 3em;
 }
 
 h1,
@@ -643,6 +644,19 @@ nav.navbar .container-fluid {
     margin: 0px;
 }
 
+.page-navi.single .next {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #f3ff50 2px, #f3ff50 4px);
+}
+.page-navi.single .prev {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, lightgreen 2px, lightgreen 4px);
+}
+
+.page-navi.single .media-heading,
+.page-navi.single .link-title .date,
+.page-navi.single .link-title .title {
+    background-color: white;
+    padding: 4px;
+}
 .page-navi.single .link-title .title {
     font-size: 1.4em;
 }
