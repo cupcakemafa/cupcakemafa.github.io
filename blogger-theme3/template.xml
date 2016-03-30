@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html b:version='2' expr:dir='data:blog.languageDirection' lang='ja' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
     <head>
@@ -9,10 +9,10 @@
         <b:include data='blog' name='all-head-content'/>
         <!-- End of all-head-content -->
         <!-- SEO Meta Tag -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@cupcakemafa" />
-        <meta name="twitter:creator" content="@cupcakemafa" />
-        <meta name="twitter:domain" content="cupcakemafa.com" />
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:site' content='@cupcakemafa' />
+        <meta name='twitter:creator' content='@cupcakemafa' />
+        <meta name='twitter:domain' content='cupcakemafa.com' />
         <b:if cond='data:blog.homepageUrl == data:blog.url'>
             <meta expr:content='data:blog.title' name='keywords'/>
             <meta content='日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです' name='description'/>
@@ -88,8 +88,8 @@
         
         <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
         <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+        <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
         <![endif]-->
     </head>
     <body expr:class='data:blog.mobileClass'>
@@ -536,7 +536,7 @@
                                                             </h4>
                                                             <p>
                                                                 <a class='next-link title' expr:href='data:newerPageUrl'>
-                                                                    <span class="link-title"></span>
+                                                                    <span class='link-title'></span>
                                                                 </a>
                                                             </p>
                                                         </div>
@@ -565,7 +565,7 @@
                                                             </h4>
                                                             <p>
                                                                 <a class='prev-link title' expr:href='data:olderPageUrl'>
-                                                                    <span class="link-title"></span>
+                                                                    <span class='link-title'></span>
                                                                 </a>
                                                             </p>
                                                         </div>
@@ -986,7 +986,7 @@
     </div>
   </div>
 </b:includable>
-                    <b:includable id='nextprev'>
+<b:includable id='nextprev'>
   <div class='blog-pager' id='blog-pager'>
     <b:if cond='data:newerPageUrl'>
       <span id='blog-pager-newer-link'>
@@ -1443,6 +1443,50 @@
                         </form>
                     </div>
                 </div>
+                <b:section class='sidebar section' id='sidebarTop' preferred='yes'>
+                  <b:widget id='PopularPosts2' locked='false' title='Popular Posts' type='PopularPosts'>
+                    <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'>
+                            <div class='panel panel-default'>
+                                <div class='panel-heading'>
+                                    <div class='media'>
+                                        <div class='media-body'>
+                                            <span class='content-title'><data:title/></span>
+                                        </div>
+                                        <div class='media-right'>
+                                            <img src='https://lh3.googleusercontent.com/-t8Ar7BDwzzw/VnS1XhjvfQI/AAAAAAAABW4/YK--Hx4rbqMeZamSqhA8WfheMCpJAlRbQCCo/s2048-Ic42/07.png' class='img-rounded no-padding no-margin' width='104' height='90'  />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </b:if>
+                        <div class='widget-content popular-posts'>
+                                <b:loop values='data:posts' var='post'>
+                                    <div class='panel panel-default item'>
+                                        <div class='panel-heading'>
+                                            <a expr:href='data:post.href'>
+                                                <data:post.title/>
+                                            </a>
+                                        </div>
+                                        <div class='panel-body'>
+                                            <div class='item-thumbnail'>
+                                                <a expr:href='data:post.href'>
+                                                    <img class='img-circle' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
+                                                </a>
+                                            </div>
+                                            <div class='item-snippet'>
+                                                <a expr:href='data:post.href'>
+                                                    <data:post.snippet/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </b:loop>
+                            <b:include name='quickedit'/>
+                        </div>
+                    </b:includable>
+                  </b:widget>
+                </b:section>
 
                 <div class='post panel panel-default'>
                     <div class='panel-heading'>
@@ -1544,11 +1588,20 @@
                     <div class='panel-heading'>
                         <h4 class='title'>スポンサーリンク</h4>
                     </div>
-                    <div class='panel-body'>
+                    <div class='panel-body text-center no-padding'>
+                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                        <!-- レクタングル２ -->
+                        <ins class='adsbygoogle'
+                             style='display:inline-block;width:300px;height:250px'
+                             data-ad-client='ca-pub-3036276233777511'
+                             data-ad-slot='1826014588'></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        <!--
                         <span class='comment hidden'>レクタングル&#65288;大&#65289;</span>
                         <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
                         <ins class='adsbygoogle' data-ad-client='ca-pub-3036276233777511' data-ad-format='auto' data-ad-slot='3349270584' style='display:block'/>
-
                         <span class='comment hidden'>Start of Google AdSense</span>
                         <script>
                             //<![CDATA[
@@ -1556,14 +1609,20 @@
                             //]]>
                         </script>
                         <span class='comment hidden'>End of Google AdSense</span>
+                        -->
                     </div>
                 </div>
 
                 <div class='post panel panel-default'>
+                    <!--
                     <div class='panel-heading'>
                         <h4 class='title'>Twitter</h4>
                     </div>
+                    -->
                     <div class='panel-body text-center'>
+                        <a class="twitter-timeline" href="https://twitter.com/cupcakemafa" data-widget-id="714935102849945601">@cupcakemafaさんのツイート</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--
                         <a class='twitter-timeline' data-widget-id='622536223949766656' href='https://twitter.com/cupcakemafa'>@cupcakemafaさんのツイート</a>
                         <script>
                             //<![CDATA[
@@ -1578,6 +1637,7 @@
                             }( document, 'script', 'twitter-wjs' );
                             //]]>
                         </script>
+                        -->
                     </div>
                 </div>
 
@@ -1585,7 +1645,17 @@
                     <div class='panel-heading'>
                         <h4 class='title'>スポンサーリンク</h4>
                     </div>
-                    <div class='panel-body text-center'>
+                    <div class='panel-body text-center no-padding'>
+                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                        <!-- レクタングル１ -->
+                        <ins class='adsbygoogle'
+                             style='display:inline-block;width:300px;height:250px'
+                             data-ad-client='ca-pub-3036276233777511'
+                             data-ad-slot='7872548182'></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        <!--
                         <span class='hidden'>レクタングル&#65288;大&#65289;２</span>
                         <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
                         <ins class='adsbygoogle' data-ad-client='ca-pub-3036276233777511' data-ad-slot='2068095386' style='display:inline-block;width:336px;height:280px'/>
@@ -1596,10 +1666,10 @@
                             ( adsbygoogle = window.adsbygoogle || [ ] ).push( { } );
                             //]]>
                         </script>
+                        -->
                         <span class='comment hidden'>End of Google AdSense</span>
                     </div>
                 </div>
-
                 <b:section class='sidebar section' id='sidebar' preferred='yes'>
                   <b:widget id='Label1' locked='false' title='Categories' type='Label'>
                     <b:includable id='main'>
@@ -1723,62 +1793,7 @@
                             </a>
                         </b:includable>
                   </b:widget>
-                  <b:widget id='PopularPosts2' locked='false' title='Popular Posts' type='PopularPosts'>
-                    <b:includable id='main'>
-                            <b:if cond='data:title != &quot;&quot;'>
-                                <h4 class='title'><data:title/></h4>
-                            </b:if>
-                            <div class='widget-content popular-posts'>
-                                    <b:loop values='data:posts' var='post'>
-                                        <div class='panel panel-default'>
-                                            <div class='panel-body'>
-                                                <b:if cond='!data:showThumbnails'>
-                                                    <b:if cond='!data:showSnippets'>
-                                                        <span class='comment hidden'>(1) No snippet/thumbnail</span>
-                                                        <a expr:href='data:post.href'>
-                                                            <data:post.title/>
-                                                        </a>
-                                                        <b:else/>
-                                                        <span class='comment hidden'>(2) Show only snippets</span>
-                                                        <div class='item-title'>
-                                                            <a expr:href='data:post.href'>
-                                                                <data:post.title/>
-                                                            </a>
-                                                        </div>
-                                                        <div class='item-snippet'>
-                                                            <data:post.snippet/>
-                                                        </div>
-                                                    </b:if>
-                                                    <b:else/>
-                                                    <span class='comment hidden'>(3) Show only thumbnails or (4) Snippets and thumbnails.</span>
-                                                    <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
-                                                        <b:if cond='data:post.thumbnail'>
-                                                            <div class='item-thumbnail'>
-                                                                <a expr:href='data:post.href' target='_blank'>
-                                                                    <img class='img-circle' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                                                                </a>
-                                                            </div>
-                                                        </b:if>
-                                                        <div class='item-title'>
-                                                            <a expr:href='data:post.href'>
-                                                                <data:post.title/>
-                                                            </a>
-                                                        </div>
-                                                        <b:if cond='data:showSnippets'>
-                                                            <div class='item-snippet'>
-                                                                <data:post.snippet/>
-                                                            </div>
-                                                        </b:if>
-                                                    </div>
-                                                </b:if>
-                                            </div>
-                                        </div>
-                                    </b:loop>
-                                <b:include name='quickedit'/>
-                            </div>
-                        </b:includable>
-                  </b:widget>
-                </b:section>
+              </b:section>
             </div>
             <span class='comment hidden'>End of Sidebar</span>
         </div>
@@ -1810,17 +1825,51 @@
                     &#169;2014<span id='now-year'>-2016</span> <a href='/' title='Cupcakemafa Web Site'>Cupcakemafa</a>
                 </h5>
             </div>
-            <div class='col-xs-12 text-center' id='third'>
-                <div id='sponser-link-3'>
-                    <h5 class='title'>スポンサーリンク</h5>
-                    <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-                    <span class='comment hidden'>レスポンシブ</span>
-                    <ins class='adsbygoogle' data-ad-client='ca-pub-3036276233777511' data-ad-format='auto' data-ad-slot='8614156582' style='display:block'/>
-                    <script>
-                    //<![CDATA[
-                    (adsbygoogle=window.adsbygoogle||[]).push({});
-                    //]]>
-                    </script>
+            <div class='col-xs-12 text-center no-padding' id='third'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-xs-12'>
+                            <h5 class='title'>スポンサーリンク</h5>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                            <div id='sponser-link-3'>
+                                <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                                <!-- ラージモバイルバナー１ -->
+                                <ins class='adsbygoogle'
+                                     style='display:inline-block;width:320px;height:100px'
+                                     data-ad-client='ca-pub-3036276233777511'
+                                     data-ad-slot='3302747782'></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                <!--
+                                <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+                                <span class='comment hidden'>レスポンシブ</span>
+                                <ins class='adsbygoogle' data-ad-client='ca-pub-3036276233777511' data-ad-format='auto' data-ad-slot='8614156582' style='display:block'/>
+                                <script>
+                                //<![CDATA[
+                                (adsbygoogle=window.adsbygoogle||[]).push({});
+                                //]]>
+                                </script>
+                                -->
+                            </div>
+                        </div>
+                        <div class='col-xs-12 col-sm-6'>
+                            <div id='sponser-link-4'>
+                                <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                                <!-- ラージモバイルバナー２ -->
+                                <ins class='adsbygoogle'
+                                     style='display:inline-block;width:320px;height:100px'
+                                     data-ad-client='ca-pub-3036276233777511'
+                                     data-ad-slot='7732947389'></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1828,24 +1877,24 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js' type='text/javascript'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
-    <script id="affiliate-box-tpl" type="text/x-handlebars-template">
-        <h2 class="post-title taped">「{{title}}」なアイテムたち</h2>
-        <div class="container">
+    <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
+        <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
+        <div class='container'>
             {{#each items}}
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="babylink-box">
-                        <div class="babylink-image">
-                            <img src="{{thumb}}" alt="{{name}}" />
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <div class='babylink-box'>
+                        <div class='babylink-image'>
+                            <img src='{{thumb}}' alt='{{name}}' />
                         </div>
-                        <div class="babylink-info">
-                            <div class="babylink-title">
+                        <div class='babylink-info'>
+                            <div class='babylink-title'>
                                 {{{name}}}
                             </div>
-                            <div class="babylink-description">
+                            <div class='babylink-description'>
                                 {{#if url.amazon}}
-                                <a href="{{url.amazon}}" rel="nofollow" target="_blank" class="exLink" title="{{name}}">
-                                    <img src="https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png" alt="{{name}}" />
+                                <a href='{{url.amazon}}' rel='nofollow' target='_blank' class='exLink' title='{{name}}'>
+                                    <img src='https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png' alt='{{name}}' />
                                 </a>
                                 {{/if}}
                             </div>
