@@ -585,15 +585,19 @@ nav.navbar .container-fluid {
 }
 
 .panel-title {
-    height: 92px;
+    width: 114%;
+    height: 72px;
     overflow: hidden;
+    margin-left: -7%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .post-title {
-    font-size: 146%;
-    font-weight: 800;
+    font-size: 120%;
     overflow: hidden;
-    margin-top: 8px;
 }
 
 .post .panel-heading nav {
