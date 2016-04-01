@@ -217,7 +217,7 @@ $(function () {
             pageListNavi = function (o) {
                 var pageNaviConf = {
                     "perPage": 10,
-                    "numPages": 5,
+                    "numPages": 4,
                     "firstText": " First ",
                     "lastText": " Last ",
                     "nextText": " &gt; ",
