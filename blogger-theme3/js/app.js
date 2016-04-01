@@ -249,7 +249,7 @@ $(function () {
                                 c = 1;
                             }
                             b = '<p class="pages padding">Pages ' + e + ' of ' + a + "</p> ";
-                            b += '<div class="btn-group">';
+                            b += '<div class="btn-group btn-group-lg" role="group">';
                             if (e > 1) {
                                 b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                             }
@@ -268,10 +268,10 @@ $(function () {
 
                             b += '<div class="margin">';
                             if (c > 1) {
-                                b += '<a class="btn btn-default" href="' + f[1] + '">' + pageNaviConf.firstText + "</a>";
+                                b += '<a class="btn btn-default btn-lg" href="' + f[1] + '">' + pageNaviConf.firstText + "</a>";
                             }
                             if (endPage < a) {
-                                b += ' <a class="btn btn-default" href="' + f[a] + '">' + pageNaviConf.lastText + "</a>";
+                                b += ' <a class="btn btn-default btn-lg" href="' + f[a] + '">' + pageNaviConf.lastText + "</a>";
                             }
                             b += '</div>';
 
