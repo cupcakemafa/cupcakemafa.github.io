@@ -61,8 +61,8 @@
             </b:if>
             <data:blog.title/>
         </title>
-        <b:skin><![CDATA[
-            
+        <b:skin>
+            <![CDATA[
             /*
             -----------------------------------------------
             Blogger Template Style
@@ -73,8 +73,8 @@
             -----------------------------------------------
             */
             <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
-            
-        ]]></b:skin>
+            ]]>
+        </b:skin>
         <!--
         <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
@@ -137,7 +137,7 @@
         </b:if>
         <span class='comment hidden'>End of SEO Meta Tag</span>
     <span class='comment hidden'>Start of container</span>
-    <div class='container no-padding- no-margin-'>
+    <div class='container'>
         <div class='row' id='header'>
             <div class='col col-xs-12 text-center'>
                 <nav class='navbar navbar-inverse navbar-fixed-top'>
@@ -254,7 +254,7 @@
         </div>
         <div class='row' id='body'>
             <span class='comment hidden'>Start of Main</span>
-            <div class='col col-xs-12 col-sm-6 no-padding' id='main-area'>
+            <div class='col col-xs-12 col-sm-6 col-md-8 no-padding' id='main-area'>
                 <b:section class='main' id='main' showaddelement='no'>
                   <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
                     <b:includable id='main'>
@@ -262,7 +262,7 @@
                                 <div class='text-center' id='header-box'>
                                     <img alt='Cupcakemafa' class='span12' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s1600/cupcakemafa-blog-header-490x153.png'/>
                                     <p class='description'>
-                                        ちょっとしたことで日常に笑いを&#12290;そんな思いを持ちながらゆるーく活動しています&#12290;
+                                        ちょっとしたことで日常に笑いを&#12290;<br />そんな思いを持ちながらゆるーく活動しています&#12290;
                                     </p>
                                 </div>
                             </b:if>
@@ -1426,7 +1426,7 @@
             <span class='comment hidden'>End of main</span>
 
             <span class='comment hidden'>Start of sidebar</span>
-            <div class='col col-xs-12 col-sm-6 no-padding-' id='sidebar'>
+            <div class='col col-xs-12 col-sm-6 col-md-4 no-padding-' id='sidebar'>
 
                 <div class='sidebar'>
                     <div class='post panel panel-default search-widget tablet-only'>
