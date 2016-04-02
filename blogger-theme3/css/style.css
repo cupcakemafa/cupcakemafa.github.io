@@ -689,6 +689,20 @@ nav.navbar .container-fluid {
     margin: 0px;
 }
 
+.sidebar .panel-heading .title {
+    font-family: 'Chewy', cursive;
+    font-size: 3.6em;
+}
+.sidebar .panel-heading .icon-box {
+    padding: 8px;
+}
+.sidebar .panel-heading .icon {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 3.8em;
+}
+
 #footer {
     color: #fff;
     border-top: 1px solid #cccccc;
