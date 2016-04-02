@@ -93,6 +93,21 @@
         <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
         <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
         <![endif]-->
+        <style>
+        .sidebar .panel-heading .title {
+            font-family: 'Chewy', cursive;
+            font-size: 3.6em;
+        }
+        .sidebar .panel-heading .icon-box {
+            padding: 8px;
+        }
+        .sidebar .panel-heading .icon {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 3.8em;
+        }
+        </style>
     </head>
     <body expr:class='data:blog.mobileClass'>
         
@@ -137,7 +152,7 @@
         </b:if>
         <span class='comment hidden'>End of SEO Meta Tag</span>
     <span class='comment hidden'>Start of container</span>
-    <div class='container'>
+    <div class='container no-padding- no-margin-'>
         <div class='row' id='header'>
             <div class='col col-xs-12 text-center'>
                 <nav class='navbar navbar-inverse navbar-fixed-top'>
@@ -254,7 +269,7 @@
         </div>
         <div class='row' id='body'>
             <span class='comment hidden'>Start of Main</span>
-            <div class='col col-xs-12 col-sm-8' id='main-area'>
+            <div class='col col-xs-12 col-sm-6 no-padding' id='main-area'>
                 <b:section class='main' id='main' showaddelement='no'>
                   <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
                     <b:includable id='main'>
@@ -1426,38 +1441,47 @@
             <span class='comment hidden'>End of main</span>
 
             <span class='comment hidden'>Start of sidebar</span>
-            <div class='col col-xs-12 col-sm-4' id='sidebar'>
+            <div class='col col-xs-12 col-sm-6 no-padding-' id='sidebar'>
 
-                <div class='post panel panel-default search-widget tablet-only'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>Search</h4>
-                    </div>
-                    <div class='panel-body'>
-                        <form action='/search' method='get' role='search'>
-                            <div class='input-group input-group-lg margin padding'>
-                                <input class='form-control' name='q' placeholder='Search' type='search'/>
-                                <span class='input-group-btn'>
-                                    <button class='btn btn-default' type='button'>
-                                        <i class='fa fa-search'/>
-                                    </button>
-                                </span>
+                <div class='sidebar'>
+                    <div class='post panel panel-default search-widget tablet-only'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img src='https://3.bp.blogspot.com/-QX-g189HUeY/VnS-Caq7b7I/AAAAAAAABbE/SWdiMIj92zIfzxcEXjWy3ivdp1eDK6Jjg/s1600/40.png' class='img-rounded icon' />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>Search</span>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class='panel-body no-padding'>
+                            <form action='/search' method='get' role='search'>
+                                <div class='input-group input-group-lg margin padding'>
+                                    <input class='form-control' name='q' placeholder='Search' type='search'/>
+                                    <span class='input-group-btn'>
+                                        <button class='btn btn-default' type='button'>
+                                            <i class='fa fa-search'/>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                </div><!-- /.sidebar -->
 
                 <b:section class='sidebar section no-margin' id='sidebarTop' preferred='yes'>
                   <b:widget id='PopularPosts2' locked='false' title='Popular Posts' type='PopularPosts'>
                     <b:includable id='main'>
                         <b:if cond='data:title != &quot;&quot;'>
                             <div class='panel panel-default'>
-                                <div class='panel-heading'>
+                                <div class='panel-heading no-padding'>
                                     <div class='media'>
-                                        <div class='media-body'>
-                                            <span class='content-title'><data:title/></span>
+                                        <div class='media-left icon-box'>
+                                            <img src='https://lh3.googleusercontent.com/-t8Ar7BDwzzw/VnS1XhjvfQI/AAAAAAAABW4/YK--Hx4rbqMeZamSqhA8WfheMCpJAlRbQCCo/s2048-Ic42/07.png' class='img-rounded icon'/>
                                         </div>
-                                        <div class='media-right'>
-                                            <img src='https://lh3.googleusercontent.com/-t8Ar7BDwzzw/VnS1XhjvfQI/AAAAAAAABW4/YK--Hx4rbqMeZamSqhA8WfheMCpJAlRbQCCo/s2048-Ic42/07.png' class='img-rounded no-padding no-margin' width='104' height='90' />
+                                        <div class='media-body'>
+                                            <span class='title'>Pop Posts</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1490,150 +1514,201 @@
                   </b:widget>
                 </b:section>
 
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>LINEスタンプPart2も発売中!!</h4>
-                    </div>
-                    <div class='panel-body'>
-                        <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
-                            <img alt='LINEスタンプ Part2 も発売中!!' class='full-width' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
-                        </a>
-                        <br/>
-                        ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
-                        カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
-                    </div>
-                </div>
-
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>LINEスタンプ発売中!!</h4>
-                    </div>
-                    <div class='panel-body'>
-                        <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
-                            <img alt='LINEスタンプ発売中!!' class='full-width' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png'/>
-                        </a>
-                        <br/>
-                        NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
-                        ぜひみてみてね!!
-                    </div>
-                </div>
-
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>About</h4>
-                        <p>Cupcakemafa</p>
-                    </div>
-                    <div class='panel-body'>
-                        <div class='text-center'>
-                            <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png'/><br/>
-                            <span class='title'>ちょっとしたことで日常に笑いを;)</span>
+                <div class='sidebar'>
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img class='img-rounded icon' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s128/22.png' alt='LINEスタンプ Part2 も発売中!!' />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>Oshirase</span>
+                                </div>
+                            </div>
                         </div>
-                        <hr class='embed'/>
-                        そんな思いを持ちながらゆるく活動している夫婦です&#12290;
-                        読み物アプリを作ったり&#12289;旅の情報を発信したり&#12289;試行錯誤中&#12290;
-                        ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています&#12290;
-                        どうぞ&#12289;よろしく&#12290;
-                        <div class='social-icons text-center'>
-                            <a class='btn-circle facebook' href='https://www.facebook.com/cupcakemafa'>
-                                <i class='fa fa-facebook fa-2x'/>
+                        <div class='panel-body'>
+                            <h4 class='title'>LINEスタンプPart2も発売中!!</h4>
+                            <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
+                                <img alt='LINEスタンプ Part2 も発売中!!' class='full-width' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
                             </a>
-                            <a class='btn-circle twitter' href='https://twitter.com/cupcakemafa'>
-                                <i class='fa fa-twitter fa-2x'/>
-                            </a>
-                            <a class='btn-circle google-plus' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts'>
-                                <i class='fa fa-google-plus fa-2x'/>
-                            </a>
-                            <a class='btn-circle pinterest hidden' href='#'>
-                                <i class='fa fa-pinterest fa-2x'/>
-                            </a>
-                            <a class='btn-circle youtube' href='https://www.youtube.com/c/Cupcakemafa2015/'>
-                                <i class='fa fa-youtube fa-2x'/>
-                            </a>
-                            <a class='btn-circle instagram' href='https://instagram.com/cupcakemafaofficial/'>
-                                <i class='fa fa-instagram fa-2x'/>
-                            </a>
+                            <br/>
+                            ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
+                            カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
                         </div>
                     </div>
-                </div>
 
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>KEN図鑑</h4>
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img class='img-rounded icon' src='https://4.bp.blogspot.com/-Za7R5UaXXiI/VkUs39wF-8I/AAAAAAAABMg/xdvMknb96ogLkTOczYD7ArKjDccZSIzZQ/s128/19-IMG_0064.png' alt='LINEスタンプ発売中!!' />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>Oshirase</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-body'>
+                            <h4 class='title'>LINEスタンプ発売中!!</h4>
+                            <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
+                                <img alt='LINEスタンプ発売中!!' class='full-width' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png'/>
+                            </a>
+                            <br/>
+                            NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
+                            ぜひみてみてね!!
+                        </div>
                     </div>
-                    <div class='panel-body text-center'>
-                        <a href='/p/kenzukan.html'>
-                            <img alt='KEN図鑑' class='full-width' src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png' style='margin-bottom:0px;'/>
-                        </a>
-                        <br/>
-                        <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135'/></a>
-                        <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115'/></a>
-                    </div>
-                </div>
 
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>Cupcakemafaとは</h4>
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img class='img-rounded icon' src='https://2.bp.blogspot.com/-ryH-xtVJhjg/VnS9gq6fKRI/AAAAAAAABa0/byY-x2-KvfU916F2VFgDF4JrdiEzVTyKw/s240/38.png' />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>Who we are</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-body'>
+                            <div class='text-center'>
+                                <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png'/><br/>
+                                <span class='title'>ちょっとしたことで日常に笑いを;)</span>
+                            </div>
+                            <hr class='embed'/>
+                            そんな思いを持ちながらゆるく活動している夫婦です&#12290;
+                            読み物アプリを作ったり&#12289;旅の情報を発信したり&#12289;試行錯誤中&#12290;
+                            ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています&#12290;
+                            どうぞ&#12289;よろしく&#12290;
+                            <div class='social-icons text-center'>
+                                <a class='btn-circle facebook' href='https://www.facebook.com/cupcakemafa'>
+                                    <i class='fa fa-facebook fa-2x'/>
+                                </a>
+                                <a class='btn-circle twitter' href='https://twitter.com/cupcakemafa'>
+                                    <i class='fa fa-twitter fa-2x'/>
+                                </a>
+                                <a class='btn-circle google-plus' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts'>
+                                    <i class='fa fa-google-plus fa-2x'/>
+                                </a>
+                                <a class='btn-circle pinterest hidden' href='#'>
+                                    <i class='fa fa-pinterest fa-2x'/>
+                                </a>
+                                <a class='btn-circle youtube' href='https://www.youtube.com/c/Cupcakemafa2015/'>
+                                    <i class='fa fa-youtube fa-2x'/>
+                                </a>
+                                <a class='btn-circle instagram' href='https://instagram.com/cupcakemafaofficial/'>
+                                    <i class='fa fa-instagram fa-2x'/>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class='panel-body'>
-                        <img border='0' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg'/><br/>
-                        <br/>
-                        カップケーキとマーファをくっつけた造語&#12289;それが&#12302;カップケーキマーファ &#65288;Cupcakemafa&#65289;&#12303;です&#12290;
-                        カップケーキは&#12289;Naoの好物&#12290;マーファとは&#12289;Kenがその昔に映画でイタリア男性が&#12300;マフィア&#12301;の事を
-                        &#12300;マーファ&#12301;と言っていたのを聞きかじったのがきっかけで&#12289;できた言葉なのです&#12290;<br/>
-                        Kenに言わせれば&#12289;Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう&#12290;
-                        時にカップケーキのように甘く&#12289;時にマフィアのように厳しい&#12290;まるで&#12289;人生のようですね&#12290;
-                        なんてね&#12290;そんなわけで&#12289;カップケーキマーファの誕生ですっ!!
-                    </div>
-                </div>
 
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>スポンサーリンク</h4>
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img class='img-rounded icon' src='https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s128/33.png' alt='KEN図鑑' />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>Oshirase</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-body text-center'>
+                            <h4 class='title'>KEN図鑑</h4>
+                            <a href='/p/kenzukan.html'>
+                                <img alt='KEN図鑑' class='full-width' src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png' style='margin-bottom:0px;'/>
+                            </a>
+                            <br/>
+                            <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135'/></a>
+                            <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115'/></a>
+                        </div>
                     </div>
-                    <div class='panel-body text-center no-padding'>
-                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-                        <!-- レクタングル２ -->
-                        <ins class='adsbygoogle'
-                             style='display:inline-block;width:300px;height:250px'
-                             data-ad-client='ca-pub-3036276233777511'
-                             data-ad-slot='1826014588'></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
 
-                <div class='post panel panel-default'>
-                    <div class='panel-body text-center'>
-                        <a class="twitter-timeline" href="https://twitter.com/cupcakemafa" data-widget-id="714935102849945601">@cupcakemafaさんのツイート</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img class='img-rounded icon' src='https://4.bp.blogspot.com/-sr6RxjOnHRU/VnS9xIi65CI/AAAAAAAABa8/n773VIrUAdITlNjXUP7HKxK7-NI0U1LOw/s128/39.png' alt='Cupcakemafaの由来は...' />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>About Us</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-body'>
+                            <img border='0' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg'/><br/>
+                            <br/>
+                            カップケーキとマーファをくっつけた造語&#12289;それが&#12302;カップケーキマーファ &#65288;Cupcakemafa&#65289;&#12303;です&#12290;
+                            カップケーキは&#12289;Naoの好物&#12290;マーファとは&#12289;Kenがその昔に映画でイタリア男性が&#12300;マフィア&#12301;の事を
+                            &#12300;マーファ&#12301;と言っていたのを聞きかじったのがきっかけで&#12289;できた言葉なのです&#12290;<br/>
+                            Kenに言わせれば&#12289;Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう&#12290;
+                            時にカップケーキのように甘く&#12289;時にマフィアのように厳しい&#12290;まるで&#12289;人生のようですね&#12290;
+                            なんてね&#12290;そんなわけで&#12289;カップケーキマーファの誕生ですっ!!
+                        </div>
                     </div>
-                </div>
 
-                <div class='post panel panel-default'>
-                    <div class='panel-heading'>
-                        <h4 class='title'>スポンサーリンク</h4>
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading'>
+                            <div class='media'>
+                                <div class='media-body'>スポンサーリンク</div>
+                            </div>
+                        </div>
+                        <div class='panel-body text-center no-padding'>
+                            <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                            <!-- レクタングル２ -->
+                            <ins class='adsbygoogle'
+                                 style='display:inline-block;width:300px;height:250px'
+                                 data-ad-client='ca-pub-3036276233777511'
+                                 data-ad-slot='1826014588'></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
                     </div>
-                    <div class='panel-body text-center no-padding'>
-                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-                        <!-- レクタングル１ -->
-                        <ins class='adsbygoogle'
-                             style='display:inline-block;width:300px;height:250px'
-                             data-ad-client='ca-pub-3036276233777511'
-                             data-ad-slot='7872548182'></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                        <span class='comment hidden'>End of Google AdSense</span>
+
+                    <div class='post panel panel-default'>
+                        <div class='panel-body text-center'>
+                            <a class="twitter-timeline" href="https://twitter.com/cupcakemafa" data-widget-id="714935102849945601">@cupcakemafaさんのツイート</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
                     </div>
-                </div>
+
+                    <div class='post panel panel-default'>
+                        <div class='panel-heading'>
+                            <div class='media'>
+                                <div class='media-body'>スポンサーリンク</div>
+                            </div>
+                        </div>
+                        <div class='panel-body text-center no-padding'>
+                            <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                            <!-- レクタングル１ -->
+                            <ins class='adsbygoogle'
+                                 style='display:inline-block;width:300px;height:250px'
+                                 data-ad-client='ca-pub-3036276233777511'
+                                 data-ad-slot='7872548182'></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                            <span class='comment hidden'>End of Google AdSense</span>
+                        </div>
+                    </div>
+                </div><!-- /.sidebar -->
+
                 <b:section class='sidebar section no-margin' id='sidebarBottom' preferred='yes'>
                     <b:widget id='Label1' locked='false' title='Categories' type='Label'>
                         <b:includable id='main'>
                             <div class='panel panel-default'>
                                 <b:if cond='data:title'>
-                                    <div class='panel-heading'>
-                                        <h4 class='title'><data:title/></h4>
+                                    <div class='panel-heading no-padding'>
+                                        <div class='media'>
+                                            <div class='media-left icon-box'>
+                                                <img class='img-rounded icon' src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s128/01.png' alt='Cupcakemataの記事をタグで探索!!' />
+                                            </div>
+                                            <div class='media-body'>
+                                                <span class='title'>Tags</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </b:if>
                                 <div expr:class='&quot;panel-body widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
@@ -1674,12 +1749,17 @@
                             </div>
                         </b:includable>
                     </b:widget>
+
                     <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
                         <b:includable id='main'>
                             <div class='panel panel-default'>
                                 <b:if cond='data:title != &quot;&quot;'>
-                                    <div class='panel-heading'>
-                                        <h4 class='title'><data:title/></h4>
+                                    <div class='panel-heading no-padding padding-left'>
+                                        <div class='media'>
+                                            <div class='media-body'>
+                                                <span class='title'>Back Number</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </b:if>
                                 <div class='widget-content panel-body'>
@@ -1793,7 +1873,7 @@
                 <div class='container'>
                     <div class='row'>
                         <div class='col-xs-12'>
-                            <h5 class='title'>スポンサーリンク</h5>
+                            <span class='title'>スポンサーリンク</span>
                         </div>
                     </div>
                     <div class='row'>
