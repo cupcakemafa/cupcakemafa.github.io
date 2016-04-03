@@ -696,6 +696,10 @@ nav.navbar .container-fluid {
     height: 3.8em;
 }
 
+.widget.PopularPosts {
+    margin:0;
+}
+
 #footer {
     color: #fff;
     border-top: 1px solid #cccccc;
