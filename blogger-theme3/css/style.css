@@ -684,6 +684,7 @@ nav.navbar .container-fluid {
 .sidebar .panel-heading .title {
     font-family: 'Chewy', cursive;
     font-size: 3.6em;
+    line-height: 140%;
 }
 .sidebar .panel-heading .icon-box {
     padding: 8px;
