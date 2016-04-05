@@ -354,6 +354,7 @@ h4.story-title:before {
     content: counter(story-title) ". ";
 }
 
+
 /* 02.テープ */
 
 .taped,
@@ -380,6 +381,7 @@ h4.story-title {
     padding: .75em 1em .75em 1.5em;
     border: 1px solid #ccc;
 }
+
 .sign::after {
     position: absolute;
     top: .5em;
@@ -391,6 +393,7 @@ h4.story-title {
     background-color: #3498db;
     border-radius: 4px;
 }
+
 .sign p {
     font-size: 0.8em;
     margin: 12px 0 0 0 !important;
@@ -402,6 +405,7 @@ h4.story-title {
     border-left: 6px solid #3498db;
     font-family: 'Chewy', cursive;
 }
+
 .left-border::after {
     position: absolute;
     left: 0;
@@ -411,21 +415,26 @@ h4.story-title {
     height: 0;
     border-bottom: 1px solid #ccc;
 }
+
+
 /**
  * サブタイトル
  * <h1 class="with-sub"><span>Sub Title</span>Main TItle</h1>
  **/
+
 .with-sub {
     font-family: 'Chewy', cursive;
     padding-bottom: .5em;
     border-bottom: 1px solid #ccc;
 }
+
 .with-sub span {
     display: block;
     margin-bottom: .2em;
     color: #aaa;
     font-size: .9em;
 }
+
 
 /* End content decolation */
 
@@ -561,15 +570,14 @@ nav.navbar .container-fluid {
     margin-bottom: 4px;
 }
 
-.post {
-}
+.post {}
 
 .post.item {
     line-height: 170%;
 }
 
 .post.item p {
-    margin-bottom:16px;
+    margin-bottom: 16px;
 }
 
 .post-outer {
@@ -643,6 +651,7 @@ nav.navbar .container-fluid {
 .page-navi.single .next {
     background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #f3ff50 2px, #f3ff50 4px);
 }
+
 .page-navi.single .previous {
     background: repeating-linear-gradient( -45deg, #fff, #fff 2px, lightgreen 2px, lightgreen 4px);
 }
@@ -653,6 +662,7 @@ nav.navbar .container-fluid {
     background-color: white;
     padding: 4px;
 }
+
 .page-navi.single .link-title .title {
     font-size: 1.4em;
 }
@@ -664,7 +674,7 @@ nav.navbar .container-fluid {
     background-repeat: no-repeat;
     border: 1px solid #ccc;
     background-size: contain;
-    width:80px;
+    width: 80px;
     height: 80px;
 }
 
@@ -686,9 +696,11 @@ nav.navbar .container-fluid {
     font-size: 3.6em;
     line-height: 140%;
 }
+
 .sidebar .panel-heading .icon-box {
     padding: 8px;
 }
+
 .sidebar .panel-heading .icon {
     margin: 0;
     padding: 0;
@@ -697,7 +709,7 @@ nav.navbar .container-fluid {
 }
 
 .widget.PopularPosts {
-    margin:0;
+    margin: 0;
 }
 
 #footer {
@@ -828,30 +840,85 @@ nav.navbar .container-fluid {
     background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #fea445 2px, #fea445 4px);
 }
 
+.stripe.yellow {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #f3ff50 2px, #f3ff50 4px);
+}
+
+.stripe.yellow-light {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #f8ff99 2px, #f8ff99 4px);
+}
+
+.stripe.green {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, lightgreen 2px, lightgreen 4px);
+}
+
+.stripe.marine {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, aquamarine 2px, aquamarine 4px);
+}
+
+.stripe.orange {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #fea445 2px, #fea445 4px);
+}
+
+.stripe.orange-light {
+    background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #ffce99 2px, #ffce99 4px);
+}
 
 /* End Theme */
 
+
 /* Start of Amazon Official Widget */
+
 .amazon_widget_JP_8001_0,
-.amzn_wdgt, 
+.amzn_wdgt,
 .amzn_wdgt .wdgt_brdr .wdgt_tl_pad,
 .amzn_wdgt .wdgt_brdr .wdgt_tl {
     width: 100% !important;
 }
+
 .amzn_wdgt {
     font-size: 16px !important;
 }
+
 .amzn_wdgt .wdgt_brdr .wdgt_tl .asin_h1 {
     font-size: 14px !important;
 }
+
 .amzn_wdgt .wdgt_brdr .wdgt_tl .asin_h2 {
     font-size: 11px !important;
 }
+
 .wdgt_hd {
     font-size: 21px !important;
-    text-align:center !important;
+    text-align: center !important;
 }
+
 .wdgt_pop_tl .cssbutton {
     height: 24px !important;
 }
+
+
 /* End of Amazon Official Widget */
+
+
+/* Start of Lucky Word */
+
+.lucky-icon {
+    margin: 0 -18px 0;
+    height: auto;
+}
+
+.lucky-icon.small {
+    width: 64px;
+}
+
+.lucky-icon.large {
+    width: 160px;
+}
+
+.lucky-word {
+    border: 1px solid #ccc;
+}
+
+
+/* End of Lucky Word */
