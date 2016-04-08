@@ -754,6 +754,7 @@ $(function () {
         setLuckyWord = function () {
             if (luckyWord.length && luckyIcon.length && $('.lucky-word-box').length) {
                 var
+                    HUSH_TAG = 'luckyPunch',
                     SHARE_VIA = 'cupcakemafa',
                     SHARE_URL = 'http://www.cupcakemafa.com/',
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
@@ -784,7 +785,7 @@ $(function () {
                     share_url = TWITTER_SHARE_PREFIX + word[i].text.replace(/ /g, '_') + TWITTER_SHARE_POSTFIX;
                     share_url = encodeURIComponent(share_url);
                     share_url = TWITTER_SHARE_BASE + share_url;
-                    share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="" data-dnt="false">Tweet</a>';
+                    share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
                 }
                 // activate tweet button
