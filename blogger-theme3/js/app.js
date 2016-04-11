@@ -141,21 +141,22 @@ $(function () {
                 $elm.replaceWith(tag);
             });
         },
-        // Pinterest シェア実行処理
-        setPinterestShare = function () {
-            var e = document.createElement('script');
-            e.setAttribute('type', 'text/javascript');
-            e.setAttribute('charset', 'UTF-8');
-            e.setAttribute('src', 'http://assets.pinterest.com/js/pinmarklet.js?r=' + Math.random() * 99999999);
-            document.body.appendChild(e);
-        },
         // set share button tags
         setSocialShareTag = function (shareUrl) {
             var
                 tag = '',
                 $share = $('.post-social-share'),
                 via = $("meta[name='twitter:site']").attr('content'),
-                postTitle = $('title').text();
+                twTitle = $("meta[name='twitter:title']").attr('content'),
+                postTitle = $('title').text(),
+                // Pinterest シェア実行処理
+                setPinterestShare = function () {
+                    var e = document.createElement('script');
+                    e.setAttribute('type', 'text/javascript');
+                    e.setAttribute('charset', 'UTF-8');
+                    e.setAttribute('src', 'http://assets.pinterest.com/js/pinmarklet.js?r=' + Math.random() * 99999999);
+                    document.body.appendChild(e);
+                };
 
             if (via.length) {
                 via = via.replace(/@/g, '');
@@ -170,7 +171,7 @@ $(function () {
                 tag += '</span>';
 
                 tag += '<span>';
-                tag += '<a class="btn-circle twitter" href="http://twitter.com/share?url=' + shareUrl + '&via=' + via + '" target="_blank">';
+                tag += '<a class="btn-circle twitter" href="http://twitter.com/share?text=' + twTitle + '&url=' + shareUrl + '&via=' + via + '" target="_blank">';
                 tag += '<i class="fa fa-twitter fa-2x"/></i>';
                 tag += '</a>';
                 tag += '</span>';
