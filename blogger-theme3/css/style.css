@@ -456,6 +456,7 @@ nav.navbar .container-fluid {
 
 .nav.navbar-nav {
     z-index: 30;
+    font-size: 18px;
 }
 
 .nav.navbar-nav,
