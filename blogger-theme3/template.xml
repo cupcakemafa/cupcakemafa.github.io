@@ -589,7 +589,11 @@
                                             </div>
                                             <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
                                                 <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-                                                    <data:post.body/>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+                                                            <data:post.body/>
+                                                        </div>
+                                                    </div>
                                                 <b:else/>
                                                     <div class='post-summary hidden'>
                                                         <div id='id'><data:post.id/></div>
