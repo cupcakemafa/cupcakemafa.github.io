@@ -182,11 +182,11 @@ $(function () {
                 tag += '</a>';
                 tag += '</span>';
 
-                tag += '<span>';
-                tag += '<a class="btn-circle pinterest" href="#" onclick="setPinterestShare()">';
-                tag += '<i class="fa fa-pinterest fa-2x"/></i>';
-                tag += '</a>';
-                tag += '</span>';
+//                tag += '<span>';
+//                tag += '<a class="btn-circle pinterest" href="#" onclick="setPinterestShare()">';
+//                tag += '<i class="fa fa-pinterest fa-2x"/></i>';
+//                tag += '</a>';
+//                tag += '</span>';
 
                 //                tag += '<span>';
                 //                tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
