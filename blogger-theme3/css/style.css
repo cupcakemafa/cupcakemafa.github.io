@@ -491,6 +491,10 @@ nav.navbar .container-fluid {
     background-color: transparent;
 }
 
+.nav.navbar-nav .dropdown.open .dropdown-toggle {
+    color: white;
+}
+
 .site-title {
     display: none;
     color: white;
