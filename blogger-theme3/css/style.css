@@ -601,6 +601,10 @@ nav.navbar .container-fluid {
     overflow: hidden;
 }
 
+.post .item-title {
+    font-weight: 100;
+}
+
 .post .panel-heading nav {
     height: 38px;
     overflow: hidden;
