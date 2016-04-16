@@ -13,11 +13,11 @@ var luckyWord = [
     },
     {
         "img": "https://2.bp.blogspot.com/-jparoIZl8g0/VwUUw3nBKWI/AAAAAAAAB9c/c5H8_ylTdi4Xt6ilf2KJjKyDZsKjDCxmA/s320/IMG_0225.png",
-        "text": "さて、がんばるべっ"
+        "text": "さてがんばるべっ"
     },
     {
         "img": "https://3.bp.blogspot.com/-ly8xkOSy3oM/VwUUw4VV_VI/AAAAAAAAB9g/cOkLs61hTEkOqqxYHq5I2ifYp14sw1WTw/s320/IMG_0226.png",
-        "text": "この、とんま!"
+        "text": "このとんま!"
     },
     {
         "img": "https://1.bp.blogspot.com/-wBFAQ_OlX-k/VwUUxPHeUyI/AAAAAAAAB9k/pnRera6F6YovIBGcJH7Ue396IhCSH_sag/s320/IMG_0227.png",
@@ -29,7 +29,7 @@ var luckyWord = [
     },
     {
         "img": "https://2.bp.blogspot.com/-r5KwT0szJQw/VwUUxuQyUcI/AAAAAAAAB9s/85c69N-x3UYdRUmp1LsE37Wzofx3U0GmA/s320/IMG_0229.png",
-        "text": "今日、すごいラッキー"
+        "text": "今日すごいラッキー"
     },
     {
         "img": "https://3.bp.blogspot.com/-bq0cazudybA/VwUUxyIe1HI/AAAAAAAAB9w/54dbjkUi1AULLktbU1C-ESdjLaTubfxFA/s320/IMG_0230.png",
@@ -65,11 +65,11 @@ var luckyWord = [
     },
     {
         "img": "https://1.bp.blogspot.com/-ieS7mbGtcvw/VwUU0L3eRVI/AAAAAAAAB-Q/6uKnCaxO1ZMm2bFqZk-NxHwQuyYR3nm0A/s320/IMG_0238.png",
-        "text": "どんっ、どんっ、どんたこすっ"
+        "text": "どんっどんっどんたこすっ"
     },
     {
         "img": "https://3.bp.blogspot.com/-JR-D3Z0ibhE/VwUU0bgJ_JI/AAAAAAAAB-U/mDPRwJwCnxYY9fNOUyyqyzkQnkrKYsT6w/s320/IMG_0239.png",
-        "text": "もんもん、もんまるとる!"
+        "text": "もんもんもんまるとる!"
     },
 //    {
 //        "img": "https://3.bp.blogspot.com/-T8wFElxITMs/VwUU0rZ7XVI/AAAAAAAAB-Y/ygVHdt_-kyMa7FIXZ7b-uca6c5IqGeXPg/s320/IMG_0240.png",
