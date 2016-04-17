@@ -590,14 +590,20 @@ nav.navbar .container-fluid {
 }
 
 .panel-title {
-    width: 114%;
-    height: 72px;
+    width: 112%;
+/*    height: 72px;*/
     overflow: hidden;
-    margin-left: -7%;
+    margin-left: -6%;
     text-overflow: ellipsis;
     white-space: nowrap;
     padding-left: 1%;
     padding-right: 1%;
+}
+
+body.item .panel-title {
+    width: 104%;
+    height: 72px !important;
+    margin-left: -2%;
 }
 
 .post-title {
