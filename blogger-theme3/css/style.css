@@ -118,6 +118,19 @@ a:active,
     width: 100%;
 }
 
+.text-s {
+    font-size: 9px !important;
+}
+.text-m {
+    font-size: 13px !important;
+}
+.text-l {
+    font-size: 18px !important;
+}
+.text-xl {
+    font-size: 21px !important;
+}
+
 hr.embed {
     border: 0;
     height: 0;
@@ -611,6 +624,10 @@ body.item .panel-title {
     overflow: hidden;
 }
 
+.post-title a {
+    display: block;
+}
+
 .post .item-title {
     font-weight: 100;
 }
@@ -723,6 +740,14 @@ body.item .panel-title {
     height: 3.8em;
 }
 
+.sidebar .label-link {
+    font-size: 21px;
+}
+
+.sidebar .label-link li a {
+    display: block;
+}
+
 .widget.PopularPosts {
     margin: 0;
 }
@@ -739,9 +764,13 @@ body.item .panel-title {
     margin: 0px;
 }
 
+#footer ul .menu-item a {
+    display: block;
+    padding: 16px 8px;
+}
+
 #footer ul .menu-item {
     width: 100%;
-    padding: 16px 8px;
     border-top: 1px solid #efefef;
     font-size: 115%;
 }
@@ -761,7 +790,7 @@ body.item .panel-title {
 }
 
 #footer #first {
-    background-color: #232323;
+    background-color: #333333;
 }
 
 #footer #second {

@@ -176,7 +176,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class='fa fa-star'/>
-                                        CITIY
+                                        CITY
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -704,7 +704,7 @@
                                                                 </a>
                                                             </p>
                                                         </div>
-                                                        <div class='media-right '>
+                                                        <div class='media-right'>
                                                             <a class='next-link thumb' expr:href='data:newerPageUrl'>
                                                                 <img class='link-thumb media-object img-rounded' data-src='' alt='' />
                                                             </a>
@@ -1625,11 +1625,31 @@
                     </div>
                 </div><!-- /.sidebar -->
 
+                <div class='sidebar'>
+                    <div class='post panel panel-default no-margin margin-bottom'>
+                        <div class='panel-heading no-padding'>
+                            <div class='media'>
+                                <div class='media-left icon-box'>
+                                    <img class='img-rounded icon' border="0" src="https://4.bp.blogspot.com/-XLqQzp_8Dp0/VnS1suUs6YI/AAAAAAAABXA/2M5izfVYMekftIzZHSVzHCbKQX5CaKYfACKgB/s1600/08.png" />
+                                </div>
+                                <div class='media-body'>
+                                    <span class='title'>The City</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class='label-link list-group no-margin margin-bottom'>
+                        <li class='list-group-item'><a href='/search/label/NEW%20YORK'>New York</a></li>
+                        <li class='list-group-item'><a href='/search/label/PARIS'>Paris</a></li>
+                        <li class='list-group-item'><a href='/search/label/RECOMMEND'>Reccomend</a></li>
+                    </ul>
+                </div><!-- /.sidebar -->
+
                 <b:section class='sidebar section no-margin' id='sidebarTop' preferred='yes'>
                   <b:widget id='PopularPosts2' locked='false' title='Popular Posts' type='PopularPosts'>
                     <b:includable id='main'>
                         <b:if cond='data:title != &quot;&quot;'>
-                            <div class='panel panel-default'>
+                            <div class='panel panel-default no-margin margin-bottom'>
                                 <div class='panel-heading no-padding'>
                                     <div class='media'>
                                         <div class='media-left icon-box'>
