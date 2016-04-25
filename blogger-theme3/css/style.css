@@ -130,6 +130,18 @@ a:active,
 .text-xl {
     font-size: 21px !important;
 }
+.text-xxl {
+    font-size: 28px !important;
+}
+.text-xxxl {
+    font-size: 32px !important;
+}
+.text-x2 {
+    font-size: 2em;
+}
+.text-x4 {
+    font-size: 4em;
+}
 
 hr.embed {
     border: 0;
@@ -746,6 +758,12 @@ body.item .panel-title {
 
 .sidebar .label-link li a {
     display: block;
+}
+
+.sidebar .label-link li:hover,
+.sidebar .label-link li:hover a {
+    color: #334;
+    background-color: #eee;
 }
 
 .widget.PopularPosts {
