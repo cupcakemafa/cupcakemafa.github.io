@@ -121,24 +121,31 @@ a:active,
 .text-s {
     font-size: 9px !important;
 }
+
 .text-m {
     font-size: 13px !important;
 }
+
 .text-l {
     font-size: 18px !important;
 }
+
 .text-xl {
     font-size: 21px !important;
 }
+
 .text-xxl {
     font-size: 28px !important;
 }
+
 .text-xxxl {
     font-size: 32px !important;
 }
+
 .text-x2 {
     font-size: 2em;
 }
+
 .text-x4 {
     font-size: 4em;
 }
@@ -616,7 +623,7 @@ nav.navbar .container-fluid {
 
 .panel-title {
     width: 112%;
-/*    height: 72px;*/
+    /*    height: 72px;*/
     overflow: hidden;
     margin-left: -6%;
     text-overflow: ellipsis;
@@ -769,18 +776,23 @@ body.item .panel-title {
 .sidebar .the-city .panel-heading {
     background-color: #EAFBE9;
 }
+
 .sidebar .who-we-are .panel-heading {
     background-color: #FDDDE9;
 }
+
 .sidebar .oshirase .panel-heading {
     background-color: #eefefe;
 }
+
 .sidebar .about-us .panel-heading {
     background-color: #FFD9D1;
 }
+
 .sidebar .tags .panel-heading {
     background-color: #E2FAFD;
 }
+
 .sidebar .back-number .panel-heading {
     background-color: #FFF9CA;
 }
@@ -949,6 +961,7 @@ body.item .panel-title {
     background: repeating-linear-gradient( -45deg, #fff, #fff 2px, #ffce99 2px, #ffce99 4px);
 }
 
+
 /* End Theme */
 
 
@@ -1007,3 +1020,25 @@ body.item .panel-title {
 
 
 /* End of Lucky Word */
+
+
+/* Start of Zenback */
+
+.zenback-module-item-tools a > img {
+    display: none;
+}
+
+.zenback-module-item-tools a:nth-child(1):after {
+    content: "Reply";
+}
+
+.zenback-module-item-tools a:nth-child(2):after {
+    content: "Retweet";
+}
+
+.zenback-module-item-tools a:nth-child(3):after {
+    content: "Favorite";
+}
+
+
+/* End of Zenback */
