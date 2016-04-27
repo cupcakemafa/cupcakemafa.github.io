@@ -766,8 +766,31 @@ body.item .panel-title {
     background-color: #eee;
 }
 
+.sidebar .the-city .panel-heading {
+    background-color: #E8FFBC;
+}
+.sidebar .who-we-are .panel-heading {
+    background-color: #FDDDE9;
+}
+.sidebar .oshirase .panel-heading {
+    background-color: #eefefe;
+}
+.sidebar .about-us .panel-heading {
+    background-color: #FFD9D1;
+}
+.sidebar .tags .panel-heading {
+    background-color: #E2FAFD;
+}
+.sidebar .back-number .panel-heading {
+    background-color: #FFF9CA;
+}
+
 .widget.PopularPosts {
     margin: 0;
+}
+
+.widget.PopularPosts .panel-heading {
+    background-color: #FFFDBC;
 }
 
 #footer {

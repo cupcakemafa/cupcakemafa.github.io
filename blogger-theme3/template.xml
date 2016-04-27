@@ -161,29 +161,35 @@
                         <span class='comment hidden'>Collect the nav links, forms, and other content for toggling</span>
                         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
                             <ul class='nav navbar-nav'>
+                                <li class='menu-item hidden'>
+                                    <a href='/2016/04/about-us.html'>
+                                        <i class='fa fa-rocket'/>
+                                        ABOUT US
+                                    </a>
+                                </li>
                                 <li class='menu-item'>
                                     <a href='/search/label/NEWS'>
                                         <i class='fa fa-file-text'/>
                                         NEWS
                                     </a>
                                 </li>
-                                <li class='menu-item'>
-                                    <a href='/search/label/TRAVEL'>
-                                        <i class='fa fa-globe'/>
-                                        TRAVEL
-                                    </a>
-                                </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class='fa fa-star'/>
-                                        CITY
+                                        TRAVEL
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/search/label/NEW%20YORK">New York</a></li>
                                         <li><a href="/search/label/PARIS">Paris</a></li>
-                                        <li><a href="/search/label/RECOMMEND">Reccomend</a></li>
+                                        <li><a href="/search/label/RECOMMEND">Recommend</a></li>
                                     </ul>
+                                </li>
+                                <li class='menu-item'>
+                                    <a href='/search/label/BOOK'>
+                                        <i class='fa fa-globe'/>
+                                        BOOK
+                                    </a>
                                 </li>
                                 <li class='menu-item'>
                                     <a href='/search/label/ART'>
@@ -191,17 +197,16 @@
                                         ART
                                     </a>
                                 </li>
-                                <li class='menu-item'>
-                                    <a href='/p/kenzukan.html'>
-                                        <i class='fa fa-book'/>
-                                        ZUKAN
-                                    </a>
-                                </li>
-                                <li class='menu-item'>
-                                    <a href='/p/kenzukan-ep-s1.html'>
-                                        <i class='fa fa-bookmark'/>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class='fa fa-star'/>
                                         KOBANASI
+                                        <span class="caret"></span>
                                     </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href='/p/kenzukan.html'>Ken Zukan</a></li>
+                                        <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
+                                    </ul>
                                 </li>
                                 <li class='menu-search no-hover'>
                                     <form action='/search' class='navbar-form form-inline navbar-right' method='get' role='search'>
@@ -745,6 +750,15 @@
                                             TOP
                                         </a>
                                     </p>
+
+                                    <!-- X:S ZenBackWidget -->
+                                    <div id="zenback-widget-loader"></div>
+                                    <script type="text/javascript">
+                                    //<![CDATA[
+                                    !function(d,i){if(!d.getElementById(i)){var r=Math.ceil((new Date()*1)*Math.random());var j=d.createElement("script");j.id=i;j.async=true;j.src="//w.zenback.jp/v1/?base_uri=http%3A//www.cupcakemafa.com&nsid=138265398058469605%3A%3A138265430539137066&rand="+r;d.body.appendChild(j);}}(document,"zenback-widget-js");
+                                    //]]>
+                                    </script>
+                                    <!-- X:E ZenBackWidget -->
 
                                 </b:if>
                             </b:if>
@@ -1626,7 +1640,7 @@
                 </div><!-- /.sidebar -->
 
                 <div class='sidebar'>
-                    <div class='post panel panel-default no-margin margin-bottom'>
+                    <div class='the-city post panel panel-default no-margin margin-bottom'>
                         <div class='panel-heading no-padding'>
                             <div class='media'>
                                 <div class='media-left icon-box'>
@@ -1690,7 +1704,7 @@
                 </b:section>
 
                 <div class='sidebar'>
-                    <div class='post panel panel-default'>
+                    <div class='oshirase post panel panel-default'>
                         <div class='panel-heading no-padding'>
                             <div class='media'>
                                 <div class='media-left icon-box'>
@@ -1715,7 +1729,7 @@
                         </div>
                     </div>
 
-                    <div class='post panel panel-default'>
+                    <div class='oshirase post panel panel-default'>
                         <div class='panel-heading no-padding'>
                             <div class='media'>
                                 <div class='media-left icon-box'>
@@ -1740,7 +1754,7 @@
                         </div>
                     </div>
 
-                    <div class='post panel panel-default'>
+                    <div class='who-we-are post panel panel-default'>
                         <div class='panel-heading no-padding'>
                             <div class='media'>
                                 <div class='media-left icon-box'>
@@ -1784,7 +1798,7 @@
                         </div>
                     </div>
 
-                    <div class='post panel panel-default'>
+                    <div class='oshirase post panel panel-default'>
                         <div class='panel-heading no-padding'>
                             <div class='media'>
                                 <div class='media-left icon-box'>
@@ -1810,7 +1824,7 @@
                         </div>
                     </div>
 
-                    <div class='post panel panel-default'>
+                    <div class='about-us post panel panel-default'>
                         <div class='panel-heading no-padding'>
                             <div class='media'>
                                 <div class='media-left icon-box'>
@@ -1888,7 +1902,7 @@
                 <b:section class='sidebar section no-margin' id='sidebarBottom' preferred='yes'>
                     <b:widget id='Label1' locked='false' title='Categories' type='Label'>
                         <b:includable id='main'>
-                            <div class='panel panel-default'>
+                            <div class='tags panel panel-default'>
                                 <b:if cond='data:title'>
                                     <div class='panel-heading no-padding'>
                                         <div class='media'>
@@ -1942,7 +1956,7 @@
 
                     <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
                         <b:includable id='main'>
-                            <div class='panel panel-default'>
+                            <div class='back-number panel panel-default'>
                                 <b:if cond='data:title != &quot;&quot;'>
                                     <div class='panel-heading no-padding padding-left'>
                                         <div class='media'>
@@ -2047,6 +2061,12 @@
                     </div>
                 </form>
                 <ul class='footer-navi'>
+                    <li class="menu-item">
+                        <a href="/search/label/TRAVEL">
+                            <i class="fa fa-globe"></i>
+                            TRAVEL
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class='col-xs-12 text-center' id='second'>
