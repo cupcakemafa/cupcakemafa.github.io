@@ -182,11 +182,11 @@ $(function () {
                 tag += '</a>';
                 tag += '</span>';
 
-//                tag += '<span>';
-//                tag += '<a class="btn-circle pinterest" href="#" onclick="setPinterestShare()">';
-//                tag += '<i class="fa fa-pinterest fa-2x"/></i>';
-//                tag += '</a>';
-//                tag += '</span>';
+                //                tag += '<span>';
+                //                tag += '<a class="btn-circle pinterest" href="#" onclick="setPinterestShare()">';
+                //                tag += '<i class="fa fa-pinterest fa-2x"/></i>';
+                //                tag += '</a>';
+                //                tag += '</span>';
 
                 //                tag += '<span>';
                 //                tag += '<a class="btn-circle linkedin" href="http://www.linkedin.com/shareArticle?mini=true&;url=' + shareUrl + '" target="_blank">';
@@ -806,6 +806,24 @@ $(function () {
                 $open_lucky.removeClass('disabled');
             }
         },
+        setLazyLoad = function() {
+            var $imgs = $('.post-body img'),
+                $img, src;
+            $imgs.each(function (idx, elm) {
+                if (idx > 0) {
+                    $img = $(elm);
+                    src = $img.attr('src');
+                    $img.attr('data-original', src);
+                    $img.attr('src', 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150');
+                    if (idx == $imgs.length - 1) {
+                        $imgs.lazyload({
+                            threshold: 200, // 200pxの距離まで近づいたら表示する
+                            effect: "fadeIn", // じわじわっと表示させる
+                        });
+                    }
+                }
+            });
+        }
         //
         // Main
         //
@@ -852,7 +870,7 @@ $(function () {
 
             if (pageType === 'index') {
                 setPageListNavi();
-            } else if(pageType === 'item') {
+            } else if (pageType === 'item') {
                 setSinglePageNavi();
             }
 
@@ -863,6 +881,8 @@ $(function () {
             }
 
             //setAffiliateButton();
+
+            setLazyLoad();
 
             setLuckyWord();
 
