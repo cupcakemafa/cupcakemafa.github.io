@@ -182,7 +182,8 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="/search/label/NEW%20YORK">New York</a></li>
                                         <li><a href="/search/label/PARIS">Paris</a></li>
-                                        <li><a href="/search/label/RECOMMEND">Recommend</a></li>
+                                        <li><a href="/search/label/持ち物">持ち物</a></li>
+                                        <!--<li><a href="/search/label/RECOMMEND">Recommend</a></li>-->
                                     </ul>
                                 </li>
                                 <li class='menu-item'>
@@ -692,17 +693,35 @@
                             <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
                                 <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
                                     <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                                        <div class='page-navi single hidden'>
-                                            <b:if cond='data:newerPageUrl'>
-                                                <div class='panel panel-default next'>
+                                        <div class='page-navi single hidden row no-margin'>
+                                            <b:if cond='data:olderPageUrl'>
+                                                <div class='panel panel-default previous col-md-6 col-sm-12 col-xs-12'>
                                                     <div class='panel-body media'>
-                                                        <div class='media-body text-right'>
+                                                        <div class='media-left'>
                                                             <h4 class='media-heading'>
                                                                 <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                    <strong>Next</strong>
-                                                                    <i class='fa fa-chevron-right'/>
+                                                                    <i class='fa fa-chevron-left'/>
+                                                                    <strong>Prev</strong>
                                                                 </a>
                                                             </h4>
+                                                            <a class='prev-link thumb' expr:href='data:olderPageUrl'>
+                                                                <img class='link-thumb media-object img-rounded' data-src='' alt='' />
+                                                            </a>
+                                                        </div>
+                                                        <div class='media-body text-left'>
+                                                            <p>
+                                                                <a class='prev-link title' expr:href='data:olderPageUrl'>
+                                                                    <span class='link-title'></span>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:newerPageUrl'>
+                                                <div class='panel panel-default next col-md-5 col-md-offset-1 col-sm-12 col-xs-12'>
+                                                    <div class='panel-body media'>
+                                                        <div class='media-body text-right'>
                                                             <p>
                                                                 <a class='next-link title' expr:href='data:newerPageUrl'>
                                                                     <span class='link-title'></span>
@@ -710,33 +729,15 @@
                                                             </p>
                                                         </div>
                                                         <div class='media-right'>
+                                                            <h4 class='media-heading'>
+                                                                <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                    <strong>Next</strong>
+                                                                    <i class='fa fa-chevron-right'/>
+                                                                </a>
+                                                            </h4>
                                                             <a class='next-link thumb' expr:href='data:newerPageUrl'>
                                                                 <img class='link-thumb media-object img-rounded' data-src='' alt='' />
                                                             </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </b:if>
-                                            <b:if cond='data:olderPageUrl'>
-                                                <div class='panel panel-default previous'>
-                                                    <div class='panel-body media'>
-                                                        <div class='media-left'>
-                                                            <a class='prev-link thumb' expr:href='data:olderPageUrl'>
-                                                                <img class='link-thumb media-object img-rounded' data-src='' alt='' />
-                                                            </a>
-                                                        </div>
-                                                        <div class='media-body text-left'>
-                                                            <h4 class='media-heading'>
-                                                                <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                    <i class='fa fa-chevron-left'/>
-                                                                    <strong>Prev</strong>
-                                                                </a>
-                                                            </h4>
-                                                            <p>
-                                                                <a class='prev-link title' expr:href='data:olderPageUrl'>
-                                                                    <span class='link-title'></span>
-                                                                </a>
-                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1655,7 +1656,8 @@
                     <ul class='label-link list-group no-margin margin-bottom'>
                         <li class='list-group-item'><a href='/search/label/NEW%20YORK'>New York</a></li>
                         <li class='list-group-item'><a href='/search/label/PARIS'>Paris</a></li>
-                        <li class='list-group-item'><a href='/search/label/RECOMMEND'>Reccomend</a></li>
+                        <li class='list-group-item'><a href="/search/label/持ち物">持ち物</a></li>
+                        <!--<li class='list-group-item'><a href='/search/label/RECOMMEND'>Recommend</a></li>-->
                     </ul>
                 </div><!-- /.sidebar -->
 

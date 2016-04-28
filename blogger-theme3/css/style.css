@@ -364,6 +364,13 @@ article.post:hover,
     border-color: #aaa;
 }
 
+.page-navi.single .link-title .title {
+    min-height: 86px;
+}
+.page-navi.single .link-title .date {
+    padding-bottom: 0;
+}
+
 .content-title-box {
     padding: 1em;
     border: 7px solid #333;
@@ -1040,5 +1047,8 @@ body.item .panel-title {
     content: "Favorite";
 }
 
-
+#zenback-news-hasimage,
+#logly-lift-869470 {
+    display: none;
+}
 /* End of Zenback */
