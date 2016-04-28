@@ -812,9 +812,11 @@ $(function () {
             $imgs.each(function (idx, elm) {
                 if (idx > 0) {
                     $img = $(elm);
-                    src = $img.attr('src');
-                    $img.attr('data-original', src);
-                    $img.attr('src', 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150');
+                    if(!$img.hasClass('main')) {
+                        src = $img.attr('src');
+                        $img.attr('data-original', src);
+                        $img.attr('src', 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150');
+                    }
                     if (idx == $imgs.length - 1) {
                         $imgs.lazyload({
                             threshold: 200, // 200pxの距離まで近づいたら表示する
