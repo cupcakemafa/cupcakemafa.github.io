@@ -1049,6 +1049,6 @@ body.item .panel-title {
 
 #zenback-news-hasimage,
 #logly-lift-869470 {
-    display: none;
+    display: none !important;
 }
 /* End of Zenback */
