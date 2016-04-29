@@ -39,6 +39,10 @@ a:active,
     text-decoration: none;
 }
 
+ul.no-dot li {
+    list-style: none;
+}
+
 .no-margin {
     margin: 0px !important;
 }
