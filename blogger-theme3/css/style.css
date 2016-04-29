@@ -1026,7 +1026,7 @@ body.item .panel-title {
     border: 1px solid #ccc;
 }
 
-.lucky-word-modal {
+.lucky-word-modal .btn {
     height: 28px;
     padding-top: 0;
     padding-bottom: 0;
