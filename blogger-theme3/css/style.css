@@ -87,6 +87,10 @@ ul.no-dot li {
     padding-top: 8px !important;
 }
 
+.no-border {
+    border: none;
+}
+
 .param,
 .meta-tag,
 .comment {
