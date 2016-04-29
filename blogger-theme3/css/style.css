@@ -367,6 +367,7 @@ article.post:hover,
 .page-navi.single .link-title .title {
     min-height: 86px;
 }
+
 .page-navi.single .link-title .date {
     padding-bottom: 0;
 }
@@ -1025,6 +1026,12 @@ body.item .panel-title {
     border: 1px solid #ccc;
 }
 
+.lucky-word-modal {
+    height: 28px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 
 /* End of Lucky Word */
 
@@ -1051,4 +1058,6 @@ body.item .panel-title {
 #logly-lift-869470 {
     display: none !important;
 }
+
+
 /* End of Zenback */
