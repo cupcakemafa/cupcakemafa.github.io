@@ -277,8 +277,27 @@
                 <b:section class='main' id='main' showaddelement='no'>
                     <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
                         <b:includable id='main'>
-                            <b:if cond='data:blog.homepageUrl == data:blog.url'>
+                            <span class='comment hidden'>Title for a Tag List page</span>
+                            <b:if cond='data:blog.searchLabel != &quot;&quot;'>
+                                <div class='row'>
+                                    <div class='post-col- col- col-xs-12'>
+                                        <h3 class='sign no-border no-margin'>
+                                            <data:blog.searchLabel/> の記事リスト
+                                        </h3>
+                                        <!--
+                                        <div class='panel panel-default'>
+                                          <div class='panel-body'>
+                                              <h3 class='sign no-border no-margin'>
+                                                  <data:blog.searchLabel/>の記事リスト
+                                              </h3>
+                                          </div>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                            </b:if>
 
+                            <b:if cond='data:blog.homepageUrl == data:blog.url'>
                                 <div class='row'>
                                     <div class='post-col col col-md-6 col-sm-12 col-xs-12'>
                                         <div class='panel panel-default'>
@@ -435,7 +454,8 @@
                                 </div>
                             </b:if>
 
-                            <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+                            <!-- 404 Not Found Page -->
+                            <b:if cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'>
                                 <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
                                     <div class='panel-heading text-center'>
                                         <div class='text-center'>
