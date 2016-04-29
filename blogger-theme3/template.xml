@@ -356,7 +356,7 @@
 
                                 <!-- Modal -->
                                 <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
-                                    <div class='modal-dialog' role='document'>
+                                    <div class='modal-dialog lucky-word-modal' role='document'>
                                         <div class='modal-content'>
 
                                             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
@@ -364,7 +364,7 @@
                                                     <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
                                                         Lucky Word
                                                     </h3>
-                                                    <p class='padding-top'>
+                                                    <p class='no-padding padding-top'>
                                                         あなたのラッキーワードは…
                                                     </p>
                                                 </div>
@@ -376,25 +376,27 @@
                                                     この言葉をブチ込んでみて!!<br />
                                                     きっといい日になるはず!!
                                                 </p>
-                                                <p class='text-center'>
-                                                    <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
-                                                    チャオ!!
-                                                    </button>
-                                                </p>
-                                            </div>
-                                            <div class='modal-footer stripe yellow-light'>
-                                                <div class='text-center'>
-                                                    <div class='share-this-content'>
-                                                        <span><a id='lucky-word-share-a' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                                                <div class='text-center row'>
+                                                    <div class="col-xs-6 text-right">
+                                                        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                                                        チャオ!!
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-xs-6 text-left">
+                                                        <div class='share-this-content'>
+                                                            <span><a id='lucky-word-share-a' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class='modal-footer stripe yellow-light'>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
-                                    <div class='modal-dialog' role='document'>
+                                    <div class='modal-dialog lucky-word-modal' role='document'>
                                         <div class='modal-content'>
 
                                             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
@@ -402,7 +404,7 @@
                                                     <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
                                                         Lucky Word
                                                     </h3>
-                                                    <p class='padding-top'>
+                                                    <p class='no-padding padding-top'>
                                                         あなたのラッキーワードは…
                                                     </p>
                                                 </div>
@@ -414,19 +416,20 @@
                                                     この言葉をブチ込んでみて!!<br />
                                                     きっといい日になるはず!!
                                                 </p>
-                                                <p class='text-center'>
-                                                    <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
-                                                    チャオ!!
-                                                    </button>
-                                                </p>
-                                            </div>
-                                            <div class='modal-footer stripe yellow-light'>
-                                                <div class='text-center'>
-                                                    <div class='share-this-content'>
-                                                        <span><a id='lucky-word-share-b' class='twitter-share-button-' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                                                <div class='text-center row'>
+                                                    <div class="col-xs-6 text-right">
+                                                        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                                                        チャオ!!
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-xs-6 text-left">
+                                                        <div class='share-this-content'>
+                                                            <span><a id='lucky-word-share-b' class='twitter-share-button-' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class='modal-footer stripe yellow-light'></div>
                                         </div>
                                     </div>
                                 </div>
@@ -566,7 +569,6 @@
                                             <span class='comment hidden'>End meta data</span>
 
                                             <span class='comment hidden'>Start post data</span>
-                                            <span class='comment hidden'>for top</span>
                                             <div class='panel-heading text-center'>
                                                 <b:if cond='data:blog.pageType == &quot;index&quot;'>
                                                     <b:if cond='data:post.firstImageUrl'>
