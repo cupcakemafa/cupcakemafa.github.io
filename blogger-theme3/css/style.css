@@ -754,6 +754,10 @@ body.item .panel-title {
     border: 1px solid gray;
 }
 
+.comment-thread .comment {
+    display: block !important;
+}
+
 #sidebar .panel-heading .title {
     margin: 0px;
 }
