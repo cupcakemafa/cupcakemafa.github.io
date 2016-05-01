@@ -1081,7 +1081,7 @@ body.item .panel-title {
 }
 
 #zenback-news-hasimage,
-#zenback-news-hasimage > div {
+#zenback-news-hasimage+div {
     display: none !important;
 }
 
