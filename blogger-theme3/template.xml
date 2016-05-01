@@ -620,7 +620,8 @@
                                                 </div>
                                             </div>
                                             <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
-                                                <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+
+                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                     <div class="row">
                                                         <div class="col-xs-12 col-md-10 col-md-offset-1">
                                                             <data:post.body/>
@@ -636,7 +637,8 @@
                                                         </div>
                                                     </div>
                                                 </b:if>
-                                                <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+
+                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                     <b:if cond='data:post.location'>
                                                         <div class='post-location text-center'>
                                                             <h3>
@@ -679,9 +681,7 @@
                                                     <div class='post-social-share text-center padding hidden'>
                                                         <h3><i class='fa fa-share-square-o'/> Share</h3>
                                                     </div>
-                                                </b:if>
 
-                                                <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
                                                     <span class='comment hidden'>Related post widget start</span>
                                                     <div class='text-center hidden' id='related-posts'>
                                                         <h3 class='title'>
@@ -690,95 +690,103 @@
                                                         </h3>
                                                         <div class='content'/>
                                                     </div>
+
+                                                    <!-- X:S ZenBackWidget -->
+                                                    <div id="zenback-widget-loader"></div>
+                                                    <script type="text/javascript">
+                                                    //<![CDATA[
+                                                    !function(d,i){if(!d.getElementById(i)){var r=Math.ceil((new Date()*1)*Math.random());var j=d.createElement("script");j.id=i;j.async=true;j.src="//w.zenback.jp/v1/?base_uri=http%3A//www.cupcakemafa.com&nsid=138265398058469605%3A%3A138265430539137066&rand="+r;d.body.appendChild(j);}}(document,"zenback-widget-js");
+                                                    //]]>
+                                                    </script>
+                                                    <!-- X:E ZenBackWidget -->
+
+                                                    <!-- Start of Comment Form -->
+                                                    <div class="margin-bottom clearfix">
+                                                        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+                                                    </div>
+                                                    <!-- End of Comment Form -->
                                                 </b:if>
                                             </div>
-
                                             <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
+
+                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <!-- Start of Next/Prev Navi -->
+                                                <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                                    <div class='page-navi single hidden row no-margin margin-top'>
+                                                        <b:if cond='data:olderPageUrl'>
+                                                            <div class='panel panel-default previous col-md-6 col-sm-12 col-xs-12'>
+                                                                <div class='panel-body media'>
+                                                                    <div class='media-left'>
+                                                                        <h4 class='media-heading'>
+                                                                            <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                                <i class='fa fa-chevron-left'/>
+                                                                                <strong>Prev</strong>
+                                                                            </a>
+                                                                        </h4>
+                                                                        <a class='prev-link thumb' expr:href='data:olderPageUrl'>
+                                                                            <img class='link-thumb media-object img-rounded' data-src='' alt='' />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class='media-body text-left'>
+                                                                        <p>
+                                                                            <a class='prev-link title' expr:href='data:olderPageUrl'>
+                                                                                <span class='link-title'></span>
+                                                                            </a>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </b:if>
+                                                        <b:if cond='data:newerPageUrl'>
+                                                            <div class='panel panel-default next col-md-5 col-md-offset-1 col-sm-12 col-xs-12'>
+                                                                <div class='panel-body media'>
+                                                                    <div class='media-body text-right'>
+                                                                        <p>
+                                                                            <a class='next-link title' expr:href='data:newerPageUrl'>
+                                                                                <span class='link-title'></span>
+                                                                            </a>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class='media-right'>
+                                                                        <h4 class='media-heading'>
+                                                                            <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                                <strong>Next</strong>
+                                                                                <i class='fa fa-chevron-right'/>
+                                                                            </a>
+                                                                        </h4>
+                                                                        <a class='next-link thumb' expr:href='data:newerPageUrl'>
+                                                                            <img class='link-thumb media-object img-rounded' data-src='' alt='' />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </b:if>
+                                                    </div>
+                                                </b:if>
+
+                                                <p class="text-center">
+                                                    <a href='/' title='Cupcakemafa Web Site'>
+                                                        <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
+                                                        TOP
+                                                    </a>
+                                                </p>
+                                                <!-- End of Next/Prev Navi -->
+                                                </b:if>
                                             </div>
                                             <span class='comment hidden'>End post data</span>
                                         </article>
                                     </div>
+
                                 </b:loop>
                             </div>
 
+                            <!-- Start of List Pager -->
                             <b:if cond='data:blog.pageType == &quot;index&quot;'>
-                                <div class='page-navi text-center padding margin-bottom hidden'>
-                                </div>
-                            <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
-                                <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                    <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                                        <div class='page-navi single hidden row no-margin'>
-                                            <b:if cond='data:olderPageUrl'>
-                                                <div class='panel panel-default previous col-md-6 col-sm-12 col-xs-12'>
-                                                    <div class='panel-body media'>
-                                                        <div class='media-left'>
-                                                            <h4 class='media-heading'>
-                                                                <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                    <i class='fa fa-chevron-left'/>
-                                                                    <strong>Prev</strong>
-                                                                </a>
-                                                            </h4>
-                                                            <a class='prev-link thumb' expr:href='data:olderPageUrl'>
-                                                                <img class='link-thumb media-object img-rounded' data-src='' alt='' />
-                                                            </a>
-                                                        </div>
-                                                        <div class='media-body text-left'>
-                                                            <p>
-                                                                <a class='prev-link title' expr:href='data:olderPageUrl'>
-                                                                    <span class='link-title'></span>
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </b:if>
-                                            <b:if cond='data:newerPageUrl'>
-                                                <div class='panel panel-default next col-md-5 col-md-offset-1 col-sm-12 col-xs-12'>
-                                                    <div class='panel-body media'>
-                                                        <div class='media-body text-right'>
-                                                            <p>
-                                                                <a class='next-link title' expr:href='data:newerPageUrl'>
-                                                                    <span class='link-title'></span>
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                        <div class='media-right'>
-                                                            <h4 class='media-heading'>
-                                                                <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                    <strong>Next</strong>
-                                                                    <i class='fa fa-chevron-right'/>
-                                                                </a>
-                                                            </h4>
-                                                            <a class='next-link thumb' expr:href='data:newerPageUrl'>
-                                                                <img class='link-thumb media-object img-rounded' data-src='' alt='' />
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </b:if>
-                                        </div>
-                                    </b:if>
-
-                                    <p class="text-center">
-                                        <a href='/' title='Cupcakemafa Web Site'>
-                                            <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
-                                            TOP
-                                        </a>
-                                    </p>
-
-                                    <!-- X:S ZenBackWidget -->
-                                    <div id="zenback-widget-loader"></div>
-                                    <script type="text/javascript">
-                                    //<![CDATA[
-                                    !function(d,i){if(!d.getElementById(i)){var r=Math.ceil((new Date()*1)*Math.random());var j=d.createElement("script");j.id=i;j.async=true;j.src="//w.zenback.jp/v1/?base_uri=http%3A//www.cupcakemafa.com&nsid=138265398058469605%3A%3A138265430539137066&rand="+r;d.body.appendChild(j);}}(document,"zenback-widget-js");
-                                    //]]>
-                                    </script>
-                                    <!-- X:E ZenBackWidget -->
-
-                                </b:if>
+                                <div class='page-navi text-center padding margin-bottom hidden'></div>
                             </b:if>
+                            <!-- End of List Pager -->
 
-                        </b:includable>
+</b:includable>
                     <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
