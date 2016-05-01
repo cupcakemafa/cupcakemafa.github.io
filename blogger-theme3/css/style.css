@@ -754,15 +754,18 @@ body.item .panel-title {
     border: 1px solid gray;
 }
 
+.comments .comment-footer,
 .comments .comment-form {
-    height: 220px;
+    display: none;
 }
+
 .comment-thread .comment {
     display: block !important;
 }
+
 .comment-thread .continue,
 .comment-thread .loadmore {
-    display:none;
+    display: none;
 }
 
 #sidebar .panel-heading .title {
@@ -1074,7 +1077,7 @@ body.item .panel-title {
 }
 
 #zenback-widget-loader .aspect {
-    display:none;
+    display: none;
 }
 
 #zenback-news-hasimage,
