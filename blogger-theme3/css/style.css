@@ -754,8 +754,10 @@ body.item .panel-title {
     border: 1px solid gray;
 }
 
-.comments .comment-footer,
 .comments .comment-form {
+}
+
+.comments .comment-footer {
     display: none;
 }
 
