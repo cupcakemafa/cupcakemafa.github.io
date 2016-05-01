@@ -754,17 +754,22 @@ body.item .panel-title {
     border: 1px solid gray;
 }
 
-.comments .comment-form {
+.comments p {
+    margin: 0 !important;
 }
-
-.comments .comment-footer {
-    display: none;
+.comments .comment-form .aspect,
+.comments .comment-form .content,
+.comments .comment-form iframe {
+    height: 220px !important;
+}
+.comments .comment-footer,
+.comments-content + .comment-footer + .comment-form {
+    display:none;
 }
 
 .comment-thread .comment {
     display: block !important;
 }
-
 .comment-thread .continue,
 .comment-thread .loadmore {
     display: none;
