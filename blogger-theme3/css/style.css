@@ -1081,7 +1081,7 @@ body.item .panel-title {
 }
 
 #zenback-news-hasimage,
-#logly-lift-869470 {
+#zenback-news-hasimage > div {
     display: none !important;
 }
 
