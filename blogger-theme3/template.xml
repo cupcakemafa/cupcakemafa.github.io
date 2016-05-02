@@ -2156,6 +2156,8 @@
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
+    <script src="https://use.typekit.net/vmo4jem.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
         <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
         <div class='container'>
