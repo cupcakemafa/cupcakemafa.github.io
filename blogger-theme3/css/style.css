@@ -59,6 +59,14 @@ ul.no-dot li {
     margin-bottom: 8px !important;
 }
 
+.margin-left {
+    margin-left: 8px !important;
+}
+
+.margin-right {
+    margin-right: 8px !important;
+}
+
 .no-padding {
     padding: 0px !important;
 }
