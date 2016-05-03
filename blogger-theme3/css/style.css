@@ -1069,7 +1069,7 @@ body.item .panel-title {
 
 .zenback-module-item.item-twitter,
 .zenback-module-item-tools a > img {
-    display: none;
+    display: none !important;
 }
 
 .zenback-module-item-tools a:nth-child(1):after {
@@ -1085,7 +1085,7 @@ body.item .panel-title {
 }
 
 #zenback-widget-loader .aspect {
-    display: none;
+    display: none !important;
 }
 
 #zenback-news-hasimage,
