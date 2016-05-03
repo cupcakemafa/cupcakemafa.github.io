@@ -1067,6 +1067,7 @@ body.item .panel-title {
 
 /* Start of Zenback */
 
+.zenback-module-item.item-twitter,
 .zenback-module-item-tools a > img {
     display: none;
 }
@@ -1091,6 +1092,5 @@ body.item .panel-title {
 #logly-lift-869470, #logly-lift-379249 {
     display: none !important;
 }
-
 
 /* End of Zenback */
