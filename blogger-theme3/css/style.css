@@ -620,7 +620,7 @@ nav.navbar .container-fluid {
 
 #body {
     max-width: 1280px;
-    margin: 62px auto;
+    margin: 32px auto;
 }
 
 .pager li {
@@ -765,19 +765,22 @@ body.item .panel-title {
 .comments p {
     margin: 0 !important;
 }
+
 .comments .comment-form .aspect,
 .comments .comment-form .content,
 .comments .comment-form iframe {
     height: 220px !important;
 }
+
 .comments .comment-footer,
 .comments-content + .comment-footer + .comment-form {
-    display:none;
+    display: none;
 }
 
 .comment-thread .comment {
     display: block !important;
 }
+
 .comment-thread .continue,
 .comment-thread .loadmore {
     display: none;
@@ -899,8 +902,6 @@ body.item .panel-title {
     color: black;
     background-color: #101010;
     background-color: white;
-    max-height: 160px;
-    overflow: hidden;
 }
 
 
@@ -1097,8 +1098,47 @@ body.item .panel-title {
 }
 
 #zenback-news-hasimage,
-#logly-lift-869470, #logly-lift-379249 {
+#logly-lift-869470,
+#logly-lift-379249 {
     display: none !important;
 }
 
+
 /* End of Zenback */
+
+
+/* Begin Template V3.1 */
+
+#bodyContent .widget {
+    padding: 8px;
+}
+
+#header ul.navbar-nav,
+#header ul.navbar-nav li {
+    padding: 0;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar ul li.list-group-item {
+    padding: 10px 16px;
+}
+
+.sidebar .tags ul li {
+    list-style: none;
+}
+
+#body {
+    margin: 32px auto;
+}
+
+#bodyContent > .widget,
+#sidebar > .widget,
+#footer > .widget {
+    margin: 0;
+}
+
+
+/* End Template V3.1 */
