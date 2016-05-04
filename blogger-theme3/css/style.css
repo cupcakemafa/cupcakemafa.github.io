@@ -431,6 +431,17 @@ h4.story-title {
     letter-spacing: -1px;
 }
 
+
+/* 蛍光ペン風 */
+
+.marker-underline {
+    background: -webkit-linear-gradient(transparent 60%, #ff0 0%);
+    background: -moz-linear-gradient(transparent 60%, #ff0 0%);
+    background: -ms-linear-gradient(transparent 60%, #ff0 0%);
+    background: -o-linear-gradient(transparent 60%, #ff0 0%);
+    background: linear-gradient(transparent 60%, #ff0 0%);
+}
+
 .sign {
     font-family: 'Chewy', cursive;
     position: relative;
