@@ -755,7 +755,7 @@ $(function () {
         setLuckyWord = function () {
             if (luckyWord.length && luckyIcon.length && $('.lucky-word-box').length) {
                 var
-                    HUSH_TAG = 'luckyPunch',
+                    HUSH_TAG = 'luckyWord',
                     SHARE_VIA = 'cupcakemafa',
                     SHARE_URL = 'http://www.cupcakemafa.com/',
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
@@ -840,15 +840,14 @@ $(function () {
             setMetaTag();
             setAspect();
             setTitleCR();
+            // set share buttons
+            setSocialShareTag(pageUrl);
 
             if (pageType === 'index') {
                 setPostSummary();
                 // @todo set pager
             } else if (pageType === 'item') {
                 $('.post').addClass('item');
-                // set share buttons
-                setSocialShareTag(pageUrl);
-                // @todo set related-posts
                 $labels = $('.param.label');
                 //console.log($labels);
                 $labels.each(function (labelIdx, labelElm) {
