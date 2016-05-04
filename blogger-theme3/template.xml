@@ -1,286 +1,299 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' expr:dir='data:blog.languageDirection' lang='ja' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
-    <head>
-        <!-- [ Meta Tag SEO ] -->
-        <meta charset='utf-8'/>
-        <meta content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' name='viewport'/>
-        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
-        <meta content="blogger" name="generator"/>
-        <!-- Start of all-head-content -->
-        <b:include data='blog' name='all-head-content'/>
-        <!-- End of all-head-content -->
-        <!-- SEO Meta Tag -->
-        <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content='@cupcakemafa' />
-        <meta name='twitter:creator' content='@cupcakemafa' />
-        <meta name='twitter:domain' content='cupcakemafa.com' />
-        <b:if cond='data:blog.homepageUrl == data:blog.url'>
-            <meta expr:content='data:blog.title' name='keywords'/>
-            <meta content='日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです' name='description'/>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;item&quot;'>
-            <meta expr:content='data:blog.pageName' name='keywords'/>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            <b:if cond='data:blog.searchLabel'>
-                <meta content='noindex,nofollow' name='robots'/>
-            </b:if>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-            <meta content='noindex,nofollow' name='robots'/>
-        </b:if>
-        <b:if cond='data:blog.isMobile'>
-            <meta content='noindex,nofollow' name='robots'/>
-        </b:if>
-        
-        <title>
-            <b:if cond='data:blog.url == data:blog.homepageUrl'>
-            <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
-                <data:blog.pageName/>
-                 |
-            <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-                Archive for
-                <data:blog.pageName/>
-                 |
-            <b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
-                <data:blog.pageName/>
-                |
-            <b:elseif cond='data:blog.pageType == &quot;index&quot;'/>
-                <b:if cond='data:blog.searchLabel'>
-                    <data:blog.title/> -
-                    <data:blog.pageName/>
-                    |
-                <b:else/>
-                    <b:if cond='data:blog.url != data:blog.homepageUrl'>
-                        <data:blog.pageTitle/> - All Post | 
-                    </b:if>
-                </b:if>
-            <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
-                Page Not Found | 
-            </b:if>
-            <data:blog.title/>
-        </title>
-        <b:skin>
-            <![CDATA[
-            /*
-            -----------------------------------------------
-            Blogger Template Style
-            Name:     Cupcakemafa Blogger Template
-            Designer: Cupcakemafa
-            URL:      http://www.cupcakemafa.com
-            Version:  3.0
-            -----------------------------------------------
-            */
-            <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
-            ]]>
-        </b:skin>
-        <!--
-        <link href='//fonts.googleapis.com/css?family=Halant' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css' />
-        <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
-        -->
-        <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'/>
-        <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
-        <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
-        <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
-        
-        <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
-        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript'/>
-        <!--[if lt IE 9]>
-        <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
-        <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
-        <![endif]-->
-    </head>
-    <body expr:class='data:blog.mobileClass'>
-        
-        <div class='param' id='page-type'><data:blog.pageType/></div>
-        
-        <span class='comment hidden'>Start of SEO Meta Tag</span>
-        <b:if cond='data:blog.homepageUrl == data:blog.url'>
-            <div class='meta-tag param'>
-                <div class='attr' data-key='name'>keywords</div>
-                <div class='attr' data-key='content'><data:blog.title/></div>
-            </div>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;item&quot;'>
-            <div class='meta-tag param'>
-                <div class='attr' data-key='name'>keywords</div>
-                <div class='attr' data-key='content'><data:blog.pageName/></div>
-            </div>
-       </b:if>
-       <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            <div class='meta-tag param'>
-                <div class='attr' data-key='name'>robots</div>
-                <div class='attr' data-key='content'>noindex,nofollow</div>
-            </div>
-       </b:if>
-       <b:if cond='data:blog.searchLabel'>
-            <div class='meta-tag param'>
-                <div class='attr' data-key='name'>robots</div>
-                <div class='attr' data-key='content'>noindex,nofollow</div>
-            </div>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-            <div class='meta-tag param'>
-                <div class='attr' data-key='name'>robots</div>
-                <div class='attr' data-key='content'>noindex,nofollow</div>
-            </div>
-        </b:if>
-        <b:if cond='data:blog.isMobile'>
-            <div class='meta-tag param'>
-                <div class='attr' data-key='name'>robots</div>
-                <div class='attr' data-key='content'>noindex,nofollow</div>
-            </div>
-        </b:if>
-        <span class='comment hidden'>End of SEO Meta Tag</span>
-    <span class='comment hidden'>Start of container</span>
-    <div class='container'>
-        <div class='row' id='header'>
-            <div class='col col-xs-12 text-center'>
-                <nav class='navbar navbar-inverse navbar-fixed-top'>
-                    <div class='container'>
-                        <span class='comment hidden'>Brand and toggle get grouped for better mobile display</span>
-                        <div class='navbar-header'>
-                            <button class='navbar-toggle collapsed' data-aria-expanded='false' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
-                                <span class='sr-only'>Toggle navigation</span>
-                                <span class='icon-bar'/>
-                                <span class='icon-bar'/>
-                                <span class='icon-bar'/>
-                            </button>
-                            <a class='navbar-brand' href='/'>
-                                <img alt='Brand' class='img-rounded' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png'/>
-                            </a>
-                            <div class='site-title'>
-                                <a href='/'>Cupcakemafa</a>
-                            </div>
-                        </div>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <!-- Start of all-head-content -->
+    <b:include data='blog' name='all-head-content'/>
+    <!-- End of all-head-content -->
 
-                        <span class='comment hidden'>Collect the nav links, forms, and other content for toggling</span>
-                        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-                            <ul class='nav navbar-nav'>
-                                <li class='menu-item hidden'>
-                                    <a href='/2016/04/about-us.html'>
-                                        <i class='fa fa-rocket'/>
-                                        ABOUT US
-                                    </a>
-                                </li>
-                                <li class='menu-item'>
-                                    <a href='/search/label/NEWS'>
-                                        <i class='fa fa-file-text'/>
-                                        NEWS
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class='fa fa-star'/>
-                                        TRAVEL
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/search/label/NEW%20YORK">New York</a></li>
-                                        <li><a href="/search/label/PARIS">Paris</a></li>
-                                        <li><a href="/search/label/持ち物">持ち物</a></li>
-                                        <!--<li><a href="/search/label/RECOMMEND">Recommend</a></li>-->
-                                    </ul>
-                                </li>
-                                <li class='menu-item'>
-                                    <a href='/search/label/BOOK'>
-                                        <i class='fa fa-globe'/>
-                                        BOOK
-                                    </a>
-                                </li>
-                                <li class='menu-item'>
-                                    <a href='/search/label/ART'>
-                                        <i class='fa fa-heart'/>
-                                        ART
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class='fa fa-star'/>
-                                        KOBANASI
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href='/p/kenzukan.html'>Ken Zukan</a></li>
-                                        <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
-                                    </ul>
-                                </li>
-                                <li class='menu-search no-hover'>
-                                    <form action='/search' class='navbar-form form-inline navbar-right' method='get' role='search'>
-                                        <div class='input-group padding-left padding-right'>
-                                            <input class='form-control' name='q' placeholder='Search' type='search'/>
-                                            <span class='input-group-btn'>
-                                                <button class='btn btn-default' type='button'>
-                                                    <i class='fa fa-search'/>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </li>
-                                <li class='sp-only no-hover'>
-                                    <div class='padding'>
-                                        <div class='text-center'>
-                                            <h4 class='no-margin margin-bottom'>
-                                                <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
-                                                    LINEスタンプ Part 2 も発売中!!
-                                                </a>
-                                            </h4>
-                                            <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
-                                                <img alt='LINEスタンプ Part2 も発売中!!' class='full-width' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
-                                            </a>
-                                        </div>
-                                        <div class='padding-2x'>
-                                            ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
-                                            カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class='sp-only no-hover'>
-                                    <div class='padding'>
-                                        <div class='text-center'>
-                                            <h4 class='no-margin margin-bottom'>
-                                                <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
-                                                    LINEスタンプ発売中!!
-                                                </a>
-                                            </h4>
-                                            <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
-                                                <img alt='LINEスタンプ発売中!!' class='full-width' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png'/>
-                                            </a>
-                                        </div>
-                                        <div class='padding-2x'>
-                                            <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
-                                                NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
-                                                ぜひみてみてね!!
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class='sp-only hidden'>
-                                    <a class='text-center close-menu navbar-toggle collapsed' data-aria-expanded='false' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse'>
-                                        <i class='fa fa-close'/> Close Menu
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><span class='comment hidden'>End of .navbar-collapse</span>
-                    </div><span class='comment hidden'>End of .container-fluid</span>
-                </nav>
-            </div>
+    <meta content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' name='viewport'/>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
+    <meta content='!' name='fragment'/>
+    <meta content='dynamic' name='blogger-template'/>
+
+    <!-- SEO Meta Tag -->
+    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:site' content='@cupcakemafa' />
+    <meta name='twitter:creator' content='@cupcakemafa' />
+    <meta name='twitter:domain' content='cupcakemafa.com' />
+    <b:if cond='data:blog.homepageUrl == data:blog.url'>
+        <meta expr:content='data:blog.title' name='keywords'/>
+        <meta content='日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです' name='description'/>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <meta expr:content='data:blog.pageName' name='keywords'/>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <b:if cond='data:blog.searchLabel'>
+            <meta content='noindex,nofollow' name='robots'/>
+        </b:if>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+        <meta content='noindex,nofollow' name='robots'/>
+    </b:if>
+    <b:if cond='data:blog.isMobile'>
+        <meta content='noindex,nofollow' name='robots'/>
+    </b:if>
+    <!-- for top/list -->
+    <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+        <meta property='og:title' expr:content='data:blog.title'/>
+        <meta name='og:url' expr:content='data:blog.url'/>
+        <meta name='og:image' content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png'/>
+        <meta name='twitter:title' expr:content='data:blog.title'/>
+        <meta name='twitter:image' content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png'/>
+        <b:if cond='data:blog.metaDescription'>
+            <meta name='og:description' expr:content='data:blog.metaDescription'/>
+            <meta name='twitter:description' expr:content='data:blog.metaDescription'/>
+        </b:if>
+    </b:if>
+    <meta property='og:site_name' expr:content='data:blog.title'/>
+    <meta property='fb:app_id' content='414444272074407'/>
+    <meta name='twitter:card' content='summary_large_image'/>
+    <title>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            Top | <data:blog.title/>
+        <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
+            <data:blog.pageName/> | <data:blog.title/>
+        <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+            Archive for <data:blog.pageName/> | <data:blog.title/>
+        <b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+            <data:blog.pageName/> | <data:blog.title/>
+        <b:elseif cond='data:blog.pageType == &quot;index&quot;'/>
+            <b:if cond='data:blog.searchLabel'>
+                <data:blog.title/> - <data:blog.pageName/> | <data:blog.title/>
+            <b:else/>
+                <b:if cond='data:blog.url != data:blog.homepageUrl'>
+                    <data:blog.pageTitle/> - All Post | <data:blog.title/>
+                </b:if>
+            </b:if>
+        <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+            Page Not Found | <data:blog.title/>
+        </b:if>
+    </title>
+
+    <b:skin>
+        <![CDATA[
+        /*
+        -----------------------------------------------
+        Blogger Template Style
+        Name:     Cupcakemafa Blogger Template
+        Designer: Cupcakemafa
+        URL:      http://www.cupcakemafa.com
+        Version:  3.1
+        -----------------------------------------------
+        */
+        <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
+        ]]>
+    </b:skin>
+
+    <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'/>
+    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
+    <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
+
+    <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript'/>
+    <!--[if lt IE 9]>
+    <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+    <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
+    <![endif]-->
+</head>
+<body expr:class='&quot;loading&quot; + data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
+
+    <!-- Begin Page type for markup -->
+    <div class='param' id='page-type'><data:blog.pageType/></div>
+    <!-- End Page type for markup -->
+
+    <!-- Begin SEO Meta Tag -->
+    <b:if cond='data:blog.homepageUrl == data:blog.url'>
+        <div class='meta-tag param'>
+            <div class='attr' data-key='name'>keywords</div>
+            <div class='attr' data-key='content'><data:blog.title/></div>
         </div>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <div class='meta-tag param'>
+            <div class='attr' data-key='name'>keywords</div>
+            <div class='attr' data-key='content'><data:blog.pageName/></div>
+        </div>
+   </b:if>
+   <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <div class='meta-tag param'>
+            <div class='attr' data-key='name'>robots</div>
+            <div class='attr' data-key='content'>noindex,nofollow</div>
+        </div>
+   </b:if>
+   <b:if cond='data:blog.searchLabel'>
+        <div class='meta-tag param'>
+            <div class='attr' data-key='name'>robots</div>
+            <div class='attr' data-key='content'>noindex,nofollow</div>
+        </div>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+        <div class='meta-tag param'>
+            <div class='attr' data-key='name'>robots</div>
+            <div class='attr' data-key='content'>noindex,nofollow</div>
+        </div>
+    </b:if>
+    <b:if cond='data:blog.isMobile'>
+        <div class='meta-tag param'>
+            <div class='attr' data-key='name'>robots</div>
+            <div class='attr' data-key='content'>noindex,nofollow</div>
+        </div>
+    </b:if>
+    <!-- End SEO Meta Tag -->
+
+    <!-- Begin #outer-page -->
+    <div id='outer-page' class='container'>
+
+        <!-- Begin #header -->
+        <b:section class='row' id='header' showaddelement='no'>
+            <b:widget id='Header1' locked='true' title='ヘッダーコンテンツ' type='Header' visible='true'>
+                <b:includable id='main'>
+                    <div class='col col-xs-12 text-center'>
+                        <nav class='navbar navbar-inverse navbar-fixed-top'>
+                            <div class='container'>
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class='navbar-header'>
+                                    <button class='navbar-toggle collapsed' data-aria-expanded='false' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
+                                        <span class='sr-only'>Toggle navigation</span>
+                                        <span class='icon-bar'/>
+                                        <span class='icon-bar'/>
+                                        <span class='icon-bar'/>
+                                    </button>
+                                    <a class='navbar-brand' href='/'>
+                                        <img alt='Brand' class='img-rounded' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s1600/cupcakemafa-favicon40x40.png'/>
+                                    </a>
+                                    <div class='site-title'>
+                                        <a href='/'>Cupcakemafa</a>
+                                    </div>
+                                </div><!-- End .navbar-header -->
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                                    <ul class='nav navbar-nav'>
+                                        <li class='menu-item'>
+                                            <a href='/2016/05/about-us.html'>
+                                                <i class='fa fa-rocket'/>
+                                                ABOUT US
+                                            </a>
+                                        </li>
+                                        <li class='menu-item'>
+                                            <a href='/search/label/NEWS'>
+                                                <i class='fa fa-file-text'/>
+                                                NEWS
+                                            </a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                <i class='fa fa-star'/>
+                                                TRAVEL
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/search/label/NEW%20YORK">New York</a></li>
+                                                <li><a href="/search/label/PARIS">Paris</a></li>
+                                                <li><a href="/search/label/持ち物">持ち物</a></li>
+                                                <!--<li><a href="/search/label/RECOMMEND">Recommend</a></li>-->
+                                            </ul>
+                                        </li>
+                                        <li class='menu-item'>
+                                            <a href='/search/label/BOOK'>
+                                                <i class='fa fa-globe'/>
+                                                BOOK
+                                            </a>
+                                        </li>
+                                        <li class='menu-item'>
+                                            <a href='/search/label/ART'>
+                                                <i class='fa fa-heart'/>
+                                                ART
+                                            </a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                <i class='fa fa-star'/>
+                                                KOBANASI
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href='/p/kenzukan.html'>Ken Zukan</a></li>
+                                                <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class='menu-search no-hover'>
+                                            <form action='/search' class='navbar-form form-inline navbar-right' method='get' role='search'>
+                                                <div class='input-group padding-left padding-right'>
+                                                    <input class='form-control' name='q' placeholder='Search' type='search'/>
+                                                    <span class='input-group-btn'>
+                                                        <button class='btn btn-default' type='button'>
+                                                            <i class='fa fa-search'/>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </form>
+                                        </li>
+                                        <li class='sp-only no-hover'>
+                                            <div class='padding'>
+                                                <div class='text-center'>
+                                                    <h4 class='no-margin margin-bottom'>
+                                                        <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
+                                                            LINEスタンプ Part 2 も発売中!!
+                                                        </a>
+                                                    </h4>
+                                                    <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
+                                                        <img alt='LINEスタンプ Part2 も発売中!!' class='full-width' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
+                                                    </a>
+                                                </div>
+                                                <div class='padding-2x'>
+                                                    ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
+                                                    カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class='sp-only no-hover'>
+                                            <div class='padding'>
+                                                <div class='text-center'>
+                                                    <h4 class='no-margin margin-bottom'>
+                                                        <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
+                                                            LINEスタンプ発売中!!
+                                                        </a>
+                                                    </h4>
+                                                    <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
+                                                        <img alt='LINEスタンプ発売中!!' class='full-width' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png'/>
+                                                    </a>
+                                                </div>
+                                                <div class='padding-2x'>
+                                                    <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
+                                                        NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
+                                                        ぜひみてみてね!!
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class='sp-only hidden'>
+                                            <a class='text-center close-menu navbar-toggle collapsed' data-aria-expanded='false' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse'>
+                                                <i class='fa fa-close'/> Close Menu
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div><!-- End of .navbar-collapse -->
+                            </div><!-- End of .container -->
+                        </nav>
+                    </div>
+                </b:includable>
+            </b:widget>
+        </b:section><!-- End #header .row -->
+
+        <!-- Begin #body .row  -->
         <div class='row' id='body'>
-            <span class='comment hidden'>Start of Main</span>
-            <div class='col col-xs-12 col-sm-6 col-md-8 no-padding' id='main-area'>
-                <b:section class='main' id='main' showaddelement='no'>
-                    <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
-                        <b:includable id='main'>
+
+            <b:section class='col col-xs-12 col-sm-6 col-md-8 no-padding no-margin' id='bodyContent' showaddelement='no'>
+                <b:widget id='Blog1' class='no-padding no-margin' locked='true' title='ブログの投稿' type='Blog' visible='true'>
+                    <b:includable id='main'>
                             <span class='comment hidden'>Title for a Tag List page</span>
                             <b:if cond='data:blog.searchLabel != &quot;&quot;'>
                                 <div class='row'>
-                                    <div class='post-col- col- col-xs-12'>
+                                    <div class='col-xs-12'>
                                         <h3 class='sign no-border no-margin'>
                                             <data:blog.searchLabel/> の記事リスト
                                         </h3>
@@ -480,11 +493,12 @@
 
                             <div class='row'>
                                 <b:loop values='data:posts' var='post'>
-                                    <div class='post-col'>
+                                    <div expr:class='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;} ? &quot;margin-left margin-right&quot; : &quot;post-col&quot;'>
                                         <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
                                             <div class='param' id='post-url'><data:post.url/></div>
 
                                             <span class='comment hidden'>Start meta data</span>
+                                            <!-- for single post/page -->
                                             <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
                                                 <b:if cond='data:post.canonicalUrl'>
                                                     <div class='meta-tag param'>
@@ -781,12 +795,15 @@
                             </div>
 
                             <!-- Start of List Pager -->
-                            <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                            <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
                                 <div class='page-navi text-center padding margin-bottom hidden'></div>
+
+                                <div class='post-social-share text-center padding hidden'>
+                                    <h3><i class='fa fa-share-square-o'/> Share</h3>
+                                </div>
                             </b:if>
                             <!-- End of List Pager -->
-
-</b:includable>
+                    </b:includable>
                     <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
@@ -1195,7 +1212,7 @@
     </div>
   </div>
 </b:includable>
-<b:includable id='nextprev'>
+                    <b:includable id='nextprev'>
   <div class='blog-pager' id='blog-pager'>
     <b:if cond='data:newerPageUrl'>
       <span id='blog-pager-newer-link'>
@@ -1627,305 +1644,311 @@
     </div>
   </div>
 </b:includable>
-                  </b:widget>
-                </b:section>
-            </div>
-            <span class='comment hidden'>End of main</span>
+                </b:widget>
+            </b:section>
 
-            <span class='comment hidden'>Start of sidebar</span>
-            <div class='col col-xs-12 col-sm-6 col-md-4 no-padding-' id='sidebar'>
-
-                <div class='sidebar'>
-                    <div class='post panel panel-default search-widget tablet-only'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img src='https://3.bp.blogspot.com/-QX-g189HUeY/VnS-Caq7b7I/AAAAAAAABbE/SWdiMIj92zIfzxcEXjWy3ivdp1eDK6Jjg/s1600/40.png' class='img-rounded icon' />
-                                </div>
-                                <div class='media-body'>
-                                    <span class='title'>Search</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='panel-body no-padding'>
-                            <form action='/search' method='get' role='search'>
-                                <div class='input-group input-group-lg margin padding'>
-                                    <input class='form-control' name='q' placeholder='Search' type='search'/>
-                                    <span class='input-group-btn'>
-                                        <button class='btn btn-default' type='button'>
-                                            <i class='fa fa-search'/>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- /.sidebar -->
-
-                <div class='sidebar'>
-                    <div class='the-city post panel panel-default no-margin margin-bottom'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img class='img-rounded icon' border="0" src="https://4.bp.blogspot.com/-XLqQzp_8Dp0/VnS1suUs6YI/AAAAAAAABXA/2M5izfVYMekftIzZHSVzHCbKQX5CaKYfACKgB/s1600/08.png" />
-                                </div>
-                                <div class='media-body'>
-                                    <span class='title'>The City</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class='label-link list-group no-margin margin-bottom'>
-                        <li class='list-group-item'><a href='/search/label/NEW%20YORK'>New York</a></li>
-                        <li class='list-group-item'><a href='/search/label/PARIS'>Paris</a></li>
-                        <li class='list-group-item'><a href="/search/label/持ち物">持ち物</a></li>
-                        <!--<li class='list-group-item'><a href='/search/label/RECOMMEND'>Recommend</a></li>-->
-                    </ul>
-                </div><!-- /.sidebar -->
-
-                <b:section class='sidebar section no-margin' id='sidebarTop' preferred='yes'>
-                  <b:widget id='PopularPosts2' locked='false' title='Popular Posts' type='PopularPosts'>
+            <!-- Begin #sidebar -->
+            <b:section class='col col-xs-12 col-sm-6 col-md-4 no-padding- no-margin' id='sidebar' showaddelement='yes' preferred='yes'>
+                <b:widget id='HTML2' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ' type='HTML' visible='true'>
                     <b:includable id='main'>
-                        <b:if cond='data:title != &quot;&quot;'>
-                            <div class='panel panel-default no-margin margin-bottom'>
+                        <div class='sidebar'>
+                            <div class='post panel panel-default search-widget tablet-only'>
                                 <div class='panel-heading no-padding'>
                                     <div class='media'>
                                         <div class='media-left icon-box'>
-                                            <img src='https://lh3.googleusercontent.com/-t8Ar7BDwzzw/VnS1XhjvfQI/AAAAAAAABW4/YK--Hx4rbqMeZamSqhA8WfheMCpJAlRbQCCo/s2048-Ic42/07.png' class='img-rounded icon'/>
+                                            <img src='https://3.bp.blogspot.com/-QX-g189HUeY/VnS-Caq7b7I/AAAAAAAABbE/SWdiMIj92zIfzxcEXjWy3ivdp1eDK6Jjg/s1600/40.png' class='img-rounded icon' />
                                         </div>
                                         <div class='media-body'>
-                                            <span class='title'>Pop Posts</span>
+                                            <span class='title'>Search</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='panel-body no-padding'>
+                                    <form action='/search' method='get' role='search'>
+                                        <div class='input-group input-group-lg margin padding'>
+                                            <input class='form-control' name='q' placeholder='Search' type='search'/>
+                                            <span class='input-group-btn'>
+                                                <button class='btn btn-default' type='button'>
+                                                    <i class='fa fa-search'/>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!-- /.sidebar -->
+
+                        <div class='sidebar'>
+                            <div class='the-city post panel panel-default no-margin margin-bottom'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' border="0" src="https://4.bp.blogspot.com/-XLqQzp_8Dp0/VnS1suUs6YI/AAAAAAAABXA/2M5izfVYMekftIzZHSVzHCbKQX5CaKYfACKgB/s1600/08.png" />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>The City</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </b:if>
-                        <div class='widget-content popular-posts'>
-                            <b:loop values='data:posts' var='post'>
-                                <div class='panel panel-default item'>
-                                    <div class='panel-heading'>
-                                        <a expr:href='data:post.href'>
-                                            <data:post.title/>
-                                        </a>
-                                    </div>
-                                    <div class='panel-body'>
-                                        <div class='item-thumbnail'>
-                                            <a expr:href='data:post.href'>
-                                                <img class='img-circle' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                                            </a>
-                                        </div>
-                                        <div class='item-snippet'>
-                                            <a expr:href='data:post.href'>
-                                                <data:post.snippet/>
-                                            </a>
+                            <ul class='label-link list-group no-margin margin-bottom'>
+                                <li class='list-group-item'><a href='/search/label/NEW%20YORK'>New York</a></li>
+                                <li class='list-group-item'><a href='/search/label/PARIS'>Paris</a></li>
+                                <li class='list-group-item'><a href="/search/label/持ち物">持ち物</a></li>
+                                <!--<li class='list-group-item'><a href='/search/label/RECOMMEND'>Recommend</a></li>-->
+                            </ul>
+                        </div><!-- /.sidebar -->
+
+                    </b:includable>
+                </b:widget>
+                <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
+                    <b:includable id='main'>
+                        <div class='sidebar section no-margin section'>
+                            <b:if cond='data:title != &quot;&quot;'>
+                                <div class='panel panel-default no-margin margin-bottom'>
+                                    <div class='panel-heading no-padding'>
+                                        <div class='media'>
+                                            <div class='media-left icon-box'>
+                                                <img src='https://lh3.googleusercontent.com/-t8Ar7BDwzzw/VnS1XhjvfQI/AAAAAAAABW4/YK--Hx4rbqMeZamSqhA8WfheMCpJAlRbQCCo/s2048-Ic42/07.png' class='img-rounded icon'/>
+                                            </div>
+                                            <div class='media-body'>
+                                                <span class='title'>Pop Posts</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </b:loop>
+                            </b:if>
+                            <div class='widget-content popular-posts'>
+                                <b:loop values='data:posts' var='post'>
+                                    <div class='panel panel-default item'>
+                                        <div class='panel-heading'>
+                                            <a expr:href='data:post.href'>
+                                                <data:post.title/>
+                                            </a>
+                                        </div>
+                                        <div class='panel-body'>
+                                            <div class='item-thumbnail'>
+                                                <a expr:href='data:post.href'>
+                                                    <img class='img-circle' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
+                                                </a>
+                                            </div>
+                                            <div class='item-snippet'>
+                                                <a expr:href='data:post.href'>
+                                                    <data:post.snippet/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </b:loop>
+                            </div>
                         </div>
                     </b:includable>
-                  </b:widget>
-                </b:section>
+                </b:widget>
 
-                <div class='sidebar'>
-                    <div class='oshirase post panel panel-default'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img class='img-rounded icon' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s128/22.png' alt='LINEスタンプ Part2 も発売中!!' />
+                <b:widget id='HTML3' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ2' type='HTML' visible='true'>
+                    <b:includable id='main'>
+                        <div class='sidebar'>
+                            <div class='oshirase post panel panel-default'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s128/22.png' alt='LINEスタンプ Part2 も発売中!!' />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>Oshirase</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class='media-body'>
-                                    <span class='title'>Oshirase</span>
+                                <div class='panel-body'>
+                                    <h4 class='title text-center'>LINEスタンプPart2も発売中!!</h4>
+                                    <p class='text-center'>
+                                        <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
+                                            <img alt='LINEスタンプ Part2 も発売中!!' class='img-rounded' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
+                                        </a>
+                                    </p>
+                                    <p>
+                                        ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
+                                        カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class='panel-body'>
-                            <h4 class='title text-center'>LINEスタンプPart2も発売中!!</h4>
-                            <p class='text-center'>
-                                <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
-                                    <img alt='LINEスタンプ Part2 も発売中!!' class='img-rounded' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
-                                </a>
-                            </p>
-                            <p>
-                                ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
-                                カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class='oshirase post panel panel-default'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img class='img-rounded icon' src='https://4.bp.blogspot.com/-Za7R5UaXXiI/VkUs39wF-8I/AAAAAAAABMg/xdvMknb96ogLkTOczYD7ArKjDccZSIzZQ/s128/19-IMG_0064.png' alt='LINEスタンプ発売中!!' />
+                            <div class='oshirase post panel panel-default'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' src='https://4.bp.blogspot.com/-Za7R5UaXXiI/VkUs39wF-8I/AAAAAAAABMg/xdvMknb96ogLkTOczYD7ArKjDccZSIzZQ/s128/19-IMG_0064.png' alt='LINEスタンプ発売中!!' />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>Oshirase</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class='media-body'>
-                                    <span class='title'>Oshirase</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='panel-body'>
-                            <h4 class='title text-center'>LINEスタンプ発売中!!</h4>
-                            <p class='text-center'>
-                                <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
-                                    <img alt='LINEスタンプ発売中!!' class='img-rounded' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png'/>
-                                </a>
-                            </p>
-                            <p>
-                                NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
-                                ぜひみてみてね!!
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class='who-we-are post panel panel-default'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img class='img-rounded icon' src='https://2.bp.blogspot.com/-ryH-xtVJhjg/VnS9gq6fKRI/AAAAAAAABa0/byY-x2-KvfU916F2VFgDF4JrdiEzVTyKw/s240/38.png' />
-                                </div>
-                                <div class='media-body'>
-                                    <span class='title'>Who we are</span>
+                                <div class='panel-body'>
+                                    <h4 class='title text-center'>LINEスタンプ発売中!!</h4>
+                                    <p class='text-center'>
+                                        <a href='http://line.me/S/sticker/1201752' rel='external' target='sub'>
+                                            <img alt='LINEスタンプ発売中!!' class='img-rounded' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png'/>
+                                        </a>
+                                    </p>
+                                    <p>
+                                        NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
+                                        ぜひみてみてね!!
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class='panel-body'>
-                            <div class='text-center'>
-                                <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png'/><br/>
-                                <span class='title'>ちょっとしたことで日常に笑いを;)</span>
-                            </div>
-                            <hr class='embed'/>
-                            そんな思いを持ちながらゆるく活動している夫婦です&#12290;
-                            読み物アプリを作ったり&#12289;旅の情報を発信したり&#12289;試行錯誤中&#12290;
-                            ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています&#12290;
-                            どうぞ&#12289;よろしく&#12290;
-                            <div class='social-icons text-center'>
-                                <a class='btn-circle facebook' href='https://www.facebook.com/cupcakemafa'>
-                                    <i class='fa fa-facebook fa-2x'/>
-                                </a>
-                                <a class='btn-circle twitter' href='https://twitter.com/cupcakemafa'>
-                                    <i class='fa fa-twitter fa-2x'/>
-                                </a>
-                                <a class='btn-circle google-plus' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts'>
-                                    <i class='fa fa-google-plus fa-2x'/>
-                                </a>
-                                <a class='btn-circle pinterest hidden' href='#'>
-                                    <i class='fa fa-pinterest fa-2x'/>
-                                </a>
-                                <a class='btn-circle youtube' href='https://www.youtube.com/c/Cupcakemafa2015/'>
-                                    <i class='fa fa-youtube fa-2x'/>
-                                </a>
-                                <a class='btn-circle instagram' href='https://instagram.com/cupcakemafaofficial/'>
-                                    <i class='fa fa-instagram fa-2x'/>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class='oshirase post panel panel-default'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img class='img-rounded icon' src='https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s128/33.png' alt='KEN図鑑' />
+                            <div class='who-we-are post panel panel-default'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' src='https://2.bp.blogspot.com/-ryH-xtVJhjg/VnS9gq6fKRI/AAAAAAAABa0/byY-x2-KvfU916F2VFgDF4JrdiEzVTyKw/s240/38.png' />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>Who we are</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class='media-body'>
-                                    <span class='title'>Oshirase</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='panel-body text-center'>
-                            <h4 class='title text-center'>無料アプリのKEN図鑑</h4>
-                            けんのシュールな日常の小話を集めた無料アプリです。<br />
-                            じわーっと来る笑いのひと時をどうぞ!!<br />
-                            iPhone/Androidでご利用になれます。
-                            <p class='text-center'>
-                                <a href='/p/kenzukan.html'>
-                                    <img alt='KEN図鑑' class='img-rounded' src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png' style='margin-bottom:0px;'/>
-                                </a>
-                            </p>
-                            <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135'/></a>
-                            <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115'/></a>
-                        </div>
-                    </div>
-
-                    <div class='about-us post panel panel-default'>
-                        <div class='panel-heading no-padding'>
-                            <div class='media'>
-                                <div class='media-left icon-box'>
-                                    <img class='img-rounded icon' src='https://4.bp.blogspot.com/-sr6RxjOnHRU/VnS9xIi65CI/AAAAAAAABa8/n773VIrUAdITlNjXUP7HKxK7-NI0U1LOw/s128/39.png' alt='Cupcakemafaの由来は...' />
-                                </div>
-                                <div class='media-body'>
-                                    <span class='title'>About Us</span>
+                                <div class='panel-body'>
+                                    <div class='text-center'>
+                                        <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png'/><br/>
+                                        <span class='title'>ちょっとしたことで日常に笑いを;)</span>
+                                    </div>
+                                    <hr class='embed'/>
+                                    そんな思いを持ちながらゆるく活動している夫婦です&#12290;
+                                    読み物アプリを作ったり&#12289;旅の情報を発信したり&#12289;試行錯誤中&#12290;
+                                    ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています&#12290;
+                                    どうぞ&#12289;よろしく&#12290;
+                                    <div class='social-icons text-center'>
+                                        <a class='btn-circle facebook' href='https://www.facebook.com/cupcakemafa'>
+                                            <i class='fa fa-facebook fa-2x'/>
+                                        </a>
+                                        <a class='btn-circle twitter' href='https://twitter.com/cupcakemafa'>
+                                            <i class='fa fa-twitter fa-2x'/>
+                                        </a>
+                                        <a class='btn-circle google-plus' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts'>
+                                            <i class='fa fa-google-plus fa-2x'/>
+                                        </a>
+                                        <a class='btn-circle pinterest hidden' href='#'>
+                                            <i class='fa fa-pinterest fa-2x'/>
+                                        </a>
+                                        <a class='btn-circle youtube' href='https://www.youtube.com/c/Cupcakemafa2015/'>
+                                            <i class='fa fa-youtube fa-2x'/>
+                                        </a>
+                                        <a class='btn-circle instagram' href='https://instagram.com/cupcakemafaofficial/'>
+                                            <i class='fa fa-instagram fa-2x'/>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class='panel-body'>
-                            <p class='text-center'>
-                                <img class='img-rounded' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg'/>
-                            </p>
-                            <p>
-                                カップケーキとマーファをくっつけた造語&#12289;それが&#12302;カップケーキマーファ &#65288;Cupcakemafa&#65289;&#12303;です&#12290;
-                                カップケーキは&#12289;Naoの好物&#12290;マーファとは&#12289;Kenがその昔に映画でイタリア男性が&#12300;マフィア&#12301;の事を
-                                &#12300;マーファ&#12301;と言っていたのを聞きかじったのがきっかけで&#12289;できた言葉なのです&#12290;
-                            </p>
-                            <p>
-                                Kenに言わせれば&#12289;Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう&#12290;
-                                時にカップケーキのように甘く&#12289;時にマフィアのように厳しい&#12290;まるで&#12289;人生のようですね&#12290;
-                                なんてね&#12290;そんなわけで&#12289;カップケーキマーファの誕生ですっ!!
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class='post panel panel-default'>
-                        <div class='panel-heading'>
-                            <div class='media'>
-                                <div class='media-body'>スポンサーリンク</div>
+                            <div class='oshirase post panel panel-default'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' src='https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s128/33.png' alt='KEN図鑑' />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>Oshirase</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='panel-body text-center'>
+                                    <h4 class='title text-center'>無料アプリのKEN図鑑</h4>
+                                    けんのシュールな日常の小話を集めた無料アプリです。<br />
+                                    じわーっと来る笑いのひと時をどうぞ!!<br />
+                                    iPhone/Androidでご利用になれます。
+                                    <p class='text-center'>
+                                        <a href='/p/kenzukan.html'>
+                                            <img alt='KEN図鑑' class='img-rounded' src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png' style='margin-bottom:0px;'/>
+                                        </a>
+                                    </p>
+                                    <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135'/></a>
+                                    <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115'/></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class='panel-body text-center no-padding'>
-                            <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-                            <!-- レクタングル２ -->
-                            <ins class='adsbygoogle'
-                                 style='display:inline-block;width:300px;height:250px'
-                                 data-ad-client='ca-pub-3036276233777511'
-                                 data-ad-slot='1826014588'></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        </div>
-                    </div>
 
-                    <div class='post panel panel-default'>
-                        <div class='panel-body text-center'>
-                            <a class="twitter-timeline" href="https://twitter.com/cupcakemafa" data-widget-id="714935102849945601">@cupcakemafaさんのツイート</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        </div>
-                    </div>
-
-                    <div class='post panel panel-default'>
-                        <div class='panel-heading'>
-                            <div class='media'>
-                                <div class='media-body'>スポンサーリンク</div>
+                            <div class='about-us post panel panel-default'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' src='https://4.bp.blogspot.com/-sr6RxjOnHRU/VnS9xIi65CI/AAAAAAAABa8/n773VIrUAdITlNjXUP7HKxK7-NI0U1LOw/s128/39.png' alt='Cupcakemafaの由来は...' />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>About Us</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='panel-body'>
+                                    <p class='text-center'>
+                                        <img class='img-rounded' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg'/>
+                                    </p>
+                                    <p>
+                                        カップケーキとマーファをくっつけた造語&#12289;それが&#12302;カップケーキマーファ &#65288;Cupcakemafa&#65289;&#12303;です&#12290;
+                                        カップケーキは&#12289;Naoの好物&#12290;マーファとは&#12289;Kenがその昔に映画でイタリア男性が&#12300;マフィア&#12301;の事を
+                                        &#12300;マーファ&#12301;と言っていたのを聞きかじったのがきっかけで&#12289;できた言葉なのです&#12290;
+                                    </p>
+                                    <p>
+                                        Kenに言わせれば&#12289;Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう&#12290;
+                                        時にカップケーキのように甘く&#12289;時にマフィアのように厳しい&#12290;まるで&#12289;人生のようですね&#12290;
+                                        なんてね&#12290;そんなわけで&#12289;カップケーキマーファの誕生ですっ!!
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class='panel-body text-center no-padding'>
-                            <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-                            <!-- レクタングル１ -->
-                            <ins class='adsbygoogle'
-                                 style='display:inline-block;width:300px;height:250px'
-                                 data-ad-client='ca-pub-3036276233777511'
-                                 data-ad-slot='7872548182'></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                            <span class='comment hidden'>End of Google AdSense</span>
-                        </div>
-                    </div>
-                </div><!-- /.sidebar -->
 
-                <b:section class='sidebar section no-margin' id='sidebarBottom' preferred='yes'>
-                    <b:widget id='Label1' locked='false' title='Categories' type='Label'>
-                        <b:includable id='main'>
+                            <div class='post panel panel-default'>
+                                <div class='panel-heading'>
+                                    <div class='media'>
+                                        <div class='media-body'>スポンサーリンク</div>
+                                    </div>
+                                </div>
+                                <div class='panel-body text-center no-padding'>
+                                    <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                                    <!-- レクタングル２ -->
+                                    <ins class='adsbygoogle'
+                                         style='display:inline-block;width:300px;height:250px'
+                                         data-ad-client='ca-pub-3036276233777511'
+                                         data-ad-slot='1826014588'></ins>
+                                    <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class='post panel panel-default'>
+                                <div class='panel-body text-center'>
+                                    <a class="twitter-timeline" href="https://twitter.com/cupcakemafa" data-widget-id="714935102849945601">@cupcakemafaさんのツイート</a>
+                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                </div>
+                            </div>
+
+                            <div class='post panel panel-default'>
+                                <div class='panel-heading'>
+                                    <div class='media'>
+                                        <div class='media-body'>スポンサーリンク</div>
+                                    </div>
+                                </div>
+                                <div class='panel-body text-center no-padding'>
+                                    <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                                    <!-- レクタングル１ -->
+                                    <ins class='adsbygoogle'
+                                         style='display:inline-block;width:300px;height:250px'
+                                         data-ad-client='ca-pub-3036276233777511'
+                                         data-ad-slot='7872548182'></ins>
+                                    <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                    <span class='comment hidden'>End of Google AdSense</span>
+                                </div>
+                            </div>
+                        </div><!-- /.sidebar -->
+
+                    </b:includable>
+                </b:widget>
+
+                <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+                    <b:includable id='main'>
+                        <div class='sidebar section no-margin section'>
                             <div class='tags panel panel-default'>
                                 <b:if cond='data:title'>
                                     <div class='panel-heading no-padding'>
@@ -1975,11 +1998,13 @@
                                     </b:if>
                                 </div>
                             </div>
-                        </b:includable>
-                    </b:widget>
+                        </div>
+                    </b:includable>
+                </b:widget>
 
-                    <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
-                        <b:includable id='main'>
+                <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+                    <b:includable id='main'>
+                        <div class='sidebar section no-margin section'>
                             <div class='back-number panel panel-default'>
                                 <b:if cond='data:title != &quot;&quot;'>
                                     <div class='panel-heading no-padding padding-left'>
@@ -2001,157 +2026,155 @@
                                     <b:include name='quickedit'/>
                                 </div>
                             </div>
-                        </b:includable>
-                        <b:includable id='flat' var='data'>
-                            <ul class='flat'>
-                                <b:loop values='data:data' var='i'>
-                                    <li class='archivedate'>
-                                        <a expr:href='data:i.url'>
-                                            <data:i.name/>
-                                        </a> (<data:i.post-count/>)
-                                    </li>
-                                </b:loop>
-                            </ul>
-                        </b:includable>
-                        <b:includable id='interval' var='intervalData'>
-                            <b:loop values='data:intervalData' var='interval'>
-                                <ul class='hierarchy'>
-                                    <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-                                        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
-                                        <a class='post-count-link' expr:href='data:interval.url'>
-                                            <data:interval.name/>
-                                        </a>
-                                        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
-                                        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
-                                        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
-                                    </li>
-                                </ul>
+                        </div>
+                    </b:includable>
+                    <b:includable id='flat' var='data'>
+                        <ul class='flat'>
+                            <b:loop values='data:data' var='i'>
+                                <li class='archivedate'>
+                                    <a expr:href='data:i.url'>
+                                        <data:i.name/>
+                                    </a> (<data:i.post-count/>)
+                                </li>
                             </b:loop>
-                        </b:includable>
-                        <b:includable id='menu' var='data'>
-                            <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
-                                <option value=''>
-                                    <data:title/>
-                                </option>
-                                <b:loop values='data:data' var='i'>
-                                    <option expr:value='data:i.url'>
-                                        <data:i.name/> (
-                                        <data:i.post-count/>)</option>
-                                </b:loop>
-                            </select>
-                        </b:includable>
-                        <b:includable id='posts' var='posts'>
-                            <ul class='posts'>
-                                <b:loop values='data:posts' var='post'>
-                                    <li>
-                                        <a expr:href='data:post.url'>
-                                            <data:post.title/>
-                                        </a>
-                                    </li>
-                                </b:loop>
+                        </ul>
+                    </b:includable>
+                    <b:includable id='interval' var='intervalData'>
+                        <b:loop values='data:intervalData' var='interval'>
+                            <ul class='hierarchy'>
+                                <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+                                    <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+                                    <a class='post-count-link' expr:href='data:interval.url'>
+                                        <data:interval.name/>
+                                    </a>
+                                    <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+                                    <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+                                    <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+                                </li>
                             </ul>
-                        </b:includable>
-                        <b:includable id='toggle' var='interval'>
-                            <a class='toggle' href='javascript:void(0)'>
-                                <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
-                                    <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-                                        &#9660;&#160;
-                                        <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
-                                        &#9668;&#160;
-                                        <b:else/>
-                                        &#9658;&#160;
-                                    </b:if>
-                                </span>
-                            </a>
-                        </b:includable>
-                    </b:widget>
-                </b:section>
-            </div>
-            <span class='comment hidden'>End of Sidebar</span>
-        </div>
-        <span class='comment hidden'>End of container</span>
-    </div>
-    <div class='container'>
-        <div class='row' id='footer'>
-            <div class='col-xs-12 text-center' id='first'>
-                <form action='/search' method='get' role='search'>
-                    <div class='input-group input-group-lg margin padding'>
-                        <input class='form-control' name='q' placeholder='Search' type='search'/>
-                        <span class='input-group-btn'>
-                            <button class='btn btn-default' type='button'>
-                                <i class='fa fa-search'/>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-                <ul class='footer-navi'>
-                    <li class="menu-item">
-                        <a href="/search/label/TRAVEL">
-                            <i class="fa fa-globe"></i>
-                            TRAVEL
+                        </b:loop>
+                    </b:includable>
+                    <b:includable id='menu' var='data'>
+                        <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+                            <option value=''>
+                                <data:title/>
+                            </option>
+                            <b:loop values='data:data' var='i'>
+                                <option expr:value='data:i.url'>
+                                    <data:i.name/> (
+                                    <data:i.post-count/>)</option>
+                            </b:loop>
+                        </select>
+                    </b:includable>
+                    <b:includable id='posts' var='posts'>
+                        <ul class='posts'>
+                            <b:loop values='data:posts' var='post'>
+                                <li>
+                                    <a expr:href='data:post.url'>
+                                        <data:post.title/>
+                                    </a>
+                                </li>
+                            </b:loop>
+                        </ul>
+                    </b:includable>
+                    <b:includable id='toggle' var='interval'>
+                        <a class='toggle' href='javascript:void(0)'>
+                            <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+                                <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+                                    &#9660;&#160;
+                                    <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+                                    &#9668;&#160;
+                                    <b:else/>
+                                    &#9658;&#160;
+                                </b:if>
+                            </span>
                         </a>
-                    </li>
-                </ul>
-            </div>
-            <div class='col-xs-12 text-center' id='second'>
-                <div class='margin-top padding'>
-                    <a href='/' title='Cupcakemafa Web Site'>
-                        <img class='img-circle' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s40/cupcakemafa-favicon40x40.png'/>
-                    </a>
-                </div>
-                <h5>
-                    &#169;2014<span id='now-year'>-2016</span> <a href='/' title='Cupcakemafa Web Site'>Cupcakemafa</a>
-                </h5>
-            </div>
-            <div class='col-xs-12 text-center no-padding' id='third'>
-                <div class='container'>
-                    <div class='row'>
-                        <div class='col-xs-12'>
-                            <span class='title'>スポンサーリンク</span>
-                        </div>
+                    </b:includable>
+                </b:widget>
+
+            </b:section><!-- End #sidebar -->
+
+        </div><!-- End #body -->
+
+
+        <!-- Begin #footer -->
+        <b:section class='row' id='footer' showaddelement='no'>
+            <b:widget id='HTML5' locked='false' title='フッターコンテンツ' type='HTML' visible='true'>
+                <b:includable id='main'>
+
+                    <div class='col-xs-12 text-center' id='first'>
+                        <form action='/search' method='get' role='search'>
+                            <div class='input-group input-group-lg margin padding'>
+                                <input class='form-control' name='q' placeholder='Search' type='search'/>
+                                <span class='input-group-btn'>
+                                    <button class='btn btn-default' type='button'>
+                                        <i class='fa fa-search'/>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                        <ul class='footer-navi'>
+                            <li class="menu-item">
+                                <a href="/search/label/TRAVEL">
+                                    <i class="fa fa-globe"></i>
+                                    TRAVEL
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class='row'>
-                        <div class='col-xs-12 col-sm-6'>
-                            <div id='sponser-link-3'>
-                                <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-                                <!-- ラージモバイルバナー１ -->
-                                <ins class='adsbygoogle'
-                                     style='display:inline-block;width:320px;height:100px'
-                                     data-ad-client='ca-pub-3036276233777511'
-                                     data-ad-slot='3302747782'></ins>
-                                <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                                <!--
-                                <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
-                                <span class='comment hidden'>レスポンシブ</span>
-                                <ins class='adsbygoogle' data-ad-client='ca-pub-3036276233777511' data-ad-format='auto' data-ad-slot='8614156582' style='display:block'/>
-                                <script>
-                                //<![CDATA[
-                                (adsbygoogle=window.adsbygoogle||[]).push({});
-                                //]]>
-                                </script>
-                                -->
+
+                    <div class='col-xs-12 text-center' id='second'>
+                        <div class='margin-top padding'>
+                            <a href='/' title='Cupcakemafa Web Site'>
+                                <img class='img-circle' src='http://3.bp.blogspot.com/-LKBbFXMIx6U/VlMQEhu52II/AAAAAAAABQ0/CHMTzGuQOCQ/s40/cupcakemafa-favicon40x40.png'/>
+                            </a>
+                        </div>
+                        <h5>
+                            &#169;2014<span id='now-year'>-2016</span> <a href='/' title='Cupcakemafa Web Site'>Cupcakemafa</a>
+                        </h5>
+                    </div>
+
+                    <div class='col-xs-12 text-center no-padding' id='third'>
+                        <div class='container'>
+                            <div class='row'>
+                                <div class='col-xs-12 col-sm-6 text-center padding'>
+                                    <span class='title'>スポンサーリンク</span>
+                                    <div id='sponser-link-3'>
+                                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                                        <!-- ラージモバイルバナー１ -->
+                                        <ins class='adsbygoogle'
+                                             style='display:inline-block;width:320px;height:100px'
+                                             data-ad-client='ca-pub-3036276233777511'
+                                             data-ad-slot='3302747782'></ins>
+                                        <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class='col-xs-12 col-sm-6 text-center padding'>
+                                    <span class='title'>スポンサーリンク</span>
+                                    <div id='sponser-link-4'>
+                                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                                        <!-- ラージモバイルバナー２ -->
+                                        <ins class='adsbygoogle'
+                                             style='display:inline-block;width:320px;height:100px'
+                                             data-ad-client='ca-pub-3036276233777511'
+                                             data-ad-slot='7732947389'></ins>
+                                        <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                        </script>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class='col-xs-12 col-sm-6'>
-                            <div id='sponser-link-4'>
-                                <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-                                <!-- ラージモバイルバナー２ -->
-                                <ins class='adsbygoogle'
-                                     style='display:inline-block;width:320px;height:100px'
-                                     data-ad-client='ca-pub-3036276233777511'
-                                     data-ad-slot='7732947389'></ins>
-                                <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </b:includable>
+            </b:widget>
+        </b:section>
+        <!-- End #footer -->
+
+    </div><!-- End #outer-page -->
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js' type='text/javascript'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.js' type='text/javascript'/>
@@ -2186,5 +2209,8 @@
             {{/each}}
         </div>
     </script>
-    </body>
+    <!-- Begin Google Analytics -->
+    <b:include data='blog' name='google-analytics'/>
+    <!-- End Google Analytics -->
+  </body>
 </html>
