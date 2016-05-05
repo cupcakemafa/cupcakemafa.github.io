@@ -523,7 +523,7 @@ nav.navbar .container-fluid {
 
 .nav.navbar-nav {
     z-index: 30;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .nav.navbar-nav,
@@ -1130,10 +1130,6 @@ body.item .panel-title {
 
 #bodyContent .widget {
     padding: 8px;
-}
-
-#header ul.navbar-nav {
-    font-size: 16px;
 }
 
 #header ul.navbar-nav,
