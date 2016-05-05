@@ -131,14 +131,16 @@ $(function () {
                     $elm = $(elm),
                     tag = '';
 
-                elm.classList.add('content');
-                tag += '<div class="aspect">';
-                tag += '<div class="content">';
-                tag += elm.outerHTML;
-                tag += '</div>';
-                tag += '</div>';
-                //console.log('tag', tag);
-                $elm.replaceWith(tag);
+                if(!$elm.hasClass('cusotom-size')) {}
+                    elm.classList.add('content');
+                    tag += '<div class="aspect">';
+                    tag += '<div class="content">';
+                    tag += elm.outerHTML;
+                    tag += '</div>';
+                    tag += '</div>';
+                    //console.log('tag', tag);
+                    $elm.replaceWith(tag);
+                }
             });
         },
         // set share button tags
