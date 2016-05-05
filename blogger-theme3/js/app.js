@@ -131,7 +131,7 @@ $(function () {
                     $elm = $(elm),
                     tag = '';
 
-                if(!$elm.hasClass('cusotom-size')) {}
+                if(!$elm.hasClass('cusotom-size')) {
                     elm.classList.add('content');
                     tag += '<div class="aspect">';
                     tag += '<div class="content">';
