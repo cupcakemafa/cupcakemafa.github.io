@@ -1,0 +1,27 @@
+.freebirdFormviewerViewHeaderHeader {
+    display: none;
+}
+
+.freebirdFormviewerViewFormBanner {
+    height: 64px;
+}
+
+.freebirdFormviewerViewFormContent {
+    padding: 8px 16px;
+}
+
+.freebirdFormviewerViewItemsItemItemTitle {
+    font-size: 18px;
+}
+
+.freebirdFormviewerViewItemsRadioChoice:first-child {
+    margin-top: 4px;
+}
+
+.freebirdFormviewerViewItemsRadioChoice {
+    padding: .4em .4em .4em 0;
+}
+
+.freebirdFormviewerViewNavigationNavControls {
+    margin-top: 0px;
+}
