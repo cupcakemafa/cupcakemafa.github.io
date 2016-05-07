@@ -767,18 +767,38 @@ $(function () {
                     word = [],
                     hush_tag, share_tag,
                     looper = ['a', 'b'],
-                    i, l;
+                    i, l,
+                    /**
+                     * @param string startDate 2016/01/01
+                     * @param string endDate 2016/12/31
+                     **/
+                    countDate = function(startDateStr, endDateStr) {
+                        var date = new Date(),
+                        year = date.getFullYear(),
+                        startDate = new Date(year+'/01/01'),
+                        endDate = new Date();
 
-                idx = Math.floor(Math.random() * luckyWord.length);
+                        // getTimeメソッドで経過ミリ秒を取得し、２つの日付の差を求める
+                        var msDiff = endDate.getTime() - startDate.getTime();
+
+                        // 求めた差分（ミリ秒）を日付へ変換します（経過ミリ秒÷(1000ミリ秒×60秒×60分×24時間)。端数切り捨て）
+                        var daysDiff = Math.floor(msDiff / (1000 * 60 * 60 *24));
+
+                        // 差分へ1日分加算して返却します
+                        return ++daysDiff;
+                    },
+                    date = countDate(),
+                    word_count = luckyWord.length -1,
+                    icon_count = luckyIcon.length -1;
+
+                idx = date % word_count;
                 word.push(luckyWord[idx]);
-                luckyWord.splice(idx, 1);
-                idx = Math.floor(Math.random() * luckyWord.length);
+                idx = word_count - idx;
                 word.push(luckyWord[idx]);
 
-                idx = Math.floor(Math.random() * luckyIcon.length);
+                idx = date % icon_count;
                 icon.push(luckyIcon[idx]);
-                luckyIcon.splice(idx, 1);
-                idx = Math.floor(Math.random() * luckyIcon.length);
+                idx = icon_count - idx;
                 icon.push(luckyIcon[idx]);
 
                 for (i = 0, l = looper.length; i < l; i++) {
