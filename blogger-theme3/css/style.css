@@ -228,102 +228,106 @@ hr.dashed {
     -webkit-border-radius: 15px;
     padding-top: 6px;
 }
-
+.facebook,
 .btn-circle.facebook {
     /*color: #3b5998;*/
     background-color: #3b5998;
 }
-
+.facebook:hover
 .btn-circle.facebook:hover {
     color: #4060A5;
     background: #fff;
 }
 
+.twitter,
 .btn-circle.twitter {
     /*color: #4099FF;*/
     background-color: #4099FF;
 }
 
+.twitter:hover,
 .btn-circle.twitter:hover {
     color: #00ABE3;
     background: #fff;
 }
 
+.google-plus,
 .btn-circle.google-plus {
     /*color: #dd4b39;*/
     background-color: #dd4b39;
 }
 
+.google-plus:hover,
 .btn-circle.google-plus:hover {
     color: #e64522;
     background: #fff;
 }
-
+.pinterest,
 .btn-circle.pinterest {
     /*color: #cb2027;*/
     background-color: #cb2027;
 }
-
+.pinterest:hover,
 .btn-circle.pinterest:hover {
     color: #cb2027;
     background: #fff;
 }
-
+.linkedin,
 .btn-circle.linkedin {
     /*color: #007bb6;*/
     background-color: #007bb6;
 }
-
+.linkedin:hover,
 .btn-circle.linkedin:hover {
     color: #0094BC;
     background: #fff;
 }
-
+.stumbleupon,
 .btn-circle.stumbleupon {
     /*color: #EB4823;*/
     background-color: #EB4823;
 }
-
+.stumbleupon:hover,
 .btn-circle.stumbleupon:hover {
     color: #EB4823;
     background: #fff;
 }
-
+.tumblr,
 .btn-circle.tumblr {
     /*color: #32506d;*/
     background-color: #32506d;
 }
-
+.tumblr:hover,
 .btn-circle.tumblr:hover {
     color: #3a5876;
     background: #fff;
 }
-
+.instagram,
 .btn-circle.instagram {
     /*color: #517fa4;*/
     background-color: #517fa4;
 }
-
+.instagram:hover,
 .btn-circle.instagram:hover {
     color: #517fa4;
     background: #fff;
 }
-
+.youtube,
 .btn-circle.youtube {
     /*color: #e52d27;*/
     background-color: #e52d27;
 }
-
+.youtube:hover,
 .btn-circle.youtube:hover {
     color: #e52d27;
     background: #fff;
 }
-
+.rss,
 .btn-circle.rss {
     /*color: #517fa4;*/
     background-color: #e88845;
 }
-
+.rss:hover,
 .btn-circle.rss:hover {
     color: #e88845;
     background: #fff;
