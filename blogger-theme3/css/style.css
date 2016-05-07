@@ -100,11 +100,11 @@ ul.no-dot li {
 }
 
 .text-white {
-    color: white !important;
+    color: white;
 }
 
 .text-black {
-    color: black !important;
+    color: black;
 }
 
 .param,
