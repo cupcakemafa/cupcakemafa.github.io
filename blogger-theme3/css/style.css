@@ -244,7 +244,7 @@ hr.dashed {
 .facebook:hover
 .btn-circle.facebook:hover {
     color: #4060A5;
-    background: #fff;
+    background-color: #fff;
 }
 
 .twitter,
@@ -256,7 +256,7 @@ hr.dashed {
 .twitter:hover,
 .btn-circle.twitter:hover {
     color: #00ABE3;
-    background: #fff;
+    background-color: #fff;
 }
 
 .google-plus,
@@ -268,7 +268,7 @@ hr.dashed {
 .google-plus:hover,
 .btn-circle.google-plus:hover {
     color: #e64522;
-    background: #fff;
+    background-color: #fff;
 }
 .pinterest,
 .btn-circle.pinterest {
@@ -278,7 +278,7 @@ hr.dashed {
 .pinterest:hover,
 .btn-circle.pinterest:hover {
     color: #cb2027;
-    background: #fff;
+    background-color: #fff;
 }
 .linkedin,
 .btn-circle.linkedin {
@@ -288,7 +288,7 @@ hr.dashed {
 .linkedin:hover,
 .btn-circle.linkedin:hover {
     color: #0094BC;
-    background: #fff;
+    background-color: #fff;
 }
 .stumbleupon,
 .btn-circle.stumbleupon {
@@ -298,7 +298,7 @@ hr.dashed {
 .stumbleupon:hover,
 .btn-circle.stumbleupon:hover {
     color: #EB4823;
-    background: #fff;
+    background-color: #fff;
 }
 .tumblr,
 .btn-circle.tumblr {
@@ -308,7 +308,7 @@ hr.dashed {
 .tumblr:hover,
 .btn-circle.tumblr:hover {
     color: #3a5876;
-    background: #fff;
+    background-color: #fff;
 }
 .instagram,
 .btn-circle.instagram {
@@ -318,7 +318,7 @@ hr.dashed {
 .instagram:hover,
 .btn-circle.instagram:hover {
     color: #517fa4;
-    background: #fff;
+    background-color: #fff;
 }
 .youtube,
 .btn-circle.youtube {
@@ -328,7 +328,7 @@ hr.dashed {
 .youtube:hover,
 .btn-circle.youtube:hover {
     color: #e52d27;
-    background: #fff;
+    background-color: #fff;
 }
 .rss,
 .btn-circle.rss {
@@ -338,7 +338,7 @@ hr.dashed {
 .rss:hover,
 .btn-circle.rss:hover {
     color: #e88845;
-    background: #fff;
+    background-color: #fff;
 }
 
 .share-this-content span {
