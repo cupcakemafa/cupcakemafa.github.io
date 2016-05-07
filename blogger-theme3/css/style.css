@@ -99,6 +99,14 @@ ul.no-dot li {
     border: none !important;
 }
 
+.text-white {
+    color: white !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
 .param,
 .meta-tag,
 .comment {
