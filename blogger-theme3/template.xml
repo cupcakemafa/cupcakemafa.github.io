@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:mixi='http://mixi-platform.com/ns#' xmlns:og='http://ogp.me/ns#'>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
+    <meta charset='utf-8'/>
+    <meta content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' name='viewport'/>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
+    <meta content="blogger" name="generator"/>
     <!-- Start of all-head-content -->
     <b:include data='blog' name='all-head-content'/>
     <!-- End of all-head-content -->
-
-    <meta content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' name='viewport'/>
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
-    <meta content='!' name='fragment'/>
-    <meta content='dynamic' name='blogger-template'/>
 
     <!-- SEO Meta Tag -->
     <meta name='twitter:card' content='summary' />
@@ -36,19 +35,19 @@
     </b:if>
     <!-- for top/list -->
     <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-        <meta property='og:title' expr:content='data:blog.title'/>
-        <meta name='og:url' expr:content='data:blog.url'/>
-        <meta name='og:image' content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png'/>
-        <meta name='twitter:title' expr:content='data:blog.title'/>
-        <meta name='twitter:image' content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png'/>
+        <meta expr:content='data:blog.title' property='og:title'/>
+        <meta expr:content='data:blog.url' name='og:url'/>
+        <meta content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png' name='og:image'/>
+        <meta expr:content='data:blog.title' name='twitter:title'/>
+        <meta content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png' name='twitter:image'/>
         <b:if cond='data:blog.metaDescription'>
-            <meta name='og:description' expr:content='data:blog.metaDescription'/>
-            <meta name='twitter:description' expr:content='data:blog.metaDescription'/>
+            <meta expr:content='data:blog.metaDescription' name='og:description'/>
+            <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
         </b:if>
     </b:if>
-    <meta property='og:site_name' expr:content='data:blog.title'/>
-    <meta property='fb:app_id' content='414444272074407'/>
-    <meta name='twitter:card' content='summary_large_image'/>
+    <meta expr:content='data:blog.title' property='og:site_name'/>
+    <meta content='414444272074407' property='fb:app_id'/>
+    <meta content='summary_large_image' name='twitter:card'/>
     <title>
         <b:if cond='data:blog.url == data:blog.homepageUrl'>
             Top | <data:blog.title/>
@@ -70,7 +69,6 @@
             Page Not Found | <data:blog.title/>
         </b:if>
     </title>
-
     <b:skin>
         <![CDATA[
         /*
@@ -85,7 +83,6 @@
         <Variable name="maincolor" description="Main Color" type="color" default="#FDD835" value="#fdd835"/>
         ]]>
     </b:skin>
-
     <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
@@ -99,16 +96,6 @@
     <![endif]-->
 </head>
 <body expr:class='&quot;loading&quot; + data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
-    <div id="fb-root"></div>
-    <script>//<![CDATA[
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId=414444272074407";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    //]]></script>
 
     <!-- Begin Page type for markup -->
     <div class='param' id='page-type'><data:blog.pageType/></div>
@@ -230,7 +217,7 @@
                                                 <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
                                             </ul>
                                         </li>
-                                        <li class='menu-search no-hover hidden-lg'>
+                                        <li class='menu-search no-hover'>
                                             <form action='/search' class='navbar-form form-inline navbar-right' method='get' role='search'>
                                                 <div class='input-group padding-left padding-right'>
                                                     <input class='form-control' name='q' placeholder='Search' type='search'/>
@@ -713,59 +700,6 @@
                                                             Related Articles
                                                         </h3>
                                                         <div class='content'/>
-                                                    </div>
-
-                                                    <div class='row'>
-                                                        <div class='col col-xs-12 col-md-6 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block twitter text-white' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title'>
-                                                                <i class='fa fa-twitter'></i> Twitterでシェア</a>
-                                                        </div>
-                                                        <div class='col col-xs-12 col-md-6 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block google-plus text-white' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.canonicalUrl'>
-                                                                <i class='fa fa-google-plus'></i> Google Plus でシェア</a>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--
-                                                    <div class='row'>
-                                                        <div class='col col-xs-12 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block twitter text-white' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title'>
-                                                                <i class='fa fa-twitter'></i> Twitterでシェア</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class='row'>
-                                                        <div class='col col-xs-12 col-md-6 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block facebook text-white' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl'>
-                                                                <i class='fa fa-facebook'></i> Facebookでシェア</a>
-                                                        </div>
-                                                        <div class='col col-xs-12 col-md-6 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block google-plus text-white' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.canonicalUrl'>
-                                                                <i class='fa fa-google-plus'></i> Google Plus でシェア</a>
-                                                        </div>
-                                                    </div>
-                                                    -->
-                                                    <div class='row no-margin margin-left margin-top'>
-                                                        <div class='col col-xs-12'>
-                                                            <div class='panel panel-default'>
-                                                                <div class='panel-heading'>
-                                                                    Twitter/Facebookでもいろいろな情報をお届けしています。<br />
-                                                                    Cupcakemafaからの最新情報を「いいね」&amp;「フォロー」してチェックしよう!!
-                                                                </div>
-                                                                <div class='panel-body'>
-                                                                    <div class='row'>
-                                                                        <div class='col col-xs-12 col-md-4'>
-                                                                            <a href="https://twitter.com/cupcakemafa" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cupcakemafa</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                                                                        </div>
-                                                                        <div class='col col-xs-12 col-md-4'>
-                                                                            <div class="fb-like" data-href="https://www.facebook.com/cupcakemafa/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                                                                        </div>
-                                                                        <div class='col col-xs-12 col-md-4 text-right'>
-                                                                            <a href="https://www.instagram.com/cupcakemafaofficial/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
 
                                                     <!-- X:S ZenBackWidget -->
@@ -1505,7 +1439,6 @@
       if (items && items.length > 0) {
         cursor = parseInt(items[items.length - 1].timestamp) + 1;
       }
-
       var bodyFromEntry = function(entry) {
         if (entry.gd$extendedProperty) {
           for (var k in entry.gd$extendedProperty) {
@@ -1516,7 +1449,6 @@
         }
         return entry.content.$t;
       }
-
       var parse = function(data) {
         cursor = null;
         var comments = [];
@@ -1564,7 +1496,6 @@
         }
         return comments;
       };
-
       var paginator = function(callback) {
         if (hasMore()) {
           var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
@@ -1602,11 +1533,9 @@
         }
         return '';
       };
-
       var replybox = null;
       var replyUrlParts = null;
       var replyParent = undefined;
-
       var onReply = function(commentId, domId) {
         if (replybox == null) {
           // lazily cache replybox, and adjust to suit this style:
@@ -1626,7 +1555,6 @@
           replyParent = commentId;
         }
       };
-
       var hash = (window.location.hash || '#').substring(1);
       var startThread, targetComment;
       if (/^comment-form_/.test(hash)) {
@@ -1634,7 +1562,6 @@
       } else if (/^c[0-9]+$/.test(hash)) {
         targetComment = hash.substring(1);
       }
-
       // Configure commenting API:
       var configJso = {
         'maxDepth': config.maxThreadDepth
@@ -1652,14 +1579,12 @@
         'config': configJso,
         'messages': msgs
       };
-
       var render = function() {
         if (window.goog && window.goog.comments) {
           var holder = document.getElementById('comment-holder');
           window.goog.comments.render(holder, provider);
         }
       };
-
       // render now, or queue to render when library loads:
       if (window.goog && window.goog.comments) {
         render();
@@ -1807,6 +1732,7 @@
                         </div>
                     </b:includable>
                 </b:widget>
+
                 <b:widget id='HTML3' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ2' type='HTML' visible='true'>
                     <b:includable id='main'>
                         <div class='sidebar'>
@@ -2007,6 +1933,7 @@
 
                     </b:includable>
                 </b:widget>
+
                 <b:widget id='Label1' locked='false' title='Categories' type='Label'>
                     <b:includable id='main'>
                         <div class='sidebar section no-margin section'>
@@ -2062,6 +1989,7 @@
                         </div>
                     </b:includable>
                 </b:widget>
+
                 <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
                     <b:includable id='main'>
                         <div class='sidebar section no-margin section'>
@@ -2151,6 +2079,7 @@
                         </a>
                     </b:includable>
                 </b:widget>
+
             </b:section><!-- End #sidebar -->
 
         </div><!-- End #body -->
@@ -2238,23 +2167,8 @@
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
-    <script src='https://use.typekit.net/vmo4jem.js' type='text/javascript'></script>
-    <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script type='text/javascript'>
-        //<![CDATA[
-        (function($){
-            $('iframe.google-form').each(function (index, elm) {
-                var
-                    $elm = $(elm),
-                    tag = '<link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.css" rel="stylesheet"/>';
-                $elm.on('load', function(){
-                    console.log($(this));
-                    $(this).contents().find('head').append(tag);
-                });
-            });
-        })(jQuery);
-        //]]>
-    </script>
+    <script src="https://use.typekit.net/vmo4jem.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
         <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
         <div class='container'>
