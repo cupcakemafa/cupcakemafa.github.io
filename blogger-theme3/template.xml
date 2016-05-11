@@ -40,9 +40,9 @@
     <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
         <meta property='og:title' expr:content='data:blog.title'/>
         <meta name='og:url' expr:content='data:blog.url'/>
-        <meta name='og:image' content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png'/>
+        <meta name='og:image' content='https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg'/>
         <meta name='twitter:title' expr:content='data:blog.title'/>
-        <meta name='twitter:image' content='https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png'/>
+        <meta name='twitter:image' content='https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg'/>
         <b:if cond='data:blog.metaDescription'>
             <meta name='og:description' expr:content='data:blog.metaDescription'/>
             <meta name='twitter:description' expr:content='data:blog.metaDescription'/>
@@ -132,9 +132,9 @@
             "@type": "Organization",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png",
-                "width": 490,
-                "height": 153
+                "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
+                "width": "1024",
+                "height": "1024"
             },
             "url": "<data:blog.homepageUrl/>",
             "name": "Cupcakemafa|カップケーキマーファ",
@@ -546,7 +546,6 @@
                             <div class='row'>
                                 <b:loop values='data:posts' var='post'>
                                     <div expr:class='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;} ? &quot;margin-left margin-right&quot; : &quot;post-col&quot;'>
-<!--                                        <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>-->
                                         <article class='post panel panel-default'>
                                             <div class='param' id='post-url'><data:post.url/></div>
 
@@ -578,9 +577,9 @@
                                                             "name": "Cupcakemafa",
                                                             "logo": {
                                                                 "@type": "ImageObject",
-                                                                "url": "https://4.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAPA/MX7-u1aDwGQCTVMrwUIDHBCec-G1C1FRACKgB/s1600/cupcakemafa-blog-header-490x153.png",
-                                                                "width": "490",
-                                                                "height": "153"
+                                                                "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
+                                                                "width": "1024",
+                                                                "height": "1024"
                                                             }
                                                         },
                                                         "mainEntityOfPage":{
