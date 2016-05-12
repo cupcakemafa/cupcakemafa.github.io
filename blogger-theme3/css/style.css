@@ -589,6 +589,16 @@ nav.navbar .container-fluid {
 .nav.navbar-nav .dropdown.open .dropdown-toggle {
     color: white;
 }
+.nav.navbar-nav .dropdown.open ul.dropdown-menu {
+    padding-left: 0;
+    font-size: 18px;
+}
+.nav.navbar-nav .dropdown.open ul.dropdown-menu li:first-child {
+    padding-top: 6px !important;
+}
+.nav.navbar-nav .dropdown.open ul.dropdown-menu li:last-child {
+    padding-bottom: 6px !important;
+}
 
 .site-title {
     display: none;
