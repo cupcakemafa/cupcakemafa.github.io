@@ -94,7 +94,6 @@
     <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
     <link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.css" rel="stylesheet"/>
     <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript'/>
     <!--[if lt IE 9]>
     <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
@@ -355,7 +354,7 @@
 
                             <b:if cond='data:blog.homepageUrl == data:blog.url'>
                                 <div class='row'>
-                                    <div class='post-col col col-md-6 col-sm-12 col-xs-12'>
+                                    <div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
                                         <div class='panel panel-default'>
                                             <div class='panel-body'>
                                                 <div class='text-center' id='header-box'>
@@ -797,7 +796,9 @@
                                                     </b:if>
 
                                                     <!-- Begin Post Social Share -->
-                                                    <h3><i class='fa fa-share-square-o'/> Share</h3>
+                                                    <h3 class='text-center'>
+                                                        <i class='fa fa-share-square-o'/> Share
+                                                    </h3>
                                                     <div class='row'>
                                                         <div class='col col-xs-12 padding'>
                                                             <a class='btn btn-default btn-lg btn-block twitter text-white' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title'>
@@ -833,33 +834,12 @@
                                                                             <a href="https://www.instagram.com/cupcakemafaofficial/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
                                                                         </div>
                                                                     </div>
-                                                                    <!--
-                                                                    <div class='row'>
-                                                                        <div class='col col-xs-12 text-center no-padding padding-bottom'>
-                                                                            <div class="fb-like" data-href="https://www.facebook.com/cupcakemafa/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    -->
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- End Post Social Share -->
 
-                                                    <!-- X:S ZenBackWidget -->
-                                                    <div id="zenback-widget-loader"></div>
-                                                    <script type="text/javascript">
-                                                    //<![CDATA[
-                                                    !function(d,i){if(!d.getElementById(i)){var r=Math.ceil((new Date()*1)*Math.random());var j=d.createElement("script");j.id=i;j.async=true;j.src="//w.zenback.jp/v1/?base_uri=http%3A//www.cupcakemafa.com&nsid=138265398058469605%3A%3A138265430539137066&rand="+r;d.body.appendChild(j);}}(document,"zenback-widget-js");
-                                                    //]]>
-                                                    </script>
-                                                    <!-- X:E ZenBackWidget -->
-
-                                                    <!-- Start of Comment Form -->
-                                                    <div class="margin-bottom clearfix">
-                                                        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
-                                                    </div>
-                                                    <!-- End of Comment Form -->
                                                 </b:if>
                                             </div>
                                             <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
@@ -1559,7 +1539,7 @@
       var msgs = <data:post.commentMsgs/>;
       var config = <data:post.commentConfig/>;
 
-// <![CDATA[
+      // <![CDATA[
       var cursor = null;
       if (items && items.length > 0) {
         cursor = parseInt(items[items.length - 1].timestamp) + 1;
@@ -2291,13 +2271,19 @@
         </b:section>
         <!-- End #footer -->
 
+        <!-- Begin scroll to top -->
+        <a class='scroll-top' href='#' id='scroll-top' rel='nofollow' title='ページトップへ'>
+            <img src='//2.bp.blogspot.com/-Hc2Qip-ciow/Vdo6dWcbLAI/AAAAAAAAAPo/3Ag8gFOBse4/s48/scrollup_blue.png' />
+        </a>
+
     </div><!-- End #outer-page -->
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js' type='text/javascript'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript'/>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js' type='text/javascript'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.js' type='text/javascript'/>
     <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
-    <script src='https://use.typekit.net/vmo4jem.js' type='text/javascript'></script>
+    <script src='//use.typekit.net/vmo4jem.js' type='text/javascript'></script>
     <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
         <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>

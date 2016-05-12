@@ -1229,3 +1229,16 @@ only screen and (min-resolution: 2dppx) {
 
 
 /* End instagram follow button */
+
+
+/* Begin Scroll Top */
+
+.scroll-top {
+    z-index: 999;
+    position: fixed;
+    bottom: 4%;
+    right: 6%;
+}
+
+
+/* End Scroll Top */
