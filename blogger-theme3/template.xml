@@ -91,8 +91,14 @@
     <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
-    <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
-    <link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.css" rel="stylesheet"/>
+
+    <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
+        <link href='//cupcakemafa.github.io/blogger-theme3/css/style.min.css' rel='stylesheet'/>
+        <link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.min.css" rel="stylesheet"/>
+    <b:else/>
+        <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
+        <link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.css" rel="stylesheet"/>
+    </b:if>
     <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
     <!--[if lt IE 9]>
     <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
@@ -843,6 +849,13 @@
                                                 </b:if>
                                             </div>
                                             <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
+
+                                                <div id='related-posts'>
+                                                    <h3 class='text-center'>
+                                                        <i class='fa fa-check-circle-o'/> Related Posts
+                                                    </h3>
+                                                    <div class='content text-left'></div>
+                                                </div>
 
                                                 <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                 <!-- Start of Next/Prev Navi -->
@@ -2281,8 +2294,15 @@
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript'/>
     <script src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js' type='text/javascript'></script>
     <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript'/>
-    <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.js' type='text/javascript'/>
-    <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
+
+    <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
+        <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.min.js' type='text/javascript'/>
+        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.min.js' type='text/javascript'/>
+    <b:else/>
+        <script src='//cupcakemafa.github.io/blogger-theme3/js/ms.js' type='text/javascript'/>
+        <script src='//cupcakemafa.github.io/blogger-theme3/js/app.js' type='text/javascript'/>
+    </b:if>
+
     <script src='//use.typekit.net/vmo4jem.js' type='text/javascript'></script>
     <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>

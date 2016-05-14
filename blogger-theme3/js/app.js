@@ -131,7 +131,7 @@ $(function () {
                     $elm = $(elm),
                     tag = '';
 
-                if(!$elm.hasClass('custom-size')) {
+                if (!$elm.hasClass('custom-size')) {
                     elm.classList.add('content');
                     tag += '<div class="aspect">';
                     tag += '<div class="content">';
@@ -428,148 +428,136 @@ $(function () {
             var
             //url = location.protocol + '//' + parser.hostname, //// @todo
                 url = location.protocol + '//cupcakemafa.com', //// @debug
+                request_url,
+                request_count = labels.length,
+                request_complete_count = 0,
                 parser,
-                relation_count = 0,
-                relatedTitles = [],
-                relatedTitlesNum = 0,
-                relatedUrls = [],
-                thumburl = [],
-                $relatedPosts = $('#related-posts'),
-                contains_thumbs = function (a, e) {
-                    for (var j = 0, m = a.length; j < m; j++)
-                        if (a[j] === e)
-                            return true;
-                    return false;
-                },
-                removeRelatedDuplicatesThumbs = function () {
-                    var
-                        tmp = new Array(0),
-                        tmp2 = new Array(0),
-                        tmp3 = new Array(0);
-                    for (var i = 0, l = relatedUrls.length; i < l; i++) {
-                        if (!contains_thumbs(tmp, relatedUrls[i])) {
-                            tmp.length += 1;
-                            tmp[tmp.length - 1] = relatedUrls[i];
-                            tmp2.length += 1;
-                            tmp3.length += 1;
-                            tmp2[tmp2.length - 1] = relatedTitles[i];
-                            tmp3[tmp3.length - 1] = thumburl[i];
-                        }
+                postData = [],
+                $relatedPosts = $('#related-posts');
+
+            function printRelatedLabelsThumbs(postList) {
+                var
+                    maxresults = 6,
+                    tag = '';
+
+                if (postList.length > 0) {
+                    tag += '<ul class="related-post-list media-list">';
+                    for (var i = 0; i < maxresults; i++) {
+                        tag += '<li class="media">';
+                        //tag += '<div class="panel panel-default">';
+                        //tag += '<div class="panel-body">';
+                        tag += '<div class="media-left">';
+                        tag += '<a href="' + postList[i].url + '">';
+                        tag += '<img class="img-rounded media-object" src="' + postList[i].thumbUrl + '" alt="' + postList[i].title + '">';
+                        tag += '</a>';
+                        tag += '</div>';
+                        tag += '<div class="media-body">';
+                        tag += '<a href="' + postList[i].url + '">';
+                        tag += '<h5 class="media-heading no-padding">' + postList[i].title + '</h5>';
+                        tag += postList[i].updated;
+                        tag += '</a>';
+                        //tag += '</div>';
+                        //tag += '</div>';
+                        tag += '</div>';
+                        tag += '</li>';
                     }
-                    relatedTitles = tmp2;
-                    relatedUrls = tmp;
-                    thumburl = tmp3;
-                },
-                printRelatedLabelsThumbs = function () {
-                    var currentposturl = location.href,
-                        maxresults = 3,
-                        i, r, tag = '';
+                    tag += '</ul>';
+                }
+                $relatedPosts.find('.content').eq(0).append(tag);
+            }
 
-                    //console.log('currentposturl', currentposturl);
-                    for (i = 0, l = relatedUrls.length; i < l; i++) {
-                        if ((relatedUrls[i] === currentposturl) || (!(relatedTitles[i]))) {
-                            relatedUrls.splice(i, 1);
-                            relatedTitles.splice(i, 1);
-                            thumburl.splice(i, 1);
-                        }
-                    }
-                    r = Math.floor((relatedTitles.length - 1) * Math.random());
-                    i = 0;
-
-                    if (relatedTitles.length > 0) {
-                        tag += '<table>';
-                        tag += '<tr>';
-                        while (i < relatedTitles.length && i < 20 && i < maxresults) {
-                            tag += '<td>';
-                            tag += '<div>';
-                            tag += '<a href="' + relatedUrls[r] + '">';
-                            tag += '<img class="related_img" src="' + thumburl[r] + '"/>';
-                            tag += '</a>';
-                            tag += '</div>';
-
-                            tag += '<div>';
-                            tag += '<a href="' + relatedUrls[r] + '">';
-                            tag += relatedTitles[r];
-                            tag += '</a>';
-                            tag += '</div>';
-                            tag += '</td>';
-                            if (r < relatedTitles.length - 1) {
-                                r++;
-                            } else {
-                                r = 0;
-                            }
-                            i++;
-                        }
-                    }
-                    tag += '</tr>';
-                    tag += '</table>';
-                    relatedUrls.splice(0, relatedUrls.length);
-                    thumburl.splice(0, thumburl.length);
-                    relatedTitles.splice(0, relatedTitles.length);
-                    //console.log('tag', tag);
-                    $relatedPosts.find('.content').eq(0).append(tag);
-                };
-
+            // process start
             if (labels && labels.length && $relatedPosts.length) {
                 parser = $('<a>', {
                     href: location.href
                 })[0];
+
                 for (var i = 0, l = labels.length; i < l; i++) {
-                    url += '/feeds/posts/default/-/' + labels[i] + '?alt=json-in-script&max-results=8';
-                    //console.log('url', url);
-                    //blogger API を実行する
+                    request_url = url + '/feeds/posts/default/-/' + labels[i] + '?alt=json-in-script&max-results=8';
+                    //console.info('request_url', request_url);
+                    // blogger API を実行する
                     $.ajax({
                         type: 'GET',
-                        url: url,
+                        url: request_url,
                         cache: false,
-                        data: {},
                         dataType: 'jsonp'
                     }).done(function (json) {
-                        //console.log('json', json);
-                        var
-                            no_img_url = 'http://3.bp.blogspot.com/-zP87C2q9yog/UVopoHY30SI/AAAAAAAAE5k/AIyPvrpGLn8/s300/picture_not_available.png',
-                            entry, s, a, b, c, d;
-
+                        //console.info('json', json);
+                        var entry;
                         if (json && json.feed && json.feed.entry && json.feed.entry.length) {
                             for (var i = 0; i < json.feed.entry.length; i++) {
+                                var title, thumbUrl, url, updated;
+
                                 entry = json.feed.entry[i];
+                                //console.info('entry', entry);
 
-                                relatedTitles[relatedTitlesNum] = entry.title.$t;
-
-                                try {
-                                    thumburl[relatedTitlesNum] = entry.gform_foot.url;
-                                } catch (error) {
-                                    s = entry.content.$t;
-                                    a = s.indexOf("<img");
-                                    b = s.indexOf("src=\"", a);
-                                    c = s.indexOf("\"", b + 5);
-                                    d = s.substr(b + 5, c - b - 5);
-                                    if ((a !== -1) && (b !== -1) && (c !== -1) && (d !== "")) {
-                                        thumburl[relatedTitlesNum] = d;
-                                    } else {
-                                        thumburl[relatedTitlesNum] = no_img_url;
-                                    }
-                                }
-                                if (relatedTitles[relatedTitlesNum].length > 35)
-                                    relatedTitles[relatedTitlesNum] = relatedTitles[relatedTitlesNum].substring(0, 35) + "...";
+                                // set link url
                                 for (var k = 0; k < entry.link.length; k++) {
                                     if (entry.link[k].rel === 'alternate') {
-                                        relatedUrls[relatedTitlesNum] = entry.link[k].href;
-                                        relatedTitlesNum++;
+                                        url = entry.link[k].href;
                                     }
+                                }
+
+                                // check duplicate url
+                                var duplicate = false;
+                                for (var j = 0; j < postData.length; j++) {
+                                    if (url === postData[j].url || url === location.href) {
+                                        duplicate = true;
+                                    }
+                                }
+
+                                if (!duplicate) {
+                                    // set thumbnail image
+                                    if (entry.hasOwnProperty('gform_foot') && entry.gform_foot.hasOwnProperty('url')) {
+                                        thumbUrl = entry.gform_foot.url;
+                                    } else if (entry.hasOwnProperty('media$thumbnail') &&
+                                        entry.media$thumbnail.hasOwnProperty('url')) {
+                                        thumbUrl = entry.media$thumbnail.url;
+                                    } else {
+                                        function getThumbUrlFromContent(content) {
+                                            var
+                                                no_img_url = 'http://3.bp.blogspot.com/-zP87C2q9yog/UVopoHY30SI/AAAAAAAAE5k/AIyPvrpGLn8/s300/picture_not_available.png',
+                                                content, imgIdx, srcIdx, quotIdx, thumb;
+                                            imgIdx = content.indexOf("<img");
+                                            srcIdx = content.indexOf("src=\"", imgIdx);
+                                            quotIdx = content.indexOf("\"", srcIdx + 5);
+                                            thumb = content.substr(srcIdx + 5, quotIdx - srcIdx - 5);
+                                            if ((imgIdx !== -1) && (srcIdx !== -1) && (quotIdx !== -1) && (thumb !== "")) {
+                                                return thumb;
+                                            } else {
+                                                return no_img_url;
+                                            }
+                                        }
+                                        thumbUrl = getThumbUrlFromContent(entry.content.$t);
+                                    }
+
+                                    // set title
+                                    title = entry.title.$t;
+                                    if (title.length > 35) {
+                                        title = title.substring(0, 35) + "...";
+                                    }
+
+                                    // set publish/update date
+                                    if (entry.hasOwnProperty('updated') &&
+                                        entry.updated.hasOwnProperty('$t')) {
+                                        var date = new Date(entry.updated.$t)
+                                        updated = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+                                    }
+
+                                    postData.push({
+                                        'title': title,
+                                        'url': url,
+                                        'thumbUrl': thumbUrl,
+                                        'updated': updated
+                                    });
                                 }
                             }
                         }
 
-                        removeRelatedDuplicatesThumbs();
-
-                        relation_count++;
-                        //console.log('relation_count', relation_count);
-                        //console.log('labels.length', labels.length);
-                        if (relation_count === labels.length) {
-                            printRelatedLabelsThumbs();
+                        request_complete_count++;
+                        if (request_count === request_complete_count) {
+                            printRelatedLabelsThumbs(postData);
                         }
-
                     }).fail(function (error) {
                         console.error('error', error);
                     });
@@ -772,24 +760,24 @@ $(function () {
                      * @param string startDate 2016/01/01
                      * @param string endDate 2016/12/31
                      **/
-                    countDate = function(startDateStr, endDateStr) {
+                    countDate = function (startDateStr, endDateStr) {
                         var date = new Date(),
-                        year = date.getFullYear(),
-                        startDate = new Date(year+'/01/01'),
-                        endDate = new Date();
+                            year = date.getFullYear(),
+                            startDate = new Date(year + '/01/01'),
+                            endDate = new Date();
 
                         // getTimeメソッドで経過ミリ秒を取得し、２つの日付の差を求める
                         var msDiff = endDate.getTime() - startDate.getTime();
 
                         // 求めた差分（ミリ秒）を日付へ変換します（経過ミリ秒÷(1000ミリ秒×60秒×60分×24時間)。端数切り捨て）
-                        var daysDiff = Math.floor(msDiff / (1000 * 60 * 60 *24));
+                        var daysDiff = Math.floor(msDiff / (1000 * 60 * 60 * 24));
 
                         // 差分へ1日分加算して返却します
                         return ++daysDiff;
                     },
                     date = countDate(),
-                    word_count = luckyWord.length -1,
-                    icon_count = luckyIcon.length -1;
+                    word_count = luckyWord.length - 1,
+                    icon_count = luckyIcon.length - 1;
 
                 idx = date % word_count;
                 word.push(luckyWord[idx]);
@@ -828,13 +816,13 @@ $(function () {
                 $open_lucky.removeClass('disabled');
             }
         },
-        setLazyLoad = function() {
+        setLazyLoad = function () {
             var $imgs = $('.post-body img'),
                 $img, src;
             $imgs.each(function (idx, elm) {
                 if (idx > 0) {
                     $img = $(elm);
-                    if(!$img.hasClass('main')) {
+                    if (!$img.hasClass('main')) {
                         src = $img.attr('src');
                         $img.attr('data-original', src);
                         $img.attr('src', 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150');
@@ -851,76 +839,73 @@ $(function () {
         //
         // Main
         //
-        main = function () {
-            console.log = function () {};
+    main = function () {
+        console.log = function () {};
 
-            var
-                $labels, $attrs, labels = [];
-            //console.log('pageType', pageType);
-            //console.log('pageUrl', pageUrl);
+        var
+            $labels, $attrs, labels = [];
+        //console.log('pageType', pageType);
+        //console.log('pageUrl', pageUrl);
 
-            setMetaTag();
-            setAspect();
-            setTitleCR();
-            // set share buttons
-            setSocialShareTag(pageUrl);
+        setMetaTag();
+        setAspect();
+        setTitleCR();
+        // set share buttons
+        setSocialShareTag(pageUrl);
 
-            if (pageType === 'index') {
-                setPostSummary();
-                // @todo set pager
-            } else if (pageType === 'item') {
-                $('.post').addClass('item');
-                $labels = $('.param.label');
-                //console.log($labels);
-                $labels.each(function (labelIdx, labelElm) {
-                    $attrs = $(labelElm).find('.attr');
-                    $attrs.each(function (attrIdx, attrElm) {
-                        if ($(attrElm).attr('data-key') === 'content') {
-                            if (attrElm.innerText) {
-                                labels.push(attrElm.innerText);
-                            }
+        if (pageType === 'index') {
+            setPostSummary();
+            // @todo set pager
+        } else if (pageType === 'item') {
+            $('.post').addClass('item');
+            $labels = $('.param.label');
+            $labels.each(function (labelIdx, labelElm) {
+                $attrs = $(labelElm).find('.attr');
+                $attrs.each(function (attrIdx, attrElm) {
+                    if ($(attrElm).attr('data-key') === 'content') {
+                        if (attrElm.textContent) {
+                            labels.push(attrElm.textContent);
                         }
-                        //console.log('attrIdx', attrIdx);
-                        //console.log('labelIdx', labelIdx);
-                        if (labelIdx === ($labels.length - 1)) {
-                            if (attrIdx === ($attrs.length - 1)) {
-                                setRelatedPostNavi(labels);
-                            }
+                    }
+                    if (labelIdx === ($labels.length - 1)) {
+                        if (attrIdx === ($attrs.length - 1)) {
+                            setRelatedPostNavi(labels);
                         }
-                    });
+                    }
                 });
-            }
+            });
+        }
 
-            if (pageType === 'index') {
-                setPageListNavi();
-            } else if (pageType === 'item') {
-                setSinglePageNavi();
-            }
+        if (pageType === 'index') {
+            setPageListNavi();
+        } else if (pageType === 'item') {
+            setSinglePageNavi();
+        }
 
-            $('body').addClass(pageType);
+        $('body').addClass(pageType);
 
-            if (pageType !== 'item' && pageType !== 'static_page') {
-                $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12');
-            }
+        if (pageType !== 'item' && pageType !== 'static_page') {
+            $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12');
+        }
 
-            //setAffiliateButton();
+        //setAffiliateButton();
 
-            setLazyLoad();
+        setLazyLoad();
 
-            setLuckyWord();
+        setLuckyWord();
 
-            trimThumb();
+        trimThumb();
 
-            setFooterNavi();
+        setFooterNavi();
 
-            disableImageLink();
+        disableImageLink();
 
-            setExternalLink();
+        setExternalLink();
 
-            setStory();
+        setStory();
 
-            setAffiliateItems();
-        };
+        setAffiliateItems();
+    };
 
     main();
 });

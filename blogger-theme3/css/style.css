@@ -810,13 +810,12 @@ body.item .panel-title {
     height: 80px;
 }
 
-#related-posts td {
-    max-width: 33%;
+#related-posts ul li {
+    padding-bottom: 8px;
 }
 
-#related-posts td img {
-    background-color: #eee;
-    border: 1px solid gray;
+#related-posts ul li img {
+    background-color: white;
 }
 
 .comments p {
