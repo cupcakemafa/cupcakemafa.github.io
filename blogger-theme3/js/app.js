@@ -505,9 +505,9 @@ $(function () {
                                     if (url === postData[j].url) {
                                         duplicate = true;
                                     }
-                                    if(url === location.href) {
-                                        duplicate = true;
-                                    }
+                                }
+                                if(url === location.href) {
+                                    duplicate = true;
                                 }
 
                                 if (url && !duplicate) {
