@@ -484,7 +484,6 @@ $(function () {
                     }).done(function (json) {
                         //console.info('json', json);
 
-                        console.info('location.href', location.href);
                         var entry;
                         if (json && json.feed && json.feed.entry && json.feed.entry.length) {
                             for (var i = 0; i < json.feed.entry.length; i++) {
@@ -503,13 +502,13 @@ $(function () {
                                 // check duplicate url
                                 var duplicate = false;
                                 for (var j = 0; j < postData.length; j++) {
-                                    if (url === postData[j].url || url == location.href) {
+                                    if (url === postData[j].url) {
+                                        duplicate = true;
+                                    }
+                                    else if(url === location.href) {
                                         duplicate = true;
                                     }
                                 }
-
-                                console.info('duplicate', duplicate);
-                                console.info('url', url);
 
                                 if (!duplicate) {
                                     // set thumbnail image
@@ -561,7 +560,6 @@ $(function () {
 
                         request_complete_count++;
                         if (request_count === request_complete_count) {
-                            console.info('postData', postData);
                             printRelatedLabelsThumbs(postData);
                         }
                     }).fail(function (error) {
