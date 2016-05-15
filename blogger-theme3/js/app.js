@@ -505,15 +505,17 @@ $(function () {
                                         duplicate = true;
                                     }
                                 }
+
+                                console.info('duplicate', 'duplicate');
                                 console.info('url', url);
 
                                 if (!duplicate) {
                                     // set thumbnail image
-                                    if (entry.hasOwnProperty('gform_foot') && entry.gform_foot.hasOwnProperty('url')) {
-                                        thumbUrl = entry.gform_foot.url;
-                                    } else if (entry.hasOwnProperty('media$thumbnail') &&
+                                    if (entry.hasOwnProperty('media$thumbnail') &&
                                         entry.media$thumbnail.hasOwnProperty('url')) {
                                         thumbUrl = entry.media$thumbnail.url;
+                                    } else if (entry.hasOwnProperty('gform_foot') && entry.gform_foot.hasOwnProperty('url')) {
+                                        thumbUrl = entry.gform_foot.url;
                                     } else {
                                         function getThumbUrlFromContent(content) {
                                             var
