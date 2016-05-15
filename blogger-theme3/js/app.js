@@ -503,7 +503,7 @@ $(function () {
                                 // check duplicate url
                                 var duplicate = false;
                                 for (var j = 0; j < postData.length; j++) {
-                                    if (url === postData[j].url || url === location.href) {
+                                    if (url === postData[j].url || url == location.href) {
                                         duplicate = true;
                                     }
                                 }
