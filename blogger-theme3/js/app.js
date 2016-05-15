@@ -505,6 +505,7 @@ $(function () {
                                         duplicate = true;
                                     }
                                 }
+                                console.info('url', url);
 
                                 if (!duplicate) {
                                     // set thumbnail image
