@@ -506,7 +506,7 @@ $(function () {
                                     }
                                 }
 
-                                console.info('duplicate', 'duplicate');
+                                console.info('duplicate', duplicate);
                                 console.info('url', url);
 
                                 if (!duplicate) {
