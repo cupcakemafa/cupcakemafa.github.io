@@ -505,12 +505,12 @@ $(function () {
                                     if (url === postData[j].url) {
                                         duplicate = true;
                                     }
-                                    else if(url === location.href) {
+                                    if(url === location.href) {
                                         duplicate = true;
                                     }
                                 }
 
-                                if (!duplicate) {
+                                if (url && !duplicate) {
                                     // set thumbnail image
                                     if (entry.hasOwnProperty('media$thumbnail') &&
                                         entry.media$thumbnail.hasOwnProperty('url')) {
