@@ -483,6 +483,8 @@ $(function () {
                         dataType: 'jsonp'
                     }).done(function (json) {
                         //console.info('json', json);
+
+                        console.info('location.href', location.href);
                         var entry;
                         if (json && json.feed && json.feed.entry && json.feed.entry.length) {
                             for (var i = 0; i < json.feed.entry.length; i++) {
@@ -559,6 +561,7 @@ $(function () {
 
                         request_complete_count++;
                         if (request_count === request_complete_count) {
+                            console.info('postData', postData);
                             printRelatedLabelsThumbs(postData);
                         }
                     }).fail(function (error) {
