@@ -464,6 +464,7 @@ $(function () {
                     tag += '</ul>';
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
+                $relatedPosts.removeClass('hidden');
             }
 
             // process start
