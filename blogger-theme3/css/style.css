@@ -1258,7 +1258,11 @@ only screen and (min-resolution: 2dppx) {
 
 /* Begin Info Box */
 
-.info-box ul {
+.info-box {
+    margin-bottom:16px;
+}
+
+.info-box > ul {
     border: 1px solid #ccc;
     border-top: none;
     padding-top: 16px !important;
