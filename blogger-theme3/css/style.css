@@ -589,13 +589,16 @@ nav.navbar .container-fluid {
 .nav.navbar-nav .dropdown.open .dropdown-toggle {
     color: white;
 }
+
 .nav.navbar-nav .dropdown.open ul.dropdown-menu {
     padding-left: 0;
     font-size: 18px;
 }
+
 .nav.navbar-nav .dropdown.open ul.dropdown-menu li:first-child {
     padding-top: 6px !important;
 }
+
 .nav.navbar-nav .dropdown.open ul.dropdown-menu li:last-child {
     padding-bottom: 6px !important;
 }
@@ -1251,3 +1254,25 @@ only screen and (min-resolution: 2dppx) {
 
 
 /* End Scroll Top */
+
+
+/* Begin Info Box */
+
+.info-box ul {
+    border: 1px solid #ccc;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 0;
+}
+
+.info-box .title {
+    border: 1px solid #ccc;
+    border-bottom: 4px solid #FFEB3B;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding: 16px;
+    margin: 0;
+}
+
+
+/* End Info Box */

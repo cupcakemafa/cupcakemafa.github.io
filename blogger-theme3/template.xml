@@ -821,8 +821,8 @@
                                                                 <i class='fa fa-google-plus'></i> Google Plus でシェア</a>
                                                         </div>
                                                     </div>
-                                                    <div class='row no-margin margin-left margin-top'>
-                                                        <div class='col col-xs-12'>
+                                                    <div class='row no-margin margin-top'>
+                                                        <div class='col col-xs-12 no-padding no-margin'>
                                                             <div class='panel panel-default'>
                                                                 <div class='panel-heading'>
                                                                     Twitter/Facebook/Instagramでもいろいろな情報をお届けしています。<br />
@@ -846,6 +846,27 @@
                                                     </div>
                                                     <!-- End Post Social Share -->
 
+                                                    <!-- Begin Comment Form -->
+                                                    <h3 class='text-center margin-bottom'>
+                                                        <i class='fa fa-comments-o'/> Comments &amp; Questions
+                                                    </h3>
+                                                    <div id='disqus_thread'></div>
+                                                    <script>
+                                                    var disqus_config = function () {
+                                                        this.page.url = '<data:post.canonicalUrl/>';
+                                                        this.page.identifier = '<data:post.id/>';
+                                                        this.page.title = '<data:post.title/>';
+                                                        this.page.category_id = '';
+                                                    };
+                                                    (function() { // DON'T EDIT BELOW THIS LINE
+                                                    var d = document, s = d.createElement('script');
+                                                    s.src = '//cupcakemafa.disqus.com/embed.js';
+                                                    s.setAttribute('data-timestamp', +new Date());
+                                                    (d.head || d.body).appendChild(s);
+                                                    })();
+                                                    </script>
+                                                    <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>
+                                                    <!-- End Comment Form -->
                                                 </b:if>
                                             </div>
                                             <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
@@ -2305,6 +2326,7 @@
 
     <script src='//use.typekit.net/vmo4jem.js' type='text/javascript'></script>
     <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='true'></script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
         <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
         <div class='container'>
