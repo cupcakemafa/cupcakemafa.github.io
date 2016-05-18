@@ -840,7 +840,18 @@ $(function () {
                     }
                 }
             });
-        }
+        },
+        /**
+         * Set headroom to navi menu
+         * @depends headroom.js/jQuery.headroom.js
+         * @link http://wicky.nillia.ms/headroom.js/
+         **/
+        setHeadRoom = function() {
+            var $headRoom = $('#header-navi');
+            if($headRoom.length) {
+                $headRoom.headroom();
+            }
+        },
         //
         // Main
         //
@@ -892,6 +903,8 @@ $(function () {
         if (pageType !== 'item' && pageType !== 'static_page') {
             $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12');
         }
+
+        setHeadRoom();
 
         //setAffiliateButton();
 
