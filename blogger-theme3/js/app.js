@@ -507,7 +507,7 @@ $(function () {
                                         duplicate = true;
                                     }
                                 }
-                                if(url === location.href) {
+                                if (url === location.href) {
                                     duplicate = true;
                                 }
 
@@ -823,14 +823,14 @@ $(function () {
         },
         setLazyLoad = function () {
             var $imgs = $('.post-body img'),
-                $img, src;
+                $img, src, srcUrl = location.protocol+'//placeholdit.imgix.net/~text?txtsize=33&bg=ffb6c1&txtclr=000000&&txt=(＾▽＾)/&w=350&h=150';
             $imgs.each(function (idx, elm) {
                 if (idx > 0) {
                     $img = $(elm);
                     if (!$img.hasClass('main')) {
                         src = $img.attr('src');
                         $img.attr('data-original', src);
-                        $img.attr('src', 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150');
+                        $img.attr('src', srcUrl);
                     }
                     if (idx == $imgs.length - 1) {
                         $imgs.lazyload({
@@ -846,84 +846,84 @@ $(function () {
          * @depends headroom.js/jQuery.headroom.js
          * @link http://wicky.nillia.ms/headroom.js/
          **/
-        setHeadRoom = function() {
+        setHeadRoom = function () {
             var $headRoom = $('#header-navi');
-            if($headRoom.length) {
+            if ($headRoom.length) {
                 $headRoom.headroom();
             }
         },
         //
         // Main
         //
-    main = function () {
-        console.log = function () {};
+        main = function () {
+            console.log = function () {};
 
-        var
-            $labels, $attrs, labels = [];
-        //console.log('pageType', pageType);
-        //console.log('pageUrl', pageUrl);
+            var
+                $labels, $attrs, labels = [];
+            //console.log('pageType', pageType);
+            //console.log('pageUrl', pageUrl);
 
-        setMetaTag();
-        setAspect();
-        setTitleCR();
-        // set share buttons
-        setSocialShareTag(pageUrl);
+            setMetaTag();
+            setAspect();
+            setTitleCR();
+            // set share buttons
+            setSocialShareTag(pageUrl);
 
-        if (pageType === 'index') {
-            setPostSummary();
-            // @todo set pager
-        } else if (pageType === 'item') {
-            $('.post').addClass('item');
-            $labels = $('.param.label');
-            $labels.each(function (labelIdx, labelElm) {
-                $attrs = $(labelElm).find('.attr');
-                $attrs.each(function (attrIdx, attrElm) {
-                    if ($(attrElm).attr('data-key') === 'content') {
-                        if (attrElm.textContent) {
-                            labels.push(attrElm.textContent);
+            if (pageType === 'index') {
+                setPostSummary();
+                // @todo set pager
+            } else if (pageType === 'item') {
+                $('.post').addClass('item');
+                $labels = $('.param.label');
+                $labels.each(function (labelIdx, labelElm) {
+                    $attrs = $(labelElm).find('.attr');
+                    $attrs.each(function (attrIdx, attrElm) {
+                        if ($(attrElm).attr('data-key') === 'content') {
+                            if (attrElm.textContent) {
+                                labels.push(attrElm.textContent);
+                            }
                         }
-                    }
-                    if (labelIdx === ($labels.length - 1)) {
-                        if (attrIdx === ($attrs.length - 1)) {
-                            setRelatedPostNavi(labels);
+                        if (labelIdx === ($labels.length - 1)) {
+                            if (attrIdx === ($attrs.length - 1)) {
+                                setRelatedPostNavi(labels);
+                            }
                         }
-                    }
+                    });
                 });
-            });
-        }
+            }
 
-        if (pageType === 'index') {
-            setPageListNavi();
-        } else if (pageType === 'item') {
-            setSinglePageNavi();
-        }
+            if (pageType === 'index') {
+                setPageListNavi();
+            } else if (pageType === 'item') {
+                setSinglePageNavi();
+            }
 
-        $('body').addClass(pageType);
+            $('body').addClass(pageType);
 
-        if (pageType !== 'item' && pageType !== 'static_page') {
-            $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12');
-        }
+            if (pageType !== 'item' && pageType !== 'static_page') {
+                $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12');
+            }
 
-        setHeadRoom();
+            setHeadRoom();
 
-        //setAffiliateButton();
+            //setAffiliateButton();
 
-        setLazyLoad();
+            setLazyLoad();
 
-        setLuckyWord();
+            setLuckyWord();
 
-        trimThumb();
+            trimThumb();
 
-        setFooterNavi();
+            setFooterNavi();
 
-        disableImageLink();
+            disableImageLink();
 
-        setExternalLink();
+            setExternalLink();
 
-        setStory();
+            setStory();
 
-        setAffiliateItems();
-    };
+            setAffiliateItems();
+        };
 
     main();
 });
