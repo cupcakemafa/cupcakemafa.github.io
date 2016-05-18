@@ -764,9 +764,11 @@
                                                 <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                     <b:if cond='data:post.location'>
                                                         <div class='post-location text-center'>
+<!--
                                                             <h3>
                                                                 <i class='fa fa-map-marker'/> Map<br/>
                                                             </h3>
+-->
                                                             ADDRESS
                                                             <hr class='embed span6'/>
                                                             <h5>
