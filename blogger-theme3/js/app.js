@@ -823,7 +823,7 @@ $(function () {
         },
         setLazyLoad = function () {
             var $imgs = $('.post-body img'),
-                $img, src, srcUrl = location.protocol+'//placeholdit.imgix.net/~text?txtsize=33&bg=ffb6c1&txtclr=000000&&txt=(＾▽＾)/&w=350&h=150';
+                $img, src, srcUrl = location.protocol+'//placeholdit.imgix.net/~text?txtsize=33&bg=ffb6c1&txtclr=000000&&txt=Cupcakemafa&w=350&h=150';
             $imgs.each(function (idx, elm) {
                 if (idx > 0) {
                     $img = $(elm);
