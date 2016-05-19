@@ -883,19 +883,12 @@
                                                     <div class='content text-left'></div>
                                                 </div>
 
-                                                <style>
-                                                .page-navi.single .link-title .title,
-                                                .page-navi.single .media-heading, .page-navi.single .link-title .date, .page-navi.single .link-title .title {
-                                                    margin: 0;
-                                                    padding: 0;
-                                                }
-                                                </style>
                                                 <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                 <!-- Start of Next/Prev Navi -->
                                                 <b:if cond='data:olderPageUrl or data:newerPageUrl'>
                                                     <div class='page-navi single hidden row no-margin margin-top clearfix'>
                                                         <b:if cond='data:olderPageUrl'>
-                                                            <div class='panel panel-default padding col-md-5 col-sm-12 col-xs-12'>
+                                                            <div class='panel panel-default padding col-md-6 col-sm-12 col-xs-12'>
                                                                 <div class='panel-body no-padding text-left clearfix'>
                                                                     <a class='prev-link thumb' expr:href='data:olderPageUrl'>
                                                                         <img class='pull-left margin-right link-thumb media-object img-rounded' data-src='' alt='' />
@@ -913,7 +906,7 @@
                                                             </div>
                                                         </b:if>
                                                         <b:if cond='data:newerPageUrl'>
-                                                            <div class='panel panel-default padding pull-right col-md-5 col-offset-md-1 col-sm-12 col-xs-12'>
+                                                            <div class='panel panel-default padding pull-right col-md-6 col-sm-12 col-xs-12'>
                                                                 <div class='panel-body no-padding text-right clearfix'>
                                                                     <a class='next-link thumb' expr:href='data:newerPageUrl'>
                                                                         <img class='pull-right margin-left link-thumb media-object img-rounded' data-src='' alt='' />
