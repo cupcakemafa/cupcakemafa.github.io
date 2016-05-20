@@ -239,17 +239,18 @@
                                                 NEWS
                                             </a>
                                         </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <li class='dropdown'>
+                                            <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
                                                 <i class='fa fa-star'/>
                                                 TRAVEL
                                                 <span class="caret"></span>
                                             </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="/search/label/NEW%20YORK">New York</a></li>
-                                                <li><a href="/search/label/PARIS">Paris</a></li>
-                                                <li><a href="/search/label/持ち物">持ち物</a></li>
-                                                <!--<li><a href="/search/label/RECOMMEND">Recommend</a></li>-->
+                                            <ul class='dropdown-menu'>
+                                                <li><a href='/search/label/NEW%20YORK'>New York</a></li>
+                                                <li><a href='/search/label/PARIS'>Paris</a></li>
+                                                <li><a href='/search/label/BARCELONA'>Barcelona</a></li>
+                                                <li><a href='/search/label/持ち物'>持ち物</a></li>
+                                                <!--<li><a href='/search/label/RECOMMEND'>Recommend</a></li>-->
                                             </ul>
                                         </li>
                                         <li class='menu-item'>
@@ -264,13 +265,13 @@
                                                 ART
                                             </a>
                                         </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <li class='dropdown'>
+                                            <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
                                                 <i class='fa fa-star'/>
                                                 KOBANASI
-                                                <span class="caret"></span>
+                                                <span class='caret'></span>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class='dropdown-menu'>
                                                 <li><a href='/p/kenzukan.html'>Ken Zukan</a></li>
                                                 <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
                                             </ul>
@@ -884,55 +885,54 @@
                                                 </div>
 
                                                 <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                <!-- Start of Next/Prev Navi -->
-                                                <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                                                    <div class='page-navi single hidden row no-margin margin-top clearfix'>
-                                                        <b:if cond='data:olderPageUrl'>
-                                                            <div class='panel panel-default padding col-md-6 col-sm-12 col-xs-12'>
-                                                                <div class='panel-body no-padding text-left clearfix'>
-                                                                    <a class='prev-link thumb' expr:href='data:olderPageUrl'>
-                                                                        <img class='pull-left margin-right link-thumb media-object img-rounded' data-src='' alt='' />
-                                                                    </a>
-                                                                    <div class='pull-left'>
-                                                                        <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                            <i class='fa fa-chevron-left'/>
-                                                                            <strong>Prev</strong>
+                                                    <!-- Start of Next/Prev Navi -->
+                                                    <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                                        <div class='page-navi single hidden row no-margin margin-top clearfix'>
+                                                            <b:if cond='data:olderPageUrl'>
+                                                                <div class='panel panel-default padding col-md-6 col-sm-12 col-xs-12'>
+                                                                    <div class='panel-body no-padding text-left clearfix'>
+                                                                        <a class='prev-link thumb' expr:href='data:olderPageUrl'>
+                                                                            <img class='pull-left margin-right link-thumb media-object img-rounded' data-src='' alt='' />
                                                                         </a>
-                                                                        <a class='prev-link title' expr:href='data:olderPageUrl'>
-                                                                            <span class='link-title'></span>
-                                                                        </a>
+                                                                        <div class='pull-left'>
+                                                                            <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                                <i class='fa fa-chevron-left'/>
+                                                                                <strong>Prev</strong>
+                                                                            </a>
+                                                                            <a class='prev-link title' expr:href='data:olderPageUrl'>
+                                                                                <span class='link-title'></span>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </b:if>
-                                                        <b:if cond='data:newerPageUrl'>
-                                                            <div class='panel panel-default padding pull-right col-md-6 col-sm-12 col-xs-12'>
-                                                                <div class='panel-body no-padding text-right clearfix'>
-                                                                    <a class='next-link thumb' expr:href='data:newerPageUrl'>
-                                                                        <img class='pull-right margin-left link-thumb media-object img-rounded' data-src='' alt='' />
-                                                                    </a>
-                                                                    <div class='pull-right'>
-                                                                        <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                            <strong>Next</strong>
-                                                                            <i class='fa fa-chevron-right'/>
+                                                            </b:if>
+                                                            <b:if cond='data:newerPageUrl'>
+                                                                <div class='panel panel-default padding pull-right col-md-6 col-sm-12 col-xs-12'>
+                                                                    <div class='panel-body no-padding text-right clearfix'>
+                                                                        <a class='next-link thumb' expr:href='data:newerPageUrl'>
+                                                                            <img class='pull-right margin-left link-thumb media-object img-rounded' data-src='' alt='' />
                                                                         </a>
-                                                                        <a class='next-link title' expr:href='data:newerPageUrl'>
-                                                                            <span class='link-title'></span>
-                                                                        </a>
+                                                                        <div class='pull-right'>
+                                                                            <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                                <strong>Next</strong>
+                                                                                <i class='fa fa-chevron-right'/>
+                                                                            </a>
+                                                                            <a class='next-link title' expr:href='data:newerPageUrl'>
+                                                                                <span class='link-title'></span>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </b:if>
-                                                    </div>
-                                                </b:if>
-
-                                                <p class="text-center">
-                                                    <a href='/' title='Cupcakemafa Web Site'>
-                                                        <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
-                                                        TOP
-                                                    </a>
-                                                </p>
-                                                <!-- End of Next/Prev Navi -->
+                                                            </b:if>
+                                                        </div>
+                                                    </b:if>
+                                                    <p class="text-center">
+                                                        <a href='/' title='Cupcakemafa Web Site'>
+                                                            <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
+                                                            TOP
+                                                        </a>
+                                                    </p>
+                                                    <!-- End of Next/Prev Navi -->
                                                 </b:if>
                                             </div>
                                             <span class='comment hidden'>End post data</span>
@@ -945,7 +945,28 @@
                             <!-- Start of List Pager -->
 
                             <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-                                <div class='page-navi text-center padding margin-bottom hidden'></div>
+                                <!-- <div class='page-navi text-center padding margin-bottom hidden'></div>-->
+                                <div class='blog-pager clearfix' id='blog-pager'>
+                                    <b:if cond='data:newerPageUrl'>
+                                        <span id='blog-pager-newer-link'>
+                                            <a class='btn btn-default blog-pager-newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'><i class='fa fa-caret-left'></i> <data:newerPageTitle/></a>
+                                      </span>
+                                    </b:if>
+
+                                    <b:if cond='data:olderPageUrl'>
+                                        <span id='blog-pager-older-link'>
+                                            <a class='btn btn-default blog-pager-older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'><data:olderPageTitle/> <i class='fa fa-caret-right'></i></a>
+                                      </span>
+                                    </b:if>
+
+                                    <a class='btn btn-default home-link' expr:href='data:blog.homepageUrl'><i class='fa fa-caret-up'></i> <data:homeMsg/></a>
+
+                                    <b:if cond='data:mobileLinkUrl'>
+                                        <div class='blog-mobile-link'>
+                                            <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
+                                        </div>
+                                    </b:if>
+                                </div>
                             </b:if>
                             <!-- End of List Pager -->
                     </b:includable>
@@ -1823,6 +1844,7 @@
                             <ul class='label-link list-group no-margin margin-bottom'>
                                 <li class='list-group-item'><a href='/search/label/NEW%20YORK'>New York</a></li>
                                 <li class='list-group-item'><a href='/search/label/PARIS'>Paris</a></li>
+                                <li class='list-group-item'><a href='/search/label/BARCELONA'>Barcelona</a></li>
                                 <li class='list-group-item'><a href="/search/label/持ち物">持ち物</a></li>
                                 <!--<li class='list-group-item'><a href='/search/label/RECOMMEND'>Recommend</a></li>-->
                             </ul>
