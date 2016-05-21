@@ -997,7 +997,7 @@ $(function () {
             if (pageType !== 'item' && pageType !== 'static_page') {
                 $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12').removeClass('hide');;
             }
-            $('#bodyContent').removeClass('hide');
+            $('#bodyContent').removeClass('hidden');
 
             setHeadRoom();
 
