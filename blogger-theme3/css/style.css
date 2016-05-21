@@ -728,6 +728,7 @@ body.item .panel-title {
     overflow: hidden;
 }
 
+a.block,
 .post-title a {
     display: block;
 }
