@@ -832,20 +832,16 @@
                         else {
                             tag += '<li class="media hidden">';
                         }
-                        //tag += '<div class="panel panel-default">';
-                        //tag += '<div class="panel-body">';
                         tag += '<div class="media-left">';
                         tag += '<a href="' + postList[i].url + '">';
                         tag += '<img class="img-rounded media-object" src="' + postList[i].thumbUrl + '" alt="' + postList[i].title + '">';
                         tag += '</a>';
                         tag += '</div>';
                         tag += '<div class="media-body">';
-                        tag += '<a href="' + postList[i].url + '">';
+                        tag += '<a class="block" href="' + postList[i].url + '">';
                         tag += '<h5 class="media-heading no-padding">' + postList[i].title + '</h5>';
-                        tag += postList[i].updated;
+                        tag += '<span class="text-right">' + postList[i].updated + '</span>';
                         tag += '</a>';
-                        //tag += '</div>';
-                        //tag += '</div>';
                         tag += '</div>';
                         tag += '</li>';
                     }
@@ -866,9 +862,6 @@
                     });
                     return false;
                 });
-//                $('.related-more').on(event.TOUCH_END, function() {
-//                    return;
-//                });
             }
 
             // process start
@@ -1275,7 +1268,6 @@
 
             if (pageType === 'index') {
                 setPostSummary();
-                // @todo set pager
             } else if (pageType === 'item') {
                 $('.post').addClass('item');
                 $labels = $('.param.label');
