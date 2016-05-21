@@ -525,13 +525,18 @@ $(function () {
 
             function printRelatedLabelsThumbs(postList) {
                 var
-                    maxresults = 6,
-                    tag = '';
+                    showResults = 6,
+                    tag = '', i, l;
 
                 if (postList.length > 0) {
                     tag += '<ul class="related-post-list media-list">';
-                    for (var i = 0; i < maxresults; i++) {
-                        tag += '<li class="media">';
+                    for (i = 0, l = postList.length; i < l; i++) {
+                        if(showResults > i) {
+                            tag += '<li class="media">';
+                        }
+                        else {
+                            tag += '<li class="media hidden">';
+                        }
                         //tag += '<div class="panel panel-default">';
                         //tag += '<div class="panel-body">';
                         tag += '<div class="media-left">';
@@ -550,9 +555,19 @@ $(function () {
                         tag += '</li>';
                     }
                     tag += '</ul>';
+                    if(postList.length > showResults) {
+                        tag += '<button class="btn btn-deault related-more">More</button>';
+                    }
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
                 $relatedPosts.removeClass('hidden');
+                $('.related-more').on('click touchend', function() {
+                    $('.related-post-list').each(function(idx, elm){
+                        $(elm).find('.media.hidden').each(function(idx, hiddenElm){
+                            $(hiddenElm).removeClass('hidden');
+                        });
+                    });
+                });
             }
 
             // process start
