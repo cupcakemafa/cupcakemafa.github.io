@@ -216,10 +216,102 @@ $(function () {
                 });
             }
         },
+        getQueryString = function (key, default_) {
+            var regex, qs;
+            if (default_ == null) {
+                default_ = '';
+            }
+            key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+            qs = regex.exec(window.location.href);
+            if (qs == null) {
+                return default_;
+            } else {
+                return qs[1];
+            }
+        },
+        checkLastPage = function () {
+            var
+                homePage = 'http://www.cupcakemafa.com/',
+                activePageUrl = location.href,
+                postLabel = '',
+                labelSearchURI = '/search/label/',
+                requestUrl = false,
+                currentPageNo = 0,
+                perPage = 0;
+            // Checking Post Max Count
+            // Get label string from location URL
+            if (activePageUrl.indexOf("/search/label/") != -1) {
+                if (activePageUrl.indexOf("?updated-max") != -1) {
+                    postLabel = activePageUrl.substring(activePageUrl.indexOf(labelSearchURI) + labelSearchURI.length, activePageUrl.indexOf("?updated-max"));
+                } else if (activePageUrl.indexOf("?updated-max") != -1) {
+                    postLabel = activePageUrl.substring(activePageUrl.indexOf(labelSearchURI) + labelSearchURI.length, activePageUrl.indexOf("?&max"));
+                } else {
+                    postLabel = activePageUrl.substring(activePageUrl.indexOf(labelSearchURI) + labelSearchURI.length);
+                    if (location.search) {
+                        postLabel = postLabel.replace(location.search, '');
+                    }
+                }
+            }
+            // Set a request URL for a post count
+            if (activePageUrl.indexOf("?q=") == -1 && activePageUrl.indexOf(".html") == -1) {
+                if (activePageUrl.indexOf("/search/label/") == -1) {
+                    // For page
+                    if (activePageUrl.indexOf("#PageNo=") != -1) {
+                        currentPageNo = activePageUrl.substring(activePageUrl.indexOf("#PageNo=") + 8, activePageUrl.length)
+                    } else {
+                        currentPageNo = 1
+                    }
+                    requestUrl = homePage + 'feeds/posts/summary?max-results=1&alt=json-in-script';
+                } else {
+                    // For Label archive
+                    perPage = getQueryString('max-results', 20);
+                    if (activePageUrl.indexOf("#PageNo=") != -1) {
+                        currentPageNo = activePageUrl.substring(activePageUrl.indexOf("#PageNo=") + 8, activePageUrl.length)
+                    } else {
+                        currentPageNo = 1
+                    }
+                    requestUrl = homePage + 'feeds/posts/summary/-/' + postLabel + '?alt=json-in-script&max-results=1';
+                }
+            }
+            // Get a post count.
+            $.ajax({
+                type: 'GET',
+                url: requestUrl,
+                dataType: 'jsonp',
+                success: function (root) {
+                    var
+                        feed = false,
+                        postCount = 0,
+                        startCount = 0;
+                    console.info('feed', feed);
+                    if (root.hasOwnProperty('feed')) {
+                        feed = root.feed;
+                    } else {
+                        return;
+
+                    }
+                    // Check if next posts are exists.
+                    if (feed.hasOwnProperty('openSearch$totalResults') && feed.openSearch$totalResults.hasOwnProperty('$t')) {
+                        postCount = parseInt(feed.openSearch$totalResults.$t, 10);
+                        startCount = parseInt(getQueryString('start', 0), 10);
+                        perPage = parseInt(perPage, 10);
+                        console.info('postCount', postCount);
+                        console.info('startCount', startCount);
+                        console.info('perPage', perPage);
+                        if ((startCount + perPage) > postCount) {
+                            $('#blog-pager-older-link').find('.blog-pager-older-link').each(function (idx, elm) {
+                                $(elm).hide();
+                            });
+                        }
+                    }
+                }
+            });
+        },
         // Pager for index, archive page
         pageListNavi = function (o) {
             var pageNaviConf = {
-                    "perPage": 10,
+                    "perPage": 8,
                     "numPages": 4,
                     "firstText": " First ",
                     "lastText": " Last ",
@@ -823,7 +915,7 @@ $(function () {
         },
         setLazyLoad = function () {
             var $imgs = $('.post-body img'),
-                $img, src, srcUrl = location.protocol+'//placeholdit.imgix.net/~text?txtsize=33&bg=ffb6c1&txtclr=000000&&txt=Cupcakemafa&w=350&h=150';
+                $img, src, srcUrl = location.protocol + '//placeholdit.imgix.net/~text?txtsize=33&bg=ffb6c1&txtclr=000000&&txt=Cupcakemafa&w=350&h=150';
             $imgs.each(function (idx, elm) {
                 if (idx > 0) {
                     $img = $(elm);
@@ -892,8 +984,10 @@ $(function () {
                 });
             }
 
-            if (pageType === 'index') {
-                setPageListNavi();
+            if (pageType === 'index' || pageType === 'archive') {
+                //setPageListNavi();
+                // For show/hide previous prev page in a pager.
+                checkLastPage();
             } else if (pageType === 'item') {
                 setSinglePageNavi();
             }
@@ -901,8 +995,9 @@ $(function () {
             $('body').addClass(pageType);
 
             if (pageType !== 'item' && pageType !== 'static_page') {
-                $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12');
+                $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12').removeClass('hide');;
             }
+            $('#bodyContent').removeClass('hide');
 
             setHeadRoom();
 
