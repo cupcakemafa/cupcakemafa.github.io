@@ -304,8 +304,8 @@
 
     var
         SITE_URL = location.protocol + '//www.cupcakemafa.com',
-        util = new global.Util(),
-        event = new global.Event(),
+        util = new window.Util(),
+        event = new window.Event(),
         pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
         setMetaTag = function () {
