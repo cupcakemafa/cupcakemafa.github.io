@@ -104,6 +104,17 @@
     <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     <![endif]-->
+
+
+<style>
+#blog-pager{clear:both;margin:30px auto;text-align:center; padding: 7px; }
+.blog-pager {background: none;}
+.displaypageNum a,.showpage a,.pagecurrent{font-size: 12px;padding: 5px 12px;margin-right:5px; color: #222; background-color:#eee; border: 1px solid #EEEEEE;}
+.displaypageNum a:hover,.showpage a:hover, .pagecurrent{background:#E5E5E5;text-decoration:none;color: #222;}
+#blog-pager .pagecurrent{font-weight:bold;color: #fff;background:#DB4920;}
+ .showpageOf{display:none!important}
+#blog-pager .pages{border:none;}
+    </style>
 </head>
 <body expr:class='&quot;loading&quot; + data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
     <div id="fb-root"></div>
@@ -343,7 +354,7 @@
         </b:section><!-- End #header .row -->
 
         <!-- Begin #body .row  -->
-        <div class='row' id='body'>
+        <div class='row hidden' id='body'>
 
             <b:section class='col col-xs-12 col-sm-6 col-md-8 no-padding no-margin' id='bodyContent' showaddelement='no'>
                 <b:widget id='Blog1' class='no-padding no-margin' locked='true' title='ブログの投稿' type='Blog' visible='true'>
@@ -2245,7 +2256,7 @@
 
 
         <!-- Begin #footer -->
-        <b:section class='row' id='footer' showaddelement='no'>
+        <b:section class='row hidden' id='footer' showaddelement='no'>
             <b:widget id='HTML5' locked='false' title='フッターコンテンツ' type='HTML' visible='true'>
                 <b:includable id='main'>
 
@@ -2374,5 +2385,5 @@
     <!-- Begin Google Analytics -->
     <b:include data='blog' name='google-analytics'/>
     <!-- End Google Analytics -->
-  </body>
+    </body>
 </html>
