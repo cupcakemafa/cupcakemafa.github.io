@@ -284,7 +284,6 @@ $(function () {
                         feed = false,
                         postCount = 0,
                         startCount = 0;
-                    console.info('feed', feed);
                     if (root.hasOwnProperty('feed')) {
                         feed = root.feed;
                     } else {
@@ -296,9 +295,6 @@ $(function () {
                         postCount = parseInt(feed.openSearch$totalResults.$t, 10);
                         startCount = parseInt(getQueryString('start', 0), 10);
                         perPage = parseInt(perPage, 10);
-                        console.info('postCount', postCount);
-                        console.info('startCount', startCount);
-                        console.info('perPage', perPage);
                         if ((startCount + perPage) > postCount) {
                             $('#blog-pager-older-link').find('.blog-pager-older-link').each(function (idx, elm) {
                                 $(elm).hide();
