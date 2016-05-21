@@ -856,7 +856,7 @@
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
                 $relatedPosts.removeClass('hidden');
-                $('.related-more').on(event.TOUCH_END, function() {
+                $('.related-more').on(event.TOUCH_START, function() {
                     $(this).addClass('hidden');
                     $('.related-post-list').each(function(idx, elm){
                         $(elm).find('.media.hidden').each(function(idx, hiddenElm){
