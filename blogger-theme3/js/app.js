@@ -562,7 +562,7 @@ $(function () {
                 $relatedPosts.find('.content').eq(0).append(tag);
                 $relatedPosts.removeClass('hidden');
                 $('.related-more').on('click touchend', function() {
-                    $('this').addClass('hidden');
+                    $(this).addClass('hidden');
                     $('.related-post-list').each(function(idx, elm){
                         $(elm).find('.media.hidden').each(function(idx, hiddenElm){
                             $(hiddenElm).removeClass('hidden');
