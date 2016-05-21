@@ -1,6 +1,312 @@
-$(function () {
+/**
+ * Event Class
+ * @param {Object} global
+ * @returns {undefined}
+ */
+(function (global) {
+    "use strict";
 
-    var pageType = $('#page-type').text(),
+    // Class ------------------------------------------------
+    /**
+     * コンストラクタ
+     * @returns {event.class_L6.Event}
+     */
+    function Event() {
+        if (window.hasOwnProperty('ontouchstart')) {
+            this.TOUCH_START = 'touchstart';
+            this.TOUCH_MOVE = 'touchmove';
+            this.TOUCH_END = 'touchend';
+        } else {
+            this.TOUCH_START = 'mousedown';
+            this.TOUCH_MOVE = 'mousemove';
+            this.TOUCH_END = 'mouseup';
+        }
+
+        this.TRANSITION_END = 'transitionend webkitTransitionEnd';
+        this.ANIMATION_END = 'animationend webkitAnimationEnd';
+        this.SCROLL = 'scroll';
+        this.CHANGE = 'change';
+    }
+
+    // Implementation ---------------------------------------
+    /**
+     * イベント発生位置取得メソッド
+     * @param {Object} event イベントオブジェクト
+     * @returns {object|Boolean} position
+     * @returns {number} position.x
+     * @returns {number} position.y
+     */
+    function Event_getPosition(event) {
+        //console.log('event', event);
+        //console.log('event.originalEvent', event.originalEvent);
+        var position = false;
+        if (window.hasOwnProperty('ontouchstart')) {
+            position = {
+                x: event.originalEvent.changedTouches[0].pageX,
+                y: event.originalEvent.changedTouches[0].pageY
+            };
+        } else {
+            position = {
+                x: event.pageX,
+                y: event.pageY
+            };
+        }
+        return position;
+    }
+
+    // Header -----------------------------------------------
+    Event.prototype.getPosition = Event_getPosition; // Event#getPosition():Object
+
+    // Exports ----------------------------------------------
+    if (global.hasOwnProperty("process")) {
+        module.exports = Event;
+    }
+    global.Event = Event;
+
+}((this || 0).self || global));
+
+/**
+ * Util Class
+ * 共通ユーティリティ機能クラス
+ * @param {Object} global
+ * @returns {undefined}
+ */
+(function (global) {
+    "use strict";
+
+    // Class ------------------------------------------------
+    /**
+     * コンストラクタ
+     * @returns {util.class_L7.Util}
+     */
+    function Util() {
+        Util.prototype = {}; // to avoid json lint error
+    }
+
+    // Implementation ---------------------------------------
+
+    /**
+     * Get value from query string
+     * @link http://vba-geek.jp/blog-entry-183.html
+     * @link http://www.bloggingdeveloper.com/post/JavaScript-QueryString-ParseGet-QueryString-with-Client-Side-JavaScript.aspx
+     */
+    function Util_getQueryString (key, default_) {
+        var regex, qs;
+        if (default_ == null) {
+            default_ = '';
+        }
+        key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+        qs = regex.exec(window.location.href);
+        if (qs == null) {
+            return default_;
+        } else {
+            return qs[1];
+        }
+    }
+
+    /**
+     * 引数の変数が定義されているかを判定
+     * @param {type} argumentName
+     * @returns {Boolean}
+     */
+    function Util_isDefined(argumentName) {
+        //console.info('argumentName', argumentName);
+        // グローバルを表すオブジェクトを生成
+        //var global = ( function() { return this; } ).apply( null, [] );
+        //console.info('global', global);
+        //console.info('window', window);
+        if (!window) {
+            return false;
+        }
+        if (window.hasOwnProperty(argumentName)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * OS プラットフォーム文字列取得メソッド
+     * @returns {Boolean|String}
+     */
+    function Util_getPlatform() {
+
+        var platform = this.getNavigatorPlatform().toLowerCase();
+        //console.log('platform', platform);
+        if (platform) {
+            if (platform.match(/ios/)) {
+                return 'ios';
+            }
+            if (platform.match(/android/)) {
+                return 'android';
+            }
+        }
+        //console.warn('platform not defined');
+        return false;
+    }
+
+    /**
+     * プラットフォーム（OS）タイプ取得メソッド
+     * @private
+     * @returns {Boolean|RegExp} ios|android|false
+     */
+    function Util_getNavigatorPlatform() {
+        console.log('getNavigatorPlatform()');
+        //var deviceType = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
+        //console.log('deviceType', deviceType);
+        // プラットフォーム判定
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            return 'ios';
+        }
+        if (navigator.userAgent.match(/(Android)/)) {
+            return 'android';
+        }
+        return;
+    }
+
+    /**
+     * プラットフォーム判定メソッド
+     * @returns {Array}
+     */
+    function Util_getNavigatorDeviceType() {
+        //        console.log( 'getDeviceType()' );
+        // プラットフォーム判定
+        var deviceType = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
+        //console.log( 'deviceType', deviceType );
+        return deviceType;
+    }
+
+    /**
+     * 引数 num を受け取って、0 から (num - 1) までの乱数を返す関数
+     * @param {Number} num
+     * @returns {Number}
+     */
+    function Util_rand(num) {
+        return Math.floor(Math.random() * num);
+    }
+
+    /**
+     * ランダムストリング生成メソッド
+     * @returns {String}
+     */
+    function Util_randStr() {
+        var
+            chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz",
+            string_length = 8,
+            randomstring = '',
+            i,
+            rnum;
+        for (i = 0; i < string_length; i += 1) {
+            rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        return randomstring;
+    }
+
+    /**
+     * 配列もしくはオブジェクト内の値の個数カウントメソッド
+     * @param {Array|Object} stack
+     * @param {Number|String} value
+     * @returns {Number}
+     */
+    function Util_countVal(stack, value) {
+        var count = 0;
+        Object.keys(stack).forEach(function (key) {
+            if (stack[key] === value) {
+                count += 1;
+            }
+        });
+        return count;
+    }
+
+    /**
+     * デバイスのピクセル比取得メソッド
+     * @deprecated 未使用のため
+     * @returns {Number}
+     */
+    function Util_getDevicePixcelRatio() {
+        return parseInt(window.devicePixelRatio, 10) || 1;
+    }
+
+    /**
+     * 画像リソースの縦横ピクセル数取得メソッド
+     * @deprecated 未使用のため
+     * @param {string} url
+     * @returns {object}
+     * @returns {Number} width
+     * @returns {Number} height
+     */
+    function Util_getImageMetrics(url) {
+        //console.log('url', url);
+        var
+            img,
+            width,
+            height;
+
+        img = new Image();
+        img.src = url;
+        width = img.width || 0; // 幅
+        height = img.height || 0; // 高さ
+        return {
+            "width": width,
+            "height": height
+        };
+    }
+
+    /**
+     * 配列マージメソッド
+     * @deprecated 未使用のため
+     * @param {Array} baseArr
+     * @param {Array} addArr
+     * @returns {Array}
+     */
+    function Util_arrayMerge(baseArr, addArr) {
+        baseArr.concat(addArr);
+        return baseArr;
+    }
+
+    /**
+     * オブジェクトマージメソッド
+     * @deprecated 未使用のため
+     * @param {Object} baseObj
+     * @param {Object} addObj
+     * @param {bool} recursive
+     * @returns {Object}
+     */
+    function Util_objectMerge(baseObj, addObj, recursive) {
+        $.extend(recursive, baseObj, addObj);
+        return baseObj;
+    }
+
+    // Header -----------------------------------------------
+    Util.prototype.isDefined = Util_isDefined; // Util#isDefined():Object
+    Util.prototype.getPlatform = Util_getPlatform; // Util#getPlatform():Object
+    Util.prototype.getNavigatorPlatform = Util_getNavigatorPlatform; // Util#getNavigatorPlatform():Object
+    Util.prototype.getNavigatorDeviceType = Util_getNavigatorDeviceType; // Util#getNavigatorDeviceType():Object
+    Util.prototype.rand = Util_rand; // Util#rand():Object
+    Util.prototype.randStr = Util_randStr; // Util#randStr():Object
+    Util.prototype.countVal = Util_countVal; // Util#countVal():Object
+    Util.prototype.getDevicePixcelRatio = Util_getDevicePixcelRatio; // Util#getDevicePixcelRatio():Object
+    Util.prototype.getImageMetrics = Util_getImageMetrics; // Util#getImageMetrics():Object
+    Util.prototype.arrayMerge = Util_arrayMerge; // Util#arrayMerge():Object
+    Util.prototype.objectMerge = Util_objectMerge; // Util#objectMerge():Object
+    Util.prototype.getQueryString = Util_getQueryString; // Util#getQueryString():Object
+
+    // Exports ----------------------------------------------
+    if (global.hasOwnProperty("process")) {
+        module.exports = Util;
+    }
+    global.Util = Util;
+
+}((this || 0).self || global));
+
+(function ($) {
+
+    var
+        SITE_URL = location.protocol + '//www.cupcakemafa.com,
+        util = new global.Util(),
+        event = new global.Event(),
+        pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
         setMetaTag = function () {
             var $metaTag = $('.meta-tag'),
@@ -216,23 +522,12 @@ $(function () {
                 });
             }
         },
-        getQueryString = function (key, default_) {
-            var regex, qs;
-            if (default_ == null) {
-                default_ = '';
-            }
-            key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-            regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
-            qs = regex.exec(window.location.href);
-            if (qs == null) {
-                return default_;
-            } else {
-                return qs[1];
-            }
-        },
+        /**
+         * Check if the page is last of the list.
+         */
         checkLastPage = function () {
             var
-                homePage = 'http://www.cupcakemafa.com/',
+                homePage = SITE_URL,
                 activePageUrl = location.href,
                 postLabel = '',
                 labelSearchURI = '/search/label/',
@@ -262,16 +557,16 @@ $(function () {
                     } else {
                         currentPageNo = 1
                     }
-                    requestUrl = homePage + 'feeds/posts/summary?max-results=1&alt=json-in-script';
+                    requestUrl = homePage + '/feeds/posts/summary?max-results=1&alt=json-in-script';
                 } else {
                     // For Label archive
-                    perPage = getQueryString('max-results', 20);
+                    perPage = util.getQueryString('max-results', 20);
                     if (activePageUrl.indexOf("#PageNo=") != -1) {
                         currentPageNo = activePageUrl.substring(activePageUrl.indexOf("#PageNo=") + 8, activePageUrl.length)
                     } else {
                         currentPageNo = 1
                     }
-                    requestUrl = homePage + 'feeds/posts/summary/-/' + postLabel + '?alt=json-in-script&max-results=1';
+                    requestUrl = homePage + '/feeds/posts/summary/-/' + postLabel + '?alt=json-in-script&max-results=1';
                 }
             }
             // Get a post count.
@@ -293,7 +588,7 @@ $(function () {
                     // Check if next posts are exists.
                     if (feed.hasOwnProperty('openSearch$totalResults') && feed.openSearch$totalResults.hasOwnProperty('$t')) {
                         postCount = parseInt(feed.openSearch$totalResults.$t, 10);
-                        startCount = parseInt(getQueryString('start', 0), 10);
+                        startCount = parseInt(util.getQueryString('start', 0), 10);
                         perPage = parseInt(perPage, 10);
                         if ((startCount + perPage) > postCount) {
                             $('#blog-pager-older-link').find('.blog-pager-older-link').each(function (idx, elm) {
@@ -478,7 +773,7 @@ $(function () {
                 $pageNavi = $('.page-navi'),
                 a, b, c, d,
                 //url = location.protocol + '//' + parser.hostname; //// @todo
-                url = location.protocol + '//cupcakemafa.com'; //// @debug
+                url = SITE_URL; //// @debug
             //console.log('$pageNavi', $pageNavi);
             if ($pageNavi.length) {
                 b = location.href;
@@ -515,7 +810,7 @@ $(function () {
             //console.log('labels', labels);
             var
             //url = location.protocol + '//' + parser.hostname, //// @todo
-                url = location.protocol + '//cupcakemafa.com', //// @debug
+                url = SITE_URL,
                 request_url,
                 request_count = labels.length,
                 request_complete_count = 0,
@@ -561,7 +856,7 @@ $(function () {
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
                 $relatedPosts.removeClass('hidden');
-                $('.related-more').on('click touchend', function() {
+                $('.related-more').on(event.TOUCH_END, function() {
                     $(this).addClass('hidden');
                     $('.related-post-list').each(function(idx, elm){
                         $(elm).find('.media.hidden').each(function(idx, hiddenElm){
@@ -1034,4 +1329,4 @@ $(function () {
         };
 
     main();
-});
+})(jQuery);
