@@ -1282,6 +1282,7 @@ only screen and (min-resolution: 2dppx) {
     margin: 0;
     margin-top: 12px;
     font-size: 18px;
+    line-height: 1.4;
 }
 
 .info-box .title:before {
