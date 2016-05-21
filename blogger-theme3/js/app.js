@@ -303,7 +303,7 @@
 (function ($) {
 
     var
-        SITE_URL = location.protocol + '//www.cupcakemafa.com,
+        SITE_URL = location.protocol + '//www.cupcakemafa.com',
         util = new global.Util(),
         event = new global.Event(),
         pageType = $('#page-type').text(),
