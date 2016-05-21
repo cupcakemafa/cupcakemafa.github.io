@@ -471,6 +471,7 @@ h4.story-title {
     position: relative;
     padding: .75em 1em .75em 1.5em;
     border: 1px solid #ccc;
+    line-height: 1.36;
 }
 
 .sign::after {
