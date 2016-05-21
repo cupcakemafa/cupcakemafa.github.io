@@ -849,10 +849,10 @@
                         tag += '</div>';
                         tag += '</li>';
                     }
-                    if(postList.length > showResults) {
-                        tag += '<li><button class="btn btn-default btn-block related-more">More</button></li>';
-                    }
                     tag += '</ul>';
+                    if(postList.length > showResults) {
+                        tag += '<p><a href="#" class="btn btn-default btn-block related-more">More</a></p>';
+                    }
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
                 $relatedPosts.removeClass('hidden');
