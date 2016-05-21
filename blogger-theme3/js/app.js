@@ -851,7 +851,7 @@
                     }
                     tag += '</ul>';
                     if(postList.length > showResults) {
-                        tag += '<button class="btn btn-default btn-block related-more">More</button>';
+                        tag += '<p><button class="btn btn-default btn-block related-more">More</button></p>';
                     }
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
@@ -863,6 +863,7 @@
                             $(hiddenElm).removeClass('hidden');
                         });
                     });
+                    return;
                 });
             }
 
