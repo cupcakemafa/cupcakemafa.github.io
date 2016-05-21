@@ -849,10 +849,10 @@
                         tag += '</div>';
                         tag += '</li>';
                     }
-                    tag += '</ul>';
                     if(postList.length > showResults) {
-                        tag += '<p><button class="btn btn-default btn-block related-more">More</button></p>';
+                        tag += '<li><button class="btn btn-default btn-block related-more">More</button></li>';
                     }
+                    tag += '</ul>';
                 }
                 $relatedPosts.find('.content').eq(0).append(tag);
                 $relatedPosts.removeClass('hidden');
@@ -863,6 +863,9 @@
                             $(hiddenElm).removeClass('hidden');
                         });
                     });
+                    return;
+                });
+                $('.related-more').on(event.TOUCH_END, function() {
                     return;
                 });
             }
