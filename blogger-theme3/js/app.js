@@ -569,7 +569,6 @@
                     requestUrl = homePage + '/feeds/posts/summary/-/' + postLabel + '?alt=json-in-script&max-results=1';
                 }
             }
-console.info('requestUrl', requestUrl);
             // Get a post count.
             $.ajax({
                 type: 'GET',
@@ -585,12 +584,14 @@ console.info('requestUrl', requestUrl);
                     } else {
                         return;
                     }
-console.info('feed', feed);
                     // Check if next posts are exists.
                     if (feed.hasOwnProperty('openSearch$totalResults') && feed.openSearch$totalResults.hasOwnProperty('$t')) {
                         postCount = parseInt(feed.openSearch$totalResults.$t, 10);
                         startCount = parseInt(util.getQueryString('start', 0), 10);
                         perPage = parseInt(perPage, 10);
+console.info('postCount', postCount);
+console.info('startCount', startCount);
+console.info('perPage', perPage);
                         if ((startCount + perPage) > postCount) {
                             $('#blog-pager-older-link').find('.blog-pager-older-link').each(function (idx, elm) {
                                 $(elm).hide();
