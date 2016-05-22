@@ -351,7 +351,7 @@
                                 <div class='row'>
                                     <div class='col-xs-12'>
                                         <h3 class='sign no-border no-margin'>
-                                            <data:blog.searchLabel/> の記事リスト
+                                            <data:blog.searchLabel/>の記事リスト
                                         </h3>
                                     </div>
                                 </div>
@@ -359,7 +359,7 @@
                                 <div class='row'>
                                     <div class='col-xs-12'>
                                         <h3 id='archive-title' class='sign no-border no-margin'>
-                                            <span class='title'></span> の記事リスト
+                                            <span class='title'></span>の記事リスト
                                         </h3>
                                     </div>
                                 </div>
