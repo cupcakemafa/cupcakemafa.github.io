@@ -1072,12 +1072,15 @@
             }
             else {
                 var
-                    yearQuery = util.getQueryString('updated-min', false),
-                    parser;
+                    yearQuery = util.getQueryString('updated-max', false),
+                    parser, date = new Date(), yearNow = date.getFullYear();
                 if(yearQuery) {
                     parser = yearQuery.split('-');
                     if(parser.length) {
                         year = parser[0];
+                        if(year > yearNow) {
+                            year = yearNow;
+                        }
                         title = year+'年'
                     }
                 }
