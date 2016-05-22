@@ -568,6 +568,7 @@
                     }
                     requestUrl = homePage + '/feeds/posts/summary/-/' + postLabel + '?alt=json-in-script&max-results=1';
                 }
+                // @todo for Year archive last page check
             }
             // Get a post count.
             $.ajax({
@@ -592,9 +593,9 @@
                         if(!perPage) {
                             perPage = parseInt(util.getQueryString('max-results', 0), 10);
                         }
-console.info('postCount', postCount);
-console.info('startCount', startCount);
-console.info('perPage', perPage);
+//console.info('postCount', postCount);
+//console.info('startCount', startCount);
+//console.info('perPage', perPage);
                         if ((startCount + perPage) > postCount) {
                             $('#blog-pager-older-link').find('.blog-pager-older-link').each(function (idx, elm) {
                                 $(elm).hide();
