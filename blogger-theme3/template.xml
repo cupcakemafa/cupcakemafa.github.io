@@ -355,6 +355,14 @@
                                         </h3>
                                     </div>
                                 </div>
+                            <b:elseif cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'/>
+                                <div class='row'>
+                                    <div class='col-xs-12'>
+                                        <h3 id='archive-title' class='sign no-border no-margin'>
+                                            <span class='title'></span> の記事リスト
+                                        </h3>
+                                    </div>
+                                </div>
                             </b:if>
 
                             <b:if cond='data:blog.homepageUrl == data:blog.url'>
@@ -703,7 +711,7 @@
 
                                             <span class='comment hidden'>Start post data</span>
                                             <div class='panel-heading text-center'>
-                                                <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                                                <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
                                                     <b:if cond='data:post.firstImageUrl'>
                                                         <div class='text-center'>
                                                             <a expr:href='data:post.url' expr:title='data:post.title'>

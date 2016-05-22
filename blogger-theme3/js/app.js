@@ -1057,6 +1057,37 @@
                 $storyBox.html(tag).fadeIn().removeClass('hidden');
             }
         },
+        setArchiveTitle = function() {
+            var
+                $archiveTitle = $('#archive-title'),
+                fileInfo = location.pathname.split('/').pop().split('_'),
+                year, month, date, title;
+            if($archiveTitle.length && fileInfo[3] === 'archive.html') {
+                year = fileInfo[0].toString();
+                month = parseInt(fileInfo[1],10).toString();
+                date = parseInt(fileInfo[2],10).toString();
+                if(year && month && date) {
+                    title = year + '/' + month;
+                }
+            }
+            else {
+                var util = new window.Util(),
+                    yearQuery = util.getQueryString('updated-min', false),
+                    parser;
+                if(yearQuery) {
+                    parser = yearQuery.split('-');
+                    if(parser.length) {
+                        year = parser[0];
+                        title = year+'年'
+                    }
+                }
+            }
+
+            if(title) {
+                $archiveTitle.find('.title').eq(0).html(title);
+                $archiveTitle.removeClass('hidden');
+            }
+        },
         /////////////////////////////////////////////////////////////
         // 外部リンクに_blank, class, 属性付与
         // 2015/8/25追加
@@ -1293,6 +1324,7 @@
 
             if (pageType === 'index' || pageType === 'archive') {
                 //setPageListNavi();
+                setArchiveTitle();
                 // For show/hide previous prev page in a pager.
                 checkLastPage();
             } else if (pageType === 'item') {
