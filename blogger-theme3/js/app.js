@@ -588,10 +588,10 @@
                     if (feed.hasOwnProperty('openSearch$totalResults') && feed.openSearch$totalResults.hasOwnProperty('$t')) {
                         postCount = parseInt(feed.openSearch$totalResults.$t, 10);
                         startCount = parseInt(util.getQueryString('start', 0), 10);
-                        if(!startCount) {
-                            startCount = parseInt(util.getQueryString('max-results', 0), 10);
-                        }
                         perPage = parseInt(perPage, 10);
+                        if(!perPage) {
+                            perPage = parseInt(util.getQueryString('max-results', 0), 10);
+                        }
 console.info('postCount', postCount);
 console.info('startCount', startCount);
 console.info('perPage', perPage);
