@@ -536,7 +536,7 @@
                 perPage = 0;
             // Checking Post Max Count
             // Get label string from location URL
-            if (activePageUrl.indexOf("/search/label/") != -1) {
+            if (activePageUrl.indexOf("/search") != -1 || activePageUrl.indexOf("/search/label/") != -1) {
                 if (activePageUrl.indexOf("?updated-max") != -1) {
                     postLabel = activePageUrl.substring(activePageUrl.indexOf(labelSearchURI) + labelSearchURI.length, activePageUrl.indexOf("?updated-max"));
                 } else if (activePageUrl.indexOf("?updated-max") != -1) {
@@ -569,6 +569,7 @@
                     requestUrl = homePage + '/feeds/posts/summary/-/' + postLabel + '?alt=json-in-script&max-results=1';
                 }
             }
+console.info('requestUrl', requestUrl);
             // Get a post count.
             $.ajax({
                 type: 'GET',
@@ -583,8 +584,8 @@
                         feed = root.feed;
                     } else {
                         return;
-
                     }
+console.info('feed', feed);
                     // Check if next posts are exists.
                     if (feed.hasOwnProperty('openSearch$totalResults') && feed.openSearch$totalResults.hasOwnProperty('$t')) {
                         postCount = parseInt(feed.openSearch$totalResults.$t, 10);
