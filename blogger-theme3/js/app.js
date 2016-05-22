@@ -1071,7 +1071,7 @@
                 }
             }
             else {
-                var util = new window.Util(),
+                var
                     yearQuery = util.getQueryString('updated-min', false),
                     parser;
                 if(yearQuery) {
