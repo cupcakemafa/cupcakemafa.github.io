@@ -711,7 +711,11 @@
                         if ($title.length) {
                             postTitle = $title.text();
                             if (postTitle) {
-                                // publish date
+
+                                // Post title
+                                linkContent += '<p class="title">' + postTitle + '</p>';
+
+                                // Post publish date
                                 $date = $('.post #post-date');
                                 if ($date.length) {
                                     postDate = $date.html();
@@ -719,9 +723,8 @@
                                         linkContent += '<p class="date">' + postDate + '</p>';
                                     }
                                 }
-                                linkContent += '<p class="title">' + postTitle + '</p>';
 
-                                // post thumb
+                                // Post thumb
                                 $imgs = $data.find('.post img');
                                 if ($imgs.length) {
                                     postThumb = $imgs.eq(0).attr('src');
@@ -839,7 +842,7 @@
                         tag += '</div>';
                         tag += '<div class="media-body">';
                         tag += '<a class="block" href="' + postList[i].url + '">';
-                        tag += '<h5 class="media-heading no-padding">' + postList[i].title + '</h5>';
+                        tag += '<h5 class="media-heading no-padding no-margin margin-bottom">' + postList[i].title + '</h5>';
                         tag += '<span class="text-right">' + postList[i].updated + '</span>';
                         tag += '</a>';
                         tag += '</div>';

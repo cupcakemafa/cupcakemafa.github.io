@@ -887,38 +887,37 @@
                                                     <b:if cond='data:olderPageUrl or data:newerPageUrl'>
                                                         <div class='page-navi single hidden row no-margin margin-top clearfix'>
                                                             <b:if cond='data:olderPageUrl'>
-                                                                <div class='panel panel-default padding col-md-6 col-sm-12 col-xs-12'>
-                                                                    <div class='panel-body no-padding text-left clearfix'>
+                                                                <div class='media no-padding col-md-6 col-sm-12 col-xs-12'>
+                                                                    <div class='media-left no-padding'>
                                                                         <a class='prev-link thumb' expr:href='data:olderPageUrl'>
-                                                                            <img class='pull-left margin-right link-thumb media-object img-rounded' data-src='' alt='' />
+                                                                            <img class='margin-right link-thumb media-object img-rounded' data-src='' alt='' />
                                                                         </a>
-                                                                        <div class='pull-left'>
-                                                                            <a class='prev-link' expr:href='data:olderPageUrl'>
-                                                                                <i class='fa fa-chevron-left'/>
-                                                                                <strong>Prev</strong>
-                                                                            </a>
-                                                                            <a class='prev-link title' expr:href='data:olderPageUrl'>
-                                                                                <span class='link-title'></span>
-                                                                            </a>
-                                                                        </div>
+                                                                    </div>
+                                                                    <div class='media-body text-left'>
+                                                                        <a class='prev-link title block' expr:href='data:olderPageUrl'>
+                                                                            <h4 class='no-margin margin-bottom no-padding'>
+                                                                                <i class='fa fa-chevron-left'/> <strong>Prev</strong>
+                                                                            </h4>
+                                                                            <span class='link-title'></span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </b:if>
                                                             <b:if cond='data:newerPageUrl'>
-                                                                <div class='panel panel-default padding pull-right col-md-6 col-sm-12 col-xs-12'>
-                                                                    <div class='panel-body no-padding text-right clearfix'>
-                                                                        <a class='next-link thumb' expr:href='data:newerPageUrl'>
-                                                                            <img class='pull-right margin-left link-thumb media-object img-rounded' data-src='' alt='' />
-                                                                        </a>
-                                                                        <div class='pull-right'>
-                                                                            <a class='prev-link' expr:href='data:olderPageUrl'>
+                                                                <div class='media no-padding no-margin col-md-6 col-sm-12 col-xs-12'>
+                                                                    <div class='media-body text-right'>
+                                                                        <a class='next-link title block' expr:href='data:newerPageUrl'>
+                                                                            <h4 class='no-margin margin-bottom no-padding'>
                                                                                 <strong>Next</strong>
                                                                                 <i class='fa fa-chevron-right'/>
-                                                                            </a>
-                                                                            <a class='next-link title' expr:href='data:newerPageUrl'>
-                                                                                <span class='link-title'></span>
-                                                                            </a>
-                                                                        </div>
+                                                                            </h4>
+                                                                            <span class='link-title'></span>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class='media-right no-padding'>
+                                                                        <a class='next-link thumb' expr:href='data:newerPageUrl'>
+                                                                            <img class='margin-left link-thumb media-object img-rounded' data-src='' alt='' />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </b:if>

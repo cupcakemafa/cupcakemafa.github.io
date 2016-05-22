@@ -789,10 +789,11 @@ a.block,
     line-height: 1.4;
 }
 
-.page-navi.single .media-heading,
+.page-navi.single .media-heading {
+    background-color: white;
+}
 .page-navi.single .link-title .date,
 .page-navi.single .link-title .title {
-    background-color: white;
     margin: 0;
     padding: 0;
 }
