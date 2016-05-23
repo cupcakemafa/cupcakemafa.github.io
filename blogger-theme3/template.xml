@@ -741,15 +741,17 @@
                                                         </nav>
                                                     </b:if>
                                                 </b:if>
-                                                <h1 class='taped'>
-                                                    <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                    <h1 class='taped' id='post-title'>
                                                         <data:post.title/>
-                                                    <b:else/>
-                                                        <a expr:href='data:post.url' expr:title='data:post.title' id='post-title'>
+                                                    </h1>
+                                                <b:else/>
+                                                    <h1 class='taped'>
+                                                        <a expr:href='data:post.url' expr:title='data:post.title' class='block'>
                                                             <data:post.title/>
                                                         </a>
-                                                    </b:if>
-                                                </h1>
+                                                    </h1>
+                                                </b:if>
                                             </div>
                                             <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
 

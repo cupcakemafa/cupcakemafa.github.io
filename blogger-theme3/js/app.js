@@ -760,8 +760,6 @@
                         }
                     }
                 };
-console.info('$newerLink',$newerLink);
-console.info('$olderLink',$olderLink);
             if ($newerLink.length) {
                 $.get($newerLink.attr('href'), function (data) {
                     setSinglePageNaviData(data, $newerLink);
