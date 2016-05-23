@@ -737,7 +737,7 @@ body.item .panel-title {
 }
 
 #Blog1 {
-    padding: 0;
+    padding: 0 !important;
 }
 
 a.block,
