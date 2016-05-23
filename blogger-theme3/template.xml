@@ -726,18 +726,20 @@
                                                         <data:post.dateHeader/>
                                                     </h5>
                                                 </b:if>
-                                                <b:if cond='data:post.labels'>
-                                                    <nav class='margin'>
-                                                        <ul class='pager'>
-                                                            <b:loop index='i' values='data:post.labels' var='label'>
-                                                                <li>
-                                                                    <a class='button button-small button-stable activated' expr:href='data:label.url'>
-                                                                        <data:label.name/>
-                                                                    </a>
-                                                                </li>
-                                                            </b:loop>
-                                                        </ul>
-                                                    </nav>
+                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                    <b:if cond='data:post.labels'>
+                                                        <nav class='margin'>
+                                                            <ul class='pager'>
+                                                                <b:loop index='i' values='data:post.labels' var='label'>
+                                                                    <li>
+                                                                        <a class='button button-small button-stable activated' expr:href='data:label.url'>
+                                                                            <data:label.name/>
+                                                                        </a>
+                                                                    </li>
+                                                                </b:loop>
+                                                            </ul>
+                                                        </nav>
+                                                    </b:if>
                                                 </b:if>
                                                 <h1 class='post-title- taped'>
                                                     <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
