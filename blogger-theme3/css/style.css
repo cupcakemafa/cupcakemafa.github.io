@@ -478,6 +478,11 @@ h4.story-title {
     font-size: 24px;
 }
 
+.index .taped,
+.archive .taped {
+    font-size: 18px;
+}
+
 /* 蛍光ペン風 */
 
 .marker-underline {
