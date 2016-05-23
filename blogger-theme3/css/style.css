@@ -445,13 +445,6 @@ h4.story-title {
     text-align: center;
     color: #333;
     background: #F5F356;
-    /*
-    -webkit-transform: rotate(-3deg) skew(-3deg);
-    -moz-transform: rotate(-3deg) skew(-3deg);
-    -o-transform: rotate(-3deg) skew(-3deg);
-    -ms-transform: rotate(-3deg) skew(-3deg);
-    transform: rotate(-3deg) skew(-3deg);
-    */
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 12px 0 0 0 #f0e800, -12px 0 0 0 #f0e800;
     letter-spacing: -1px;
@@ -459,7 +452,9 @@ h4.story-title {
 
 .taped {
     font-weight: normal;
-/*    font-size: 14px;*/
+    font-size: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 /* 蛍光ペン風 */
