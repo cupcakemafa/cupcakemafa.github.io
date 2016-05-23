@@ -445,11 +445,13 @@ h4.story-title {
     text-align: center;
     color: #333;
     background: #F5F356;
+    /*
     -webkit-transform: rotate(-3deg) skew(-3deg);
     -moz-transform: rotate(-3deg) skew(-3deg);
     -o-transform: rotate(-3deg) skew(-3deg);
     -ms-transform: rotate(-3deg) skew(-3deg);
     transform: rotate(-3deg) skew(-3deg);
+    */
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 12px 0 0 0 #f0e800, -12px 0 0 0 #f0e800;
     letter-spacing: -1px;
@@ -472,6 +474,7 @@ h4.story-title {
 
 .sign {
     font-family: 'Chewy', cursive;
+    font-size: 14px !important;
     position: relative;
     padding: .75em 1em .75em 1.5em;
     border: 1px solid #ccc;
@@ -494,10 +497,6 @@ h4.story-title {
 .sign p {
     font-size: 0.8em;
     margin: 12px 0 0 0 !important;
-}
-
-h2.sign {
-    font-size: 14px !important;
 }
 
 .left-border {
