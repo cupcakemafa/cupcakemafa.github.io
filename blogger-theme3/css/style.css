@@ -441,13 +441,16 @@ h4.story-title:before {
 h4.story-title {
     position: relative;
     margin-bottom: 16px;
-    font: bold 18px/1.8 Arial, Helvetica, sans-serif;
     text-align: center;
     color: #333;
     background: #F5F356;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 12px 0 0 0 #f0e800, -12px 0 0 0 #f0e800;
     letter-spacing: -1px;
+}
+
+h4.story-title {
+    font: bold 18px/1.8 Arial, Helvetica, sans-serif;
 }
 
 .taped {
