@@ -474,7 +474,6 @@ h4.story-title {
 
 .index .taped,
 .archive .taped {
-    font-size: 18px;
     height: 56px;
     overflow: hidden;
 }
@@ -514,6 +513,11 @@ h4.story-title {
 .sign p {
     font-size: 0.8em;
     margin: 12px 0 0 0 !important;
+}
+
+.index .sign,
+.archive .sign {
+    font-size: 18px;
 }
 
 .left-border {
