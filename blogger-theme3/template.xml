@@ -55,11 +55,11 @@
         <b:if cond='data:blog.url == data:blog.homepageUrl'>
             Top | <data:blog.title/>
         <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
-            <data:blog.pageName/> | <data:blog.title/>
+            <data:blog.pageName/>
         <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
             Archive for <data:blog.pageName/> | <data:blog.title/>
         <b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
-            <data:blog.pageName/> | <data:blog.title/>
+            <data:blog.pageName/>
         <b:elseif cond='data:blog.pageType == &quot;index&quot;'/>
             <b:if cond='data:blog.searchLabel'>
                 <data:blog.title/> - <data:blog.pageName/> | <data:blog.title/>
@@ -350,17 +350,17 @@
                             <b:if cond='data:blog.searchLabel != &quot;&quot;'>
                                 <div class='row'>
                                     <div class='col-xs-12'>
-                                        <h3 class='sign no-border no-margin'>
+                                        <h2 class='sign no-border no-margin'>
                                             <data:blog.searchLabel/>の記事リスト
-                                        </h3>
+                                        </h2>
                                     </div>
                                 </div>
                             <b:elseif cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'/>
                                 <div class='row'>
                                     <div class='col-xs-12'>
-                                        <h3 id='archive-title' class='sign no-border no-margin'>
+                                        <h2 id='archive-title' class='sign no-border no-margin'>
                                             <span class='title'></span>の記事リスト
-                                        </h3>
+                                        </h2>
                                     </div>
                                 </div>
                             </b:if>
@@ -728,7 +728,7 @@
                                                 </b:if>
                                                 <b:if cond='data:post.labels'>
                                                     <nav>
-                                                        <h5>
+<!--                                                        <h5>-->
                                                             <ul class='pager'>
                                                             <b:loop index='i' values='data:post.labels' var='label'>
                                                                 <li>
@@ -738,16 +738,18 @@
                                                                 </li>
                                                             </b:loop>
                                                             </ul>
-                                                        </h5>
+<!--                                                        </h5>-->
                                                     </nav>
                                                 </b:if>
-                                                <div class='panel-title'>
-                                                    <h2 class='post-title taped'>
+                                                <h1 class='post-title- taped'>
+                                                    <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                        <data:post.title/>
+                                                    <b:else/>
                                                         <a expr:href='data:post.url' expr:title='data:post.title' id='post-title'>
                                                             <data:post.title/>
                                                         </a>
-                                                    </h2>
-                                                </div>
+                                                    </b:if>
+                                                </h1>
                                             </div>
                                             <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
 
