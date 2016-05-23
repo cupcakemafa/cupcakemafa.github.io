@@ -464,14 +464,14 @@ h4.story-title {
 .taped {
     margin:0;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
 .item .taped,
 .static_page .taped {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 /* 蛍光ペン風 */

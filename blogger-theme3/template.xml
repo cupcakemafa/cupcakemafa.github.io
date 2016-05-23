@@ -741,7 +741,7 @@
                                                         </nav>
                                                     </b:if>
                                                 </b:if>
-                                                <h1 class='post-title- taped'>
+                                                <h1 class='taped'>
                                                     <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                         <data:post.title/>
                                                     <b:else/>
@@ -885,14 +885,21 @@
                                             </div>
                                             <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
 
-                                                <div id='related-posts' class='hidden'>
-                                                    <h3 class='text-center'>
-                                                        <i class='fa fa-check-circle-o'/> Related Posts
-                                                    </h3>
-                                                    <div class='content text-left'></div>
-                                                </div>
+                                                <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+                                                    <a expr:href='data:post.url' expr:title='data:post.title' class='btn btn-default btn-block'>
+                                                        続きを読む <i class='fa fa-chevron-right'></i>
+                                                    </a>
+                                                <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
 
-                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                    <!-- Begin related posts -->
+                                                    <div id='related-posts' class='hidden'>
+                                                        <h3 class='text-center'>
+                                                            <i class='fa fa-check-circle-o'/> Related Posts
+                                                        </h3>
+                                                        <div class='content text-left'></div>
+                                                    </div>
+                                                    <!-- End related posts -->
+
                                                     <!-- Start of Next/Prev Navi -->
                                                     <b:if cond='data:olderPageUrl or data:newerPageUrl'>
                                                         <div class='page-navi single hidden row no-margin margin-top clearfix'>
@@ -933,13 +940,14 @@
                                                             </b:if>
                                                         </div>
                                                     </b:if>
+                                                    <!-- End of Next/Prev Navi -->
+
                                                     <p class="text-center">
                                                         <a href='/' title='Cupcakemafa Web Site'>
                                                             <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
                                                             TOP
                                                         </a>
                                                     </p>
-                                                    <!-- End of Next/Prev Navi -->
                                                 </b:if>
                                             </div>
                                             <span class='comment hidden'>End post data</span>
