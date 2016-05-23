@@ -1330,7 +1330,7 @@
                     });
                 });
             }
-
+console.info('pageType', pageType);
             if (pageType === 'index' || pageType === 'archive') {
                 //setPageListNavi();
                 setArchiveTitle();
