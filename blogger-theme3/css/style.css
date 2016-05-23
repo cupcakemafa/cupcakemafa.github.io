@@ -455,12 +455,6 @@ h4.story-title {
     font: bold 18px/1.8 Arial, Helvetica, sans-serif;
 }
 
-.index .taped,
-.archive .taped {
-    height: 56px;
-    overflow: hidden;
-}
-
 .taped {
     margin:0;
     font-weight: normal;
@@ -481,6 +475,8 @@ h4.story-title {
 .index .taped,
 .archive .taped {
     font-size: 18px;
+    height: 56px;
+    overflow: hidden;
 }
 
 /* 蛍光ペン風 */
