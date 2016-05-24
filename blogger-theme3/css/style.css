@@ -481,7 +481,7 @@ h4.story-title {
 
 .index .taped,
 .archive .taped {
-    height: 56px;
+/*    height: 56px;*/
     overflow: hidden;
 }
 
