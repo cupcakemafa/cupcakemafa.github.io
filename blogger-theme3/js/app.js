@@ -1302,11 +1302,14 @@
                 $elmTwo=$listItem.eq(i+1);
                 heightOne = parseInt($elmOne.height(), 10);
                 heightTwo = parseInt($elmTwo.height(), 10);
+                console.info(heightOne + ':' + heightTwo);
                 if(heightOne > heightTwo) {
-                    $elmTwo.height(heightOne+ADJUST_BOTTOM);
+                    heightOne+=ADJUST_BOTTOM;
+                    $elmTwo.height(heightOne);
                 }
                 else {
-                    $elmOne.height(heightTwo+ADJUST_BOTTOM);
+                    heightTwo+=ADJUST_BOTTOM;
+                    $elmOne.height(heightTwo);
                 }
             }
         },
