@@ -444,7 +444,7 @@ h4.story-title {
     text-align: center;
     color: #333;
     background: #F5F356;
-/*    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);*/
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 12px 0 0 0 #f0e800, -12px 0 0 0 #f0e800;
     letter-spacing: -1px;
     line-height: 1.4;
@@ -463,6 +463,7 @@ h4.story-title {
 
 .taped {
     margin:0;
+    margin-top: 14px;
     font-weight: normal;
     font-size: 16px;
     padding-top: 8px;
