@@ -1300,8 +1300,8 @@
             for(i=0;i<l;i+=2) {
                 $elmOne=$listItem.eq(i);
                 $elmTwo=$listItem.eq(i+1);
-                heightOne = $elmOne.height();
-                heightTwo = $elmTwo.height();
+                heightOne = parseInt($elmOne.height(), 10);
+                heightTwo = parseInt($elmTwo.height(), 10);
                 if(heightOne > heightTwo) {
                     $elmTwo.height(heightOne+ADJUST_BOTTOM);
                 }
