@@ -1298,8 +1298,8 @@
                 $listItem=$('.post-col.list-item'),
                 i=0, l=$listItem.length;
             for(i=0;i<l;i+=2) {
-                $elmOne=$listItem.eq(i);
-                $elmTwo=$listItem.eq(i+1);
+                $elmOne=$($listItem.eq(i));
+                $elmTwo=$($listItem.eq(i+1));
                 heightOne = parseInt($elmOne.height(), 10);
                 heightTwo = parseInt($elmTwo.height(), 10);
                 console.info('$elmOne', $elmOne);
