@@ -1351,11 +1351,13 @@
 
             if (pageType === 'index' || pageType === 'archive') {
                 //setPageListNavi();
+
+                // Equal height for each .post-col.list-item
+                setEqualHeight();
+                // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
                 checkLastPage();
-                // Equal height for each .post-col.list-item
-                setEqualHeight();
             } else if (pageType === 'item') {
                 setSinglePageNavi();
             }
