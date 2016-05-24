@@ -1293,6 +1293,7 @@
         },
         setEqualHeight = function() {
             var
+                ADJUST_BOTTOM=8,
                 heightOne, heightTwo, $elmOne, $elmTwo,
                 $listItem=$('.post-col.list-item'),
                 i=0, l=$listItem.length;
@@ -1302,10 +1303,10 @@
                 heightOne = $elmOne.height();
                 heightTwo = $elmTwo.height();
                 if(heightOne > heightTwo) {
-                    $elmTwo.height(heightOne);
+                    $elmTwo.height(heightOne+ADJUST_BOTTOM);
                 }
                 else {
-                    $elmOne.height(heightTwo);
+                    $elmOne.height(heightTwo+ADJUST_BOTTOM);
                 }
             }
         },
