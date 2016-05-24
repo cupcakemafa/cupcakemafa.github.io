@@ -1291,6 +1291,24 @@
                 $headRoom.headroom();
             }
         },
+        setEqualHeight = function() {
+            var
+                heightOne, heightTwo, $elmOne, $elmTwo,
+                $listItem=$('.post-col.list-item'),
+                i=0, l=$listItem.length;
+            for(i=0;i<l;i+=2) {
+                $elmOne=$listItem.eq(i);
+                $elmTwo=$listItem.eq(i+1);
+                heightOne = $elmOne.height();
+                heightTwo = $elmTwo.height();
+                if(heightOne > heightTwo) {
+                    $elmTwo.height(heightOne);
+                }
+                else {
+                    $elmOne.height(heightTwo);
+                }
+            }
+        },
         //
         // Main
         //
@@ -1335,6 +1353,8 @@
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
                 checkLastPage();
+                // Equal height for each .post-col.list-item
+                setEqualHeight();
             } else if (pageType === 'item') {
                 setSinglePageNavi();
             }
