@@ -1302,9 +1302,9 @@
                 $elmTwo=$($listItem.eq(i+1));
                 heightOne = parseInt($elmOne.height(), 10);
                 heightTwo = parseInt($elmTwo.height(), 10);
-                console.info('$elmOne', $elmOne);
-                console.info('$elmTwo', $elmTwo);
-                console.info(heightOne + ':' + heightTwo);
+//                console.info('$elmOne', $elmOne);
+//                console.info('$elmTwo', $elmTwo);
+//                console.info(heightOne + ':' + heightTwo);
                 if(heightOne > heightTwo) {
                     heightOne+=ADJUST_BOTTOM;
                     $elmTwo.height(heightOne);
@@ -1358,7 +1358,7 @@
                 //setPageListNavi();
 
                 // Equal height for each .post-col.list-item
-                //setEqualHeight();
+                setEqualHeight();
                 // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
