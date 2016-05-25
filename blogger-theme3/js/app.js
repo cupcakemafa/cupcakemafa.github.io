@@ -1245,6 +1245,9 @@
                 $headRoom.headroom();
             }
         },
+        /**
+         * Not work
+         */
         setEqualHeight = function() {
             var
                 ADJUST_BOTTOM=8,
@@ -1312,7 +1315,8 @@
                 //setPageListNavi();
 
                 // Equal height for each .post-col.list-item
-                setEqualHeight();
+                //setEqualHeight();
+
                 // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.

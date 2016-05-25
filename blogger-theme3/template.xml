@@ -53,7 +53,7 @@
     <meta name='twitter:card' content='summary_large_image'/>
     <title>
         <b:if cond='data:blog.url == data:blog.homepageUrl'>
-            Top | <data:blog.title/>
+            <data:blog.title/>
         <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
             <data:blog.pageName/>
         <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
@@ -1947,5 +1947,33 @@
     <!-- Begin Google Analytics -->
     <b:include data='blog' name='google-analytics'/>
     <!-- End Google Analytics -->
+    <script type='text/javascript'>
+        //<![CDATA[
+            var
+                ADJUST_BOTTOM=8,
+                heightOne, heightTwo, $elmOne, $elmTwo,
+                $listItem=$('.post-col.list-item'),
+                i=0, l=$listItem.length;
+            for(i=0;i<l;i+=2) {
+                $elmOne=$($listItem.eq(i));
+                $elmTwo=$($listItem.eq(i+1));
+                heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
+                heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
+                console.info(heightOne + ':' + heightTwo);
+                if(heightOne && heightTwo) {
+                    if(heightOne > heightTwo) {
+                        heightOne+=ADJUST_BOTTOM;
+                        heightTwo=0;
+                        $elmTwo.height(heightOne);
+                    }
+                    else if(heightTwo > heightOne) {
+                        heightTwo+=ADJUST_BOTTOM;
+                        heightOne=0;
+                        $elmOne.height(heightTwo);
+                    }
+                }
+            }
+        //]]>
+    </script>
     </body>
 </html>
