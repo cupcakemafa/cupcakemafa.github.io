@@ -832,7 +832,7 @@
                     tag = '', i, l;
 
                 if (postList.length > 0) {
-                    tag += '<ul class="related-post-list media-list">';
+                    tag += '<ul class="related-post-list media-list no-padding">';
                     for (i = 0, l = postList.length; i < l; i++) {
                         if(showResults > i) {
                             tag += '<li class="media">';
@@ -1358,7 +1358,7 @@
                 //setPageListNavi();
 
                 // Equal height for each .post-col.list-item
-                setEqualHeight();
+                //setEqualHeight();
                 // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
