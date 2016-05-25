@@ -1095,9 +1095,9 @@
                 $affiliateBox = $('#affiliate-box'),
                 source, template, values, html;
             if ($affiliateBoxTpl.length) {
-                source = $affiliateBoxTpl.html(),
-                    template = Handlebars.compile(source),
-                    html = template(itemData),
+                source = $affiliateBoxTpl.html();
+                template = Handlebars.compile(source);
+                html = template(itemData);
                 if ($affiliateBox.length) {
                     $affiliateBox.html(html);
                 }
