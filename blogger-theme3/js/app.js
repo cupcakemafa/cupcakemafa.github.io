@@ -1302,9 +1302,9 @@
                 $elmTwo=$($listItem.eq(i+1));
                 heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                 heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
-//                console.info('$elmOne', $elmOne);
-//                console.info('$elmTwo', $elmTwo);
-//                console.info(heightOne + ':' + heightTwo);
+                console.info('$elmOne', $elmOne);
+                console.info('$elmTwo', $elmTwo);
+                console.info(heightOne + ':' + heightTwo);
                 if(heightOne && heightTwo) {
                     if(heightOne > heightTwo) {
                         heightOne+=ADJUST_BOTTOM;
