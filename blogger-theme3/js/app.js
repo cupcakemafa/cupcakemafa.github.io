@@ -37,8 +37,6 @@
      * @returns {number} position.y
      */
     function Event_getPosition(event) {
-        //console.log('event', event);
-        //console.log('event.originalEvent', event.originalEvent);
         var position = false;
         if (window.hasOwnProperty('ontouchstart')) {
             position = {
@@ -132,7 +130,6 @@
     function Util_getPlatform() {
 
         var platform = this.getNavigatorPlatform().toLowerCase();
-        //console.log('platform', platform);
         if (platform) {
             if (platform.match(/ios/)) {
                 return 'ios';
@@ -151,9 +148,7 @@
      * @returns {Boolean|RegExp} ios|android|false
      */
     function Util_getNavigatorPlatform() {
-        console.log('getNavigatorPlatform()');
         //var deviceType = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
-        //console.log('deviceType', deviceType);
         // プラットフォーム判定
         if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
             return 'ios';
@@ -169,10 +164,8 @@
      * @returns {Array}
      */
     function Util_getNavigatorDeviceType() {
-        //        console.log( 'getDeviceType()' );
         // プラットフォーム判定
         var deviceType = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
-        //console.log( 'deviceType', deviceType );
         return deviceType;
     }
 
@@ -237,7 +230,6 @@
      * @returns {Number} height
      */
     function Util_getImageMetrics(url) {
-        //console.log('url', url);
         var
             img,
             width,
@@ -314,18 +306,14 @@
                 metaTag = '',
                 i, l,
                 metaAttr;
-            //console.log('$metaTag', $metaTag);
             $metaTag.each(function (index, elm) {
                 $elm = $(elm);
-                //console.log('$elm', $elm);
                 metaAttr = '';
                 $attrs = $elm.find('.attr');
                 for (i = 0, l = $attrs.length; i < l; i++) {
                     $attr = $attrs.eq(i);
                     key = $attr.data('key');
                     value = $attr.text();
-                    //console.log('key', key);
-                    //console.log('value', value);
                     if (key && value) {
                         if (i > 0) {
                             metaAttr += ' ';
@@ -338,7 +326,6 @@
                 }
 
                 if (metaTag && index === ($metaTag.length - 1)) {
-                    //console.log('metaTag', metaTag);
                     $('head').find('meta').last().after(metaTag);
                 }
             });
@@ -347,7 +334,6 @@
         trimThumb = function () {
             var $elm;
             $('img.thumb').each(function (idx, elm) {
-                //console.log('$elm', $elm);
                 $elm = $(elm);
                 $elm.height($elm.width());
             });
@@ -389,18 +375,11 @@
                 //summaryTag += '</div>';
                 $elm.html(summaryTag).removeClass('hidden');
 
-                //console.log('-------------------');
-                //console.log('id', id);
-                //console.log('$content', $content);
-                //console.log('$imgs', $imgs);
-                //console.log($('#footer-'+id));
                 //                $imgs.each(function (index, img, arr) {
                 //                    if (index > 0 && 5 > index) {
-                //                        //console.log('img', img);
                 //                        attr = $(img).attr('src');
                 //                        //clas='img-rounded';
                 //                        clas = 'img-circle';
-                //                        //console.log('attr', attr);
                 //                        imgTag += '<img src="' + attr + '" class="' + clas + '" />';
                 //                    }
                 //                });
@@ -432,7 +411,6 @@
         setAspect = function () {
             //$('.post iframe').each(function(index, elm) {
             $('div iframe').each(function (index, elm) {
-                //console.log('elm', elm);
                 var
                     $elm = $(elm),
                     tag = '';
@@ -444,7 +422,6 @@
                     tag += elm.outerHTML;
                     tag += '</div>';
                     tag += '</div>';
-                    //console.log('tag', tag);
                     $elm.replaceWith(tag);
                 }
             });
@@ -646,7 +623,6 @@
                         b += '<a class="btn btn-default" href="' + f[e - 1] + '">' + pageNaviConf.prevText + "</a>";
                     }
                     for (var i = c; i <= endPage; ++i) {
-                        console.log(i + '/' + e + '/' + a);
                         if (i == e) {
                             b += '<a class="btn btn-info current">' + i + "</a>";
                         } else {
@@ -675,7 +651,6 @@
                 g = l ? "/search/label/" + a + "?updated-max=" : "/search?updated-max=";
                 k = o.feed.entry.length;
                 e = Math.ceil(k / pageNaviConf.perPage);
-                console.log('e', e);
                 if (e <= 1) {
                     return;
                 }
@@ -689,9 +664,7 @@
                     //f = encodeURIComponent(f);
                     //f = encodeURI(f);
                     m = decodeURIComponent(m);
-                    console.log(m + '/' + f);
                     if (m.indexOf(f) !== -1) {
-                        console.log('d', d);
                         n = d;
                     }
                     f = encodeURIComponent(f);
@@ -711,7 +684,6 @@
                         $title, $imgs, $date, $linkElm, $linkTitle, $linkThumb,
                         linkContent = '',
                         postTitle, postThumb, postDate;
-                    //console.log('pageContentTag', pageContentTag);
                     if (pageContentTag && $data.length && $link.length) {
                         $title = $data.find('.post #post-title');
                         if ($title.length) {
@@ -782,12 +754,9 @@
                 a, b, c, d,
                 //url = location.protocol + '//' + parser.hostname; //// @todo
                 url = SITE_URL; //// @debug
-            //console.log('$pageNavi', $pageNavi);
             if ($pageNavi.length) {
                 b = location.href;
-                //console.log('b', b);
                 if (b.indexOf('?q=') !== -1 || b.indexOf('.html') !== -1) {
-                    //console.log('return');
                     return;
                 }
                 d = b.indexOf('/search/label/') + 14;
@@ -798,7 +767,6 @@
                 } else {
                     url += '/feeds/posts/summary?alt=json-in-script&max-results=99999';
                 }
-                //console.log('url', url);
                 //blogger API を実行する
                 $.ajax({
                     type: 'GET',
@@ -807,7 +775,6 @@
                     data: {},
                     dataType: 'jsonp'
                 }).done(function (json) {
-                    //console.log('json', json);
                     pageListNavi(json);
                 }).fail(function (error) {
                     console.error('error', error);
@@ -815,7 +782,6 @@
             }
         },
         setRelatedPostNavi = function (labels) {
-            //console.log('labels', labels);
             var
             //url = location.protocol + '//' + parser.hostname, //// @todo
                 url = SITE_URL,
@@ -1004,12 +970,9 @@
                 caption;
             if ($storyBox.length) {
                 season = $storyBox.data('season');
-                console.log('season', season);
-                console.log('backUrl', backUrl);
                 $frame = $storyBox.find('.frame');
                 if ($frame.length) {
                     tag += '<div class="text-center row" style="margin-top:-15px;">';
-                    console.log($frame);
                     $frame.each(function (idx, elm) {
                         if (idx === 0) {
                             tag += '<p>';
@@ -1020,9 +983,6 @@
                         more = $elm.data('more');
                         imgMain = $elm.find('img.main').eq(0).attr('src');
                         caption = $elm.find('.caption').eq(0).html();
-                        console.log('more', more);
-                        console.log('imgMain', imgMain);
-                        console.log('caption', caption);
                         tag += '<div class="col col-md-6 col-md-offset-3 col-xs-12">';
                         if (imgMain) {
                             if (season) {
@@ -1122,17 +1082,14 @@
             if ($scrollTop.length) {
                 $(window).scroll(function () {
                     if (s > m) {
-                        //console.log('scroll in');
                         $scrollTop.fadeIn('slow');
                     } else if (s < m) {
-                        //console.log('scroll out');
                         $scrollTop.fadeOut('slow');
                     }
                 });
             }
         },
         setAffiliateItemTag = function (itemData) {
-            console.log('itemData', itemData);
             var
                 $affiliateBoxTpl = $('#affiliate-box-tpl'),
                 $affiliateBox = $('#affiliate-box'),
@@ -1141,7 +1098,6 @@
                 source = $affiliateBoxTpl.html(),
                     template = Handlebars.compile(source),
                     html = template(itemData),
-                    console.log('html', html);
                 if ($affiliateBox.length) {
                     $affiliateBox.html(html);
                 }
@@ -1165,7 +1121,6 @@
                 if (items.length) {
                     try {
                         data = JSON.parse(items);
-                        console.log('data', data);
                         param.title = data.title;
                         for (i = 0, l = data.items.length; i < l; i++) {
                             param.items.push({
@@ -1177,7 +1132,6 @@
                                 }
                             });
                         }
-                        console.log('param', param);
                         setAffiliateItemTag(param);
                     } catch (err) {
                         console.warn(err);
@@ -1302,9 +1256,6 @@
                 $elmTwo=$($listItem.eq(i+1));
                 heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                 heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
-                console.info('$elmOne', $elmOne);
-                console.info('$elmTwo', $elmTwo);
-                console.info(heightOne + ':' + heightTwo);
                 if(heightOne && heightTwo) {
                     if(heightOne > heightTwo) {
                         heightOne+=ADJUST_BOTTOM;
@@ -1327,8 +1278,6 @@
 
             var
                 $labels, $attrs, labels = [];
-            //console.log('pageType', pageType);
-            //console.log('pageUrl', pageUrl);
 
             setMetaTag();
             setAspect();
