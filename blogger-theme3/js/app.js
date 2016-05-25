@@ -1256,6 +1256,7 @@
                 $elmTwo=$($listItem.eq(i+1));
                 heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                 heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
+                console.info(heightOne + ':' + heightTwo);
                 if(heightOne && heightTwo) {
                     if(heightOne > heightTwo) {
                         heightOne+=ADJUST_BOTTOM;
