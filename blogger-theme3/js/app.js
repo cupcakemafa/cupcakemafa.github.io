@@ -1358,7 +1358,7 @@
                 //setPageListNavi();
 
                 // Equal height for each .post-col.list-item
-                setEqualHeight();
+                //setEqualHeight();
                 // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
