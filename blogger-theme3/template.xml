@@ -1964,12 +1964,20 @@
                     if(heightOne > heightTwo) {
                         heightOne+=ADJUST_BOTTOM;
                         heightTwo=0;
+                        $elmOne.height(heightOne);
                         $elmTwo.height(heightOne);
                     }
                     else if(heightTwo > heightOne) {
                         heightTwo+=ADJUST_BOTTOM;
                         heightOne=0;
                         $elmOne.height(heightTwo);
+                        $elmTwo.height(heightTwo);
+                    }
+                    else {
+                        heightOne+=ADJUST_BOTTOM;
+                        heightTwo+=ADJUST_BOTTOM;
+                        $elmOne.height(heightOne);
+                        $elmTwo.height(heightTwo);
                     }
                 }
             }
