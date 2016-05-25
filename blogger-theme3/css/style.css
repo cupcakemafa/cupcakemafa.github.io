@@ -815,6 +815,11 @@ a.block,
     margin: 0px 4px;
 }
 
+.post .panel-footer .related-post-list .img-rounded {
+    width: 80px;
+    height: 80px;
+}
+
 .page-navi {
     width: 100%;
 }
