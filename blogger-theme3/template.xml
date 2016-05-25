@@ -105,7 +105,7 @@
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     <![endif]-->
 </head>
-<body expr:class='&quot;loading&quot; + data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
+<body expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
     <div id="fb-root"></div>
     <script>//<![CDATA[
     (function(d, s, id) {
@@ -555,9 +555,9 @@
                                 </article>
                             </b:if>
 
-                            <div class='row'>
+                            <div class='row clearfix'>
                                 <b:loop values='data:posts' var='post'>
-                                    <div expr:class='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;} ? &quot;margin-left margin-right&quot; : &quot;post-col&quot;'>
+                                    <div expr:class='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;} ? &quot;margin-left margin-right&quot; : &quot;post-col list-item&quot;'>
                                         <article class='post panel panel-default'>
                                             <div class='param' id='post-url'><data:post.url/></div>
 
@@ -710,6 +710,43 @@
                                             <span class='comment hidden'>End meta data</span>
 
                                             <span class='comment hidden'>Start post data</span>
+
+                                            <!-- Start of Next/Prev Navi -->
+                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <div class='panel-heading padding text-center'>
+                                                    <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                                        <div class='page-navi single hidden row no-margin'>
+                                                            <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
+                                                                <b:if cond='data:olderPageUrl'>
+                                                                    <div class='media-body text-left'>
+                                                                        <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
+                                                                            <i class='fa fa-chevron-left'/>
+                                                                            <strong>Prev</strong>
+                                                                        </a>
+                                                                    </div>
+                                                                </b:if>
+                                                            </div>
+                                                            <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
+                                                                <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
+                                                                    TOP
+                                                                </a>
+                                                            </div>
+                                                            <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
+                                                                <b:if cond='data:newerPageUrl'>
+                                                                    <div class='media-body text-right'>
+                                                                        <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
+                                                                            <strong>Next</strong>
+                                                                            <i class='fa fa-chevron-right'/>
+                                                                        </a>
+                                                                    </div>
+                                                                </b:if>
+                                                            </div>
+                                                        </div>
+                                                    </b:if>
+                                                </div>
+                                            </b:if>
+                                            <!-- End of Next/Prev Navi -->
+
                                             <div class='panel-heading text-center'>
                                                 <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
                                                     <b:if cond='data:post.firstImageUrl'>

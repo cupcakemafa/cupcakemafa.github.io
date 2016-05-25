@@ -1300,18 +1300,22 @@
             for(i=0;i<l;i+=2) {
                 $elmOne=$($listItem.eq(i));
                 $elmTwo=$($listItem.eq(i+1));
-                heightOne = parseInt($elmOne.height(), 10);
-                heightTwo = parseInt($elmTwo.height(), 10);
+                heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
+                heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
 //                console.info('$elmOne', $elmOne);
 //                console.info('$elmTwo', $elmTwo);
 //                console.info(heightOne + ':' + heightTwo);
-                if(heightOne > heightTwo) {
-                    heightOne+=ADJUST_BOTTOM;
-                    $elmTwo.height(heightOne);
-                }
-                else {
-                    heightTwo+=ADJUST_BOTTOM;
-                    $elmOne.height(heightTwo);
+                if(heightOne && heightTwo) {
+                    if(heightOne > heightTwo) {
+                        heightOne+=ADJUST_BOTTOM;
+                        heightTwo=0;
+                        $elmTwo.height(heightOne);
+                    }
+                    else if(heightTwo > heightOne) {
+                        heightTwo+=ADJUST_BOTTOM;
+                        heightOne=0;
+                        $elmOne.height(heightTwo);
+                    }
                 }
             }
         },
@@ -1358,7 +1362,7 @@
                 //setPageListNavi();
 
                 // Equal height for each .post-col.list-item
-                //setEqualHeight();
+                setEqualHeight();
                 // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
