@@ -104,6 +104,13 @@
     <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     <![endif]-->
+    <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3036276233777511",
+        enable_page_level_ads: true
+      });
+    </script>
 </head>
 <body expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
     <div id="fb-root"></div>
@@ -197,7 +204,7 @@
     <!-- End SEO Meta Tag -->
 
     <!-- Begin #outer-page -->
-    <div id='outer-page' class='container'>
+    <div id='outer-page' class='container no-padding'>
 
         <!-- Begin #header -->
         <b:section class='row' id='header' showaddelement='no'>
@@ -343,540 +350,553 @@
         <!-- Begin #body .row  -->
         <div class='row hidden' id='body'>
 
-            <b:section class='col col-xs-12 col-sm-6 col-md-8 no-padding no-margin' id='bodyContent' showaddelement='no'>
+            <b:section class='col col-xs-12 col-sm-6 col-md-8 no-padding padding-right- no-margin' id='bodyContent' showaddelement='no'>
                 <b:widget id='Blog1' class='no-padding no-margin' locked='true' title='ブログの投稿' type='Blog' visible='true'>
                     <b:includable id='main'>
-                            <span class='comment hidden'>Title for a Tag List page</span>
-                            <b:if cond='data:blog.searchLabel != &quot;&quot;'>
-                                <div class='row'>
-                                    <div class='col-xs-12'>
-                                        <h2 class='sign no-border no-margin'>
-                                            <data:blog.searchLabel/>の記事リスト
-                                        </h2>
-                                    </div>
+                        <span class='comment hidden'>Title for a Tag List page</span>
+                        <b:if cond='data:blog.searchLabel != &quot;&quot;'>
+                            <div class='row'>
+                                <div class='col-xs-12'>
+                                    <h2 class='sign no-border no-margin'>
+                                        <data:blog.searchLabel/>の記事リスト
+                                    </h2>
                                 </div>
-                            <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
-                                <div class='row'>
-                                    <div class='col-xs-12'>
-                                        <h2 id='archive-title' class='sign no-border no-margin'>
-                                            <span class='title'></span>の記事リスト
-                                        </h2>
-                                    </div>
+                            </div>
+                        <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
+                            <div class='row'>
+                                <div class='col-xs-12'>
+                                    <h2 id='archive-title' class='sign no-border no-margin'>
+                                        <span class='title'></span>の記事リスト
+                                    </h2>
                                 </div>
-                            </b:if>
+                            </div>
+                        </b:if>
 
-                            <b:if cond='data:blog.homepageUrl == data:blog.url'>
-                                <div class='row'>
-                                    <div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
-                                        <div class='panel panel-default'>
-                                            <div class='panel-body'>
-                                                <div class='text-center' id='header-box'>
-                                                    <img alt='Cupcakemafa' class='full-width' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png'/>
-                                                    <p class='description no-margin'>
-                                                        <small>
-                                                        ちょっとしたことで日常に笑いを&#12290;<br />そんな思いを持ちながらゆるーく活動しています&#12290;
-                                                        </small>
-                                                    </p>
-                                                </div>
+                        <b:if cond='data:blog.homepageUrl == data:blog.url'>
+                            <div class='row clearfix no-margin'>
+                                <div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
+                                    <div class='panel panel-default'>
+                                        <div class='panel-body'>
+                                            <div class='text-center' id='header-box'>
+                                                <img alt='Cupcakemafa' class='full-width' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png'/>
+                                                <p class='description no-margin'>
+                                                    <small>
+                                                    ちょっとしたことで日常に笑いを&#12290;<br />そんな思いを持ちながらゆるーく活動しています&#12290;
+                                                    </small>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class='post-col col col-md-6 col-sm-12 col-xs-12'>
-                                        <div class='panel panel-default lucky-word-box'>
-                                            <div class='panel-heading stripe yellow-light text-center clearfix'>
-                                                <h3 class='content-title no-margin'>
-                                                    Lucky
-                                                    <img class='lucky-icon small img-rounded' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s1600/10.png' />
-                                                    Word
+                                </div>
+                                <div class='post-col col col-md-6 col-sm-12 col-xs-12'>
+                                    <div class='panel panel-default lucky-word-box'>
+                                        <div class='panel-heading stripe yellow-light text-center clearfix'>
+                                            <h3 class='content-title no-margin'>
+                                                Lucky
+                                                <img class='lucky-icon small img-rounded' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s1600/10.png' />
+                                                Word
+                                            </h3>
+                                            <p class='padding-top'>
+                                                今日はどんなフィールライク？
+                                            </p>
+                                        </div>
+                                        <div class='panel-body text-center'>
+                                            <button type="button" id="open-lucky" class="btn btn-success btn-block" disabled="disabled" data-toggle="modal" data-target="#lucky-icons">
+                                                ラッキーワードをみてみる!!
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
+                                <div class='modal-dialog margin-top' role='document'>
+                                    <div class='modal-content'>
+                                        <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                                            <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                                                <img class='lucky-icon large img-rounded' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s1600/10.png' />
+                                                <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
+                                                    Good Choice
                                                 </h3>
                                                 <p class='padding-top'>
-                                                    今日はどんなフィールライク？
+                                                    どちらか直感で選んでねっ!!
                                                 </p>
                                             </div>
-                                            <div class='panel-body text-center'>
-                                                <button type="button" id="open-lucky" class="btn btn-success disabled-" disabled="disabled" data-toggle="modal" data-target="#lucky-icons">
-                                                    ラッキーワードを CHECK!!
-                                                </button>
-                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <!-- Modal -->
-                                <div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
-                                    <div class='modal-dialog margin-top' role='document'>
-                                        <div class='modal-content'>
-                                            <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                                                <div class='col-xs-12 col-md-8 col-md-offset-2'>
-                                                    <img class='lucky-icon large img-rounded' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s1600/10.png' />
-                                                    <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
-                                                        Good Choice
-                                                    </h3>
-                                                    <p class='padding-top'>
-                                                        どちらか直感で選んでねっ!!
+                                        <div class='modal-body'>
+                                            <div class='row'>
+                                                <div class='col-xs-6 text-center'>
+                                                    <p>
+                                                        <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a' /><br />
                                                     </p>
+                                                    <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
+                                                        セレクト
+                                                    </button>
                                                 </div>
-                                            </div>
-                                            <div class='modal-body'>
-                                                <div class='row'>
-                                                    <div class='col-xs-6 text-center'>
-                                                        <p>
-                                                            <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a' /><br />
-                                                        </p>
-                                                        <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
-                                                            セレクト
-                                                        </button>
-                                                    </div>
-                                                    <div class='col-xs-6 text-center'>
-                                                        <p>
-                                                            <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b' /><br />
-                                                        </p>
-                                                        <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
-                                                            セレクト
-                                                        </button>
-                                                    </div>
+                                                <div class='col-xs-6 text-center'>
+                                                    <p>
+                                                        <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b' /><br />
+                                                    </p>
+                                                    <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
+                                                        セレクト
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!-- Modal -->
-                                <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
-                                    <div class='modal-dialog lucky-word-modal' role='document'>
-                                        <div class='modal-content'>
+                            <!-- Modal -->
+                            <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
+                                <div class='modal-dialog lucky-word-modal' role='document'>
+                                    <div class='modal-content'>
 
-                                            <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                                                <div class='col-xs-12 col-md-8 col-md-offset-2'>
-                                                    <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
-                                                        Lucky Word
-                                                    </h3>
-                                                    <p class='no-padding padding-top'>
-                                                        あなたのラッキーワードは…
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class='modal-body'>
-                                                <p class='text-center'>
-                                                    <img id='lucky-word-a' class='img-rounded full-width lucky-word padding margin-bottom' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' /><br />
-                                                    どこかのタイミングで<br />
-                                                    この言葉をブチ込んでみて!!<br />
-                                                    きっといい日になるはず!!
+                                        <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                                            <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                                                <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
+                                                    Lucky Word
+                                                </h3>
+                                                <p class='no-padding padding-top'>
+                                                    あなたのラッキーワードは…
                                                 </p>
-                                                <div class='text-center row'>
-                                                    <div class="col-xs-6 text-right">
-                                                        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
-                                                        チャオ!!
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-xs-6 text-left">
-                                                        <div class='share-this-content'>
-                                                            <span><a id='lucky-word-share-a' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class='modal-footer stripe yellow-light'>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
-                                    <div class='modal-dialog lucky-word-modal' role='document'>
-                                        <div class='modal-content'>
-
-                                            <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                                                <div class='col-xs-12 col-md-8 col-md-offset-2'>
-                                                    <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
-                                                        Lucky Word
-                                                    </h3>
-                                                    <p class='no-padding padding-top'>
-                                                        あなたのラッキーワードは…
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class='modal-body'>
-                                                <p class='text-center'>
-                                                    <img id='lucky-word-b' class='img-rounded full-width lucky-word padding margin-bottom' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' /><br />
-                                                    どこかのタイミングで<br />
-                                                    この言葉をブチ込んでみて!!<br />
-                                                    きっといい日になるはず!!
-                                                </p>
-                                                <div class='text-center row'>
-                                                    <div class="col-xs-6 text-right">
-                                                        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
-                                                        チャオ!!
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-xs-6 text-left">
-                                                        <div class='share-this-content'>
-                                                            <span><a id='lucky-word-share-b' class='twitter-share-button-' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class='modal-footer stripe yellow-light'></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </b:if>
-
-                            <!-- 404 Not Found Page -->
-                            <b:if cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'>
-                                <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-                                    <div class='panel-heading text-center'>
-                                        <div class='text-center'>
-                                            <a href='/' title='Cupcakemafaのトップページへ'>
-                                                <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png'/>
-                                            </a>
-                                            <h3>Sorry...</h3>
-                                            <p>おさがしのページが見つかりませんでした&#12290;</p>
-                                            <p>
-                                                <a href='/' title='Cupcakemafaのトップページへ'>
-                                                    Cupcakemafaのトップページへ
-                                                </a>
+                                        <div class='modal-body'>
+                                            <p class='text-center'>
+                                                <img id='lucky-word-a' class='img-rounded full-width lucky-word padding margin-bottom' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' /><br />
+                                                どこかのタイミングで<br />
+                                                この言葉をブチ込んでみて!!<br />
+                                                きっといい日になるはず!!
                                             </p>
-                                            もしくは
-                                            <div class='padding text-center'>
-                                                <form action='/search' method='get' role='search'>
-                                                    <div class='input-group input-group-lg margin padding'>
-                                                        <input class='form-control' name='q' placeholder='サイト検索' type='search'/>
-                                                        <span class='input-group-btn'>
-                                                            <button class='btn btn-default' type='button'>
-                                                                <i class='fa fa-search'/>
-                                                            </button>
-                                                        </span>
+                                            <div class='text-center row'>
+                                                <div class="col-xs-6 text-right">
+                                                    <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                                                    チャオ!!
+                                                    </button>
+                                                </div>
+                                                <div class="col-xs-6 text-left">
+                                                    <div class='share-this-content'>
+                                                        <span><a id='lucky-word-share-a' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
                                                     </div>
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class='modal-footer stripe yellow-light'>
+                                        </div>
                                     </div>
-                                </article>
-                            </b:if>
+                                </div>
+                            </div>
 
-                            <div class='row clearfix'>
-                                <b:loop values='data:posts' var='post'>
-                                    <div expr:class='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;} ? &quot;margin-left margin-right&quot; : &quot;post-col list-item&quot;'>
-                                        <article class='post panel panel-default'>
-                                            <div class='param' id='post-url'><data:post.url/></div>
+                            <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
+                                <div class='modal-dialog lucky-word-modal' role='document'>
+                                    <div class='modal-content'>
 
-                                            <span class='comment hidden'>Start meta data</span>
-                                            <!-- for single post/page -->
-                                            <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
-
-                                                <script type="application/ld+json">
-                                                    {
-                                                        "@context": "http://schema.org",
-                                                        "@type": "BlogPosting",
-                                                        "headline": "<data:post.title/>",
-                                                        <b:if cond='data:blog.metaDescription'>
-                                                        "alternativeHeadline": "<data:post.metaDescription/>",
-                                                        <b:else/>
-                                                        "alternativeHeadline": "<data:post.snippet/>",
-                                                        </b:if>
-                                                        "image": {
-                                                            "@type": "ImageObject",
-                                                            "url": "<data:post.firstImageUrl/>",
-                                                            "width": "300",
-                                                            "height": "255"
-                                                        },
-                                                        "genre": "",
-                                                        "keywords": "Art Lifestyle Travel",
-                                                        "wordcount": "",
-                                                        "publisher": {
-                                                            "@type": "Organization",
-                                                            "name": "Cupcakemafa",
-                                                            "logo": {
-                                                                "@type": "ImageObject",
-                                                                "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
-                                                                "width": "1024",
-                                                                "height": "1024"
-                                                            }
-                                                        },
-                                                        "mainEntityOfPage":{
-                                                            "@type":"WebPage",
-                                                            "@id":"<data:post.canonicalUrl/>"
-                                                        },
-                                                        "url": "<data:post.canonicalUrl/>",
-                                                        "datePublished": "<data:post.timestampISO8601/>",
-                                                        "dateCreated": "<data:post.timestampISO8601/>",
-                                                        "dateModified": "<data:post.timestampISO8601/>",
-                                                        <b:if cond='data:blog.metaDescription'>
-                                                        "description": "<data:post.metaDescription/>",
-                                                        "articleBody": "<data:post.metaDescription/>",
-                                                        <b:else/>
-                                                        "description": "<data:post.snippet/>",
-                                                        "articleBody": "<data:post.snippet/>",
-                                                        </b:if>
-                                                        "author": {
-                                                            "@type": "Person",
-                                                            "name": "Cupcakemafa"
-                                                        }
-                                                    }
-                                                </script>
-
-                                                <b:if cond='data:post.canonicalUrl'>
-                                                    <div class='meta-tag param'>
-                                                        <div class='attr' data-key='itemprop'>url</div>
-                                                        <div class='attr' data-key='content'><data:post.canonicalUrl/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:url</div>
-                                                        <div class='attr' data-key='content'><data:blog.canonicalUrl/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.firstImageUrl'>
-                                                    <div class='meta-tag param'>
-                                                        <div class='attr' data-key='itemprop'>image</div>
-                                                        <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:card</div>
-                                                        <div class='attr' data-key='content'>summary_large_image</div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:image:src</div>
-                                                        <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:image</div>
-                                                        <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.title'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:title</div>
-                                                        <div class='attr' data-key='content'><data:post.title/></div>
-                                                    </div>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:title</div>
-                                                        <div class='attr' data-key='content'><data:post.title/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.metaDescription'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:description</div>
-                                                        <div class='attr' data-key='content'><data:blog.metaDescription/></div>
-                                                    </div>
-                                                <b:else/>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:description</div>
-                                                        <div class='attr' data-key='content'><data:post.snippet/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.sharePostUrl'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>twitter:url</div>
-                                                        <div class='attr' data-key='content'><data:post.sharePostUrl/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.pageName'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:title</div>
-                                                        <div class='attr' data-key='content'><data:blog.pageName/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.metaDescription'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:description</div>
-                                                        <div class='attr' data-key='content'><data:blog.metaDescription/></div>
-                                                    </div>
-                                                <b:elseif cond='data:blog.snippet'/>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>og:description</div>
-                                                        <div class='attr' data-key='content'><data:post.snippet/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:blog.timestampISO8601'>
-                                                    <div class='param meta-tag'>
-                                                        <div class='attr' data-key='name'>article:published_time</div>
-                                                        <div class='attr' data-key='content'><data:post.timestampISO8601/></div>
-                                                    </div>
-                                                </b:if>
-                                                <b:if cond='data:post.labels'>
-                                                    <b:loop values='data:post.labels' var='label'>
-                                                        <div class='param meta-tag label'>
-                                                            <div class='attr' data-key='name'>article:tag</div>
-                                                            <div class='attr' data-key='content'><data:label.name/></div>
-                                                        </div>
-                                                    </b:loop>
-                                                </b:if>
-                                                <div class='param meta-tag'>
-                                                    <div class='attr' data-key='name'>article:section</div>
-                                                    <div class='attr' data-key='content'>Art, Culture, Lifestyle</div>
+                                        <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                                            <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                                                <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
+                                                    Lucky Word
+                                                </h3>
+                                                <p class='no-padding padding-top'>
+                                                    あなたのラッキーワードは…
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class='modal-body'>
+                                            <p class='text-center'>
+                                                <img id='lucky-word-b' class='img-rounded full-width lucky-word padding margin-bottom' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' /><br />
+                                                どこかのタイミングで<br />
+                                                この言葉をブチ込んでみて!!<br />
+                                                きっといい日になるはず!!
+                                            </p>
+                                            <div class='text-center row'>
+                                                <div class="col-xs-6 text-right">
+                                                    <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                                                    チャオ!!
+                                                    </button>
                                                 </div>
-                                            </b:if>
-                                            <span class='comment hidden'>End meta data</span>
+                                                <div class="col-xs-6 text-left">
+                                                    <div class='share-this-content'>
+                                                        <span><a id='lucky-word-share-b' class='twitter-share-button-' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='modal-footer stripe yellow-light'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </b:if>
 
-                                            <span class='comment hidden'>Start post data</span>
+                        <!-- 404 Not Found Page -->
+                        <b:if cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'>
+                            <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+                                <div class='panel-heading text-center'>
+                                    <div class='text-center'>
+                                        <a href='/' title='Cupcakemafaのトップページへ'>
+                                            <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png'/>
+                                        </a>
+                                        <h3>Sorry...</h3>
+                                        <p>おさがしのページが見つかりませんでした&#12290;</p>
+                                        <p>
+                                            <a href='/' title='Cupcakemafaのトップページへ'>
+                                                Cupcakemafaのトップページへ
+                                            </a>
+                                        </p>
+                                        もしくは
+                                        <div class='padding text-center'>
+                                            <form action='/search' method='get' role='search'>
+                                                <div class='input-group input-group-lg margin padding'>
+                                                    <input class='form-control' name='q' placeholder='サイト検索' type='search'/>
+                                                    <span class='input-group-btn'>
+                                                        <button class='btn btn-default' type='button'>
+                                                            <i class='fa fa-search'/>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </b:if>
 
-                                            <!-- Start of Next/Prev Navi -->
-                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                <div class='panel-heading padding text-center'>
-                                                    <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                                                        <div class='page-navi single hidden row no-margin'>
-                                                            <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
-                                                                <b:if cond='data:olderPageUrl'>
-                                                                    <div class='media-body text-left'>
-                                                                        <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
-                                                                            <i class='fa fa-chevron-left'/>
-                                                                            <strong>Prev</strong>
-                                                                        </a>
-                                                                    </div>
-                                                                </b:if>
-                                                            </div>
-                                                            <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
-                                                                <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
-                                                                    TOP
-                                                                </a>
-                                                            </div>
-                                                            <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
-                                                                <b:if cond='data:newerPageUrl'>
-                                                                    <div class='media-body text-right'>
-                                                                        <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
-                                                                            <strong>Next</strong>
-                                                                            <i class='fa fa-chevron-right'/>
-                                                                        </a>
-                                                                    </div>
-                                                                </b:if>
-                                                            </div>
-                                                        </div>
+                        <div class='row clearfix no-margin'>
+                            <b:loop values='data:posts' var='post'>
+                                <div expr:class='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;} ? &quot;margin-left margin-right&quot; : &quot;post-col list-item&quot;'>
+                                    <article class='post panel panel-default'>
+                                        <div class='param' id='post-url'><data:post.url/></div>
+
+                                        <span class='comment hidden'>Start meta data</span>
+                                        <!-- for single post/page -->
+                                        <b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
+
+                                            <script type="application/ld+json">
+                                                {
+                                                    "@context": "http://schema.org",
+                                                    "@type": "BlogPosting",
+                                                    "headline": "<data:post.title/>",
+                                                    <b:if cond='data:blog.metaDescription'>
+                                                    "alternativeHeadline": "<data:post.metaDescription/>",
+                                                    <b:else/>
+                                                    "alternativeHeadline": "<data:post.snippet/>",
                                                     </b:if>
+                                                    "image": {
+                                                        "@type": "ImageObject",
+                                                        "url": "<data:post.firstImageUrl/>",
+                                                        "width": "300",
+                                                        "height": "255"
+                                                    },
+                                                    "genre": "",
+                                                    "keywords": "Art Lifestyle Travel",
+                                                    "wordcount": "",
+                                                    "publisher": {
+                                                        "@type": "Organization",
+                                                        "name": "Cupcakemafa",
+                                                        "logo": {
+                                                            "@type": "ImageObject",
+                                                            "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
+                                                            "width": "1024",
+                                                            "height": "1024"
+                                                        }
+                                                    },
+                                                    "mainEntityOfPage":{
+                                                        "@type":"WebPage",
+                                                        "@id":"<data:post.canonicalUrl/>"
+                                                    },
+                                                    "url": "<data:post.canonicalUrl/>",
+                                                    "datePublished": "<data:post.timestampISO8601/>",
+                                                    "dateCreated": "<data:post.timestampISO8601/>",
+                                                    "dateModified": "<data:post.timestampISO8601/>",
+                                                    <b:if cond='data:blog.metaDescription'>
+                                                    "description": "<data:post.metaDescription/>",
+                                                    "articleBody": "<data:post.metaDescription/>",
+                                                    <b:else/>
+                                                    "description": "<data:post.snippet/>",
+                                                    "articleBody": "<data:post.snippet/>",
+                                                    </b:if>
+                                                    "author": {
+                                                        "@type": "Person",
+                                                        "name": "Cupcakemafa"
+                                                    }
+                                                }
+                                            </script>
+
+                                            <b:if cond='data:post.canonicalUrl'>
+                                                <div class='meta-tag param'>
+                                                    <div class='attr' data-key='itemprop'>url</div>
+                                                    <div class='attr' data-key='content'><data:post.canonicalUrl/></div>
+                                                </div>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>og:url</div>
+                                                    <div class='attr' data-key='content'><data:blog.canonicalUrl/></div>
                                                 </div>
                                             </b:if>
-                                            <!-- End of Next/Prev Navi -->
+                                            <b:if cond='data:post.firstImageUrl'>
+                                                <div class='meta-tag param'>
+                                                    <div class='attr' data-key='itemprop'>image</div>
+                                                    <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                                </div>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:card</div>
+                                                    <div class='attr' data-key='content'>summary_large_image</div>
+                                                </div>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:image:src</div>
+                                                    <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                                </div>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>og:image</div>
+                                                    <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:post.title'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:title</div>
+                                                    <div class='attr' data-key='content'><data:post.title/></div>
+                                                </div>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>og:title</div>
+                                                    <div class='attr' data-key='content'><data:post.title/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:blog.metaDescription'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:description</div>
+                                                    <div class='attr' data-key='content'><data:blog.metaDescription/></div>
+                                                </div>
+                                            <b:else/>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:description</div>
+                                                    <div class='attr' data-key='content'><data:post.snippet/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:post.sharePostUrl'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:url</div>
+                                                    <div class='attr' data-key='content'><data:post.sharePostUrl/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:post.pageName'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>og:title</div>
+                                                    <div class='attr' data-key='content'><data:blog.pageName/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:blog.metaDescription'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>og:description</div>
+                                                    <div class='attr' data-key='content'><data:blog.metaDescription/></div>
+                                                </div>
+                                            <b:elseif cond='data:blog.snippet'/>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>og:description</div>
+                                                    <div class='attr' data-key='content'><data:post.snippet/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:blog.timestampISO8601'>
+                                                <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>article:published_time</div>
+                                                    <div class='attr' data-key='content'><data:post.timestampISO8601/></div>
+                                                </div>
+                                            </b:if>
+                                            <b:if cond='data:post.labels'>
+                                                <b:loop values='data:post.labels' var='label'>
+                                                    <div class='param meta-tag label'>
+                                                        <div class='attr' data-key='name'>article:tag</div>
+                                                        <div class='attr' data-key='content'><data:label.name/></div>
+                                                    </div>
+                                                </b:loop>
+                                            </b:if>
+                                            <div class='param meta-tag'>
+                                                <div class='attr' data-key='name'>article:section</div>
+                                                <div class='attr' data-key='content'>Art, Culture, Lifestyle</div>
+                                            </div>
+                                        </b:if>
+                                        <span class='comment hidden'>End meta data</span>
 
-                                            <div class='panel-heading text-center'>
-                                                <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-                                                    <b:if cond='data:post.firstImageUrl'>
-                                                        <div class='text-center'>
-                                                            <a expr:href='data:post.url' expr:title='data:post.title'>
-                                                                <img class='thumb img-rounded' expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
+                                        <span class='comment hidden'>Start post data</span>
+
+                                        <!-- Start of Next/Prev Navi -->
+                                        <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                            <div class='panel-heading padding text-center'>
+                                                <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                                    <div class='page-navi single hidden row no-margin'>
+                                                        <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
+                                                            <b:if cond='data:olderPageUrl'>
+                                                                <div class='media-body text-left'>
+                                                                    <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
+                                                                        <i class='fa fa-chevron-left'/>
+                                                                        <strong>Prev</strong>
+                                                                    </a>
+                                                                </div>
+                                                            </b:if>
+                                                        </div>
+                                                        <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
+                                                            <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
+                                                                TOP
                                                             </a>
                                                         </div>
-                                                    </b:if>
-                                                </b:if>
-                                                <b:if cond='data:post.dateHeader'>
-                                                    <h5 id='post-date'>
-                                                        <i class='fa fa-clock-o'/>
-                                                        <data:post.dateHeader/>
-                                                    </h5>
-                                                </b:if>
-                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                    <b:if cond='data:post.labels'>
-                                                        <nav class='margin'>
-                                                            <ul class='pager'>
-                                                                <b:loop index='i' values='data:post.labels' var='label'>
-                                                                    <li>
-                                                                        <a class='button button-small button-stable activated' expr:href='data:label.url'>
-                                                                            <data:label.name/>
-                                                                        </a>
-                                                                    </li>
-                                                                </b:loop>
-                                                            </ul>
-                                                        </nav>
-                                                    </b:if>
-                                                </b:if>
-                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                    <h1 class='taped' id='post-title'>
-                                                        <data:post.title/>
-                                                    </h1>
-                                                <b:else/>
-                                                    <h1 class='taped'>
-                                                        <a expr:href='data:post.url' expr:title='data:post.title' class='block'>
-                                                            <data:post.title/>
-                                                        </a>
-                                                    </h1>
+                                                        <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
+                                                            <b:if cond='data:newerPageUrl'>
+                                                                <div class='media-body text-right'>
+                                                                    <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
+                                                                        <strong>Next</strong>
+                                                                        <i class='fa fa-chevron-right'/>
+                                                                    </a>
+                                                                </div>
+                                                            </b:if>
+                                                        </div>
+                                                    </div>
                                                 </b:if>
                                             </div>
-                                            <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
+                                        </b:if>
+                                        <!-- End of Next/Prev Navi -->
 
-                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                    <div class="row">
-                                                        <div class="col-xs-12 col-md-10 col-md-offset-1">
-                                                            <data:post.body/>
-                                                        </div>
+                                        <div class='panel-heading text-center'>
+                                            <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+                                                <b:if cond='data:post.firstImageUrl'>
+                                                    <div class='text-center'>
+                                                        <a expr:href='data:post.url' expr:title='data:post.title'>
+                                                            <img class='thumb img-rounded' expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
+                                                        </a>
                                                     </div>
-                                                <b:else/>
-                                                    <div class='post-summary hidden'>
-                                                        <div id='id'><data:post.id/></div>
-                                                        <div id='title'><data:post.title/></div>
-                                                        <div id='url'><data:post.url/></div>
-                                                        <div id='content'>
-                                                            <data:post.body/>
-                                                        </div>
+                                                </b:if>
+                                            </b:if>
+                                            <b:if cond='data:post.dateHeader'>
+                                                <h5 id='post-date'>
+                                                    <i class='fa fa-clock-o'/>
+                                                    <data:post.dateHeader/>
+                                                </h5>
+                                            </b:if>
+                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <b:if cond='data:post.labels'>
+                                                    <nav class='margin'>
+                                                        <ul class='pager'>
+                                                            <b:loop index='i' values='data:post.labels' var='label'>
+                                                                <li>
+                                                                    <a class='button button-small button-stable activated' expr:href='data:label.url'>
+                                                                        <data:label.name/>
+                                                                    </a>
+                                                                </li>
+                                                            </b:loop>
+                                                        </ul>
+                                                    </nav>
+                                                </b:if>
+                                            </b:if>
+                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <h1 class='taped' id='post-title'>
+                                                    <data:post.title/>
+                                                </h1>
+                                            <b:else/>
+                                                <h1 class='taped'>
+                                                    <a expr:href='data:post.url' expr:title='data:post.title' class='block'>
+                                                        <data:post.title/>
+                                                    </a>
+                                                </h1>
+                                            </b:if>
+                                        </div>
+                                        <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
+
+                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                                                        <data:post.body/>
+                                                    </div>
+                                                </div>
+                                            <b:else/>
+                                                <div class='post-summary hidden'>
+                                                    <div id='id'><data:post.id/></div>
+                                                    <div id='title'><data:post.title/></div>
+                                                    <div id='url'><data:post.url/></div>
+                                                    <div id='content'>
+                                                        <data:post.body/>
+                                                    </div>
+                                                </div>
+                                            </b:if>
+
+                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <b:if cond='data:post.location'>
+                                                    <div class='post-location text-center'>
+<!--
+                                                        <h3>
+                                                            <i class='fa fa-map-marker'/> Map<br/>
+                                                        </h3>
+-->
+                                                        <p>
+                                                            ADDRESS
+                                                        </p>
+                                                        <hr class='embed span6'/>
+                                                        <h5>
+                                                            <data:post.location.name/>
+                                                        </h5>
+                                                        <big>
+                                                            <ul class='pager'>
+                                                                <li>
+                                                                    <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                        <i class='fa fa-location-arrow'/> Google Map でみる
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </big>
                                                     </div>
                                                 </b:if>
 
-                                                <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                    <b:if cond='data:post.location'>
-                                                        <div class='post-location text-center'>
-<!--
-                                                            <h3>
-                                                                <i class='fa fa-map-marker'/> Map<br/>
-                                                            </h3>
--->
-                                                            ADDRESS
-                                                            <hr class='embed span6'/>
-                                                            <h5>
-                                                                <data:post.location.name/>
-                                                            </h5>
-                                                            <big>
-                                                                <ul class='pager'>
-                                                                    <li>
-                                                                        <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
-                                                                            <i class='fa fa-location-arrow'/> Google Map でみる
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </big>
-                                                        </div>
-                                                    </b:if>
+                                                <b:if cond='data:post.labels'>
+                                                    <nav>
+                                                        <h3 class='text-center padding-bottom'><i class='fa fa-tags'/> Tags</h3>
+                                                        <h5>
+                                                            <ul class='pager'>
+                                                            <b:loop index='i' values='data:post.labels' var='label'>
+                                                                <li>
+                                                                    <a class='' expr:href='data:label.url'>
+                                                                        <data:label.name/>
+                                                                    </a>
+                                                                </li>
+                                                            </b:loop>
+                                                            </ul>
+                                                        </h5>
+                                                    </nav>
+                                                </b:if>
 
-                                                    <b:if cond='data:post.labels'>
-                                                        <nav>
-                                                            <h3 class='text-center'><i class='fa fa-tags'/> Tags</h3>
-                                                            <h5>
-                                                                <ul class='pager'>
-                                                                <b:loop index='i' values='data:post.labels' var='label'>
-                                                                    <li>
-                                                                        <a class='' expr:href='data:label.url'>
-                                                                            <data:label.name/>
-                                                                        </a>
-                                                                    </li>
-                                                                </b:loop>
-                                                                </ul>
-                                                            </h5>
-                                                        </nav>
-                                                    </b:if>
+                                                <!-- Begin Post Social Share -->
+                                                <h3 class='text-center'>
+                                                    <i class='fa fa-share-square-o'/> Share
+                                                </h3>
+                                                <div class='row'>
+                                                    <div class='col col-xs-12 padding'>
+                                                        <a class='btn btn-default btn-lg btn-block twitter text-white' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title'>
+                                                            <i class='fa fa-twitter'></i> Twitterでシェア</a>
+                                                    </div>
+                                                </div>
+                                                <div class='row'>
+                                                    <div class='col col-xs-12 col-md-6 padding'>
+                                                        <a class='btn btn-default btn-lg btn-block facebook text-white' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl'>
+                                                            <i class='fa fa-facebook'></i> Facebookでシェア</a>
+                                                    </div>
+                                                    <div class='col col-xs-12 col-md-6 padding'>
+                                                        <a class='btn btn-default btn-lg btn-block google-plus text-white' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.canonicalUrl'>
+                                                            <i class='fa fa-google-plus'></i> Google Plus でシェア</a>
+                                                    </div>
+                                                </div>
 
-                                                    <!-- Begin Post Social Share -->
-                                                    <h3 class='text-center'>
-                                                        <i class='fa fa-share-square-o'/> Share
-                                                    </h3>
-                                                    <div class='row'>
-                                                        <div class='col col-xs-12 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block twitter text-white' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title'>
-                                                                <i class='fa fa-twitter'></i> Twitterでシェア</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class='row'>
-                                                        <div class='col col-xs-12 col-md-6 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block facebook text-white' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl'>
-                                                                <i class='fa fa-facebook'></i> Facebookでシェア</a>
-                                                        </div>
-                                                        <div class='col col-xs-12 col-md-6 padding'>
-                                                            <a class='btn btn-default btn-lg btn-block google-plus text-white' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.canonicalUrl'>
-                                                                <i class='fa fa-google-plus'></i> Google Plus でシェア</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class='row no-margin margin-top'>
-                                                        <div class='col col-xs-12 no-padding no-margin'>
+                                                <h3 class='text-center padding-top padding-bottom'>
+                                                    <i class='fa fa-paper-plane'></i> Cupcakemafaをフォロー
+                                                </h3>
+                                                <div class='row no-margin margin-top'>
+                                                    <div class='col col-xs-12 no-padding no-margin'>
+                                                        <div class='panel-group'>
+                                                            <!--
+                                                            <div class='panel panel-success'>
+                                                                <div class='panel-heading text-center'>
+                                                                </div>
+                                                            </div>
+                                                            -->
                                                             <div class='panel panel-default'>
                                                                 <div class='panel-heading'>
-                                                                    Twitter/Facebook/Instagramでもいろいろな情報をお届けしています。<br />
-                                                                    Cupcakemafaからの最新情報を「いいね」&amp;「フォロー」してチェックしよう!!
+                                                                    Twitter/Facebook/Instagramでもいろいろな情報をお届けしています。
+                                                                    「いいね」&amp;「フォロー」して最新情報をあなたのタイムラインでチェックしよう!!
                                                                 </div>
                                                                 <div class='panel-body'>
                                                                     <div class='row'>
@@ -892,137 +912,138 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div><!-- End .panel-group -->
                                                     </div>
-                                                    <!-- End Post Social Share -->
+                                                </div>
+                                                <!-- End Post Social Share -->
 
-                                                    <!-- Begin Comment Form -->
-                                                    <h3 class='text-center margin-bottom'>
-                                                        <i class='fa fa-comments-o'/> Comments &amp; Questions<br />
-                                                    </h3>
-                                                    <p class='text-center no-padding no-margin'>
-                                                        コメントやご質問はこちらからどうぞ!!
-                                                    </p>
-                                                    <div id='disqus_thread'></div>
-                                                    <script>
-                                                    var disqus_config = function () {
-                                                        this.page.url = '<data:post.canonicalUrl/>';
-                                                        this.page.identifier = '<data:post.id/>';
-                                                        this.page.title = '<data:post.title/>';
-                                                        this.page.category_id = '';
-                                                    };
-                                                    (function() { // DON'T EDIT BELOW THIS LINE
-                                                    var d = document, s = d.createElement('script');
-                                                    s.src = '//cupcakemafa.disqus.com/embed.js';
-                                                    s.setAttribute('data-timestamp', +new Date());
-                                                    (d.head || d.body).appendChild(s);
-                                                    })();
-                                                    </script>
-                                                    <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>
-                                                    <!-- End Comment Form -->
-                                                </b:if>
-                                            </div>
-                                            <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
-
-                                                <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-                                                    <a expr:href='data:post.url' expr:title='data:post.title' class='btn btn-default btn-block'>
-                                                        続きを読む <i class='fa fa-chevron-right'></i>
-                                                    </a>
-                                                <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
-
-                                                    <!-- Begin related posts -->
-                                                    <div id='related-posts' class='hidden'>
-                                                        <h3 class='text-center'>
-                                                            <i class='fa fa-check-circle-o'/> Related Posts
-                                                        </h3>
-                                                        <div class='content text-left'></div>
-                                                    </div>
-                                                    <!-- End related posts -->
-
-                                                    <!-- Start of Next/Prev Navi -->
-                                                    <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                                                        <div class='page-navi single hidden row no-margin margin-top clearfix'>
-                                                            <b:if cond='data:olderPageUrl'>
-                                                                <div class='media no-padding col-md-6 col-sm-12 col-xs-12'>
-                                                                    <div class='media-left no-padding'>
-                                                                        <a class='prev-link thumb' expr:href='data:olderPageUrl'>
-                                                                            <img class='margin-right link-thumb media-object img-rounded' data-src='' alt='' />
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class='media-body text-left'>
-                                                                        <a class='prev-link title block' expr:href='data:olderPageUrl'>
-                                                                            <h4 class='no-margin margin-bottom no-padding'>
-                                                                                <i class='fa fa-chevron-left'/> <strong>Prev</strong>
-                                                                            </h4>
-                                                                            <span class='link-title'></span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </b:if>
-                                                            <b:if cond='data:newerPageUrl'>
-                                                                <div class='media no-padding no-margin col-md-6 col-sm-12 col-xs-12'>
-                                                                    <div class='media-body text-right'>
-                                                                        <a class='next-link title block' expr:href='data:newerPageUrl'>
-                                                                            <h4 class='no-margin margin-bottom no-padding'>
-                                                                                <strong>Next</strong>
-                                                                                <i class='fa fa-chevron-right'/>
-                                                                            </h4>
-                                                                            <span class='link-title'></span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class='media-right no-padding'>
-                                                                        <a class='next-link thumb' expr:href='data:newerPageUrl'>
-                                                                            <img class='margin-left link-thumb media-object img-rounded' data-src='' alt='' />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </b:if>
-                                                        </div>
-                                                    </b:if>
-                                                    <!-- End of Next/Prev Navi -->
-
-                                                    <p class="text-center">
-                                                        <a href='/' title='Cupcakemafa Web Site'>
-                                                            <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
-                                                            TOP
-                                                        </a>
-                                                    </p>
-                                                </b:if>
-                                            </div>
-                                            <span class='comment hidden'>End post data</span>
-                                        </article>
-                                    </div>
-
-                                </b:loop>
-                            </div>
-
-                            <!-- Start of List Pager -->
-
-                            <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-                                <!-- <div class='page-navi text-center padding margin-bottom hidden'></div>-->
-                                <div class='blog-pager clearfix' id='blog-pager'>
-                                    <b:if cond='data:newerPageUrl'>
-                                        <span id='blog-pager-newer-link'>
-                                            <a class='btn btn-default blog-pager-newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'><i class='fa fa-caret-left'></i> <data:newerPageTitle/></a>
-                                      </span>
-                                    </b:if>
-
-                                    <b:if cond='data:olderPageUrl'>
-                                        <span id='blog-pager-older-link'>
-                                            <a class='btn btn-default blog-pager-older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'><data:olderPageTitle/> <i class='fa fa-caret-right'></i></a>
-                                      </span>
-                                    </b:if>
-
-                                    <a class='btn btn-default home-link' expr:href='data:blog.homepageUrl'><i class='fa fa-caret-up'></i> <data:homeMsg/></a>
-
-                                    <b:if cond='data:mobileLinkUrl'>
-                                        <div class='blog-mobile-link'>
-                                            <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
+                                                <!-- Begin Comment Form -->
+                                                <h3 class='text-center margin-bottom'>
+                                                    <i class='fa fa-comments-o'/> Comments &amp; Questions<br />
+                                                </h3>
+                                                <p class='text-center no-padding no-margin'>
+                                                    コメントやご質問はこちらからどうぞ!!
+                                                </p>
+                                                <div id='disqus_thread'></div>
+                                                <script>
+                                                var disqus_config = function () {
+                                                    this.page.url = '<data:post.canonicalUrl/>';
+                                                    this.page.identifier = '<data:post.id/>';
+                                                    this.page.title = '<data:post.title/>';
+                                                    this.page.category_id = '';
+                                                };
+                                                (function() { // DON'T EDIT BELOW THIS LINE
+                                                var d = document, s = d.createElement('script');
+                                                s.src = '//cupcakemafa.disqus.com/embed.js';
+                                                s.setAttribute('data-timestamp', +new Date());
+                                                (d.head || d.body).appendChild(s);
+                                                })();
+                                                </script>
+                                                <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>
+                                                <!-- End Comment Form -->
+                                            </b:if>
                                         </div>
-                                    </b:if>
+                                        <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
+
+                                            <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+                                                <a expr:href='data:post.url' expr:title='data:post.title' class='btn btn-default btn-block'>
+                                                    続きを読む <i class='fa fa-chevron-right'></i>
+                                                </a>
+                                            <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
+
+                                                <!-- Begin related posts -->
+                                                <div id='related-posts' class='hidden'>
+                                                    <h3 class='text-center margin-top'>
+                                                        <i class='fa fa-check-circle-o'/> Related Posts
+                                                    </h3>
+                                                    <div class='content text-left'></div>
+                                                </div>
+                                                <!-- End related posts -->
+
+                                                <!-- Start of Next/Prev Navi -->
+                                                <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                                    <div class='page-navi single hidden row no-margin margin-top clearfix'>
+                                                        <b:if cond='data:olderPageUrl'>
+                                                            <div class='media no-padding col-md-6 col-sm-12 col-xs-12'>
+                                                                <div class='media-left no-padding'>
+                                                                    <a class='prev-link thumb' expr:href='data:olderPageUrl'>
+                                                                        <img class='margin-right link-thumb media-object img-rounded' data-src='' alt='' />
+                                                                    </a>
+                                                                </div>
+                                                                <div class='media-body text-left'>
+                                                                    <a class='prev-link title block' expr:href='data:olderPageUrl'>
+                                                                        <h4 class='no-margin margin-bottom no-padding'>
+                                                                            <i class='fa fa-chevron-left'/> <strong>Prev</strong>
+                                                                        </h4>
+                                                                        <span class='link-title'></span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </b:if>
+                                                        <b:if cond='data:newerPageUrl'>
+                                                            <div class='media no-padding no-margin col-md-6 col-sm-12 col-xs-12'>
+                                                                <div class='media-body text-right'>
+                                                                    <a class='next-link title block' expr:href='data:newerPageUrl'>
+                                                                        <h4 class='no-margin margin-bottom no-padding'>
+                                                                            <strong>Next</strong>
+                                                                            <i class='fa fa-chevron-right'/>
+                                                                        </h4>
+                                                                        <span class='link-title'></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class='media-right no-padding'>
+                                                                    <a class='next-link thumb' expr:href='data:newerPageUrl'>
+                                                                        <img class='margin-left link-thumb media-object img-rounded' data-src='' alt='' />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </b:if>
+                                                    </div>
+                                                </b:if>
+                                                <!-- End of Next/Prev Navi -->
+
+                                                <p class="text-center">
+                                                    <a href='/' title='Cupcakemafa Web Site'>
+                                                        <img class="img-circle" src="https://1.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0y39CudMLa1TjxUTeOwO74w/s120/cupcakemafa-favicon-200x200.png" /><br />
+                                                        TOP
+                                                    </a>
+                                                </p>
+                                            </b:if>
+                                        </div>
+                                        <span class='comment hidden'>End post data</span>
+                                    </article>
                                 </div>
-                            </b:if>
-                            <!-- End of List Pager -->
+
+                            </b:loop>
+                        </div>
+
+                        <!-- Start of List Pager -->
+
+                        <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+                            <!-- <div class='page-navi text-center padding margin-bottom hidden'></div>-->
+                            <div class='blog-pager clearfix' id='blog-pager'>
+                                <b:if cond='data:newerPageUrl'>
+                                    <span id='blog-pager-newer-link'>
+                                        <a class='btn btn-default blog-pager-newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'><i class='fa fa-caret-left'></i> <data:newerPageTitle/></a>
+                                  </span>
+                                </b:if>
+
+                                <b:if cond='data:olderPageUrl'>
+                                    <span id='blog-pager-older-link'>
+                                        <a class='btn btn-default blog-pager-older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'><data:olderPageTitle/> <i class='fa fa-caret-right'></i></a>
+                                  </span>
+                                </b:if>
+
+                                <a class='btn btn-default home-link' expr:href='data:blog.homepageUrl'><i class='fa fa-caret-up'></i> <data:homeMsg/></a>
+
+                                <b:if cond='data:mobileLinkUrl'>
+                                    <div class='blog-mobile-link'>
+                                        <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
+                                    </div>
+                                </b:if>
+                            </div>
+                        </b:if>
+                        <!-- End of List Pager -->
                     </b:includable>
                             <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
@@ -1371,7 +1392,7 @@
             </b:section>
 
             <!-- Begin #sidebar -->
-            <b:section class='col col-xs-12 col-sm-6 col-md-4 no-padding- no-margin' id='sidebar' showaddelement='yes' preferred='yes'>
+            <b:section class='col col-xs-12 col-sm-6 col-md-4 no-padding padding-left padding-right no-margin' id='sidebar' showaddelement='yes' preferred='yes'>
                 <b:widget id='HTML2' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ' type='HTML' visible='true'>
                     <b:includable id='main'>
                         <div class='sidebar'>
