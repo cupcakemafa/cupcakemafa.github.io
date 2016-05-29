@@ -1,7 +1,7 @@
 var luckyWord = [
     {
         "img": "https://4.bp.blogspot.com/-s9aoQUpjSic/VwUUwMJQT2I/AAAAAAAAB9U/_OB1osuzSpYlzJSyFgRjJEwjGVhaLE5_g/s320/IMG_0222.png",
-        "text": "It's New Me!"
+        "text": "It%39s%20New%20Me!"
     },
     {
         "img": "https://2.bp.blogspot.com/-agnHXR8ghtQ/VwUUwHull9I/AAAAAAAAB9Y/zSc7yTHOSPYeg48WtI8DZJ6RWyGMBQ8BQ/s320/IMG_0223.png",
