@@ -1219,7 +1219,7 @@
                     share_url = TWITTER_SHARE_PREFIX + encodeURIComponent(hush_tag) + TWITTER_SHARE_MIDFIX + encodeURIComponent(lucky_word) + TWITTER_SHARE_POSTFIX;
                     share_url = encodeURIComponent(share_url);
                     share_url = TWITTER_SHARE_BASE + share_url;
-                    share_tag = share_url;
+                    share_tag = '<a href="' + share_url + '" class="btn btn-default twitter" target="_blank">Tweet</a>';
                     //console.info('share_url', share_url);
 //                    share_tag = '<a href="https://twitter.com/share" class="btn btn-default twitter twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
 
