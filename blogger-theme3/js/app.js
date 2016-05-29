@@ -1147,8 +1147,8 @@
                     SHARE_VIA = 'cupcakemafa',
                     SHARE_URL = 'http://www.cupcakemafa.com/',
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
-                    TWITTER_SHARE_PREFIX = 'text=%96%7B%93%FA%82%CC%82%A8%8C%BE%97t%81%A8%81u%81v#',//本日のお言葉→「
-                    TWITTER_SHARE_POSTFIX = '%0a%81v&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA, // 」
+                    TWITTER_SHARE_PREFIX = 'text=本日のお言葉→「 #',
+                    TWITTER_SHARE_POSTFIX = ' 」&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
                     idx, icon = [],
                     word = [],
                     share_url,
