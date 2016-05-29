@@ -207,10 +207,10 @@
     <div id='outer-page' class='container no-padding'>
 
         <!-- Begin #header -->
-        <b:section class='row' id='header' showaddelement='no'>
+        <b:section class='row no-margin' id='header' showaddelement='no'>
             <b:widget id='Header1' locked='true' title='ヘッダーコンテンツ' type='Header' visible='true'>
                 <b:includable id='main'>
-                    <div class='col col-xs-12 text-center'>
+                    <div class='col col-xs-12 text-center no-padding'>
                         <nav id='header-navi' class='headroom navbar navbar-inverse navbar-fixed-top'>
                             <div class='container'>
                                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -1854,7 +1854,7 @@
 
 
         <!-- Begin #footer -->
-        <b:section class='row hidden' id='footer' showaddelement='no'>
+        <b:section class='row no-margin hidden' id='footer' showaddelement='no'>
             <b:widget id='HTML5' locked='false' title='フッターコンテンツ' type='HTML' visible='true'>
                 <b:includable id='main'>
 
@@ -1995,7 +1995,7 @@
                 $elmTwo=$($listItem.eq(i+1));
                 heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                 heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
-                console.info(heightOne + ':' + heightTwo);
+                //console.info(heightOne + ':' + heightTwo);
                 if(heightOne && heightTwo) {
                     if(heightOne > heightTwo) {
                         heightOne+=ADJUST_BOTTOM;
