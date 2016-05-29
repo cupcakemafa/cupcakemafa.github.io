@@ -1142,49 +1142,22 @@
         },
         setLuckyWord = function () {
             if (luckyWord.length && luckyIcon.length && $('.lucky-word-box').length) {
-                /**
-                 * Get a text for tweeting.
-                 * @param string word
-                 */
-                function getTweetText(word) {
-                    if(word) {
-                        var
-//                            TEXT_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
-//                            TEXT_POSTFIX = '%20' + encodeURIComponent('」') + '%0a';
-//                        return TEXT_PREFIX + encodeURIComponent(word) + TEXT_POSTFIX;
-                            TEXT_PREFIX = ('本日のお言葉→「 #'),
-                            TEXT_POSTFIX = (' 」')+ decodeURIComponent('%0a'),
-                            hushTag = (word.replace(/ /g, '_'));
-                        return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0a');
-                    }
-                }
-
                 var
                     HUSH_TAG = 'luckyWord',
                     SHARE_VIA = 'cupcakemafa',
                     SHARE_URL = 'http://www.cupcakemafa.com/',
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
-                    // %20: space
-                    // %23: #
-                    // %0a: CR
-//                    TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
-//                    TWITTER_SHARE_MIDFIX = '%20' + encodeURIComponent('」') + '%0a',
-//                    TWITTER_SHARE_POSTFIX = '%0a&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
-
-                    TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「 #'),
-                    TWITTER_SHARE_MIDFIX = encodeURIComponent(' 」¥n'),
-                    TWITTER_SHARE_POSTFIX = '¥n&url=' + SHARE_URL + '&via=' + SHARE_VIA,
-
-//                    TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
-//                    TWITTER_SHARE_PREFIX = 'text=#',
-//                    TWITTER_SHARE_POSTFIX = '&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
                     idx, icon = [],
                     word = [],
                     share_url, lucky_word,
                     hush_tag, share_tag,
                     looper = ['a', 'b'],
                     i, l,
+                    date = countDate(),
+                    word_count = luckyWord.length - 1,
+                    icon_count = luckyIcon.length - 1,
                     /**
+                     * 2つの日付から日数を計算
                      * @param string startDate 2016/01/01
                      * @param string endDate 2016/12/31
                      **/
@@ -1203,10 +1176,25 @@
                         // 差分へ1日分加算して返却します
                         return ++daysDiff;
                     },
-                    date = countDate(),
-                    word_count = luckyWord.length - 1,
-                    icon_count = luckyIcon.length - 1;
+                    /**
+                     * Get a text for tweeting.
+                     * @param string word
+                     */
+                    getTweetText = function (word) {
+                        if(word) {
+                            // %20: space
+                            // %23: #
+                            // %0a: CR
+                            var
+                                TEXT_PREFIX = ('本日のお言葉→「 #'),
+                                TEXT_POSTFIX = (' 」')+ decodeURIComponent('%0a'),
+                                hushTag = (word.replace(/ /g, '_'));
+                            return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0a');
+                        }
+                    };
 
+                // 当日の日付に対応したラッキーワードのインデックスを取得
+                date = countDate();
                 idx = date % word_count;
                 word.push(luckyWord[idx]);
                 idx = word_count - idx;
@@ -1221,14 +1209,6 @@
                     $('#lucky-icon-' + looper[i]).attr('src', icon[i]);
                     $('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
                     lucky_word = word[i].text;
-//                    hush_tag = lucky_word.replace(/ /g, '_');
-//                    share_url = TWITTER_SHARE_PREFIX + encodeURIComponent(hush_tag) + TWITTER_SHARE_MIDFIX + encodeURIComponent(lucky_word) + TWITTER_SHARE_POSTFIX;
-//                    share_url = encodeURIComponent(share_url);
-//                    share_url = TWITTER_SHARE_BASE + share_url;
-//                    share_tag = '<a href="' + share_url + '" class="btn btn-default twitter" target="_blank">Tweet</a>';
-                    //console.info('share_url', share_url);
-//                    share_tag = '<a href="https://twitter.com/share" class="btn btn-default twitter twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
-
                     share_tag = '<a href="https://twitter.com/share" ';
                     share_tag += 'class="twitter-share-button" data-url="' + SHARE_URL + '" ';
                     share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
@@ -1236,7 +1216,6 @@
                     share_tag += 'data-related="' + SHARE_VIA + '" ';
                     share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
                     share_tag += 'data-dnt="false">Tweet</a>';
-
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
                 }
                 // activate tweet button
@@ -1253,7 +1232,7 @@
 
                 var $open_lucky = $('#open-lucky');
                 $open_lucky.prop('disabled', false);
-                $open_lucky.removeClass('disabled');
+                //$open_lucky.removeClass('disabled');
             }
         },
         setLazyLoad = function () {
