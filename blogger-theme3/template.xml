@@ -871,51 +871,66 @@
                                                     </div>
                                                 </div>
                                                 <div class='row'>
+                                                    <div class='col col-xs-12 padding'>
+                                                        <a class="btn btn-default btn-lg btn-block line text-white" expr:href='&quot;http://line.me/R/msg/text/?&quot; + data:post.title + data:post.canonicalUrl'>
+                                                            LINEで送る</a>
+                                                    </div>
+                                                </div>
+                                                <div class='row'>
                                                     <div class='col col-xs-12 col-md-6 padding'>
                                                         <a class='btn btn-default btn-lg btn-block facebook text-white' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl'>
                                                             <i class='fa fa-facebook'></i> Facebookでシェア</a>
                                                     </div>
                                                     <div class='col col-xs-12 col-md-6 padding'>
                                                         <a class='btn btn-default btn-lg btn-block google-plus text-white' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.canonicalUrl'>
-                                                            <i class='fa fa-google-plus'></i> Google Plus でシェア</a>
+                                                            <i class='fa fa-google-plus'></i> Google Plusでシェア</a>
                                                     </div>
                                                 </div>
-
-                                                <h3 class='text-center padding-top padding-bottom'>
-                                                    <i class='fa fa-paper-plane'></i> Cupcakemafaをフォロー
-                                                </h3>
+                                                <!-- Begin Post Social Share -->
+                                                <!-- End Bookmark -->
+                                                <div class='row'>
+                                                    <h3 class='text-center padding-top padding-bottom'>
+                                                        <i class='fa fa-bookmark-o'></i> 記事をあとで読む
+                                                    </h3>
+                                                    <div class='col col-xs-12 padding'>
+                                                        <a class='btn btn-default btn-lg btn-block get-pocket text-white'  expr:href='&quot;http://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href,"PCwindow","width=550, height=350,menubar=no,toolbar=no,scrollbars=yes");return false;'>
+                                                            <i class='fa fa-get-pocket'></i> Pocketに保存</a>
+                                                    </div>
+                                                </div>
+                                                <!-- End Bookmark -->
+                                                <!-- Begin Follow -->
                                                 <div class='row no-margin margin-top'>
+                                                    <h3 class='text-center padding-top padding-bottom'>
+                                                        <i class='fa fa-paper-plane'></i> Cupcakemafaを<br />フォロー
+                                                    </h3>
                                                     <div class='col col-xs-12 no-padding no-margin'>
-                                                        <div class='panel-group'>
-                                                            <!--
-                                                            <div class='panel panel-success'>
-                                                                <div class='panel-heading text-center'>
-                                                                </div>
+                                                        <div class='panel panel-default'>
+                                                            <div class='panel-heading'>
+                                                                Twitter/Facebook/Instagramでもいろいろな情報をお届けしています。<br />
+                                                                「いいね」&amp;「フォロー」して最新情報をあなたのタイムラインでチェックしよう!!
                                                             </div>
-                                                            -->
-                                                            <div class='panel panel-default'>
-                                                                <div class='panel-heading'>
-                                                                    Twitter/Facebook/Instagramでもいろいろな情報をお届けしています。
-                                                                    「いいね」&amp;「フォロー」して最新情報をあなたのタイムラインでチェックしよう!!
+                                                            <div class='panel-body'>
+                                                                <div class='row'>
+                                                                    <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
+                                                                        <a href="https://twitter.com/cupcakemafa" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cupcakemafa</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                                    </div>
+                                                                    <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
+                                                                        <div class="fb-like" data-href="https://www.facebook.com/cupcakemafa/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                                                                    </div>
+                                                                    <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-top'>
+                                                                        <a href="https://www.instagram.com/cupcakemafaofficial/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                                                                    </div>
                                                                 </div>
-                                                                <div class='panel-body'>
-                                                                    <div class='row'>
-                                                                        <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
-                                                                            <a href="https://twitter.com/cupcakemafa" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cupcakemafa</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                                                                        </div>
-                                                                        <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
-                                                                            <div class="fb-like" data-href="https://www.facebook.com/cupcakemafa/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                                                                        </div>
-                                                                        <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-top'>
-                                                                            <a href="https://www.instagram.com/cupcakemafaofficial/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
-                                                                        </div>
+                                                                <div class='row'>
+                                                                    <div class='col col-xs-12 col-md-12 text-center no-padding padding-top padding-bottom'>
+                                                                        <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fwww.cupcakemafa.com%2Ffeeds%2Fposts%2Fdefault'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'/></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div><!-- End .panel-group -->
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!-- End Post Social Share -->
+                                                <!-- End Follow -->
 
                                                 <!-- Begin Comment Form -->
                                                 <h3 class='text-center margin-bottom'>
