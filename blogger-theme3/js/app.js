@@ -1149,7 +1149,7 @@
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
                     TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「%20%23'),
                     TWITTER_SHARE_MIDFIX = encodeURIComponent('%20」%0a'),
-                    TWITTER_SHARE_POSTFIX = '%0a&url=' + SHARE_URL + '&via=' + SHARE_VIA,
+                    TWITTER_SHARE_POSTFIX = '%0a&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
 //                    TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
 //                    TWITTER_SHARE_PREFIX = 'text=#',
 //                    TWITTER_SHARE_POSTFIX = '&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
@@ -1198,7 +1198,7 @@
                     lucky_word = word[i].text;
                     //hush_tag = word[i].text.replace(/ /g, '_');
                     hush_tag = lucky_word.replace(/ /g, '_');
-                    share_url = TWITTER_SHARE_PREFIX + hush_tag + TWITTER_SHARE_MIDFIX + lucky_word + TWITTER_SHARE_POSTFIX;
+                    share_url = TWITTER_SHARE_PREFIX + encodeURIComponent(hush_tag) + TWITTER_SHARE_MIDFIX + encodeURIComponent(lucky_word) + TWITTER_SHARE_POSTFIX;
                     //share_url = encodeURIComponent(share_url);
                     share_url = TWITTER_SHARE_BASE + share_url;
                     console.info('share_url', share_url);
