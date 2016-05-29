@@ -1142,11 +1142,27 @@
         },
         setLuckyWord = function () {
             if (luckyWord.length && luckyIcon.length && $('.lucky-word-box').length) {
+                /**
+                 * Get a text for tweeting.
+                 * @param string word
+                 */
+                function getTweetText(word) {
+                    if(word) {
+                        var
+                            TEXT_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
+                            TEXT_POSTFIX = '%20' + encodeURIComponent('」') + '%0a';
+                        return TEXT_PREFIX + encodeURIComponent(word) + TEXT_POSTFIX;
+                    }
+                }
+
                 var
                     HUSH_TAG = 'luckyWord',
                     SHARE_VIA = 'cupcakemafa',
                     SHARE_URL = 'http://www.cupcakemafa.com/',
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
+                    // %20: space
+                    // %23: #
+                    // %0a: CR
                     TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
                     TWITTER_SHARE_MIDFIX = '%20' + encodeURIComponent('」') + '%0a',
                     TWITTER_SHARE_POSTFIX = '%0a&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
@@ -1196,13 +1212,15 @@
                     $('#lucky-icon-' + looper[i]).attr('src', icon[i]);
                     $('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
                     lucky_word = word[i].text;
-                    //hush_tag = word[i].text.replace(/ /g, '_');
                     hush_tag = lucky_word.replace(/ /g, '_');
                     share_url = TWITTER_SHARE_PREFIX + encodeURIComponent(hush_tag) + TWITTER_SHARE_MIDFIX + encodeURIComponent(lucky_word) + TWITTER_SHARE_POSTFIX;
                     //share_url = encodeURIComponent(share_url);
                     share_url = TWITTER_SHARE_BASE + share_url;
-                    console.info('share_url', share_url);
-                    share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
+                    //console.info('share_url', share_url);
+                    //share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
+
+                    share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="' + getTweetText(lucky_word) + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
+
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
                 }
                 // activate tweet button
