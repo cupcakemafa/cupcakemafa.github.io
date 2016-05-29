@@ -91,7 +91,6 @@
     <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
-
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
         <link href='//cupcakemafa.github.io/blogger-theme3/css/style.min.css' rel='stylesheet'/>
         <link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.min.css" rel="stylesheet"/>
@@ -99,7 +98,6 @@
         <link href='//cupcakemafa.github.io/blogger-theme3/css/style.css' rel='stylesheet'/>
         <link href="//cupcakemafa.github.io/blogger-theme3/css/google-form.css" rel="stylesheet"/>
     </b:if>
-    <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript'/>
     <!--[if lt IE 9]>
     <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
@@ -1936,6 +1934,7 @@
 
     </div><!-- End #outer-page -->
 
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.min.js'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.min.js'></script>
@@ -1948,7 +1947,6 @@
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/ms.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
     </b:if>
-
     <script type='text/javascript' src='//use.typekit.net/vmo4jem.js'></script>
     <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='true'></script>
