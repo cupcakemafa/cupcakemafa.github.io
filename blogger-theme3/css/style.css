@@ -345,6 +345,17 @@ hr.dashed {
     background-color: #fff;
 }
 
+.get-pocket,
+.btn-circle.get-pocket {
+    background-color: #d3505a;
+}
+
+.get-pocket:hover,
+.btn-circle.get-pocket:hover {
+    color: #d3505a;
+    background-color: #fff;
+}
+
 .rss,
 .btn-circle.rss {
     /*color: #517fa4;*/
