@@ -1152,10 +1152,10 @@
 //                            TEXT_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
 //                            TEXT_POSTFIX = '%20' + encodeURIComponent('」') + '%0a';
 //                        return TEXT_PREFIX + encodeURIComponent(word) + TEXT_POSTFIX;
-                            TEXT_PREFIX = "本日のお言葉→「 #",
-                            TEXT_POSTFIX = " 」¥n",
-                            hushTag = word.replace(/ /g, '_');
-                        return TEXT_PREFIX + (hushTag) + TEXT_POSTFIX + word + "¥n";
+                            TEXT_PREFIX = encodeURIComponent('本日のお言葉→「 #'),
+                            TEXT_POSTFIX = encodeURIComponent(' 」')+ '%0a',
+                            hushTag = encodeURIComponent(word.replace(/ /g, '_'));
+                        return TEXT_PREFIX + (hushTag) + TEXT_POSTFIX + encodeURIComponent(word) + '%0a';
                     }
                 }
 
