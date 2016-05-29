@@ -1195,6 +1195,7 @@
                     share_url = TWITTER_SHARE_PREFIX + word[i].text.replace(/%20/g, '_') + TWITTER_SHARE_POSTFIX;
                     share_url = encodeURIComponent(share_url);
                     share_url = TWITTER_SHARE_BASE + share_url;
+console.info('share_url', share_url);
                     share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
                 }
