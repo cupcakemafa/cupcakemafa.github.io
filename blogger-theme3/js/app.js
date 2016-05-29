@@ -1153,7 +1153,7 @@
                     hush_tag, share_tag,
                     looper = ['a', 'b'],
                     i, l,
-                    date = countDate(),
+                    date,
                     word_count = luckyWord.length - 1,
                     icon_count = luckyIcon.length - 1,
                     /**
