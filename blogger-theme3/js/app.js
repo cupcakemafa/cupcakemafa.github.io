@@ -1147,10 +1147,10 @@
                     SHARE_VIA = 'cupcakemafa',
                     SHARE_URL = 'http://www.cupcakemafa.com/',
                     TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
-//                    TWITTER_SHARE_PREFIX = 'text=本日のお言葉→「 #',
-//                    TWITTER_SHARE_POSTFIX = ' 」&url=' + SHARE_URL + '&via=' + SHARE_VIA,
-                    TWITTER_SHARE_PREFIX = 'text=#',
-                    TWITTER_SHARE_POSTFIX = '&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
+                    TWITTER_SHARE_PREFIX = 'text=本日のお言葉→「%20#',
+                    TWITTER_SHARE_POSTFIX = '%20」%0a&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
+//                    TWITTER_SHARE_PREFIX = 'text=#',
+//                    TWITTER_SHARE_POSTFIX = '&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
                     idx, icon = [],
                     word = [],
                     share_url,
@@ -1195,7 +1195,7 @@
                     $('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
                     hush_tag = word[i].text.replace(/ /g, '_');
                     share_url = TWITTER_SHARE_PREFIX + word[i].text.replace(/%20/g, '_') + TWITTER_SHARE_POSTFIX;
-                    share_url = encodeURIComponent(share_url);
+//                    share_url = encodeURIComponent(share_url);
                     share_url = TWITTER_SHARE_BASE + share_url;
 console.info('share_url', share_url);
                     share_tag = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + SHARE_URL + '" data-text="#' + hush_tag + '" data-via="' + SHARE_VIA + '" data-size="large" data-related="' + SHARE_VIA + '" data-hashtags="' + HUSH_TAG + '" data-dnt="false">Tweet</a>';
