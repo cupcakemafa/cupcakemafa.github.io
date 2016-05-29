@@ -1152,10 +1152,10 @@
 //                            TEXT_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
 //                            TEXT_POSTFIX = '%20' + encodeURIComponent('」') + '%0a';
 //                        return TEXT_PREFIX + encodeURIComponent(word) + TEXT_POSTFIX;
-                            TEXT_PREFIX = ('本日のお言葉→「')+'%20%23',
-                            TEXT_POSTFIX = '%20' + ('」') + '%0a',
+                            TEXT_PREFIX = "本日のお言葉→「 #",
+                            TEXT_POSTFIX = " 」¥n",
                             hushTag = word.replace(/ /g, '_');
-                        return TEXT_PREFIX + (hushTag) + TEXT_POSTFIX + word;
+                        return TEXT_PREFIX + (hushTag) + TEXT_POSTFIX + word + "¥n";
                     }
                 }
 
@@ -1167,9 +1167,14 @@
                     // %20: space
                     // %23: #
                     // %0a: CR
-                    TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
-                    TWITTER_SHARE_MIDFIX = '%20' + encodeURIComponent('」') + '%0a',
-                    TWITTER_SHARE_POSTFIX = '%0a&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
+//                    TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「')+'%20%23',
+//                    TWITTER_SHARE_MIDFIX = '%20' + encodeURIComponent('」') + '%0a',
+//                    TWITTER_SHARE_POSTFIX = '%0a&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
+
+                    TWITTER_SHARE_PREFIX = encodeURIComponent('本日のお言葉→「 #'),
+                    TWITTER_SHARE_MIDFIX = encodeURIComponent(' 」¥n'),
+                    TWITTER_SHARE_POSTFIX = '¥n&url=' + SHARE_URL + '&via=' + SHARE_VIA,
+
 //                    TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?',
 //                    TWITTER_SHARE_PREFIX = 'text=#',
 //                    TWITTER_SHARE_POSTFIX = '&amp;url=' + SHARE_URL + '&amp;via=' + SHARE_VIA,
