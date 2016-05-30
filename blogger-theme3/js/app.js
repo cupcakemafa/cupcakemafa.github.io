@@ -694,7 +694,7 @@
                                 linkContent += '<p class="title">' + postTitle + '</p>';
 
                                 // Post publish date
-                                $date = $('.post #post-date');
+                                $date = $data.find('.post #post-date');
                                 if ($date.length) {
                                     postDate = $date.html();
                                     if (postDate) {
