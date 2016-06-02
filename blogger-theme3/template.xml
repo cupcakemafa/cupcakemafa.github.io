@@ -112,15 +112,6 @@
 </head>
 <body expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
     <div id="fb-root"></div>
-    <script>//<![CDATA[
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId=414444272074407";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    //]]></script>
     <script type="application/ld+json">
     {
         "@context" : "http://schema.org",
@@ -885,7 +876,8 @@
                                                             <div class='panel-body'>
                                                                 <div class='row'>
                                                                     <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
-                                                                        <a href="https://twitter.com/cupcakemafa" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cupcakemafa</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                                        <a href="https://twitter.com/cupcakemafa" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cupcakemafa</a>
+                                                                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                                     </div>
                                                                     <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
                                                                         <div class="fb-like" data-href="https://www.facebook.com/cupcakemafa/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -1491,8 +1483,34 @@
                                 <li class='list-group-item'><a href="/search/label/持ち物">持ち物</a></li>
                                 <!--<li class='list-group-item'><a href='/search/label/RECOMMEND'>Recommend</a></li>-->
                             </ul>
+                            <div class='oshirase post panel panel-default'>
+                                <div class='panel-heading no-padding'>
+                                    <div class='media'>
+                                        <div class='media-left icon-box'>
+                                            <img class='img-rounded icon' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s128/22.png' alt='LINEスタンプ Part2 も発売中!!' />
+                                        </div>
+                                        <div class='media-body'>
+                                            <span class='title'>Oshirase</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='panel-body'>
+                                    <h4 class='title text-center'>LINEスタンプPart2も発売中!!</h4>
+                                    <p class='text-center'>
+                                        <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
+                                            <img alt='LINEスタンプ Part2 も発売中!!' class='img-rounded' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
+                                        </a>
+                                    </p>
+                                    <p>
+                                        ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
+                                        カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
+                                    </p>
+                                </div>
+                                <div class='panel-footer'>
+                                    <a href='/2015/12/line-stamp-nao-and-ken-part-2.html' class='btn btn-default btn-block'>スタンプPart2を見てみる <i class='fa fa-chevron-right'></i></a>
+                                </div>
+                            </div>
                         </div><!-- /.sidebar -->
-
                     </b:includable>
                 </b:widget>
                 <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
@@ -1541,6 +1559,7 @@
                 <b:widget id='HTML3' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ2' type='HTML' visible='true'>
                     <b:includable id='main'>
                         <div class='sidebar'>
+<!--
                             <div class='oshirase post panel panel-default'>
                                 <div class='panel-heading no-padding'>
                                     <div class='media'>
@@ -1564,7 +1583,11 @@
                                         カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
                                     </p>
                                 </div>
+                                <div class='panel-footer'>
+                                    <a href='/2015/12/line-stamp-nao-and-ken-part-2.html' class='btn btn-default btn-block'>スタンプPart2を見てみる <i class='fa fa-chevron-right'></i></a>
+                                </div>
                             </div>
+-->
 
                             <div class='oshirase post panel panel-default'>
                                 <div class='panel-heading no-padding'>
@@ -1588,6 +1611,9 @@
                                         NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
                                         ぜひみてみてね!!
                                     </p>
+                                </div>
+                                <div class='panel-footer'>
+                                    <a href='/2015/11/nao-and-ken-line-stamp.html' class='btn btn-default btn-block'>スタンプPart1を見てみる <i class='fa fa-chevron-right'></i></a>
                                 </div>
                             </div>
 
@@ -1613,6 +1639,7 @@
                                     ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています&#12290;
                                     どうぞ&#12289;よろしく&#12290;
                                     <div class='social-icons text-center'>
+                                        <p>Cupcakemafaのソーシャルアカウント</p>
                                         <a class='btn-circle facebook' href='https://www.facebook.com/cupcakemafa'>
                                             <i class='fa fa-facebook fa-2x'/>
                                         </a>
@@ -1659,6 +1686,9 @@
                                     <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135'/></a>
                                     <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115'/></a>
                                 </div>
+                                <div class='panel-footer'>
+                                    <a href='/p/kenzukan.html' class='btn btn-default btn-block'>KEN図鑑を見てみる <i class='fa fa-chevron-right'></i></a>
+                                </div>
                             </div>
 
                             <div class='about-us post panel panel-default'>
@@ -1687,6 +1717,9 @@
                                         なんてね&#12290;そんなわけで&#12289;カップケーキマーファの誕生ですっ!!
                                     </p>
                                 </div>
+                                <div class='panel-footer'>
+                                    <a href='/2016/05/about-us.html' class='btn btn-default btn-block'>もうちょっと見てみる <i class='fa fa-chevron-right'></i></a>
+                                </div>
                             </div>
 
                             <div class='post panel panel-default'>
@@ -1696,22 +1729,17 @@
                                     </div>
                                 </div>
                                 <div class='panel-body text-center no-padding'>
-                                    <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
                                     <!-- レクタングル２ -->
                                     <ins class='adsbygoogle'
                                          style='display:inline-block;width:300px;height:250px'
                                          data-ad-client='ca-pub-3036276233777511'
                                          data-ad-slot='1826014588'></ins>
-                                    <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
                                 </div>
                             </div>
 
                             <div class='post panel panel-default'>
                                 <div class='panel-body text-center'>
                                     <a class="twitter-timeline" href="https://twitter.com/cupcakemafa" data-widget-id="714935102849945601">@cupcakemafaさんのツイート</a>
-                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                                 </div>
                             </div>
 
@@ -1722,16 +1750,12 @@
                                     </div>
                                 </div>
                                 <div class='panel-body text-center no-padding'>
-                                    <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
                                     <!-- レクタングル１ -->
                                     <ins class='adsbygoogle'
                                          style='display:inline-block;width:300px;height:250px'
                                          data-ad-client='ca-pub-3036276233777511'
                                          data-ad-slot='7872548182'></ins>
-                                    <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
-                                    <span class='comment hidden'>End of Google AdSense</span>
+                                    <!-- End of Google AdSense -->
                                 </div>
                             </div>
                         </div><!-- /.sidebar -->
@@ -1930,29 +1954,21 @@
                                 <div class='col-xs-12 col-sm-6 text-center padding'>
                                     <span class='title'>スポンサーリンク</span>
                                     <div id='sponser-link-3'>
-                                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
                                         <!-- ラージモバイルバナー１ -->
                                         <ins class='adsbygoogle'
                                              style='display:inline-block;width:320px;height:100px'
                                              data-ad-client='ca-pub-3036276233777511'
                                              data-ad-slot='3302747782'></ins>
-                                        <script>
-                                        (adsbygoogle = window.adsbygoogle || []).push({});
-                                        </script>
                                     </div>
                                 </div>
                                 <div class='col-xs-12 col-sm-6 text-center padding'>
                                     <span class='title'>スポンサーリンク</span>
                                     <div id='sponser-link-4'>
-                                        <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
                                         <!-- ラージモバイルバナー２ -->
                                         <ins class='adsbygoogle'
                                              style='display:inline-block;width:320px;height:100px'
                                              data-ad-client='ca-pub-3036276233777511'
                                              data-ad-slot='7732947389'></ins>
-                                        <script>
-                                        (adsbygoogle = window.adsbygoogle || []).push({});
-                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -1983,10 +1999,6 @@
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/ms.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
     </b:if>
-<!--
-    <script type='text/javascript' src='//use.typekit.net/vmo4jem.js'></script>
-    <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
--->
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='true'></script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
         <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
@@ -2052,6 +2064,35 @@
                 }
             }
             })(jQuery);
+
+        // Begin Twitter widget
+        !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js,fjs);
+            }
+        }(document,"script","twitter-wjs");
+        // End Twitter widget
+
+        // Begin Google Ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        // End Google Ads
+
+        // Begin Facebook
+        // with div#fb-root
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId=414444272074407";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        // End Facebook
         //]]>
     </script>
     <!-- Begin Google Analytics -->
