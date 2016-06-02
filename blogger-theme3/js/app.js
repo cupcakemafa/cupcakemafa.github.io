@@ -1275,7 +1275,6 @@
                 heightOne, heightTwo, $elmOne, $elmTwo,
                 $listItem=$('.post-col.list-item'),
                 i, l=$listItem.length;
-console.info('$listItem', $listItem);
             for(i=0;i<l;i+=2) {
                 $elmOne=$($listItem.eq(i));
                 $elmTwo=$($listItem.eq(i+1));
@@ -1366,7 +1365,7 @@ console.info('$listItem', $listItem);
             $('#body').removeClass('hidden');
             $('#footer').removeClass('hidden');
 
-            if (pageType !== 'item' && pageType !== 'static_page') {
+            if (!isMobile() && pageType !== 'item' && pageType !== 'static_page') {
                 // Equal height for each .post-col.list-item
                 setEqualHeight();
             }
