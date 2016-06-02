@@ -1274,7 +1274,8 @@
                 ADJUST_BOTTOM=8,
                 heightOne, heightTwo, $elmOne, $elmTwo,
                 $listItem=$('.post-col.list-item'),
-                i=0, l=$listItem.length;
+                i, l=$listItem.length;
+console.info('$listItem', $listItem);
             for(i=0;i<l;i+=2) {
                 $elmOne=$($listItem.eq(i));
                 $elmTwo=$($listItem.eq(i+1));
@@ -1302,6 +1303,12 @@
                     }
                 }
             }
+        },
+        /**
+         * Check if mobile or not for Blogger.com
+         */
+        isMobile = function() {
+            return util.getQueryString('m', 0) ? true : false;
         },
         //
         // Main
@@ -1344,7 +1351,7 @@
                 //setPageListNavi();
 
                 // Equal height for each .post-col.list-item
-                //setEqualHeight();
+                setEqualHeight();
 
                 // Set title
                 setArchiveTitle();
