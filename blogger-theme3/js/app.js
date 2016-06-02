@@ -1350,9 +1350,6 @@ console.info('$listItem', $listItem);
             if (pageType === 'index' || pageType === 'archive') {
                 //setPageListNavi();
 
-                // Equal height for each .post-col.list-item
-                setEqualHeight();
-
                 // Set title
                 setArchiveTitle();
                 // For show/hide previous prev page in a pager.
@@ -1365,6 +1362,9 @@ console.info('$listItem', $listItem);
 
             if (pageType !== 'item' && pageType !== 'static_page') {
                 $('.post-col').addClass('col col-md-6 col-sm-12 col-xs-12').removeClass('hide');;
+
+                // Equal height for each .post-col.list-item
+                setEqualHeight();
             }
             $('#body').removeClass('hidden');
             $('#footer').removeClass('hidden');
