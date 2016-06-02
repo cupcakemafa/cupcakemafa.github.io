@@ -641,6 +641,10 @@
                                                     <div class='attr' data-key='content'>summary_large_image</div>
                                                 </div>
                                                 <div class='param meta-tag'>
+                                                    <div class='attr' data-key='name'>twitter:image</div>
+                                                    <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
+                                                </div>
+                                                <div class='param meta-tag'>
                                                     <div class='attr' data-key='name'>twitter:image:src</div>
                                                     <div class='attr' data-key='content'><data:post.firstImageUrl/></div>
                                                 </div>
@@ -716,10 +720,11 @@
 
                                         <span class='comment hidden'>Start post data</span>
 
-                                        <!-- Start of Next/Prev Navi -->
                                         <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                            <div class='panel-heading padding text-center'>
-                                                <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                            <!-- Start single page -->
+                                            <!-- Start of Next/Prev Navi -->
+                                            <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                                <div class='panel-heading padding text-center'>
                                                     <div class='page-navi single hidden row no-margin'>
                                                         <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
                                                             <b:if cond='data:olderPageUrl'>
@@ -747,28 +752,20 @@
                                                             </b:if>
                                                         </div>
                                                     </div>
-                                                </b:if>
-                                            </div>
-                                        </b:if>
-                                        <!-- End of Next/Prev Navi -->
+                                                </div>
+                                            </b:if>
+                                            <!-- End of Next/Prev Navi -->
 
-                                        <div class='panel-heading text-center'>
-                                            <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-                                                <b:if cond='data:post.firstImageUrl'>
-                                                    <div class='text-center'>
-                                                        <a expr:href='data:post.url' expr:title='data:post.title'>
-                                                            <img class='thumb img-rounded' expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
-                                                        </a>
-                                                    </div>
+                                            <div class='panel-heading post-heading text-center'>
+                                                <b:if cond='data:post.dateHeader'>
+                                                    <h5 id='post-date'>
+                                                        <i class='fa fa-clock-o'/>
+                                                        <data:post.dateHeader/>
+                                                    </h5>
                                                 </b:if>
-                                            </b:if>
-                                            <b:if cond='data:post.dateHeader'>
-                                                <h5 id='post-date'>
-                                                    <i class='fa fa-clock-o'/>
-                                                    <data:post.dateHeader/>
-                                                </h5>
-                                            </b:if>
-                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                                <h1 class='taped' id='post-title'>
+                                                    <data:post.title/>
+                                                </h1>
                                                 <b:if cond='data:post.labels'>
                                                     <nav class='margin'>
                                                         <ul class='pager'>
@@ -782,39 +779,15 @@
                                                         </ul>
                                                     </nav>
                                                 </b:if>
-                                            </b:if>
-                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
-                                                <h1 class='taped' id='post-title'>
-                                                    <data:post.title/>
-                                                </h1>
-                                            <b:else/>
-                                                <h1 class='taped'>
-                                                    <a expr:href='data:post.url' expr:title='data:post.title' class='block'>
-                                                        <data:post.title/>
-                                                    </a>
-                                                </h1>
-                                            </b:if>
-                                        </div>
-                                        <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
+                                            </div><!-- End .post-heading -->
 
-                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
+                                            <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
                                                 <div class="row">
                                                     <div class="col-xs-12 col-md-10 col-md-offset-1">
                                                         <data:post.body/>
                                                     </div>
                                                 </div>
-                                            <b:else/>
-                                                <div class='post-summary hidden'>
-                                                    <div id='id'><data:post.id/></div>
-                                                    <div id='title'><data:post.title/></div>
-                                                    <div id='url'><data:post.url/></div>
-                                                    <div id='content'>
-                                                        <data:post.body/>
-                                                    </div>
-                                                </div>
-                                            </b:if>
 
-                                            <b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>
                                                 <b:if cond='data:post.location'>
                                                     <div class='post-location text-center'>
 <!--
@@ -885,6 +858,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- Begin Post Social Share -->
+
                                                 <!-- End Bookmark -->
                                                 <div class='row'>
                                                     <h3 class='text-center padding-top padding-bottom'>
@@ -896,6 +870,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- End Bookmark -->
+
                                                 <!-- Begin Follow -->
                                                 <div class='row no-margin margin-top'>
                                                     <h3 class='text-center padding-top padding-bottom'>
@@ -954,16 +929,9 @@
                                                 </script>
                                                 <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>
                                                 <!-- End Comment Form -->
-                                            </b:if>
-                                        </div>
-                                        <div class='panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
+                                            </div><!-- End .post-body -->
 
-                                            <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
-                                                <a expr:href='data:post.url' expr:title='data:post.title' class='btn btn-default btn-block'>
-                                                    続きを読む <i class='fa fa-chevron-right'></i>
-                                                </a>
-                                            <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
-
+                                            <div class='post-footer panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
                                                 <!-- Begin related posts -->
                                                 <div id='related-posts' class='hidden'>
                                                     <h3 class='text-center margin-top'>
@@ -977,7 +945,7 @@
                                                 <b:if cond='data:olderPageUrl or data:newerPageUrl'>
                                                     <div class='page-navi single hidden row no-margin margin-top clearfix'>
                                                         <b:if cond='data:olderPageUrl'>
-                                                            <div class='media no-padding col-md-6 col-sm-12 col-xs-12'>
+                                                            <div class='media no-padding padding-top padding-bottom col-md-6 col-sm-12 col-xs-12'>
                                                                 <div class='media-left no-padding'>
                                                                     <a class='prev-link thumb' expr:href='data:olderPageUrl'>
                                                                         <img class='margin-right link-thumb media-object img-rounded' data-src='' alt='' />
@@ -994,7 +962,7 @@
                                                             </div>
                                                         </b:if>
                                                         <b:if cond='data:newerPageUrl'>
-                                                            <div class='media no-padding no-margin col-md-6 col-sm-12 col-xs-12'>
+                                                            <div class='media no-padding no-margin padding-top padding-bottom col-md-6 col-sm-12 col-xs-12'>
                                                                 <div class='media-body text-right'>
                                                                     <a class='next-link title block' expr:href='data:newerPageUrl'>
                                                                         <h4 class='no-margin margin-bottom no-padding'>
@@ -1021,8 +989,76 @@
                                                         TOP
                                                     </a>
                                                 </p>
-                                            </b:if>
-                                        </div>
+                                            </div><!-- End .post-footer -->
+
+                                            <!-- End single page -->
+                                        <b:else/>
+                                            <!-- Start list page -->
+
+                                            <div class='post-heading panel-heading text-center clearfix'>
+                                                <div class='col-xs-12'>
+                                                    <b:if cond='data:post.dateHeader'>
+                                                        <h5 id='post-date'>
+                                                            <i class='fa fa-clock-o'/>
+                                                            <data:post.dateHeader/>
+                                                        </h5>
+                                                    </b:if>
+                                                    <h1 class='taped margin-top margin-bottom'>
+                                                        <a expr:href='data:post.url' expr:title='data:post.title' class='block'>
+                                                            <data:post.title/>
+                                                        </a>
+                                                    </h1>
+                                                </div>
+                                            </div><!-- End .post-heading -->
+
+                                            <div class='panel-body post-body' expr:id='&quot;post-&quot; + data:post.id'>
+                                                <b:if cond='data:post.firstImageUrl'>
+                                                    <div class='col-xs-4 col-sm-12 no-padding'>
+                                                        <div class='thumbnail no-margin margin-bottom text-center'>
+                                                            <a expr:href='data:post.url' expr:title='data:post.title'>
+                                                                <img class='thumb no-margin' expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class='col-xs-8 col-sm-12 no-padding padding-left'>
+                                                        <div class='post-summary height-auto no-padding hidden'>
+                                                            <div id='id'><data:post.id/></div>
+                                                            <div id='title'><data:post.title/></div>
+                                                            <div id='url'><data:post.url/></div>
+                                                            <div id='content'>
+                                                                <data:post.body/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <b:else/>
+                                                    <div class="col-xs-12 col-sm-12">
+                                                        <b:if cond='data:post.dateHeader'>
+                                                            <h5 id='post-date'>
+                                                                <i class='fa fa-clock-o'/>
+                                                                <data:post.dateHeader/>
+                                                            </h5>
+                                                        </b:if>
+                                                        <div class='post-summary height-auto hidden'>
+                                                            <div id='id'><data:post.id/></div>
+                                                            <div id='title'><data:post.title/></div>
+                                                            <div id='url'><data:post.url/></div>
+                                                            <div id='content'>
+                                                                <data:post.body/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </b:if>
+                                            </div><!-- End .post-body -->
+
+                                            <div class='post-footer panel-footer text-center' expr:id='&quot;footer-&quot; + data:post.id'>
+                                                <a expr:href='data:post.url' expr:title='data:post.title' class='btn btn-default btn-block'>
+                                                    続きを読む <i class='fa fa-chevron-right'></i>
+                                                </a>
+                                            </div><!-- End .post-footer -->
+
+                                            <!-- End list page -->
+                                        </b:if>
+
                                         <span class='comment hidden'>End post data</span>
                                     </article>
                                 </div>
@@ -1947,8 +1983,10 @@
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/ms.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
     </b:if>
+<!--
     <script type='text/javascript' src='//use.typekit.net/vmo4jem.js'></script>
     <script type='text/javascript'>try{Typekit.load({ async: true });}catch(e){}</script>
+-->
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='true'></script>
     <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
         <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
@@ -1978,9 +2016,6 @@
             {{/each}}
         </div>
     </script>
-    <!-- Begin Google Analytics -->
-    <b:include data='blog' name='google-analytics'/>
-    <!-- End Google Analytics -->
     <script type='text/javascript'>
         //<![CDATA[
             !(function($){
@@ -1988,7 +2023,7 @@
                 ADJUST_BOTTOM=8,
                 heightOne, heightTwo, $elmOne, $elmTwo,
                 $listItem=$('.post-col.list-item'),
-                i=0, l=$listItem.length;
+                i, l=$listItem.length;
             for(i=0;i<l;i+=2) {
                 $elmOne=$($listItem.eq(i));
                 $elmTwo=$($listItem.eq(i+1));
@@ -2019,5 +2054,8 @@
             })(jQuery);
         //]]>
     </script>
+    <!-- Begin Google Analytics -->
+    <b:include data='blog' name='google-analytics'/>
+    <!-- End Google Analytics -->
     </body>
 </html>
