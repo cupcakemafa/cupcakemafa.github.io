@@ -95,6 +95,14 @@ ul.no-dot li {
     padding-top: 8px !important;
 }
 
+.height-auto {
+    height: auto !important;
+}
+
+.width-auto {
+    width: auto !important;
+}
+
 .no-border {
     border: none !important;
 }
