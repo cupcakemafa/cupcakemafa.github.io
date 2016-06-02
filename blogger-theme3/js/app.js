@@ -1365,10 +1365,10 @@
             $('#body').removeClass('hidden');
             $('#footer').removeClass('hidden');
 
-            if (!isMobile() && pageType !== 'item' && pageType !== 'static_page') {
-                // Equal height for each .post-col.list-item
-                setEqualHeight();
-            }
+//            if (!isMobile() && pageType !== 'item' && pageType !== 'static_page') {
+//                // Equal height for each .post-col.list-item
+//                setEqualHeight();
+//            }
 
             setHeadRoom();
 
