@@ -1091,17 +1091,17 @@
         },
         setAffiliateItemTag = function (itemData) {
             var
-                $affiliateBoxTpl = $('#affiliate-box-tpl'),
+//                $affiliateBoxTpl = $('#affiliate-box-tpl'),
                 $affiliateBox = $('#affiliate-box'),
                 source, template, values, html;
-            if ($affiliateBoxTpl.length) {
+//            if ($affiliateBoxTpl.length) {
 //                source = $affiliateBoxTpl.html();
 //                template = Handlebars.compile(source);
                 html = Handlebars.templates['affiliate-box-tpl.hbs'](itemData);
                 if ($affiliateBox.length) {
                     $affiliateBox.html(html);
                 }
-            }
+//            }
         },
         setAffiliateItems = function () {
             // Start of Set affiliate item list
