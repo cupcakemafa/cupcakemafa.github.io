@@ -1,0 +1,26 @@
+<h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
+<div class='container'>
+    {{#each items}}
+    <div class='row'>
+        <div class='col-xs-12'>
+            <div class='babylink-box'>
+                <div class='babylink-image'>
+                    <img src='{{thumb}}' alt='{{name}}' />
+                </div>
+                <div class='babylink-info'>
+                    <div class='babylink-title'>
+                        {{{name}}}
+                    </div>
+                    <div class='babylink-description'>
+                        {{#if url.amazon}}
+                        <a href='{{url.amazon}}' rel='nofollow' target='_blank' class='exLink' title='{{name}}'>
+                            <img src='https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png' alt='{{name}}' />
+                        </a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

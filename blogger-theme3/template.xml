@@ -1559,36 +1559,6 @@
                 <b:widget id='HTML3' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ2' type='HTML' visible='true'>
                     <b:includable id='main'>
                         <div class='sidebar'>
-<!--
-                            <div class='oshirase post panel panel-default'>
-                                <div class='panel-heading no-padding'>
-                                    <div class='media'>
-                                        <div class='media-left icon-box'>
-                                            <img class='img-rounded icon' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s128/22.png' alt='LINEスタンプ Part2 も発売中!!' />
-                                        </div>
-                                        <div class='media-body'>
-                                            <span class='title'>Oshirase</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='panel-body'>
-                                    <h4 class='title text-center'>LINEスタンプPart2も発売中!!</h4>
-                                    <p class='text-center'>
-                                        <a href='http://line.me/S/sticker/1222589' rel='external' target='sub'>
-                                            <img alt='LINEスタンプ Part2 も発売中!!' class='img-rounded' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png'/>
-                                        </a>
-                                    </p>
-                                    <p>
-                                        ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
-                                        カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい&#12290;
-                                    </p>
-                                </div>
-                                <div class='panel-footer'>
-                                    <a href='/2015/12/line-stamp-nao-and-ken-part-2.html' class='btn btn-default btn-block'>スタンプPart2を見てみる <i class='fa fa-chevron-right'></i></a>
-                                </div>
-                            </div>
--->
-
                             <div class='oshirase post panel panel-default'>
                                 <div class='panel-heading no-padding'>
                                     <div class='media'>
@@ -1988,49 +1958,23 @@
 
     <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.min.js'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js'></script>
-    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.min.js'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/jQuery.headroom.min.js'></script>
     <script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
+        <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/template.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/ms.min.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/app.min.js'></script>
     <b:else/>
+        <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/template.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/ms.js'></script>
         <script type='text/javascript' src='//cupcakemafa.github.io/blogger-theme3/js/app.js'></script>
     </b:if>
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='true'></script>
-    <script id='affiliate-box-tpl' type='text/x-handlebars-template'>
-        <h2 class='post-title taped'>「{{title}}」なアイテムたち</h2>
-        <div class='container'>
-            {{#each items}}
-            <div class='row'>
-                <div class='col-xs-12'>
-                    <div class='babylink-box'>
-                        <div class='babylink-image'>
-                            <img src='{{thumb}}' alt='{{name}}' />
-                        </div>
-                        <div class='babylink-info'>
-                            <div class='babylink-title'>
-                                {{{name}}}
-                            </div>
-                            <div class='babylink-description'>
-                                {{#if url.amazon}}
-                                <a href='{{url.amazon}}' rel='nofollow' target='_blank' class='exLink' title='{{name}}'>
-                                    <img src='https://3.bp.blogspot.com/-_XCj7wB9M84/VtJ3STdYDlI/AAAAAAAAB0Q/QzabhTVTOtI/s1600/assocbutt_or_detail._V371070159_.png' alt='{{name}}' />
-                                </a>
-                                {{/if}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
-    </script>
     <script type='text/javascript'>
         //<![CDATA[
-            !(function($){
+        !(function($){
             var
                 ADJUST_BOTTOM=8,
                 heightOne, heightTwo, $elmOne, $elmTwo,
@@ -2063,7 +2007,7 @@
                     }
                 }
             }
-            })(jQuery);
+        })(jQuery);
 
         // Begin Twitter widget
         !function(d,s,id){
