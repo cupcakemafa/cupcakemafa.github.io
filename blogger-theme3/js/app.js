@@ -1304,6 +1304,23 @@
         isMobile = function() {
             return util.getQueryString('m', 0) ? true : false;
         },
+        checkLdJsonArticle = function() {
+            $('script[type="application/ld+json"]').each(function(idx, elm) {
+                var
+                    $this = $(this),
+                    ldJSON = JSON.parse($this.html()),
+                    img;
+                if(ldJSON && ldJSON.hasOwnProperty('image') && ldJSON.image.hasOwnProperty('url') && ldJSON.image.url) {
+                    img = new Image();
+                    img.src = ldJSON.image.url;
+                    if(img.width && img.height) {
+                        ldJSON.image.width = img.width;
+                        ldJSON.image.height = img.height;
+                        $this.html(JSON.stringify(ldJSON));
+                    }
+                }
+            });
+        },
         //
         // Main
         //
@@ -1350,6 +1367,7 @@
                 checkLastPage();
             } else if (pageType === 'item') {
                 setSinglePageNavi();
+                checkLdJsonArticle();
             }
 
             $('body').addClass(pageType);
