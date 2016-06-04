@@ -1212,7 +1212,7 @@
 //                    share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
 //                    share_tag += 'data-dnt="false">Tweet</a>';
                     share_tag = '<a href="https://twitter.com/share?url=' + SHARE_URL + '&text=' + getTweetText(lucky_word) + '&via=' + SHARE_VIA + '&related=' + SHARE_VIA + '&hushtags=' + HUSH_TAG + '" ';
-                    share_tag += 'class="twitter-share-button">Tweet</a>';
+                    share_tag += 'class="twitter-share-button" data-size="large">Tweet</a>';
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
                 }
 //                // activate tweet button
