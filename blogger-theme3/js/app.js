@@ -1213,17 +1213,17 @@
                     share_tag += 'data-dnt="false">Tweet</a>';
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
                 }
-                // activate tweet button
-                ! function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0],
-                        p = /^http:/.test(d.location) ? 'http' : 'https';
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = p + '://platform.twitter.com/widgets.js';
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, 'script', 'twitter-wjs');
+//                // activate tweet button
+//                ! function (d, s, id) {
+//                    var js, fjs = d.getElementsByTagName(s)[0],
+//                        p = /^http:/.test(d.location) ? 'http' : 'https';
+//                    if (!d.getElementById(id)) {
+//                        js = d.createElement(s);
+//                        js.id = id;
+//                        js.src = p + '://platform.twitter.com/widgets.js';
+//                        fjs.parentNode.insertBefore(js, fjs);
+//                    }
+//                }(document, 'script', 'twitter-wjs');
 
                 var $open_lucky = $('#open-lucky'),
                     $lucky_header = $('#lucky-header');
