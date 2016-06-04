@@ -1204,28 +1204,30 @@
                     $('#lucky-icon-' + looper[i]).attr('src', icon[i]);
                     $('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
                     lucky_word = word[i].text;
-//                    share_tag = '<a href="https://twitter.com/share" ';
-//                    share_tag += 'class="twitter-share-button" data-url="' + SHARE_URL + '" ';
-//                    share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
-//                    share_tag += 'data-via="' + SHARE_VIA + '" data-size="large" ';
-//                    share_tag += 'data-related="' + SHARE_VIA + '" ';
-//                    share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
-//                    share_tag += 'data-dnt="false">Tweet</a>';
-                    share_tag = '<a href="https://twitter.com/share?url=' + SHARE_URL + '&text=' + getTweetText(lucky_word) + '&via=' + SHARE_VIA + '&related=' + SHARE_VIA + '&hushtags=' + HUSH_TAG + '" ';
-                    share_tag += 'class="twitter-share-button" data-size="large">Tweet</a>';
+                    share_tag = '<a href="https://twitter.com/share" ';
+                    share_tag += 'class="twitter-share-button" data-url="' + SHARE_URL + '" ';
+                    share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
+                    share_tag += 'data-via="' + SHARE_VIA + '" data-size="large" ';
+                    share_tag += 'data-related="' + SHARE_VIA + '" ';
+                    share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
+                    share_tag += 'data-dnt="false">Tweet</a>';
+
+//                    share_tag = '<a href="https://twitter.com/share?url=' + SHARE_URL + '&text=' + getTweetText(lucky_word) + '&via=' + SHARE_VIA + '&related=' + SHARE_VIA + '&hushtags=' + HUSH_TAG + '" ';
+//                    share_tag += 'class="twitter-share-button" data-size="large">Tweet</a>';
+
                     $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
+                    // activate tweet button
+                    ! function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + '://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, 'script', 'twitter-wjs');
                 }
-//                // activate tweet button
-//                ! function (d, s, id) {
-//                    var js, fjs = d.getElementsByTagName(s)[0],
-//                        p = /^http:/.test(d.location) ? 'http' : 'https';
-//                    if (!d.getElementById(id)) {
-//                        js = d.createElement(s);
-//                        js.id = id;
-//                        js.src = p + '://platform.twitter.com/widgets.js';
-//                        fjs.parentNode.insertBefore(js, fjs);
-//                    }
-//                }(document, 'script', 'twitter-wjs');
 
                 var $open_lucky = $('#open-lucky'),
                     $lucky_header = $('#lucky-header');
