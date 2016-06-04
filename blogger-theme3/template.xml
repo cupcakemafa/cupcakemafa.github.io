@@ -379,7 +379,7 @@
                                 </div>
                                 <div class='post-col col col-md-6 col-sm-12 col-xs-12'>
                                     <div class='panel panel-default lucky-word-box'>
-                                        <div class='panel-heading stripe yellow-light text-center clearfix'>
+                                        <div id='lucky-header' class='panel-heading stripe yellow-light text-center clearfix' disabled='disabled' data-toggle='modal' data-target='#lucky-icons'>
                                             <h3 class='content-title no-margin'>
                                                 Lucky
                                                 <img class='lucky-icon small img-rounded' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s1600/10.png' />
@@ -390,7 +390,7 @@
                                             </p>
                                         </div>
                                         <div class='panel-body text-center'>
-                                            <button type="button" id="open-lucky" class="btn btn-success btn-block" disabled="disabled" data-toggle="modal" data-target="#lucky-icons">
+                                            <button type='button' id='open-lucky' class='btn btn-success btn-block' disabled='disabled' data-toggle='modal' data-target='#lucky-icons'>
                                                 ラッキーワードをみてみる!!
                                             </button>
                                         </div>
@@ -478,13 +478,13 @@
                                 </div>
                             </div>
 
-                            <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
+                            <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-b-label'>
                                 <div class='modal-dialog lucky-word-modal' role='document'>
                                     <div class='modal-content'>
 
                                         <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
                                             <div class='col-xs-12 col-md-8 col-md-offset-2'>
-                                                <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
+                                                <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>
                                                     Lucky Word
                                                 </h3>
                                                 <p class='no-padding padding-top'>

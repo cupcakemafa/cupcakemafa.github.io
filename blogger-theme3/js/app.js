@@ -1225,9 +1225,10 @@
                     }
                 }(document, 'script', 'twitter-wjs');
 
-                var $open_lucky = $('#open-lucky');
+                var $open_lucky = $('#open-lucky'),
+                    $lucky_header = $('#lucky-header');
                 $open_lucky.prop('disabled', false);
-                //$open_lucky.removeClass('disabled');
+                $lucky_header.prop('disabled', false);
             }
         },
         setLazyLoad = function () {
