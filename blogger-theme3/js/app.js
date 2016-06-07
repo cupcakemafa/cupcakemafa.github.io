@@ -270,6 +270,19 @@
         return baseObj;
     }
 
+    /**
+     * 文字列がJSONかチェック
+     * @param {string} str
+     */
+    function Util_isJson(str) {
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
+
     // Header -----------------------------------------------
     Util.prototype.isDefined = Util_isDefined; // Util#isDefined():Object
     Util.prototype.getPlatform = Util_getPlatform; // Util#getPlatform():Object
@@ -283,6 +296,7 @@
     Util.prototype.arrayMerge = Util_arrayMerge; // Util#arrayMerge():Object
     Util.prototype.objectMerge = Util_objectMerge; // Util#objectMerge():Object
     Util.prototype.getQueryString = Util_getQueryString; // Util#getQueryString():Object
+    Util.prototype.isJson = Util_isJson; // Util#Util_isJson():Object
 
     // Exports ----------------------------------------------
     if (global.hasOwnProperty("process")) {
@@ -1309,12 +1323,16 @@
         isMobile = function() {
             return util.getQueryString('m', 0) ? true : false;
         },
+
         checkLdJsonArticle = function() {
             $('script[type="application/ld+json"]').each(function(idx, elm) {
                 var
                     $this = $(this),
-                    ldJSON = JSON.parse($this.html()),
-                    img;
+                    html = $this.html(),
+                    ldJSON = false, img;
+                if(html && util.isJson(html)) {
+                    ldJSON = JSON.parse(html);
+                }
                 if(ldJSON && ldJSON.hasOwnProperty('image') && ldJSON.image.hasOwnProperty('url') && ldJSON.image.url) {
                     img = new Image();
                     img.src = ldJSON.image.url;
