@@ -294,7 +294,7 @@
 </div>
 </lucky-word-modal>
 
-<footer>
+<site-footer>
 <div class='container'>
     <div class='row'>
         <div class='col-md-4'>
@@ -340,7 +340,6 @@
     </div>
 </div>
 <script>
-var date = new Date(),
-    this.nowYear = date.getFullYear();
+    this.nowYear = new Date().getFullYear();
 </script>
-</footer>
+</site-footer>
