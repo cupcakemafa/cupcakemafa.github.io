@@ -1,175 +1,295 @@
 <header-nav>
-    <nav id='header-navi' class='navbar navbar-default navbar-fixed-top'>
-        <div class='container'>
-        <!-- Brand and toggle get grouped for better mobile display -->
-            <div class='navbar-header page-scroll'>
-                <button type='button' class='navbar-toggle' data-toggle='collapse' data-aria-expanded='false' data-target='#bs-navbar-collapse-1'>
-                    <span class='sr-only'>Toggle navigation</span>
-                    <span class='icon-bar'></span>
-                    <span class='icon-bar'></span>
-                    <span class='icon-bar'></span>
-                </button>
-                <a class='navbar-brand page-scroll' href='/'>Cupcakemafa</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class='collapse navbar-collapse' id='bs-navbar-collapse-1'>
-                <ul class='nav navbar-nav navbar-right'>
-                    <li class='hidden'>
-                        <a href='#page-top'></a>
-                    </li>
-                    <li>
-                        <a href='/2016/05/about-us.html'>
-                            <i class='fa fa-rocket'></i> ABOUT US
-                        </a>
-                    </li>
-                    <li>
-                        <a href='/search/label/NEWS'>
-                            <i class='fa fa-file-text'></i> NEWS
-                        </a>
-                    </li>
-                    <li class='dropdown'>
-                        <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
-                            <i class='fa fa-star'></i> TRAVEL
-                            <span class='caret'></span>
-                        </button>
-                        <ul class='dropdown-menu'>
-                            <li><a href='/search/label/NEW%20YORK'>New York</a></li>
-                            <li><a href='/search/label/PARIS'>Paris</a></li>
-                            <li><a href='/search/label/BARCELONA'>Barcelona</a></li>
-                            <li><a href='/search/label/持ち物'>持ち物</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href='/search/label/BOOK'>
-                            <i class='fa fa-globe'></i> BOOK
-                        </a>
-                    </li>
-                    <li>
-                        <a href='/search/label/ART'>
-                            <i class='fa fa-heart'></i> ART
-                        </a>
-                    </li>
-                    <li class='dropdown'>
-                        <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
-                            <i class='fa fa-star'></i> KOBANASI
-                            <span class='caret'></span>
-                        </button>
-                        <ul class='dropdown-menu'>
-                            <li><a href='/p/kenzukan.html'>Ken Zukan</a></li>
-                            <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
-                        </ul>
-                    </li>
-                    <li class='visible-xs no-padding padding-right padding-left'>
-                        <hr />
-                        <h4 class='text-muted text-center'>
-                            <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
-                                LINEスタンプ<br />
-                                Part 2 も発売中!!
-                            </a>
-                        </h4>
-                        <h5 class='text-muted'>
-                            <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
-                                <img alt='LINEスタンプ Part2 も発売中!!' class='img-responsive float-center' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png' />
-                            </a>
-                        </h5>
-                        <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
-                            ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
-                            カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい。
-                        </a>
-                        <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink btn btn-default btn-block'>
-                            スタンプを見てみる <i class='fa fa-external-link'></i>
-                        </a>
-                    </li>
-                    <li class='visible-xs no-padding padding-right padding-left'>
-                        <hr />
-                        <h4 class='text-muted text-center'>
-                            <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
-                                LINEスタンプ発売中!!
-                            </a>
-                        </h4>
-                        <h5 class='text-muted'>
-                            <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
-                                <img alt='LINEスタンプ発売中!!' class='img-responsive float-center' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png' />
-                            </a>
-                        </h5>
-                        <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
-                            NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
-                            ぜひみてみてね!!
-                        </a>
-                        <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink btn btn-default btn-block'>
-                            スタンプを見てみる <i class='fa fa-external-link'></i>
-                        </a>
-                    </li>
-                    <li class='menu-search no-hover visible-xs- padding hidden'>
-                        <form action='/search' class='navbar-form form-inline navbar-right' method='get' role='search'>
-                            <div class='input-group padding-left padding-right'>
-                                <input class='form-control' name='q' placeholder='Search' type='search' />
-                                <span class='input-group-btn'>
-                                    <button class='btn btn-default' type='button'>
-                                        <i class='fa fa-search'></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </form>
-                    </li>
-                    <li class='padding visible-xs'>
-                        <hr />
-                        <button href='#' class='btn btn-default btn-lg btn-block' data-toggle='collapse' data-target='#bs-navbar-collapse-1'><i class='fa fa-close'></i> Close</button>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<nav id='header-navi' class='navbar navbar-default navbar-fixed-top'>
+    <div class='container'>
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class='navbar-header page-scroll'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-aria-expanded='false' data-target='#bs-navbar-collapse-1'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>Cupcakemafa</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class='collapse navbar-collapse' id='bs-navbar-collapse-1'>
+            <ul class='nav navbar-nav navbar-right'>
+                <li class='hidden'>
+                    <a href='#page-top'></a>
+                </li>
+                <li>
+                    <a href='/2016/05/about-us.html'>
+                        <i class='fa fa-rocket'></i> ABOUT US
+                    </a>
+                </li>
+                <li>
+                    <a href='/search/label/NEWS'>
+                        <i class='fa fa-file-text'></i> NEWS
+                    </a>
+                </li>
+                <li class='dropdown'>
+                    <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+                        <i class='fa fa-star'></i> TRAVEL
+                        <span class='caret'></span>
+                    </button>
+                    <ul class='dropdown-menu'>
+                        <li><a href='/search/label/NEW%20YORK'>New York</a></li>
+                        <li><a href='/search/label/PARIS'>Paris</a></li>
+                        <li><a href='/search/label/BARCELONA'>Barcelona</a></li>
+                        <li><a href='/search/label/持ち物'>持ち物</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='/search/label/BOOK'>
+                        <i class='fa fa-globe'></i> BOOK
+                    </a>
+                </li>
+                <li>
+                    <a href='/search/label/ART'>
+                        <i class='fa fa-heart'></i> ART
+                    </a>
+                </li>
+                <li class='dropdown'>
+                    <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+                        <i class='fa fa-star'></i> KOBANASI
+                        <span class='caret'></span>
+                    </button>
+                    <ul class='dropdown-menu'>
+                        <li><a href='/p/kenzukan.html'>Ken Zukan</a></li>
+                        <li><a href='/p/kenzukan-ep-s1.html'>Season 1</a></li>
+                    </ul>
+                </li>
+                <li class='visible-xs no-padding padding-right padding-left'>
+                    <hr />
+                    <h4 class='text-muted text-center'>
+                        <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
+                            LINEスタンプ<br />
+                            Part 2 も発売中!!
+                        </a>
+                    </h4>
+                    <h5 class='text-muted'>
+                        <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
+                            <img alt='LINEスタンプ Part2 も発売中!!' class='img-responsive float-center' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png' />
+                        </a>
+                    </h5>
+                    <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
+                        ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!!
+                        カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい。
+                    </a>
+                    <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink btn btn-default btn-block'>
+                        スタンプを見てみる <i class='fa fa-external-link'></i>
+                    </a>
+                </li>
+                <li class='visible-xs no-padding padding-right padding-left'>
+                    <hr />
+                    <h4 class='text-muted text-center'>
+                        <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
+                            LINEスタンプ発売中!!
+                        </a>
+                    </h4>
+                    <h5 class='text-muted'>
+                        <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
+                            <img alt='LINEスタンプ発売中!!' class='img-responsive float-center' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png' />
+                        </a>
+                    </h5>
+                    <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
+                        NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!!
+                        ぜひみてみてね!!
+                    </a>
+                    <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink btn btn-default btn-block'>
+                        スタンプを見てみる <i class='fa fa-external-link'></i>
+                    </a>
+                </li>
+                <li class='menu-search no-hover visible-xs- padding hidden'>
+                    <form action='/search' class='navbar-form form-inline navbar-right' method='get' role='search'>
+                        <div class='input-group padding-left padding-right'>
+                            <input class='form-control' name='q' placeholder='Search' type='search' />
+                            <span class='input-group-btn'>
+                                <button class='btn btn-default' type='button'>
+                                    <i class='fa fa-search'></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class='padding visible-xs'>
+                    <hr />
+                    <button href='#' class='btn btn-default btn-lg btn-block' data-toggle='collapse' data-target='#bs-navbar-collapse-1'><i class='fa fa-close'></i> Close</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 </header-nav>
 
-
 <top-header>
-    <div class='row'>
-        <div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
-            <div class='panel panel-default'>
-                <div class='panel-body'>
-                    <div class='text-center' id='header-box'>
-                        <img alt='Cupcakemafa' class='full-width' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png' />
-                        <p class='text-muted description no-margin'>
-                            ちょっとしたことで日常に笑いを。<br />
-                            そんな思いを持ちながらゆるーく活動しています。
-                        </p>
-                    </div>
-                </div>
+<div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
+    <div class='panel panel-default'>
+        <div class='panel-body'>
+            <div class='text-center' id='header-box'>
+                <img alt='Cupcakemafa' class='full-width' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png' />
+                <p class='text-muted description no-margin'>
+                    ちょっとしたことで日常に笑いを。<br />
+                    そんな思いを持ちながらゆるーく活動しています。
+                </p>
             </div>
-            <!-- //.panel -->
         </div>
-        <!-- //.post-col -->
-        <div class='col col-md-6 col-sm-12 col-xs-12'>
-            <div class='panel panel-default lucky-word-box'>
-                <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
-                    <div class='row clearfix'>
-                        <div class='col-xs-3 no-padding'>
-                            <img class='lucky-icon img-responsive pull-right' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png' />
-                        </div>
-                        <div class='col-xs-6 no-padding'>
-                            <h3 class='content-title no-margin margin-top text-center'>
-                                Lucky Word
-                                <p class='text-muted no-margin'>今日はどんな<br />フィールライク？</p>
-                            </h3>
-                        </div>
-                        <div class='col-xs-3 no-padding'>
-                            <img class='lucky-icon img-responsive pull-left' src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png' />
-                        </div>
-                    </div>
-                </div>
-                <div class='panel-body text-center'>
-                    <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
-                        <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
-                    </button>
-                </div>
-            </div>
-            <!-- //.panel -->
-        </div>
-        <!-- //.post-col -->
     </div>
-    <!-- //.row -->
+    <!-- //.panel -->
+</div>
 </top-header>
+
+<lucky-word-panel>
+<!-- //.post-col -->
+<div class='col col-md-6 col-sm-12 col-xs-12'>
+    <div class='panel panel-default lucky-word-box'>
+        <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
+            <div class='row clearfix'>
+                <div class='col-xs-3 no-padding'>
+                    <img class='lucky-icon img-responsive pull-right' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png' />
+                </div>
+                <div class='col-xs-6 no-padding'>
+                    <h3 class='content-title no-margin margin-top text-center'>
+                        Lucky Word
+                        <p class='text-muted no-margin'>今日はどんな<br />フィールライク？</p>
+                    </h3>
+                </div>
+                <div class='col-xs-3 no-padding'>
+                    <img class='lucky-icon img-responsive pull-left' src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png' />
+                </div>
+            </div>
+        </div>
+        <div class='panel-body text-center'>
+            <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
+                <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
+            </button>
+        </div>
+    </div>
+    <!-- //.panel -->
+</div>
+<!-- //.post-col -->
+</lucky-word-panel>
+
+<lucky-word-modal>
+<!-- Modal -->
+<div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
+    <div class='modal-dialog margin-top' role='document'>
+        <div class='modal-content'>
+            <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                    <img class='lucky-icon float-center' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
+                    <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
+                Good Choice
+            </h3>
+                    <p class='text-muted'>
+                        どちらか直感で選んでねっ!!
+                    </p>
+                </div>
+            </div>
+            <div class='modal-body'>
+                <div class='row'>
+                    <div class='col-xs-6 text-center'>
+                        <p>
+                            <img id='lucky-icon-a' class='lucky-icon img-responsive' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
+                            />
+                            <br />
+                        </p>
+                        <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
+                            セレクト
+                        </button>
+                    </div>
+                    <div class='col-xs-6 text-center'>
+                        <p>
+                            <img id='lucky-icon-b' class='lucky-icon img-responsive' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
+                            />
+                            <br />
+                        </p>
+                        <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
+                            セレクト
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
+    <div class='modal-dialog lucky-word-modal' role='document'>
+        <div class='modal-content'>
+            <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                    <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
+                Lucky Word
+                </h3>
+                    <p class='text-muted'>
+                        あなたのラッキーワードは…
+                    </p>
+                </div>
+            </div>
+            <div class='modal-body'>
+                <img id='lucky-word-a' class='lucky-word img-responsive float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' />
+                <hr />
+                <p class='text-muted text-center'>
+                    どこかのタイミングで
+                    <br /> この言葉をブチ込んでみて!!
+                    <br /> きっといい日になるはず!!
+                </p>
+                <div class='text-center row'>
+                    <div class='col-xs-6 text-right'>
+                        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                            チャオ!!
+                        </button>
+                    </div>
+                    <div class='col-xs-6 text-left'>
+                        <div class='share-this-content'>
+                            <span><a id='lucky-word-share-a' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-b-label'>
+    <div class='modal-dialog lucky-word-modal' role='document'>
+        <div class='modal-content'>
+            <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                    <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>
+                Lucky Word
+            </h3>
+                    <p class='text-muted'>
+                        あなたのラッキーワードは…
+                    </p>
+                </div>
+            </div>
+            <div class='modal-body'>
+                <img id='lucky-word-b' class='lucky-word img-responsive float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' />
+                <hr />
+                <p class='text-muted text-center'>
+                    どこかのタイミングで
+                    <br /> この言葉をブチ込んでみて!!
+                    <br /> きっといい日になるはず!!
+                </p>
+                <div class='text-center row'>
+                    <div class='col-xs-6 text-right'>
+                        <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                            チャオ!!
+                        </button>
+                    </div>
+                    <div class='col-xs-6 text-left'>
+                        <div class='share-this-content'>
+                            <span><a id='lucky-word-share-b' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</lucky-word-modal>
