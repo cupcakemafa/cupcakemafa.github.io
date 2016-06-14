@@ -124,3 +124,52 @@
         <!-- /.container-fluid -->
     </nav>
 </header-nav>
+
+
+<top-header>
+    <div class='row'>
+        <div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
+            <div class='panel panel-default'>
+                <div class='panel-body'>
+                    <div class='text-center' id='header-box'>
+                        <img alt='Cupcakemafa' class='full-width' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png' />
+                        <p class='text-muted description no-margin'>
+                            ちょっとしたことで日常に笑いを。<br />
+                            そんな思いを持ちながらゆるーく活動しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //.panel -->
+        </div>
+        <!-- //.post-col -->
+        <div class='col col-md-6 col-sm-12 col-xs-12'>
+            <div class='panel panel-default lucky-word-box'>
+                <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
+                    <div class='row clearfix'>
+                        <div class='col-xs-3 no-padding'>
+                            <img class='lucky-icon img-responsive pull-right' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png' />
+                        </div>
+                        <div class='col-xs-6 no-padding'>
+                            <h3 class='content-title no-margin margin-top text-center'>
+                                Lucky Word
+                                <p class='text-muted no-margin'>今日はどんな<br />フィールライク？</p>
+                            </h3>
+                        </div>
+                        <div class='col-xs-3 no-padding'>
+                            <img class='lucky-icon img-responsive pull-left' src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png' />
+                        </div>
+                    </div>
+                </div>
+                <div class='panel-body text-center'>
+                    <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
+                        <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
+                    </button>
+                </div>
+            </div>
+            <!-- //.panel -->
+        </div>
+        <!-- //.post-col -->
+    </div>
+    <!-- //.row -->
+</top-header>
