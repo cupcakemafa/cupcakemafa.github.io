@@ -390,10 +390,13 @@
     </div>
     <div class='widget-content panel-body text-left'>
         <div id='ArchiveList'>
-            <div id='BlogArchive1_ArchiveList'>
-
-            </div>
+            <ul>
+                <li each={ back_number_data.data } class='{ expClass }'>
+                    <a href='{ href }'>{ label } ({ count })</a>
+                </li>
+            </ul>
         </div>
+        <!-- // panel-body widget-content cloud-label-widget-content -->
     </div>
     <!-- //widget-content panel-body -->
 </div>
