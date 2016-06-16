@@ -358,6 +358,19 @@
 <!-- //section#contact -->
 </site-search>
 
+<tag-cloud>
+<span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
+    <span dir='{ langageDirection }'>
+        <a href='{ href }'>{ tag } ({ count })</a>
+    </span>
+</span>
+
+<script>
+    console.log('tag_cloud_data', tag_cloud_data);
+    this.tag_cloud_data = tag_cloud_data
+</script>
+</tag-cloud>
+
 <site-footer>
 <footer>
     <div class='container'>
