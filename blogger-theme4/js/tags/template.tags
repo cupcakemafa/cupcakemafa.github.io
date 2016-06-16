@@ -333,7 +333,7 @@
     </div>
     <div id='tagList' class='panel-body widget-content cloud-label-widget-content text-left'>
         <p class='text-muted'>
-            <img src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s128/01.png' class='team-icon img-responsive' alt='ながれで！' />
+            <img src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s320/01.png' class='team-icon img-responsive' alt='ながれで！' />
         </p>
         <span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
             <span dir='{ langageDirection }'>
