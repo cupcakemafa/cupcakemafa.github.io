@@ -301,7 +301,7 @@
     </div>
     <div class='panel-body'>
         <p class='text-muted'>
-            <img class='img-circle img-responsive team-icon' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png' alt='' />
+            <img class='img-circle img-responsive team-icon' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png' alt='Cupcakemafa' />
         </p>
         <p class='text-muted text-left'>
             ちょっとしたことで日常に笑いを;) そんな思いを持ちながらゆるく活動している夫婦です。 読み物アプリを作ったり、旅の情報を発信したり、試行錯誤中。 ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています。 どうぞ、よろしく。
@@ -317,7 +317,7 @@
     </div>
     <div class='panel-body'>
         <p class='text-muted'>
-            <img class='img-responsive' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg' class='img-rounded' alt='' />
+            <img class='img-responsive' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg' class='img-rounded' alt='Cupcakemafa' />
         </p>
         <p class='text-muted text-left'>カップケーキとマーファをくっつけた造語、それが『カップケーキマーファ （Cupcakemafa）』です。 カップケーキは、Naoの好物。マーファとは、Kenがその昔に映画でイタリア男性が「マフィア」の事を 「マーファ」と言っていたのを聞きかじったのがきっかけで、できた言葉なのです。 Kenに言わせれば、Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう。 時にカップケーキのように甘く、時にマフィアのように厳しい。まるで、人生のようですね。
             なんてね。そんなわけで、カップケーキマーファの誕生ですっ!!
@@ -325,6 +325,28 @@
     </div>
 </div>
 </about-us>
+
+<tag-cloud>
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        <h3>Tags</h3>
+    </div>
+    <div id='tagList' class='panel-body widget-content cloud-label-widget-content text-left'>
+        <p class='text-muted'>
+            <img src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s128/01.png' class='team-icon img-responsive' alt='ながれで！' />
+        </p>
+        <span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
+            <span dir='{ langageDirection }'>
+                <a href='{ href }'>{ tag } ({ count })</a>
+            </span>
+        </span>
+    </div>
+    <!-- // panel-body widget-content cloud-label-widget-content -->
+</div>
+<script>
+    this.tag_cloud_data = tag_cloud_data
+</script>
+</tag-cloud>
 
 <site-search>
 <section id='contact'>
@@ -357,53 +379,6 @@
 </section>
 <!-- //section#contact -->
 </site-search>
-
-<tag-cloud>
-<div class='panel panel-default'>
-    <div class='panel-heading'>
-        <p class='text-muted hidden'>
-            <img src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s128/01.png' class='team-icon img-responsive' alt='ながれで！' />
-        </p>
-        <h3>Tags</h3>
-    </div>
-    <div id='tagList' class='panel-body widget-content cloud-label-widget-content text-left'>
-        <span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
-            <span dir='{ langageDirection }'>
-                <a href='{ href }'>{ tag } ({ count })</a>
-            </span>
-        </span>
-    </div>
-    <!-- // panel-body widget-content cloud-label-widget-content -->
-</div>
-<script>
-    this.tag_cloud_data = tag_cloud_data
-</script>
-</tag-cloud>
-
-<back-number>
-<div class='panel panel-default'>
-    <div class='panel-heading'>
-        <p class='text-muted hidden'>
-            <img src='https://4.bp.blogspot.com/-N_0uwSaDoL8/VnS3fpvGwRI/AAAAAAAABXw/eLQpWoGjZTwqZGumIG4yicmnhd9-b8XpwCKgB/s128/14.png' class='img-responsive team-icon' alt='たしかにぃー' />
-        </p>
-        <h3>Back Number</h3>
-    </div>
-    <div class='widget-content panel-body text-left'>
-        <div id='ArchiveList'>
-            <ul>
-                <li each={ back_number_data.data } class='{ expClass }'>
-                    <a href='{ href }'>{ label } ({ count })</a>
-                </li>
-            </ul>
-        </div>
-        <!-- // panel-body widget-content cloud-label-widget-content -->
-    </div>
-    <!-- //widget-content panel-body -->
-</div>
-<script>
-    this.back_number_data = back_number_data
-</script>
-</back-number>
 
 <site-footer>
 <footer>
