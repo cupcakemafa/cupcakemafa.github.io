@@ -359,17 +359,48 @@
 </site-search>
 
 <tag-cloud>
-<span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
-    <span dir='{ langageDirection }'>
-        <a href='{ href }'>{ tag } ({ count })</a>
-    </span>
-</span>
-
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        <p class='text-muted hidden'>
+            <img src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s128/01.png' class='team-icon img-responsive' alt='ながれで！' />
+        </p>
+        <h3>Tags</h3>
+    </div>
+    <div id='tagList' class='panel-body widget-content cloud-label-widget-content text-left'>
+        <span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
+            <span dir='{ langageDirection }'>
+                <a href='{ href }'>{ tag } ({ count })</a>
+            </span>
+        </span>
+    </div>
+    <!-- // panel-body widget-content cloud-label-widget-content -->
+</div>
 <script>
-    console.log('tag_cloud_data', tag_cloud_data);
     this.tag_cloud_data = tag_cloud_data
 </script>
 </tag-cloud>
+
+<back-number>
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        <p class='text-muted hidden'>
+            <img src='https://4.bp.blogspot.com/-N_0uwSaDoL8/VnS3fpvGwRI/AAAAAAAABXw/eLQpWoGjZTwqZGumIG4yicmnhd9-b8XpwCKgB/s128/14.png' class='img-responsive team-icon' alt='たしかにぃー' />
+        </p>
+        <h3>Back Number</h3>
+    </div>
+    <div class='widget-content panel-body text-left'>
+        <div id='ArchiveList'>
+            <div id='BlogArchive1_ArchiveList'>
+
+            </div>
+        </div>
+    </div>
+    <!-- //widget-content panel-body -->
+</div>
+<script>
+    this.back_number_data = back_number_data
+</script>
+</back-number>
 
 <site-footer>
 <footer>
