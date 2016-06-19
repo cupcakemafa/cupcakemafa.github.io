@@ -3,6 +3,7 @@
 }
 
 body {
+/*
     font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
     color: #13191B;
     line-height: 1.7;
@@ -10,6 +11,7 @@ body {
     font-weight: 200;
     letter-spacing: -0.5px;
     word-spacing: 1px;
+*/
     /* story-title のカウンタを 0 にセット */
     counter-reset: story-title;
     padding-bottom: 3em;
@@ -20,7 +22,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+/*    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;*/
 }
 
 h4,
@@ -224,9 +226,8 @@ hr.dashed {
 
 
 /* Start social button */
-
+/*
 .btn-circle {
-    /* global button class */
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -244,7 +245,7 @@ hr.dashed {
     -webkit-border-radius: 15px;
     padding-top: 6px;
 }
-
+*/
 .facebook,
 .btn-circle.facebook {
     /*color: #3b5998;*/
