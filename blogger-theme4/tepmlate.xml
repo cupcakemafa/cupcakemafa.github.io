@@ -156,38 +156,38 @@
 </head>
 <body id='page-top' expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@graph": [{
-                "@type": "WebSite",
-                "url": "<data:blog.homepageUrl/>",
-                "name": "Cupcakemafa|カップケーキマーファ",
-                "description": "日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです",
-                "publisher": "Cupcakemafa",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "<data:blog.homepageUrl/>search?q={search_term}",
-                    "query-input": "required name=search_term"
-                }
-            }, {
-                "@type": "Organization",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
-                    "width": "1024",
-                    "height": "1024"
-                },
-                "url": "<data:blog.homepageUrl/>",
-                "name": "Cupcakemafa|カップケーキマーファ",
-                "sameAs": [
-                    "https://www.facebook.com/cupcakemafa",
-                    "https://twitter.com/cupcakemafa",
-                    "https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts",
-                    "https://www.youtube.com/c/Cupcakemafa2015/",
-                    "https://www.instagram.com/cupcakemafaofficial/"
-                ]
-            }]
-        }
+    {
+        "@context": "http://schema.org",
+        "@graph": [{
+            "@type": "WebSite",
+            "url": "<data:blog.homepageUrl/>",
+            "name": "Cupcakemafa|カップケーキマーファ",
+            "description": "日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです",
+            "publisher": "Cupcakemafa",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "<data:blog.homepageUrl/>search?q={search_term}",
+                "query-input": "required name=search_term"
+            }
+        }, {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
+                "width": "1024",
+                "height": "1024"
+            },
+            "url": "<data:blog.homepageUrl/>",
+            "name": "Cupcakemafa|カップケーキマーファ",
+            "sameAs": [
+                "https://www.facebook.com/cupcakemafa",
+                "https://twitter.com/cupcakemafa",
+                "https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts",
+                "https://www.youtube.com/c/Cupcakemafa2015/",
+                "https://www.instagram.com/cupcakemafaofficial/"
+            ]
+        }]
+    }
     </script>
 
     <!-- Begin Page type for markup -->
@@ -364,6 +364,156 @@
                         <!-- //List Page -->
                     <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
                         <!-- Single Post or Static Page -->
+                        <script type="application/ld+json">
+                        {
+                            "@context": "http://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": "<data:post.title/>",
+                            <b:if cond='data:blog.metaDescription'>
+                            "alternativeHeadline": "<data:post.metaDescription/>",
+                            <b:else/>
+                            "alternativeHeadline": "<data:post.snippet/>",
+                            </b:if>
+                            "image": {
+                                "@type": "ImageObject",
+                                "url": "<data:post.firstImageUrl/>",
+                                "width": "300",
+                                "height": "255"
+                            },
+                            "genre": "",
+                            "keywords": "Art Lifestyle Travel",
+                            "wordcount": "",
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Cupcakemafa",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
+                                    "width": "1024",
+                                    "height": "1024"
+                                }
+                            },
+                            "mainEntityOfPage":{
+                                "@type":"WebPage",
+                                "@id":"<data:post.canonicalUrl/>"
+                            },
+                            "url": "<data:post.canonicalUrl/>",
+                            "datePublished": "<data:post.timestampISO8601/>",
+                            "dateCreated": "<data:post.timestampISO8601/>",
+                            "dateModified": "<data:post.timestampISO8601/>",
+                            <b:if cond='data:blog.metaDescription'>
+                            "description": "<data:post.metaDescription/>",
+                            "articleBody": "<data:post.metaDescription/>",
+                            <b:else/>
+                            "description": "<data:post.snippet/>",
+                            "articleBody": "<data:post.snippet/>",
+                            </b:if>
+                            "author": {
+                                "@type": "Person",
+                                "name": "Cupcakemafa"
+                            }
+                        }
+                        </script>
+
+                        <!-- Post Meta Data -->
+                        <span class='hidden'>
+                            <b:if cond='data:post.canonicalUrl'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='itemprop'>url</span>
+                                    <span class='attr' data-key='content'><data:post.canonicalUrl/></span>
+                                </span>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>og:url</span>
+                                    <span class='attr' data-key='content'><data:blog.canonicalUrl/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:post.firstImageUrl'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='itemprop'>image</span>
+                                    <span class='attr' data-key='content'><data:post.firstImageUrl/></span>
+                                </span>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:card</span>
+                                    <span class='attr' data-key='content'>summary_large_image</span>
+                                </span>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:image</span>
+                                    <span class='attr' data-key='content'><data:post.firstImageUrl/></span>
+                                </span>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:image:src</span>
+                                    <span class='attr' data-key='content'><data:post.firstImageUrl/></span>
+                                </span>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>og:image</span>
+                                    <span class='attr' data-key='content'><data:post.firstImageUrl/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:post.title'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:title</span>
+                                    <span class='attr' data-key='content'><data:post.title/></span>
+                                </span>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>og:title</span>
+                                    <span class='attr' data-key='content'><data:post.title/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:blog.metaDescription'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:description</span>
+                                    <span class='attr' data-key='content'><data:blog.metaDescription/></span>
+                                </span>
+                            <b:else/>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:description</span>
+                                    <span class='attr' data-key='content'><data:post.snippet/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:post.sharePostUrl'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>twitter:url</span>
+                                    <span class='attr' data-key='content'><data:post.sharePostUrl/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:post.pageName'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>og:title</span>
+                                    <span class='attr' data-key='content'><data:blog.pageName/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:blog.metaDescription'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>og:description</span>
+                                    <span class='attr' data-key='content'><data:blog.metaDescription/></span>
+                                </span>
+                            <b:elseif cond='data:blog.snippet'/>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>og:description</span>
+                                    <span class='attr' data-key='content'><data:post.snippet/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:blog.timestampISO8601'>
+                                <span class='meta-tag param'>
+                                    <span class='attr' data-key='name'>article:published_time</span>
+                                    <span class='attr' data-key='content'><data:post.timestampISO8601/></span>
+                                </span>
+                            </b:if>
+                            <b:if cond='data:post.labels'>
+                                <b:loop values='data:post.labels' var='label'>
+                                    <span class='param meta-tag label'>
+                                        <span class='attr' data-key='name'>article:tag</span>
+                                        <span class='attr' data-key='content'><data:label.name/></span>
+                                    </span>
+                                </b:loop>
+                            </b:if>
+                            <span class='meta-tag param'>
+                                <span class='attr' data-key='name'>article:section</span>
+                                <span class='attr' data-key='content'>Art, Culture, Lifestyle</span>
+                            </span>
+                        </span>
+                        <!-- // Post Meta Data -->
+
                         <!-- Post Content Area -->
                         <b:loop values='data:posts' var='post'>
                             <div class="row">
@@ -698,5 +848,41 @@
     <!-- Begin Google Analytics -->
     <b:include data='blog' name='google-analytics'/>
     <!-- End Google Analytics -->
+
+    <script>
+        //<![CDATA[
+        function setMetaTag() {
+            var $metaTag = $('.meta-tag'),
+                $elm, $attrs, $attr, key, value,
+                metaTag = '',
+                i, l,
+                metaAttr;
+            $metaTag.each(function (index, elm) {
+                $elm = $(elm);
+                metaAttr = '';
+                $attrs = $elm.find('.attr');
+                for (i = 0, l = $attrs.length; i < l; i++) {
+                    $attr = $attrs.eq(i);
+                    key = $attr.data('key');
+                    value = $attr.text();
+                    if (key && value) {
+                        if (i > 0) {
+                            metaAttr += ' ';
+                        }
+                        metaAttr += key + '="' + value + '"';
+                    }
+                    if (i === (l - 1)) {
+                        metaTag += '<meta ' + metaAttr + '/>';
+                    }
+                }
+
+                if (metaTag && index === ($metaTag.length - 1)) {
+                    $('head').find('meta').last().after(metaTag);
+                }
+            });
+        }
+        setMetaTag();
+        //]]>
+    </script>
     </body>
 </html>
