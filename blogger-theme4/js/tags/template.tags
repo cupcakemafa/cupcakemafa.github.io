@@ -134,10 +134,8 @@ function setNaviHeight() {
         window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight,
         navi = document.getElementsByClassName('navbar-collapse');
 //    window_height -= padding_y_body;
-console.log(navi);
-console.log('window_height', window_height);
     if(navi.length) {
-        navi[0].style.maxHeigth = window_height+'px';
+        navi[0].style.maxHeight = window_height+'px';
         navi[0].style.paddingBottom = padding_y_body+'px';
     }
 }
