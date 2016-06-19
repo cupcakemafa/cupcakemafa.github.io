@@ -1,3 +1,6 @@
+////////////////////////////////////////
+// Structure
+////////////////////////////////////////
 <header-nav>
 <nav id='header-navi' class='navbar navbar-default navbar-fixed-top'>
     <div class='container'>
@@ -141,6 +144,98 @@
     <!-- //.panel -->
 </div>
 </top-header>
+
+<site-search>
+<section id='contact'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-12 text-center'>
+                <h2 class='section-heading'>SEARCH</h2>
+                <p class='text-muted'>Cupcakemafaのサイトの中を検索!!</p>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-lg-12'>
+                <form name='sentMessage' id='contactForm' novalidate>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <div class='form-group'>
+                                <input type='search' class='form-control' placeholder='Search Word Please' required data-validation-required-message='Please enter your email address.'>
+                                <p class='help-block text-danger'></p>
+                            </div>
+                        </div>
+                        <div class='col-lg-12 text-center'>
+                            <div id='success'></div>
+                            <button type='submit' class='btn btn-xl'>Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //section#contact -->
+</site-search>
+
+<site-footer>
+<footer>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-4'>
+                <span class='copyright'>Copyright &copy; Cupcakemafa 2014-{nowYear}</span>
+            </div>
+            <div class='col-md-4'>
+                <p>Cupcakemafaのソーシャルアカウント</p>
+                <ul class='list-inline social-buttons'>
+                    <li>
+                        <a class='btn-circle facebook exLink' href='https://www.facebook.com/cupcakemafa' target='_blank' rel='nofollow'>
+                            <i class='fa fa-facebook'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class='btn-circle twitter exLink' href='https://twitter.com/cupcakemafa' target='_blank' rel='nofollow'>
+                            <i class='fa fa-twitter'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class='btn-circle google-plus exLink' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts' target='_blank' rel='nofollow'>
+                            <i class='fa fa-google-plus'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class='btn-circle youtube exLink' href='https://www.youtube.com/c/Cupcakemafa2015/' target='_blank' rel='nofollow'>
+                            <i class='fa fa-youtube'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class='btn-circle instagram exLink' href='https://instagram.com/cupcakemafaofficial/' target='_blank' rel='nofollow'>
+                            <i class='fa fa-instagram'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-md-4'>
+                <ul class='list-inline quicklinks'>
+                    <li>
+                        <a href='/'><i class='fa fa-home'></i> SITE TOP</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    this.nowYear = new Date().getFullYear();
+</script>
+</site-footer>
+
+////////////////////////////////////////
+// End Structure
+////////////////////////////////////////
+
+////////////////////////////////////////
+// Content
+////////////////////////////////////////
 
 <lucky-word-panel>
 <!-- //.post-col -->
@@ -348,86 +443,174 @@
 </script>
 </tag-cloud>
 
-<site-search>
-<section id='contact'>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-lg-12 text-center'>
-                <h2 class='section-heading'>SEARCH</h2>
-                <p class='text-muted'>Cupcakemafaのサイトの中を検索!!</p>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-lg-12'>
-                <form name='sentMessage' id='contactForm' novalidate>
-                    <div class='row'>
-                        <div class='col-md-12'>
-                            <div class='form-group'>
-                                <input type='search' class='form-control' placeholder='Search Word Please' required data-validation-required-message='Please enter your email address.'>
-                                <p class='help-block text-danger'></p>
-                            </div>
-                        </div>
-                        <div class='col-lg-12 text-center'>
-                            <div id='success'></div>
-                            <button type='submit' class='btn btn-xl'>Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- //section#contact -->
-</site-search>
+<about-virtual-tour>
+<span class='fa-stack fa-4x'>
+    <i class='fa fa-circle fa-stack-2x text-primary'></i>
+    <i class='fa fa-youtube fa-stack-1x fa-inverse'></i>
+</span>
+<p class='text-muted'>
+    旅のヴァーチャルツアーなどなど
+    <br /> ビデオでお送りしています。
+</p>
+<div id='youtube-video-widget'></div>
+<div class='g-ytsubscribe' data-channelid='UCA-5O04iRku19b8KMUMm_OA' data-layout='full' data-count='default' data-onytevent='onYtEvent'></div>
+<hr />
+</about-virtual-tour>
 
-<site-footer>
-<footer>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-md-4'>
-                <span class='copyright'>Copyright &copy; Cupcakemafa 2014-{nowYear}</span>
+<about-instagram>
+<span class='fa-stack fa-4x'>
+    <i class='fa fa-circle fa-stack-2x text-primary'></i>
+    <i class='fa fa-instagram fa-stack-1x fa-inverse'></i>
+</span>
+<p class='text-muted'>
+    いろんな国のいろんな場所を
+    <br /> フォトグラフしています
+</p>
+<div id='instagram-widget'>
+</div>
+<a href='https://www.instagram.com/cupcakemafaofficial/?ref=badge' class='ig-b- ig-b-v-24 hidden'>
+    <img src='//badges.instagram.com/static/images/ig-badge-view-24.png' alt='Instagram' />
+</a>
+<hr />
+</about-instagram>
+
+<about-twitter>
+<span class='fa-stack fa-4x'>
+    <i class='fa fa-circle fa-stack-2x text-primary'></i>
+    <i class='fa fa-twitter fa-stack-1x fa-inverse'></i>
+</span>
+<p class='text-muted'>
+    いろいろツイートしています
+</p>
+<button class='btn btn-default btn-block btn-lg' type='button' data-toggle='modal' data-target='#twitter-widget-modal'>
+    <i class='fa fa-plus'></i> ポップしてちょっとみてみる</button>
+<div class='modal fade' id='twitter-widget-modal' role='dialog'>
+    <div class='modal-dialog'>
+        <!-- Modal content-->
+        <div class='modal-content'>
+            <div class='modal-body'>
+                <a class='twitter-timeline' data-height='360' href='https://twitter.com/cupcakemafa'>Tweets by cupcakemafa</a>
             </div>
-            <div class='col-md-4'>
-                <p>Cupcakemafaのソーシャルアカウント</p>
-                <ul class='list-inline social-buttons'>
-                    <li>
-                        <a class='btn-circle facebook exLink' href='https://www.facebook.com/cupcakemafa' target='_blank' rel='nofollow'>
-                            <i class='fa fa-facebook'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class='btn-circle twitter exLink' href='https://twitter.com/cupcakemafa' target='_blank' rel='nofollow'>
-                            <i class='fa fa-twitter'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class='btn-circle google-plus exLink' href='https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts' target='_blank' rel='nofollow'>
-                            <i class='fa fa-google-plus'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class='btn-circle youtube exLink' href='https://www.youtube.com/c/Cupcakemafa2015/' target='_blank' rel='nofollow'>
-                            <i class='fa fa-youtube'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class='btn-circle instagram exLink' href='https://instagram.com/cupcakemafaofficial/' target='_blank' rel='nofollow'>
-                            <i class='fa fa-instagram'></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class='col-md-4'>
-                <ul class='list-inline quicklinks'>
-                    <li>
-                        <a href='/'><i class='fa fa-home'></i> SITE TOP</a>
-                    </li>
-                </ul>
+            <div class='modal-footer'>
+                <button class='btn btn-default btn-block' data-dismiss='modal'>
+                    <span class='glyphicon glyphicon-remove'></span> Close</button>
             </div>
         </div>
     </div>
-</footer>
-<script>
-    this.nowYear = new Date().getFullYear();
-</script>
-</site-footer>
+</div>
+<hr />
+</about-twitter>
+
+<about-tour-post>
+<span class='fa-stack fa-4x'>
+    <i class='fa fa-circle fa-stack-2x text-primary'></i>
+    <i class='fa fa-plane fa-stack-1x fa-inverse'></i>
+</span>
+<p class='text-muted'>
+    旅のおすすめ記事リストたち
+</p>
+<ul class='label-link list-group no-margin margin-bottom'>
+    <li class='list-group-item list-group-item-warning-'>
+        <h4><a href='/search/label/NEW%20YORK'>New York</a></h4>
+    </li>
+    <li class='list-group-item'>
+        <h4><a href='/search/label/PARIS'>Paris</a></h4>
+    </li>
+    <li class='list-group-item'>
+        <h4><a href='/search/label/BARCELONA'>Barcelona</a></h4>
+    </li>
+    <li class='list-group-item'>
+        <h4><a href='/search/label/持ち物'>持ち物</a></h4>
+    </li>
+</ul>
+<hr />
+</about-tour-post>
+
+<about-facebook>
+<span class='fa-stack fa-4x'>
+    <i class='fa fa-circle fa-stack-2x text-primary'></i>
+    <i class='fa fa-facebook fa-stack-1x fa-inverse'></i>
+</span>
+<p class='text-muted'>
+    最新情報をタイムラインでお知らせ
+</p>
+<button class='btn btn-default btn-block btn-lg' type='button' data-toggle='modal' data-target='#facebook-widget-modal'>
+    <i class='fa fa-plus'></i> ポップしてちょっとみてみる</button>
+<div class='modal fade' id='facebook-widget-modal' role='dialog'>
+    <div class='modal-dialog'>
+        <!-- Modal content-->
+        <div class='modal-content'>
+            <div class='modal-body'>
+                <div class='fb-page' data-href='https://www.facebook.com/cupcakemafa/' data-tabs='timeline' data-width='268' data-height='360' data-small-header='true' data-adapt-container-width='true' data-hide-cover='true' data-show-facepile='true'>
+                    <blockquote cite='https://www.facebook.com/cupcakemafa/' class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/cupcakemafa/'>Cupcakemafa</a></blockquote>
+                </div>
+            </div>
+            <div class='modal-footer'>
+                <button class='btn btn-default btn-block' data-dismiss='modal'>
+                    <span class='glyphicon glyphicon-remove'></span> Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+</about-facebook>
+
+<about-line-stamp-second>
+<span class='fa-stack fa-4x'>
+    <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
+        <img class='img-responsive' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s1600/22.png' alt='そんなバナナ！？' />
+    </a>
+</span>
+<h4 class='service-heading'>LINEスタンプPart2も発売中!!</h4>
+<p class='text-muted'>
+    ワンアンドオンリーなナオとふわふわ浮いてる天然ケンのスタンプ第2弾が登場です!! カラーになった2人のビター&amp;おとぼけスタンプをお楽しみくださーい。
+</p>
+<p>
+    <img alt='LINEスタンプ Part2 も発売中!!' class='img-responsive float-center' src='http://1.bp.blogspot.com/-DkhM6wdq710/Vnez52WK1mI/AAAAAAAABb8/Fy8OpnQhI2Y/s320/line-stamp-pr-2-1126x432.png' />
+</p>
+<a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink btn btn-default btn-block'>
+    スタンプを見てみる <i class='fa fa-external-link'></i>
+</a>
+<hr />
+</about-line-stamp-second>
+
+<about-ken-zukan-app>
+<span class='fa-stack fa-4x'>
+    <a href='/p/kenzukan.html'>
+        <img class='img-responsive' src='https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s1600/33.png' alt='それ、きょうみある！！' />
+    </a>
+</span>
+<h4 class='service-heading'>無料アプリのKEN図鑑</h4>
+<a href='/p/kenzukan.html'>
+    <img alt='無料アプリのKEN図鑑' class='img-responsive float-center' src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png' style='margin-bottom:0px;' />
+</a>
+<p class='text-muted'>
+    けんのシュールな日常の小話を集めた無料アプリです。 じわーっと来る笑いのひと時をどうぞ!! iPhone/Androidでご利用になれます。
+</p>
+<p>
+    <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8' target='_blank' rel='nofollow' class='exLink'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135' /></a>
+    <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan' target='_blank' rel='nofollow' class='exLink'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115' /></a>
+</p>
+<hr />
+</about-ken-zukan-app>
+
+<about-line-stamp-first>
+<span class='fa-stack fa-4x'>
+    <a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink'>
+        <img class='img-responsive' src='https://4.bp.blogspot.com/-Za7R5UaXXiI/VkUs39wF-8I/AAAAAAAABMg/xdvMknb96ogLkTOczYD7ArKjDccZSIzZQ/s1600/19-IMG_0064.png' alt='オタクではないし！！' />
+    </a>
+</span>
+<h4 class='service-heading'>LINEスタンプ発売中!!</h4>
+<p class='text-muted'>NaoとKenの日常から飛び出したおもしろLINEスタンプ発売中でーす!! ぜひみてみてね!!</p>
+<p>
+    <img class='img-responsive float-center' src='http://3.bp.blogspot.com/-s46iH9DInFg/Vjvvqfj28gI/AAAAAAAABI8/eNP_dNolGdA/s320/line-stamp-pr-2-1024x392.png' alt='LINEスタンプ発売中!!' />
+</p>
+<a href='http://line.me/S/sticker/1222589' rel='nofollow' target='_blank' class='exLink btn btn-default btn-block'>
+    スタンプを見てみる <i class='fa fa-external-link'></i>
+</a>
+<hr />
+</about-line-stamp-first>
+
+////////////////////////////////////////
+// End Content
+////////////////////////////////////////
