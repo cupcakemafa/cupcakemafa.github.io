@@ -681,6 +681,10 @@ function setAspect() {
                 }
             });
         });
+
+        $('article.post img').each(function(idx, elm){
+            $(elm).eq(0).addClass('img-responsive');
+        });
     } else {
         setLuckyWord($);
         setArchiveTitle();
