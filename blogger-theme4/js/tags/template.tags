@@ -131,14 +131,21 @@
 function setNaviHeight() {
     var
         padding_y_body = 51,
-        window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight;
+        window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight,
+        top_navi, bottom_navi;
     window_height -= padding_y_body;
-    document.getElementsByClassName('navbar-fixed-bottom navbar-collapse').forEach(function(elm, idx) {
-        elm.style.maxHeight = window_height;
-    });
-    document.getElementsByClassName('navbar-fixed-top navbar-collapse').forEach(function(elm, idx) {
-        elm.style.maxHeight = window_height;
-    });
+    top_navi = document.getElementsByClassName('navbar-fixed-top navbar-collapse')
+    if(top_navi) {
+        top_navi.forEach(function(elm, idx) {
+            elm.style.maxHeight = window_height;
+        });
+    }
+    bottom_navi = document.getElementsByClassName('navbar-fixed-bottom navbar-collapse')
+    if(bottom_navi ) {
+        bottom_navi .forEach(function(elm, idx) {
+            elm.style.maxHeight = window_height;
+        });
+    }
 }
 // init this content
 this.on('mount', function() {
