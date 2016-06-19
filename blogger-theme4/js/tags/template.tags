@@ -470,7 +470,7 @@ function setYoutubeVideoWidget() {
         iframe, iframe_width, iframe_height, css_width, css_height;
         console.log(widget);
     if (widget) {
-        widget_width = parseInt(widget.width(), 10);
+        widget_width = parseInt(widget.offsetWidth, 10);
         content = url[Math.floor(Math.random() * url.length)];
         widget.innerHTML = content;
         // Fit wideo aspect to iframe
