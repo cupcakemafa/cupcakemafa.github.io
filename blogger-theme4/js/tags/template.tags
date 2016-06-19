@@ -559,6 +559,25 @@ this.on('mount', function() {
     </div>
 </div>
 <hr />
+<script>
+// Begin Twitter widget
+function setTwitterWidget() {
+    ! function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, "script", "twitter-wjs");
+}
+// init this content
+this.on('mount', function() {
+  setTwitterWidget()
+});
+</script>
 </about-twitter>
 
 <about-tour-post>
@@ -613,6 +632,22 @@ this.on('mount', function() {
     </div>
 </div>
 <hr />
+<script>
+function setFacebookWidget() {
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6&appId=414444272074407";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+}
+// init this content
+this.on('mount', function() {
+  setFacebookWidget()
+});
+</script>
 </about-facebook>
 
 <about-line-stamp-second>
