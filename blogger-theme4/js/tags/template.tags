@@ -433,6 +433,9 @@ this.on('mount', function() {
         <p class='text-muted text-left'>カップケーキとマーファをくっつけた造語、それが『カップケーキマーファ （Cupcakemafa）』です。 カップケーキは、Naoの好物。マーファとは、Kenがその昔に映画でイタリア男性が「マフィア」の事を 「マーファ」と言っていたのを聞きかじったのがきっかけで、できた言葉なのです。 Kenに言わせれば、Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう。 時にカップケーキのように甘く、時にマフィアのように厳しい。まるで、人生のようですね。
             なんてね。そんなわけで、カップケーキマーファの誕生ですっ!!
         </p>
+        <p>
+            <a href='/2016/05/about-us.html' class='btn btn-default btn-block'>もうちょっと見てみる <i class='fa fa-chevron-right'></i></a>
+        </p>
     </div>
 </div>
 </about-us>
@@ -698,6 +701,9 @@ this.on('mount', function() {
 <p>
     <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8' target='_blank' rel='nofollow' class='exLink'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135' /></a>
     <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan' target='_blank' rel='nofollow' class='exLink'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115' /></a>
+</p>
+<p>
+    <a href='/p/kenzukan.html' class='btn btn-default btn-block'>KEN図鑑を見てみる <i class='fa fa-chevron-right'></i></a>
 </p>
 <hr />
 </about-ken-zukan-app>
