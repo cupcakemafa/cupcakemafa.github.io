@@ -7,7 +7,6 @@
     <meta content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width' name='viewport'/>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
     <meta content='!' name='fragment'/>
-    <meta content="blogger" name="generator"/>
     <meta content="A4xDRi6ZpEg27LzXZIZqTKbrO6cvjj0hNmHxH0O3ryI" name="google-site-verification"/>
     <!-- Start of all-head-content -->
     <b:include data='blog' name='all-head-content'/>
@@ -91,13 +90,18 @@
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
 
     <!-- Custom fonts -->
-    <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css' />
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css' />
 
     <!-- Custom styles -->
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
+        <link href='//cupcakemafa.github.io/blogger-theme4/css/agency.min.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style.min.css' rel='stylesheet' type='text/css' />
     <b:else/>
+        <link href='//cupcakemafa.github.io/blogger-theme4/css/agency.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style.css' rel='stylesheet' type='text/css' />
     </b:if>
     <!--[if lt IE 9]>
@@ -107,407 +111,547 @@
 
     <!-- Ads -->
     <script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' type='text/javascript' charset='utf-8'></script>
-    <script>
+    <script type='text/javascript' charset='utf-8'>
       (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-3036276233777511",
         enable_page_level_ads: true
       });
     </script>
+    <style>
+    #Header1 {
+        margin:0;
+    }
+    #header-navi {
+        background-color: #222;
+        padding: 0;
+    }
+    </style>
 </head>
-<body expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
+<body id='page-top' expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@graph": [{
+                "@type": "WebSite",
+                "url": "<data:blog.homepageUrl/>",
+                "name": "Cupcakemafa|カップケーキマーファ",
+                "description": "日常にアートが自然に溶け込むような事ができたらいいなと思っている夫婦ユニット、それがCupcakemafaです",
+                "publisher": "Cupcakemafa",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "<data:blog.homepageUrl/>search?q={search_term}",
+                    "query-input": "required name=search_term"
+                }
+            }, {
+                "@type": "Organization",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://1.bp.blogspot.com/-iXFFSm1o5-0/VzNDEI0zALI/AAAAAAADB_k/3RDm45FFMh88h4BlRfsJv8qbIHrfu-H3QCLcB/s1600/cupcakemafa-favicon-1024x1024.jpg",
+                    "width": "1024",
+                    "height": "1024"
+                },
+                "url": "<data:blog.homepageUrl/>",
+                "name": "Cupcakemafa|カップケーキマーファ",
+                "sameAs": [
+                    "https://www.facebook.com/cupcakemafa",
+                    "https://twitter.com/cupcakemafa",
+                    "https://plus.google.com/u/0/b/111933427629078412827/+Cupcakemafa2015/posts",
+                    "https://www.youtube.com/c/Cupcakemafa2015/",
+                    "https://www.instagram.com/cupcakemafaofficial/"
+                ]
+            }]
+        }
+    </script>
+
+    <!-- Begin Page type for markup -->
+    <span class='param hidden' id='page-type'><data:blog.pageType/></span>
+    <!-- End Page type for markup -->
+
+    <!-- Begin SEO Meta Tag -->
+    <b:if cond='data:blog.homepageUrl == data:blog.url'>
+        <span class='meta-tag param hidden'>
+            <span class='attr hidden' data-key='name'>keywords</span>
+            <span class='attr hidden' data-key='content'><data:blog.title/></span>
+        </span>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <span class='meta-tag param hidden'>
+            <span class='attr hidden' data-key='name'>keywords</span>
+            <span class='attr hidden' data-key='content'><data:blog.pageName/></span>
+        </span>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <span class='meta-tag param hidden'>
+            <span class='attr hidden' data-key='name'>robots</span>
+            <span class='attr hidden' data-key='content'>noindex,nofollow</span>
+        </span>
+    </b:if>
+    <b:if cond='data:blog.searchLabel'>
+        <span class='meta-tag param hidden'>
+            <span class='attr hidden' data-key='name'>robots</span>
+            <span class='attr hidden' data-key='content'>noindex,nofollow</span>
+        </span>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+        <span class='meta-tag param hidden'>
+            <span class='attr hidden' data-key='name'>robots</span>
+            <span class='attr hidden' data-key='content'>noindex,nofollow</span>
+        </span>
+    </b:if>
+    <b:if cond='data:blog.isMobile'>
+        <span class='meta-tag param hidden'>
+            <span class='attr hidden' data-key='name'>robots</span>
+            <span class='attr hidden' data-key='content'>noindex,nofollow</span>
+        </span>
+    </b:if>
+    <!-- End SEO Meta Tag -->
 
     <!-- Begin #header -->
     <b:section class='clearfix' id='header' showaddelement='no'>
         <b:widget id='Header1' locked='true' title='ヘッダーコンテンツ' type='Header' visible='true'>
             <b:includable id='main'>
                 <!-- Global Navi Area -->
-                Global Header Area
+                <header-nav></header-nav>
                 <!-- // Global Navi Area -->
             </b:includable>
         </b:widget>
     </b:section><!-- End #header.row -->
 
-    <b:section class='clearfix' id='mainContent' showaddelement='no'>
-        <b:widget id='Blog1' class='no-padding no-margin' locked='true' title='ブログの投稿' type='Blog' visible='true'>
-            <b:includable id='main'>
-
-                <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+    <!-- Header -->
+    <b:if cond='data:blog.pageType in {&quot;index&quot;, &quot;archive&quot;}'>
+        <header>
+            <div class='container'>
+                <div class='intro-text'>
                     <!-- List Page -->
-                    Index or List
 
                     <!-- Title for List Page -->
-                    <b:if cond='data:blog.homepageUrl == data:blog.url'>
-                        <!-- Top Page -->
-                        Home Page
-                        <!-- //Top Page -->
-                    <b:elseif cond='data:blog.searchLabel != &quot;&quot;'/>
+                    <h1 class='intro-heading'>
+                        <b:if cond='data:blog.pageType in {&quot;index&quot;}'>
+                            Welcome To Cupcakemafa
+                        <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
+                            <b:if cond='data:blog.searchLabel != &quot;&quot;'>
+                                <data:blog.searchLabel/>の記事リスト
+                            <b:else/>
+                                <span class='title'></span>記事リスト
+                            </b:if>
+                        </b:if>
+                    </h1>
+
+                    <b:if cond='data:blog.pageType in {&quot;index&quot;}'>
                         <div class='row'>
-                            <div class='col-xs-12'>
-                                <h2 class='sign no-border no-margin'>
-                                    <data:blog.searchLabel/>の記事リスト
-                                </h2>
-                            </div>
+                            <top-header></top-header>
+                            <lucky-word-panel></lucky-word-panel>
                         </div>
-                    <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
+                        <!-- //.row -->
+                    </b:if>
+                </div>
+                <!-- //.intro-text -->
+            </div>
+            <!-- //.container -->
+        </header>
+    </b:if>
+
+    <b:section id='portfolio' class='bg-light-gray clearfix' showaddelement='no'>
+        <b:widget id='Blog1' class='no-padding no-margin' locked='true' title='ブログの投稿' type='Blog' visible='true'>
+            <b:includable id='main'>
+                <div class='container'>
+                    <b:if cond='data:blog.pageType in {&quot;index&quot;,&quot;archive&quot;}'>
+                        <!-- List Page -->
+
+                        <!-- Title for List Page -->
+                        <b:if cond='data:blog.homepageUrl == data:blog.url'>
+                            <!-- Top Page -->
+                            <div class='row'>
+                                <div class='col-lg-12 text-center'>
+                                    <h2 class='section-heading'>New Articles</h2>
+                                    <p class='section-subheading text-muted'>ニュー・アーティコーたち
+                                        <br />おもに旅とアートと本とケンのことについてです。</p>
+                                </div>
+                            </div>
+                            <!-- //Top Page -->
+                        <b:elseif cond='data:blog.searchLabel != &quot;&quot;'/>
+                            <!--
+                            <div class='row'>
+                                <div class='col-xs-12'>
+                                    <h2 class='sign no-border no-margin'>
+                                        <data:blog.searchLabel/>の記事リスト
+                                    </h2>
+                                </div>
+                            </div>
+    -->
+                        <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
+                            <!--
+                            <div class='row'>
+                                <div class='col-xs-12'>
+                                    <h2 id='archive-title' class='sign no-border no-margin'>
+                                        <span class='title'></span>の記事リスト
+                                    </h2>
+                                </div>
+                            </div>
+    -->
+                        </b:if>
+                        <!-- //Title for List Page -->
+
+                        <!-- Post Content Area -->
                         <div class='row'>
-                            <div class='col-xs-12'>
-                                <h2 id='archive-title' class='sign no-border no-margin'>
-                                    <span class='title'></span>の記事リスト
-                                </h2>
-                            </div>
-                        </div>
-                    </b:if>
-                    <!-- //Title for List Page -->
-
-                    <!-- Post Content Area -->
-                    <b:loop values='data:posts' var='post'>
-                        <article>
-                            Post Content
-                            <p>
-                                <a expr:href='data:post.url'>
-                                    <data:post.title/>
-                                </a>
-                            </p>
-                        </article>
-                    </b:loop>
-                    <!-- //Post Content Area -->
-
-                    <!-- Pager for List Page -->
-                    <div class='blog-pager clearfix' id='blog-pager'>
-                        <b:if cond='data:newerPageUrl'>
-                            <span id='blog-pager-newer-link'>
-                                <a class='btn btn-default blog-pager-newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'><i class='fa fa-caret-left'></i> <data:newerPageTitle/></a>
-                          </span>
-                        </b:if>
-
-                        <b:if cond='data:olderPageUrl'>
-                            <span id='blog-pager-older-link'>
-                                <a class='btn btn-default blog-pager-older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'><data:olderPageTitle/> <i class='fa fa-caret-right'></i></a>
-                          </span>
-                        </b:if>
-
-                        <a class='btn btn-default home-link' expr:href='data:blog.homepageUrl'><i class='fa fa-caret-up'></i> <data:homeMsg/></a>
-
-                        <b:if cond='data:mobileLinkUrl'>
-                            <div class='blog-mobile-link'>
-                                <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
-                            </div>
-                        </b:if>
-                    </div>
-                    <!-- //Pager for List Page -->
-
-                    <!-- //List Page -->
-                <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
-                    <!-- Single Post or Static Page -->
-                    Single Post or Static Page
-
-                    <!-- Post Content Area -->
-                    <b:loop values='data:posts' var='post'>
-                        <article>
-                            Post Content
-                            <p>
-                                <data:post.title/>
-                            </p>
-                        </article>
-                    </b:loop>
-                    <!-- //Post Content Area -->
-
-                    <!-- Pager for Single Page (Next/Prev Navi) -->
-                    <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                        <div class='panel-heading padding text-center'>
-                            <div class='page-navi single hidden row no-margin'>
-                                <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
-                                    <b:if cond='data:olderPageUrl'>
-                                        <div class='media-body text-left'>
-                                            <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
-                                                <i class='fa fa-chevron-left'/>
-                                                <strong>Prev</strong>
-                                            </a>
-                                        </div>
-                                    </b:if>
-                                </div>
-                                <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
-                                    <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
-                                        TOP
+                            <b:loop values='data:posts' var='post'>
+                                <article class='post-body col-md-4 col-sm-6 portfolio-item'>
+                                    <a expr:href='data:post.url' class='portfolio-link'>
+                                        <img class='img-responsive float-center' expr:alt='data:post.title' expr:src='data:post.firstImageUrl'/>
                                     </a>
-                                </div>
-                                <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
-                                    <b:if cond='data:newerPageUrl'>
-                                        <div class='media-body text-right'>
-                                            <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
-                                                <strong>Next</strong>
-                                                <i class='fa fa-chevron-right'/>
+                                    <div class='portfolio-caption'>
+                                        <b:if cond='data:post.dateHeader'>
+                                            <p class='text-muted'>
+                                                <i class='fa fa-clock-o'/>
+                                                <data:post.dateHeader/>
+                                            </p>
+                                        </b:if>
+                                        <h4><data:post.title/></h4>
+                                        <p class='padding-top'>
+                                            <a expr:href='data:post.url' expr:title='data:post.title' class='btn btn-default btn-block'>
+                                                もっと読む <i class='fa fa-chevron-right'></i>
                                             </a>
-                                        </div>
-                                    </b:if>
-                                </div>
-                            </div>
-                        </div>
-                    </b:if>
-                    <!-- //Pager for Single Page (Next/Prev Navi) -->
-
-                    <!-- //Single Post or Static Page -->
-                <b:elseif cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'/>
-                    <!-- Not Found Page -->
-                    <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-                        <div class='panel-heading text-center'>
-                            <div class='text-center'>
-                                <a href='/' title='Cupcakemafaのトップページへ'>
-                                    <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png'/>
-                                </a>
-                                <h3>Sorry...</h3>
-                                <p>おさがしのページが見つかりませんでした&#12290;</p>
-                                <p>
-                                    <a href='/' title='Cupcakemafaのトップページへ'>
-                                        Cupcakemafaのトップページへ
-                                    </a>
-                                </p>
-                                もしくは
-                                <div class='padding text-center'>
-                                    <form action='/search' method='get' role='search'>
-                                        <div class='input-group input-group-lg margin padding'>
-                                            <input class='form-control' name='q' placeholder='サイト検索' type='search'/>
-                                            <span class='input-group-btn'>
-                                                <button class='btn btn-default' type='button'>
-                                                    <i class='fa fa-search'/>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- //Not Found Page -->
-                </b:if>
-
-            </b:includable>
-        </b:widget>
-    </b:section>
-
-    <b:section class='clearfix' id='subContent' showaddelement='yes' preferred='yes'>
-        <b:widget id='HTML2' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ' type='HTML' visible='true'>
-            <b:includable id='main'>
-                HTML2
-            </b:includable>
-        </b:widget>
-
-        <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
-            <b:includable id='main'>
-                <div class='sidebar section no-margin section'>
-                    <b:if cond='data:title != &quot;&quot;'>
-                        <div class='panel panel-default no-margin margin-bottom'>
-                            <div class='panel-heading no-padding'>
-                                <div class='media'>
-                                    <div class='media-left icon-box'>
-                                        <img src='https://lh3.googleusercontent.com/-t8Ar7BDwzzw/VnS1XhjvfQI/AAAAAAAABW4/YK--Hx4rbqMeZamSqhA8WfheMCpJAlRbQCCo/s2048-Ic42/07.png' class='img-rounded icon'/>
+                                        </p>
                                     </div>
-                                    <div class='media-body'>
-                                        <span class='title'>Pop Posts</span>
-                                    </div>
-                                </div>
-                            </div>
+                                </article>
+                            </b:loop>
                         </div>
-                    </b:if>
-                    <div class='widget-content popular-posts'>
+                        <!-- //Post Content Area -->
+
+                        <!-- Pager for List Page -->
+                        <div class='blog-pager clearfix' id='blog-pager'>
+                            <b:if cond='data:newerPageUrl'>
+                                <span id='blog-pager-newer-link'>
+                                    <a class='btn btn-default blog-pager-newer-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'><i class='fa fa-caret-left'></i> <data:newerPageTitle/></a>
+                              </span>
+                            </b:if>
+
+                            <b:if cond='data:olderPageUrl'>
+                                <span id='blog-pager-older-link'>
+                                    <a class='btn btn-default blog-pager-older-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'><data:olderPageTitle/> <i class='fa fa-caret-right'></i></a>
+                              </span>
+                            </b:if>
+
+                            <a class='btn btn-default home-link' expr:href='data:blog.homepageUrl'><i class='fa fa-caret-up'></i> <data:homeMsg/></a>
+
+                            <b:if cond='data:mobileLinkUrl'>
+                                <div class='blog-mobile-link'>
+                                    <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
+                                </div>
+                            </b:if>
+                        </div>
+                        <!-- //Pager for List Page -->
+
+                        <!-- //List Page -->
+                    <b:elseif cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'/>
+                        <!-- Single Post or Static Page -->
+                        <!-- Post Content Area -->
                         <b:loop values='data:posts' var='post'>
-                            <div class='panel panel-default item'>
-                                <div class='panel-heading'>
-                                    <a expr:href='data:post.href'>
-                                        <data:post.title/>
-                                    </a>
-                                </div>
-                                <div class='panel-body'>
-                                    <div class='item-thumbnail'>
-                                        <a expr:href='data:post.href'>
-                                            <img class='img-circle' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                                        </a>
-                                    </div>
-                                    <div class='item-snippet'>
-                                        <a expr:href='data:post.href'>
-                                            <data:post.snippet/>
-                                        </a>
-                                    </div>
+                            <div class="row">
+                                <div class="col-lg-8 col-lg-offset-2">
+                                    <article>
+                                        <!-- Project Details Go Here -->
+                                        <h2><data:post.title/></h2>
+                                        <p class="item-intro text-muted">
+                                            <b:if cond='data:post.dateHeader'>
+                                                <p class='text-muted'>
+                                                    <i class='fa fa-clock-o'/>
+                                                    <data:post.dateHeader/>
+                                                </p>
+                                            </b:if>
+                                        </p>
+                                        <h4><data:post.body/></h4>
+                                    </article>
                                 </div>
                             </div>
                         </b:loop>
-                    </div>
-                </div>
-            </b:includable>
-        </b:widget>
+                        <!-- //Post Content Area -->
 
-        <b:widget id='HTML3' class='no-padding no-margin' locked='true' title='サイドバーコンテンツ2' type='HTML' visible='true'>
-            <b:includable id='main'>
-                HTML3
-            </b:includable>
-        </b:widget>
-
-        <b:widget id='Label1' locked='false' title='Categories' type='Label'>
-            <b:includable id='main'>
-                <div class='sidebar section no-margin section'>
-                    <div class='tags panel panel-default'>
-                        <b:if cond='data:title'>
-                            <div class='panel-heading no-padding'>
-                                <div class='media'>
-                                    <div class='media-left icon-box'>
-                                        <img class='img-rounded icon' src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s128/01.png' alt='Cupcakemataの記事をタグで探索!!' />
-                                    </div>
-                                    <div class='media-body'>
-                                        <span class='title'>Tags</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </b:if>
-                        <div expr:class='&quot;panel-body widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-                            <b:if cond='data:display == &quot;list&quot;'>
-                                <ul>
-                                    <b:loop values='data:labels' var='label'>
-                                        <li>
-                                            <b:if cond='data:blog.url == data:label.url'>
-                                                <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-                                            <b:else/>
-                                                <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'>
-                                                    <data:label.name/>
+                        <!-- Pager for Single Page (Next/Prev Navi) -->
+                        <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                            <div class='panel-heading padding text-center'>
+                                <div class='page-navi single hidden row no-margin'>
+                                    <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
+                                        <b:if cond='data:olderPageUrl'>
+                                            <div class='media-body text-left'>
+                                                <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
+                                                    <i class='fa fa-chevron-left'/>
+                                                    <strong>Prev</strong>
                                                 </a>
-                                            </b:if>
-                                            <b:if cond='data:showFreqNumbers'>
-                                                <span dir='ltr'>(<data:label.count/>)</span>
-                                            </b:if>
-                                        </li>
-                                    </b:loop>
-                                </ul>
-                            <b:else/>
-                                <b:loop values='data:labels' var='label'>
-                                    <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-                                        <b:if cond='data:blog.url == data:label.url'>
-                                            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-                                        <b:else/>
-                                            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'>
-                                                <data:label.name/>
-                                            </a>
+                                            </div>
                                         </b:if>
-                                        <b:if cond='data:showFreqNumbers'>
-                                            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+                                    </div>
+                                    <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
+                                        <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
+                                            TOP
+                                        </a>
+                                    </div>
+                                    <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
+                                        <b:if cond='data:newerPageUrl'>
+                                            <div class='media-body text-right'>
+                                                <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
+                                                    <strong>Next</strong>
+                                                    <i class='fa fa-chevron-right'/>
+                                                </a>
+                                            </div>
                                         </b:if>
-                                    </span>
-                                </b:loop>
-                            </b:if>
-                        </div>
-                    </div>
-                </div>
-            </b:includable>
-        </b:widget>
-
-        <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
-            <b:includable id='main'>
-                <div class='sidebar section no-margin section'>
-                    <div class='back-number panel panel-default'>
-                        <b:if cond='data:title != &quot;&quot;'>
-                            <div class='panel-heading no-padding padding-left'>
-                                <div class='media'>
-                                    <div class='media-body'>
-                                        <span class='title'>Back Number</span>
                                     </div>
                                 </div>
                             </div>
                         </b:if>
-                        <div class='widget-content panel-body'>
-                            <div id='ArchiveList'>
-                                <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-                                    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
-                                    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-                                    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+                        <!-- //Pager for Single Page (Next/Prev Navi) -->
+
+                        <!-- //Single Post or Static Page -->
+                    <b:elseif cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'/>
+                        <!-- Not Found Page -->
+                        <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+                            <div class='panel-heading text-center'>
+                                <div class='text-center'>
+                                    <a href='/' title='Cupcakemafaのトップページへ'>
+                                        <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png'/>
+                                    </a>
+                                    <h3>Sorry...</h3>
+                                    <p>おさがしのページが見つかりませんでした&#12290;</p>
+                                    <p>
+                                        <a href='/' title='Cupcakemafaのトップページへ'>
+                                            Cupcakemafaのトップページへ
+                                        </a>
+                                    </p>
+                                    もしくは
+                                    <div class='padding text-center'>
+                                        <form action='/search' method='get' role='search'>
+                                            <div class='input-group input-group-lg margin padding'>
+                                                <input class='form-control' name='q' placeholder='サイト検索' type='search'/>
+                                                <span class='input-group-btn'>
+                                                    <button class='btn btn-default' type='button'>
+                                                        <i class='fa fa-search'/>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                            <b:include name='quickedit'/>
-                        </div>
-                    </div>
+                        </article>
+                        <!-- //Not Found Page -->
+                    </b:if>
                 </div>
-            </b:includable>
-            <b:includable id='flat' var='data'>
-                <ul class='flat'>
-                    <b:loop values='data:data' var='i'>
-                        <li class='archivedate'>
-                            <a expr:href='data:i.url'>
-                                <data:i.name/>
-                            </a> (<data:i.post-count/>)
-                        </li>
-                    </b:loop>
-                </ul>
-            </b:includable>
-            <b:includable id='interval' var='intervalData'>
-                <b:loop values='data:intervalData' var='interval'>
-                    <ul class='hierarchy'>
-                        <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-                            <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
-                            <a class='post-count-link' expr:href='data:interval.url'>
-                                <data:interval.name/>
-                            </a>
-                            <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
-                            <b:include cond='data:interval.data' data='interval.data' name='interval'/>
-                            <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
-                        </li>
-                    </ul>
-                </b:loop>
-            </b:includable>
-            <b:includable id='menu' var='data'>
-                <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
-                    <option value=''>
-                        <data:title/>
-                    </option>
-                    <b:loop values='data:data' var='i'>
-                        <option expr:value='data:i.url'>
-                            <data:i.name/> (
-                            <data:i.post-count/>)</option>
-                    </b:loop>
-                </select>
-            </b:includable>
-            <b:includable id='posts' var='posts'>
-                <ul class='posts'>
-                    <b:loop values='data:posts' var='post'>
-                        <li>
-                            <a expr:href='data:post.url'>
-                                <data:post.title/>
-                            </a>
-                        </li>
-                    </b:loop>
-                </ul>
-            </b:includable>
-            <b:includable id='toggle' var='interval'>
-                <a class='toggle' href='javascript:void(0)'>
-                    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
-                        <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-                            &#9660;&#160;
-                            <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
-                            &#9668;&#160;
-                            <b:else/>
-                            &#9658;&#160;
-                        </b:if>
-                    </span>
-                </a>
-            </b:includable>
-        </b:widget>
-    </b:section><!-- End #subContent -->
-
-    <!-- Begin #footer -->
-    <b:section class='clearfix' id='footer' showaddelement='no'>
-        <b:widget id='HTML5' locked='false' title='フッターコンテンツ' type='HTML' visible='true'>
-            <b:includable id='main'>
-                HTML5
             </b:includable>
         </b:widget>
     </b:section>
-    <!-- End #footer -->
+
+    <!-- Services Section -->
+    <section id='services' class='clearfix'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-lg-12 text-center'>
+                    <h2 class='section-heading'>What We Do</h2>
+                    <h3 class='section-subheading text-muted'>Cupcakemafaのいろいろ</h3>
+                </div>
+            </div>
+            <div class='row text-center'>
+                <div class='col-md-4'>
+                    <about-line-stamp-first></about-line-stamp-first>
+                </div>
+                <div class='col-md-4'>
+                    <about-ken-zukan-app></about-ken-zukan-app>
+                </div>
+                <div class='col-md-4'>
+                    <about-line-stamp-second></about-line-stamp-second>
+                </div>
+            </div>
+            <!-- //.row -->
+            <div class='row'>
+                <div class='col-md-4 text-center'>
+                    <about-virtual-tour></about-virtual-tour>
+                    <about-instagram></about-instagram>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <about-twitter></about-twitter>
+                    <about-tour-post></about-tour-post>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <about-facebook></about-facebook>
+                </div>
+            </div>
+            <!-- //.row -->
+        </div>
+    </section>
+
+    <b:section class='clearfix' id='about' showaddelement='yes' preferred='yes'>
+
+        <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
+            <b:includable id='main'>
+
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-lg-12 text-center'>
+                            <h2 class='section-heading'>Pop Posts</h2>
+                            <p class='section-subheading text-muted'>人気のアーティコーたちをどうぞ</p>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-lg-12'>
+                            <ul class='timeline'>
+                            <b:loop values='data:posts' var='post'>
+                                <li>
+                                    <div class='timeline-image'>
+                                        <a expr:href='data:post.href'>
+                                            <img class='img-circle img-responsive' expr:src='data:post.thumbnail'/>
+                                        </a>
+                                    </div>
+                                    <div class='timeline-panel'>
+                                        <div class='timeline-heading'>
+                                            <h4>
+                                                <a expr:href='data:post.href'>
+                                                    <data:post.title/>
+                                                </a>
+                                            </h4>
+<!--                                            <h4 class='subheading'></h4>-->
+                                        </div>
+                                        <div class='timeline-body'>
+                                            <p class='text-muted'>
+                                                <data:post.snippet/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </b:loop>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </b:includable>
+        </b:widget>
+    </b:section>
+
+    <!-- Team Section -->
+    <section id='team' class='bg-light-gray'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-lg-12 text-center'>
+                    <h2 class='section-heading'>And More</h2>
+                    <h3 class='section-subheading text-muted hidden'>モア・オア・モア</h3>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-lg-4'>
+                    <div class='team-member'>
+                        <who-we-are></who-we-are>
+                    </div>
+                </div>
+                <div class='col-lg-4'>
+                    <div class='team-member'>
+                        <about-us></about-us>
+                    </div>
+                </div>
+                <div class='col-lg-4'>
+                    <div class='team-member'>
+                        <tag-cloud></tag-cloud>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <b:section class='hidden' id='postData' showaddelement='yes' preferred='yes'>
+        <b:widget id='Label1' class='hidden' locked='false' title='Tags' type='Label'>
+            <b:includable id='main'>
+                <script type='text/javascript'>
+                    var tag_cloud_data=[];
+                    <b:loop values='data:labels' index='index' var='label'>
+                        tag_cloud_data.push({
+                            <b:if cond='data:blog.url == data:label.url'>
+                                &quot;active&quot;:false,
+                            <b:else/>
+                                &quot;active&quot;:true,
+                            </b:if>
+                            &quot;href&quot;:&quot;<data:label.url/>&quot;,
+                            &quot;count&quot;:&quot;<data:label.count/>&quot;,
+                            &quot;cssSize&quot;: &quot;<data:label.cssSize/>&quot;,
+                            &quot;tag&quot;:&quot;<data:label.name/>&quot;,
+                            &quot;langageDirection&quot;: &quot;<data:blog.languageDirection/>&quot;
+                        });
+                    </b:loop>
+                </script>
+            </b:includable>
+        </b:widget>
+        <!--
+        <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+            <b:includable id='main'>
+                <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+                <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+                <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+            </b:includable>
+            <b:includable id='flat' var='data'>
+                <script type='text/javascript'>
+                    var back_number_data = {
+                        'type': 'flat',
+                        'data': []
+                    };
+                    <b:loop values='data:data' var='i'>
+                        back_number_data.data.push({
+                            &quot;href&quot;:&quot;<data:i.url/>&quot;,
+                            &quot;label&quot;:&quot;<data:i.name/>&quot;,
+                            &quot;count&quot;:&quot;<data:i.post-count/>&quot;
+                        });
+                    </b:loop>
+                    console.log('flat back_number_data', back_number_data);
+                </script>
+            </b:includable>
+            <b:includable id='interval' var='intervalData'>
+                <script type='text/javascript'>
+                    var back_number_data = {
+                        'type': 'interval',
+                        'data': []
+                    };
+                    <b:loop values='data:intervalData' var='i'>
+                        back_number_data.data.push({
+                            &quot;expClass&quot;:&quot;<data:i.expclass/>&quot;,
+                            &quot;toggleId&quot;:&quot;<data:i.toggleId/>&quot;,
+                            &quot;href&quot;:&quot;<data:i.url/>&quot;,
+                            &quot;label&quot;:&quot;<data:i.name/>&quot;,
+                            &quot;count&quot;:&quot;<data:i.post-count/>&quot;
+                        });
+                    </b:loop>
+                    console.log('interval back_number_data', back_number_data);
+                </script>
+            </b:includable>
+        </b:widget>
+        -->
+    </b:section><!-- End #subContent -->
+
+    <!-- site-search -->
+    <site-search></site-search>
+    <!-- //site-search -->
+
+    <!-- site-footer -->
+    <site-footer></site-footer>
+    <!-- //site-footer -->
+
+    <div id='fb-root'></div>
 
     <!-- Begin scroll to top -->
     <a class='scroll-top' href='#' id='scroll-top' rel='nofollow' title='ページトップへ'>
         <img src='//2.bp.blogspot.com/-Hc2Qip-ciow/Vdo6dWcbLAI/AAAAAAAAAPo/3Ag8gFOBse4/s48/scrollup_blue.png' />
     </a>
 
+
+    <!-- Modal Windows -->
+    <b:if cond='data:blog.homepageUrl == data:blog.url'>
+        <lucky-word-modal></lucky-word-modal>
+    </b:if>
+
     <!-- jQuery -->
     <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript' charset='utf-8'></script>
 
     <!-- Plugin JavaScript -->
+    <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>
+    <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
+    <script type='text/javascript'>
+        riot.mount('*');
+    </script>
+
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript' charset='utf-8'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' type='text/javascript' charset='UTF-8'></script>
     <script src='//cupcakemafa.github.io/blogger-theme4/js/classie.js' type='text/javascript' charset='utf-8'></script>
@@ -531,10 +675,6 @@
     <script src='//apis.google.com/js/platform.js' type='text/javascript' charset='utf-8'></script>
     <script src='//platform.twitter.com/widgets.js' async='async' charset='utf-8' type='text/javascript'></script>
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='async' type='text/javascript' charset='utf-8'></script>
-    <script type='text/javascript'>
-    //<![CDATA[
-    //]]>
-    </script>
 
     <!-- Begin Google Analytics -->
     <b:include data='blog' name='google-analytics'/>
