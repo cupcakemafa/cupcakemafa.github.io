@@ -132,18 +132,12 @@ function setNaviHeight() {
     var
         padding_y_body = 51,
         window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight,
-        top_navi, bottom_navi;
+        navi;
     window_height -= padding_y_body;
-    top_navi = document.getElementsByClassName('navbar-fixed-top navbar-collapse')
-    console.log(top_navi);
-    if(top_navi) {
-        top_navi.forEach(function(elm, idx) {
-            elm.style.maxHeight = window_height;
-        });
-    }
-    bottom_navi = document.getElementsByClassName('navbar-fixed-bottom navbar-collapse')
-    if(bottom_navi ) {
-        bottom_navi .forEach(function(elm, idx) {
+    navi = document.getElementsByClassName('navbar-collapse')
+    console.log(navi);
+    if(navi.length) {
+        navi.forEach(function(elm, idx) {
             elm.style.maxHeight = window_height;
         });
     }
