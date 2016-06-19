@@ -485,7 +485,7 @@ function setInstagramWidget() {
         ],
         widget = document.getElementById('instagram-widget'),
         content;
-        console.log('widget', widget);
+        console.log(widget);
     if (widget) {
         content = url[Math.floor(Math.random() * url.length)];
         widget.innerHTML(content);
