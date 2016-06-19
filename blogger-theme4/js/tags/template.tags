@@ -130,7 +130,7 @@
 <script>
 function setNaviHeight() {
     var
-        padding_y_body = 51,
+        padding_y_body = 101, // Menu Height (51) + Bottom Ad Height (60)
         window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight,
         navi = document.getElementsByClassName('navbar-collapse');
 //    window_height -= padding_y_body;
