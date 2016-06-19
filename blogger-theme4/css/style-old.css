@@ -9,9 +9,9 @@ body {
     line-height: 1.7;
     font-size: 13px;
     font-weight: 200;
+*/
     letter-spacing: -0.5px;
     word-spacing: 1px;
-*/
     /* story-title のカウンタを 0 にセット */
     counter-reset: story-title;
     padding-bottom: 3em;
@@ -22,7 +22,6 @@ h2,
 h3,
 h4,
 h5 {
-/*    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;*/
 }
 
 h4,
@@ -599,7 +598,7 @@ h4.story-title {
 
 
 /* Start layout */
-
+/*
 nav.navbar .container-fluid {
     max-width: 100%;
 }
@@ -666,6 +665,7 @@ nav.navbar .container-fluid {
 .nav.navbar-nav .dropdown.open ul.dropdown-menu li:last-child {
     padding-bottom: 6px !important;
 }
+*/
 
 .site-title {
     display: none;
@@ -1343,6 +1343,11 @@ only screen and (min-resolution: 2dppx) {
     padding-top: 16px !important;
     padding-bottom: 16px !important;
     margin-top: 0 !important;
+}
+
+.info-box ul,
+.info-box li {
+    list-style: none;
 }
 
 .info-box ul ul {
