@@ -135,6 +135,7 @@ function setNaviHeight() {
         top_navi, bottom_navi;
     window_height -= padding_y_body;
     top_navi = document.getElementsByClassName('navbar-fixed-top navbar-collapse')
+    console.log(top_navi);
     if(top_navi) {
         top_navi.forEach(function(elm, idx) {
             elm.style.maxHeight = window_height;
