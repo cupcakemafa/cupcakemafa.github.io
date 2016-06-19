@@ -133,11 +133,11 @@ function setNaviHeight() {
         padding_y_body = 51,
         window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight,
         navi;
-    window_height -= padding_y_body;
-    console.log('window_height', window_height);
+//    window_height -= padding_y_body;
     navi = document.getElementsByClassName('navbar-collapse')
     if(navi.length) {
         navi[0].style.maxHeigth = window_height;
+        navi[0].style.paddingBottom = padding_y_body;
     }
 }
 // init this content
