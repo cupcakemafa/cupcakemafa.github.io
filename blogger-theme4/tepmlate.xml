@@ -124,7 +124,34 @@
     #header-navi {
         background-color: #222;
         padding: 0;
+        height: auto;
     }
+    .navbar-collapse {
+        padding-bottom:0px !important;
+    }
+    @media only screen and (min-device-width:320px) {
+        .navbar-collapse {
+            background-color: black;
+        }
+        #popular-post-list .title {
+            max-height: 2em;
+            overflow: hidden;
+        }
+        #popular-post-list .snippet {
+            max-height: 7em;
+            overflow: hidden;
+        }
+    }
+/* Begin Scroll Top */
+
+.scroll-top {
+    z-index: 999;
+    position: fixed;
+    bottom: 12%;
+    right: 6%;
+}
+
+/* End Scroll Top */
     </style>
 </head>
 <body id='page-top' expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
@@ -211,7 +238,9 @@
         <b:widget id='Header1' locked='true' title='ヘッダーコンテンツ' type='Header' visible='true'>
             <b:includable id='main'>
                 <!-- Global Navi Area -->
-                <header-nav></header-nav>
+                <nav id='header-navi' class='navbar navbar-default navbar-fixed-top'>
+                    <header-nav></header-nav>
+                </nav>
                 <!-- // Global Navi Area -->
             </b:includable>
         </b:widget>
@@ -226,14 +255,10 @@
 
                     <!-- Title for List Page -->
                     <h1 class='intro-heading'>
-                        <b:if cond='data:blog.pageType in {&quot;index&quot;}'>
-                            Welcome To Cupcakemafa
-                        <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
-                            <b:if cond='data:blog.searchLabel != &quot;&quot;'>
-                                <data:blog.searchLabel/>の記事リスト
-                            <b:else/>
-                                <span class='title'></span>記事リスト
-                            </b:if>
+                        <b:if cond='data:blog.homepageUrl == data:blog.url'>
+                            Welcome To Cupcakemafa.
+                        <b:else/>
+                            Hello, We are Cupcakemafa.
                         </b:if>
                     </h1>
 
@@ -259,37 +284,31 @@
                         <!-- List Page -->
 
                         <!-- Title for List Page -->
-                        <b:if cond='data:blog.homepageUrl == data:blog.url'>
-                            <!-- Top Page -->
-                            <div class='row'>
-                                <div class='col-lg-12 text-center'>
+                        <div class='row'>
+                            <div class='col-lg-12 text-center'>
+                                <b:if cond='data:blog.homepageUrl == data:blog.url'>
+                                    <!-- Top Page -->
                                     <h2 class='section-heading'>New Articles</h2>
-                                    <p class='section-subheading text-muted'>ニュー・アーティコーたち
-                                        <br />おもに旅とアートと本とケンのことについてです。</p>
-                                </div>
-                            </div>
-                            <!-- //Top Page -->
-                        <b:elseif cond='data:blog.searchLabel != &quot;&quot;'/>
-                            <!--
-                            <div class='row'>
-                                <div class='col-xs-12'>
-                                    <h2 class='sign no-border no-margin'>
+                                    <p class='section-subheading text-muted'>
+                                        ニュー・アーティコーたち<br />
+                                        おもに旅とアートと本とケンのことについてです。
+                                    </p>
+                                    <!-- //Top Page -->
+                                <b:elseif cond='data:blog.searchLabel != &quot;&quot;'/>
+                                    <!-- Tag List -->
+                                    <h2 class='section-heading'>
                                         <data:blog.searchLabel/>の記事リスト
                                     </h2>
-                                </div>
-                            </div>
-    -->
-                        <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
-                            <!--
-                            <div class='row'>
-                                <div class='col-xs-12'>
-                                    <h2 id='archive-title' class='sign no-border no-margin'>
-                                        <span class='title'></span>の記事リスト
+                                    <!-- //Tag List -->
+                                <b:elseif cond='data:blog.pageType in {&quot;archive&quot;}'/>
+                                    <!-- Archive List -->
+                                    <h2 class='section-heading'>
+                                        <span class='title'></span> 記事リスト
                                     </h2>
-                                </div>
+                                    <!-- //Archive List -->
+                                </b:if>
                             </div>
-    -->
-                        </b:if>
+                        </div>
                         <!-- //Title for List Page -->
 
                         <!-- Post Content Area -->
@@ -490,35 +509,35 @@
                             <p class='section-subheading text-muted'>人気のアーティコーたちをどうぞ</p>
                         </div>
                     </div>
-                    <div class='row'>
-                        <div class='col-lg-12'>
-                            <ul class='timeline'>
-                            <b:loop values='data:posts' var='post'>
-                                <li>
-                                    <div class='timeline-image'>
-                                        <a expr:href='data:post.href'>
-                                            <img class='img-circle img-responsive' expr:src='data:post.thumbnail'/>
-                                        </a>
+                    <div id='popular-post-list' class='row'>
+                        <b:loop values='data:posts' var='post'>
+                            <div class='col-md-4'>
+                                <div class='panel panel-default'>
+                                    <div class='panel-body'>
+                                        <h4 class='title no-margin'>
+                                            <a expr:href='data:post.href'>
+                                                <data:post.title/>
+                                            </a>
+                                        </h4>
                                     </div>
-                                    <div class='timeline-panel'>
-                                        <div class='timeline-heading'>
-                                            <h4>
+                                    <div class='panel-footer'>
+                                        <div class='media'>
+                                            <div class='media-left'>
                                                 <a expr:href='data:post.href'>
-                                                    <data:post.title/>
+                                                    <img class='media-object img-circle' expr:src='data:post.thumbnail'/>
                                                 </a>
-                                            </h4>
-<!--                                            <h4 class='subheading'></h4>-->
-                                        </div>
-                                        <div class='timeline-body'>
-                                            <p class='text-muted'>
-                                                <data:post.snippet/>
-                                            </p>
+                                            </div>
+                                            <div class='media-body'>
+                                                <p class='snippet text-muted'>
+                                                    <data:post.snippet/>
+                                                </p>
+                                                    <a expr:href='data:post.href' class='btn btn-default btn-block'>読んでみる <i class='fa fa-chevron-right'></i></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </li>
-                            </b:loop>
-                            </ul>
-                        </div>
+                                </div>
+                            </div>
+                        </b:loop>
                     </div>
                 </div>
             </b:includable>
