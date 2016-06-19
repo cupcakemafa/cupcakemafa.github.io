@@ -118,43 +118,48 @@
       });
     </script>
     <style>
-    #Header1 {
-        margin:0;
-    }
-    #header-navi {
-        background-color: #222;
-        padding: 0;
-        height: auto;
-    }
-    .navbar-collapse {
-        padding-bottom:0px !important;
-    }
-    @media only screen and (min-device-width:320px) {
+        #Header1 {
+            margin:0;
+        }
+        #header-navi {
+            background-color: #222;
+            padding: 0;
+            height: auto;
+        }
         .navbar-collapse {
-            background-color: black;
+            padding-bottom:0px !important;
         }
-        #popular-post-list .title {
-            max-height: 2em;
-            overflow: hidden;
+        @media only screen and (min-device-width:320px) {
+            .navbar-collapse {
+                background-color: black;
+            }
+            #popular-post-list .title {
+                max-height: 2em;
+                overflow: hidden;
+            }
+            #popular-post-list .snippet {
+                max-height: 7em;
+                overflow: hidden;
+            }
         }
-        #popular-post-list .snippet {
-            max-height: 7em;
-            overflow: hidden;
-        }
-    }
-/* Begin Scroll Top */
 
-.scroll-top {
-    z-index: 999;
-    position: fixed;
-    bottom: 12%;
-    right: 6%;
-}
+        body.item {
+            padding-top: 50px;
+        }
 
-/* End Scroll Top */
+        /* Begin Scroll Top */
+
+        .scroll-top {
+            z-index: 999;
+            position: fixed;
+            bottom: 12%;
+            right: 6%;
+        }
+
+        /* End Scroll Top */
     </style>
 </head>
-<body id='page-top' expr:class='data:blog.mobileClass + &quot; &quot; + data:blog.pageType'>
+<body expr:class='&quot;&quot; + data:blog.pageType'>
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
