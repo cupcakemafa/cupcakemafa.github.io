@@ -99,9 +99,11 @@
     <!-- Custom styles -->
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
         <link href='//cupcakemafa.github.io/blogger-theme4/css/agency.min.css' rel='stylesheet' type='text/css' />
+        <link href='//cupcakemafa.github.io/blogger-theme4/css/style-old.min.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style.min.css' rel='stylesheet' type='text/css' />
     <b:else/>
         <link href='//cupcakemafa.github.io/blogger-theme4/css/agency.css' rel='stylesheet' type='text/css' />
+        <link href='//cupcakemafa.github.io/blogger-theme4/css/style-old.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style.css' rel='stylesheet' type='text/css' />
     </b:if>
     <!--[if lt IE 9]>
@@ -117,47 +119,6 @@
         enable_page_level_ads: true
       });
     </script>
-    <style>
-        #Header1 {
-            margin:0;
-        }
-        #header-navi {
-            background-color: #222;
-            padding: 0;
-            height: auto;
-        }
-        .navbar-collapse {
-            padding-bottom:0px !important;
-        }
-        @media only screen and (min-device-width:320px) {
-            .navbar-collapse {
-                background-color: black;
-            }
-            #popular-post-list .title {
-                max-height: 2em;
-                overflow: hidden;
-            }
-            #popular-post-list .snippet {
-                max-height: 7em;
-                overflow: hidden;
-            }
-        }
-
-        body.item {
-            padding-top: 50px;
-        }
-
-        /* Begin Scroll Top */
-
-        .scroll-top {
-            z-index: 999;
-            position: fixed;
-            bottom: 12%;
-            right: 6%;
-        }
-
-        /* End Scroll Top */
-    </style>
 </head>
 <body expr:class='&quot;&quot; + data:blog.pageType'>
     <script type="application/ld+json">
@@ -523,9 +484,41 @@
                         <b:loop values='data:posts' var='post'>
                             <div class="row">
                                 <div class="col-lg-8 col-lg-offset-2">
-                                    <article>
+                                    <article class='post'>
+                                        <!-- Start of Next/Prev Navi -->
+                                        <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                            <div class='page-navi single hidden row no-margin'>
+                                                <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
+                                                    <b:if cond='data:olderPageUrl'>
+                                                        <div class='media-body text-left'>
+                                                            <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
+                                                                <i class='fa fa-chevron-left'/>
+                                                                <strong>Prev</strong>
+                                                            </a>
+                                                        </div>
+                                                    </b:if>
+                                                </div>
+                                                <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
+                                                    <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
+                                                        TOP
+                                                    </a>
+                                                </div>
+                                                <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
+                                                    <b:if cond='data:newerPageUrl'>
+                                                        <div class='media-body text-right'>
+                                                            <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
+                                                                <strong>Next</strong>
+                                                                <i class='fa fa-chevron-right'/>
+                                                            </a>
+                                                        </div>
+                                                    </b:if>
+                                                </div>
+                                            </div>
+                                        </b:if>
+                                        <!-- End of Next/Prev Navi -->
+
                                         <!-- Project Details Go Here -->
-                                        <h2><data:post.title/></h2>
+                                        <h2 id='post-title'><data:post.title/></h2>
                                         <p class="item-intro text-muted">
                                             <b:if cond='data:post.dateHeader'>
                                                 <p class='text-muted'>
@@ -535,45 +528,190 @@
                                             </b:if>
                                         </p>
                                         <h4><data:post.body/></h4>
+
+                                        <b:if cond='data:post.location'>
+                                            <div class='post-location text-center'>
+                                                <p>
+                                                    ADDRESS
+                                                </p>
+                                                <hr class='embed span6'/>
+                                                <h5>
+                                                    <data:post.location.name/>
+                                                </h5>
+                                                <big>
+                                                    <ul class='pager'>
+                                                        <li>
+                                                            <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                <i class='fa fa-location-arrow'/> Google Map でみる
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </big>
+                                            </div>
+                                        </b:if>
+
+                                        <b:if cond='data:post.labels'>
+                                            <nav>
+                                                <h3 class='text-center padding-bottom'><i class='fa fa-tags'/> Tags</h3>
+                                                <h5>
+                                                    <ul class='pager'>
+                                                    <b:loop index='i' values='data:post.labels' var='label'>
+                                                        <li>
+                                                            <a class='' expr:href='data:label.url'>
+                                                                <data:label.name/>
+                                                            </a>
+                                                        </li>
+                                                    </b:loop>
+                                                    </ul>
+                                                </h5>
+                                            </nav>
+                                        </b:if>
+
+                                        <!-- Begin Post Social Share -->
+                                        <h3 class='text-center'>
+                                            <i class='fa fa-share-square-o'/> Share
+                                        </h3>
+                                        <div class='row'>
+                                            <div class='col col-xs-12 padding'>
+                                                <a class='btn btn-default btn-lg btn-block twitter text-white' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title'>
+                                                    <i class='fa fa-twitter'></i> Twitterでシェア</a>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col col-xs-12 padding'>
+                                                <a class="btn btn-default btn-lg btn-block line text-white" expr:href='&quot;http://line.me/R/msg/text/?&quot; + data:post.title + data:post.canonicalUrl'>
+                                                    LINEで送る</a>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class='col col-xs-12 col-md-6 padding'>
+                                                <a class='btn btn-default btn-lg btn-block facebook text-white' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl'>
+                                                    <i class='fa fa-facebook'></i> Facebookでシェア</a>
+                                            </div>
+                                            <div class='col col-xs-12 col-md-6 padding'>
+                                                <a class='btn btn-default btn-lg btn-block google-plus text-white' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.canonicalUrl'>
+                                                    <i class='fa fa-google-plus'></i> Google Plusでシェア</a>
+                                            </div>
+                                        </div>
+                                        <!-- Begin Post Social Share -->
+
+                                        <!-- End Bookmark -->
+                                        <div class='row'>
+                                            <h3 class='text-center padding-top padding-bottom'>
+                                                <i class='fa fa-bookmark-o'></i> 記事をあとで読む
+                                            </h3>
+                                            <div class='col col-xs-12 padding'>
+                                                <a class='btn btn-default btn-lg btn-block get-pocket text-white'  expr:href='&quot;http://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href,"PCwindow","width=550, height=350,menubar=no,toolbar=no,scrollbars=yes");return false;'>
+                                                    <i class='fa fa-get-pocket'></i> Pocketに保存</a>
+                                            </div>
+                                        </div>
+                                        <!-- End Bookmark -->
+
+                                        <!-- Begin Follow -->
+                                        <div class='row no-margin margin-top'>
+                                            <h3 class='text-center padding-top padding-bottom'>
+                                                <i class='fa fa-paper-plane'></i> Cupcakemafaを<br />フォロー
+                                            </h3>
+                                            <div class='col col-xs-12 no-padding no-margin'>
+                                                <div class='panel panel-default'>
+                                                    <div class='panel-heading'>
+                                                        Twitter/Facebook/Instagramでもいろいろな情報をお届けしています。<br />
+                                                        「いいね」&amp;「フォロー」して最新情報をあなたのタイムラインでチェックしよう!!
+                                                    </div>
+                                                    <div class='panel-body'>
+                                                        <div class='row'>
+                                                            <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
+                                                                <a href="https://twitter.com/cupcakemafa" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @cupcakemafa</a>
+                                                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                            </div>
+                                                            <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-bottom'>
+                                                                <div class="fb-like" data-href="https://www.facebook.com/cupcakemafa/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                                                            </div>
+                                                            <div class='col col-xs-12 col-md-4 text-center no-padding padding-top padding-top'>
+                                                                <a href="https://www.instagram.com/cupcakemafaofficial/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class='row'>
+                                                            <div class='col col-xs-12 col-md-12 text-center no-padding padding-top padding-bottom'>
+                                                                <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fwww.cupcakemafa.com%2Ffeeds%2Fposts%2Fdefault'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-big_2x.png' alt='follow us in feedly' width='131' height='56'/></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Follow -->
+
+                                        <!-- Begin Comment Form -->
+                                        <h3 class='text-center margin-bottom'>
+                                            <i class='fa fa-comments-o'/> Comments &amp; Questions<br />
+                                        </h3>
+                                        <p class='text-center no-padding no-margin'>
+                                            コメントやご質問はこちらからどうぞ!!
+                                        </p>
+                                        <div id='disqus_thread'></div>
+                                        <script>
+                                        var disqus_config = function () {
+                                            this.page.url = '<data:post.canonicalUrl/>';
+                                            this.page.identifier = '<data:post.id/>';
+                                            this.page.title = '<data:post.title/>';
+                                            this.page.category_id = '';
+                                        };
+                                        (function() { // DON'T EDIT BELOW THIS LINE
+                                        var d = document, s = d.createElement('script');
+                                        s.src = '//cupcakemafa.disqus.com/embed.js';
+                                        s.setAttribute('data-timestamp', +new Date());
+                                        (d.head || d.body).appendChild(s);
+                                        })();
+                                        </script>
+                                        <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>
+                                        <!-- End Comment Form -->
+
+                                        <!-- Begin related posts -->
+                                        <div id='related-posts' class='hidden'>
+                                            <h3 class='text-center margin-top'>
+                                                <i class='fa fa-check-circle-o'/> Related Posts
+                                            </h3>
+                                            <div class='content text-left'></div>
+                                        </div>
+                                        <!-- End related posts -->
+
+                                        <!-- Pager for Single Page (Next/Prev Navi) -->
+                                        <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+                                            <div class='page-navi single hidden row no-margin'>
+                                                <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
+                                                    <b:if cond='data:olderPageUrl'>
+                                                        <div class='media-body text-left'>
+                                                            <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
+                                                                <i class='fa fa-chevron-left'/>
+                                                                <strong>Prev</strong>
+                                                            </a>
+                                                        </div>
+                                                    </b:if>
+                                                </div>
+                                                <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
+                                                    <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
+                                                        TOP
+                                                    </a>
+                                                </div>
+                                                <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
+                                                    <b:if cond='data:newerPageUrl'>
+                                                        <div class='media-body text-right'>
+                                                            <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
+                                                                <strong>Next</strong>
+                                                                <i class='fa fa-chevron-right'/>
+                                                            </a>
+                                                        </div>
+                                                    </b:if>
+                                                </div>
+                                            </div>
+                                        </b:if>
+                                        <!-- //Pager for Single Page (Next/Prev Navi) -->
                                     </article>
                                 </div>
                             </div>
                         </b:loop>
                         <!-- //Post Content Area -->
-
-                        <!-- Pager for Single Page (Next/Prev Navi) -->
-                        <b:if cond='data:olderPageUrl or data:newerPageUrl'>
-                            <div class='panel-heading padding text-center'>
-                                <div class='page-navi single hidden row no-margin'>
-                                    <div class='media no-padding col-md-4 col-sm-4 col-xs-4'>
-                                        <b:if cond='data:olderPageUrl'>
-                                            <div class='media-body text-left'>
-                                                <a class='prev-link title btn btn-default' expr:href='data:olderPageUrl'>
-                                                    <i class='fa fa-chevron-left'/>
-                                                    <strong>Prev</strong>
-                                                </a>
-                                            </div>
-                                        </b:if>
-                                    </div>
-                                    <div class='media no-padding no-margin text-center col-md-4 col-sm-4 col-xs-4'>
-                                        <a href='/' title='Cupcakemafa Web Site' class='btn btn-default'>
-                                            TOP
-                                        </a>
-                                    </div>
-                                    <div class='media no-padding no-margin col-md-4 col-sm-4 col-xs-4'>
-                                        <b:if cond='data:newerPageUrl'>
-                                            <div class='media-body text-right'>
-                                                <a class='next-link title btn btn-default' expr:href='data:newerPageUrl'>
-                                                    <strong>Next</strong>
-                                                    <i class='fa fa-chevron-right'/>
-                                                </a>
-                                            </div>
-                                        </b:if>
-                                    </div>
-                                </div>
-                            </div>
-                        </b:if>
-                        <!-- //Pager for Single Page (Next/Prev Navi) -->
 
                         <!-- //Single Post or Static Page -->
                     <b:elseif cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'/>
@@ -853,41 +991,5 @@
     <!-- Begin Google Analytics -->
     <b:include data='blog' name='google-analytics'/>
     <!-- End Google Analytics -->
-
-    <script>
-        //<![CDATA[
-        function setMetaTag() {
-            var $metaTag = $('.meta-tag'),
-                $elm, $attrs, $attr, key, value,
-                metaTag = '',
-                i, l,
-                metaAttr;
-            $metaTag.each(function (index, elm) {
-                $elm = $(elm);
-                metaAttr = '';
-                $attrs = $elm.find('.attr');
-                for (i = 0, l = $attrs.length; i < l; i++) {
-                    $attr = $attrs.eq(i);
-                    key = $attr.data('key');
-                    value = $attr.text();
-                    if (key && value) {
-                        if (i > 0) {
-                            metaAttr += ' ';
-                        }
-                        metaAttr += key + '="' + value + '"';
-                    }
-                    if (i === (l - 1)) {
-                        metaTag += '<meta ' + metaAttr + '/>';
-                    }
-                }
-
-                if (metaTag && index === ($metaTag.length - 1)) {
-                    $('head').find('meta').last().after(metaTag);
-                }
-            });
-        }
-        setMetaTag();
-        //]]>
-    </script>
     </body>
 </html>

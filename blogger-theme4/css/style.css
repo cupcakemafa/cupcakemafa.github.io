@@ -125,3 +125,32 @@ body {
 #team a {
   color: black;
 }
+
+#Header1 {
+    margin:0;
+}
+#header-navi {
+    background-color: #222;
+    padding: 0;
+    height: auto;
+}
+.navbar-collapse {
+    padding-bottom:0px !important;
+}
+@media only screen and (min-device-width:320px) {
+    .navbar-collapse {
+        background-color: black;
+    }
+    #popular-post-list .title {
+        max-height: 2em;
+        overflow: hidden;
+    }
+    #popular-post-list .snippet {
+        max-height: 7em;
+        overflow: hidden;
+    }
+}
+
+body.item {
+    padding-top: 50px;
+}
