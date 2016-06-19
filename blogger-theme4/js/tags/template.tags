@@ -126,6 +126,25 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+
+<script>
+function setNaviHeight() {
+    var
+        padding_y_body = 51,
+        window_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight;
+    window_height -= padding_y_body;
+    document.getElementsByClassName('navbar-fixed-bottom navbar-collapse').forEach(function(elm, idx) {
+        elm.style.max-height = window_height;
+    });
+    document.getElementsByClassName('navbar-fixed-top navbar-collapse').forEach(function(elm, idx) {
+        elm.style.max-height = window_height;
+    });
+}
+// init this content
+this.on('mount', function() {
+  setNaviHeight()
+});
+</script>
 </header-nav>
 
 <top-header>
@@ -468,14 +487,12 @@ function setYoutubeVideoWidget() {
         widget = document.getElementById('youtube-video-widget'),
         content, widget_width,
         iframe, iframe_width, iframe_height, css_width, css_height;
-        console.log(widget);
     if (widget) {
         widget_width = parseInt(widget.offsetWidth, 10);
         content = url[Math.floor(Math.random() * url.length)];
         widget.innerHTML = content;
         // Fit wideo aspect to iframe
         iframe = widget.getElementsByTagName('iframe')[0];
-        console.log(iframe);
         iframe_width = parseInt(iframe.width, 10);
         iframe_height = parseInt(iframe.height, 10);
         if (iframe_width !== widget_width) {
@@ -521,7 +538,6 @@ function setInstagramWidget() {
         ],
         widget = document.getElementById('instagram-widget'),
         content;
-        console.log(widget);
     if (widget) {
         content = url[Math.floor(Math.random() * url.length)];
         widget.innerHTML = content;
