@@ -286,10 +286,10 @@ this.on('mount', function() {
         <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png'/>
     </a>
     <h3>Sorry...</h3>
-    <p>おさがしのページが見つかりませんでした&#12290;</p>
+    <p>おさがしのページが<br />見つかりませんでした&#12290;</p>
     <p>
-        <a href='/' title='Cupcakemafaのトップページへ'>
-            Cupcakemafaのトップページへ
+        <a href='/' class='btn btn-default' title='Cupcakemafaのトップページへ'>
+            <i class='fa fa-home'></i> Cupcakemafaのトップページへ
         </a>
     </p>
     もしくは
