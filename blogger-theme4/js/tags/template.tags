@@ -247,11 +247,10 @@ function setNaviHeight() {
 
 <footer-navi>
 <aside class='clients'>
-        <div class='container'>
-            <div id='footer-navi' class='row'>
-            </div>
-        </div>
-    </aside>
+    <div class='container'>
+        <div id='footer-navi' class='row'></div>
+    </div>
+</aside>
 <script>
 function hasClass(element, className) {
     return (' ' + element.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' ' + className + ' ') !== -1;
@@ -264,7 +263,6 @@ function setFooterNavi() {
     if (navi.length && footerNavi) {
         menuItem = navi[0].getElementsByTagName('li');
         for (i = 0, l = menuItem.length; i < l; i++) {
-            console.log(menuItem[i]);
             if(menuItem[i] && menuItem[i].innerHTML) {
                 if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown')
                     && !hasClass(menuItem[i], 'visible-xs') && !hasClass(menuItem[i], 'menu-search')) {
