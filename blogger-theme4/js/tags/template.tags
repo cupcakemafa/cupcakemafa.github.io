@@ -138,9 +138,9 @@ function setNaviHeight() {
     }
 }
 // init this content
-this.on('mount', function() {
-  setNaviHeight()
-});
+//this.on('mount', function() {
+//  setNaviHeight()
+//});
 </script>
 </header-nav>
 
@@ -244,6 +244,26 @@ this.on('mount', function() {
     this.nowYear = new Date().getFullYear();
 </script>
 </site-footer>
+
+<footer-navi>
+<p>
+    <ul id='footer-navi'></ul>
+</p>
+<script>
+function setFooterNavi() {
+    var navi = document.getElementById('#header nav ul.nav'),
+        footerNavi = document.getElementById('#footer-navi'),
+        menuItem, i, l;
+    if (navi.length && footerNavi.length) {
+        menuItem = navi.getElementsByClassName('li.menu-item').clone();
+        for (i = 0, l = menuItem.length; i < l; i++) {
+            footerNavi.append($menuItem[i]);
+        }
+    }
+}
+
+</script>
+</footer-navi>
 
 ////////////////////////////////////////
 // End Structure

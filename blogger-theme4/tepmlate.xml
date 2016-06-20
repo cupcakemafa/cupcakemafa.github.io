@@ -888,54 +888,15 @@
                 </script>
             </b:includable>
         </b:widget>
-        <!--
-        <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
-            <b:includable id='main'>
-                <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
-                <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-                <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
-            </b:includable>
-            <b:includable id='flat' var='data'>
-                <script type='text/javascript'>
-                    var back_number_data = {
-                        'type': 'flat',
-                        'data': []
-                    };
-                    <b:loop values='data:data' var='i'>
-                        back_number_data.data.push({
-                            &quot;href&quot;:&quot;<data:i.url/>&quot;,
-                            &quot;label&quot;:&quot;<data:i.name/>&quot;,
-                            &quot;count&quot;:&quot;<data:i.post-count/>&quot;
-                        });
-                    </b:loop>
-                    console.log('flat back_number_data', back_number_data);
-                </script>
-            </b:includable>
-            <b:includable id='interval' var='intervalData'>
-                <script type='text/javascript'>
-                    var back_number_data = {
-                        'type': 'interval',
-                        'data': []
-                    };
-                    <b:loop values='data:intervalData' var='i'>
-                        back_number_data.data.push({
-                            &quot;expClass&quot;:&quot;<data:i.expclass/>&quot;,
-                            &quot;toggleId&quot;:&quot;<data:i.toggleId/>&quot;,
-                            &quot;href&quot;:&quot;<data:i.url/>&quot;,
-                            &quot;label&quot;:&quot;<data:i.name/>&quot;,
-                            &quot;count&quot;:&quot;<data:i.post-count/>&quot;
-                        });
-                    </b:loop>
-                    console.log('interval back_number_data', back_number_data);
-                </script>
-            </b:includable>
-        </b:widget>
-        -->
     </b:section><!-- End #subContent -->
 
     <!-- site-search -->
     <site-search></site-search>
     <!-- //site-search -->
+
+    <!-- footer-navi -->
+    <footer-navi></footer-navi>
+    <!-- //footer-navi -->
 
     <!-- site-footer -->
     <site-footer></site-footer>
