@@ -266,7 +266,7 @@ function setFooterNavi() {
             if(menuItem[i] && menuItem[i].innerHTML) {
                 if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown')
                     && !hasClass(menuItem[i], 'visible-xs') && !hasClass(menuItem[i], 'menu-search')) {
-                    tag = "<div class='col-lg-6 text-center padding-bottom'>" + menuItem[i].innerHTML.replace('a href', 'a class="btn btn-default btn-block" href') + "</div>";
+                    tag = "<div class='col-xs-6 text-center padding-bottom'>" + menuItem[i].innerHTML.replace('a href', 'a class="btn btn-default btn-block" href') + "</div>";
                     footerNavi.innerHTML += tag;
                 }
             }
