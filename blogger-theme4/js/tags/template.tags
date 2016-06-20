@@ -246,21 +246,28 @@ function setNaviHeight() {
 </site-footer>
 
 <footer-navi>
-<div>
-    <ul id='footer-navi'></ul>
-</div>
+<aside class='clients'>
+        <div class='container'>
+            <div id='footer-navi' class='row'>
+            </div>
+        </div>
+    </aside>
 <script>
+function hasClass(element, className) {
+    return (' ' + element.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' ' + className + ' ') !== -1;
+}
 function setFooterNavi() {
     var header = document.getElementById('header'),
         navi = header.getElementsByClassName('nav'),
         footerNavi = document.getElementById('footer-navi'),
-        menuItem, i, l;
-    console.log(footerNavi);
+        menuItem, i, l, tag;
     if (navi.length && footerNavi) {
         menuItem = navi[0].getElementsByTagName('li');
         for (i = 0, l = menuItem.length; i < l; i++) {
             console.log(menuItem[i]);
-            footerNavi.innerHTML += menuItem[i].outerHTML;
+            if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown') )
+            tag = "<div class='col-md-3 col-sm-6'>" + menuItem[i].innerHTML + "</div>";
+            footerNavi.innerHTML += tag;
         }
     }
 }
