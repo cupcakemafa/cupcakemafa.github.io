@@ -528,7 +528,7 @@
                                                 </p>
                                             </b:if>
                                         </p>
-                                        <h4><data:post.body/></h4>
+                                        <div><data:post.body/></div>
 
                                         <b:if cond='data:post.location'>
                                             <div class='post-location text-center'>
@@ -717,35 +717,7 @@
                         <!-- //Single Post or Static Page -->
                     <b:elseif cond='data:blog.pageType == &quot;error_page&quot; || data:numPosts == 0'/>
                         <!-- Not Found Page -->
-                        <article class='post panel panel-default' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-                            <div class='panel-heading text-center'>
-                                <div class='text-center'>
-                                    <a href='/' title='Cupcakemafaのトップページへ'>
-                                        <img class='img-circle' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png'/>
-                                    </a>
-                                    <h3>Sorry...</h3>
-                                    <p>おさがしのページが見つかりませんでした&#12290;</p>
-                                    <p>
-                                        <a href='/' title='Cupcakemafaのトップページへ'>
-                                            Cupcakemafaのトップページへ
-                                        </a>
-                                    </p>
-                                    もしくは
-                                    <div class='padding text-center'>
-                                        <form action='/search' method='get' role='search'>
-                                            <div class='input-group input-group-lg margin padding'>
-                                                <input class='form-control' name='q' placeholder='サイト検索' type='search'/>
-                                                <span class='input-group-btn'>
-                                                    <button class='btn btn-default' type='button'>
-                                                        <i class='fa fa-search'/>
-                                                    </button>
-                                                </span>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                        <not-found></not-found>
                         <!-- //Not Found Page -->
                     </b:if>
                 </div>

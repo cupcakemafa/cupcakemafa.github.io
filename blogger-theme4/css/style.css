@@ -3,6 +3,10 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
+body.error_page {
+    padding-top: 50px;
+}
+
 .timeline-image h4 {
     color: black;
     /*background-color: #fed136;*/
