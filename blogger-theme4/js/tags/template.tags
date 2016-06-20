@@ -266,6 +266,7 @@ function setFooterNavi() {
             if(menuItem[i] && menuItem[i].innerHTML) {
                 if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown')
                     && !hasClass(menuItem[i], 'visible-xs') && !hasClass(menuItem[i], 'menu-search')) {
+                    console.log(menuItem[i]);
                     tag = "<div class='col-md-3 col-xs-3 text-center'>" + menuItem[i].innerHTML + "</div>";
                     footerNavi.innerHTML += tag;
                 }
