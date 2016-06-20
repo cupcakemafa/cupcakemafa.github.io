@@ -255,11 +255,11 @@ function setFooterNavi() {
         navi = header.getElementsByClassName('nav'),
         footerNavi = document.getElementById('footer-navi'),
         menuItem, i, l;
-    if (navi.length && footerNavi.length) {
-        menuItem = navi[0].getElementsByTagName('li').clone();
+    console.log(footerNavi);
+    if (navi.length && footerNavi) {
+        menuItem = navi[0].getElementsByTagName('li');
         for (i = 0, l = menuItem.length; i < l; i++) {
             console.log(menuItem[i]);
-            console.log(footerNavi);
             footerNavi.innerHTML += menuItem[i].outerHTML;
         }
     }
