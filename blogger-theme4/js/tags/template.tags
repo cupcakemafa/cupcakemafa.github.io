@@ -255,7 +255,7 @@ function setFooterNavi() {
         footerNavi = document.getElementById('#footer-navi'),
         menuItem, i, l;
     if (navi.length && footerNavi.length) {
-        menuItem = navi.getElementsByClassName('li.menu-item').clone();
+        menuItem = navi.getElementsByClassName('li').clone();
         for (i = 0, l = menuItem.length; i < l; i++) {
             footerNavi.append($menuItem[i]);
         }
