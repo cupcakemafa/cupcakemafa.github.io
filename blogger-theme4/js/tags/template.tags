@@ -266,7 +266,7 @@ function setFooterNavi() {
             if(menuItem[i] && menuItem[i].innerHTML) {
                 if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown')
                     && !hasClass(menuItem[i], 'visible-xs') && !hasClass(menuItem[i], 'menu-search')) {
-                    tag = "<div class='col-md-3 col-sm-6'>" + menuItem[i].innerHTML + "</div>";
+                    tag = "<div class='col-md-3 col-sm-3 text-center'>" + menuItem[i].innerHTML + "</div>";
                     footerNavi.innerHTML += tag;
                 }
             }
