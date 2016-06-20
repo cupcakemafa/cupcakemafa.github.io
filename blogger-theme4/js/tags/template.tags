@@ -246,9 +246,9 @@ function setNaviHeight() {
 </site-footer>
 
 <footer-navi>
-<p>
+<div>
     <ul id='footer-navi'></ul>
-</p>
+</div>
 <script>
 function setFooterNavi() {
     var navi = document.getElementById('#header nav ul.nav'),
@@ -257,7 +257,7 @@ function setFooterNavi() {
     if (navi.length && footerNavi.length) {
         menuItem = navi.getElementsByClassName('li').clone();
         for (i = 0, l = menuItem.length; i < l; i++) {
-            footerNavi.append($menuItem[i]);
+            footerNavi.innerHTML += $menuItem[i].outerHTML;
         }
     }
 }
