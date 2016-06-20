@@ -515,7 +515,7 @@ function setArchiveTitle() {
         }
     } else {
         var
-            yearQuery = util.getQueryString('updated-max', false),
+            yearQuery = getQueryString('updated-max', false),
             parser, date = new Date(),
             yearNow = date.getFullYear();
         if (yearQuery) {
@@ -643,6 +643,26 @@ function setAspect() {
             $elm.replaceWith(tag);
         }
     });
+}
+
+/**
+ * Get value from query string
+ * @link http://vba-geek.jp/blog-entry-183.html
+ * @link http://www.bloggingdeveloper.com/post/JavaScript-QueryString-ParseGet-QueryString-with-Client-Side-JavaScript.aspx
+ */
+function getQueryString (key, default_) {
+    var regex, qs;
+    if (default_ == null) {
+        default_ = '';
+    }
+    key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+    qs = regex.exec(window.location.href);
+    if (qs == null) {
+        return default_;
+    } else {
+        return qs[1];
+    }
 }
 
 
