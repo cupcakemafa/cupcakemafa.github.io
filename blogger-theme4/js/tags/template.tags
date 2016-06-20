@@ -257,7 +257,7 @@ function setFooterNavi() {
     if (navi.length && footerNavi.length) {
         menuItem = navi.getElementsByClassName('li').clone();
         for (i = 0, l = menuItem.length; i < l; i++) {
-            footerNavi.innerHTML += $menuItem[i].outerHTML;
+            footerNavi.innerHTML += menuItem[i].outerHTML;
         }
     }
 }
