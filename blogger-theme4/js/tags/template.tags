@@ -264,9 +264,9 @@ function setFooterNavi() {
     if (navi.length && footerNavi) {
         menuItem = navi[0].getElementsByTagName('li');
         for (i = 0, l = menuItem.length; i < l; i++) {
-            console.log(menuItem[i]);{
+            console.log(menuItem[i]);
             if(menuItem[i] && menuItem[i].innerHTML) {
-                if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown') 
+                if(!hasClass(menuItem[i], 'hidden') && !hasClass(menuItem[i], 'dropdown')
                     && !hasClass(menuItem[i], 'visible-xs') && !hasClass(menuItem[i], 'menu-search')) {
                     tag = "<div class='col-md-3 col-sm-6'>" + menuItem[i].innerHTML + "</div>";
                     footerNavi.innerHTML += tag;
