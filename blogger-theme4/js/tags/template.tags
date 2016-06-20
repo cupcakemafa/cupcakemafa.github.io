@@ -265,7 +265,10 @@ function setFooterNavi() {
         }
     }
 }
-
+// init this content
+this.on('mount', function() {
+  setFooterNavi()
+});
 </script>
 </footer-navi>
 
