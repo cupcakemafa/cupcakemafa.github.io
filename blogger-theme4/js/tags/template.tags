@@ -531,7 +531,7 @@ this.on('mount', function() {
     <div class='panel-heading'>
         <h3>Back Number</h3>
     </div>
-    <div id='back-number' class='panel-body text-left'>
+    <div id='back-number' class='BlogArchive panel-body text-left'>
     </div>
 </div>
 
@@ -539,12 +539,16 @@ this.on('mount', function() {
 function setBackNumber() {
     var widget = document.getElementById('postArchiveData'),
         panelBody, content;
+    document.getElementById('back-number').innerHTML = widget.outerHTML;
+    /*
     if (widget) {
         panelBody = widget.getElementsByClassName('panel-body');
         if(panelBody) {
-            document.getElementById('back-number').innerHTML = panelBody[0].innerHTML;
+            //document.getElementById('back-number').innerHTML = panelBody[0].innerHTML;
+            document.getElementById('back-number').innerHTML = widget.outerHTML;
         }
     }
+    */
 }
 // init this content
 this.on('mount', function() {
