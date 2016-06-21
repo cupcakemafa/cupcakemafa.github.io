@@ -526,6 +526,33 @@ this.on('mount', function() {
 </script>
 </tag-cloud>
 
+<back-number>
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        <h3>Back Number</h3>
+    </div>
+    <div id='back-number' class='panel-body text-left'>
+    </div>
+</div>
+
+<script>
+function setBackNumber() {
+    var widget = document.getElementById('postArchiveData'),
+        panelBody, content;
+    if (widget) {
+        panelBody = widget.getElementsByClassName('panel-body');
+        if(panelBody) {
+            document.getElementById('back-number').innerHTML = panelBody[0].innerHTML;
+        }
+    }
+}
+// init this content
+this.on('mount', function() {
+  setBackNumber()
+});
+</script>
+</back-number>
+
 <about-virtual-tour>
 <span class='fa-stack fa-4x'>
     <i class='fa fa-circle fa-stack-2x text-primary'></i>
