@@ -526,8 +526,8 @@ this.on('mount', function() {
 </script>
 </tag-cloud>
 
-<back-number>
-<div class='panel panel-default'>
+<back-number class='widget'>
+<div class='panel panel-default widget-content'>
     <div class='panel-heading'>
         <h3>Back Number</h3>
     </div>
