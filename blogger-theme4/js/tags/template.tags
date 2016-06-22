@@ -368,7 +368,7 @@ this.on('mount', function() {
                 <div class='row'>
                     <div class='col-xs-6 text-center'>
                         <p>
-                            <img id='lucky-icon-a' class='lucky-icon img-responsive' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
+                            <img id='lucky-icon-a' class='lucky-icon' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
                             />
                             <br />
                         </p>
@@ -378,7 +378,7 @@ this.on('mount', function() {
                     </div>
                     <div class='col-xs-6 text-center'>
                         <p>
-                            <img id='lucky-icon-b' class='lucky-icon img-responsive' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
+                            <img id='lucky-icon-b' class='lucky-icon' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
                             />
                             <br />
                         </p>
