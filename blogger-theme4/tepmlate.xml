@@ -519,15 +519,15 @@
                                         <!-- End of Next/Prev Navi -->
 
                                         <!-- Project Details Go Here -->
-                                        <h2 id='post-title'><data:post.title/></h2>
-                                        <p class="item-intro text-muted">
-                                            <b:if cond='data:post.dateHeader'>
-                                                <p class='text-muted'>
-                                                    <i class='fa fa-clock-o'/>
-                                                    <data:post.dateHeader/>
-                                                </p>
-                                            </b:if>
+                                        <p>
+                                            <h2 id='post-title' class='text-center'><data:post.title/></h2>
                                         </p>
+                                        <b:if cond='data:post.dateHeader'>
+                                            <p class='item-intro text-muted text-center margin'>
+                                                <i class='fa fa-clock-o'/>
+                                                <data:post.dateHeader/>
+                                            </p>
+                                        </b:if>
                                         <div><data:post.body/></div>
 
                                         <b:if cond='data:post.location'>
