@@ -749,14 +749,14 @@
             <div class='row'>
                 <div class='col-md-4 text-center'>
                     <about-virtual-tour></about-virtual-tour>
-                    <about-instagram></about-instagram>
-                </div>
-                <div class='col-md-4 text-center'>
                     <about-twitter></about-twitter>
-                    <about-tour-post></about-tour-post>
                 </div>
                 <div class='col-md-4 text-center'>
+                    <about-tour-post></about-tour-post>
                     <about-facebook></about-facebook>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <about-instagram></about-instagram>
                 </div>
             </div>
             <!-- //.row -->
