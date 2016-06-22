@@ -836,9 +836,11 @@
                     <div class='team-member'>
                         <tag-cloud></tag-cloud>
                     </div>
+                    <!--
                     <div class='team-member'>
                         <back-number></back-number>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
@@ -868,8 +870,8 @@
         </b:widget>
     </b:section><!-- End #subContent -->
 
-    <b:section id='postArchiveData' showaddelement='yes' preferred='yes'>
-        <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+    <b:section id='postArchiveData' class='row' showaddelement='yes' preferred='yes'>
+        <b:widget id='BlogArchive1' class='col-lg-4 col-lg-offset-4' locked='false' title='Blog Archive' type='BlogArchive'>
             <b:includable id='main'>
                 <div class='back-number panel panel-default'>
                     <b:if cond='data:title != &quot;&quot;'>

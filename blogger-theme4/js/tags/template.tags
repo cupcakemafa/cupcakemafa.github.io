@@ -527,9 +527,12 @@ this.on('mount', function() {
 </tag-cloud>
 
 <back-number>
+<!--
 <div id="back-number-holder"></div>
+-->
 <script>
 // init this content
+/*
 this.on('mount', function() {
     var backNumberHolder = document.getElementById('back-number-holder'),
         postArchiveData = document.getElementById('postArchiveData');
@@ -538,6 +541,7 @@ this.on('mount', function() {
         postArchiveData.textContent = null;
     }
 });
+*/
 </script>
 </back-number>
 
