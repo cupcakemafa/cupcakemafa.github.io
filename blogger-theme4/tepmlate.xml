@@ -484,7 +484,7 @@
                         <!-- Post Content Area -->
                         <b:loop values='data:posts' var='post'>
                             <div class="row">
-                                <div class="col-lg-8 col-lg-offset-2">
+                                <div class="col-md-8 col-md-offset-2">
                                     <article class='post'>
                                         <!-- Start of Next/Prev Navi -->
                                         <b:if cond='data:olderPageUrl or data:newerPageUrl'>
