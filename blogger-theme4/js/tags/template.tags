@@ -527,15 +527,14 @@ this.on('mount', function() {
 </tag-cloud>
 
 <back-number>
-{ backNumberTag }
+<div id="back-number-holder"></div>
 <script>
-var self = this;
-    self.backNumberTag = '';
 // init this content
 this.on('mount', function() {
-    var postArchiveData = document.getElementById('postArchiveData');
+    var backNumberHolder = document.getElementById('back-number-holder'),
+        postArchiveData = document.getElementById('postArchiveData');
     if(postArchiveData.length) {
-        self.backNumberTag = postArchiveData.innerHTML;
+        backNumberHolder.outerHTML = postArchiveData.innerHTML;
     }
 });
 </script>
