@@ -526,33 +526,15 @@ this.on('mount', function() {
 </script>
 </tag-cloud>
 
-<back-number class='widget'>
-<div class='panel panel-default widget-content'>
-    <div class='panel-heading'>
-        <h3>Back Number</h3>
-    </div>
-    <div id='back-number' class='BlogArchive panel-body text-left'>
-    </div>
-</div>
-
+<back-number>
+{backNumberTag}
 <script>
-function setBackNumber() {
-    var widget = document.getElementById('postArchiveData'),
-        panelBody, content;
-    document.getElementById('back-number').innerHTML = widget.outerHTML;
-    /*
-    if (widget) {
-        panelBody = widget.getElementsByClassName('panel-body');
-        if(panelBody) {
-            //document.getElementById('back-number').innerHTML = panelBody[0].innerHTML;
-            document.getElementById('back-number').innerHTML = widget.outerHTML;
-        }
-    }
-    */
-}
 // init this content
 this.on('mount', function() {
-  setBackNumber()
+    var postArchiveData = document.getElementById('postArchiveData');
+    if(postArchiveData.length) {
+        this.backNumberTag = postArchiveData.innerHTML;
+    }
 });
 </script>
 </back-number>

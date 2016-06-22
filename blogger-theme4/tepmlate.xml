@@ -873,12 +873,8 @@
             <b:includable id='main'>
                 <div class='back-number panel panel-default'>
                     <b:if cond='data:title != &quot;&quot;'>
-                        <div class='panel-heading no-padding padding-left'>
-                            <div class='media'>
-                                <div class='media-body'>
-                                    <span class='title'>Back Number</span>
-                                </div>
-                            </div>
+                        <div class='panel-heading text-center'>
+                            <h3>Back Number</h3>
                         </div>
                     </b:if>
                     <div class='widget-content panel-body'>
