@@ -625,6 +625,7 @@ function getQueryString (key, default_) {
                     ADJUST_BOTTOM=8,
                     heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
                     $listItem=$('.post-body'),
+                    $popItem=$('#popular-post-list').find('col-md-4'),
                     i, l=$listItem.length;
                 for(i=0;i<l;i+=3) {
                     $elmOne=$($listItem.eq(i));
@@ -642,6 +643,23 @@ function getQueryString (key, default_) {
                     else {
                         heightOne = heightTwo = heightThree = 0;
                     }
+
+                    $elmOne=$($popItem.eq(i));
+                    $elmTwo=$($popItem.eq(i+1));
+                    $elmTwo=$($popItem.eq(i+2));
+                    heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
+                    heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
+                    heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
+                    if(heightOne && heightTwo && heightThree) {
+                        var theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
+                        $elmOne.height(theHeight);
+                        $elmTwo.height(theHeight);
+                        $elmThree.height(theHeight);
+                    }
+                    else {
+                        heightOne = heightTwo = heightThree = 0;
+                    }
+
                 }
             }
     }
