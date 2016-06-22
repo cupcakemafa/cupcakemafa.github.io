@@ -868,7 +868,7 @@
         </b:widget>
     </b:section><!-- End #subContent -->
 
-    <b:section class='hidden' id='postArchiveData' showaddelement='yes' preferred='yes'>
+    <b:section id='postArchiveData' class='hidden' showaddelement='yes' preferred='yes'>
         <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
             <b:includable id='main'>
                 <div class='back-number panel panel-default'>
