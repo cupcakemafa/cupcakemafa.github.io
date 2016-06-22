@@ -530,6 +530,7 @@ this.on('mount', function() {
 { backNumberTag }
 <script>
 var self = this;
+    self.backNumberTag = '';
 // init this content
 this.on('mount', function() {
     var postArchiveData = document.getElementById('postArchiveData');
