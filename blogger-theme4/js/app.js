@@ -623,39 +623,26 @@ function getQueryString (key, default_) {
             if(!isMobile()) {
                 var
                     ADJUST_BOTTOM=8,
-                    heightOne, heightTwo, $elmOne, $elmTwo,
+                    heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
                     $listItem=$('.post-body'),
                     i, l=$listItem.length;
-                for(i=0;i<l;i+=2) {
+                for(i=0;i<l;i+=3) {
                     $elmOne=$($listItem.eq(i));
                     $elmTwo=$($listItem.eq(i+1));
+                    $elmTwo=$($listItem.eq(i+2));
                     heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                     heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
-                    //console.info(heightOne + ':' + heightTwo);
-                    if(heightOne && heightTwo) {
-                        if(heightOne > heightTwo) {
-                            heightOne+=ADJUST_BOTTOM;
-                            heightTwo=0;
-                            $elmOne.height(heightOne);
-                            $elmTwo.height(heightOne);
-                        }
-                        else if(heightTwo > heightOne) {
-                            heightTwo+=ADJUST_BOTTOM;
-                            heightOne=0;
-                            $elmOne.height(heightTwo);
-                            $elmTwo.height(heightTwo);
-                        }
-                        else {
-                            heightOne+=ADJUST_BOTTOM;
-                            heightTwo+=ADJUST_BOTTOM;
-                            $elmOne.height(heightOne);
-                            $elmTwo.height(heightTwo);
-                        }
+                    heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
+                    if(heightOne && heightTwo && heightThree) {
+                        var theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
+                        $elmOne.height(theHeight);
+                        $elmTwo.height(theHeight);
+                        $elmThree.height(theHeight);
+                    }
+                    else {
+                        heightOne = heightTwo = heightThree = 0;
                     }
                 }
             }
-
-
-
     }
 })(jQuery);
