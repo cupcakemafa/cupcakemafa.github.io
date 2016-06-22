@@ -630,7 +630,7 @@ function getQueryString (key, default_) {
                 for(i=0;i<l;i+=3) {
                     $elmOne=$($listItem.eq(i));
                     $elmTwo=$($listItem.eq(i+1));
-                    $elmTwo=$($listItem.eq(i+2));
+                    $elmThree=$($listItem.eq(i+2));
                     heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                     heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
                     heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
@@ -646,7 +646,7 @@ function getQueryString (key, default_) {
 
                     $elmOne=$($popItem.eq(i));
                     $elmTwo=$($popItem.eq(i+1));
-                    $elmTwo=$($popItem.eq(i+2));
+                    $elmThree=$($popItem.eq(i+2));
                     heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                     heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
                     heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
