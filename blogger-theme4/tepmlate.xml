@@ -870,8 +870,8 @@
         </b:widget>
     </b:section><!-- End #subContent -->
 
-    <b:section id='postArchiveData' class='row' showaddelement='yes' preferred='yes'>
-        <b:widget id='BlogArchive1' class='col-lg-4 col-lg-offset-4' locked='false' title='Blog Archive' type='BlogArchive'>
+    <b:section id='postArchiveData' class='hidden' showaddelement='yes' preferred='yes'>
+        <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
             <b:includable id='main'>
                 <div class='back-number panel panel-default'>
                     <b:if cond='data:title != &quot;&quot;'>
@@ -1014,6 +1014,19 @@
     <script src='//apis.google.com/js/platform.js' type='text/javascript' charset='utf-8'></script>
     <script src='//platform.twitter.com/widgets.js' async='async' charset='utf-8' type='text/javascript'></script>
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='async' type='text/javascript' charset='utf-8'></script>
+
+    <script type='text/javascript'>
+        //<![CDATA[
+        /*
+        // Begin Google Ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        // End Google Ads
+        */
+        //]]>
+    </script>
 
     <!-- Begin Google Analytics -->
     <b:include data='blog' name='google-analytics'/>
