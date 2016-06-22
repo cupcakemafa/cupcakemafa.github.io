@@ -534,9 +534,9 @@ this.on('mount', function() {
     var backNumberHolder = document.getElementById('back-number-holder'),
         postArchiveData = document.getElementById('postArchiveData');
         console.log(postArchiveData);
-        console.log(backNumberHolder);
     if(postArchiveData.length) {
         backNumberHolder.innerHTML = postArchiveData.innerHTML;
+        console.log(backNumberHolder);
     }
 });
 </script>
