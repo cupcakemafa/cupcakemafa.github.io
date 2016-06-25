@@ -366,7 +366,7 @@ this.on('mount', function() {
                 <div class='row'>
                     <div class='col-xs-6 text-center'>
                         <p>
-                            <img id='lucky-icon-a' class='lucky-icon' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
+                            <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
                             />
                             <br />
                         </p>
@@ -376,7 +376,7 @@ this.on('mount', function() {
                     </div>
                     <div class='col-xs-6 text-center'>
                         <p>
-                            <img id='lucky-icon-b' class='lucky-icon' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
+                            <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
                             />
                             <br />
                         </p>
@@ -404,7 +404,7 @@ this.on('mount', function() {
                 </div>
             </div>
             <div class='modal-body'>
-                <img id='lucky-word-a' class='lucky-word img-responsive float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' />
+                <img id='lucky-word-a' class='lucky-word no-margin full-width no-border float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' />
                 <hr />
                 <p class='text-muted text-center'>
                     どこかのタイミングで
@@ -442,7 +442,7 @@ this.on('mount', function() {
                 </div>
             </div>
             <div class='modal-body'>
-                <img id='lucky-word-b' class='lucky-word img-responsive float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' />
+                <img id='lucky-word-b' class='lucky-word no-margin full-width no-border float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s300/IMG_0222.jpg' alt='Its New Me!' />
                 <hr />
                 <p class='text-muted text-center'>
                     どこかのタイミングで
