@@ -351,8 +351,8 @@ this.on('mount', function() {
 <lucky-word-modal>
 <!-- Modal -->
 <div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
-    <div class='modal-dialog margin-top' role='document'>
-        <div class='modal-content'>
+    <div class='modal-dialog margin-top row' role='document'>
+        <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
                 <div class='col-xs-12 col-md-8 col-md-offset-2'>
                     <img class='lucky-icon float-center' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
@@ -393,8 +393,8 @@ this.on('mount', function() {
 </div>
 <!-- Modal -->
 <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
-    <div class='modal-dialog lucky-word-modal' role='document'>
-        <div class='modal-content'>
+    <div class='modal-dialog lucky-word-modal row' role='document'>
+        <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
                 <div class='col-xs-12 col-md-8 col-md-offset-2'>
                     <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
@@ -431,8 +431,8 @@ this.on('mount', function() {
 </div>
 
 <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-b-label'>
-    <div class='modal-dialog lucky-word-modal' role='document'>
-        <div class='modal-content'>
+    <div class='modal-dialog lucky-word-modal row' role='document'>
+        <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
                 <div class='col-xs-12 col-md-8 col-md-offset-2'>
                     <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>
