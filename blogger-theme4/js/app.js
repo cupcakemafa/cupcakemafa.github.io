@@ -613,9 +613,9 @@ function getQueryString (key, default_) {
             });
         });
 
-//        $('article.post img').each(function(idx, elm){
-//            $(elm).eq(0).addClass('img-responsive');
-//        });
+        $('article.post img.portrait').each(function(idx, elm){
+            $(elm).eq(0).addClass('img-responsive');
+        });
     } else {
         setLuckyWord($);
         setArchiveTitle();
