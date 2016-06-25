@@ -638,7 +638,6 @@ function getQueryString (key, default_) {
                     heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
                     if(heightOne && heightTwo && heightThree) {
                         var theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
-                        console.log('theHeight1', theHeight);
                         $elmOne.height(theHeight);
                         $elmTwo.height(theHeight);
                         $elmThree.height(theHeight);
@@ -669,7 +668,6 @@ function getQueryString (key, default_) {
                 heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
                 if(heightOne && heightTwo && heightThree) {
                     theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
-                    console.log('theHeight2', theHeight);
                     $elmOne.height(theHeight);
                     $elmTwo.height(theHeight);
                     $elmThree.height(theHeight);
