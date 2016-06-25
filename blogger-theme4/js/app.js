@@ -589,7 +589,7 @@ function getQueryString (key, default_) {
     setLazyLoad($);
     setExternalLink();
 
-    if (pageType === 'item') {
+    if (pageType === 'item' || pageType === 'static_page') {
 
         setMetaTag();
         setStory();
