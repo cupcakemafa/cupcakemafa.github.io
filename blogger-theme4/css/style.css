@@ -164,11 +164,11 @@ article.post .img-rounded {
 }
 
 /* Custom for drop down hover */
-.dropdown.open ul.dropdown {
+.dropdown.open ul.dropdown-menu {
     padding: 0;
 }
 .dropdown-menu>li>a {
-    padding: 3px 6px;
+    padding: 6px;
 }
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
