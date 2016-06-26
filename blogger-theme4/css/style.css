@@ -164,6 +164,12 @@ article.post .img-rounded {
 }
 
 /* Custom for drop down hover */
+.dropdown.open ul.dropdown {
+    padding: 0;
+}
+.dropdown-menu>li>a {
+    padding: 3px 6px;
+}
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
     background-color: gray;
