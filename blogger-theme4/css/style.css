@@ -162,3 +162,9 @@ body.item {
 article.post .img-rounded {
     margin: 4px;
 }
+
+/* Custom for drop down hover */
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: gray;
+}
