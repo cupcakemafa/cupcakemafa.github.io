@@ -168,7 +168,7 @@ article.post .img-rounded {
     padding: 0;
 }
 .dropdown-menu>li>a {
-    padding: 6px;
+    padding: 8px 12px;
 }
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
