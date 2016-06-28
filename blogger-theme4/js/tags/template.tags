@@ -184,7 +184,9 @@ function setNaviHeight() {
                         <div class='form-group'>
                             <form name='sentMessage' id='contactForm' action='/search' method='get'>
                                 <input type='search' class='form-control' name='q' placeholder='Search Word Please'>
-                                <input type='submit' class='btn btn-xl'>Search</input>
+                                <p>
+                                    <input type='submit' class='btn btn-xl' value='Search' />
+                                </p>
                             </form>
                         </div>
                     </div>
