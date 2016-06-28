@@ -646,18 +646,24 @@ this.on('mount', function() {
 <p class='text-muted'>
     いろいろツイートしています
 </p>
-<button class='btn btn-default btn-block btn-lg' type='button' data-toggle='modal' data-target='#twitter-widget-modal'>
-    <i class='fa fa-plus'></i> ポップしてちょっとみてみる</button>
-<div class='modal fade' id='twitter-widget-modal' role='dialog'>
-    <div class='modal-dialog'>
-        <!-- Modal content-->
-        <div class='modal-content'>
-            <div class='modal-body'>
-                <a class='twitter-timeline' data-height='360' href='https://twitter.com/cupcakemafa'>Tweets by cupcakemafa</a>
-            </div>
-            <div class='modal-footer'>
-                <button class='btn btn-default btn-block' data-dismiss='modal'>
-                    <span class='glyphicon glyphicon-remove'></span> Close</button>
+<div class='hidden-xs'>
+    <a class='twitter-timeline' data-height='360' href='https://twitter.com/cupcakemafa'>Tweets by cupcakemafa</a>
+</div>
+<div class='visible-xs'>
+    <button class='btn btn-default btn-block btn-lg' type='button' data-toggle='modal' data-target='#twitter-widget-modal'>
+        <i class='fa fa-plus'></i> ポップしてちょっとみてみる
+    </button>
+    <div class='modal fade' id='twitter-widget-modal' role='dialog'>
+        <div class='modal-dialog'>
+            <!-- Modal content-->
+            <div class='modal-content'>
+                <div class='modal-body'>
+                    <a class='twitter-timeline' data-height='360' href='https://twitter.com/cupcakemafa'>Tweets by cupcakemafa</a>
+                </div>
+                <div class='modal-footer'>
+                    <button class='btn btn-default btn-block' data-dismiss='modal'>
+                        <span class='glyphicon glyphicon-remove'></span> Close</button>
+                </div>
             </div>
         </div>
     </div>
