@@ -238,7 +238,7 @@ function setNaviHeight() {
             <div class='col-md-4'>
                 <ul class='list-inline quicklinks'>
                     <li>
-                        <a href='/'><i class='fa fa-home'></i> SITE TOP</a>
+                        <a class='btn btn-default' href='/'><i class='fa fa-home'></i> SITE TOP</a>
                     </li>
                 </ul>
             </div>
