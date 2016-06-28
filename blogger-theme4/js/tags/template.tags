@@ -612,7 +612,6 @@ this.on('mount', function() {
 <a href='https://www.instagram.com/cupcakemafaofficial/?ref=badge' class='ig-b- ig-b-v-24 hidden'>
     <img src='//badges.instagram.com/static/images/ig-badge-view-24.png' alt='Instagram' />
 </a>
-<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 <hr />
 
 <script>
@@ -629,6 +628,7 @@ function setInstagramWidget() {
         content;
     if (widget) {
         content = url[Math.floor(Math.random() * url.length)];
+        content += "<script async defer src='//platform.instagram.com/en_US/embeds.js'></script>";
         widget.innerHTML = content;
     }
 }
