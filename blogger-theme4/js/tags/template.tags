@@ -629,13 +629,6 @@ function setInstagramWidget() {
     if (widget) {
         content = url[Math.floor(Math.random() * url.length)];
         widget.innerHTML = content;
-        script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.charset = 'utf-8';
-        script.defer = true;
-        script.async = true;
-        script.src = '//platform.instagram.com/en_US/embeds.js';
-        widget.appendChild(script);
     }
 }
 // init this content
