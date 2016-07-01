@@ -71,10 +71,10 @@ var luckyWord = [
         "img": "https://3.bp.blogspot.com/-JR-D3Z0ibhE/VwUU0bgJ_JI/AAAAAAAAB-U/mDPRwJwCnxYY9fNOUyyqyzkQnkrKYsT6w/s320/IMG_0239.png",
         "text": "もんもんもんまるとる!"
     },
-//    {
-//        "img": "https://3.bp.blogspot.com/-T8wFElxITMs/VwUU0rZ7XVI/AAAAAAAAB-Y/ygVHdt_-kyMa7FIXZ7b-uca6c5IqGeXPg/s320/IMG_0240.png",
-//        "text": "Have A Funny Day :)"
-//    },
+    {
+        "img": "https://3.bp.blogspot.com/-T8wFElxITMs/VwUU0rZ7XVI/AAAAAAAAB-Y/ygVHdt_-kyMa7FIXZ7b-uca6c5IqGeXPg/s320/IMG_0240.png",
+        "text": "ハブアファニーデイ"
+    },
     {
         "img": "https://1.bp.blogspot.com/-V8VjdyR9rsU/VwUU0mwfC3I/AAAAAAAAB-c/cquMF2Q0MxkjV9EivLS0oB8YsVuGD7Wnw/s320/IMG_0241.png",
         "text": "おたんこなすー"

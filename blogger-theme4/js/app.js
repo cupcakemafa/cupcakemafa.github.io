@@ -96,6 +96,7 @@ function setLuckyWord(_$) {
         idx = date % word_count;
         word.push(luckyWord[idx]);
         idx = word_count - idx;
+        idx = idx ? idx : 1;
         word.push(luckyWord[idx]);
 
         idx = date % icon_count;
@@ -612,10 +613,6 @@ function getQueryString (key, default_) {
                 }
             });
         });
-
-//        $('article.post img.portrait').each(function(idx, elm){
-//            $(elm).eq(0).addClass('img-responsive');
-//        });
     } else {
         setLuckyWord($);
         setArchiveTitle();
