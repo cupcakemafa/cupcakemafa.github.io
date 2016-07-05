@@ -551,24 +551,24 @@
                                                     </big>
                                                 </div>
                                             </b:if>
-                                        </div><!-- //.post-content -->
 
-                                        <b:if cond='data:post.labels'>
-                                            <nav>
-                                                <h3 class='text-center padding-bottom'><i class='fa fa-tags'/> Tags</h3>
-                                                <h5>
-                                                    <ul class='pager'>
-                                                    <b:loop index='i' values='data:post.labels' var='label'>
-                                                        <li>
-                                                            <a class='' expr:href='data:label.url'>
-                                                                <data:label.name/>
-                                                            </a>
-                                                        </li>
-                                                    </b:loop>
-                                                    </ul>
-                                                </h5>
-                                            </nav>
-                                        </b:if>
+                                            <b:if cond='data:post.labels'>
+                                                <nav>
+                                                    <h3 class='text-center padding-bottom'><i class='fa fa-tags'/> Tags</h3>
+                                                    <h5>
+                                                        <ul class='pager'>
+                                                        <b:loop index='i' values='data:post.labels' var='label'>
+                                                            <li>
+                                                                <a class='' expr:href='data:label.url'>
+                                                                    <data:label.name/>
+                                                                </a>
+                                                            </li>
+                                                        </b:loop>
+                                                        </ul>
+                                                    </h5>
+                                                </nav>
+                                            </b:if>
+                                        </div><!-- //.post-content -->
 
                                         <!-- Begin Post Social Share -->
                                         <h3 class='text-center'>
