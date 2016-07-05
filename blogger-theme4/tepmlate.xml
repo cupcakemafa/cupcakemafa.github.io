@@ -518,38 +518,40 @@
                                         </b:if>
                                         <!-- End of Next/Prev Navi -->
 
-                                        <!-- Project Details Go Here -->
-                                        <p>
-                                            <h2 id='post-title' class='text-center'><data:post.title/></h2>
-                                        </p>
-                                        <b:if cond='data:post.dateHeader'>
-                                            <p class='item-intro text-muted text-center margin'>
-                                                <i class='fa fa-clock-o'/>
-                                                <data:post.dateHeader/>
+                                        <!-- Post Contents Go Here -->
+                                        <div class='post-content-area'>
+                                            <p>
+                                                <h2 id='post-title' class='text-center'><data:post.title/></h2>
                                             </p>
-                                        </b:if>
-                                        <div><data:post.body/></div>
-
-                                        <b:if cond='data:post.location'>
-                                            <div class='post-location text-center'>
-                                                <p>
-                                                    ADDRESS
+                                            <b:if cond='data:post.dateHeader'>
+                                                <p class='item-intro text-muted text-center margin'>
+                                                    <i class='fa fa-clock-o'/>
+                                                    <data:post.dateHeader/>
                                                 </p>
-                                                <hr class='embed span6'/>
-                                                <h5>
-                                                    <data:post.location.name/>
-                                                </h5>
-                                                <big>
-                                                    <ul class='pager'>
-                                                        <li>
-                                                            <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
-                                                                <i class='fa fa-location-arrow'/> Google Map でみる
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </big>
-                                            </div>
-                                        </b:if>
+                                            </b:if>
+                                            <div><data:post.body/></div>
+
+                                            <b:if cond='data:post.location'>
+                                                <div class='post-location text-center'>
+                                                    <p>
+                                                        ADDRESS
+                                                    </p>
+                                                    <hr class='embed span6'/>
+                                                    <h5>
+                                                        <data:post.location.name/>
+                                                    </h5>
+                                                    <big>
+                                                        <ul class='pager'>
+                                                            <li>
+                                                                <a class='' expr:href='data:post.location.mapsUrl' target='_blank'>
+                                                                    <i class='fa fa-location-arrow'/> Google Map でみる
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </big>
+                                                </div>
+                                            </b:if>
+                                        </div><!-- //.post-content -->
 
                                         <b:if cond='data:post.labels'>
                                             <nav>
