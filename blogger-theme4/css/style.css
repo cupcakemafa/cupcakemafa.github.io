@@ -52,6 +52,14 @@ body.error_page {
     margin-right: 12px !important;
 }
 
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
+}
+
 .dropdown-menu {
   background-color: black;
 }
@@ -173,4 +181,20 @@ article.post .img-rounded {
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
     background-color: gray;
+}
+
+/* Wired Style Link */
+p.title a,
+h4 a,
+.post a {
+    border-bottom: 3px solid #b4e7f8;
+    box-shadow: inset 0 -5px 0 #b4e7f8;
+    color: inherit;
+    transition: background .15s cubic-bezier(.33,.66,.66,1);
+}
+
+p.title a:hover,
+h4 a:hover,
+.post a:hover {
+    background: #b4e7f8;
 }
