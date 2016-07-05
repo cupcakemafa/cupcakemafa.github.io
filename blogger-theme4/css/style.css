@@ -186,7 +186,7 @@ article.post .img-rounded {
 /* Wired Style Link */
 p.title a,
 h4 a,
-.post a {
+.post a:not(.btn) {
     border-bottom: 3px solid #b4e7f8;
     box-shadow: inset 0 -5px 0 #b4e7f8;
     color: inherit;
@@ -195,6 +195,6 @@ h4 a,
 
 p.title a:hover,
 h4 a:hover,
-.post a:hover {
+.post a:not(.btn):hover {
     background: #b4e7f8;
 }
