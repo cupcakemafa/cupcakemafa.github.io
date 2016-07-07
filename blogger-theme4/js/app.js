@@ -97,14 +97,14 @@ function setLuckyWord(_$) {
         word.push(luckyWord[idx]);
         idx = word_count - idx;
         idx = idx ? idx : 2;
-        console.error('id:word', id);
+        console.error('idx:word', idx);
         word.push(luckyWord[idx]);
 
         idx = date % icon_count;
         icon.push(luckyIcon[idx]);
         idx = icon_count - idx;
         idx = idx ? idx : 2;
-        console.error('id:img', id);
+        console.error('idx:img', idx);
         icon.push(luckyIcon[idx]);
 
         for (i = 0, l = looper.length; i < l; i++) {
