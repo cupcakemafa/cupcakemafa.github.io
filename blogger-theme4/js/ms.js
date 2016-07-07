@@ -1,8 +1,8 @@
 var luckyWord = [
-    {
-        "img": "https://3.bp.blogspot.com/-T8wFElxITMs/VwUU0rZ7XVI/AAAAAAAAB-Y/ygVHdt_-kyMa7FIXZ7b-uca6c5IqGeXPg/s320/IMG_0240.png",
-        "text": "ハブアファニーデイ"
-    },
+//    {
+//        "img": "https://3.bp.blogspot.com/-T8wFElxITMs/VwUU0rZ7XVI/AAAAAAAAB-Y/ygVHdt_-kyMa7FIXZ7b-uca6c5IqGeXPg/s320/IMG_0240.png",
+//        "text": "ハブアファニーデイ"
+//    },
     {
         "img": "https://4.bp.blogspot.com/-s9aoQUpjSic/VwUUwMJQT2I/AAAAAAAAB9U/_OB1osuzSpYlzJSyFgRjJEwjGVhaLE5_g/s320/IMG_0222.png",
         "text": "イッツニューミー!"
