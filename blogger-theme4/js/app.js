@@ -45,7 +45,7 @@ function setLuckyWord(_$) {
             SHARE_VIA = 'cupcakemafa',
             SHARE_URL = 'http://www.cupcakemafa.com/',
             TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
-            idx, icon = [],
+            idx, idx_b, icon = [],
             word = [],
             share_url, lucky_word,
             hush_tag, share_tag,
@@ -95,15 +95,15 @@ function setLuckyWord(_$) {
         date = countDate();
         idx = parseInt(date % word_count,10);
         word.push(luckyWord[idx]);
-        idx = word_count - idx;
-        idx = idx ? idx : 2;
-        word.push(luckyWord[idx]);
+        idx_b = word_count - idx;
+        idx_b = idx_b ? idx_b : 1;
+        word.push(luckyWord[idx_b]);
 
         idx = parseInt(date % icon_count,10);
         icon.push(luckyIcon[idx]);
-        idx = icon_count - idx;
-        idx = idx ? idx : 2;
-        icon.push(luckyIcon[idx]);
+        idx_b = icon_count - idx;
+        idx_b = idx_b ? idx_b : 1;
+        icon.push(luckyIcon[idx_b]);
 
         for (i = 0, l = looper.length; i < l; i++) {
             _$('#lucky-icon-' + looper[i]).attr('src', icon[i]);
