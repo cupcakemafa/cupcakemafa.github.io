@@ -580,14 +580,14 @@ function getQueryString (key, default_) {
 
 
 !(function ($) {
+
+    riot.mount('*');
+
     var
         SITE_URL = location.protocol + '//www.cupcakemafa.com',
         pageType = $('#page-type').text(),
         pageUrl = $('#post-url').text(),
         $labels, labels, $attrs;
-
-    riot.mount('*');
-
 
     //console.log('pageType', pageType);
 
