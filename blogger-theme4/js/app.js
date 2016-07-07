@@ -93,18 +93,16 @@ function setLuckyWord(_$) {
 
         // 当日の日付に対応したラッキーワードのインデックスを取得
         date = countDate();
-        idx = date % word_count;
+        idx = parseInt(date % word_count,10);
         word.push(luckyWord[idx]);
         idx = word_count - idx;
         idx = idx ? idx : 2;
-        console.error('idx:word', idx);
         word.push(luckyWord[idx]);
 
-        idx = date % icon_count;
+        idx = parseInt(date % icon_count,10);
         icon.push(luckyIcon[idx]);
         idx = icon_count - idx;
         idx = idx ? idx : 2;
-        console.error('idx:img', idx);
         icon.push(luckyIcon[idx]);
 
         for (i = 0, l = looper.length; i < l; i++) {
