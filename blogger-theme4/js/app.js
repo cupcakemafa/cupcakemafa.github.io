@@ -578,10 +578,10 @@ function getQueryString (key, default_) {
     }
 }
 
+    riot.mount('*');
 
 !(function ($) {
 
-    riot.mount('*');
 
     var
         SITE_URL = location.protocol + '//www.cupcakemafa.com',
