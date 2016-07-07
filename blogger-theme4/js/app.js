@@ -96,12 +96,13 @@ function setLuckyWord(_$) {
         idx = date % word_count;
         word.push(luckyWord[idx]);
         idx = word_count - idx;
-        idx = idx ? idx : 1;
+        idx = idx ? idx : 2;
         word.push(luckyWord[idx]);
 
         idx = date % icon_count;
         icon.push(luckyIcon[idx]);
         idx = icon_count - idx;
+        idx = idx ? idx : 2;
         icon.push(luckyIcon[idx]);
 
         for (i = 0, l = looper.length; i < l; i++) {
