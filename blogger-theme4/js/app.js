@@ -586,6 +586,9 @@ function getQueryString (key, default_) {
         pageUrl = $('#post-url').text(),
         $labels, labels, $attrs;
 
+    riot.mount('*');
+
+
     //console.log('pageType', pageType);
 
     setLazyLoad($);
