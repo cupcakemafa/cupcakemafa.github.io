@@ -707,17 +707,29 @@ this.on('mount', function() {
     旅のおすすめ記事リストたち
 </p>
 <ul class='label-link list-group no-margin margin-bottom'>
-    <li class='list-group-item list-group-item-warning-'>
-        <h4><a href='/search/label/NEW%20YORK'>New York</a></h4>
+    <li class='list-group-item clearfix'>
+        <img class='img-circle pull-left' src='https://1.bp.blogspot.com/-SViF0unXFpE/VdpGeyIjrOI/AAAAAAAAAQY/i1xdgBTtJnsMeyxyauth8w11a1oOpmqwQ/s40/IMG_1953-1024px.jpg' />
+        <h4 class='pull-left'>
+            <a href='/search/label/NEW%20YORK'>New York</a>
+        </h4>
     </li>
-    <li class='list-group-item'>
-        <h4><a href='/search/label/PARIS'>Paris</a></h4>
+    <li class='list-group-item clearfix'>
+        <img class='img-circle pull-left' src='https://2.bp.blogspot.com/-72vDcnJJElM/VyBqZxo0ESI/AAAAAAACxU0/z7ZPeiXIU58z1X77BxjB3Pma7Ko9WqhVgCLcB/s40/IMG_8562.jpg' />
+        <h4 class='pull-left'>
+            <a href='/search/label/PARIS'>Paris</a>
+        </h4>
     </li>
-    <li class='list-group-item'>
-        <h4><a href='/search/label/BARCELONA'>Barcelona</a></h4>
+    <li class='list-group-item clearfix'>
+        <img class='img-circle pull-left' src='https://4.bp.blogspot.com/-f3kEVgcodtg/V1fPRnifQnI/AAAAAAADa5M/V_A-OCvq95Egkhi26JfQRvVf-NEbrQlZQCLcB/s40/IMG_9095.jpg' />
+        <h4 class='pull-left'>
+            <a href='/search/label/BARCELONA'>Barcelona</a>
+        </h4>
     </li>
-    <li class='list-group-item'>
-        <h4><a href='/search/label/持ち物'>持ち物</a></h4>
+    <li class='list-group-item clearfix'>
+        <img class='img-circle pull-left' src='http://1.bp.blogspot.com/-IZDdWbXkCg8/Vop2GB_EvGI/AAAAAAAABmk/kum1lYp9Xbo/s40/IMG_5287-1024.JPG' />
+        <h4 class='pull-left'>
+            <a href='/search/label/持ち物'>持ち物</a>
+        </h4>
     </li>
 </ul>
 <hr />
