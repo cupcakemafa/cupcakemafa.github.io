@@ -157,7 +157,8 @@ function setNaviHeight() {
 <div class='post-col col col-md-6 col-sm-12 col-xs-12 hidden-xs'>
     <div class='panel panel-default'>
         <div class='panel-body text-center' id='header-box'>
-            <img alt='Cupcakemafa' src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png' />
+            <img alt='Cupcakemafa' 
+                src='http://3.bp.blogspot.com/-ZNLv0M8ltMY/VdmC4QtSpZI/AAAAAAAAAO8/KD02eh8ll2w/s320/cupcakemafa-blog-header-490x153.png' />
             <p class='text-muted description'>
                 ちょっとしたことで日常に笑いを。<br />
                 そんな思いを持ちながらゆるーく活動しています。
@@ -329,7 +330,12 @@ this.on('mount', function() {
         <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
             <div class='row clearfix'>
                 <div class='col-xs-3 no-padding'>
-                    <img class='lucky-icon img-responsive pull-right' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png' />
+                    <img class='lucky-icon img-responsive pull-right' 
+                        src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
+                        srcset='
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
                 </div>
                 <div class='col-xs-6 no-padding'>
                     <h3 class='content-title no-margin margin-top text-center'>
@@ -338,7 +344,12 @@ this.on('mount', function() {
                     </h3>
                 </div>
                 <div class='col-xs-3 no-padding'>
-                    <img class='lucky-icon img-responsive pull-left' src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png' />
+                    <img class='lucky-icon img-responsive pull-left'
+                        src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
+                        srcset='
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
                 </div>
             </div>
         </div>
@@ -360,7 +371,8 @@ this.on('mount', function() {
         <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
                 <div class='col-xs-12 col-md-8 col-md-offset-2'>
-                    <img class='lucky-icon float-center' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
+                    <img class='lucky-icon float-center' 
+                        src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
                     <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
                 Good Choice
             </h3>
@@ -373,7 +385,8 @@ this.on('mount', function() {
                 <div class='row'>
                     <div class='col-xs-6 text-center'>
                         <p>
-                            <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
+                            <img id='lucky-icon-a' class='lucky-icon full-width' 
+                                src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s120/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
                             />
                             <br />
                         </p>
@@ -383,7 +396,8 @@ this.on('mount', function() {
                     </div>
                     <div class='col-xs-6 text-center'>
                         <p>
-                            <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
+                            <img id='lucky-icon-b' class='lucky-icon full-width'
+                                src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s120/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
                             />
                             <br />
                         </p>
@@ -481,7 +495,13 @@ this.on('mount', function() {
     </div>
     <div class='panel-body'>
         <p class='text-muted'>
-            <img class='img-circle img-responsive team-icon' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s1600/cupcakemafa-favicon-200x200.png' alt='Cupcakemafa' />
+            <img class='img-circle img-responsive team-icon' 
+                src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s80/cupcakemafa-favicon-200x200.png'
+                srcset='
+                    http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s80/cupcakemafa-favicon-200x200.png 1x,
+                    http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s160/cupcakemafa-favicon-200x200.png 2x,
+                    http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s240/cupcakemafa-favicon-200x200.png 3x'
+                alt='Cupcakemafa' />
         </p>
         <p class='text-muted text-left'>
             ちょっとしたことで日常に笑いを;) そんな思いを持ちながらゆるく活動している夫婦です。 読み物アプリを作ったり、旅の情報を発信したり、試行錯誤中。 ゆくゆくは日本の日常にもっとアートが自然に溶け込むようなことをやれたらいいなと思っています。 どうぞ、よろしく。
@@ -497,7 +517,13 @@ this.on('mount', function() {
     </div>
     <div class='panel-body'>
         <p class='text-muted'>
-            <img class='img-responsive' src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg' class='img-rounded' alt='Cupcakemafa' />
+            <img class='img-responsive img-rounded'
+                src='http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg'
+                srcset='
+                    http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s320/mafas-1024x747.jpg 1x,
+                    http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s640/mafas-1024x747.jpg 2x,
+                    http://1.bp.blogspot.com/-t2lVMMltkCA/VgPNsvzjX9I/AAAAAAAAAns/7c3LdZ95WLM/s1280/mafas-1024x747.jpg 3x'
+                alt='Cupcakemafa' />
         </p>
         <p class='text-muted text-left'>カップケーキとマーファをくっつけた造語、それが『カップケーキマーファ （Cupcakemafa）』です。 カップケーキは、Naoの好物。マーファとは、Kenがその昔に映画でイタリア男性が「マフィア」の事を 「マーファ」と言っていたのを聞きかじったのがきっかけで、できた言葉なのです。 Kenに言わせれば、Naoはマフィアのように怖い時と甘える時とをうまく使い分けるそう。 時にカップケーキのように甘く、時にマフィアのように厳しい。まるで、人生のようですね。
             なんてね。そんなわけで、カップケーキマーファの誕生ですっ!!
@@ -516,7 +542,13 @@ this.on('mount', function() {
     </div>
     <div id='tagList' class='panel-body widget-content cloud-label-widget-content text-left'>
         <p class='text-muted'>
-            <img src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s320/01.png' class='team-icon img-responsive' alt='ながれで！' />
+            <img 
+                src='https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s120/01.png'
+                srcset='
+                    https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s120/01.png 1x,
+                    https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s240/01.png 2x,
+                    https://4.bp.blogspot.com/-z4lxPcAEEkM/VnSzoFWF16I/AAAAAAAABWI/hqkxJReGUDg2dq5tnzdSfvYyE-cALr7lA/s360/01.png 3x'
+                class='team-icon img-responsive' alt='ながれで！' />
         </p>
         <span each={ tag_cloud_data } class='label-size label-size-{ cssSize }'>
             <span dir='{ langageDirection }'>
@@ -811,7 +843,13 @@ this.on('mount', function() {
 <about-line-stamp-second>
 <span class='fa-stack fa-4x'>
     <a href='http://line.me/S/sticker/1201752' rel='nofollow' target='_blank' class='exLink'>
-        <img class='img-responsive' src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s1600/22.png' alt='そんなバナナ！？' />
+        <img class='img-responsive' 
+            src='https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s320/22.png' 
+            srcset='
+                https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s320/22.png 1x,
+                https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s640/22.png 2x,
+                https://2.bp.blogspot.com/-4PKLIsIhPoU/VnS57Zk2DJI/AAAAAAAABY0/AQ9oOyIt-WYhu4QUph1sFpjC2MKd3S15Q/s1280/22.png 3x'
+            alt='そんなバナナ！？' />
     </a>
 </span>
 <h4 class='service-heading'>LINEスタンプPart2も発売中!!</h4>
@@ -830,19 +868,37 @@ this.on('mount', function() {
 <about-ken-zukan-app>
 <span class='fa-stack fa-4x'>
     <a href='/p/kenzukan.html'>
-        <img class='img-responsive' src='https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s1600/33.png' alt='それ、きょうみある！！' />
+        <img class='img-responsive' 
+            src='https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s1600/33.png'
+            srcset='
+                https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s320/33.png 1x,
+                https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s640/33.png 2x,
+                https://4.bp.blogspot.com/-uKaB2EZONjQ/VnS78cUs6mI/AAAAAAAABaM/eWV9bE86IekVoatyhiA4Su_nKkdfp6gGw/s1280/33.png 3x'
+            alt='それ、きょうみある！！' />
     </a>
 </span>
 <h4 class='service-heading'>無料アプリのKEN図鑑</h4>
 <a href='/p/kenzukan.html'>
-    <img alt='無料アプリのKEN図鑑' class='img-responsive float-center' src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png' style='margin-bottom:0px;' />
+    <img alt='無料アプリのKEN図鑑' class='img-responsive float-center' 
+        src='http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s400/main-2-1024x500.png'
+        srcset='
+            http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s320/main-2-1024x500.png 1x,
+            http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s640/main-2-1024x500.png 2x,
+            http://2.bp.blogspot.com/-JN5v65tyAGA/VdkE7PMaZzI/AAAAAAAAAK4/YkfuzYk1OZU/s1280/main-2-1024x500.png 3x'
+        style='margin-bottom:0px;' />
 </a>
 <p class='text-muted'>
     けんのシュールな日常の小話を集めた無料アプリです。 じわーっと来る笑いのひと時をどうぞ!! iPhone/Androidでご利用になれます。
 </p>
 <p>
-    <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8' target='_blank' rel='nofollow' class='exLink'><img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s1600/Download_on_the_App_Store_JP_135x40.png' width='135' /></a>
-    <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan' target='_blank' rel='nofollow' class='exLink'><img alt='Get it on Google Play' height='40' src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' width='115' /></a>
+    <a href='https://itunes.apple.com/us/app/ken-zukan/id980811179?l=ja&amp;ls=1&amp;mt=8' target='_blank' rel='nofollow' class='exLink'>
+        <img alt='iOS用KEN図鑑のダウンロードはこちらです' border='0' height='40' width='135'
+            src='http://4.bp.blogspot.com/-SPpo7aXEKFM/VdjpCNxQXuI/AAAAAAAAAJA/HtWqrn2h-IQ/s135/Download_on_the_App_Store_JP_135x40.png'/>
+    </a>
+    <a href='https://play.google.com/store/apps/details?id=com.cupcakemafa.kenzukan' target='_blank' rel='nofollow' class='exLink'>
+        <img alt='Get it on Google Play' height='40' width='115'
+            src='http://3.bp.blogspot.com/-LIRGKjh0Ct0/VqeFGOATwnI/AAAAAAAABpU/ta4wuxp44c8/s1600/ja_generic_rgb_wo_45.png' />
+    </a>
 </p>
 <p>
     <a href='/p/kenzukan.html' class='btn btn-default btn-block'>KEN図鑑を見てみる <i class='fa fa-chevron-right'></i></a>
