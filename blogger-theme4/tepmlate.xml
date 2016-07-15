@@ -991,7 +991,7 @@
     <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
     <script type='text/javascript'>
         //<![CDATA[
-        //riot.mount('*');
+        riot.mount('*');
         //]]>
     </script>
 

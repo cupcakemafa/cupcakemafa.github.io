@@ -580,7 +580,6 @@ function getQueryString (key, default_) {
 
 !(function ($) {
 
-    var tpl = riot.mount('*');
     var
         SITE_URL = location.protocol + '//www.cupcakemafa.com',
         pageType = $('#page-type').text(),
