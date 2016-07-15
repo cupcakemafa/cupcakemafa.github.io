@@ -588,7 +588,6 @@ function getQueryString (key, default_) {
 
     //console.log('pageType', pageType);
 
-    setLazyLoad($);
     setExternalLink();
 
     if (pageType === 'item' || pageType === 'static_page') {
@@ -597,6 +596,7 @@ function getQueryString (key, default_) {
         setStory();
         setSinglePageNavi();
         setAspect();
+        setLazyLoad($);
 
         $labels = $('.param.label');
         $labels.each(function (labelIdx, labelElm) {
