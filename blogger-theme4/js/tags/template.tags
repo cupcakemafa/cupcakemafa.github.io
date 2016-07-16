@@ -926,3 +926,20 @@ this.on('mount', function() {
 ////////////////////////////////////////
 // End Content
 ////////////////////////////////////////
+
+<travel-goods-link>
+<h2 class="sign no-border">
+    旅のおとも まとめ
+</h2>
+</p>
+<ul class="list">
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/02/Travel-Planning.html">周遊チケット</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2015/10/travel-apps.html">旅で役立つアプリ</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/01/myrecommend-skinfood.html">おすすめ化粧品</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/02/bpafree-water-bottle.html">ウォーターボトル</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/04/handsanitizer.html">ハンドサニタイザー</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/04/RuMe-ecobag.html">エコバッグ</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/05/rubber-sponge-sandals.html">ラバースポンジサンダル</a></li>
+    <li><i class="fa fa-star"></i> <a href="http://www.cupcakemafa.com/2016/05/suitcase-SCALE.html">スーツケースのはかり</a></li>
+</ul>
+</travel-goods-link>
