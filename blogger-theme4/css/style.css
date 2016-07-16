@@ -198,3 +198,8 @@ h4 a:hover,
 .post .post-content-area a:not(.btn):hover {
     background: #b4e7f8;
 }
+
+ul.list,
+ul.list li {
+    list-style:none;
+}
