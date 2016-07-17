@@ -114,7 +114,7 @@ body.error_page {
     min-height: 475px;
 }
 #portfolio .portfolio-item img.img-responsive {
-    min-height: 360px;
+    max-height: 360px;
 }
 #portfolio .portfolio-item .portfolio-link {
     background-color: white;
