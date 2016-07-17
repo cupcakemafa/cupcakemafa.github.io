@@ -171,6 +171,10 @@ article.post .img-rounded {
     margin: 4px;
 }
 
+article.post .img-responsive {
+    margin: auto;
+}
+
 /* Custom for drop down hover */
 .dropdown.open ul.dropdown-menu {
     padding: 0;
