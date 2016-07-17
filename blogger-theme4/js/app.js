@@ -367,7 +367,7 @@ function setStory() {
             $frame.each(function (idx, elm) {
                 if (idx === 0) {
                     tag += '<p>';
-                    tag += '<img src="http://4.bp.blogspot.com/-vwQJvGoXZtg/ViTvzIau-pI/AAAAAAAAA-Q/6THLDuzPpOA/s640/ken-kobanashi-banner-1024px.png" />';
+                    tag += '<img class="img-responsive" src="http://4.bp.blogspot.com/-vwQJvGoXZtg/ViTvzIau-pI/AAAAAAAAA-Q/6THLDuzPpOA/s640/ken-kobanashi-banner-1024px.png" />';
                     tag += '</p>';
                 }
                 $elm = $(elm);
