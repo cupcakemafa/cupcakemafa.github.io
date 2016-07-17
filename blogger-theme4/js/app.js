@@ -12,9 +12,15 @@ function setHeadRoom(_$) {
 
 /**
  * Check if mobile or not for Blogger.com
+ * global isMobile
+ * @link https://github.com/kaimallea/isMobile
  */
-function isMobile() {
-    return getQueryString('m', 0) ? true : false;
+function isMobileDevice() {
+    var is_mobile = false;
+    if(isMobile && isMobile.any) {
+        is_mobile = true;
+    }
+    return is_mobile;
 }
 
 function setLazyLoad(_$) {
@@ -618,7 +624,7 @@ function getQueryString (key, default_) {
         setLuckyWord($);
         setArchiveTitle();
 
-        if(!isMobile()) {
+        if(!isMobileDevice()) {
             var
                 ADJUST_BOTTOM=8,
                 heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
@@ -648,7 +654,7 @@ function getQueryString (key, default_) {
         }
     }
 
-    if(!isMobile()) {
+    if(!isMobileDevice()) {
         var
             ADJUST_BOTTOM=8,
             heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
