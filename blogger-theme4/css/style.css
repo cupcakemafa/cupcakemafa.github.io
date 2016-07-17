@@ -113,6 +113,9 @@ body.error_page {
 #portfolio .portfolio-item {
     min-height: 475px;
 }
+#portfolio .portfolio-item img.img-responsive {
+    min-height: 360px;
+}
 #portfolio .portfolio-item .portfolio-link {
     background-color: white;
 }
