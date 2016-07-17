@@ -110,7 +110,9 @@ body.error_page {
       padding: 15px;
     }
 }
-
+#portfolio .portfolio-item {
+    min-height: 475px;
+}
 #portfolio .portfolio-item .portfolio-link {
     background-color: white;
 }
