@@ -621,13 +621,21 @@ function getQueryString (key, default_) {
             });
         });
     } else {
+
         if (pageType === 'home') {
+            $('lucky-word-panel').removeClass('hidden');
+            $('top-header').removeClass('hidden');
             setLuckyWord($);
+        }
+        else {
+            $('lucky-word-panel').addClass('hidden');
+            $('top-header').addClass('hidden');
         }
 
         setArchiveTitle();
 
         if(!isMobileDevice()) {
+            // Equal height
             var
                 ADJUST_BOTTOM=8,
                 heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
@@ -657,33 +665,33 @@ function getQueryString (key, default_) {
         }
     }
 
-    if(!isMobileDevice()) {
-        var
-            ADJUST_BOTTOM=8,
-            heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
-            $listItem=$('.post-body'),
-            $popItem=$('#popular-post-list').find('.col-md-4'),
-            i, l=$listItem.length,
-            theHeight;
-        for(i=0,l=$popItem.length;i<l;i+=3) {
-            $elmOne=$($popItem.eq(i));
-            $elmTwo=$($popItem.eq(i+1));
-            $elmThree=$($popItem.eq(i+2));
-            if($elmOne && $elmTwo && $elmThree) {
-                heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
-                heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
-                heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
-                if(heightOne && heightTwo && heightThree) {
-                    theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
-                    $elmOne.height(theHeight);
-                    $elmTwo.height(theHeight);
-                    $elmThree.height(theHeight);
-                }
-                else {
-                    heightOne = heightTwo = heightThree = 0;
-                }
-            }
-        }
-    }
+//    if(!isMobileDevice()) {
+//        var
+//            ADJUST_BOTTOM=8,
+//            heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
+//            $listItem=$('.post-body'),
+//            $popItem=$('#popular-post-list').find('.col-md-4'),
+//            i, l=$listItem.length,
+//            theHeight;
+//        for(i=0,l=$popItem.length;i<l;i+=3) {
+//            $elmOne=$($popItem.eq(i));
+//            $elmTwo=$($popItem.eq(i+1));
+//            $elmThree=$($popItem.eq(i+2));
+//            if($elmOne && $elmTwo && $elmThree) {
+//                heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
+//                heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
+//                heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
+//                if(heightOne && heightTwo && heightThree) {
+//                    theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
+//                    $elmOne.height(theHeight);
+//                    $elmTwo.height(theHeight);
+//                    $elmThree.height(theHeight);
+//                }
+//                else {
+//                    heightOne = heightTwo = heightThree = 0;
+//                }
+//            }
+//        }
+//    }
 
 })(jQuery);
