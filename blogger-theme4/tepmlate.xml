@@ -112,6 +112,15 @@
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js' type='text/javascript' charset='utf-8'></script>
     <![endif]-->
 
+    <!-- Inject Templates -->
+    <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>
+    <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
+    <script type='text/javascript'>
+        //<![CDATA[
+        riot.mount('header-nav,top-header,not-found,lucky-word-panel,lucky-word-modal');
+        //]]>
+    </script>
+
     <!-- Mobile Check -->
     <script charset='utf-8' type='text/javascript'>
         //<![CDATA[
@@ -130,7 +139,8 @@
       });
     </script>
 </head>
-<body expr:class='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)'>
+<body expr:data-page-type='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)'>
+<!--<body expr:class='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)'>-->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -1004,12 +1014,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript' charset='utf-8'></script>
 
-    <!-- Inject Templates -->
-    <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>
-    <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
+    <!-- Inject Templates Part 2 -->
     <script type='text/javascript'>
         //<![CDATA[
-        riot.mount('*');
+        riot.mount('site-search,site-footer,footer-navi,who-we-are,about-us,tag-cloud,back-number,about-virtual-tour,about-instagram,about-twitter,about-tour-post,about-facebook,about-line-stamp-second,about-ken-zukan-app,about-line-stamp-first,travel-goods-link');
         //]]>
     </script>
 
