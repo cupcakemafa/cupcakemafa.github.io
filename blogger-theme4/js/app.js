@@ -622,7 +622,7 @@ function getQueryString (key, default_) {
         });
     } else {
 
-        if (pageType === 'home') {
+        if (pageType == 'home') {
             $('lucky-word-panel').removeClass('hidden').show();
             $('top-header').removeClass('hidden').show();
             setLuckyWord($);
