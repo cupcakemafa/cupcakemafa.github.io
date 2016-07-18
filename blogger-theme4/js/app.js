@@ -623,8 +623,8 @@ function getQueryString (key, default_) {
     } else {
 
         if (pageType === 'home') {
-            $('lucky-word-panel').removeClass('hidden');
-            $('top-header').removeClass('hidden');
+            $('lucky-word-panel').removeClass('hidden').show();
+            $('top-header').removeClass('hidden').show();
             setLuckyWord($);
         }
         else {
