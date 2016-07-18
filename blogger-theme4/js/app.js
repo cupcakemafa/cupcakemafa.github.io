@@ -46,6 +46,9 @@ function setLazyLoad(_$) {
 
 function setLuckyWord(_$) {
 console.log('setLuckyWord');
+console.log(luckyWord.length);
+console.log(luckyIcon.length);
+console.log(_$('.lucky-word-box').length);
     if (luckyWord.length && luckyIcon.length && _$('.lucky-word-box').length) {
 
 console.log('setLuckyWord:start');
