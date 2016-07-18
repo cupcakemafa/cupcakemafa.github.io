@@ -621,7 +621,10 @@ function getQueryString (key, default_) {
             });
         });
     } else {
-        setLuckyWord($);
+        if (pageType === 'home') {
+            setLuckyWord($);
+        }
+
         setArchiveTitle();
 
         if(!isMobileDevice()) {
