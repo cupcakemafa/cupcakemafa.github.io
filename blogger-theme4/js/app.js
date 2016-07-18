@@ -594,7 +594,7 @@ function getQueryString (key, default_) {
 
     var
         SITE_URL = location.protocol + '//www.cupcakemafa.com',
-        pageType = $('#page-type').text(),
+        pageType = $('body').attr('data-page-type').val(),
         pageUrl = $('#post-url').text(),
         $labels, labels, $attrs;
 
