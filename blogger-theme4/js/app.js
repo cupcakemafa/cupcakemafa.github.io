@@ -598,7 +598,7 @@ function getQueryString (key, default_) {
         pageUrl = $('#post-url').text(),
         $labels, labels, $attrs;
 
-    console.log('pageType', pageType);
+//    console.log('pageType', pageType);
 
     setExternalLink();
 
@@ -670,34 +670,5 @@ function getQueryString (key, default_) {
             }
         }
     }
-
-//    if(!isMobileDevice()) {
-//        var
-//            ADJUST_BOTTOM=8,
-//            heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
-//            $listItem=$('.post-body'),
-//            $popItem=$('#popular-post-list').find('.col-md-4'),
-//            i, l=$listItem.length,
-//            theHeight;
-//        for(i=0,l=$popItem.length;i<l;i+=3) {
-//            $elmOne=$($popItem.eq(i));
-//            $elmTwo=$($popItem.eq(i+1));
-//            $elmThree=$($popItem.eq(i+2));
-//            if($elmOne && $elmTwo && $elmThree) {
-//                heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
-//                heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
-//                heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
-//                if(heightOne && heightTwo && heightThree) {
-//                    theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
-//                    $elmOne.height(theHeight);
-//                    $elmTwo.height(theHeight);
-//                    $elmThree.height(theHeight);
-//                }
-//                else {
-//                    heightOne = heightTwo = heightThree = 0;
-//                }
-//            }
-//        }
-//    }
 
 })(jQuery);
