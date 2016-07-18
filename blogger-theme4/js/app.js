@@ -45,13 +45,13 @@ function setLazyLoad(_$) {
 }
 
 function setLuckyWord(_$) {
-console.log('setLuckyWord');
-console.log(luckyWord.length);
-console.log(luckyIcon.length);
-console.log(_$('.lucky-word-box').length);
-    if (luckyWord.length && luckyIcon.length && _$('.lucky-word-box').length) {
+    console.log('setLuckyWord');
+    console.log(luckyWord.length);
+    console.log(luckyIcon.length);
+//    if (luckyWord.length && luckyIcon.length && _$('.lucky-word-box').length) {
+    if (luckyWord.length && luckyIcon.length) {
 
-console.log('setLuckyWord:start');
+        console.log('setLuckyWord:start');
         var
             HUSH_TAG = 'luckyWord',
             SHARE_VIA = 'cupcakemafa',
