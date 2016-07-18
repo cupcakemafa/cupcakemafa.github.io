@@ -746,44 +746,6 @@
         </b:widget>
     </b:section>
 
-    <!-- Services Section -->
-    <section id='services' class='clearfix'>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-lg-12 text-center'>
-                    <h2 class='section-heading'>What We Do</h2>
-                    <h3 class='section-subheading text-muted'>Cupcakemafaのいろいろ</h3>
-                </div>
-            </div>
-            <div class='row text-center'>
-                <div class='col-md-4'>
-                    <about-line-stamp-first></about-line-stamp-first>
-                </div>
-                <div class='col-md-4'>
-                    <about-ken-zukan-app></about-ken-zukan-app>
-                </div>
-                <div class='col-md-4'>
-                    <about-line-stamp-second></about-line-stamp-second>
-                </div>
-            </div>
-            <!-- //.row -->
-            <div class='row'>
-                <div class='col-md-4 text-center'>
-                    <about-virtual-tour></about-virtual-tour>
-                    <about-twitter></about-twitter>
-                </div>
-                <div class='col-md-4 text-center'>
-                    <about-tour-post></about-tour-post>
-                    <about-facebook></about-facebook>
-                </div>
-                <div class='col-md-4 text-center'>
-                    <about-instagram></about-instagram>
-                </div>
-            </div>
-            <!-- //.row -->
-        </div>
-    </section>
-
     <b:section class='clearfix' id='about' showaddelement='yes' preferred='yes'>
 
         <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
@@ -832,6 +794,44 @@
             </b:includable>
         </b:widget>
     </b:section>
+
+    <!-- Services Section -->
+    <section id='services' class='clearfix'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-lg-12 text-center'>
+                    <h2 class='section-heading'>What We Do</h2>
+                    <h3 class='section-subheading text-muted'>Cupcakemafaのいろいろ</h3>
+                </div>
+            </div>
+            <div class='row text-center'>
+                <div class='col-md-4'>
+                    <about-line-stamp-first></about-line-stamp-first>
+                </div>
+                <div class='col-md-4'>
+                    <about-ken-zukan-app></about-ken-zukan-app>
+                </div>
+                <div class='col-md-4'>
+                    <about-line-stamp-second></about-line-stamp-second>
+                </div>
+            </div>
+            <!-- //.row -->
+            <div class='row'>
+                <div class='col-md-4 text-center'>
+                    <about-virtual-tour></about-virtual-tour>
+                    <about-twitter></about-twitter>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <about-tour-post></about-tour-post>
+                    <about-facebook></about-facebook>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <about-instagram></about-instagram>
+                </div>
+            </div>
+            <!-- //.row -->
+        </div>
+    </section>
 
     <!-- Team Section -->
     <section id='team' class='bg-light-gray'>
