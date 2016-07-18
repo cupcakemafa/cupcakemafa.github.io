@@ -635,12 +635,11 @@ function getQueryString (key, default_) {
         setArchiveTitle();
 
         if(!isMobileDevice()) {
-            // Equal height
+            // Equal height for post list
             var
                 ADJUST_BOTTOM=8,
                 heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
                 $listItem=$('.post-body'),
-                $popItem=$('#popular-post-list').find('.col-md-4'),
                 i, l=$listItem.length,
                 theHeight;
             for(i=0;i<l;i+=3) {
@@ -660,6 +659,35 @@ function getQueryString (key, default_) {
                     else {
                         heightOne = heightTwo = heightThree = 0;
                     }
+                }
+            }
+        }
+    }
+
+    if(!isMobileDevice()) {
+        // Equal height for Popular posts
+        var
+            ADJUST_BOTTOM=8,
+            heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
+            $listItem=$('#popular-post-list > .col-md-4'),
+            i, l=$listItem.length,
+            theHeight;
+        for(i=0;i<l;i+=3) {
+            $elmOne=$($listItem.eq(i));
+            $elmTwo=$($listItem.eq(i+1));
+            $elmThree=$($listItem.eq(i+2));
+            if($elmOne && $elmTwo && $elmThree) {
+                heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
+                heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
+                heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
+                if(heightOne && heightTwo && heightThree) {
+                    var theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
+                    $elmOne.height(theHeight);
+                    $elmTwo.height(theHeight);
+                    $elmThree.height(theHeight);
+                }
+                else {
+                    heightOne = heightTwo = heightThree = 0;
                 }
             }
         }
