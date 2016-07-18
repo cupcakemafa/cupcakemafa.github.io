@@ -45,7 +45,10 @@ function setLazyLoad(_$) {
 }
 
 function setLuckyWord(_$) {
+console.log('setLuckyWord');
     if (luckyWord.length && luckyIcon.length && _$('.lucky-word-box').length) {
+
+console.log('setLuckyWord:start');
         var
             HUSH_TAG = 'luckyWord',
             SHARE_VIA = 'cupcakemafa',
@@ -66,6 +69,7 @@ function setLuckyWord(_$) {
              * @param string endDate 2016/12/31
              **/
             countDate = function (startDateStr, endDateStr) {
+console.log('countDate');
                 var date = new Date(),
                     year = date.getFullYear(),
                     startDate = new Date(year + '/01/01'),
@@ -85,6 +89,7 @@ function setLuckyWord(_$) {
              * @param string word
              */
             getTweetText = function (word) {
+console.log('getTweetText');
                 if (word) {
                     // %20: space
                     // %23: #
@@ -144,6 +149,7 @@ function setLuckyWord(_$) {
             $lucky_header = _$('#lucky-header');
         $open_lucky.prop('disabled', false);
         $lucky_header.prop('disabled', false);
+console.log('setLuckyWord:end');
     }
 }
 
@@ -592,7 +598,7 @@ function getQueryString (key, default_) {
         pageUrl = $('#post-url').text(),
         $labels, labels, $attrs;
 
-    //console.log('pageType', pageType);
+    console.log('pageType', pageType);
 
     setExternalLink();
 
@@ -622,7 +628,7 @@ function getQueryString (key, default_) {
         });
     } else {
 
-        if (pageType == 'home') {
+        if (pageType === 'home') {
             $('lucky-word-panel').removeClass('hidden').show();
             $('top-header').removeClass('hidden').show();
             setLuckyWord($);
