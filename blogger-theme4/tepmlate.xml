@@ -139,7 +139,7 @@
       });
     </script>
 </head>
-<body expr:data-page-type='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)'>
+<body expr:class='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)' expr:data-page-type='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)'>
 <!--<body expr:class='(data:blog.url == data:blog.homepageUrl ? &quot;home&quot; : data:blog.pageType)'>-->
     <script type="application/ld+json">
     {
