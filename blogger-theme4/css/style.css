@@ -216,8 +216,3 @@ ul.list.star-o li:before {
     font-family: FontAwesome;
     content: "\f006";
 }
-
-row.amazon .title:before {
-    font-family: FontAwesome;
-    content: "\f270";
-}
