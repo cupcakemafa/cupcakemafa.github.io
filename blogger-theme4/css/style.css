@@ -212,3 +212,7 @@ ul.list,
 ul.list li {
     list-style:none;
 }
+ul.list.star-o li:before {
+    font-family: FontAwesome;
+    content: "\f006";
+}
