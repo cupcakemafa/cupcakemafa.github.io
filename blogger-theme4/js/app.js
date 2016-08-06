@@ -17,7 +17,7 @@ function setHeadRoom(_$) {
  */
 function isMobileDevice() {
     var is_mobile = false;
-    if(isMobile && isMobile.any) {
+    if (isMobile && isMobile.any) {
         is_mobile = true;
     }
     return is_mobile;
@@ -99,13 +99,13 @@ function setLuckyWord(_$) {
 
         // 当日の日付に対応したラッキーワードのインデックスを取得
         date = countDate();
-        idx = parseInt(date % word_count,10);
+        idx = parseInt(date % word_count, 10);
         word.push(luckyWord[idx]);
         idx_b = word_count - idx;
         idx_b = idx_b != idx ? idx_b : 1;
         word.push(luckyWord[idx_b]);
 
-        idx = parseInt(date % icon_count,10);
+        idx = parseInt(date % icon_count, 10);
         icon.push(luckyIcon[idx]);
         idx_b = icon_count - idx;
         idx_b = idx_b != idx ? idx_b : 1;
@@ -569,7 +569,7 @@ function setAspect() {
  * @link http://vba-geek.jp/blog-entry-183.html
  * @link http://www.bloggingdeveloper.com/post/JavaScript-QueryString-ParseGet-QueryString-with-Client-Side-JavaScript.aspx
  */
-function getQueryString (key, default_) {
+function getQueryString(key, default_) {
     var regex, qs;
     if (default_ == null) {
         default_ = '';
@@ -584,6 +584,14 @@ function getQueryString (key, default_) {
     }
 }
 
+function disableImageLink($link) {
+    $link.on('click', function () {
+        if ($(this).find('img').length) {
+            return false;
+        }
+    });
+}
+
 !(function ($) {
 
     var
@@ -592,7 +600,7 @@ function getQueryString (key, default_) {
         pageUrl = $('#post-url').text(),
         $labels, labels, $attrs;
 
-//    console.log('pageType', pageType);
+    //    console.log('pageType', pageType);
 
     setExternalLink();
 
@@ -603,6 +611,7 @@ function getQueryString (key, default_) {
         setSinglePageNavi();
         setAspect();
         setLazyLoad($);
+        disableImageLink();
 
         $labels = $('.param.label');
         $labels.each(function (labelIdx, labelElm) {
@@ -626,37 +635,35 @@ function getQueryString (key, default_) {
             $('lucky-word-panel').removeClass('hidden').show();
             $('top-header').removeClass('hidden').show();
             setLuckyWord($);
-        }
-        else {
+        } else {
             $('lucky-word-panel').addClass('hidden');
             $('top-header').addClass('hidden');
         }
 
         setArchiveTitle();
 
-        if(!isMobileDevice()) {
+        if (!isMobileDevice()) {
             // Equal height for post list
             var
-                ADJUST_BOTTOM=8,
+                ADJUST_BOTTOM = 8,
                 heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
-                $listItem=$('.post-body'),
-                i, l=$listItem.length,
+                $listItem = $('.post-body'),
+                i, l = $listItem.length,
                 theHeight;
-            for(i=0;i<l;i+=3) {
-                $elmOne=$($listItem.eq(i));
-                $elmTwo=$($listItem.eq(i+1));
-                $elmThree=$($listItem.eq(i+2));
-                if($elmOne && $elmTwo && $elmThree) {
+            for (i = 0; i < l; i += 3) {
+                $elmOne = $($listItem.eq(i));
+                $elmTwo = $($listItem.eq(i + 1));
+                $elmThree = $($listItem.eq(i + 2));
+                if ($elmOne && $elmTwo && $elmThree) {
                     heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                     heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
                     heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
-                    if(heightOne && heightTwo && heightThree) {
-                        var theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
+                    if (heightOne && heightTwo && heightThree) {
+                        var theHeight = Math.max(heightOne, heightTwo, heightThree) + ADJUST_BOTTOM;
                         $elmOne.height(theHeight);
                         $elmTwo.height(theHeight);
                         $elmThree.height(theHeight);
-                    }
-                    else {
+                    } else {
                         heightOne = heightTwo = heightThree = 0;
                     }
                 }
@@ -664,29 +671,28 @@ function getQueryString (key, default_) {
         }
     }
 
-    if(!isMobileDevice()) {
+    if (!isMobileDevice()) {
         // Equal height for Popular posts
         var
-            ADJUST_BOTTOM=8,
+            ADJUST_BOTTOM = 8,
             heightOne, heightTwo, heightThree, $elmOne, $elmTwo, $elmThree,
-            $listItem=$('#popular-post-list > .col-md-4'),
-            i, l=$listItem.length,
+            $listItem = $('#popular-post-list > .col-md-4'),
+            i, l = $listItem.length,
             theHeight;
-        for(i=0;i<l;i+=3) {
-            $elmOne=$($listItem.eq(i));
-            $elmTwo=$($listItem.eq(i+1));
-            $elmThree=$($listItem.eq(i+2));
-            if($elmOne && $elmTwo && $elmThree) {
+        for (i = 0; i < l; i += 3) {
+            $elmOne = $($listItem.eq(i));
+            $elmTwo = $($listItem.eq(i + 1));
+            $elmThree = $($listItem.eq(i + 2));
+            if ($elmOne && $elmTwo && $elmThree) {
                 heightOne = $elmOne.length ? parseInt($elmOne.height(), 10) : 0;
                 heightTwo = $elmTwo.length ? parseInt($elmTwo.height(), 10) : 0;
                 heightThree = $elmThree.length ? parseInt($elmThree.height(), 10) : 0;
-                if(heightOne && heightTwo && heightThree) {
-                    var theHeight = Math.max(heightOne, heightTwo, heightThree)+ADJUST_BOTTOM;
+                if (heightOne && heightTwo && heightThree) {
+                    var theHeight = Math.max(heightOne, heightTwo, heightThree) + ADJUST_BOTTOM;
                     $elmOne.height(theHeight);
                     $elmTwo.height(theHeight);
                     $elmThree.height(theHeight);
-                }
-                else {
+                } else {
                     heightOne = heightTwo = heightThree = 0;
                 }
             }
