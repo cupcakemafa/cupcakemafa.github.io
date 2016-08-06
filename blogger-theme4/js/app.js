@@ -585,11 +585,13 @@ function getQueryString(key, default_) {
 }
 
 function disableImageLink($link) {
-    $link.on('click', function () {
-        if ($(this).find('img').length) {
-            return false;
-        }
-    });
+    if ($link.length) {
+        $link.on('click', function () {
+            if ($(this).find('img').length) {
+                return false;
+            }
+        });
+    }
 }
 
 !(function ($) {
@@ -611,7 +613,7 @@ function disableImageLink($link) {
         setSinglePageNavi();
         setAspect();
         setLazyLoad($);
-        disableImageLink();
+        disableImageLink($('.post-content-area a'));
 
         $labels = $('.param.label');
         $labels.each(function (labelIdx, labelElm) {
