@@ -1053,7 +1053,7 @@
     <!-- Inject Templates Part 2 -->
     <script type='text/javascript'>
         //<![CDATA[
-        riot.mount('site-search,site-footer,footer-navi,who-we-are,about-us,tag-cloud,back-number,about-virtual-tour,about-instagram,about-twitter,about-tour-post,about-facebook,about-line-stamp-second,about-ken-zukan-app,about-line-stamp-first,travel-goods-link');
+        riot.mount('site-search,site-footer,footer-navi,who-we-are,about-us,tag-cloud,back-number,about-virtual-tour,about-instagram,about-twitter,about-tour-post,about-facebook,about-line-stamp-second,about-ken-zukan-app,about-line-stamp-first,travel-goods-link,bcn-link');
         //]]>
     </script>
 
