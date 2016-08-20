@@ -76,7 +76,6 @@ function setLuckyWord(_$) {
                     return TEXT_PREFIX + hushTag
                         + TEXT_POSTFIX + word
                         + decodeURIComponent('%0A')
-//                        + 'http://www.cupcakemafa.com/'
                         + '#luckyWord'
                         + ' @cupcakemafa';
                 }
