@@ -5,7 +5,7 @@ var luckyWord = [
 //    },
     {
         "img": "https://4.bp.blogspot.com/-s9aoQUpjSic/VwUUwMJQT2I/AAAAAAAAB9U/_OB1osuzSpYlzJSyFgRjJEwjGVhaLE5_g/s320/IMG_0222.png",
-        "text": "イッツニューミー!"
+        "text": "It&rsquo;s new me!"
     },
     {
         "img": "https://2.bp.blogspot.com/-agnHXR8ghtQ/VwUUwHull9I/AAAAAAAAB9Y/zSc7yTHOSPYeg48WtI8DZJ6RWyGMBQ8BQ/s320/IMG_0223.png",
@@ -98,7 +98,131 @@ var luckyWord = [
     {
         "img": "https://2.bp.blogspot.com/-IDbqkzzZmZE/VwUU1zYpJ-I/AAAAAAAAB-w/CRhG-HCqQdg_cTwJAwZl1UsvvLC8-YvXw/s320/IMG_0246.png",
         "text": "このスットコドッコイ!"
-    }
+    },
+    {
+        "img": "https://4.bp.blogspot.com/-ei4HcjRMv7k/V7flrJpMN7I/AAAAAAADeIs/sAxcpQe0KtEizWgA1TjmUrykd5UPS3akACLcB/s1600/word-1.png",
+        "text": "にやり。"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-Z7vQBC-ygPI/V7fls3OGp4I/AAAAAAADeJY/eic6t-m2dlk70oyK_JCthKJybYCPTkwMQCLcB/s1600/word-2.png",
+        "text": "そりゃいいこってす"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-Dt7jOOhR6N4/V7fluc-R2ZI/AAAAAAADeKE/3cazeYb-j7wwWCAjB5kfccYnGriAV899gCLcB/s1600/word-3.png",
+        "text": "ええやんね"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-zMVBmYFhv24/V7flu5Z6rFI/AAAAAAADeKU/R9rCyz5cmx8v-RtMwmkhyuUTKkguwp28gCLcB/s1600/word-4.png",
+        "text": "ハブアナイスデイ!"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-3ydXvAT0u3k/V7flu3dedpI/AAAAAAADeKY/1X4aXEDNmGQgZUx8kvZbMas_-36Yi1BWQCLcB/s1600/word-5.png",
+        "text": "ハブアナイスデイ"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-VaHoRkAl5OM/V7flvFY87mI/AAAAAAADeKc/ZLq-KKpKrpMdXjz5BGbZvoT4UPY3OVoUgCLcB/s1600/word-7.png",
+        "text": "すべてが美しい!"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-wHdZD5do8MI/V7flvL3HOKI/AAAAAAADeKg/q1Yc5s3HfAIKuOZniHuJbTGnbgaW6sItACLcB/s1600/word-8.png",
+        "text": "ぱふぱふ"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-gIR0m_oq_d8/V7flvdK8G5I/AAAAAAADeKk/MII5PMc_bm8yZquQRCdBCdmeGBsOqFsagCLcB/s1600/word-9.png",
+        "text": "こっぱかぱーん"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-E_z5LeDoJDw/V7flrYj-yfI/AAAAAAADeIw/XFCDVtngtz4P-2wFXj0xaDp5bIvI2rzYgCLcB/s1600/word-10.png",
+        "text": "とれびあーん!"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-fsQg4n5d2ng/V7flrvbACYI/AAAAAAADeI0/QFm0J_nkcxAbDhn4HkPL2SiB8oQMGOdAACLcB/s1600/word-11.png",
+        "text": "ファビュラスですね"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-72XOWyobOU0/V7flrksRKJI/AAAAAAADeI4/n3Kdk5D2S3wdzM7hE538UEMe7HCfsDyawCLcB/s1600/word-12.png",
+        "text": "なんつって"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-T0WyHm5G5Hs/V7flr2WjBMI/AAAAAAADeI8/jXewmlW4PE8In1dP9m5495DnbmTF8grHwCLcB/s1600/word-13.png",
+        "text": "ばびょーん"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-J7wwIbJtnzo/V7flrwGLClI/AAAAAAADeJA/-8_dnngei_oZH2acsx0Sav-jionLt39mACLcB/s1600/word-14.png",
+        "text": "がっぴーん"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-0Ydd7ISaQxE/V7flsI49ePI/AAAAAAADeJE/fMWtzvxLvycj_6_lNkud_fLA79PxmyuqQCLcB/s1600/word-15.png",
+        "text": "行っトイレ"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-Udmxnf0D4wk/V7flsGC4xuI/AAAAAAADeJI/jESXIggJtMwpOpK1EjKHrr6PzSad6l6qwCLcB/s1600/word-16.png",
+        "text": "おなかがぽんぽこりんです。"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-pddZG4n70hQ/V7flseMu33I/AAAAAAADeJM/6-v28mmHTKgHKjggw-Zo3pISoqVL-1mmgCLcB/s1600/word-17.png",
+        "text": "メルシー"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-cYT5Ja0UhNU/V7flsdfyfgI/AAAAAAADeJQ/s2tQGHQiNa0bh6wCrJ8eMdiIwMsEcMifwCLcB/s1600/word-18.png",
+        "text": "今日は半日スマホ見ません..."
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-DLdi9_-HFIA/V7flslX2W9I/AAAAAAADeJU/6IkJMaGFV5ApaDQS81sa5H11Cqr9LgNwQCLcB/s1600/word-19.png",
+        "text": "希望はある!"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-656po3gdWKM/V7fls8B3X2I/AAAAAAADeJc/9pYx4wYzPMExhIIu9ZKKum3WF7G3gH4FgCLcB/s1600/word-20.png",
+        "text": "おいしいもの食べに行こう!"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-Eojk7ekr6Pc/V7fltJgK2aI/AAAAAAADeJg/grGWGtPyGfk7bkUAI9lDevyONu7aRO50wCLcB/s1600/word-21.png",
+        "text": "It&rsquo;s all good."
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-tpCBtGfE05Q/V7fltC1kFII/AAAAAAADeJk/Si6_8-HPWOgChBrxnzyl3vGjavK3CpR-gCLcB/s1600/word-22.png",
+        "text": "ちゃんちゃらおかしいぜ!"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-z1lnNCrI36k/V7fltUbet3I/AAAAAAADeJo/v4OsEmzaHJYy159O-TlhTNwgGZySBIxHACLcB/s1600/word-23.png",
+        "text": "どんがらがっしゃーん"
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-Y5iBiC_WpLE/V7fltgMS38I/AAAAAAADeJs/oKImekFnpQAKNrzdNENJUocx5wselRRxwCLcB/s1600/word-24.png",
+        "text": "スーパースター並だね!"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-v1_-YoxP9rQ/V7fltk99HpI/AAAAAAADeJw/lfm88vJMaB0SL4WcCXHW8WDzU3qR_wvcQCLcB/s1600/word-25.png",
+        "text": "並の努力ではないね"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-V9Rj5gbCusk/V7fltlpXkcI/AAAAAAADeJ0/GUKrB-tc4IE3WYWB4wwI-XFOpzk5RZKjQCLcB/s1600/word-26.png",
+        "text": "たまらんね"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-EP96ErdDRjU/V7fltyoafTI/AAAAAAADeJ4/KAgWwb0s8Q8aftms5CZKELWVkR_oMgT9QCLcB/s1600/word-27.png",
+        "text": "イッツニューミー!"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-yFwBBB_2HF0/V7fluGQS8CI/AAAAAAADeKA/F6RpusFkVQ43BMw5ghHeye0Y_hNBzA6DwCLcB/s1600/word-28.png",
+        "text": ""
+	},
+    {
+        "img": "https://1.bp.blogspot.com/-csrHLn9llg4/V7fluGEm3xI/AAAAAAADeJ8/rs_0zbYLLywAxFS4pfb2REZwv1tYmVuOACLcB/s1600/word-29.png",
+        "text": "ダコー!"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-huxORm5tK1w/V7fluYT0UJI/AAAAAAADeKI/mKAvsfHMV90aUeG1lIk10zS_nY4Z1A6aACLcB/s1600/word-30.png",
+        "text": "やわらかい頭で考える。"
+	},
+    {
+        "img": "https://2.bp.blogspot.com/-_x92JKPxKIY/V7flui3EqzI/AAAAAAADeKM/SQrxrsdDLusL4-VAFj6i6gej9SdDpMlkgCLcB/s1600/word-31.png",
+        "text": "足首、手首は冷やさないで!"
+	},
+    {
+        "img": "https://3.bp.blogspot.com/-THheQotCwIY/V7fluo_N8pI/AAAAAAADeKQ/e6p9YfC5XacBI2JKL2nSIULxK2Eui7goACLcB/s1600/word-32.png",
+        "text": "これだけは伝えておこう"
+	}
 ];
 
 var luckyIcon = [
@@ -120,5 +244,13 @@ var luckyIcon = [
     "https://3.bp.blogspot.com/-8NmYH1SRfpY/VwUUQFH7fVI/AAAAAAAAB9A/FsnpFtEmCqwlSpX-hzOHpL9pw_SLeECZA/s320/IMG_0217.png",
     "https://4.bp.blogspot.com/-U7kXYHM_VFA/VwUURP_nnoI/AAAAAAAAB9M/MRTuCPqZ9a8NYZgjxWD0KZOZgAoR5z6cQ/s320/IMG_0218.png",
     "https://2.bp.blogspot.com/-BDc06ZxdxLo/VwUUQcDivKI/AAAAAAAAB9E/TSr-QCBWpxwZOqKH1rSKTuFQMOTo7Ey6Q/s320/IMG_0219.png",
-    "https://2.bp.blogspot.com/-Xmthb3oo6Us/VwUUQ0el6fI/AAAAAAAAB9I/Z9Dz65vlSB8Bwcuet71FM0KacfNNbRkzA/s320/IMG_0220.png"
+    "https://2.bp.blogspot.com/-Xmthb3oo6Us/VwUUQ0el6fI/AAAAAAAAB9I/Z9Dz65vlSB8Bwcuet71FM0KacfNNbRkzA/s320/IMG_0220.png",
+    "https://1.bp.blogspot.com/-SyajPH5Q_7o/V7flqIF6qZI/AAAAAAADeIQ/UybhgY7blyUUXahnSbclxHM28ku_8S1JACLcB/s1600/icon-1.png",
+    "https://4.bp.blogspot.com/-GKXFNw8v4BI/V7flqOt3OBI/AAAAAAADeIM/HgP7sqm86lUZRxDMzHyOOW20z3IlYvHHwCLcB/s1600/icon-2.png",
+    "https://3.bp.blogspot.com/-H_MQjcMQanM/V7flqVWnYNI/AAAAAAADeIU/wj-HeKL4Xf8wTZgHJCgx-eNnWn0HEyfDgCLcB/s1600/icon-3.png",
+    "https://1.bp.blogspot.com/-9dzHO_6HLDk/V7flquuJ_rI/AAAAAAADeIY/KAr-bKTw9BA6dfjpZfHKL83RHgjV8YFfwCLcB/s1600/icon-4.png",
+    "https://3.bp.blogspot.com/-U4LPn9DO1IM/V7flqqIe2jI/AAAAAAADeIc/BNnU0Bq855g1gkuA-vcADRNXVUnXRM9rACLcB/s1600/icon-5.png",
+    "https://3.bp.blogspot.com/-iMhu-h9mkzY/V7flq2JG7JI/AAAAAAADeIg/hiN4lY-IoDsEZgJxhbxAOGCUL3pISaMvACLcB/s1600/icon-6.png",
+    "https://1.bp.blogspot.com/-O3DI3oH445I/V7flrKcNFVI/AAAAAAADeIk/Sys5k30DAtsaIEBJYlm45eiJP0LiICwmACLcB/s1600/icon-7.png",
+    "https://3.bp.blogspot.com/-mkHzqWG0kRs/V7flrP7O4ZI/AAAAAAADeIo/Rk-ZrEFBdPkIQquv_KXaz3MhPofe6Q6TQCLcB/s1600/icon-8.png"
 ];
