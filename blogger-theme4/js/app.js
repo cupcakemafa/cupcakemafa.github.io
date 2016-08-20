@@ -57,29 +57,9 @@ function setLuckyWord(_$) {
             hush_tag, share_tag,
             looper = ['a', 'b'],
             i, l,
-            date,
-            word_count = luckyWord.length - 1,
-            icon_count = luckyIcon.length - 1,
-            /**
-             * 2つの日付から日数を計算
-             * @param string startDate 2016/01/01
-             * @param string endDate 2016/12/31
-             **/
-            countDate = function (startDateStr, endDateStr) {
-                var date = new Date(),
-                    year = date.getFullYear(),
-                    startDate = new Date(year + '/01/01'),
-                    endDate = new Date();
-
-                // getTimeメソッドで経過ミリ秒を取得し、２つの日付の差を求める
-                var msDiff = endDate.getTime() - startDate.getTime();
-
-                // 求めた差分（ミリ秒）を日付へ変換します（経過ミリ秒÷(1000ミリ秒×60秒×60分×24時間)。端数切り捨て）
-                var daysDiff = Math.floor(msDiff / (1000 * 60 * 60 * 24));
-
-                // 差分へ1日分加算して返却します
-                return ++daysDiff;
-            },
+            date = new Date().getDate(),
+                word_count = luckyWord.length - 1,
+                icon_count = luckyIcon.length - 1,
             /**
              * Get a text for tweeting.
              * @param string word
@@ -88,17 +68,16 @@ function setLuckyWord(_$) {
                 if (word) {
                     // %20: space
                     // %23: #
-                    // %0a: CR
+                    // %0A: LF
                     var
                         TEXT_PREFIX = ('本日のお言葉→「 #'),
-                        TEXT_POSTFIX = (' 」') + decodeURIComponent('%0a'),
+                        TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
                         hushTag = (word.replace(/ /g, '_'));
-                    return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0a');
+                    return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0A');
                 }
             };
 
         // 当日の日付に対応したラッキーワードのインデックスを取得
-        date = countDate();
         idx = parseInt(date % word_count, 10);
         word.push(luckyWord[idx]);
         idx_b = word_count - idx;
