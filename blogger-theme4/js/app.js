@@ -73,7 +73,7 @@ function setLuckyWord(_$) {
                         TEXT_PREFIX = ('本日のお言葉→「 #'),
                         TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
                         hushTag = (word.replace(/ /g, '_'));
-                    return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0A');
+                    return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0A') + 'http://www.cupcakemafa.com/ #luckyWord @cupcakemafa';
                 }
             };
 
