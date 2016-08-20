@@ -127,11 +127,6 @@ function setLuckyWord(_$) {
             $lucky_header = _$('#lucky-header');
         $open_lucky.prop('disabled', false);
         $lucky_header.prop('disabled', false);
-
-        for(i=0;i<$luckyWordBox.length;i++) {
-            $luckyWordBox.removeClass('hidden');
-        }
-
     }
 }
 

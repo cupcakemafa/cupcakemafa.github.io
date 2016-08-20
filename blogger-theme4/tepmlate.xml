@@ -90,12 +90,14 @@
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
 
     <!-- Custom fonts -->
+    <!--
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'/>
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css' />
+    -->
 
     <!-- Custom styles -->
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
@@ -107,6 +109,7 @@
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style-old.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style.css' rel='stylesheet' type='text/css' />
     </b:if>
+
     <!--[if lt IE 9]>
     <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js' type='text/javascript' charset='utf-8'></script>
     <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js' type='text/javascript' charset='utf-8'></script>
@@ -1187,6 +1190,57 @@
     </div>
 </div>
     </b:if>
+
+    <script>
+    //<![CDATA[
+        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame,
+            setCss = function() {
+            var l,h,css,extCss, appCss,i,len;
+            extCss = [
+                '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css',
+                '//fonts.googleapis.com/css?family=Chewy',
+                '//fonts.googleapis.com/css?family=Montserrat:400,700',
+                '//fonts.googleapis.com/css?family=Kaushan+Script',
+                '//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic',
+                '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+            ];
+/*
+            if(location.hostname == 'www.cupcakemafa.com' || location.hostname == 'cupcakemafa.com') {
+                appCss = [
+                    '//cupcakemafa.github.io/blogger-theme4/css/agency.min.css',
+                    '//cupcakemafa.github.io/blogger-theme4/css/style-old.min.css',
+                    '//cupcakemafa.github.io/blogger-theme4/css/style.min.css'
+                ];
+            }
+            else {
+                appCss = [
+                    '//cupcakemafa.github.io/blogger-theme4/css/agency.css',
+                    '//cupcakemafa.github.io/blogger-theme4/css/style-old.css',
+                    '//cupcakemafa.github.io/blogger-theme4/css/style.css'
+                ];
+            }
+            css = extCss.concat(appCss);
+*/
+
+            css = extCss;
+            len = css.length;
+            for(i=0;i<len;i++) {
+                l = document.createElement('link');
+                l.rel = 'stylesheet';
+                l.href = css[i];
+                h = document.getElementsByTagName('head')[0];
+                h.parentNode.insertBefore(l, h);
+            }
+        };
+
+        if (raf) {
+            raf(setCss);
+        }
+        else {
+            window.addEventListener('load', setCss);
+        }
+    //]]>
+    </script>
 
     <!-- jQuery -->
     <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript' charset='utf-8'></script>
