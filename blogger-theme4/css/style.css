@@ -217,13 +217,13 @@ ul.list.star-o li:before {
     content: "\f006";
 }
 
-a[href^="http"]:after {
+.post a[href^="http"]:after {
     padding-left:4px;
     font-family: FontAwesome;
     content: "\f08e";
 }
 
-a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".png"]:after, a[href$=".gif"]:after {
+.post a[href$=".jpg"]:after, .post a[href$=".jpeg"]:after, .post a[href$=".png"]:after, .post a[href$=".gif"]:after {
     text-align: center;
     padding-left:0;
     content: "";
