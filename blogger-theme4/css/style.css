@@ -216,3 +216,14 @@ ul.list.star-o li:before {
     font-family: FontAwesome;
     content: "\f006";
 }
+
+a[href^="http"]:after {
+padding-left:4px;
+    font-family: FontAwesome;
+    content: "\f08e";
+}
+
+a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"] {
+    text-align: center;
+    content: "";
+}
