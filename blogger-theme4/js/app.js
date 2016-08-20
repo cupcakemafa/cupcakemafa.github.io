@@ -76,7 +76,7 @@ function setLuckyWord(_$) {
                     return TEXT_PREFIX + hushTag
                         + TEXT_POSTFIX + word
                         + decodeURIComponent('%0A')
-//                        + 'http://www.cupcakemafa.com/'
+                        + 'http://www.cupcakemafa.com/'
                         + ' #luckyWord'
                         + ' @cupcakemafa';
                 }
@@ -100,9 +100,10 @@ function setLuckyWord(_$) {
             _$('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
             lucky_word = word[i].text;
             share_tag = '<a href="https://twitter.com/share" ';
-            share_tag += 'class="twitter-share-button" data-url="' + SHARE_URL + '" ';
+            share_tag += 'class="twitter-share-button" ';
             share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
             share_tag += 'data-size="large" ';
+//            share_tag += 'data-url="' + SHARE_URL + '" ';
 //            share_tag += 'data-via="' + SHARE_VIA + '" ';
 //            share_tag += 'data-related="' + SHARE_VIA + '" ';
 //            share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
