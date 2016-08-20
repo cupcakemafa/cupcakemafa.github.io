@@ -97,7 +97,7 @@ function setLuckyWord(_$) {
             share_tag = '<a href="https://twitter.com/share" ';
             share_tag += 'class="twitter-share-button" data-url="' + SHARE_URL + '" ';
             share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
-            share=tag += 'data-size="large" ';
+            share_tag += 'data-size="large" ';
 //            share_tag += 'data-via="' + SHARE_VIA + '" ';
 //            share_tag += 'data-related="' + SHARE_VIA + '" ';
 //            share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
