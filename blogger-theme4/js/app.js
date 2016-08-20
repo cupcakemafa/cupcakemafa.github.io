@@ -73,7 +73,12 @@ function setLuckyWord(_$) {
                         TEXT_PREFIX = ('本日のお言葉→「 #'),
                         TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
                         hushTag = (word.replace(/ /g, '_'));
-                    return TEXT_PREFIX + hushTag + TEXT_POSTFIX + word + decodeURIComponent('%0A') + 'http://www.cupcakemafa.com/ #luckyWord @cupcakemafa';
+                    return TEXT_PREFIX + hushTag
+                        + TEXT_POSTFIX + word
+                        + decodeURIComponent('%0A')
+//                        + 'http://www.cupcakemafa.com/'
+                        + ' #luckyWord'
+                        + ' @cupcakemafa';
                 }
             };
 
@@ -102,9 +107,6 @@ function setLuckyWord(_$) {
 //            share_tag += 'data-related="' + SHARE_VIA + '" ';
 //            share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
             share_tag += 'data-dnt="false">Tweet</a>';
-
-            //                    share_tag = '<a href="https://twitter.com/share?url=' + SHARE_URL + '&text=' + getTweetText(lucky_word) + '&via=' + SHARE_VIA + '&related=' + SHARE_VIA + '&hushtags=' + HUSH_TAG + '" ';
-            //                    share_tag += 'class="twitter-share-button" data-size="large">Tweet</a>';
 
             $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
             // activate tweet button
