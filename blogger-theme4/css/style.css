@@ -217,6 +217,7 @@ ul.list.star-o li:before {
     content: "\f006";
 }
 
+/*
 .post a[href^="http"]:after {
     padding-left:4px;
     font-family: FontAwesome;
@@ -228,3 +229,4 @@ ul.list.star-o li:before {
     padding-left:0;
     content: "";
 }
+*/
