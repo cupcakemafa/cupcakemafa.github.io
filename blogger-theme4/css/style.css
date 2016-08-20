@@ -223,7 +223,7 @@ padding-left:4px;
     content: "\f08e";
 }
 
-a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"] {
+a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".png"]:after, a[href$=".gif"]:after {
     text-align: center;
     content: "";
 }
