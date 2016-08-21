@@ -11,7 +11,8 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
         </button>
-        <a class='navbar-brand page-scroll' href='/'>Cupcakemafa</a>
+        <a class='navbar-brand hidden-sm' href='/'>Cupcakemafa</a>
+        <a class='navbar-brand visible-sm' href='/'><img class='img-rounded' src='http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s20/cupcakemafa-favicon-200x200.png' /></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
