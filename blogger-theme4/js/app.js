@@ -685,8 +685,7 @@ function disableImageLink($link) {
     }
     else {
         var $travelDropdown = $('#travel-dropdown');
-console.log($travelDropdown);
-        if($travelDropdown.length) {
+        if($travelDropdown) {
             $travelDropdown.addClass('open');
         }
     }
