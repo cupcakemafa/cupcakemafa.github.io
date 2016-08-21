@@ -30,7 +30,7 @@
                     <i class='fa fa-file-text'></i> NEWS
                 </a>
             </li>
-            <li class='dropdown'>
+            <li id='travel-dropdown' class='dropdown'>
                 <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
                     <i class='fa fa-plane'></i> TRAVEL
                     <span class='caret'></span>
