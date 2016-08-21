@@ -684,7 +684,7 @@ function disableImageLink($link) {
         }
     }
     else {
-        $('#travel-dropdown').eq(0).addClass('open');;
+        //$('#travel-dropdown').eq(0).addClass('open'); // not work
     }
 
 })(jQuery);
