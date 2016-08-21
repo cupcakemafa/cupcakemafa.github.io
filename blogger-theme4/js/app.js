@@ -684,10 +684,7 @@ function disableImageLink($link) {
         }
     }
     else {
-        var $travelDropdown = $('#travel-dropdown');
-        if($travelDropdown) {
-            $travelDropdown.addClass('open');
-        }
+        $('#travel-dropdown').addClass('open');;
     }
 
 })(jQuery);
