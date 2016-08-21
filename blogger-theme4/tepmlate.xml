@@ -101,9 +101,12 @@
 
     <!-- Custom styles -->
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
+        <link href='//cupcakemafa.github.io/blogger-theme4/css/main.min.css' rel='stylesheet' type='text/css' />
+		<!--
         <link href='//cupcakemafa.github.io/blogger-theme4/css/agency.min.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style-old.min.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style.min.css' rel='stylesheet' type='text/css' />
+		-->
     <b:else/>
         <link href='//cupcakemafa.github.io/blogger-theme4/css/agency.css' rel='stylesheet' type='text/css' />
         <link href='//cupcakemafa.github.io/blogger-theme4/css/style-old.css' rel='stylesheet' type='text/css' />
