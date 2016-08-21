@@ -1250,7 +1250,7 @@
 
     <!-- Plugin JavaScript -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript' charset='utf-8'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' type='text/javascript' charset='UTF-8'></script>
+    <!--script src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' type='text/javascript' charset='UTF-8'></script-->
     <script src='//cupcakemafa.github.io/blogger-theme4/js/classie.js' type='text/javascript' charset='utf-8'></script>
     <!--<script src='//cupcakemafa.github.io/blogger-theme4/js/cbpAnimatedHeader.js' type='text/javascript' charset='utf-8'></script>-->
 
