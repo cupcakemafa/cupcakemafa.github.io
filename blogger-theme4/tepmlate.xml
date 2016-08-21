@@ -237,7 +237,7 @@
                     <!-- List Page -->
 
                     <!-- Title for List Page -->
-                    <h1 class='intro-heading'>
+                    <h1 id='welcome-message' class='intro-heading'>
                         <b:if cond='data:blog.homepageUrl == data:blog.url'>
                             Welcome To Cupcakemafa.
                         <b:else/>
@@ -245,45 +245,62 @@
                         </b:if>
                     </h1>
 
+                    <form id='site-search' class='hidden' name='sentMessage' action='/search' method='get'>
+                        <div class='input-group margin'>
+                            <input type='search' id='search-input' class='form-control' name='q' placeholder='Search Word Please' />
+                            <span class='input-group-btn'>
+                                <input type='submit' class='btn btn-primary' value='Search' />
+                            </span>
+                        </div><!-- /input-group -->
+                    </form>
+
                     <b:if cond='data:blog.pageType in {&quot;index&quot;}'>
                         <div class='row'>
                             <top-header></top-header>
-                            <!--lucky-word-panel></lucky-word-panel-->
 <!-- //.post-col -->
 <div class='col col-md-6 col-sm-12 col-xs-12'>
-    <div class='panel panel-default lucky-word-box'>
-        <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
-            <div class='row clearfix'>
-                <div class='col-xs-3 no-padding'>
-                    <img class='lucky-icon img-responsive pull-right'
-                        src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
-                        srcset='
-                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
-                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
-                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
+    <lucky-word-panel>
+        <div class='panel panel-default lucky-word-box'>
+            <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
+                <div class='row clearfix'>
+                    <div class='col-xs-3 no-padding'>
+                        <img class='lucky-icon img-responsive pull-right'
+                            src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
+                            srcset='
+                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
+                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
+                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
+                    </div>
+                    <div class='col-xs-6 no-padding'>
+                        <h3 class='content-title no-margin margin-top text-center'>
+                            Lucky Word
+                            <p class='text-muted no-margin hidden-xs'>今日はどんなフィールライク？</p>
+                        </h3>
+                    </div>
+                    <div class='col-xs-3 no-padding'>
+                        <img class='lucky-icon img-responsive pull-left'
+                            src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
+                            srcset='
+                                https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
+                                https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
+                                https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
+                    </div>
                 </div>
-                <div class='col-xs-6 no-padding'>
-                    <h3 class='content-title no-margin margin-top text-center'>
-                        Lucky Word
-                        <p class='text-muted no-margin'>今日はどんな フィールライク？</p>
-                    </h3>
+                <!--
+                <div class='row'>
+                    <div class='col-xs-12 visible-xs'>
+                        <p class='text-muted no-margin'>今日はどんなフィールライク？</p>
+                    </div>
                 </div>
-                <div class='col-xs-3 no-padding'>
-                    <img class='lucky-icon img-responsive pull-left'
-                        src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
-                        srcset='
-                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
-                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
-                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
-                </div>
+                -->
+            </div>
+            <div class='panel-body text-center'>
+                <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
+                    <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
+                </button>
             </div>
         </div>
-        <div class='panel-body text-center'>
-            <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
-                <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
-            </button>
-        </div>
-    </div>
+    </lucky-word-panel>
     <!-- //.panel -->
 </div>
 <!-- //.post-col -->
@@ -1195,7 +1212,7 @@
     </b:if>
 
     <script>
-    //<![CDATA[
+        //<![CDATA[
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame,
             setCss = function() {
             var l,h,css,extCss, appCss,i,len;
@@ -1242,7 +1259,7 @@
         else {
             window.addEventListener('load', setCss);
         }
-    //]]>
+        //]]>
     </script>
 
     <!-- jQuery -->
@@ -1270,6 +1287,29 @@
     <script type='text/javascript'>
         //<![CDATA[
         riot.mount('site-search,site-footer,footer-navi,who-we-are,about-us,tag-cloud,back-number,about-virtual-tour,about-instagram,about-twitter,about-tour-post,about-facebook,about-line-stamp-second,about-ken-zukan-app,about-line-stamp-first,travel-goods-link,ny-link,paris-link,bcn-link');
+        //]]>
+    </script>
+
+    <script>
+        //<![CDATA[
+        function getQueryString() {
+            var vars = [], max = 0, hash = '', array = '';
+            hash  = window.location.search.slice(1).split('&');
+            max = hash.length;
+            for (var i = 0; i < max; i++) {
+                array = hash[i].split('=');
+                vars[array[0]] = decodeURIComponent(array[1].replace(/\+/g , ' '));
+            }
+            return vars;
+        }
+
+        if(location.pathname == '/search') {
+            $('#welcome-message').addClass('hidden');
+            var query = getQueryString(),
+                $siteSearch = $('#site-search');
+            $siteSearch.find('#search-input').val(query.q);
+            $siteSearch.removeClass('hidden');
+        }
         //]]>
     </script>
 
