@@ -12,6 +12,9 @@
     <b:include data='blog' name='all-head-content'/>
     <!-- End of all-head-content -->
 
+    <link rel='apple-touch-icon' href='//1.bp.blogspot.com/-NexyDolbVms/VXo-5J__VJI/AAAAAAAAABI/gIqmHJ96twsG2y2ZrqcR0sghF7dvrV7kACPcB/s256/cupcakemafa-logo-1500x1500.png' />
+    <link rel='apple-touch-icon-precomposed' href='//1.bp.blogspot.com/-NexyDolbVms/VXo-5J__VJI/AAAAAAAAABI/gIqmHJ96twsG2y2ZrqcR0sghF7dvrV7kACPcB/s256/cupcakemafa-logo-1500x1500.png' />
+
     <!-- SEO Meta Tag -->
     <meta name='twitter:card' content='summary' />
     <meta name='twitter:site' content='@cupcakemafa' />
@@ -1211,117 +1214,22 @@
 </div>
     </b:if>
 
-    <script>
-        //<![CDATA[
-        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame,
-            setCss = function() {
-            var l,h,css,extCss, appCss,i,len;
-            extCss = [
-                '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css',
-                '//fonts.googleapis.com/css?family=Chewy',
-                '//fonts.googleapis.com/css?family=Montserrat:400,700',
-                '//fonts.googleapis.com/css?family=Kaushan+Script',
-                '//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic',
-                '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
-            ];
-/*
-            if(location.hostname == 'www.cupcakemafa.com' || location.hostname == 'cupcakemafa.com') {
-                appCss = [
-                    '//cupcakemafa.github.io/blogger-theme4/css/agency.min.css',
-                    '//cupcakemafa.github.io/blogger-theme4/css/style-old.min.css',
-                    '//cupcakemafa.github.io/blogger-theme4/css/style.min.css'
-                ];
-            }
-            else {
-                appCss = [
-                    '//cupcakemafa.github.io/blogger-theme4/css/agency.css',
-                    '//cupcakemafa.github.io/blogger-theme4/css/style-old.css',
-                    '//cupcakemafa.github.io/blogger-theme4/css/style.css'
-                ];
-            }
-            css = extCss.concat(appCss);
-*/
-
-            css = extCss;
-            len = css.length;
-            for(i=0;i<len;i++) {
-                l = document.createElement('link');
-                l.rel = 'stylesheet';
-                l.href = css[i];
-                h = document.getElementsByTagName('head')[0];
-                h.parentNode.insertBefore(l, h);
-            }
-        };
-
-        if (raf) {
-            raf(setCss);
-        }
-        else {
-            window.addEventListener('load', setCss);
-        }
-        //]]>
-    </script>
-
     <!-- jQuery -->
     <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript' charset='utf-8'></script>
 
     <!-- Plugin JavaScript -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript' charset='utf-8'></script>
-    <!--script src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' type='text/javascript' charset='UTF-8'></script-->
     <script src='//cupcakemafa.github.io/blogger-theme4/js/classie.js' type='text/javascript' charset='utf-8'></script>
-    <!--<script src='//cupcakemafa.github.io/blogger-theme4/js/cbpAnimatedHeader.js' type='text/javascript' charset='utf-8'></script>-->
 
-    <!-- Inject Templates -->
+    <!-- Load Templates -->
     <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>
     <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
-    <script type='text/javascript'>
-        //<![CDATA[
-        riot.mount('header-nav,top-header,not-found');
-        //]]>
-    </script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' type='text/javascript' charset='utf-8'></script>
-
-    <!-- Inject Templates Part 2 -->
-    <script type='text/javascript'>
-        //<![CDATA[
-        riot.mount('site-search,site-footer,footer-navi,who-we-are,about-us,tag-cloud,back-number,about-virtual-tour,about-instagram,about-twitter,about-tour-post,about-facebook,about-line-stamp-second,about-ken-zukan-app,about-line-stamp-first,travel-goods-link,ny-link,paris-link,bcn-link');
-        //]]>
-    </script>
-
-    <script>
-        //<![CDATA[
-        function getQueryString() {
-            var vars = [], max = 0, hash = '', array = '';
-            hash  = window.location.search.slice(1).split('&');
-            max = hash.length;
-            for (var i = 0; i < max; i++) {
-                array = hash[i].split('=');
-                vars[array[0]] = decodeURIComponent(array[1].replace(/\+/g , ' '));
-            }
-            return vars;
-        }
-
-        if(location.pathname == '/search') {
-            $('#welcome-message').addClass('hidden');
-            var query = getQueryString(),
-                $siteSearch = $('#site-search');
-            $siteSearch.find('#search-input').val(query.q);
-            $siteSearch.removeClass('hidden');
-        }
-        //]]>
-    </script>
-
-    <!-- Custom Theme JavaScript -->
+    <!-- Inject Templates, Load App Javascript -->
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
-        <script src='//cupcakemafa.github.io/blogger-theme4/js/agency.min.js' type='text/javascript' charset='utf-8'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme4/js/ms.min.js' type='text/javascript' charset='utf-8'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme4/js/app.min.js' type='text/javascript' charset='utf-8'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme4/js/loader.min.js' type='text/javascript' charset='utf-8'></script>
     <b:else/>
-        <script src='//cupcakemafa.github.io/blogger-theme4/js/agency.js' type='text/javascript' charset='utf-8'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme4/js/ms.js' type='text/javascript' charset='utf-8'></script>
-        <script src='//cupcakemafa.github.io/blogger-theme4/js/app.js' type='text/javascript' charset='utf-8'></script>
+        <script src='//cupcakemafa.github.io/blogger-theme4/js/loader.js' type='text/javascript' charset='utf-8'></script>
     </b:if>
 
     <!-- External Content JavaScript -->
