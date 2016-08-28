@@ -2287,6 +2287,11 @@ h4 a,
     transition: background .15s cubic-bezier(.33,.66,.66,1);
 }
 
+.navbar-nav a {
+    border-bottom: none;
+    box-shadow: none;
+}
+
 p.title a:hover,
 h4 a:hover,
 .post .post-content-area a:not(.btn):hover {
