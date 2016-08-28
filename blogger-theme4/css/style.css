@@ -2287,7 +2287,8 @@ h4 a,
     transition: background .15s cubic-bezier(.33,.66,.66,1);
 }
 
-.navbar-nav a {
+.navbar-nav a,
+.widget.PopularPosts a {
     border-bottom: none;
     box-shadow: none;
 }
