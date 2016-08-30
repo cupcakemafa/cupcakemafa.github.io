@@ -1871,6 +1871,13 @@ a.block,
     border: 1px solid #ccc;
 }
 
+.lucky-image {
+    width:auto;
+    max-height: 240px;
+    border: none;
+    margin: 0;
+}
+
 .lucky-word-modal .btn {
     height: 28px;
     padding-top: 0;
