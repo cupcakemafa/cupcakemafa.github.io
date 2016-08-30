@@ -256,18 +256,6 @@ var luckyIcon = [
 ];
 
 /**
- * Set headroom to navi menu
- * @depends headroom.js/jQuery.headroom.js
- * @link http://wicky.nillia.ms/headroom.js/
- **/
-function setHeadRoom(_$) {
-    var $headRoom = _$('#header-navi');
-    if ($headRoom.length) {
-        $headRoom.headroom();
-    }
-}
-
-/**
  * Check if mobile or not for Blogger.com
  * global isMobile
  * @link https://github.com/kaimallea/isMobile
@@ -367,18 +355,19 @@ function setLuckyWord(_$) {
             share_tag += 'data-dnt="false">Tweet</a>';
 
             $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
-            // activate tweet button
-            ! function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, 'script', 'twitter-wjs');
         }
+
+        // activate tweet button
+        ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
 
         var $open_lucky = _$('#open-lucky'),
             $lucky_header = _$('#lucky-header');
