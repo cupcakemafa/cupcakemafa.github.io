@@ -54,13 +54,11 @@
             len;
 
         if(location.hostname == 'www.cupcakemafa.com') {
-            //js.push('//cupcakemafa.github.io/blogger-theme4/js/agency.min.js');
-            js.push('//cupcakemafa.github.io/blogger-theme4/js/ms.min.js');
+            //js.push('//cupcakemafa.github.io/blogger-theme4/js/ms.min.js');
             js.push('//cupcakemafa.github.io/blogger-theme4/js/app.min.js');
         }
         else {
-            //js.push('//cupcakemafa.github.io/blogger-theme4/js/agency.js');
-            js.push('//cupcakemafa.github.io/blogger-theme4/js/ms.js');
+            //js.push('//cupcakemafa.github.io/blogger-theme4/js/ms.js');
             js.push('//cupcakemafa.github.io/blogger-theme4/js/app.js');
         }
         len = js.length;
