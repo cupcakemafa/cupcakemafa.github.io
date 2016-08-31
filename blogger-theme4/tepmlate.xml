@@ -90,7 +90,8 @@
         ]]>
     </b:skin>
     <link rel='alternate' hreflang='ja' expr:href='data:blog.homepageUrl' />
-    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=' crossorigin='anonymous' />
+<!--    <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css' />-->
 
     <!-- Custom fonts -->
     <!--
@@ -1143,9 +1144,8 @@
                     </p>
                 </div>
             </div>
-            <div class='modal-body'>
-                <img id='lucky-word-a' class='lucky-word no-margin full-width no-border float-center' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s320/IMG_0222.jpg' alt='イッツニューミー' />
-                <hr />
+            <div class='modal-body text-center'>
+                <img id='lucky-word-a' class='lucky-word lucky-image' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s320/IMG_0222.jpg' alt='イッツニューミー' />
                 <p class='text-muted text-center'>
                     どこかのタイミングで
                     <br /> この言葉をブチ込んでみて!!
@@ -1173,17 +1173,14 @@
         <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
             <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
                 <div class='col-xs-12 col-md-8 col-md-offset-2'>
-                    <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>
-                Lucky Word
-            </h3>
+                    <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>Lucky Word</h3>
                     <p class='text-muted'>
                         あなたのラッキーワードは…
                     </p>
                 </div>
             </div>
-            <div class='modal-body'>
-                <img id='lucky-word-b' class='lucky-word no-margin full-width no-border float-center' src='https://2.bp.blogspot.com/-agnHXR8ghtQ/VwUUwHull9I/AAAAAAAAB9Y/zSc7yTHOSPYeg48WtI8DZJ6RWyGMBQ8BQ/s320/IMG_0223.png' alt='そうなんですの?' />
-                <hr />
+            <div class='modal-body text-center'>
+                <img id='lucky-word-b' class='lucky-word lucky-image' src='https://2.bp.blogspot.com/-agnHXR8ghtQ/VwUUwHull9I/AAAAAAAAB9Y/zSc7yTHOSPYeg48WtI8DZJ6RWyGMBQ8BQ/s320/IMG_0223.png' alt='そうなんですの?' />
                 <p class='text-muted text-center'>
                     どこかのタイミングで
                     <br /> この言葉をブチ込んでみて!!
@@ -1208,14 +1205,17 @@
     </b:if>
 
     <!-- jQuery -->
-    <script src='//code.jquery.com/jquery-1.11.0.min.js' type='text/javascript' charset='utf-8'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<!--    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>-->
 
     <!-- Plugin JavaScript -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' type='text/javascript' charset='utf-8'></script>
-    <script src='//cupcakemafa.github.io/blogger-theme4/js/classie.js' type='text/javascript' charset='utf-8'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js' type='text/javascript' integrity='sha256-6O5DljdGA6AiaEVC/Zn8pNLNbQGparYTI9091fGX64k=' crossorigin='anonymous'></script>
+<!--    <script src='//cupcakemafa.github.io/blogger-theme4/js/classie.js' type='text/javascript' charset='utf-8'></script>-->
 
     <!-- Load Templates -->
-    <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.1/riot+compiler.min.js' integrity='sha256-k/kMoKZtwBUQWcY7dub7BfbrLLCs6FkBAAvfQlzfXZQ=' crossorigin='anonymous'></script>
+<!--    <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>-->
     <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
 
     <!-- Inject Templates, Load App Javascript -->
@@ -1226,8 +1226,8 @@
     </b:if>
 
     <!-- External Content JavaScript -->
-    <script src='//apis.google.com/js/platform.js' type='text/javascript' charset='utf-8'></script>
-    <script src='//platform.twitter.com/widgets.js' async='async' charset='utf-8' type='text/javascript'></script>
+    <script src='//apis.google.com/js/platform.js' type='text/javascript' charset='utf-8' async='async'></script>
+<!--    <script src='//platform.twitter.com/widgets.js' async='async' charset='utf-8' type='text/javascript'></script>-->
     <script id='dsq-count-scr' src='//cupcakemafa.disqus.com/count.js' async='async' type='text/javascript' charset='utf-8'></script>
 
     <!-- Begin Google Analytics -->
