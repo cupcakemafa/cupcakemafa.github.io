@@ -564,7 +564,7 @@ this.on('mount', function() {
             $lucky_header.prop('disabled', false);
         }
     }
-    this.on('mount', function($) {
+    !(function($){
         setLuckyWord($);
     })(jQuery);
     </script>
