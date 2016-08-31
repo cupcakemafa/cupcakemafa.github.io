@@ -316,7 +316,6 @@ this.on('mount', function() {
 </article>
 </not-found>
 
-
 ////////////////////////////////////////
 // End Structure
 ////////////////////////////////////////
@@ -324,6 +323,253 @@ this.on('mount', function() {
 ////////////////////////////////////////
 // Content
 ////////////////////////////////////////
+
+<lucky-word-panel>
+
+    <div class='panel panel-default lucky-word-box'>
+        <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
+            <div class='row clearfix'>
+                <div class='col-xs-3 no-padding'>
+                    <img class='lucky-icon img-responsive pull-right'
+                        src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
+                        srcset='
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
+                </div>
+                <div class='col-xs-6 no-padding'>
+                    <h3 class='content-title no-margin margin-top text-center'>
+                        Lucky Word
+                        <p class='text-muted no-margin hidden-xs'>今日はどんなフィールライク？</p>
+                    </h3>
+                </div>
+                <div class='col-xs-3 no-padding'>
+                    <img class='lucky-icon img-responsive pull-left'
+                        src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
+                        srcset='
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
+                </div>
+            </div>
+        </div>
+        <div class='panel-body text-center'>
+            <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
+                <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
+            </button>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
+        <div class='modal-dialog margin-top row' role='document'>
+            <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
+                <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                    <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                        <img class='lucky-icon float-center'
+                            src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
+                        <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
+                    Good Choice
+                </h3>
+                        <p class='text-muted'>
+                            どちらか直感で選んでねっ!!
+                        </p>
+                    </div>
+                </div>
+                <div class='modal-body'>
+                    <div class='row'>
+                        <div class='col-xs-6 text-center'>
+                            <p>
+                                <img id='lucky-icon-a' class='lucky-icon full-width'
+                                    src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s320/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
+                                />
+                                <br />
+                            </p>
+                            <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
+                                セレクト
+                            </button>
+                        </div>
+                        <div class='col-xs-6 text-center'>
+                            <p>
+                                <img id='lucky-icon-b' class='lucky-icon full-width'
+                                    src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s320/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
+                                />
+                                <br />
+                            </p>
+                            <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
+                                セレクト
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
+        <div class='modal-dialog lucky-word-modal row' role='document'>
+            <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
+                <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                    <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                        <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
+                    Lucky Word
+                    </h3>
+                        <p class='text-muted'>
+                            あなたのラッキーワードは…
+                        </p>
+                    </div>
+                </div>
+                <div class='modal-body text-center'>
+                    <img id='lucky-word-a' class='lucky-word lucky-image' src='https://4.bp.blogspot.com/-FIibBoeaMK4/Vv_kTQ4JYnI/AAAAAAAAB4Q/eHuMFyM-HucKt-vhoYwD3ryFtld2eX6Og/s320/IMG_0222.jpg' alt='イッツニューミー' />
+                    <p class='text-muted text-center'>
+                        どこかのタイミングで
+                        <br /> この言葉をブチ込んでみて!!
+                        <br /> きっといい日になるはず!!
+                    </p>
+                    <div class='text-center row'>
+                        <div class='col-xs-6 text-right'>
+                            <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                                チャオ!!
+                            </button>
+                        </div>
+                        <div class='col-xs-6 text-left'>
+                            <div class='share-this-content'>
+                                <span><a id='lucky-word-share-a' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-b-label'>
+        <div class='modal-dialog lucky-word-modal row' role='document'>
+            <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
+                <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
+                    <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                        <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>Lucky Word</h3>
+                        <p class='text-muted'>
+                            あなたのラッキーワードは…
+                        </p>
+                    </div>
+                </div>
+                <div class='modal-body text-center'>
+                    <img id='lucky-word-b' class='lucky-word lucky-image' src='https://2.bp.blogspot.com/-agnHXR8ghtQ/VwUUwHull9I/AAAAAAAAB9Y/zSc7yTHOSPYeg48WtI8DZJ6RWyGMBQ8BQ/s320/IMG_0223.png' alt='そうなんですの?' />
+                    <p class='text-muted text-center'>
+                        どこかのタイミングで
+                        <br /> この言葉をブチ込んでみて!!
+                        <br /> きっといい日になるはず!!
+                    </p>
+                    <div class='text-center row'>
+                        <div class='col-xs-6 text-right'>
+                            <button type='button' class='btn btn-warning' data-dismiss='modal' aria-label='Close'>
+                                チャオ!!
+                            </button>
+                        </div>
+                        <div class='col-xs-6 text-left'>
+                            <div class='share-this-content'>
+                                <span><a id='lucky-word-share-b' class='twitter-share-button' data-size='large' href='' target='_blank'><i class='fa fa-twitter fa-2x'></i></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function setLuckyWord(_$) {
+        var $luckyWordBox = _$('.lucky-word-box')
+        if (luckyWord.length && luckyIcon.length && $luckyWordBox.length) {
+            var
+                HUSH_TAG = 'luckyWord',
+                SHARE_VIA = 'cupcakemafa',
+                SHARE_URL = 'http://www.cupcakemafa.com/',
+                TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
+                idx, idx_b, icon = [],
+                word = [],
+                share_url, lucky_word,
+                hush_tag, share_tag,
+                looper = ['a', 'b'],
+                i, l,
+                date = new Date().getDate(),
+                    word_count = luckyWord.length - 1,
+                    icon_count = luckyIcon.length - 1,
+                /**
+                 * Get a text for tweeting.
+                 * @param string word
+                 */
+                getTweetText = function (word) {
+                    if (word) {
+                        // %20: space
+                        // %23: #
+                        // %0A: LF
+                        var
+                            TEXT_PREFIX = ('本日のお言葉→「 #'),
+                            TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
+                            hushTag = (word.replace(/ /g, '_'));
+                        return TEXT_PREFIX + hushTag
+                            + TEXT_POSTFIX + word
+                            + decodeURIComponent('%0A')
+                            + '#luckyWord'
+                            + ' @cupcakemafa';
+                    }
+                };
+
+            // 当日の日付に対応したラッキーワードのインデックスを取得
+            idx = parseInt(date % word_count, 10);
+            word.push(luckyWord[idx]);
+            idx_b = word_count - idx;
+            idx_b = idx_b != idx ? idx_b : 1;
+            word.push(luckyWord[idx_b]);
+
+            idx = parseInt(date % icon_count, 10);
+            icon.push(luckyIcon[idx]);
+            idx_b = icon_count - idx;
+            idx_b = idx_b != idx ? idx_b : 1;
+            icon.push(luckyIcon[idx_b]);
+
+            for (i = 0, l = looper.length; i < l; i++) {
+                _$('#lucky-icon-' + looper[i]).attr('src', icon[i]);
+                _$('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
+                lucky_word = word[i].text;
+                share_tag = '<a href="https://twitter.com/share" ';
+                share_tag += 'class="twitter-share-button" ';
+                share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
+                share_tag += 'data-size="large" ';
+                share_tag += 'data-url="' + SHARE_URL + '" ';
+    //            share_tag += 'data-via="' + SHARE_VIA + '" ';
+    //            share_tag += 'data-related="' + SHARE_VIA + '" ';
+    //            share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
+                share_tag += 'data-dnt="false">Tweet</a>';
+
+                $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
+            }
+
+            // activate tweet button
+            ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+
+            var $open_lucky = _$('#open-lucky'),
+                $lucky_header = _$('#lucky-header');
+            $open_lucky.prop('disabled', false);
+            $lucky_header.prop('disabled', false);
+        }
+    }
+    this.on('mount', function($) {
+        setLuckyWord($);
+    })(jQuery);
+    </script>
+</lucky-word-panel>
+
 
 <who-we-are>
 <div class='panel panel-default'>
