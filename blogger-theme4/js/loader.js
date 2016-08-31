@@ -4,7 +4,8 @@
     setCss = function() {
         var l,h,css,extCss, appCss,i,len;
         extCss = [
-            '//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css',
+            '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css',
+            //'//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css',
             '//fonts.googleapis.com/css?family=Chewy',
             '//fonts.googleapis.com/css?family=Montserrat:400,700',
             '//fonts.googleapis.com/css?family=Kaushan+Script',
@@ -49,7 +50,8 @@
         riot.mount('*');
 
         var js = [
-                '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
+                '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'
+                //'//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
             ],
             len;
 
