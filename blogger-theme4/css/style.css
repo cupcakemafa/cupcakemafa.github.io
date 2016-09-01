@@ -1884,6 +1884,9 @@ a.block,
     padding-bottom: 0;
 }
 
+.lucky-word-modal .content-title {
+    color: black;
+}
 
 /* End of Lucky Word */
 
