@@ -1,5 +1,5 @@
 <lucky-word-panel>
-    <div class='panel panel-default lucky-word-box'>
+    <div class='panel panel-default lucky-word-box hidden'>
         <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
             <div class='row clearfix'>
                 <div class='col-xs-3 no-padding'>
@@ -33,11 +33,11 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
+    <div class='modal fade lucky-icons' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
         <div class='modal-dialog margin-top row' role='document'>
             <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
                 <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                    <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                    <div class='col-xs-12 col-md-12'>
                         <img class='lucky-icon float-center'
                             src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
                         <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
@@ -82,7 +82,7 @@
         <div class='modal-dialog lucky-word-modal row' role='document'>
             <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
                 <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                    <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                    <div class='col-xs-12 col-md-12 padding-top'>
                         <h3 class='modal-title content-title no-margin' id='lucky-word-box-a-label'>
                     Lucky Word
                     </h3>
@@ -119,7 +119,7 @@
         <div class='modal-dialog lucky-word-modal row' role='document'>
             <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
                 <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                    <div class='col-xs-12 col-md-8 col-md-offset-2'>
+                    <div class='col-xs-12 col-md-12 padding-top'>
                         <h3 class='modal-title content-title no-margin' id='lucky-word-box-b-label'>Lucky Word</h3>
                         <p class='text-muted'>
                             あなたのラッキーワードは…
@@ -407,94 +407,98 @@ var luckyIcon = [
     "https://1.bp.blogspot.com/-O3DI3oH445I/V7flrKcNFVI/AAAAAAADeIk/Sys5k30DAtsaIEBJYlm45eiJP0LiICwmACLcB/s1600/icon-7.png",
     "https://3.bp.blogspot.com/-mkHzqWG0kRs/V7flrP7O4ZI/AAAAAAADeIo/Rk-ZrEFBdPkIQquv_KXaz3MhPofe6Q6TQCLcB/s1600/icon-8.png"
 ];
-    function setLuckyWord(_$) {
-        var $luckyWordBox = _$('.lucky-word-box')
-        if (luckyWord.length && luckyIcon.length && $luckyWordBox.length) {
-            var
-                HUSH_TAG = 'luckyWord',
-                SHARE_VIA = 'cupcakemafa',
-                SHARE_URL = 'http://www.cupcakemafa.com/',
-                TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
-                idx, idx_b, icon = [],
-                word = [],
-                share_url, lucky_word,
-                hush_tag, share_tag,
-                looper = ['a', 'b'],
-                i, l,
-                date = new Date().getDate(),
-                    word_count = luckyWord.length - 1,
-                    icon_count = luckyIcon.length - 1,
-                /**
-                 * Get a text for tweeting.
-                 * @param string word
-                 */
-                getTweetText = function (word) {
-                    if (word) {
-                        // %20: space
-                        // %23: #
-                        // %0A: LF
-                        var
-                            TEXT_PREFIX = ('本日のお言葉→「 #'),
-                            TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
-                            hushTag = (word.replace(/ /g, '_'));
-                        return TEXT_PREFIX + hushTag
-                            + TEXT_POSTFIX + word
-                            + decodeURIComponent('%0A')
-                            + '#luckyWord'
-                            + ' @cupcakemafa';
-                    }
-                };
-
-            // 当日の日付に対応したラッキーワードのインデックスを取得
-            idx = parseInt(date % word_count, 10);
-            word.push(luckyWord[idx]);
-            idx_b = word_count - idx;
-            idx_b = idx_b != idx ? idx_b : 1;
-            word.push(luckyWord[idx_b]);
-
-            idx = parseInt(date % icon_count, 10);
-            icon.push(luckyIcon[idx]);
-            idx_b = icon_count - idx;
-            idx_b = idx_b != idx ? idx_b : 1;
-            icon.push(luckyIcon[idx_b]);
-
-            for (i = 0, l = looper.length; i < l; i++) {
-                _$('#lucky-icon-' + looper[i]).attr('src', icon[i]);
-                _$('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
-                lucky_word = word[i].text;
-                share_tag = '<a href="https://twitter.com/share" ';
-                share_tag += 'class="twitter-share-button" ';
-                share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
-                share_tag += 'data-size="large" ';
-                share_tag += 'data-url="' + SHARE_URL + '" ';
-    //            share_tag += 'data-via="' + SHARE_VIA + '" ';
-    //            share_tag += 'data-related="' + SHARE_VIA + '" ';
-    //            share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
-                share_tag += 'data-dnt="false">Tweet</a>';
-
-                $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
-            }
-
-            // activate tweet button
-            ! function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
+function setLuckyWord(_$) {
+    var $luckyWordBox = _$('.lucky-word-box')
+    if (luckyWord.length && luckyIcon.length && $luckyWordBox.length) {
+        var
+            HUSH_TAG = 'luckyWord',
+            SHARE_VIA = 'cupcakemafa',
+            SHARE_URL = 'http://www.cupcakemafa.com/',
+            TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
+            idx, idx_b, icon = [],
+            word = [],
+            share_url, lucky_word,
+            hush_tag, share_tag,
+            looper = ['a', 'b'],
+            i, l,
+            date = new Date().getDate(),
+                word_count = luckyWord.length - 1,
+                icon_count = luckyIcon.length - 1,
+            /**
+             * Get a text for tweeting.
+             * @param string word
+             */
+            getTweetText = function (word) {
+                if (word) {
+                    // %20: space
+                    // %23: #
+                    // %0A: LF
+                    var
+                        TEXT_PREFIX = ('本日のお言葉→「 #'),
+                        TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
+                        hushTag = (word.replace(/ /g, '_'));
+                    return TEXT_PREFIX + hushTag
+                        + TEXT_POSTFIX + word
+                        + decodeURIComponent('%0A')
+                        + '#luckyWord'
+                        + ' @cupcakemafa';
                 }
-            }(document, 'script', 'twitter-wjs');
+            };
 
-            var $open_lucky = _$('#open-lucky'),
-                $lucky_header = _$('#lucky-header');
-            $open_lucky.prop('disabled', false);
-            $lucky_header.prop('disabled', false);
+        // 当日の日付に対応したラッキーワードのインデックスを取得
+        idx = parseInt(date % word_count, 10);
+        word.push(luckyWord[idx]);
+        idx_b = word_count - idx;
+        idx_b = idx_b != idx ? idx_b : 1;
+        word.push(luckyWord[idx_b]);
+
+        idx = parseInt(date % icon_count, 10);
+        icon.push(luckyIcon[idx]);
+        idx_b = icon_count - idx;
+        idx_b = idx_b != idx ? idx_b : 1;
+        icon.push(luckyIcon[idx_b]);
+
+        for (i = 0, l = looper.length; i < l; i++) {
+            _$('#lucky-icon-' + looper[i]).attr('src', icon[i]);
+            _$('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
+            lucky_word = word[i].text;
+            share_tag = '<a href="https://twitter.com/share" ';
+            share_tag += 'class="twitter-share-button" ';
+            share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
+            share_tag += 'data-size="large" ';
+            share_tag += 'data-url="' + SHARE_URL + '" ';
+//            share_tag += 'data-via="' + SHARE_VIA + '" ';
+//            share_tag += 'data-related="' + SHARE_VIA + '" ';
+//            share_tag += 'data-hashtags="' + HUSH_TAG + '" ';
+            share_tag += 'data-dnt="false">Tweet</a>';
+
+            $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
         }
+
+        // activate tweet button
+        /*
+        ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+        */
+
+        var $open_lucky = _$('#open-lucky'),
+            $lucky_header = _$('#lucky-header');
+        $open_lucky.prop('disabled', false);
+        $lucky_header.prop('disabled', false);
+        
+        $luckyWordBox.eq(0).removeClass('hidden');
     }
-    !(function($){
-        setLuckyWord($);
-    })(jQuery);
-    </script>
+}
+this.on('mount', function() {
+    setLuckyWord($);
+});
+</script>
 </lucky-word-panel>
