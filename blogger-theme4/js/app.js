@@ -864,9 +864,9 @@ function disableImageLink($link) {
     } else {
 
         if (pageType === 'home') {
+            setLuckyWord($);
             $('lucky-word-panel').removeClass('hidden').show();
             $('top-header').removeClass('hidden').show();
-            setLuckyWord($);
         } else {
             $('lucky-word-panel').addClass('hidden');
             $('top-header').addClass('hidden');
