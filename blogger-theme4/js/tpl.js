@@ -478,23 +478,12 @@ function setLuckyWord(_$) {
             $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
         }
 
-        ! function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + '://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, 'script', 'twitter-wjs');
-
         var $open_lucky = _$('#open-lucky'),
             $lucky_header = _$('#lucky-header');
         $open_lucky.prop('disabled', false);
         $lucky_header.prop('disabled', false);
 
-        $luckyWordBox.removeClass('hidden');
+        $luckyWordBox.eq(0).removeClass('hidden');
     }
 }
 this.on('mount', function($) {
