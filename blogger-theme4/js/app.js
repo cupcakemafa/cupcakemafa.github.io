@@ -621,7 +621,7 @@ function setStory() {
                     }
                     seasonClass = '';
                     tag += '<div class="frame' + seasonClass + '">';
-                    tag += '<img class="main" src="';
+                    tag += '<img class="main img-responsive" src="';
                     tag += imgMain;
                     tag += '" />';
                     tag += '</div>';
