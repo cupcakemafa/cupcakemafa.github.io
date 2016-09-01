@@ -594,12 +594,12 @@ function setStory() {
         season,
         backUrl = '/p/kenzukan-ep-s1.html',
         imgMain,
-        caption;
+        caption, seasonClass;
     if ($storyBox.length) {
         season = $storyBox.data('season');
         $frame = $storyBox.find('.frame');
         if ($frame.length) {
-            tag += '<div class="text-center row" style="margin-top:-15px;">';
+            tag += '<div class="text-center row">';
             $frame.each(function (idx, elm) {
                 if (idx === 0) {
                     tag += '<p>';
@@ -610,7 +610,7 @@ function setStory() {
                 more = $elm.data('more');
                 imgMain = $elm.find('img.main').eq(0).attr('src');
                 caption = $elm.find('.caption').eq(0).html();
-                tag += '<div class="col col-md-6 col-md-offset-3 col-xs-12">';
+                tag += '<div class="">';
                 if (imgMain) {
                     if (season) {
                         if (season === 'about' || season === 'favorite') {
@@ -619,6 +619,7 @@ function setStory() {
                             seasonClass = ' season' + season;
                         }
                     }
+                    seasonClass = '';
                     tag += '<div class="frame' + seasonClass + '">';
                     tag += '<img class="main" src="';
                     tag += imgMain;
