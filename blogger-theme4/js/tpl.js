@@ -418,86 +418,87 @@ var luckyIcon = [
     "https://1.bp.blogspot.com/-O3DI3oH445I/V7flrKcNFVI/AAAAAAADeIk/Sys5k30DAtsaIEBJYlm45eiJP0LiICwmACLcB/s1600/icon-7.png",
     "https://3.bp.blogspot.com/-mkHzqWG0kRs/V7flrP7O4ZI/AAAAAAADeIo/Rk-ZrEFBdPkIQquv_KXaz3MhPofe6Q6TQCLcB/s1600/icon-8.png"
 ];
-    function setLuckyWord(_$) {
-        var $luckyWordBox = _$('.lucky-word-box')
-        if (luckyWord.length && luckyIcon.length && $luckyWordBox.length) {
-            var
-                HUSH_TAG = 'luckyWord',
-                SHARE_VIA = 'cupcakemafa',
-                SHARE_URL = 'http://www.cupcakemafa.com/',
-                TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
-                idx, idx_b, icon = [],
-                word = [],
-                share_url, lucky_word,
-                hush_tag, share_tag,
-                looper = ['a', 'b'],
-                i, l,
-                date = new Date().getDate(),
-                    word_count = luckyWord.length - 1,
-                    icon_count = luckyIcon.length - 1,
+function setLuckyWord(_$) {
+    var $luckyWordBox = _$('.lucky-word-box')
+    if (luckyWord.length && luckyIcon.length && $luckyWordBox.length) {
+        var
+            HUSH_TAG = 'luckyWord',
+            SHARE_VIA = 'cupcakemafa',
+            SHARE_URL = 'http://www.cupcakemafa.com/',
+            TWITTER_SHARE_BASE = 'http://twitter.com/intent/tweet?text=',
+            idx, idx_b, icon = [],
+            word = [],
+            share_url, lucky_word,
+            hush_tag, share_tag,
+            looper = ['a', 'b'],
+            i, l,
+            date = new Date().getDate(),
+                word_count = luckyWord.length - 1,
+                icon_count = luckyIcon.length - 1,
 
-                getTweetText = function (word) {
-                    if (word) {
+            getTweetText = function (word) {
+                if (word) {
 
-                        var
-                            TEXT_PREFIX = ('本日のお言葉→「 #'),
-                            TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
-                            hushTag = (word.replace(/ /g, '_'));
-                        return TEXT_PREFIX + hushTag
-                            + TEXT_POSTFIX + word
-                            + decodeURIComponent('%0A')
-                            + '#luckyWord'
-                            + ' @cupcakemafa';
-                    }
-                };
-
-            idx = parseInt(date % word_count, 10);
-            word.push(luckyWord[idx]);
-            idx_b = word_count - idx;
-            idx_b = idx_b != idx ? idx_b : 1;
-            word.push(luckyWord[idx_b]);
-
-            idx = parseInt(date % icon_count, 10);
-            icon.push(luckyIcon[idx]);
-            idx_b = icon_count - idx;
-            idx_b = idx_b != idx ? idx_b : 1;
-            icon.push(luckyIcon[idx_b]);
-
-            for (i = 0, l = looper.length; i < l; i++) {
-                _$('#lucky-icon-' + looper[i]).attr('src', icon[i]);
-                _$('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
-                lucky_word = word[i].text;
-                share_tag = '<a href="https://twitter.com/share" ';
-                share_tag += 'class="twitter-share-button" ';
-                share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
-                share_tag += 'data-size="large" ';
-                share_tag += 'data-url="' + SHARE_URL + '" ';
-
-                share_tag += 'data-dnt="false">Tweet</a>';
-
-                $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
-            }
-
-            ! function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
+                    var
+                        TEXT_PREFIX = ('本日のお言葉→「 #'),
+                        TEXT_POSTFIX = (' 」') + decodeURIComponent('%0A'),
+                        hushTag = (word.replace(/ /g, '_'));
+                    return TEXT_PREFIX + hushTag
+                        + TEXT_POSTFIX + word
+                        + decodeURIComponent('%0A')
+                        + '#luckyWord'
+                        + ' @cupcakemafa';
                 }
-            }(document, 'script', 'twitter-wjs');
+            };
 
-            var $open_lucky = _$('#open-lucky'),
-                $lucky_header = _$('#lucky-header');
-            $open_lucky.prop('disabled', false);
-            $lucky_header.prop('disabled', false);
+        idx = parseInt(date % word_count, 10);
+        word.push(luckyWord[idx]);
+        idx_b = word_count - idx;
+        idx_b = idx_b != idx ? idx_b : 1;
+        word.push(luckyWord[idx_b]);
+
+        idx = parseInt(date % icon_count, 10);
+        icon.push(luckyIcon[idx]);
+        idx_b = icon_count - idx;
+        idx_b = idx_b != idx ? idx_b : 1;
+        icon.push(luckyIcon[idx_b]);
+
+        for (i = 0, l = looper.length; i < l; i++) {
+            _$('#lucky-icon-' + looper[i]).attr('src', icon[i]);
+            _$('#lucky-word-' + looper[i]).attr('src', word[i].img).attr('alt', word[i].text);
+            lucky_word = word[i].text;
+            share_tag = '<a href="https://twitter.com/share" ';
+            share_tag += 'class="twitter-share-button" ';
+            share_tag += 'data-text="' + getTweetText(lucky_word) + '" ';
+            share_tag += 'data-size="large" ';
+            share_tag += 'data-url="' + SHARE_URL + '" ';
+
+            share_tag += 'data-dnt="false">Tweet</a>';
+
+            $('#lucky-word-share-' + looper[i]).replaceWith(share_tag);
         }
+
+        ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+
+        var $open_lucky = _$('#open-lucky'),
+            $lucky_header = _$('#lucky-header');
+        $open_lucky.prop('disabled', false);
+        $lucky_header.prop('disabled', false);
     }
-    !(function($){
-        setLuckyWord($);
-    })(jQuery);
+}
+this.on('mount', function() {
+    setLuckyWord($);
+});
+
 });
 
 riot.tag2('not-found', '<article class="post text-center"> <a href="/" title="Cupcakemafaのトップページへ"> <img class="img-circle" src="http://4.bp.blogspot.com/-VA6sLbbGX4I/VdmIpQk5I5I/AAAAAAAAAPM/GyDtlKiC4-0/s200/cupcakemafa-favicon-200x200.png"> </a> <h3>Sorry...</h3> <p>おさがしのページが<br>見つかりませんでした&#12290;</p> <p> <a href="/" class="btn btn-default" title="Cupcakemafaのトップページへ"> <i class="fa fa-home"></i> Cupcakemafaのトップページへ </a> </p> もしくは <div class="padding text-center"> <form action="/search" method="get" role="search"> <div class="input-group input-group-lg margin padding"> <input class="form-control" name="q" placeholder="サイト検索" type="search"> <span class="input-group-btn"> <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button> </span> </div> </form> </div> </article>', '', '', function(opts) {
