@@ -256,49 +256,45 @@
                             <top-header></top-header>
 <!-- //.post-col -->
 <div class='col col-md-6 col-sm-12 col-xs-12'>
-    <lucky-word-panel>
-        <div class='panel panel-default lucky-word-box'>
-            <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
-                <div class='row clearfix'>
-                    <div class='col-xs-3 no-padding'>
-                        <img class='lucky-icon img-responsive pull-right'
-                            src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
-                            srcset='
-                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
-                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
-                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
-                    </div>
-                    <div class='col-xs-6 no-padding'>
-                        <h3 class='content-title no-margin margin-top text-center'>
-                            Lucky Word
-                            <p class='text-muted no-margin hidden-xs'>今日はどんなフィールライク？</p>
-                        </h3>
-                    </div>
-                    <div class='col-xs-3 no-padding'>
-                        <img class='lucky-icon img-responsive pull-left'
-                            src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
-                            srcset='
-                                https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
-                                https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
-                                https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
-                    </div>
+    <b:if cond='data:blog.homepageUrl == data:blog.url'>
+    <lucky-word-panel></lucky-word-panel>
+    <!--
+    <div class='panel panel-default lucky-word-box'>
+        <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
+            <div class='row clearfix'>
+                <div class='col-xs-3 no-padding'>
+                    <img class='lucky-icon img-responsive pull-right'
+                        src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
+                        srcset='
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
+                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
                 </div>
-                <!--
-                <div class='row'>
-                    <div class='col-xs-12 visible-xs'>
-                        <p class='text-muted no-margin'>今日はどんなフィールライク？</p>
-                    </div>
+                <div class='col-xs-6 no-padding'>
+                    <h3 class='content-title no-margin margin-top text-center'>
+                        Lucky Word
+                        <p class='text-muted no-margin hidden-xs'>今日はどんなフィールライク？</p>
+                    </h3>
                 </div>
-                -->
-            </div>
-            <div class='panel-body text-center'>
-                <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
-                    <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
-                </button>
+                <div class='col-xs-3 no-padding'>
+                    <img class='lucky-icon img-responsive pull-left'
+                        src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
+                        srcset='
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
+                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
+                </div>
             </div>
         </div>
-    </lucky-word-panel>
+        <div class='panel-body text-center'>
+            <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
+                <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
+            </button>
+        </div>
+    </div>
+    -->
     <!-- //.panel -->
+    </b:if>
 </div>
 <!-- //.post-col -->
                         </div>
@@ -1081,11 +1077,9 @@
         <img src='//2.bp.blogspot.com/-Hc2Qip-ciow/Vdo6dWcbLAI/AAAAAAAAAPo/3Ag8gFOBse4/s48/scrollup_blue.png' />
     </a>
 
-
     <!-- Modal Windows -->
+<!--
     <b:if cond='data:blog.homepageUrl == data:blog.url'>
-        <!--lucky-word-modal></lucky-word-modal-->
-<!-- Modal -->
 <div class='modal fade' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
     <div class='modal-dialog margin-top row' role='document'>
         <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
@@ -1130,7 +1124,6 @@
         </div>
     </div>
 </div>
-<!-- Modal -->
 <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
     <div class='modal-dialog lucky-word-modal row' role='document'>
         <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
@@ -1167,7 +1160,6 @@
         </div>
     </div>
 </div>
-
 <div class='modal fade' id='lucky-word-box-b' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-b-label'>
     <div class='modal-dialog lucky-word-modal row' role='document'>
         <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
@@ -1203,6 +1195,7 @@
     </div>
 </div>
     </b:if>
+    -->
 
     <!-- jQuery -->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
@@ -1214,9 +1207,15 @@
 <!--    <script src='//cupcakemafa.github.io/blogger-theme4/js/classie.js' type='text/javascript' charset='utf-8'></script>-->
 
     <!-- Load Templates -->
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.1/riot+compiler.min.js' integrity='sha256-k/kMoKZtwBUQWcY7dub7BfbrLLCs6FkBAAvfQlzfXZQ=' crossorigin='anonymous'></script>
+<!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.1/riot+compiler.min.js' integrity='sha256-k/kMoKZtwBUQWcY7dub7BfbrLLCs6FkBAAvfQlzfXZQ=' crossorigin='anonymous'></script>-->
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.1/riot.min.js' integrity='sha256-Qr21FUPtU1Hqq6q03qWECwsIiAv834lD/15F2RQYAfs=' crossorigin='anonymous'></script>
 <!--    <script src='//cupcakemafa.github.io/blogger-theme4/bower_components/riot/riot+compiler.min.js' type='text/javascript' charset='utf-8'></script>-->
-    <script src='//cupcakemafa.github.io/blogger-theme4/js/tags/template.tags' type='riot/tag' charset='utf-8'></script>
+
+    <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
+        <script src='//cupcakemafa.github.io/blogger-theme4/js/tpl.min.js'></script>
+    <b:else/>
+        <script src='//cupcakemafa.github.io/blogger-theme4/js/tpl.js'></script>
+    </b:if>
 
     <!-- Inject Templates, Load App Javascript -->
     <b:if cond='data:blog.homepageUrl == &quot;http://www.cupcakemafa.com/&quot;'>
