@@ -486,9 +486,11 @@ function setLuckyWord(_$) {
         $luckyWordBox.eq(0).removeClass('hidden');
     }
 }
-this.on('mount', function($) {
+
+console.log('this', this);
+this.on('mount', function() {
     setLuckyWord($);
-})(jQuery);
+});
 
 });
 
