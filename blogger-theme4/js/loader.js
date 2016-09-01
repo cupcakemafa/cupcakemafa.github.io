@@ -46,7 +46,7 @@
         window.addEventListener('load', setCss);
     }
 
-    riot.compile(function() {
+    //riot.compile(function() {
         riot.mount('*');
 
         var js = [
@@ -93,5 +93,5 @@
             $siteSearch.find('#search-input').val(query.q);
             $siteSearch.removeClass('hidden');
         }
-    });
+    //});
 })(jQuery);
