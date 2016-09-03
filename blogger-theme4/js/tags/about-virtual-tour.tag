@@ -1,16 +1,17 @@
 <about-virtual-tour>
-<span class='fa-stack fa-4x'>
-    <i class='fa fa-circle fa-stack-2x text-primary'></i>
-    <i class='fa fa-youtube fa-stack-1x fa-inverse'></i>
-</span>
-<p class='text-muted'>
-    旅のヴァーチャルツアーなどなど
-    <br /> ビデオでお送りしています。
-</p>
-<div id='youtube-video-widget'></div>
-<div class='g-ytsubscribe' data-channelid='UCA-5O04iRku19b8KMUMm_OA' data-layout='full' data-count='default' data-onytevent='onYtEvent'></div>
-<hr />
-
+<div class='hidden-sm'>
+    <span class='fa-stack fa-4x'>
+        <i class='fa fa-circle fa-stack-2x text-primary'></i>
+        <i class='fa fa-youtube fa-stack-1x fa-inverse'></i>
+    </span>
+    <p class='text-muted'>
+        旅のヴァーチャルツアーなどなど
+        <br /> ビデオでお送りしています。
+    </p>
+    <div id='youtube-video-widget'></div>
+    <div class='g-ytsubscribe' data-channelid='UCA-5O04iRku19b8KMUMm_OA' data-layout='full' data-count='default' data-onytevent='onYtEvent'></div>
+    <hr />
+</div>
 <script>
 function setYoutubeVideoWidget() {
     var url = [
