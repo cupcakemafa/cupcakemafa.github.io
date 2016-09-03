@@ -358,15 +358,15 @@ var luckyWord = [
 	},
     {
         "img": "https://2.bp.blogspot.com/-yFwBBB_2HF0/V7fluGQS8CI/AAAAAAADeKA/F6RpusFkVQ43BMw5ghHeye0Y_hNBzA6DwCLcB/s1600/word-28.png",
-        "text": ""
-	},
-    {
-        "img": "https://1.bp.blogspot.com/-csrHLn9llg4/V7fluGEm3xI/AAAAAAADeJ8/rs_0zbYLLywAxFS4pfb2REZwv1tYmVuOACLcB/s1600/word-29.png",
         "text": "ダコー!"
 	},
     {
-        "img": "https://4.bp.blogspot.com/-huxORm5tK1w/V7fluYT0UJI/AAAAAAADeKI/mKAvsfHMV90aUeG1lIk10zS_nY4Z1A6aACLcB/s1600/word-30.png",
+        "img": "https://1.bp.blogspot.com/-csrHLn9llg4/V7fluGEm3xI/AAAAAAADeJ8/rs_0zbYLLywAxFS4pfb2REZwv1tYmVuOACLcB/s1600/word-29.png",
         "text": "やわらかい頭で考える。"
+	},
+    {
+        "img": "https://4.bp.blogspot.com/-huxORm5tK1w/V7fluYT0UJI/AAAAAAADeKI/mKAvsfHMV90aUeG1lIk10zS_nY4Z1A6aACLcB/s1600/word-30.png",
+        "text": "生きている限り希望はある"
 	},
     {
         "img": "https://2.bp.blogspot.com/-_x92JKPxKIY/V7flui3EqzI/AAAAAAADeKM/SQrxrsdDLusL4-VAFj6i6gej9SdDpMlkgCLcB/s1600/word-31.png",
