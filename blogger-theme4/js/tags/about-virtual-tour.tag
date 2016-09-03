@@ -1,5 +1,5 @@
 <about-virtual-tour>
-<div class='hidden-sm'>
+<div class='hidden-xs'>
     <span class='fa-stack fa-4x'>
         <i class='fa fa-circle fa-stack-2x text-primary'></i>
         <i class='fa fa-youtube fa-stack-1x fa-inverse'></i>
