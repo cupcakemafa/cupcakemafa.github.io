@@ -1873,6 +1873,7 @@ a.block,
 
 .lucky-image {
     width:auto;
+    max-width: 240px;
     max-height: 240px;
     border: none;
     margin: 0;
