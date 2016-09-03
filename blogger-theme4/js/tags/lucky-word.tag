@@ -13,7 +13,9 @@
                 <div class='col-xs-6 no-padding'>
                     <h3 class='content-title no-margin margin-top text-center'>
                         Lucky Word
-                        <p class='text-muted no-margin hidden-xs'>今日はどんなフィールライク？</p>
+                        <p class='text-muted- no-margin hidden-xs'>
+                            どちらか直感で選んでねっ!!
+                        </p>
                     </h3>
                 </div>
                 <div class='col-xs-3 no-padding'>
@@ -25,57 +27,59 @@
                             https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
                 </div>
             </div>
+            <p class='text-center no-margin visible-xs'>
+                どちらか直感で選んでねっ!!
+            </p>
+            <div class='row'>
+                <div class='col-xs-6 col-md-6 col-lg-3 col-lg-offset-3'>
+                    <div class='panel panel-default'>
+                        <div class='panel-body'>
+                            <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s320/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a' />
+                        </div>
+                    </div>
+                    <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
+                        セレクト
+                    </button>
+                </div><!-- //.col-xs-6.col-md-3..col-md-offset-3 -->
+                <div class='col-xs-6 col-md-6 col-lg-3'>
+                    <div class='panel panel-default'>
+                        <div class='panel-body'>
+                            <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s320/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b' />
+                        </div>
+                    </div>
+                    <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
+                        セレクト
+                    </button>
+                </div><!-- //.col-xs-3 -->
+            </div><!-- //.row -->
+            
         </div>
+        <!--
         <div class='panel-body text-center'>
-            <button class='btn btn-success btn-block' data-target='#lucky-icons' data-toggle='modal' id='open-lucky' type='button'>
-                <i class='fa fa-plus'></i> ラッキーワードをみてみる!!
-            </button>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class='modal fade lucky-icons' id='lucky-icons' tabindex='-1' role='dialog' aria-labelledby='lucky-icons-label'>
-        <div class='modal-dialog margin-top row' role='document'>
-            <div class='modal-content col-xs-12 col-md-8 col-md-offset-2 no-padding'>
-                <div class='modal-header stripe yellow-light text-center clearfix row no-margin'>
-                    <div class='col-xs-12 col-md-12'>
-                        <img class='lucky-icon float-center'
-                            src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s120/10.png' />
-                        <h3 class='modal-title content-title no-margin' id='luckyIconsLabel'>
-                    Good Choice
-                </h3>
-                        <p class='text-muted'>
-                            どちらか直感で選んでねっ!!
-                        </p>
+            <div class='row'>
+                <div class='col-xs-6 col-md-3 col-md-offset-3'>
+                    <div class='panel panel-default'>
+                        <div class='panel-body'>
+                            <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s320/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a' />
+                        </div>
                     </div>
+                    <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
+                        セレクト
+                    </button>
                 </div>
-                <div class='modal-body'>
-                    <div class='row'>
-                        <div class='col-xs-6 text-center'>
-                            <p>
-                                <img id='lucky-icon-a' class='lucky-icon full-width'
-                                    src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s320/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'
-                                />
-                                <br />
-                            </p>
-                            <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
-                                セレクト
-                            </button>
-                        </div>
-                        <div class='col-xs-6 text-center'>
-                            <p>
-                                <img id='lucky-icon-b' class='lucky-icon full-width'
-                                    src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s320/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'
-                                />
-                                <br />
-                            </p>
-                            <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
-                                セレクト
-                            </button>
+                <div class='col-xs-6 col-md-3'>
+                    <div class='panel panel-default'>
+                        <div class='panel-body'>
+                            <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s320/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b' />
                         </div>
                     </div>
+                    <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
+                        セレクト
+                    </button>
                 </div>
             </div>
         </div>
+        -->
     </div>
     <!-- Modal -->
     <div class='modal fade' id='lucky-word-box-a' tabindex='-1' role='dialog' aria-labelledby='lucky-word-box-a-label'>
