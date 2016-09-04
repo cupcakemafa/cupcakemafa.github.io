@@ -2,34 +2,25 @@
     <div class='panel panel-default lucky-word-box hidden'>
         <div class='panel-heading stripe yellow-light text-center clearfix float-center' data-target='#lucky-icons' data-toggle='modal' disabled='disabled' id='lucky-header'>
             <div class='row clearfix'>
-                <div class='col-xs-3 no-padding'>
-                    <img class='lucky-icon img-responsive pull-right'
-                        src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
-                        srcset='
-                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
-                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
-                            https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
-                </div>
-                <div class='col-xs-6 no-padding'>
-                    <h3 class='content-title no-margin margin-top text-center'>
-                        Lucky Word
-                        <p class='text-muted- no-margin hidden-xs'>
+                <div class='media col-xs-offset-1 col-sm-offset-3 col-md-offset-2'>
+                    <div class='media-left text-left hidden-xs'>
+                        <img class='media-object lucky-icon' src='https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png'
+                            srcset='
+                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s108/10.png 1x,
+                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s216/10.png 2x,
+                                https://3.bp.blogspot.com/-lM8x18lylrU/VnS2PfJEmTI/AAAAAAAABXQ/CYH7UQyLle4ty4hTn1DAicu4fkAI-uRiQ/s324/10.png 3x'/>
+                    </div>
+                    <div class='media-body text-left'>
+                        <h3 class='media-heading content-title no-margin'>
+                            Lucky Word
+                        </h3>
+                        <p class='text-muted- no-margin hidden-xs-'>
+                            今日はどんなフィールライク!?<br />
                             どちらか直感で選んでねっ!!
                         </p>
-                    </h3>
-                </div>
-                <div class='col-xs-3 no-padding'>
-                    <img class='lucky-icon img-responsive pull-left'
-                        src='https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png'
-                        srcset='
-                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s108/21.png 1x,
-                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s216/21.png 2x,
-                            https://4.bp.blogspot.com/-Q4NOjUaiPcA/VnS5xNQUtJI/AAAAAAAABYs/nLvG0kkCH28AJBPrf6QWjp3w_Qnf7-W2gCKgB/s324/21.png 3x'/>
+                    </div>
                 </div>
             </div>
-            <p class='text-center no-margin visible-xs'>
-                どちらか直感で選んでねっ!!
-            </p>
             <div class='row'>
                 <div class='col-xs-6 col-md-6 col-lg-3 col-lg-offset-3'>
                     <div class='panel panel-default'>
@@ -37,9 +28,11 @@
                             <img id='lucky-icon-a' class='lucky-icon full-width' src='https://2.bp.blogspot.com/-B0r2dczrGQ8/Vv_kHG_7TyI/AAAAAAAAB28/Yx7Z1fcCrk83i1cEjQR8AbfaZjgc3sAeQ/s320/IMG_0202.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a' />
                         </div>
                     </div>
+                    <!--
                     <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-a'>
                         セレクト
                     </button>
+                    -->
                 </div><!-- //.col-xs-6.col-md-3..col-md-offset-3 -->
                 <div class='col-xs-6 col-md-6 col-lg-3'>
                     <div class='panel panel-default'>
@@ -47,9 +40,11 @@
                             <img id='lucky-icon-b' class='lucky-icon full-width' src='https://1.bp.blogspot.com/-rziKDlCa4Ko/Vv_kHO_4WwI/AAAAAAAAB3A/eakwUXYfSzIK-TrMggX0Qy9VpTFyy3yYg/s320/IMG_0203.jpg' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b' />
                         </div>
                     </div>
+                    <!--
                     <button type='button' class='btn btn-warning' data-dismiss='modal' data-toggle='modal' data-target='#lucky-word-box-b'>
                         セレクト
                     </button>
+                    -->
                 </div><!-- //.col-xs-3 -->
             </div><!-- //.row -->
             
