@@ -528,8 +528,8 @@ function disableImageLink($link) {
 
             var
                 $postTitle = $('#post-title'),
-                post_title = $postTitle.text();
-                $postTitle.text(post_title.replace(/　/g, '<br />'));
+                post_title = $postTitle.text().replace(/　/g, "<br />");
+                $postTitle.text(post_title);
         }
 
         setArchiveTitle();
