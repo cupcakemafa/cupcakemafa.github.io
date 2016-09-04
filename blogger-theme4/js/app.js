@@ -494,6 +494,11 @@ function disableImageLink($link) {
 
     if (pageType === 'item' || pageType === 'static_page') {
 
+        var
+            $postTitle = $('#post-title'),
+            post_title = $postTitle.text().replace(/　/g, "<br />");
+            $postTitle.text(post_title);
+
         setMetaTag();
         setStory();
         setSinglePageNavi();
@@ -525,11 +530,6 @@ function disableImageLink($link) {
         } else {
             $('lucky-word-panel').addClass('hidden');
             $('top-header').addClass('hidden');
-
-            var
-                $postTitle = $('#post-title'),
-                post_title = $postTitle.text().replace(/　/g, "<br />");
-                $postTitle.text(post_title);
         }
 
         setArchiveTitle();
