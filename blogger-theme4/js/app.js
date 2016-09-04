@@ -525,6 +525,11 @@ function disableImageLink($link) {
         } else {
             $('lucky-word-panel').addClass('hidden');
             $('top-header').addClass('hidden');
+
+            var
+                $postTitle = $('#post-title'),
+                post_title = $postTitle.text();
+                $postTitle.text(post_title.replace(/　/g, '<br />'));
         }
 
         setArchiveTitle();
