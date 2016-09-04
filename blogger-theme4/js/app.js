@@ -497,7 +497,7 @@ function disableImageLink($link) {
         var
             $postTitle = $('#post-title'),
             post_title = $postTitle.text().replace(/　/g, "<br />");
-            $postTitle.text(post_title);
+            $postTitle.html(post_title);
 
         setMetaTag();
         setStory();
