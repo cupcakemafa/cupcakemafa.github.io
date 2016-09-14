@@ -37,6 +37,7 @@
                     <li><a href='/search/label/NEW%20YORK'>New York</a></li>
                     <li><a href='/search/label/PARIS'>Paris</a></li>
                     <li><a href='/search/label/BARCELONA'>Barcelona</a></li>
+                    <li><a href='/search/label/basel'>Basel</a></li>
                     <li><a href='/search/label/持ち物'>持ち物</a></li>
                 </ul>
             </li>
